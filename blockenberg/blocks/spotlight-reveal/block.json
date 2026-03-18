@@ -1,0 +1,156 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/spotlight-reveal",
+    "title": "Spotlight Reveal",
+    "description": "A cursor-following spotlight that reveals content beneath a dark overlay. Move your mouse over the section to illuminate the hidden content.",
+    "category": "bkbg-effects",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-spotlight-reveal-editor",
+    "style": "bkbg-spotlight-reveal-style",
+    "viewScript": "bkbg-spotlight-reveal-frontend",
+    "icon": "visibility",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Discover What's Hidden"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Move your cursor over this section to reveal the content beneath the darkness."
+        },
+        "eyebrow": {
+            "type": "string",
+            "default": "Spotlight Effect"
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Explore Now"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "bgImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "bgImageId": {
+            "type": "number",
+            "default": 0
+        },
+        "spotlightSize": {
+            "type": "number",
+            "default": 350
+        },
+        "spotlightSoft": {
+            "type": "number",
+            "default": 80
+        },
+        "triggerMode": {
+            "type": "string",
+            "default": "cursor"
+        },
+        "overlayColor": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "overlayOpacity": {
+            "type": "number",
+            "default": 85
+        },
+        "revealColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#a78bfa"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 48
+        },
+        "headingFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "headingLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "textSize": {
+            "type": "number",
+            "default": 18
+        },
+        "textLineHeight": {
+            "type": "number",
+            "default": 1.6
+        },
+        "eyebrowSize": {
+            "type": "number",
+            "default": 13
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 800
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 120
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 120
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "eyebrowTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "ctaTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

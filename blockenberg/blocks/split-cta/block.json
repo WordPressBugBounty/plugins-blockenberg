@@ -1,0 +1,152 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/split-cta",
+	"title": "Split CTA",
+	"description": "Two-panel call-to-action section, each with its own background, headline, description and button.",
+	"category": "bkbg-marketing",
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-split-cta-editor",
+	"style": "bkbg-split-cta-style",
+	"viewScript": "bkbg-split-cta-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"panels": {
+			"type": "array",
+			"default": [
+				{
+					"id": "p1",
+					"badge": "Personal",
+					"showBadge": true,
+					"headline": "Start for Free",
+					"description": "Perfect for individuals and freelancers. No credit card required. Up and running in minutes.",
+					"btnLabel": "Get Started Free",
+					"btnUrl": "#",
+					"btnNewTab": false,
+					"bgType": "color",
+					"bgColor": "#f5f3ff",
+					"textColor": "#111827",
+					"btnBg": "#6c3fb5",
+					"btnColor": "#ffffff",
+					"borderColor": ""
+				},
+				{
+					"id": "p2",
+					"badge": "Teams",
+					"showBadge": true,
+					"headline": "Book a Demo",
+					"description": "For growing teams and enterprise clients. Custom pricing, dedicated support, advanced security.",
+					"btnLabel": "Talk to Sales",
+					"btnUrl": "#",
+					"btnNewTab": false,
+					"bgType": "color",
+					"bgColor": "#6c3fb5",
+					"textColor": "#ffffff",
+					"btnBg": "#ffffff",
+					"btnColor": "#6c3fb5",
+					"borderColor": ""
+				}
+			]
+		},
+		"layout": {
+			"type": "string",
+			"default": "equal"
+		},
+		"showDivider": {
+			"type": "boolean",
+			"default": true
+		},
+		"dividerStyle": {
+			"type": "string",
+			"default": "line"
+		},
+		"dividerColor": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"minHeight": {
+			"type": "number",
+			"default": 360
+		},
+		"panelPadding": {
+			"type": "number",
+			"default": 56
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 0
+		},
+		"wrapRadius": {
+			"type": "number",
+			"default": 16
+		},
+		"textAlign": {
+			"type": "string",
+			"default": "center"
+		},
+		"btnRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"badgeRadius": {
+			"type": "number",
+			"default": 99
+		},
+		"headlineSize": {
+			"type": "number",
+			"default": 34
+		},
+		"descSize": {
+			"type": "number",
+			"default": 16
+		},
+		"badgeSize": {
+			"type": "number",
+			"default": 13
+		},
+		"btnSize": {
+			"type": "number",
+			"default": 15
+		},
+		"stackOnMobile": {
+			"type": "boolean",
+			"default": true
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 0
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 0
+		},
+		"headlineFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"headlineTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"descTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"badgeTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"btnTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

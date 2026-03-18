@@ -1,0 +1,78 @@
+/* ── Gauge Chart ─────────────────────────────────────────────── */
+
+.bkgc-wrap {
+    box-sizing: border-box;
+    padding: 32px 24px;
+    text-align: center;
+}
+
+/* SVG fill arc: smooth transition for CSS-only passive display */
+.bkgc-wrap svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Value + label text inside SVG */
+.bkgc-value-text {
+    font-family: var(--bkgc-vl-font-family, inherit);
+    font-size: var(--bkgc-vl-font-size-d, 40px);
+    font-weight: var(--bkgc-vl-font-weight, 700);
+    font-style: var(--bkgc-vl-font-style, normal);
+    text-decoration: var(--bkgc-vl-text-decoration, none);
+    text-transform: var(--bkgc-vl-text-transform, none);
+    line-height: var(--bkgc-vl-line-height-d, 1);
+    letter-spacing: var(--bkgc-vl-letter-spacing-d, normal);
+    word-spacing: var(--bkgc-vl-word-spacing-d, normal);
+    font-variant-numeric: tabular-nums;
+    transition: none; /* JS handles animation */
+}
+
+.bkgc-label-text {
+    font-family: var(--bkgc-lb-font-family, inherit);
+    font-size: var(--bkgc-lb-font-size-d, 14px);
+    font-weight: var(--bkgc-lb-font-weight, 400);
+    font-style: var(--bkgc-lb-font-style, normal);
+    text-decoration: var(--bkgc-lb-text-decoration, none);
+    text-transform: var(--bkgc-lb-text-transform, none);
+    line-height: var(--bkgc-lb-line-height-d, 1.4);
+    letter-spacing: var(--bkgc-lb-letter-spacing-d, normal);
+    word-spacing: var(--bkgc-lb-word-spacing-d, normal);
+}
+
+/* Reduced-motion: skip animation, show full arc immediately */
+@media (prefers-reduced-motion: reduce) {
+    .bkgc-fill {
+        stroke-dashoffset: 0 !important;
+        transition: none !important;
+    }
+}
+
+/* Typography responsive */
+@media (max-width: 1024px) {
+    .bkgc-value-text {
+        font-size: var(--bkgc-vl-font-size-t, var(--bkgc-vl-font-size-d, 40px));
+        line-height: var(--bkgc-vl-line-height-t, var(--bkgc-vl-line-height-d, 1));
+        letter-spacing: var(--bkgc-vl-letter-spacing-t, var(--bkgc-vl-letter-spacing-d, normal));
+        word-spacing: var(--bkgc-vl-word-spacing-t, var(--bkgc-vl-word-spacing-d, normal));
+    }
+    .bkgc-label-text {
+        font-size: var(--bkgc-lb-font-size-t, var(--bkgc-lb-font-size-d, 14px));
+        line-height: var(--bkgc-lb-line-height-t, var(--bkgc-lb-line-height-d, 1.4));
+        letter-spacing: var(--bkgc-lb-letter-spacing-t, var(--bkgc-lb-letter-spacing-d, normal));
+        word-spacing: var(--bkgc-lb-word-spacing-t, var(--bkgc-lb-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkgc-value-text {
+        font-size: var(--bkgc-vl-font-size-m, var(--bkgc-vl-font-size-t, var(--bkgc-vl-font-size-d, 40px)));
+        line-height: var(--bkgc-vl-line-height-m, var(--bkgc-vl-line-height-t, var(--bkgc-vl-line-height-d, 1)));
+        letter-spacing: var(--bkgc-vl-letter-spacing-m, var(--bkgc-vl-letter-spacing-t, var(--bkgc-vl-letter-spacing-d, normal)));
+        word-spacing: var(--bkgc-vl-word-spacing-m, var(--bkgc-vl-word-spacing-t, var(--bkgc-vl-word-spacing-d, normal)));
+    }
+    .bkgc-label-text {
+        font-size: var(--bkgc-lb-font-size-m, var(--bkgc-lb-font-size-t, var(--bkgc-lb-font-size-d, 14px)));
+        line-height: var(--bkgc-lb-line-height-m, var(--bkgc-lb-line-height-t, var(--bkgc-lb-line-height-d, 1.4)));
+        letter-spacing: var(--bkgc-lb-letter-spacing-m, var(--bkgc-lb-letter-spacing-t, var(--bkgc-lb-letter-spacing-d, normal)));
+        word-spacing: var(--bkgc-lb-word-spacing-m, var(--bkgc-lb-word-spacing-t, var(--bkgc-lb-word-spacing-d, normal)));
+    }
+}

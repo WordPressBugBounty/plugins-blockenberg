@@ -1,0 +1,146 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/time-zone-converter",
+    "version": "1.0.0",
+    "title": "Time Zone Converter",
+    "category": "bkbg-calculators",
+    "icon": "clock",
+    "description": "Convert a specific time across multiple time zones with a live interactive display.",
+    "keywords": [
+        "time zone",
+        "convert",
+        "world time",
+        "clock",
+        "timezone"
+    ],
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-time-zone-converter-editor",
+    "style": "bkbg-time-zone-converter-style",
+    "viewScript": "bkbg-time-zone-converter-frontend",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Time Zone Converter"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Convert any time across the world's time zones"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "sourceZone": {
+            "type": "string",
+            "default": "America/New_York"
+        },
+        "targetZones": {
+            "type": "string",
+            "default": "Europe/London,Europe/Paris,Asia/Tokyo,America/Los_Angeles,Australia/Sydney"
+        },
+        "use12Hour": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDate": {
+            "type": "boolean",
+            "default": true
+        },
+        "showOffset": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": ""
+        },
+        "sourceBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "sourceColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "rowBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "rowBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "rowTimeColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "rowZoneColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "inputBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "timeTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "rowRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 540
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        }
+    }
+}

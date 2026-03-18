@@ -1,0 +1,271 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/price-calculator",
+    "title": "Price Calculator",
+    "category": "bkbg-calculators",
+    "icon": "calculator",
+    "description": "Interactive SaaS pricing calculator with sliders, toggle switches, checkbox add-ons, and live price calculation. Supports monthly/annual billing and custom formulas.",
+    "keywords": [
+        "calculator",
+        "pricing",
+        "price",
+        "saas",
+        "slider",
+        "addons",
+        "billing"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-price-calculator-editor",
+    "style": "bkbg-price-calculator-style",
+    "viewScript": "bkbg-price-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Calculate Your Price"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Adjust the sliders to see your custom quote instantly."
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "currencyPos": {
+            "type": "string",
+            "default": "before"
+        },
+        "billingToggle": {
+            "type": "boolean",
+            "default": true
+        },
+        "annualDiscount": {
+            "type": "number",
+            "default": 20
+        },
+        "sliders": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "sl1",
+                    "label": "Team Members",
+                    "unit": "users",
+                    "min": 1,
+                    "max": 50,
+                    "step": 1,
+                    "value": 5,
+                    "pricePerUnit": 12,
+                    "icon": "\ud83d\udc65",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "id": "sl2",
+                    "label": "Storage",
+                    "unit": "GB",
+                    "min": 10,
+                    "max": 1000,
+                    "step": 10,
+                    "value": 100,
+                    "pricePerUnit": 0.05,
+                    "icon": "\ud83d\udcbe",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "id": "sl3",
+                    "label": "API Calls / month",
+                    "unit": "k calls",
+                    "min": 10,
+                    "max": 500,
+                    "step": 10,
+                    "value": 50,
+                    "pricePerUnit": 0.01,
+                    "icon": "\u26a1",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                }
+            ]
+        },
+        "addons": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "a1",
+                    "label": "Priority Support",
+                    "price": 29,
+                    "checked": false,
+                    "icon": "\ud83c\udfa7",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "id": "a2",
+                    "label": "Advanced Analytics",
+                    "price": 19,
+                    "checked": false,
+                    "icon": "\ud83d\udcca",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "id": "a3",
+                    "label": "SSO / SAML",
+                    "price": 49,
+                    "checked": false,
+                    "icon": "\ud83d\udd10",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                }
+            ]
+        },
+        "basePrice": {
+            "type": "number",
+            "default": 0
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Get Started"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaNewTab": {
+            "type": "boolean",
+            "default": false
+        },
+        "priceNote": {
+            "type": "string",
+            "default": "per month, billed monthly"
+        },
+        "priceNoteAnnual": {
+            "type": "string",
+            "default": "per month, billed annually"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 720
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 20
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 40
+        },
+        "sliderRadius": {
+            "type": "number",
+            "default": 99
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "sliderTrack": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "sliderFill": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "sliderThumb": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "priceBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "priceBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "priceColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "priceAccent": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "priceTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 64
+        }
+    }
+}

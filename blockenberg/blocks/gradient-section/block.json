@@ -1,0 +1,213 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/gradient-section",
+	"title": "Gradient Section",
+	"description": "A full-width section with an animated CSS gradient background, headline, subtext, and dual call-to-action buttons.",
+	"category": "bkbg-layout",
+	"icon": "art",
+	"keywords": [
+		"gradient",
+		"section",
+		"cta",
+		"hero",
+		"animated",
+		"colorful"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-gradient-section-editor",
+	"style": "bkbg-gradient-section-style",
+	"viewScript": "bkbg-gradient-section-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"gradient": {
+			"type": "array",
+			"default": [
+				{
+					"id": "gc1",
+					"color": "#6c3fb5"
+				},
+				{
+					"id": "gc2",
+					"color": "#a855f7"
+				},
+				{
+					"id": "gc3",
+					"color": "#3b82f6"
+				}
+			]
+		},
+		"gradientAngle": {
+			"type": "integer",
+			"default": 135
+		},
+		"animate": {
+			"type": "boolean",
+			"default": true
+		},
+		"animationDuration": {
+			"type": "integer",
+			"default": 8
+		},
+		"overlay": {
+			"type": "boolean",
+			"default": false
+		},
+		"overlayColor": {
+			"type": "string",
+			"default": "rgba(0,0,0,0.3)"
+		},
+		"badge": {
+			"type": "string",
+			"default": "\u2728 New Feature"
+		},
+		"showBadge": {
+			"type": "boolean",
+			"default": true
+		},
+		"headline": {
+			"type": "string",
+			"default": "Make Something Beautiful"
+		},
+		"subtext": {
+			"type": "string",
+			"default": "Create stunning gradient sections that capture attention and drive action \u2014 no coding required."
+		},
+		"headlineTag": {
+			"type": "string",
+			"default": "h2"
+		},
+		"btnLabel": {
+			"type": "string",
+			"default": "Get Started Free"
+		},
+		"btnUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"btnStyle": {
+			"type": "string",
+			"default": "filled"
+		},
+		"btnRadius": {
+			"type": "integer",
+			"default": 99
+		},
+		"showSecondBtn": {
+			"type": "boolean",
+			"default": true
+		},
+		"btn2Label": {
+			"type": "string",
+			"default": "Watch Demo"
+		},
+		"btn2Url": {
+			"type": "string",
+			"default": ""
+		},
+		"minHeight": {
+			"type": "integer",
+			"default": 480
+		},
+		"textAlign": {
+			"type": "string",
+			"default": "center"
+		},
+		"contentMaxWidth": {
+			"type": "integer",
+			"default": 680
+		},
+		"headlineSize": {
+			"type": "integer",
+			"default": 52
+		},
+		"subtextSize": {
+			"type": "integer",
+			"default": 19
+		},
+		"badgeSize": {
+			"type": "integer",
+			"default": 13
+		},
+		"btnSize": {
+			"type": "integer",
+			"default": 16
+		},
+		"headlineColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"subtextColor": {
+			"type": "string",
+			"default": "rgba(255,255,255,0.82)"
+		},
+		"badgeBg": {
+			"type": "string",
+			"default": "rgba(255,255,255,0.18)"
+		},
+		"badgeColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"badgeRadius": {
+			"type": "integer",
+			"default": 99
+		},
+		"btnBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"btnColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"btn2Color": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"btn2BorderColor": {
+			"type": "string",
+			"default": "rgba(255,255,255,0.6)"
+		},
+		"paddingTop": {
+			"type": "integer",
+			"default": 96
+		},
+		"paddingBottom": {
+			"type": "integer",
+			"default": 96
+		},
+		"headlineFontWeight": {
+			"type": "string",
+			"default": "900"
+		},
+		"headlineLineHeight": {
+			"type": "number",
+			"default": 1.15
+		},
+		"subtextLineHeight": {
+			"type": "number",
+			"default": 1.65
+		},
+		"typoHeadline": {
+			"type": "object",
+			"default": {}
+		},
+		"typoSubtext": {
+			"type": "object",
+			"default": {}
+		},
+		"typoBadge": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

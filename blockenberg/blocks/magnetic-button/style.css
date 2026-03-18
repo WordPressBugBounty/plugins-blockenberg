@@ -1,0 +1,85 @@
+/* =====================================================
+   Blockenberg — magnetic-button  (bkbg-mgb-*)
+   ===================================================== */
+
+/* ── Wrapper (holds the magnetic zone) ── */
+.bkbg-mgb-wrap {
+    display: inline-block;
+    position: relative;
+}
+
+/* ── Button element ── */
+.bkbg-mgb-btn {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    will-change: transform;
+    transition: transform 0.1s ease-out, box-shadow 0.25s ease, background 0.2s ease, color 0.2s ease;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* ── Ripple container ── */
+.bkbg-mgb-btn .bkbg-mgb-ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: bkbg-mgb-ripple-anim 0.55s linear;
+    pointer-events: none;
+}
+
+@keyframes bkbg-mgb-ripple-anim {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* ── Text layers ── */
+.bkbg-mgb-text {
+    display: block;
+    line-height: 1.2;
+    pointer-events: none;
+}
+.bkbg-mgb-sub {
+    display: block;
+    opacity: 0.72;
+    pointer-events: none;
+}
+.bkbg-mgb-arrow {
+    pointer-events: none;
+    transition: transform 0.2s;
+}
+.bkbg-mgb-btn:hover .bkbg-mgb-arrow {
+    transform: translateX(4px);
+}
+
+/* ── Button typography (CSS vars) ── */
+.bkbg-mgb-btn {
+    font-family:      var(--bkbg-mgb-tx-font-family, inherit);
+    font-size:        var(--bkbg-mgb-tx-font-size-d, 16px);
+    font-weight:      var(--bkbg-mgb-tx-font-weight, 700);
+    font-style:       var(--bkbg-mgb-tx-font-style, normal);
+    text-transform:   var(--bkbg-mgb-tx-text-transform, none);
+    letter-spacing:   var(--bkbg-mgb-tx-letter-spacing-d, normal);
+    word-spacing:     var(--bkbg-mgb-tx-word-spacing-d, normal);
+    line-height:      var(--bkbg-mgb-tx-line-height-d, 1.2);
+}
+
+/* ── Block centering ── */
+.wp-block-blockenberg-magnetic-button {
+    display: block;
+}
+
+/* ── Responsive typography ── */
+@media (max-width: 1024px) {
+    .bkbg-mgb-btn { font-size: var(--bkbg-mgb-tx-font-size-t, 16px); line-height: var(--bkbg-mgb-tx-line-height-t, 1.2); letter-spacing: var(--bkbg-mgb-tx-letter-spacing-t, normal); word-spacing: var(--bkbg-mgb-tx-word-spacing-t, normal); }
+}
+@media (max-width: 767px) {
+    .bkbg-mgb-btn { font-size: var(--bkbg-mgb-tx-font-size-m, 16px); line-height: var(--bkbg-mgb-tx-line-height-m, 1.2); letter-spacing: var(--bkbg-mgb-tx-letter-spacing-m, normal); word-spacing: var(--bkbg-mgb-tx-word-spacing-m, normal); }
+}

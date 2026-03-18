@@ -1,0 +1,171 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/debt-payoff-calculator",
+    "version": "1.0.0",
+    "title": "Debt Payoff Calculator",
+    "category": "bkbg-calculators",
+    "icon": "chart-line",
+    "description": "Compare Avalanche vs Snowball debt payoff strategies. Enter multiple debts, set a monthly payment budget, and see exactly when you'll be debt-free and how much interest you'll save.",
+    "keywords": [
+        "debt",
+        "payoff",
+        "avalanche",
+        "snowball",
+        "loan",
+        "credit card",
+        "interest",
+        "finance"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-debt-payoff-calculator-editor",
+    "style": "bkbg-debt-payoff-calculator-style",
+    "viewScript": "bkbg-debt-payoff-calculator-frontend",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Debt Payoff Calculator"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Find the fastest, cheapest way to become debt-free"
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "defaultStrategy": {
+            "type": "string",
+            "default": "avalanche"
+        },
+        "showComparison": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSchedule": {
+            "type": "boolean",
+            "default": true
+        },
+        "scheduleRows": {
+            "type": "number",
+            "default": 12
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "avalancheColor": {
+            "type": "string",
+            "default": "#8b5cf6"
+        },
+        "snowballColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "resultBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "rowBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "rowBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "inputBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "subtitleFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "resultNumFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "stratLabelFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "tableFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 700
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

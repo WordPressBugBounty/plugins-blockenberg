@@ -1,0 +1,138 @@
+/* ===================================================
+   Parallax Depth Cards — bkbg-pdc-*  (style.css)
+   =================================================== */
+
+.bkbg-pdc-wrap {
+    width: 100%;
+}
+
+.bkbg-pdc-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+/* ── Card shell ────────────────────────────────────────────────────── */
+.bkbg-pdc-card {
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 0.08s linear;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.bkbg-pdc-card:hover {
+    box-shadow: 0 32px 80px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.25);
+}
+
+/* ── Layers ─────────────────────────────────────────────────────────── */
+.bkbg-pdc-layer {
+    will-change: transform;
+    transition: transform 0.08s linear;
+}
+
+.bkbg-pdc-overlay {
+    pointer-events: none;
+    z-index: 1;
+}
+
+.bkbg-pdc-glow {
+    z-index: 2;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+.bkbg-pdc-badge {
+    z-index: 4;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.bkbg-pdc-icon {
+    z-index: 3;
+    user-select: none;
+}
+.bkbg-pdc-icon svg { width: 1em; height: 1em; fill: currentColor; }
+.bkbg-pdc-icon .dashicons { font-size: inherit; width: 1em; height: 1em; line-height: 1; }
+.bkbg-pdc-icon .bkbg-icon-img { width: 1em; height: 1em; object-fit: contain; }
+
+.bkbg-pdc-content {
+    z-index: 4;
+}
+
+.bkbg-pdc-title {
+    font-family: var(--bkbg-pdc-tt-font-family, inherit);
+    font-size: var(--bkbg-pdc-tt-font-size-d, 24px);
+    font-weight: var(--bkbg-pdc-tt-font-weight, 700);
+    font-style: var(--bkbg-pdc-tt-font-style, normal);
+    text-decoration: var(--bkbg-pdc-tt-text-decoration, none);
+    text-transform: var(--bkbg-pdc-tt-text-transform, none);
+    line-height: var(--bkbg-pdc-tt-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-pdc-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-pdc-tt-word-spacing-d, normal);
+}
+
+.bkbg-pdc-subtitle {
+    font-family: var(--bkbg-pdc-st-font-family, inherit);
+    font-size: var(--bkbg-pdc-st-font-size-d, 14px);
+    font-weight: var(--bkbg-pdc-st-font-weight, 400);
+    font-style: var(--bkbg-pdc-st-font-style, normal);
+    text-decoration: var(--bkbg-pdc-st-text-decoration, none);
+    text-transform: var(--bkbg-pdc-st-text-transform, none);
+    line-height: var(--bkbg-pdc-st-line-height-d, 1.4);
+    letter-spacing: var(--bkbg-pdc-st-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-pdc-st-word-spacing-d, normal);
+}
+
+/* ── Responsive ────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-pdc-title {
+        font-size: var(--bkbg-pdc-tt-font-size-t, var(--bkbg-pdc-tt-font-size-d, 22px));
+        line-height: var(--bkbg-pdc-tt-line-height-t, var(--bkbg-pdc-tt-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-pdc-tt-letter-spacing-t, var(--bkbg-pdc-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-pdc-tt-word-spacing-t, var(--bkbg-pdc-tt-word-spacing-d, normal));
+    }
+    .bkbg-pdc-subtitle {
+        font-size: var(--bkbg-pdc-st-font-size-t, var(--bkbg-pdc-st-font-size-d, 13px));
+        line-height: var(--bkbg-pdc-st-line-height-t, var(--bkbg-pdc-st-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-pdc-st-letter-spacing-t, var(--bkbg-pdc-st-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-pdc-st-word-spacing-t, var(--bkbg-pdc-st-word-spacing-d, normal));
+    }
+}
+@media (max-width: 768px) {
+    .bkbg-pdc-card {
+        width: 280px !important;
+        height: 360px !important;
+    }
+    .bkbg-pdc-title {
+        font-size: var(--bkbg-pdc-tt-font-size-m, var(--bkbg-pdc-tt-font-size-t, var(--bkbg-pdc-tt-font-size-d, 20px)));
+        line-height: var(--bkbg-pdc-tt-line-height-m, var(--bkbg-pdc-tt-line-height-t, var(--bkbg-pdc-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-pdc-tt-letter-spacing-m, var(--bkbg-pdc-tt-letter-spacing-t, var(--bkbg-pdc-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-pdc-tt-word-spacing-m, var(--bkbg-pdc-tt-word-spacing-t, var(--bkbg-pdc-tt-word-spacing-d, normal)));
+    }
+    .bkbg-pdc-subtitle {
+        font-size: var(--bkbg-pdc-st-font-size-m, var(--bkbg-pdc-st-font-size-t, var(--bkbg-pdc-st-font-size-d, 12px)));
+        line-height: var(--bkbg-pdc-st-line-height-m, var(--bkbg-pdc-st-line-height-t, var(--bkbg-pdc-st-line-height-d, 1.4)));
+        letter-spacing: var(--bkbg-pdc-st-letter-spacing-m, var(--bkbg-pdc-st-letter-spacing-t, var(--bkbg-pdc-st-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-pdc-st-word-spacing-m, var(--bkbg-pdc-st-word-spacing-t, var(--bkbg-pdc-st-word-spacing-d, normal)));
+    }
+}
+
+@media (max-width: 480px) {
+    .bkbg-pdc-card {
+        width: 100% !important;
+        height: 320px !important;
+    }
+    .bkbg-pdc-grid {
+        gap: 16px;
+    }
+}
+
+/* ── Reduced motion ────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .bkbg-pdc-card,
+    .bkbg-pdc-layer { transition: none !important; }
+}

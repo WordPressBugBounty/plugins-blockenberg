@@ -1,0 +1,237 @@
+/* =========================================================
+   Blockenberg — Base64 Encoder / Decoder  (bkbg-b64-*)
+   ========================================================= */
+
+.bkbg-b64-wrap {
+    box-sizing:    border-box;
+    border-radius: 14px;
+    padding:       32px 24px;
+    font-family:   inherit;
+    margin:        0 auto;
+}
+
+/* ── Title ─────────────────────────────────────── */
+.bkbg-b64-title {
+  margin: 0 0 6px 0;
+  font-family: var(--bkbg-b64-title-font-family, inherit);
+  font-size: var(--bkbg-b64-title-font-size-d, var(--bkbg-b64-title-font-size, 26px));
+  font-weight: var(--bkbg-b64-title-font-weight, 700);
+  font-style: var(--bkbg-b64-title-font-style, normal);
+  text-transform: var(--bkbg-b64-title-text-transform, none);
+  text-decoration: var(--bkbg-b64-title-text-decoration, none);
+  line-height: var(--bkbg-b64-title-line-height-d, var(--bkbg-b64-title-line-height, 1.2));
+  letter-spacing: var(--bkbg-b64-title-letter-spacing-d, var(--bkbg-b64-title-letter-spacing, normal));
+  word-spacing: var(--bkbg-b64-title-word-spacing-d, var(--bkbg-b64-title-word-spacing, normal));
+}
+
+/* ── Subtitle ──────────────────────────────────── */
+.bkbg-b64-subtitle {
+  margin: 0 0 20px 0;
+  font-family: var(--bkbg-b64-sub-font-family, inherit);
+  font-size: var(--bkbg-b64-sub-font-size-d, var(--bkbg-b64-sub-font-size, 14px));
+  font-weight: var(--bkbg-b64-sub-font-weight, normal);
+  font-style: var(--bkbg-b64-sub-font-style, normal);
+  text-transform: var(--bkbg-b64-sub-text-transform, none);
+  text-decoration: var(--bkbg-b64-sub-text-decoration, none);
+  line-height: var(--bkbg-b64-sub-line-height-d, var(--bkbg-b64-sub-line-height, 1.5));
+  letter-spacing: var(--bkbg-b64-sub-letter-spacing-d, var(--bkbg-b64-sub-letter-spacing, normal));
+  word-spacing: var(--bkbg-b64-sub-word-spacing-d, var(--bkbg-b64-sub-word-spacing, normal));
+}
+
+/* ── Mode tabs ──────────────────────────────────────────── */
+.bkbg-b64-tabs {
+    display:       flex;
+    gap:           8px;
+    margin-bottom: 20px;
+}
+.bkbg-b64-tab {
+    padding:      8px 22px;
+    border-radius:8px;
+    border:       2px solid #e5e7eb;
+    background:   #ffffff;
+    font-size:    14px;
+    font-weight:  500;
+    cursor:       pointer;
+    transition:   all 0.18s;
+}
+.bkbg-b64-tab.active {
+    background:  var(--b64-accent, #0ea5e9);
+    border-color:var(--b64-accent, #0ea5e9);
+    color:       #ffffff;
+    font-weight: 700;
+}
+
+/* ── Fields ─────────────────────────────────────────────── */
+.bkbg-b64-field-label {
+    display:       block;
+    font-size:     13px;
+    font-weight:   600;
+    margin-bottom: 6px;
+}
+.bkbg-b64-textarea {
+    width:         100%;
+    box-sizing:    border-box;
+    border:        1.5px solid #e5e7eb;
+    border-radius: 10px;
+    padding:       12px 14px;
+    font-size:     14px;
+    font-family:   inherit;
+    resize:        vertical;
+    min-height:    100px;
+    transition:    border-color 0.18s;
+    outline:       none;
+    margin-bottom: 14px;
+}
+.bkbg-b64-textarea:focus {
+    border-color: var(--b64-accent, #0ea5e9);
+    box-shadow:   0 0 0 3px rgba(14,165,233,0.15);
+}
+
+/* ── Options row ────────────────────────────────────────── */
+.bkbg-b64-options {
+    display:       flex;
+    gap:           16px;
+    flex-wrap:     wrap;
+    margin-bottom: 16px;
+    align-items:   center;
+}
+.bkbg-b64-option-label {
+    display:     flex;
+    align-items: center;
+    gap:         6px;
+    font-size:   13px;
+    cursor:      pointer;
+    user-select: none;
+}
+.bkbg-b64-option-label input[type=checkbox] {
+    width:  16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* ── Convert button ─────────────────────────────────────── */
+.bkbg-b64-btn {
+    display:       inline-flex;
+    align-items:   center;
+    gap:           6px;
+    padding:       10px 24px;
+    border-radius: 9px;
+    border:        none;
+    background:    var(--b64-accent, #0ea5e9);
+    color:         #ffffff;
+    font-size:     14px;
+    font-weight:   700;
+    cursor:        pointer;
+    margin-bottom: 16px;
+    transition:    opacity 0.2s, transform 0.15s;
+}
+.bkbg-b64-btn:hover  { opacity:0.88; transform:translateY(-1px); }
+.bkbg-b64-btn:active { transform:translateY(0); }
+
+/* ── Output area ────────────────────────────────────────── */
+.bkbg-b64-output-header {
+    display:         flex;
+    justify-content: space-between;
+    align-items:     center;
+    margin-bottom:   6px;
+}
+.bkbg-b64-output-label { font-size:13px; font-weight:600; }
+.bkbg-b64-copy-btn {
+    background:    none;
+    border:        1.5px solid var(--b64-accent, #0ea5e9);
+    border-radius: 7px;
+    padding:       4px 12px;
+    font-size:     12px;
+    font-weight:   600;
+    color:         var(--b64-accent, #0ea5e9);
+    cursor:        pointer;
+    transition:    background 0.18s;
+}
+.bkbg-b64-copy-btn:hover { background: rgba(14,165,233,0.1); }
+.bkbg-b64-output-box {
+    border-radius:  10px;
+    padding:        14px 16px;
+    font-family:    'Courier New', monospace;
+    font-size:      13px;
+    word-break:     break-all;
+    line-height:    1.7;
+    min-height:     70px;
+    white-space:    pre-wrap;
+    position:       relative;
+}
+.bkbg-b64-output-placeholder { opacity:0.45; font-style:italic; }
+
+/* ── Stats bar ──────────────────────────────────────────── */
+.bkbg-b64-stats {
+    display:    flex;
+    gap:        20px;
+    flex-wrap:  wrap;
+    margin-top: 14px;
+}
+.bkbg-b64-stat {
+    font-size:  12px;
+    background: rgba(0,0,0,0.04);
+    padding:    4px 10px;
+    border-radius:6px;
+}
+
+/* ── Error ──────────────────────────────────────────────── */
+.bkbg-b64-error {
+    background:    #fef2f2;
+    border:        1.5px solid #fca5a5;
+    border-radius: 8px;
+    padding:       10px 14px;
+    color:         #dc2626;
+    font-size:     13px;
+    margin-top:    10px;
+}
+
+/* ── Copy toast ─────────────────────────────────────────── */
+.bkbg-b64-toast {
+    position:     absolute;
+    top:          8px;
+    right:        10px;
+    background:   #16a34a;
+    color:        #fff;
+    font-size:    11px;
+    font-weight:  700;
+    border-radius:6px;
+    padding:      3px 10px;
+    opacity:      0;
+    transition:   opacity 0.2s;
+    pointer-events:none;
+}
+.bkbg-b64-toast.show { opacity:1; }
+
+@media (max-width: 1024px) {
+    /* ── Title ─────────────────────────────────────── */
+.bkbg-b64-title {
+        font-size: var(--bkbg-b64-title-font-size-t, var(--bkbg-b64-title-font-size-d, var(--bkbg-b64-title-font-size, 26px)));
+        line-height: var(--bkbg-b64-title-line-height-t, var(--bkbg-b64-title-line-height-d, var(--bkbg-b64-title-line-height, 1.2)));
+        letter-spacing: var(--bkbg-b64-title-letter-spacing-t, var(--bkbg-b64-title-letter-spacing-d, var(--bkbg-b64-title-letter-spacing, normal)));
+        word-spacing: var(--bkbg-b64-title-word-spacing-t, var(--bkbg-b64-title-word-spacing-d, var(--bkbg-b64-title-word-spacing, normal)));
+    }
+    /* ── Subtitle ──────────────────────────────────── */
+.bkbg-b64-subtitle {
+        font-size: var(--bkbg-b64-sub-font-size-t, var(--bkbg-b64-sub-font-size-d, var(--bkbg-b64-sub-font-size, 14px)));
+        line-height: var(--bkbg-b64-sub-line-height-t, var(--bkbg-b64-sub-line-height-d, var(--bkbg-b64-sub-line-height, 1.5)));
+        letter-spacing: var(--bkbg-b64-sub-letter-spacing-t, var(--bkbg-b64-sub-letter-spacing-d, var(--bkbg-b64-sub-letter-spacing, normal)));
+        word-spacing: var(--bkbg-b64-sub-word-spacing-t, var(--bkbg-b64-sub-word-spacing-d, var(--bkbg-b64-sub-word-spacing, normal)));
+    }
+}
+@media (max-width: 767px) {
+    /* ── Title ─────────────────────────────────────── */
+.bkbg-b64-title {
+        font-size: var(--bkbg-b64-title-font-size-m, var(--bkbg-b64-title-font-size-t, var(--bkbg-b64-title-font-size-d, var(--bkbg-b64-title-font-size, 26px))));
+        line-height: var(--bkbg-b64-title-line-height-m, var(--bkbg-b64-title-line-height-t, var(--bkbg-b64-title-line-height-d, var(--bkbg-b64-title-line-height, 1.2))));
+        letter-spacing: var(--bkbg-b64-title-letter-spacing-m, var(--bkbg-b64-title-letter-spacing-t, var(--bkbg-b64-title-letter-spacing-d, var(--bkbg-b64-title-letter-spacing, normal))));
+        word-spacing: var(--bkbg-b64-title-word-spacing-m, var(--bkbg-b64-title-word-spacing-t, var(--bkbg-b64-title-word-spacing-d, var(--bkbg-b64-title-word-spacing, normal))));
+    }
+    /* ── Subtitle ──────────────────────────────────── */
+.bkbg-b64-subtitle {
+        font-size: var(--bkbg-b64-sub-font-size-m, var(--bkbg-b64-sub-font-size-t, var(--bkbg-b64-sub-font-size-d, var(--bkbg-b64-sub-font-size, 14px))));
+        line-height: var(--bkbg-b64-sub-line-height-m, var(--bkbg-b64-sub-line-height-t, var(--bkbg-b64-sub-line-height-d, var(--bkbg-b64-sub-line-height, 1.5))));
+        letter-spacing: var(--bkbg-b64-sub-letter-spacing-m, var(--bkbg-b64-sub-letter-spacing-t, var(--bkbg-b64-sub-letter-spacing-d, var(--bkbg-b64-sub-letter-spacing, normal))));
+        word-spacing: var(--bkbg-b64-sub-word-spacing-m, var(--bkbg-b64-sub-word-spacing-t, var(--bkbg-b64-sub-word-spacing-d, var(--bkbg-b64-sub-word-spacing, normal))));
+    }
+}

@@ -1,0 +1,190 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/lead-magnet",
+    "version": "1.0.0",
+    "title": "Lead Magnet",
+    "category": "bkbg-marketing",
+    "icon": "download",
+    "description": "Free resource / lead magnet landing section. Features a mockup image (book, PDF, phone), headline, benefit checklist, and an email capture form with privacy note. Ideal for e-books, templates, checklists, and courses.",
+    "keywords": [
+        "lead magnet",
+        "free download",
+        "ebook",
+        "optin",
+        "email",
+        "capture",
+        "freebie",
+        "landing"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-lead-magnet-editor",
+    "style": "bkbg-lead-magnet-style",
+    "viewScript": "bkbg-lead-magnet-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "badge": {
+            "type": "string",
+            "default": "FREE Download"
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "integer",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "imageStyle": {
+            "type": "string",
+            "default": "floating"
+        },
+        "heading": {
+            "type": "string",
+            "default": "The Free Guide to Growing Your Audience from 0 to 10,000"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "A 47-page PDF packed with actionable frameworks, real examples, and step-by-step worksheets — completely free."
+        },
+        "benefits": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "Proven audience-growth frameworks"
+                },
+                {
+                    "text": "Real case studies with templates included"
+                },
+                {
+                    "text": "Step-by-step 90-day action plan"
+                },
+                {
+                    "text": "Lifetime access — no expiry"
+                }
+            ]
+        },
+        "showBenefits": {
+            "type": "boolean",
+            "default": true
+        },
+        "formEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "formPlaceholder": {
+            "type": "string",
+            "default": "Enter your email address"
+        },
+        "formSubmitLabel": {
+            "type": "string",
+            "default": "Get instant access →"
+        },
+        "formAction": {
+            "type": "string",
+            "default": ""
+        },
+        "privacyNote": {
+            "type": "string",
+            "default": "🔒 No spam. Unsubscribe anytime."
+        },
+        "showPrivacy": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "image-right"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8f5ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#166534"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "benefitColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "checkColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "privacyColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "headingSize": {
+            "type": "integer",
+            "default": 32
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "buttonTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "maxWidth": {
+            "type": "integer",
+            "default": 1060
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 80
+        }
+    }
+}

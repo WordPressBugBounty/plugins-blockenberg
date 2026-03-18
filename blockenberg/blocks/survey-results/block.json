@@ -1,0 +1,237 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/survey-results",
+    "title": "Survey Results",
+    "description": "Display survey data with percentage bars, charts, and methodology notes.",
+    "category": "bkbg-blog",
+    "icon": "chart-bar",
+    "keywords": [
+        "survey",
+        "poll",
+        "results",
+        "chart",
+        "statistics",
+        "data"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-survey-results-editor",
+    "editorStyle": "bkbg-survey-results-style",
+    "style": "bkbg-survey-results-style",
+    "viewScript": "bkbg-survey-results-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "surveyTitle": {
+            "type": "string",
+            "default": "Developer Experience Survey 2026"
+        },
+        "organization": {
+            "type": "string",
+            "default": "Stack Overflow"
+        },
+        "respondents": {
+            "type": "number",
+            "default": 89000
+        },
+        "respondentsLabel": {
+            "type": "string",
+            "default": "respondents"
+        },
+        "surveyDate": {
+            "type": "string",
+            "default": "January 2026"
+        },
+        "showMeta": {
+            "type": "boolean",
+            "default": true
+        },
+        "questions": {
+            "type": "array",
+            "default": [
+                {
+                    "question": "What is your primary programming language?",
+                    "options": [
+                        {
+                            "label": "JavaScript",
+                            "percent": 63,
+                            "count": 56070
+                        },
+                        {
+                            "label": "Python",
+                            "percent": 51,
+                            "count": 45390
+                        },
+                        {
+                            "label": "TypeScript",
+                            "percent": 38,
+                            "count": 33820
+                        },
+                        {
+                            "label": "Rust",
+                            "percent": 13,
+                            "count": 11570
+                        }
+                    ]
+                },
+                {
+                    "question": "Do you use AI coding tools (Copilot, Cursor, etc.)?",
+                    "options": [
+                        {
+                            "label": "Yes, daily",
+                            "percent": 44,
+                            "count": 39160
+                        },
+                        {
+                            "label": "Yes, occasionally",
+                            "percent": 28,
+                            "count": 24920
+                        },
+                        {
+                            "label": "No, but I plan to",
+                            "percent": 17,
+                            "count": 15130
+                        },
+                        {
+                            "label": "No",
+                            "percent": 11,
+                            "count": 9790
+                        }
+                    ]
+                },
+                {
+                    "question": "How satisfied are you with your current tech stack?",
+                    "options": [
+                        {
+                            "label": "Very satisfied",
+                            "percent": 34,
+                            "count": 30260
+                        },
+                        {
+                            "label": "Somewhat satisfied",
+                            "percent": 42,
+                            "count": 37380
+                        },
+                        {
+                            "label": "Neutral",
+                            "percent": 15,
+                            "count": 13350
+                        },
+                        {
+                            "label": "Dissatisfied",
+                            "percent": 9,
+                            "count": 8010
+                        }
+                    ]
+                }
+            ]
+        },
+        "showPercentages": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCounts": {
+            "type": "boolean",
+            "default": false
+        },
+        "showBars": {
+            "type": "boolean",
+            "default": true
+        },
+        "highlightWinner": {
+            "type": "boolean",
+            "default": true
+        },
+        "methodology": {
+            "type": "string",
+            "default": "Online survey conducted among registered developers. Respondents could select multiple answers where applicable. Percentages may exceed 100% for multi-select questions."
+        },
+        "showMethodology": {
+            "type": "boolean",
+            "default": true
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "barHeight": {
+            "type": "number",
+            "default": 10
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "questionColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "percentColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "countColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "barBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "barFill": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "barFillWinner": {
+            "type": "string",
+            "default": "#1d4ed8"
+        },
+        "winnerBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "methodologyBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "methodologyColor": {
+            "type": "string",
+            "default": "#6b7280"
+        }
+    }
+}

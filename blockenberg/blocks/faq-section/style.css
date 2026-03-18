@@ -1,0 +1,259 @@
+.bkbg-faqs-wrap {
+    box-sizing: border-box;
+}
+
+.bkbg-faqs-header {
+    margin-bottom: 48px;
+}
+
+.bkbg-faqs-eyebrow {
+    font-family: var(--bkbg-fsec-eb-font-family, inherit);
+    font-size: var(--bkbg-fsec-eb-font-size-d, 12px);
+    font-weight: var(--bkbg-fsec-eb-font-weight, 700);
+    line-height: var(--bkbg-fsec-eb-line-height-d, 1.2);
+    text-transform: var(--bkbg-fsec-eb-text-transform, uppercase);
+    font-style: var(--bkbg-fsec-eb-font-style, normal);
+    text-decoration: var(--bkbg-fsec-eb-text-decoration, none);
+    letter-spacing: var(--bkbg-fsec-eb-letter-spacing-d, .08em);
+    word-spacing: var(--bkbg-fsec-eb-word-spacing-d, normal);
+}
+
+.bkbg-faqs-header .bkbg-faqs-heading {
+    font-family: var(--bkbg-fsec-hd-font-family, inherit);
+    font-size: var(--bkbg-fsec-hd-font-size-d, 40px);
+    font-weight: var(--bkbg-fsec-hd-font-weight, 800);
+    line-height: var(--bkbg-fsec-hd-line-height-d, 1.2);
+    text-transform: var(--bkbg-fsec-hd-text-transform, none);
+    font-style: var(--bkbg-fsec-hd-font-style, normal);
+    text-decoration: var(--bkbg-fsec-hd-text-decoration, none);
+    letter-spacing: var(--bkbg-fsec-hd-letter-spacing-d, -.03em);
+    word-spacing: var(--bkbg-fsec-hd-word-spacing-d, normal);
+}
+
+.bkbg-faqs-subtext {
+    font-family: var(--bkbg-fsec-st-font-family, inherit);
+    font-size: var(--bkbg-fsec-st-font-size-d, 17px);
+    font-weight: var(--bkbg-fsec-st-font-weight, normal);
+    line-height: var(--bkbg-fsec-st-line-height-d, 1.6);
+    text-transform: var(--bkbg-fsec-st-text-transform, none);
+    font-style: var(--bkbg-fsec-st-font-style, normal);
+    text-decoration: var(--bkbg-fsec-st-text-decoration, none);
+    letter-spacing: var(--bkbg-fsec-st-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fsec-st-word-spacing-d, normal);
+}
+
+/* === Accordion items === */
+.bkbg-faqs-accordion {
+    position: relative;
+}
+
+.bkbg-faqs-item {
+    box-sizing: border-box;
+    transition: background 0.15s ease;
+}
+
+.bkbg-faqs-item--open .bkbg-faqs-question-row {
+    color: inherit;
+}
+
+.bkbg-faqs-question-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    padding: 18px 0;
+    user-select: none;
+    list-style: none;
+}
+
+.bkbg-faqs-question-row::-webkit-details-marker {
+    display: none;
+}
+
+.bkbg-faqs-question {
+    font-family: var(--bkbg-fsec-qt-font-family, inherit);
+    font-size: var(--bkbg-fsec-qt-font-size-d, 16px);
+    font-weight: var(--bkbg-fsec-qt-font-weight, 600);
+    line-height: var(--bkbg-fsec-qt-line-height-d, 1.4);
+    text-transform: var(--bkbg-fsec-qt-text-transform, none);
+    font-style: var(--bkbg-fsec-qt-font-style, normal);
+    text-decoration: var(--bkbg-fsec-qt-text-decoration, none);
+    letter-spacing: var(--bkbg-fsec-qt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fsec-qt-word-spacing-d, normal);
+    flex: 1;
+    transition: color 0.15s ease;
+}
+
+.bkbg-faqs-icon {
+    flex-shrink: 0;
+    display: inline-block;
+    transition: transform 0.25s ease;
+    color: currentColor;
+    font-size: 18px;
+}
+
+.bkbg-faqs-item--open .bkbg-faqs-icon--chevron {
+    transform: rotate(180deg);
+}
+
+.bkbg-faqs-item--open .bkbg-faqs-icon--arrow {
+    transform: rotate(90deg);
+}
+
+.bkbg-faqs-answer {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease, padding 0.2s ease;
+    padding-bottom: 0;
+}
+
+.bkbg-faqs-item--open .bkbg-faqs-answer {
+    max-height: 600px;
+    padding-bottom: 18px;
+}
+
+.bkbg-faqs-answer p,
+.bkbg-faqs-answer-p {
+    margin: 0;
+    font-family: var(--bkbg-fsec-an-font-family, inherit);
+    font-size: var(--bkbg-fsec-an-font-size-d, 15px);
+    font-weight: var(--bkbg-fsec-an-font-weight, normal);
+    line-height: var(--bkbg-fsec-an-line-height-d, 1.65);
+    text-transform: var(--bkbg-fsec-an-text-transform, none);
+    font-style: var(--bkbg-fsec-an-font-style, normal);
+    text-decoration: var(--bkbg-fsec-an-text-decoration, none);
+    letter-spacing: var(--bkbg-fsec-an-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fsec-an-word-spacing-d, normal);
+}
+
+.bkbg-faqs-cta-text {
+    font-size: 15px;
+}
+
+.bkbg-faqs-cta-link {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* === Split layout === */
+.bkbg-faqs-inner--split {
+    display: flex;
+    gap: 64px;
+    align-items: flex-start;
+}
+
+.bkbg-faqs-inner--split .bkbg-faqs-header {
+    flex: 0 0 320px;
+    position: sticky;
+    top: 100px;
+    margin-bottom: 0;
+}
+
+.bkbg-faqs-inner--split .bkbg-faqs-body {
+    flex: 1;
+}
+
+/* === Two-column layout === */
+.bkbg-faqs-inner--two-column .bkbg-faqs-accordion {
+    columns: 2;
+    gap: 0 40px;
+}
+
+.bkbg-faqs-inner--two-column .bkbg-faqs-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+/* === CTA row === */
+.bkbg-faqs-cta-row {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 24px;
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+    .bkbg-faqs-eyebrow {
+        font-size: var(--bkbg-fsec-eb-font-size-t, var(--bkbg-fsec-eb-font-size-d, 12px));
+        line-height: var(--bkbg-fsec-eb-line-height-t, var(--bkbg-fsec-eb-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-fsec-eb-letter-spacing-t, var(--bkbg-fsec-eb-letter-spacing-d, .08em));
+        word-spacing: var(--bkbg-fsec-eb-word-spacing-t, var(--bkbg-fsec-eb-word-spacing-d, normal));
+    }
+    .bkbg-faqs-header .bkbg-faqs-heading {
+        font-size: var(--bkbg-fsec-hd-font-size-t, var(--bkbg-fsec-hd-font-size-d, 40px));
+        line-height: var(--bkbg-fsec-hd-line-height-t, var(--bkbg-fsec-hd-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-fsec-hd-letter-spacing-t, var(--bkbg-fsec-hd-letter-spacing-d, -.03em));
+        word-spacing: var(--bkbg-fsec-hd-word-spacing-t, var(--bkbg-fsec-hd-word-spacing-d, normal));
+    }
+    .bkbg-faqs-subtext {
+        font-size: var(--bkbg-fsec-st-font-size-t, var(--bkbg-fsec-st-font-size-d, 17px));
+        line-height: var(--bkbg-fsec-st-line-height-t, var(--bkbg-fsec-st-line-height-d, 1.6));
+        letter-spacing: var(--bkbg-fsec-st-letter-spacing-t, var(--bkbg-fsec-st-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-fsec-st-word-spacing-t, var(--bkbg-fsec-st-word-spacing-d, normal));
+    }
+    .bkbg-faqs-question {
+        font-size: var(--bkbg-fsec-qt-font-size-t, var(--bkbg-fsec-qt-font-size-d, 16px));
+        line-height: var(--bkbg-fsec-qt-line-height-t, var(--bkbg-fsec-qt-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-fsec-qt-letter-spacing-t, var(--bkbg-fsec-qt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-fsec-qt-word-spacing-t, var(--bkbg-fsec-qt-word-spacing-d, normal));
+    }
+    .bkbg-faqs-answer p,
+    .bkbg-faqs-answer-p {
+        font-size: var(--bkbg-fsec-an-font-size-t, var(--bkbg-fsec-an-font-size-d, 15px));
+        line-height: var(--bkbg-fsec-an-line-height-t, var(--bkbg-fsec-an-line-height-d, 1.65));
+        letter-spacing: var(--bkbg-fsec-an-letter-spacing-t, var(--bkbg-fsec-an-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-fsec-an-word-spacing-t, var(--bkbg-fsec-an-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-faqs-eyebrow {
+        font-size: var(--bkbg-fsec-eb-font-size-m, var(--bkbg-fsec-eb-font-size-t, var(--bkbg-fsec-eb-font-size-d, 12px)));
+        line-height: var(--bkbg-fsec-eb-line-height-m, var(--bkbg-fsec-eb-line-height-t, var(--bkbg-fsec-eb-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-fsec-eb-letter-spacing-m, var(--bkbg-fsec-eb-letter-spacing-t, var(--bkbg-fsec-eb-letter-spacing-d, .08em)));
+        word-spacing: var(--bkbg-fsec-eb-word-spacing-m, var(--bkbg-fsec-eb-word-spacing-t, var(--bkbg-fsec-eb-word-spacing-d, normal)));
+    }
+    .bkbg-faqs-header .bkbg-faqs-heading {
+        font-size: var(--bkbg-fsec-hd-font-size-m, var(--bkbg-fsec-hd-font-size-t, var(--bkbg-fsec-hd-font-size-d, 40px)));
+        line-height: var(--bkbg-fsec-hd-line-height-m, var(--bkbg-fsec-hd-line-height-t, var(--bkbg-fsec-hd-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-fsec-hd-letter-spacing-m, var(--bkbg-fsec-hd-letter-spacing-t, var(--bkbg-fsec-hd-letter-spacing-d, -.03em)));
+        word-spacing: var(--bkbg-fsec-hd-word-spacing-m, var(--bkbg-fsec-hd-word-spacing-t, var(--bkbg-fsec-hd-word-spacing-d, normal)));
+    }
+    .bkbg-faqs-subtext {
+        font-size: var(--bkbg-fsec-st-font-size-m, var(--bkbg-fsec-st-font-size-t, var(--bkbg-fsec-st-font-size-d, 17px)));
+        line-height: var(--bkbg-fsec-st-line-height-m, var(--bkbg-fsec-st-line-height-t, var(--bkbg-fsec-st-line-height-d, 1.6)));
+        letter-spacing: var(--bkbg-fsec-st-letter-spacing-m, var(--bkbg-fsec-st-letter-spacing-t, var(--bkbg-fsec-st-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-fsec-st-word-spacing-m, var(--bkbg-fsec-st-word-spacing-t, var(--bkbg-fsec-st-word-spacing-d, normal)));
+    }
+    .bkbg-faqs-question {
+        font-size: var(--bkbg-fsec-qt-font-size-m, var(--bkbg-fsec-qt-font-size-t, var(--bkbg-fsec-qt-font-size-d, 16px)));
+        line-height: var(--bkbg-fsec-qt-line-height-m, var(--bkbg-fsec-qt-line-height-t, var(--bkbg-fsec-qt-line-height-d, 1.4)));
+        letter-spacing: var(--bkbg-fsec-qt-letter-spacing-m, var(--bkbg-fsec-qt-letter-spacing-t, var(--bkbg-fsec-qt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-fsec-qt-word-spacing-m, var(--bkbg-fsec-qt-word-spacing-t, var(--bkbg-fsec-qt-word-spacing-d, normal)));
+    }
+    .bkbg-faqs-answer p,
+    .bkbg-faqs-answer-p {
+        font-size: var(--bkbg-fsec-an-font-size-m, var(--bkbg-fsec-an-font-size-t, var(--bkbg-fsec-an-font-size-d, 15px)));
+        line-height: var(--bkbg-fsec-an-line-height-m, var(--bkbg-fsec-an-line-height-t, var(--bkbg-fsec-an-line-height-d, 1.65)));
+        letter-spacing: var(--bkbg-fsec-an-letter-spacing-m, var(--bkbg-fsec-an-letter-spacing-t, var(--bkbg-fsec-an-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-fsec-an-word-spacing-m, var(--bkbg-fsec-an-word-spacing-t, var(--bkbg-fsec-an-word-spacing-d, normal)));
+    }
+}
+
+@media (max-width: 768px) {
+    .bkbg-faqs-inner--split {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .bkbg-faqs-inner--split .bkbg-faqs-header {
+        flex: auto;
+        width: 100%;
+        position: static;
+    }
+
+    .bkbg-faqs-inner--two-column .bkbg-faqs-accordion {
+        columns: 1;
+    }
+}

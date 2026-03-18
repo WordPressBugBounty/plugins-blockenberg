@@ -1,0 +1,169 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/modal",
+	"title": "Modal Window",
+	"description": "A button or trigger that opens a customizable popup modal overlay.",
+	"category": "bkbg-effects",
+	"icon": "external",
+	"keywords": [
+		"modal",
+		"popup",
+		"dialog",
+		"overlay",
+		"lightbox"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-modal-editor",
+	"editorStyle": "bkbg-modal-style",
+	"style": "bkbg-modal-style",
+	"viewScript": "bkbg-modal-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"triggerType": {
+			"type": "string",
+			"default": "button"
+		},
+		"triggerLabel": {
+			"type": "string",
+			"default": "Open Popup"
+		},
+		"triggerBtnStyle": {
+			"type": "string",
+			"default": "primary"
+		},
+		"triggerBtnSize": {
+			"type": "string",
+			"default": "md"
+		},
+		"triggerBtnBg": {
+			"type": "string",
+			"default": "#2563eb"
+		},
+		"triggerBtnColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"triggerBtnRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"triggerAlignment": {
+			"type": "string",
+			"default": "left"
+		},
+		"modalTitle": {
+			"type": "string",
+			"default": "Modal Title"
+		},
+		"modalContent": {
+			"type": "string",
+			"source": "html",
+			"selector": ".bkbg-modal-body"
+		},
+		"modalSize": {
+			"type": "string",
+			"default": "md"
+		},
+		"animation": {
+			"type": "string",
+			"default": "zoom"
+		},
+		"closeOnOverlay": {
+			"type": "boolean",
+			"default": true
+		},
+		"closeOnEsc": {
+			"type": "boolean",
+			"default": true
+		},
+		"showCloseBtn": {
+			"type": "boolean",
+			"default": true
+		},
+		"showHeader": {
+			"type": "boolean",
+			"default": true
+		},
+		"triggerMode": {
+			"type": "string",
+			"default": "click"
+		},
+		"autoDelay": {
+			"type": "number",
+			"default": 3000
+		},
+		"overlayBg": {
+			"type": "string",
+			"default": "rgba(0,0,0,0.6)"
+		},
+		"overlayBlur": {
+			"type": "boolean",
+			"default": false
+		},
+		"modalBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"modalRadius": {
+			"type": "number",
+			"default": 12
+		},
+		"modalPadding": {
+			"type": "number",
+			"default": 32
+		},
+		"titleSize": {
+			"type": "number",
+			"default": 22
+		},
+		"titleWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"contentSize": {
+			"type": "number",
+			"default": 15
+		},
+		"contentColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"contentLineHeight": {
+			"type": "number",
+			"default": 1.7
+		},
+		"closeBtnColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"closeBtnHoverColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"titleLineHeight": {
+			"type": "number",
+			"default": 1.3
+		},
+		"titleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"bodyTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

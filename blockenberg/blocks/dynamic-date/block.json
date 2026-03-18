@@ -1,0 +1,86 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/dynamic-date",
+    "title": "Dynamic Date",
+    "category": "bkbg-blog",
+    "icon": "calendar-alt",
+    "description": "Outputs the current date, time or copyright year automatically, with live clock option.",
+    "keywords": [
+        "date",
+        "time",
+        "year",
+        "clock",
+        "dynamic",
+        "copyright"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-dynamic-date-editor",
+    "editorStyle": "bkbg-dynamic-date-style",
+    "style": "bkbg-dynamic-date-style",
+    "viewScript": "bkbg-dynamic-date-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": []
+    },
+    "attributes": {
+        "format": {
+            "type": "string",
+            "default": "long-date"
+        },
+        "customFormat": {
+            "type": "string",
+            "default": ""
+        },
+        "timezone": {
+            "type": "string",
+            "default": "site"
+        },
+        "customTz": {
+            "type": "string",
+            "default": "UTC"
+        },
+        "liveClock": {
+            "type": "boolean",
+            "default": false
+        },
+        "prefix": {
+            "type": "string",
+            "default": ""
+        },
+        "suffix": {
+            "type": "string",
+            "default": ""
+        },
+        "tag": {
+            "type": "string",
+            "default": "span"
+        },
+        "textColor": {
+            "type": "string",
+            "default": ""
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "align": {
+            "type": "string",
+            "default": "left"
+        },
+        "typoText": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

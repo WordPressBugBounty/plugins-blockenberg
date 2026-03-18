@@ -1,0 +1,235 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/page-list",
+    "title": "Page List",
+    "description": "A styled list of pages or links with optional icons, hierarchy, and rich color controls.",
+    "icon": "admin-page",
+    "category": "bkbg-layout",
+    "keywords": [
+        "pages",
+        "navigation",
+        "links",
+        "menu",
+        "list"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-page-list-editor",
+    "style": "bkbg-page-list-style",
+    "viewScript": "bkbg-page-list-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "pgl-1",
+                    "title": "About Us",
+                    "url": "#",
+                    "icon": "📄",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "description": "Learn more about who we are and what we do.",
+                    "children": [
+                        {
+                            "id": "pgl-1a",
+                            "title": "Our Team",
+                            "url": "#",
+                            "icon": "👤",
+                            "iconType": "custom-char",
+                            "iconDashicon": "",
+                            "iconImageUrl": ""
+                        },
+                        {
+                            "id": "pgl-1b",
+                            "title": "Our Mission",
+                            "url": "#",
+                            "icon": "🎯",
+                            "iconType": "custom-char",
+                            "iconDashicon": "",
+                            "iconImageUrl": ""
+                        }
+                    ]
+                },
+                {
+                    "id": "pgl-2",
+                    "title": "Services",
+                    "url": "#",
+                    "icon": "⚙️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "description": "Explore the professional services we offer.",
+                    "children": [
+                        {
+                            "id": "pgl-2a",
+                            "title": "Consulting",
+                            "url": "#",
+                            "icon": "💼",
+                            "iconType": "custom-char",
+                            "iconDashicon": "",
+                            "iconImageUrl": ""
+                        },
+                        {
+                            "id": "pgl-2b",
+                            "title": "Development",
+                            "url": "#",
+                            "icon": "🛠",
+                            "iconType": "custom-char",
+                            "iconDashicon": "",
+                            "iconImageUrl": ""
+                        }
+                    ]
+                },
+                {
+                    "id": "pgl-3",
+                    "title": "Portfolio",
+                    "url": "#",
+                    "icon": "🖼",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "description": "Browse our latest projects and case studies.",
+                    "children": []
+                },
+                {
+                    "id": "pgl-4",
+                    "title": "Blog",
+                    "url": "#",
+                    "icon": "✍️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "description": "Insights, tutorials and news from our team.",
+                    "children": []
+                },
+                {
+                    "id": "pgl-5",
+                    "title": "Contact",
+                    "url": "#",
+                    "icon": "📬",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "description": "Get in touch — we'd love to hear from you.",
+                    "children": []
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "plain"
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": false
+        },
+        "showChevron": {
+            "type": "boolean",
+            "default": true
+        },
+        "depth": {
+            "type": "number",
+            "default": 2
+        },
+        "columns": {
+            "type": "number",
+            "default": 1
+        },
+        "linkTarget": {
+            "type": "string",
+            "default": "_self"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "500"
+        },
+        "descFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 20
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "gap": {
+            "type": "number",
+            "default": 4
+        },
+        "itemPaddingV": {
+            "type": "number",
+            "default": 12
+        },
+        "itemPaddingH": {
+            "type": "number",
+            "default": 16
+        },
+        "maxWidth": {
+            "type": "string",
+            "default": "100%"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "linkColorHover": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "bgColorHover": {
+            "type": "string",
+            "default": "#f3f0ff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "chevronColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "linkTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

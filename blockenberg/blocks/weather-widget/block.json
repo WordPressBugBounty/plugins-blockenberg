@@ -1,0 +1,165 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/weather-widget",
+    "title": "Weather Widget",
+    "category": "bkbg-interactive",
+    "icon": "cloud",
+    "description": "Live weather display with current conditions, temperature, humidity, wind speed and a 5-day forecast. Powered by OpenWeatherMap free API.",
+    "keywords": [
+        "weather",
+        "forecast",
+        "temperature",
+        "climate",
+        "widget",
+        "openweathermap",
+        "live"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-weather-widget-editor",
+    "style": "bkbg-weather-widget-style",
+    "viewScript": "bkbg-weather-widget-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "apiKey": {
+            "type": "string",
+            "default": ""
+        },
+        "city": {
+            "type": "string",
+            "default": "London"
+        },
+        "units": {
+            "type": "string",
+            "default": "metric"
+        },
+        "lang": {
+            "type": "string",
+            "default": "en"
+        },
+        "showForecast": {
+            "type": "boolean",
+            "default": true
+        },
+        "forecastDays": {
+            "type": "number",
+            "default": 5
+        },
+        "showHumidity": {
+            "type": "boolean",
+            "default": true
+        },
+        "showWind": {
+            "type": "boolean",
+            "default": true
+        },
+        "showFeelsLike": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPressure": {
+            "type": "boolean",
+            "default": false
+        },
+        "showVisibility": {
+            "type": "boolean",
+            "default": false
+        },
+        "showUVIndex": {
+            "type": "boolean",
+            "default": false
+        },
+        "autoLocation": {
+            "type": "boolean",
+            "default": false
+        },
+        "refreshInterval": {
+            "type": "number",
+            "default": 10
+        },
+        "backgroundStyle": {
+            "type": "string",
+            "default": "gradient"
+        },
+        "customBg": {
+            "type": "string",
+            "default": "#1e3a5f"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.12)"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#60a5fa"
+        },
+        "forecastBg": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.08)"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 24
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "padding": {
+            "type": "number",
+            "default": 32
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 480
+        },
+        "showBackground": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAnimatedIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "card"
+        },
+        "tempFontSize": {
+            "type": "number",
+            "default": 48
+        },
+        "locationFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "metaFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "tempTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "cityTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "metaTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

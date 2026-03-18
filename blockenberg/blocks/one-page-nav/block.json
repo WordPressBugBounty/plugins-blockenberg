@@ -1,0 +1,121 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/one-page-nav",
+    "title": "One Page Navigation",
+    "category": "bkbg-layout",
+    "icon": "menu",
+    "description": "Fixed dot navigation sidebar for single-page scrolling websites. Each dot links to a section by ID.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-one-page-nav-editor",
+    "style": "bkbg-one-page-nav-style",
+    "viewScript": "bkbg-one-page-nav-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Home",
+                    "targetId": "section-home"
+                },
+                {
+                    "label": "About",
+                    "targetId": "section-about"
+                },
+                {
+                    "label": "Services",
+                    "targetId": "section-services"
+                },
+                {
+                    "label": "Portfolio",
+                    "targetId": "section-portfolio"
+                },
+                {
+                    "label": "Contact",
+                    "targetId": "section-contact"
+                }
+            ]
+        },
+        "position": {
+            "type": "string",
+            "default": "right"
+        },
+        "dotShape": {
+            "type": "string",
+            "default": "circle"
+        },
+        "dotSize": {
+            "type": "number",
+            "default": 12
+        },
+        "dotGap": {
+            "type": "number",
+            "default": 14
+        },
+        "edgeOffset": {
+            "type": "number",
+            "default": 24
+        },
+        "scrollOffset": {
+            "type": "number",
+            "default": 0
+        },
+        "showTooltips": {
+            "type": "boolean",
+            "default": true
+        },
+        "tooltipPosition": {
+            "type": "string",
+            "default": "auto"
+        },
+        "animateDots": {
+            "type": "boolean",
+            "default": true
+        },
+        "progressLine": {
+            "type": "boolean",
+            "default": true
+        },
+        "dotColor": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "activeDotColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "hoverDotColor": {
+            "type": "string",
+            "default": "#a5b4fc"
+        },
+        "progressLineColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "tooltipBg": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "tooltipColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "tooltipSize": {
+            "type": "number",
+            "default": 11
+        },
+        "tooltipFontWeight": {
+            "type": "string",
+            "default": "600"
+        },
+        "tooltipTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

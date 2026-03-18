@@ -1,0 +1,94 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/callout",
+    "title": "Callout",
+    "category": "bkbg-content",
+    "icon": "megaphone",
+    "description": "Highlighted panel for tips, warnings or success messages with icon, title and dismissible option.",
+    "keywords": [
+        "callout",
+        "tip",
+        "warning",
+        "info",
+        "note",
+        "panel",
+        "highlight"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-callout-editor",
+    "editorStyle": "bkbg-callout-style",
+    "style": "bkbg-callout-style",
+    "viewScript": "bkbg-callout-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "calloutType": {
+            "type": "string",
+            "default": "info"
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconSvg": {
+            "type": "string",
+            "default": ""
+        },
+        "title": {
+            "type": "string",
+            "default": "Did you know?"
+        },
+        "body": {
+            "type": "string",
+            "default": "This is an important tip or note for your readers."
+        },
+        "borderStyle": {
+            "type": "string",
+            "default": "left"
+        },
+        "dismissible": {
+            "type": "boolean",
+            "default": false
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "borderColor": {
+            "type": "string",
+            "default": ""
+        },
+        "textColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingV": {
+            "type": "number",
+            "default": 16
+        },
+        "paddingH": {
+            "type": "number",
+            "default": 20
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,173 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/roi-calculator",
+    "version": "1.0.0",
+    "title": "ROI Calculator",
+    "category": "bkbg-calculators",
+    "icon": "chart-line",
+    "description": "Calculate return on investment with net profit, ROI %, payback period, and annualized return.",
+    "keywords": [
+        "roi",
+        "return",
+        "investment",
+        "profit",
+        "calculator",
+        "business"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-roi-calculator-editor",
+    "style": "bkbg-roi-calculator-style",
+    "viewScript": "bkbg-roi-calculator-frontend",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "ROI Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Calculate your return on investment instantly"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "defaultInvestment": {
+            "type": "number",
+            "default": 10000
+        },
+        "defaultReturn": {
+            "type": "number",
+            "default": 15000
+        },
+        "defaultYears": {
+            "type": "number",
+            "default": 3
+        },
+        "showPayback": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAnnualized": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBreakdown": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": ""
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "resultColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "positiveColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "negativeColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "statBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "statBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "statValueColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "statLabelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "inputBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "resultSize": {
+            "type": "number",
+            "default": 48
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 560
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

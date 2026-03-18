@@ -1,0 +1,38 @@
+.bkbg-histogram-wrap { box-sizing: border-box; }
+
+/* ── Title ── specificity (0,2,0)+ to beat themes */
+.bkbg-histogram-wrap .bkbg-histogram-title,
+.bkbg-histogram-wrap h3.bkbg-histogram-title {
+    margin: 0 0 .6em;
+    font-family: var(--bkbg-hist-tt-font-family, inherit);
+    font-size: var(--bkbg-hist-tt-font-size-d, var(--bkbg-hist-tt-sz, 18px));
+    font-weight: var(--bkbg-hist-tt-font-weight, var(--bkbg-hist-tt-fw, 700));
+    font-style: var(--bkbg-hist-tt-font-style, normal);
+    text-transform: var(--bkbg-hist-tt-text-transform, none);
+    text-decoration: var(--bkbg-hist-tt-text-decoration, none);
+    line-height: var(--bkbg-hist-tt-line-height-d, var(--bkbg-hist-tt-lh, 1.2));
+    letter-spacing: var(--bkbg-hist-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-hist-tt-word-spacing-d, normal);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-histogram-wrap .bkbg-histogram-title,
+    .bkbg-histogram-wrap h3.bkbg-histogram-title {
+        font-size: var(--bkbg-hist-tt-font-size-t, var(--bkbg-hist-tt-font-size-d, var(--bkbg-hist-tt-sz, 18px)));
+        line-height: var(--bkbg-hist-tt-line-height-t, var(--bkbg-hist-tt-line-height-d, var(--bkbg-hist-tt-lh, 1.2)));
+        letter-spacing: var(--bkbg-hist-tt-letter-spacing-t, var(--bkbg-hist-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-hist-tt-word-spacing-t, var(--bkbg-hist-tt-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-histogram-wrap .bkbg-histogram-title,
+    .bkbg-histogram-wrap h3.bkbg-histogram-title {
+        font-size: var(--bkbg-hist-tt-font-size-m, var(--bkbg-hist-tt-font-size-t, var(--bkbg-hist-tt-font-size-d, var(--bkbg-hist-tt-sz, 18px))));
+        line-height: var(--bkbg-hist-tt-line-height-m, var(--bkbg-hist-tt-line-height-t, var(--bkbg-hist-tt-line-height-d, var(--bkbg-hist-tt-lh, 1.2))));
+        letter-spacing: var(--bkbg-hist-tt-letter-spacing-m, var(--bkbg-hist-tt-letter-spacing-t, var(--bkbg-hist-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-hist-tt-word-spacing-m, var(--bkbg-hist-tt-word-spacing-t, var(--bkbg-hist-tt-word-spacing-d, normal)));
+    }
+}
+
+.bkbg-histogram-svg svg { display: block; }

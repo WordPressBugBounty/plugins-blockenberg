@@ -1,0 +1,175 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/app-screenshot",
+    "version": "1.0.0",
+    "title": "App Screenshot",
+    "category": "bkbg-business",
+    "icon": "desktop",
+    "description": "SaaS/app product screenshot section with annotated callout points, device frame, heading, subtext, and CTA. Perfect for software landing pages.",
+    "keywords": [
+        "app",
+        "screenshot",
+        "saas",
+        "software",
+        "product",
+        "annotated",
+        "callout"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-app-screenshot-editor",
+    "style": "bkbg-app-screenshot-style",
+    "viewScript": "bkbg-app-screenshot-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "The Platform"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Everything You Need in One Place"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "A powerful, intuitive dashboard designed to help you move faster and make smarter decisions."
+        },
+        "screenshotUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "screenshotId": {
+            "type": "number",
+            "default": 0
+        },
+        "callouts": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Live Analytics",
+                    "description": "Real-time data updated every second",
+                    "x": 20,
+                    "y": 25
+                },
+                {
+                    "label": "Smart Automation",
+                    "description": "Set rules once, let them run forever",
+                    "x": 72,
+                    "y": 55
+                },
+                {
+                    "label": "Team Collaboration",
+                    "description": "Comment, assign, and track together",
+                    "x": 45,
+                    "y": 75
+                }
+            ]
+        },
+        "showCallouts": {
+            "type": "boolean",
+            "default": true
+        },
+        "deviceFrame": {
+            "type": "string",
+            "default": "browser"
+        },
+        "layout": {
+            "type": "string",
+            "default": "centered"
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "See It in Action"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "frameColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "calloutBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "calloutColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1200
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "eyebrowFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "headingFontSize": {
+            "type": "number",
+            "default": 36
+        },
+        "subtextFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "eyebrowTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

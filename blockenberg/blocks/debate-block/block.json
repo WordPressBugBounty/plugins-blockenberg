@@ -1,0 +1,201 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/debate-block",
+    "title": "Debate Block",
+    "category": "bkbg-content",
+    "icon": "editor-justify",
+    "description": "Two-column argument block for presenting Pro vs Con, Side A vs Side B, or any two-position debate.",
+    "keywords": [
+        "debate",
+        "pro",
+        "con",
+        "argument",
+        "versus",
+        "compare",
+        "sides",
+        "opinion"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-debate-block-editor",
+    "editorStyle": "bkbg-debate-block-style",
+    "style": "bkbg-debate-block-style",
+    "viewScript": "bkbg-debate-block-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "blockTitle": {
+            "type": "string",
+            "default": "The Great Debate"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "blockSubtitle": {
+            "type": "string",
+            "default": "Explore both sides of the argument"
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "leftLabel": {
+            "type": "string",
+            "default": "For"
+        },
+        "rightLabel": {
+            "type": "string",
+            "default": "Against"
+        },
+        "leftIcon": {
+            "type": "string",
+            "default": "👍"
+        },
+        "rightIcon": {
+            "type": "string",
+            "default": "👎"
+        },
+        "leftPoints": {
+            "type": "array",
+            "default": [
+                "Increases productivity by automating repetitive tasks",
+                "Reduces operational costs over the long term",
+                "Enables 24/7 service without additional staffing",
+                "Scales effortlessly to meet demand spikes"
+            ]
+        },
+        "rightPoints": {
+            "type": "array",
+            "default": [
+                "Significant upfront investment and implementation costs",
+                "Risk of job displacement for entry-level workers",
+                "Requires ongoing maintenance and technical expertise",
+                "Potential for bias in automated decision-making"
+            ]
+        },
+        "verdict": {
+            "type": "string",
+            "default": "The answer depends on your specific context. For most growing businesses, the long-term productivity gains outweigh the initial investment — but careful change management is essential."
+        },
+        "showVerdict": {
+            "type": "boolean",
+            "default": true
+        },
+        "verdictLabel": {
+            "type": "string",
+            "default": "💡 Verdict"
+        },
+        "layout": {
+            "type": "string",
+            "default": "columns"
+        },
+        "style": {
+            "type": "string",
+            "default": "card"
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBullets": {
+            "type": "boolean",
+            "default": true
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "gap": {
+            "type": "number",
+            "default": 20
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "headerFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "blockTitleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "blockSubtitleFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoHeader": {
+            "type": "object",
+            "default": {}
+        },
+        "typoPoint": {
+            "type": "object",
+            "default": {}
+        },
+        "leftColor": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "rightColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "leftBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "rightBg": {
+            "type": "string",
+            "default": "#fef2f2"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "headerTextColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "verdictBg": {
+            "type": "string",
+            "default": "#fffbeb"
+        },
+        "verdictColor": {
+            "type": "string",
+            "default": "#92400e"
+        },
+        "verdictBorderColor": {
+            "type": "string",
+            "default": "#fcd34d"
+        }
+    }
+}

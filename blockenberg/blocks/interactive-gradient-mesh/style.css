@@ -1,0 +1,121 @@
+/* =====================================================
+   Interactive Gradient Mesh — bkbg-igm-*
+   ===================================================== */
+
+.bkbg-igm-app {
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── Canvas layer ── */
+.bkbg-igm-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* ── Content overlay ── */
+.bkbg-igm-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 40px 48px;
+    box-sizing: border-box;
+}
+
+.bkbg-igm-inner {
+    max-width: 720px;
+}
+
+.bkbg-igm-inner h2.bkbg-igm-heading,
+.bkbg-igm-inner .bkbg-igm-heading {
+    margin: 0 0 16px;
+    font-family: var(--bkbg-igm-h-font-family, inherit);
+    font-size: var(--bkbg-igm-h-font-size-d, 48px);
+    font-weight: var(--bkbg-igm-h-font-weight, 800);
+    font-style: var(--bkbg-igm-h-font-style, normal);
+    text-decoration: var(--bkbg-igm-h-text-decoration, none);
+    text-transform: var(--bkbg-igm-h-text-transform, none);
+    line-height: var(--bkbg-igm-h-line-height-d, 1.1);
+    letter-spacing: var(--bkbg-igm-h-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-igm-h-word-spacing-d, normal);
+}
+
+.bkbg-igm-subheading {
+    margin: 0 0 24px;
+    font-family: var(--bkbg-igm-sh-font-family, inherit);
+    font-size: var(--bkbg-igm-sh-font-size-d, 18px);
+    font-weight: var(--bkbg-igm-sh-font-weight, 400);
+    font-style: var(--bkbg-igm-sh-font-style, normal);
+    text-decoration: var(--bkbg-igm-sh-text-decoration, none);
+    text-transform: var(--bkbg-igm-sh-text-transform, none);
+    line-height: var(--bkbg-igm-sh-line-height-d, 1.5);
+    letter-spacing: var(--bkbg-igm-sh-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-igm-sh-word-spacing-d, normal);
+}
+
+.bkbg-igm-cta {
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 28px;
+    transition: opacity .2s, transform .2s;
+}
+
+.bkbg-igm-cta:hover {
+    opacity: .9;
+    transform: translateY(-2px);
+}
+
+/* ── Align variants ── */
+.bkbg-igm-align-center .bkbg-igm-content {
+    justify-content: center;
+    text-align: center;
+}
+.bkbg-igm-align-right .bkbg-igm-content {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .bkbg-igm-inner h2.bkbg-igm-heading,
+    .bkbg-igm-inner .bkbg-igm-heading {
+        font-size: var(--bkbg-igm-h-font-size-t, 40px);
+        line-height: var(--bkbg-igm-h-line-height-t, var(--bkbg-igm-h-line-height-d, 1.1));
+        letter-spacing: var(--bkbg-igm-h-letter-spacing-t, var(--bkbg-igm-h-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-igm-h-word-spacing-t, var(--bkbg-igm-h-word-spacing-d, normal));
+    }
+    .bkbg-igm-subheading {
+        font-size: var(--bkbg-igm-sh-font-size-t, 16px);
+        line-height: var(--bkbg-igm-sh-line-height-t, var(--bkbg-igm-sh-line-height-d, 1.5));
+        letter-spacing: var(--bkbg-igm-sh-letter-spacing-t, var(--bkbg-igm-sh-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-igm-sh-word-spacing-t, var(--bkbg-igm-sh-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-igm-inner h2.bkbg-igm-heading,
+    .bkbg-igm-inner .bkbg-igm-heading {
+        font-size: var(--bkbg-igm-h-font-size-m, 28px);
+        line-height: var(--bkbg-igm-h-line-height-m, var(--bkbg-igm-h-line-height-d, 1.1));
+        letter-spacing: var(--bkbg-igm-h-letter-spacing-m, var(--bkbg-igm-h-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-igm-h-word-spacing-m, var(--bkbg-igm-h-word-spacing-d, normal));
+    }
+    .bkbg-igm-subheading {
+        font-size: var(--bkbg-igm-sh-font-size-m, 15px);
+        line-height: var(--bkbg-igm-sh-line-height-m, var(--bkbg-igm-sh-line-height-d, 1.5));
+        letter-spacing: var(--bkbg-igm-sh-letter-spacing-m, var(--bkbg-igm-sh-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-igm-sh-word-spacing-m, var(--bkbg-igm-sh-word-spacing-d, normal));
+    }
+}
+@media (max-width: 640px) {
+    .bkbg-igm-content {
+        padding: 24px 20px;
+    }
+}

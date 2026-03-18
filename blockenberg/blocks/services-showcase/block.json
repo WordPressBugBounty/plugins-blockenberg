@@ -1,0 +1,290 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/services-showcase",
+	"version": "1.0.0",
+	"title": "Services Showcase",
+	"category": "bkbg-business",
+	"icon": "portfolio",
+	"description": "Grid of service offerings with icon, title, description, feature list and optional CTA.",
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-services-showcase-editor",
+	"style": "bkbg-services-showcase-style",
+	"viewScript": "bkbg-services-showcase-frontend",
+	"attributes": {
+		"services": {
+			"type": "array",
+			"default": [
+				{
+					"id": "svc1",
+					"icon": "🎨",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"imageUrl": "",
+					"imageId": 0,
+					"useImage": false,
+					"title": "UI/UX Design",
+					"description": "Beautiful, user-centred interfaces that convert visitors into customers.",
+					"features": [
+						"Custom design system",
+						"Responsive layouts",
+						"Accessibility-first"
+					],
+					"ctaLabel": "Learn more",
+					"ctaUrl": "#",
+					"badgeLabel": "Popular",
+					"showBadge": true,
+					"accentColor": "#6c3fb5"
+				},
+				{
+					"id": "svc2",
+					"icon": "⚡",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"imageUrl": "",
+					"imageId": 0,
+					"useImage": false,
+					"title": "Web Development",
+					"description": "Fast, modern websites and web applications built for scale.",
+					"features": [
+						"React & Next.js",
+						"API integrations",
+						"Performance optimised"
+					],
+					"ctaLabel": "Learn more",
+					"ctaUrl": "#",
+					"badgeLabel": "",
+					"showBadge": false,
+					"accentColor": "#0ea5e9"
+				},
+				{
+					"id": "svc3",
+					"icon": "📈",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"imageUrl": "",
+					"imageId": 0,
+					"useImage": false,
+					"title": "Growth Marketing",
+					"description": "Data-driven campaigns that grow your audience and revenue consistently.",
+					"features": [
+						"SEO & content",
+						"Paid ads management",
+						"Analytics dashboards"
+					],
+					"ctaLabel": "Learn more",
+					"ctaUrl": "#",
+					"badgeLabel": "",
+					"showBadge": false,
+					"accentColor": "#10b981"
+				}
+			]
+		},
+		"sectionTitle": {
+			"type": "string",
+			"default": "What We Do"
+		},
+		"sectionSubtitle": {
+			"type": "string",
+			"default": "Solutions designed for modern businesses."
+		},
+		"showSectionHeader": {
+			"type": "boolean",
+			"default": true
+		},
+		"headerAlign": {
+			"type": "string",
+			"default": "center"
+		},
+		"eyebrowLabel": {
+			"type": "string",
+			"default": "Our Services"
+		},
+		"showEyebrow": {
+			"type": "boolean",
+			"default": true
+		},
+		"cardStyle": {
+			"type": "string",
+			"default": "clean"
+		},
+		"iconStyle": {
+			"type": "string",
+			"default": "emoji"
+		},
+		"columns": {
+			"type": "number",
+			"default": 3
+		},
+		"gap": {
+			"type": "number",
+			"default": 28
+		},
+		"cardRadius": {
+			"type": "number",
+			"default": 16
+		},
+		"cardPadding": {
+			"type": "number",
+			"default": 32
+		},
+		"iconSize": {
+			"type": "number",
+			"default": 40
+		},
+		"iconBgSize": {
+			"type": "number",
+			"default": 72
+		},
+		"showFeatures": {
+			"type": "boolean",
+			"default": true
+		},
+		"showCta": {
+			"type": "boolean",
+			"default": true
+		},
+		"showBadges": {
+			"type": "boolean",
+			"default": true
+		},
+		"showImages": {
+			"type": "boolean",
+			"default": false
+		},
+		"featureIcon": {
+			"type": "string",
+			"default": "✓"
+		},
+		"featureIconType": {
+			"type": "string",
+			"default": "custom-char"
+		},
+		"featureIconDashicon": {
+			"type": "string",
+			"default": ""
+		},
+		"featureIconImageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaStyle": {
+			"type": "string",
+			"default": "link-arrow"
+		},
+		"titleSize": {
+			"type": "number",
+			"default": 21
+		},
+		"descSize": {
+			"type": "number",
+			"default": 15
+		},
+		"featureSize": {
+			"type": "number",
+			"default": 14
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 72
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 72
+		},
+		"headerGap": {
+			"type": "number",
+			"default": 48
+		},
+		"sectionBg": {
+			"type": "string",
+			"default": ""
+		},
+		"cardBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"cardBorderColor": {
+			"type": "string",
+			"default": "#e2e8f0"
+		},
+		"iconBg": {
+			"type": "string",
+			"default": "#f3f0ff"
+		},
+		"iconColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#1e293b"
+		},
+		"descColor": {
+			"type": "string",
+			"default": "#64748b"
+		},
+		"featureColor": {
+			"type": "string",
+			"default": "#475569"
+		},
+		"featureCheckColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"ctaColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"eyebrowBg": {
+			"type": "string",
+			"default": "#ede9fe"
+		},
+		"eyebrowColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"sectionTitleColor": {
+			"type": "string",
+			"default": "#1e293b"
+		},
+		"sectionSubColor": {
+			"type": "string",
+			"default": "#64748b"
+		},
+		"titleFontWeight": {
+			"type": "number",
+			"default": 500
+		},
+		"featureFontWeight": {
+			"type": "number",
+			"default": 600
+		},
+		"sectionTitleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"cardTitleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"cardDescTypo": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [
+			"wide",
+			"full"
+		],
+		"color": {
+			"background": true,
+			"text": false
+		}
+	}
+}

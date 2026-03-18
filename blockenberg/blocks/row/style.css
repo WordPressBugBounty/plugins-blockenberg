@@ -1,0 +1,688 @@
+/* ========================================
+   Row Block Styles
+   Prefix: bkbg-row
+   ======================================== */
+
+/* CSS Custom Properties */
+.bkbg-row {
+    --bkbg-row-gap-none: 0;
+    --bkbg-row-gap-xs: 8px;
+    --bkbg-row-gap-s: 16px;
+    --bkbg-row-gap-m: 24px;
+    --bkbg-row-gap-l: 32px;
+    --bkbg-row-gap-xl: 48px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Row Inner - Flexbox layout */
+.bkbg-row__inner {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+/* Gap Variants */
+.bkbg-row--gap-none .bkbg-row__inner {
+    gap: var(--bkbg-row-gap-none);
+}
+
+.bkbg-row--gap-xs .bkbg-row__inner {
+    gap: var(--bkbg-row-gap-xs);
+}
+
+.bkbg-row--gap-s .bkbg-row__inner {
+    gap: var(--bkbg-row-gap-s);
+}
+
+.bkbg-row--gap-m .bkbg-row__inner {
+    gap: var(--bkbg-row-gap-m);
+}
+
+.bkbg-row--gap-l .bkbg-row__inner {
+    gap: var(--bkbg-row-gap-l);
+}
+
+.bkbg-row--gap-xl .bkbg-row__inner {
+    gap: var(--bkbg-row-gap-xl);
+}
+
+/* Vertical Alignment */
+.bkbg-row--valign-top .bkbg-row__inner {
+    align-items: flex-start;
+}
+
+.bkbg-row--valign-middle .bkbg-row__inner {
+    align-items: center;
+}
+
+.bkbg-row--valign-bottom .bkbg-row__inner {
+    align-items: flex-end;
+}
+
+/* Stack on Mobile */
+@media (max-width: 767px) {
+    .bkbg-row--stack-mobile .bkbg-row__inner {
+        flex-direction: column;
+    }
+
+    .bkbg-row--stack-mobile .bkbg-row__inner > .block-editor-inner-blocks > .block-editor-block-list__layout {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+    }
+    
+    .bkbg-row--stack-mobile .bkbg-column {
+        flex-basis: 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* ========================================
+   Editor-specific Styles
+   ======================================== */
+
+/* Editor Row Container */
+.editor-styles-wrapper .bkbg-row {
+    min-height: 50px;
+    border: 1px dashed transparent;
+    border-radius: 4px;
+    transition: border-color 0.15s ease;
+}
+
+.editor-styles-wrapper .bkbg-row:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.editor-styles-wrapper .bkbg-row.is-selected,
+.editor-styles-wrapper .bkbg-row:focus-within {
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Drag and drop state */
+.editor-styles-wrapper .bkbg-row.is-dragging-over,
+.editor-styles-wrapper [data-type="blockenberg/row"].is-dragging-over > .bkbg-row {
+    border-color: rgba(59, 130, 246, 0.6) !important;
+    background-color: rgba(59, 130, 246, 0.03) !important;
+}
+
+/* Row label */
+.editor-styles-wrapper .bkbg-row::before {
+    content: 'Row';
+    position: absolute;
+    top: -18px;
+    left: 0;
+    font-size: 10px;
+    font-weight: 600;
+    color: #3b82f6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.editor-styles-wrapper .bkbg-row:hover::before,
+.editor-styles-wrapper .bkbg-row.is-selected::before {
+    opacity: 1;
+}
+
+/* Responsive mode badge */
+.bkbg-row__mode-badge {
+    position: absolute;
+    top: -18px;
+    right: 0;
+    font-size: 9px;
+    font-weight: 600;
+    color: #fff;
+    background: #3b82f6;
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.editor-styles-wrapper .bkbg-row:hover .bkbg-row__mode-badge,
+.editor-styles-wrapper .bkbg-row.is-selected .bkbg-row__mode-badge {
+    opacity: 1;
+}
+
+/* Inner blocks layout in editor - direct children only */
+.editor-styles-wrapper .bkbg-row > .bkbg-row__inner {
+    position: relative;
+}
+
+.editor-styles-wrapper .bkbg-row > .bkbg-row__inner > .block-editor-inner-blocks {
+    width: 100%;
+}
+
+.editor-styles-wrapper .bkbg-row > .bkbg-row__inner > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+/* ========================================
+   Resize Handles
+   ======================================== */
+
+/* Handles overlay container */
+.bkbg-row__handles-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* Handle wrapper positioned at column edge */
+.bkbg-row__handle-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    transform: translateX(-50%);
+    pointer-events: auto;
+}
+
+/* Resize handle */
+.bkbg-row__resize-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -8px;
+    width: 16px;
+    cursor: col-resize;
+    z-index: 101;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.bkbg-row:hover .bkbg-row__resize-handle,
+.bkbg-row.is-selected .bkbg-row__resize-handle {
+    opacity: 1;
+}
+
+/* Handle visual line */
+.bkbg-row__resize-handle-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    transform: translateX(-50%);
+    background: #3b82f6;
+    border-radius: 2px;
+    opacity: 0.5;
+    transition: opacity 0.15s ease, width 0.15s ease, background-color 0.15s ease;
+}
+
+.bkbg-row__resize-handle:hover .bkbg-row__resize-handle-line {
+    opacity: 1;
+    width: 5px;
+    background: #2563eb;
+}
+
+/* Hide resize lines/handles in mobile editor preview */
+@media (max-width: 767px) {
+    .editor-styles-wrapper .bkbg-row__handles-overlay,
+    .editor-styles-wrapper .bkbg-row__handle-wrapper,
+    .editor-styles-wrapper .bkbg-row__resize-handle,
+    .editor-styles-wrapper .bkbg-row__resize-handle-line,
+    .editor-styles-wrapper .bkbg-row__resize-indicator {
+        display: none !important;
+    }
+}
+
+/* Resize percentage indicator - only show during drag */
+.bkbg-row__resize-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s ease;
+    z-index: 102;
+}
+
+/* Show indicator only when row is resizing */
+.bkbg-row--is-resizing .bkbg-row__resize-indicator {
+    opacity: 1;
+}
+
+.bkbg-row__resize-pct {
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    background: #1e293b;
+    padding: 3px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.bkbg-row__resize-pct--left {
+    transform: translateX(-100%);
+    margin-left: -8px;
+}
+
+.bkbg-row__resize-pct--right {
+    transform: translateX(0);
+    margin-left: 8px;
+}
+
+/* Row is resizing state */
+.bkbg-row--is-resizing {
+    user-select: none;
+    cursor: col-resize !important;
+}
+
+.bkbg-row--is-resizing * {
+    cursor: col-resize !important;
+}
+
+.bkbg-row--is-resizing .bkbg-row__resize-handle {
+    opacity: 1;
+}
+
+.bkbg-row--is-resizing .bkbg-row__resize-handle-line {
+    opacity: 1;
+    width: 5px;
+    background: #2563eb;
+}
+
+/* ========================================
+   Responsive Mode Preview in Editor
+   ======================================== */
+
+/* Tablet mode preview */
+.editor-styles-wrapper .bkbg-row--mode-tablet .bkbg-column {
+    flex-basis: var(--bkbg-col-tablet, var(--bkbg-col-desktop, 50%)) !important;
+    max-width: var(--bkbg-col-tablet, var(--bkbg-col-desktop, 50%)) !important;
+}
+
+/* Mobile mode preview */
+.editor-styles-wrapper .bkbg-row--mode-mobile.bkbg-row--stack-mobile .bkbg-column {
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+}
+
+.editor-styles-wrapper .bkbg-row--mode-mobile.bkbg-row--stack-mobile > .bkbg-row__inner > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+}
+
+.editor-styles-wrapper .bkbg-row--mode-mobile:not(.bkbg-row--stack-mobile) .bkbg-column {
+    flex-basis: var(--bkbg-col-mobile, 100%) !important;
+    max-width: var(--bkbg-col-mobile, 100%) !important;
+}
+
+/* ========================================
+   Preset Buttons
+   ======================================== */
+
+.bkbg-row-presets {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bkbg-row-preset-btn {
+    width: 100%;
+    justify-content: flex-start !important;
+    text-align: left !important;
+}
+
+/* ========================================
+   Block List Layout Adjustments
+   ======================================== */
+
+.editor-styles-wrapper .bkbg-row .block-editor-block-list__layout {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    overflow: visible;
+}
+
+.editor-styles-wrapper .bkbg-row .block-editor-block-list__layout > .wp-block {
+    margin: 0 !important;
+}
+
+/* Ensure columns respect their widths in editor */
+.editor-styles-wrapper .bkbg-row .block-editor-block-list__layout > .wp-block[data-type="blockenberg/column"] {
+    flex-shrink: 0;
+    flex-grow: 0;
+    align-self: stretch;
+    display: flex;
+}
+
+.editor-styles-wrapper .bkbg-row .block-editor-block-list__layout > .wp-block[data-type="blockenberg/column"] > .bkbg-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100%;
+}
+
+/* ========================================
+   Layout Selector (Initial Setup)
+   ======================================== */
+
+.bkbg-row-layout-selector {
+    min-height: 120px;
+}
+
+.bkbg-row-layout-selector .components-placeholder__instructions {
+    margin-bottom: 16px;
+}
+
+.bkbg-row-layout-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 12px;
+}
+
+.bkbg-row-layout-option {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 12px 8px !important;
+    min-height: 70px;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 4px !important;
+    background: #fff !important;
+    transition: all 0.15s ease !important;
+}
+
+.bkbg-row-layout-option:hover {
+    border-color: #3b82f6 !important;
+    background: #f8fafc !important;
+    transform: translateY(-1px);
+}
+
+.bkbg-row-layout-icon {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+    opacity: 0.8;
+}
+
+.bkbg-row-layout-label {
+    font-size: 11px;
+    color: #64748b;
+    text-align: center;
+}
+
+.bkbg-row-skip-layout {
+    font-size: 12px !important;
+    color: #64748b !important;
+}
+
+.bkbg-row-skip-layout:hover {
+    color: #3b82f6 !important;
+}
+
+@media (max-width: 600px) {
+    .bkbg-row-layout-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ========================================
+   Floating Structure Popup
+   ======================================== */
+
+/* Trigger button - floating in top-right corner */
+.bkbg-row__structure-trigger {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+}
+
+.editor-styles-wrapper .bkbg-row:hover .bkbg-row__structure-trigger,
+.editor-styles-wrapper .bkbg-row.is-selected .bkbg-row__structure-trigger,
+.bkbg-row__structure-trigger:focus-within {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.bkbg-row__structure-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    padding: 0 !important;
+    background: #fff !important;
+    border: 1px solid rgba(59, 130, 246, 0.4) !important;
+    border-radius: 6px !important;
+    color: #3b82f6 !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+}
+
+.bkbg-row__structure-btn:hover {
+    background: #f0f7ff !important;
+    border-color: #3b82f6 !important;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2) !important;
+}
+
+.bkbg-row__structure-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+    fill: currentColor !important;
+}
+
+/* Popover content */
+.bkbg-row__structure-popover {
+    width: 280px !important;
+}
+
+.bkbg-row__structure-popover .components-popover__content {
+    padding: 0 !important;
+}
+
+.bkbg-row__structure-content {
+    padding: 12px;
+}
+
+.bkbg-row__structure-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.bkbg-row__structure-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.bkbg-row__structure-close {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    color: #6b7280 !important;
+}
+
+.bkbg-row__structure-close:hover {
+    color: #1f2937 !important;
+}
+
+/* Visual column bars */
+.bkbg-row__structure-columns {
+    display: flex;
+    gap: 2px;
+    height: 32px;
+    background: #f3f4f6;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.bkbg-row__structure-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    border-radius: 3px;
+    min-width: 24px;
+    transition: all 0.2s ease;
+}
+
+.bkbg-row__structure-col:hover {
+    filter: brightness(1.1);
+}
+
+.bkbg-row__structure-col-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Action buttons */
+.bkbg-row__structure-actions,
+.bkbg-row__structure-row-actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.bkbg-row__structure-row-actions {
+    margin-bottom: 0;
+    padding-top: 8px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.bkbg-row__structure-action {
+    flex: 1;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    height: 32px !important;
+    padding: 0 12px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    background: #3b82f6 !important;
+    border: none !important;
+    border-radius: 6px !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease !important;
+}
+
+.bkbg-row__structure-action:hover:not(:disabled) {
+    background: #2563eb !important;
+}
+
+.bkbg-row__structure-action:disabled {
+    opacity: 0.4 !important;
+    cursor: not-allowed !important;
+}
+
+.bkbg-row__structure-action svg {
+    width: 14px !important;
+    height: 14px !important;
+    fill: currentColor !important;
+}
+
+.bkbg-row__structure-action--secondary {
+    background: #f3f4f6 !important;
+    color: #374151 !important;
+}
+
+.bkbg-row__structure-action--secondary:hover:not(:disabled) {
+    background: #e5e7eb !important;
+}
+
+/* Hide during resize */
+.bkbg-row--is-resizing .bkbg-row__structure-trigger {
+    display: none !important;
+}
+
+/* Inspector: spacing controls */
+.block-editor-page .bkbg-spacing-control,
+.interface-interface-skeleton__editor .bkbg-spacing-control {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.block-editor-page .bkbg-spacing-control__title,
+.interface-interface-skeleton__editor .bkbg-spacing-control__title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.block-editor-page .bkbg-spacing-control__grid,
+.interface-interface-skeleton__editor .bkbg-spacing-control__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 12px;
+}
+
+.block-editor-page .bkbg-spacing-control__item,
+.interface-interface-skeleton__editor .bkbg-spacing-control__item {
+    min-width: 0;
+}
+
+.block-editor-page .bkbg-spacing-control__label,
+.interface-interface-skeleton__editor .bkbg-spacing-control__label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.block-editor-page .bkbg-spacing-control__row,
+.interface-interface-skeleton__editor .bkbg-spacing-control__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 78px;
+    gap: 6px;
+    align-items: center;
+}
+
+.block-editor-page .bkbg-spacing-control__custom-unit,
+.interface-interface-skeleton__editor .bkbg-spacing-control__custom-unit {
+    margin-top: 6px;
+}

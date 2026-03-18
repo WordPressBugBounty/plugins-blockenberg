@@ -1,0 +1,154 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Table of Contents — bkbg-toc-
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.bkbg-toc-wrapper {
+    background: var(--bkbg-toc-bg, #f9fafb);
+    border: 1px solid var(--bkbg-toc-border, #e5e7eb);
+    border-radius: var(--bkbg-toc-radius, 8px);
+    padding: var(--bkbg-toc-pad, 20px);
+    box-sizing: border-box;
+    font-family:         var(--bktoc-lt-font-family, inherit);
+    font-size:           var(--bktoc-lt-font-size-d, 13px);
+    line-height:         var(--bktoc-lt-line-height-d, 1.5);
+    letter-spacing:      var(--bktoc-lt-letter-spacing-d);
+    word-spacing:        var(--bktoc-lt-word-spacing-d);
+    font-weight:         var(--bktoc-lt-font-weight, 400);
+    font-style:          var(--bktoc-lt-font-style);
+    text-decoration:     var(--bktoc-lt-text-decoration, none);
+    text-transform:      var(--bktoc-lt-text-transform);
+}
+
+.bkbg-toc-sticky {
+    position: sticky;
+    top: 16px;
+}
+
+/* ── Header ───────────────────────────────────────────────────────────────── */
+.bkbg-toc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.bkbg-toc-wrapper .bkbg-toc-title {
+    font-family:         var(--bktoc-tt-font-family, inherit);
+    font-size:           var(--bktoc-tt-font-size-d, 14px);
+    line-height:         var(--bktoc-tt-line-height-d, 1.2);
+    letter-spacing:      var(--bktoc-tt-letter-spacing-d, 0.05em);
+    word-spacing:        var(--bktoc-tt-word-spacing-d);
+    font-weight:         var(--bktoc-tt-font-weight, 700);
+    font-style:          var(--bktoc-tt-font-style);
+    text-decoration:     var(--bktoc-tt-text-decoration);
+    text-transform:      var(--bktoc-tt-text-transform, uppercase);
+    color: var(--bkbg-toc-title-color, #111827);
+}
+
+.bkbg-toc-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--bkbg-toc-title-color, #111827);
+    font-size: 16px;
+    padding: 0;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+}
+
+/* ── Body ─────────────────────────────────────────────────────────────────── */
+.bkbg-toc-body {
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 2000px;
+    opacity: 1;
+}
+
+.bkbg-toc-body.bkbg-toc-hidden {
+    max-height: 0 !important;
+    opacity: 0;
+}
+
+/* ── List ─────────────────────────────────────────────────────────────────── */
+.bkbg-toc-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bkbg-toc-ls-disc   { list-style: disc; padding-left: 18px; }
+.bkbg-toc-ls-decimal { list-style: decimal; padding-left: 20px; }
+
+.bkbg-toc-item {
+    line-height: 1.5;
+}
+
+/* ── Nesting ──────────────────────────────────────────────────────────────── */
+.bkbg-toc-item.bkbg-toc-h3.bkbg-toc-nested { padding-left: 16px; }
+.bkbg-toc-item.bkbg-toc-h4.bkbg-toc-nested { padding-left: 32px; }
+.bkbg-toc-item.bkbg-toc-h5.bkbg-toc-nested { padding-left: 48px; }
+.bkbg-toc-item.bkbg-toc-h6.bkbg-toc-nested { padding-left: 64px; }
+
+/* ── Links ────────────────────────────────────────────────────────────────── */
+.bkbg-toc-item a {
+    color: var(--bkbg-toc-link-color, #2563eb);
+    text-decoration: var(--bktoc-lt-text-decoration, none);
+    display: block;
+    padding: 2px 0;
+    border-left: 2px solid transparent;
+    padding-left: 8px;
+    transition: color 0.15s, border-color 0.15s;
+    word-break: break-word;
+}
+
+.bkbg-toc-item a:hover {
+    color: var(--bkbg-toc-link-hover, #1d4ed8);
+    border-left-color: var(--bkbg-toc-link-hover, #1d4ed8);
+}
+
+.bkbg-toc-item a.bkbg-toc-active {
+    color: var(--bkbg-toc-link-active, #2563eb);
+    border-left-color: var(--bkbg-toc-link-active, #2563eb);
+    font-weight: 600;
+}
+
+/* Nested link size slightly smaller */
+.bkbg-toc-item.bkbg-toc-h3 a,
+.bkbg-toc-item.bkbg-toc-h4 a { opacity: 0.85; }
+.bkbg-toc-item.bkbg-toc-h5 a,
+.bkbg-toc-item.bkbg-toc-h6 a { opacity: 0.7; }
+
+/* ── Responsive typography ────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-toc-wrapper {
+        font-size:      var(--bktoc-lt-font-size-t, var(--bktoc-lt-font-size-d, 13px));
+        line-height:    var(--bktoc-lt-line-height-t, var(--bktoc-lt-line-height-d, 1.5));
+        letter-spacing: var(--bktoc-lt-letter-spacing-t, var(--bktoc-lt-letter-spacing-d));
+        word-spacing:   var(--bktoc-lt-word-spacing-t, var(--bktoc-lt-word-spacing-d));
+    }
+    .bkbg-toc-wrapper .bkbg-toc-title {
+        font-size:      var(--bktoc-tt-font-size-t, var(--bktoc-tt-font-size-d, 14px));
+        line-height:    var(--bktoc-tt-line-height-t, var(--bktoc-tt-line-height-d, 1.2));
+        letter-spacing: var(--bktoc-tt-letter-spacing-t, var(--bktoc-tt-letter-spacing-d, 0.05em));
+        word-spacing:   var(--bktoc-tt-word-spacing-t, var(--bktoc-tt-word-spacing-d));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-toc-wrapper {
+        font-size:      var(--bktoc-lt-font-size-m, var(--bktoc-lt-font-size-t, var(--bktoc-lt-font-size-d, 13px)));
+        line-height:    var(--bktoc-lt-line-height-m, var(--bktoc-lt-line-height-t, var(--bktoc-lt-line-height-d, 1.5)));
+        letter-spacing: var(--bktoc-lt-letter-spacing-m, var(--bktoc-lt-letter-spacing-t, var(--bktoc-lt-letter-spacing-d)));
+        word-spacing:   var(--bktoc-lt-word-spacing-m, var(--bktoc-lt-word-spacing-t, var(--bktoc-lt-word-spacing-d)));
+    }
+    .bkbg-toc-wrapper .bkbg-toc-title {
+        font-size:      var(--bktoc-tt-font-size-m, var(--bktoc-tt-font-size-t, var(--bktoc-tt-font-size-d, 14px)));
+        line-height:    var(--bktoc-tt-line-height-m, var(--bktoc-tt-line-height-t, var(--bktoc-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bktoc-tt-letter-spacing-m, var(--bktoc-tt-letter-spacing-t, var(--bktoc-tt-letter-spacing-d, 0.05em)));
+        word-spacing:   var(--bktoc-tt-word-spacing-m, var(--bktoc-tt-word-spacing-t, var(--bktoc-tt-word-spacing-d)));
+    }
+}

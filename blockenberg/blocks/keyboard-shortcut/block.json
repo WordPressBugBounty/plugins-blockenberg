@@ -1,0 +1,231 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/keyboard-shortcut",
+    "version": "1.0.0",
+    "title": "Keyboard Shortcuts",
+    "category": "bkbg-dev",
+    "icon": "editor-code",
+    "description": "Display a keyboard shortcut reference sheet with Mac and Windows variants, categories, and rich styling.",
+    "keywords": [
+        "keyboard",
+        "shortcut",
+        "hotkey",
+        "keys",
+        "cheat sheet",
+        "reference"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-keyboard-shortcut-editor",
+    "editorStyle": "bkbg-keyboard-shortcut-style",
+    "style": "bkbg-keyboard-shortcut-style",
+    "viewScript": "bkbg-keyboard-shortcut-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "sheetTitle": {
+            "type": "string",
+            "default": "Keyboard Shortcuts"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "platform": {
+            "type": "string",
+            "default": "both"
+        },
+        "sections": {
+            "type": "array",
+            "default": [
+                {
+                    "heading": "General",
+                    "shortcuts": [
+                        {
+                            "description": "Save file",
+                            "macKeys": "⌘ S",
+                            "winKeys": "Ctrl S"
+                        },
+                        {
+                            "description": "Undo",
+                            "macKeys": "⌘ Z",
+                            "winKeys": "Ctrl Z"
+                        },
+                        {
+                            "description": "Redo",
+                            "macKeys": "⌘ ⇧ Z",
+                            "winKeys": "Ctrl Y"
+                        },
+                        {
+                            "description": "Cut",
+                            "macKeys": "⌘ X",
+                            "winKeys": "Ctrl X"
+                        },
+                        {
+                            "description": "Copy",
+                            "macKeys": "⌘ C",
+                            "winKeys": "Ctrl C"
+                        },
+                        {
+                            "description": "Paste",
+                            "macKeys": "⌘ V",
+                            "winKeys": "Ctrl V"
+                        },
+                        {
+                            "description": "Select all",
+                            "macKeys": "⌘ A",
+                            "winKeys": "Ctrl A"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Navigation",
+                    "shortcuts": [
+                        {
+                            "description": "Go to file",
+                            "macKeys": "⌘ P",
+                            "winKeys": "Ctrl P"
+                        },
+                        {
+                            "description": "Command palette",
+                            "macKeys": "⌘ ⇧ P",
+                            "winKeys": "Ctrl ⇧ P"
+                        },
+                        {
+                            "description": "Toggle sidebar",
+                            "macKeys": "⌘ B",
+                            "winKeys": "Ctrl B"
+                        },
+                        {
+                            "description": "Toggle terminal",
+                            "macKeys": "⌃ `",
+                            "winKeys": "Ctrl `"
+                        },
+                        {
+                            "description": "Split editor",
+                            "macKeys": "⌘ \\",
+                            "winKeys": "Ctrl \\"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Editing",
+                    "shortcuts": [
+                        {
+                            "description": "Move line up / down",
+                            "macKeys": "⌥ ↑ / ↓",
+                            "winKeys": "Alt ↑ / ↓"
+                        },
+                        {
+                            "description": "Copy line up / down",
+                            "macKeys": "⇧ ⌥ ↑ / ↓",
+                            "winKeys": "⇧ Alt ↑ / ↓"
+                        },
+                        {
+                            "description": "Delete line",
+                            "macKeys": "⌘ ⇧ K",
+                            "winKeys": "Ctrl ⇧ K"
+                        },
+                        {
+                            "description": "Add cursor above / below",
+                            "macKeys": "⌥ ⌘ ↑ / ↓",
+                            "winKeys": "Ctrl Alt ↑ / ↓"
+                        },
+                        {
+                            "description": "Quick fix",
+                            "macKeys": "⌘ .",
+                            "winKeys": "Ctrl ."
+                        }
+                    ]
+                }
+            ]
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "headingFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "keyFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 160
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "keyRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "headingBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "headingBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "keyBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "keyBorderColor": {
+            "type": "string",
+            "default": "#cbd5e1"
+        },
+        "keyColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "macAccentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "winAccentColor": {
+            "type": "string",
+            "default": "#0ea5e9"
+        },
+        "separatorColor": {
+            "type": "string",
+            "default": "#f1f5f9"
+        }
+    }
+}

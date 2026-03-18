@@ -1,0 +1,139 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/speedometer",
+    "title": "Speedometer Gauge",
+    "category": "bkbg-charts",
+    "icon": "dashboard",
+    "description": "Half-circle gauge chart with colour zones and a needle pointer.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-speedometer-editor",
+    "style": "bkbg-speedometer-style",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "System Health Score"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "number",
+            "default": 460
+        },
+        "svgHeight": {
+            "type": "number",
+            "default": 280
+        },
+        "value": {
+            "type": "number",
+            "default": 67
+        },
+        "minValue": {
+            "type": "number",
+            "default": 0
+        },
+        "maxValue": {
+            "type": "number",
+            "default": 100
+        },
+        "unit": {
+            "type": "string",
+            "default": "%"
+        },
+        "arcThickness": {
+            "type": "number",
+            "default": 28
+        },
+        "needleLength": {
+            "type": "number",
+            "default": 110
+        },
+        "needleWidth": {
+            "type": "number",
+            "default": 6
+        },
+        "showValue": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTicks": {
+            "type": "boolean",
+            "default": true
+        },
+        "showZoneLabels": {
+            "type": "boolean",
+            "default": false
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "labelFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "valueFontSize": {
+            "type": "number",
+            "default": 36
+        },
+        "valueFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "needleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "centerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "zones": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Poor",
+                    "from": 0,
+                    "to": 33,
+                    "color": "#ef4444"
+                },
+                {
+                    "label": "Fair",
+                    "from": 33,
+                    "to": 66,
+                    "color": "#f59e0b"
+                },
+                {
+                    "label": "Good",
+                    "from": 66,
+                    "to": 100,
+                    "color": "#10b981"
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

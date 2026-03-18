@@ -1,0 +1,247 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/feature-request",
+    "version": "1.0.0",
+    "title": "Feature Request Board",
+    "category": "bkbg-blog",
+    "icon": "lightbulb",
+    "description": "Display a feature request board with votes, statuses, and categories.",
+    "keywords": [
+        "feature",
+        "request",
+        "feedback",
+        "board",
+        "vote",
+        "roadmap"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-feature-request-editor",
+    "editorStyle": "bkbg-feature-request-style",
+    "style": "bkbg-feature-request-style",
+    "viewScript": "bkbg-feature-request-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "boardTitle": {
+            "type": "string",
+            "default": "Feature Requests"
+        },
+        "description": {
+            "type": "string",
+            "default": "Vote on features you'd like to see next. Your feedback shapes our roadmap."
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "requests": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Dark mode support",
+                    "description": "Add a dark theme option for better readability at night.",
+                    "votes": 142,
+                    "status": "planned",
+                    "category": "UI/UX",
+                    "date": "Jan 12, 2026"
+                },
+                {
+                    "title": "CSV export",
+                    "description": "Allow exporting data tables and reports to CSV format.",
+                    "votes": 98,
+                    "status": "in-progress",
+                    "category": "Data",
+                    "date": "Jan 8, 2026"
+                },
+                {
+                    "title": "Two-factor authentication",
+                    "description": "Add 2FA for improved account security.",
+                    "votes": 87,
+                    "status": "done",
+                    "category": "Security",
+                    "date": "Dec 30, 2025"
+                },
+                {
+                    "title": "Bulk actions on list view",
+                    "description": "Select multiple items and apply actions in bulk.",
+                    "votes": 64,
+                    "status": "under-review",
+                    "category": "Productivity",
+                    "date": "Dec 22, 2025"
+                },
+                {
+                    "title": "API rate limit increase",
+                    "description": "Increase API call limits for power users and integrations.",
+                    "votes": 51,
+                    "status": "planned",
+                    "category": "API",
+                    "date": "Dec 15, 2025"
+                },
+                {
+                    "title": "Custom domain support",
+                    "description": "Host content on a custom domain without iframe embed.",
+                    "votes": 33,
+                    "status": "declined",
+                    "category": "Hosting",
+                    "date": "Dec 10, 2025"
+                }
+            ]
+        },
+        "showVotes": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCategory": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDate": {
+            "type": "boolean",
+            "default": true
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "cardTitleSize": {
+            "type": "number",
+            "default": 16
+        },
+        "cardTitleWeight": {
+            "type": "string",
+            "default": "600"
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 160
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        },
+        "typoCardTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "cardTitleColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "cardDescColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "votesBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "votesColor": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "categoryBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "categoryColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "dateColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "plannedBg": {
+            "type": "string",
+            "default": "#dbeafe"
+        },
+        "plannedColor": {
+            "type": "string",
+            "default": "#1e40af"
+        },
+        "inProgressBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "inProgressColor": {
+            "type": "string",
+            "default": "#5b21b6"
+        },
+        "doneBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "doneColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "declinedBg": {
+            "type": "string",
+            "default": "#fee2e2"
+        },
+        "declinedColor": {
+            "type": "string",
+            "default": "#991b1b"
+        },
+        "underReviewBg": {
+            "type": "string",
+            "default": "#fef9c3"
+        },
+        "underReviewColor": {
+            "type": "string",
+            "default": "#713f12"
+        }
+    }
+}

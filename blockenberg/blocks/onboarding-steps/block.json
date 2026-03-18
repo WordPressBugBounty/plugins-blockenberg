@@ -1,0 +1,229 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/onboarding-steps",
+    "version": "1.0.0",
+    "title": "Onboarding Steps",
+    "category": "bkbg-business",
+    "icon": "list-view",
+    "description": "Step-by-step getting started / onboarding section for SaaS products, courses, and services. Numbered steps with icons, descriptions, and optional CTAs.",
+    "keywords": [
+        "onboarding",
+        "getting started",
+        "steps",
+        "guide",
+        "setup",
+        "tutorial"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-onboarding-steps-editor",
+    "style": "bkbg-onboarding-steps-style",
+    "viewScript": "bkbg-onboarding-steps-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "Get Started"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Up and Running in Minutes"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Follow these simple steps to get your account set up and start seeing results right away."
+        },
+        "steps": {
+            "type": "array",
+            "default": [
+                {
+                    "number": "01",
+                    "icon": "\ud83d\udd11",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Create Your Account",
+                    "description": "Sign up in under 60 seconds \u2014 no credit card required. Just your name and email.",
+                    "ctaLabel": "Sign Up Free",
+                    "ctaUrl": "#"
+                },
+                {
+                    "number": "02",
+                    "icon": "\u2699\ufe0f",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Configure Your Settings",
+                    "description": "Customize the platform to match your workflow. Import your existing data or start fresh.",
+                    "ctaLabel": "",
+                    "ctaUrl": ""
+                },
+                {
+                    "number": "03",
+                    "icon": "\ud83d\ude80",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Launch and Grow",
+                    "description": "Go live with confidence. Our team is here to support you every step of the way.",
+                    "ctaLabel": "View Docs",
+                    "ctaUrl": "#"
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "showNumbers": {
+            "type": "boolean",
+            "default": true
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        },
+        "showStepCtas": {
+            "type": "boolean",
+            "default": false
+        },
+        "connectorStyle": {
+            "type": "string",
+            "default": "line"
+        },
+        "mainCtaLabel": {
+            "type": "string",
+            "default": "Start for Free"
+        },
+        "mainCtaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showMainCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "stepNumBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "stepNumColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "stepTitleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "stepDescColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "connectorColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1000
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "headingFontSize": {
+            "type": "number",
+            "default": 34
+        },
+        "headingFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "subtextFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "eyebrowFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "stepTitleFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "stepTitleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "stepDescFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "stepDescLineHeight": {
+            "type": "number",
+            "default": 1.6
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "eyebrowTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "stepTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "stepDescTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

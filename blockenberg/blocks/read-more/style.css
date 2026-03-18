@@ -1,0 +1,119 @@
+/* ── Read More ───────────────────────────────────────────────── */
+
+.bkrm-wrap {
+    box-sizing: border-box;
+}
+
+.bkrm-text {
+    font-family: var(--bkrm-ct-font-family, inherit);
+    font-size: var(--bkrm-ct-font-size-d, 16px);
+    font-weight: var(--bkrm-ct-font-weight, 400);
+    font-style: var(--bkrm-ct-font-style, normal);
+    text-decoration: var(--bkrm-ct-text-decoration, none);
+    text-transform: var(--bkrm-ct-text-transform, none);
+    line-height: var(--bkrm-ct-line-height-d, 1.7);
+    letter-spacing: var(--bkrm-ct-letter-spacing-d, normal);
+    word-spacing: var(--bkrm-ct-word-spacing-d, normal);
+}
+
+.bkrm-content {
+    position: relative;
+    overflow: hidden;
+    transition: max-height var(--bkrm-dur, 400ms) cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.bkrm-content.bkrm-collapsed {
+    max-height: var(--bkrm-collapsed, 180px);
+}
+
+.bkrm-content.bkrm-expanded {
+    max-height: 9999px;
+}
+
+/* Gradient fade overlay */
+.bkrm-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--bkrm-fade-h, 80px);
+    background: linear-gradient(to bottom, transparent, var(--bkrm-fade-c, #ffffff));
+    pointer-events: none;
+    transition: opacity var(--bkrm-dur, 400ms) ease;
+}
+
+.bkrm-content.bkrm-expanded .bkrm-fade {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Button wrapper */
+.bkrm-btn-wrap {
+    margin-top: 16px;
+}
+
+/* Solid button */
+.bkrm-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: opacity 0.2s, transform 0.15s;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.bkrm-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.bkrm-btn--link {
+    padding: 4px 0;
+    background: transparent !important;
+    border-color: transparent !important;
+    text-decoration: underline;
+}
+
+/* Chevron icon rotation */
+.bkrm-chevron {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 11px;
+    line-height: 1;
+}
+
+.bkrm-chevron::before {
+    content: '▼';
+}
+
+.bkrm-btn[aria-expanded="true"] .bkrm-chevron {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 1024px) {
+    .bkrm-text {
+        font-size: var(--bkrm-ct-font-size-t, var(--bkrm-ct-font-size-d, 16px));
+        line-height: var(--bkrm-ct-line-height-t, var(--bkrm-ct-line-height-d, 1.7));
+        letter-spacing: var(--bkrm-ct-letter-spacing-t, var(--bkrm-ct-letter-spacing-d, normal));
+        word-spacing: var(--bkrm-ct-word-spacing-t, var(--bkrm-ct-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkrm-text {
+        font-size: var(--bkrm-ct-font-size-m, var(--bkrm-ct-font-size-t, var(--bkrm-ct-font-size-d, 16px)));
+        line-height: var(--bkrm-ct-line-height-m, var(--bkrm-ct-line-height-t, var(--bkrm-ct-line-height-d, 1.7)));
+        letter-spacing: var(--bkrm-ct-letter-spacing-m, var(--bkrm-ct-letter-spacing-t, var(--bkrm-ct-letter-spacing-d, normal)));
+        word-spacing: var(--bkrm-ct-word-spacing-m, var(--bkrm-ct-word-spacing-t, var(--bkrm-ct-word-spacing-d, normal)));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bkrm-content,
+    .bkrm-fade,
+    .bkrm-chevron { transition: none !important; }
+}

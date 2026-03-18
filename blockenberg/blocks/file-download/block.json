@@ -1,0 +1,151 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/file-download",
+    "title": "File Download",
+    "category": "bkbg-media",
+    "icon": "download",
+    "description": "Styled file download card with icon, file name, size, description, and call-to-action button.",
+    "keywords": [
+        "download",
+        "file",
+        "attachment",
+        "document",
+        "pdf"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-file-download-editor",
+    "editorStyle": "bkbg-file-download-style",
+    "style": "bkbg-file-download-style",
+    "viewScript": "bkbg-file-download-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide"
+        ]
+    },
+    "attributes": {
+        "fileUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "fileId": {
+            "type": "number",
+            "default": 0
+        },
+        "fileName": {
+            "type": "string",
+            "default": "Annual Report 2025.pdf"
+        },
+        "fileSize": {
+            "type": "string",
+            "default": "2.4 MB"
+        },
+        "fileType": {
+            "type": "string",
+            "default": "PDF"
+        },
+        "description": {
+            "type": "string",
+            "default": "Download and review our complete annual report for the year 2025."
+        },
+        "btnLabel": {
+            "type": "string",
+            "default": "Download"
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconStyle": {
+            "type": "string",
+            "default": "color"
+        },
+        "layoutStyle": {
+            "type": "string",
+            "default": "card"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "cardShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconBg": {
+            "type": "string",
+            "default": "#ede9fc"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 48
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "badgeEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "openInNew": {
+            "type": "boolean",
+            "default": false
+        },
+        "nameFontSize": { "type": "number", "default": 16 },
+        "nameFontWeight": { "type": "string", "default": "700" },
+        "descFontSize": { "type": "number", "default": 14 },
+        "descFontWeight": { "type": "string", "default": "400" },
+        "descLineHeight": { "type": "number", "default": 1.5 },
+        "btnFontSize": { "type": "number", "default": 14 },
+        "btnFontWeight": { "type": "string", "default": "600" },
+        "typoName": { "type": "object", "default": {} },
+        "typoDesc": { "type": "object", "default": {} },
+        "typoMeta": { "type": "object", "default": {} },
+        "typoBadge": { "type": "object", "default": {} },
+        "typoBtn": { "type": "object", "default": {} }
+    }
+}

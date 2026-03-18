@@ -1,0 +1,109 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/cta-band",
+    "title": "CTA Band",
+    "category": "bkbg-marketing",
+    "icon": "megaphone",
+    "description": "Full-width colored band with headline, supporting text and a call-to-action button.",
+    "keywords": [
+        "cta",
+        "band",
+        "banner",
+        "button",
+        "action",
+        "call to action"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-cta-band-editor",
+    "editorStyle": "bkbg-cta-band-style",
+    "style": "bkbg-cta-band-style",
+    "viewScript": "bkbg-cta-band-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "headline": {
+            "type": "string",
+            "default": "Ready to get started?"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Join thousands of happy customers today."
+        },
+        "btnLabel": {
+            "type": "string",
+            "default": "Get Started"
+        },
+        "btnUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "btnNewTab": {
+            "type": "boolean",
+            "default": false
+        },
+        "layout": {
+            "type": "string",
+            "default": "center"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#1a73e8"
+        },
+        "bgColor2": {
+            "type": "string",
+            "default": "#0d47a1"
+        },
+        "useGradient": {
+            "type": "boolean",
+            "default": true
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btnText": {
+            "type": "string",
+            "default": "#1a73e8"
+        },
+        "headlineSz": {
+            "type": "number",
+            "default": 32
+        },
+        "subtextSz": {
+            "type": "number",
+            "default": 16
+        },
+        "paddingV": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingH": {
+            "type": "number",
+            "default": 40
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "typoHeadline": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtext": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

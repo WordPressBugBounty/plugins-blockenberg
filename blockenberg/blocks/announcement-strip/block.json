@@ -1,0 +1,122 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/announcement-strip",
+    "title": "Announcement Strip",
+    "category": "bkbg-marketing",
+    "icon": "megaphone",
+    "description": "A thin dismissible announcement bar — ideal above the site header for promotions, launches, or alerts.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-announcement-strip-editor",
+    "style": "bkbg-announcement-strip-style",
+    "viewScript": "bkbg-announcement-strip-frontend",
+    "attributes": {
+        "text": {
+            "type": "string",
+            "default": "🎉 We just launched something big — save 40% this week only!"
+        },
+        "linkLabel": {
+            "type": "string",
+            "default": "Learn more →"
+        },
+        "linkUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "linkTarget": {
+            "type": "string",
+            "default": "_self"
+        },
+        "showLink": {
+            "type": "boolean",
+            "default": true
+        },
+        "showClose": {
+            "type": "boolean",
+            "default": true
+        },
+        "closeId": {
+            "type": "string",
+            "default": "anst-1"
+        },
+        "closeDays": {
+            "type": "number",
+            "default": 7
+        },
+        "style": {
+            "type": "string",
+            "default": "gradient"
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "paddingY": {
+            "type": "number",
+            "default": 11
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "badgeText": {
+            "type": "string",
+            "default": "New"
+        },
+        "showCountdown": {
+            "type": "boolean",
+            "default": false
+        },
+        "countdownDate": {
+            "type": "string",
+            "default": ""
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "bgGradient": {
+            "type": "string",
+            "default": "linear-gradient(90deg,#6c3fb5 0%,#2563eb 100%)"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#fde68a"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.22)"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "full"
+        ]
+    },
+    "keywords": [
+        "announcement",
+        "bar",
+        "strip",
+        "promo",
+        "banner",
+        "top bar",
+        "notification"
+    ]
+}

@@ -1,0 +1,157 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/big-stat",
+    "title": "Big Stat",
+    "category": "bkbg-content",
+    "icon": "chart-bar",
+    "description": "Display a single large impactful statistic with prefix, suffix, label, and multiple visual styles.",
+    "keywords": [
+        "stat",
+        "number",
+        "metric",
+        "kpi",
+        "highlight",
+        "big number",
+        "statistic"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-big-stat-editor",
+    "editorStyle": "bkbg-big-stat-style",
+    "style": "bkbg-big-stat-style",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "value": {
+            "type": "string",
+            "default": "87"
+        },
+        "prefix": {
+            "type": "string",
+            "default": ""
+        },
+        "suffix": {
+            "type": "string",
+            "default": "%"
+        },
+        "label": {
+            "type": "string",
+            "default": "Customer Satisfaction"
+        },
+        "sublabel": {
+            "type": "string",
+            "default": "Based on 10,000+ reviews"
+        },
+        "showSublabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": false
+        },
+        "icon": {
+            "type": "string",
+            "default": "star-filled"
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 40
+        },
+        "style": {
+            "type": "string",
+            "default": "centered"
+        },
+        "animate": {
+            "type": "boolean",
+            "default": true
+        },
+        "animateDuration": {
+            "type": "number",
+            "default": 1500
+        },
+        "showDivider": {
+            "type": "boolean",
+            "default": true
+        },
+        "dividerWidth": {
+            "type": "number",
+            "default": 48
+        },
+        "padding": {
+            "type": "number",
+            "default": 32
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "valueSize": {
+            "type": "number",
+            "default": 80
+        },
+        "valueWeight": {
+            "type": "number",
+            "default": 900
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 18
+        },
+        "labelWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "sublabelSize": {
+            "type": "number",
+            "default": 13
+        },
+        "prefixSuffixSize": {
+            "type": "number",
+            "default": 40
+        },
+        "valueTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "sublabelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "valueColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "sublabelColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        }
+    }
+}

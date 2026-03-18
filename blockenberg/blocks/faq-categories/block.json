@@ -1,0 +1,237 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/faq-categories",
+    "version": "1.0.0",
+    "title": "FAQ Categories",
+    "category": "bkbg-business",
+    "icon": "editor-help",
+    "description": "Categorized FAQ with a sidebar (or top tab bar) category navigator and an accordion for each category. Ideal for comprehensive help centers and support pages.",
+    "keywords": [
+        "faq",
+        "accordion",
+        "categories",
+        "filter",
+        "help",
+        "support",
+        "questions"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-faq-categories-editor",
+    "style": "bkbg-faq-categories-style",
+    "viewScript": "bkbg-faq-categories-frontend",
+    "attributes": {
+        "categories": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "cat1",
+                    "icon": "💳",
+                    "label": "Billing & Pricing",
+                    "iconPickerType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "items": [
+                        {
+                            "id": "q1",
+                            "question": "How does billing work?",
+                            "answer": "We bill monthly or annually depending on your chosen plan. You can upgrade, downgrade, or cancel at any time from your account settings."
+                        },
+                        {
+                            "id": "q2",
+                            "question": "Can I cancel at any time?",
+                            "answer": "Yes, absolutely. There are no long-term contracts. Cancel from your dashboard and your account stays active until the end of the billing period."
+                        }
+                    ]
+                },
+                {
+                    "id": "cat2",
+                    "icon": "⚙️",
+                    "label": "Getting Started",
+                    "iconPickerType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "items": [
+                        {
+                            "id": "q3",
+                            "question": "How do I create my first project?",
+                            "answer": "After signing up, click \"New Project\" on your dashboard, enter a name and description, and you're ready to invite team members and start adding tasks."
+                        },
+                        {
+                            "id": "q4",
+                            "question": "Is there a free trial?",
+                            "answer": "Yes! All new accounts start with a 14-day free trial of our Pro plan. No credit card required. You'll be notified before the trial ends."
+                        }
+                    ]
+                },
+                {
+                    "id": "cat3",
+                    "icon": "🔒",
+                    "label": "Security & Privacy",
+                    "iconPickerType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "items": [
+                        {
+                            "id": "q5",
+                            "question": "How is my data protected?",
+                            "answer": "All data is encrypted at rest (AES-256) and in transit (TLS 1.3). We are SOC 2 Type II certified and conduct regular third-party security audits."
+                        }
+                    ]
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "navStyle": {
+            "type": "string",
+            "default": "sidebar"
+        },
+        "navPosition": {
+            "type": "string",
+            "default": "left"
+        },
+        "expandFirst": {
+            "type": "boolean",
+            "default": true
+        },
+        "allowMultiple": {
+            "type": "boolean",
+            "default": false
+        },
+        "iconType": {
+            "type": "string",
+            "default": "plus"
+        },
+        "showCatIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCatCount": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSearch": {
+            "type": "boolean",
+            "default": false
+        },
+        "searchPlaceholder": {
+            "type": "string",
+            "default": "Search questions…"
+        },
+        "navWidth": {
+            "type": "number",
+            "default": 240
+        },
+        "questionPadding": {
+            "type": "number",
+            "default": 18
+        },
+        "answerPadding": {
+            "type": "number",
+            "default": 18
+        },
+        "itemRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "itemGap": {
+            "type": "number",
+            "default": 10
+        },
+        "navRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "questionSize": {
+            "type": "number",
+            "default": 16
+        },
+        "answerSize": {
+            "type": "number",
+            "default": 14
+        },
+        "navLabelSize": {
+            "type": "number",
+            "default": 14
+        },
+        "typoNavLabel": {
+            "type": "object",
+            "default": {}
+        },
+        "typoQuestion": {
+            "type": "object",
+            "default": {}
+        },
+        "typoAnswer": {
+            "type": "object",
+            "default": {}
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "navActiveBg": {
+            "type": "string",
+            "default": "#ede9f7"
+        },
+        "navActiveColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "navInactiveColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "navBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "questionColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "answerColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "itemBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "itemBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ],
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    }
+}

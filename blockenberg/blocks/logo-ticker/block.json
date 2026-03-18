@@ -1,0 +1,74 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/logo-ticker",
+    "title": "Logo Ticker",
+    "category": "bkbg-effects",
+    "icon": "slides",
+    "description": "Infinite scrolling logo marquee / ticker strip. Pure CSS animation.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-logo-ticker-editor",
+    "style": "bkbg-logo-ticker-style",
+    "viewScript": "bkbg-logo-ticker-frontend",
+    "attributes": {
+        "logos": {
+            "type": "array",
+            "default": []
+        },
+        "speed": {
+            "type": "number",
+            "default": 30
+        },
+        "direction": {
+            "type": "string",
+            "default": "left"
+        },
+        "pauseOnHover": {
+            "type": "boolean",
+            "default": true
+        },
+        "gap": {
+            "type": "number",
+            "default": 48
+        },
+        "height": {
+            "type": "number",
+            "default": 48
+        },
+        "logoFilter": {
+            "type": "string",
+            "default": "grayscale-hover"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "borderTop": {
+            "type": "boolean",
+            "default": false
+        },
+        "borderBottom": {
+            "type": "boolean",
+            "default": false
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 40
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

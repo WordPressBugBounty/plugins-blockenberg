@@ -1,0 +1,181 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/json-formatter",
+    "title": "JSON Formatter",
+    "category": "bkbg-dev",
+    "icon": "editor-code",
+    "description": "Validate, format (pretty-print), and minify JSON with syntax highlighting and one-click copy.",
+    "keywords": [
+        "json",
+        "formatter",
+        "validator",
+        "minify",
+        "prettify",
+        "code",
+        "developer"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-json-formatter-editor",
+    "style": "bkbg-json-formatter-style",
+    "viewScript": "bkbg-json-formatter-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "JSON Formatter & Validator"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Paste JSON to validate, format, or minify it instantly."
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultJson": {
+            "type": "string",
+            "default": "{\"name\":\"Blockenberg\",\"version\":1,\"features\":[\"WYSIWYG\",\"rich settings\",\"frontend rendering\"]}"
+        },
+        "indentSize": {
+            "type": "number",
+            "default": 2
+        },
+        "showLineNums": {
+            "type": "boolean",
+            "default": true
+        },
+        "showStats": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#0ea5e9"
+        },
+        "keyColor": {
+            "type": "string",
+            "default": "#0ea5e9"
+        },
+        "stringColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "numberColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "boolNullColor": {
+            "type": "string",
+            "default": "#ec4899"
+        },
+        "punctColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f0f9ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "editorBg": {
+            "type": "string",
+            "default": "#1e1e2e"
+        },
+        "editorText": {
+            "type": "string",
+            "default": "#cdd6f4"
+        },
+        "lineNumBg": {
+            "type": "string",
+            "default": "#181825"
+        },
+        "lineNumColor": {
+            "type": "string",
+            "default": "#6c7086"
+        },
+        "errorBg": {
+            "type": "string",
+            "default": "#fee2e2"
+        },
+        "errorColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "successColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "editorRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 26
+        },
+        "editorFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "editorHeight": {
+            "type": "number",
+            "default": 320
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 800
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "outputFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "outputFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "outputLineHeight": {
+            "type": "number",
+            "default": 1.6
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,214 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/certificate",
+    "title": "Certificate",
+    "category": "bkbg-business",
+    "icon": "awards",
+    "description": "Display a digital certificate or diploma with recipient name, issuer, date, credentials, and optional signatures. Ideal for online courses and certifications.",
+    "keywords": [
+        "certificate",
+        "diploma",
+        "award",
+        "credential",
+        "course",
+        "achievement",
+        "badge",
+        "completion"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-certificate-editor",
+    "editorStyle": "bkbg-certificate-style",
+    "style": "bkbg-certificate-style",
+    "viewScript": "bkbg-certificate-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide"
+        ]
+    },
+    "attributes": {
+        "style": {
+            "type": "string",
+            "default": "classic"
+        },
+        "badgeEmoji": {
+            "type": "string",
+            "default": "🏆"
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "preTitle": {
+            "type": "string",
+            "default": "Certificate of Completion"
+        },
+        "awardedTo": {
+            "type": "string",
+            "default": "This certifies that"
+        },
+        "recipientName": {
+            "type": "string",
+            "default": "Jane Doe"
+        },
+        "courseTitle": {
+            "type": "string",
+            "default": "Advanced Web Development"
+        },
+        "courseDesc": {
+            "type": "string",
+            "default": "has successfully completed the full course curriculum and demonstrated proficiency in all required competencies."
+        },
+        "issuerName": {
+            "type": "string",
+            "default": "Blockenberg Academy"
+        },
+        "issuerLogoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "issuerLogoId": {
+            "type": "number",
+            "default": 0
+        },
+        "completionDate": {
+            "type": "string",
+            "default": "February 24, 2026"
+        },
+        "credentialId": {
+            "type": "string",
+            "default": "CERT-2026-0001"
+        },
+        "showCredentialId": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDate": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSignature1": {
+            "type": "boolean",
+            "default": true
+        },
+        "signature1Name": {
+            "type": "string",
+            "default": "Alex Johnson"
+        },
+        "signature1Title": {
+            "type": "string",
+            "default": "Course Director"
+        },
+        "showSignature2": {
+            "type": "boolean",
+            "default": false
+        },
+        "signature2Name": {
+            "type": "string",
+            "default": "Maria Santos"
+        },
+        "signature2Title": {
+            "type": "string",
+            "default": "Academic Dean"
+        },
+        "fontFamily": {
+            "type": "string",
+            "default": "serif"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 800
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#fffef7"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#c9a84c"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#8b6914"
+        },
+        "preTitleColor": {
+            "type": "string",
+            "default": "#8b6914"
+        },
+        "recipientColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "courseTitleColor": {
+            "type": "string",
+            "default": "#1a3a6b"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "issuerColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 6
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 4
+        },
+        "innerBorder": {
+            "type": "boolean",
+            "default": true
+        },
+        "shadowSize": {
+            "type": "number",
+            "default": 2
+        },
+        "recipientFontSize": {
+            "type": "number",
+            "default": 36
+        },
+        "recipientFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "recipientLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "courseTitleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "bodyFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "bodyLineHeight": {
+            "type": "number",
+            "default": 1.7
+        },
+        "typoRecipient": {
+            "type": "object",
+            "default": {}
+        },
+        "typoCourseTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

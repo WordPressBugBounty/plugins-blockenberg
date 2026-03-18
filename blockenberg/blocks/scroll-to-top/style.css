@@ -1,0 +1,37 @@
+/* Scroll To Top — bkstt- */
+.bkstt-wrap {
+  position: fixed;
+  z-index: 9990;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.bkstt-wrap.bkstt-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  pointer-events: auto;
+}
+.bkstt-btn {
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.bkstt-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25) !important;
+}
+.bkstt-btn:active {
+  transform: translateY(0);
+}
+@keyframes bksttPulse {
+  0%   { transform: scale(1); opacity: 0.6; }
+  70%  { transform: scale(1.6); opacity: 0; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+.bkstt-pulse {
+  position: absolute;
+  inset: -6px;
+  animation: bksttPulse 1.8s ease-out infinite;
+}

@@ -1,0 +1,179 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/venn-diagram",
+    "version": "1.0.0",
+    "title": "Venn Diagram",
+    "category": "bkbg-charts",
+    "icon": "image-filter",
+    "description": "SVG-based Venn diagram with two or three overlapping circles. Each circle and overlap region has customisable labels, colour, and list items. Perfect for comparing sets, audiences, or concepts.",
+    "keywords": [
+        "venn",
+        "diagram",
+        "circles",
+        "overlap",
+        "compare",
+        "chart",
+        "sets"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-venn-diagram-editor",
+    "style": "bkbg-venn-diagram-style",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "What We Do Best"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "The intersection of what the world needs, what we love, and what we're good at"
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "mode": {
+            "type": "string",
+            "default": "three"
+        },
+        "circleA": {
+            "type": "object",
+            "default": {
+                "label": "Passion",
+                "color": "#6c3fb5",
+                "items": [
+                    "Deep curiosity",
+                    "Creative thinking",
+                    "Endless energy"
+                ]
+            }
+        },
+        "circleB": {
+            "type": "object",
+            "default": {
+                "label": "Skills",
+                "color": "#3b82f6",
+                "items": [
+                    "Technical craft",
+                    "Years of practice",
+                    "Proven methods"
+                ]
+            }
+        },
+        "circleC": {
+            "type": "object",
+            "default": {
+                "label": "Market Need",
+                "color": "#10b981",
+                "items": [
+                    "Real demand",
+                    "Paying customers",
+                    "Growing trend"
+                ]
+            }
+        },
+        "overlapAB": {
+            "type": "string",
+            "default": "Dream work"
+        },
+        "overlapBC": {
+            "type": "string",
+            "default": "Good career"
+        },
+        "overlapAC": {
+            "type": "string",
+            "default": "Volunteer"
+        },
+        "overlapABC": {
+            "type": "string",
+            "default": "Ikigai ✨"
+        },
+        "circleOpacity": {
+            "type": "number",
+            "default": 0.22
+        },
+        "showCircleLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "showOverlapText": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCircleItems": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgSize": {
+            "type": "integer",
+            "default": 420
+        },
+        "fontSize": {
+            "type": "integer",
+            "default": 14
+        },
+        "labelSize": {
+            "type": "integer",
+            "default": 16
+        },
+        "overlapSize": {
+            "type": "integer",
+            "default": 12
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "borderRadius": {
+            "type": "integer",
+            "default": 16
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 48
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 48
+        },
+        "titleSize": {
+            "type": "integer",
+            "default": 24
+        },
+        "subtitleSize": {
+            "type": "integer",
+            "default": 15
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,444 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/product-showcase",
+    "title": "Product Showcase",
+    "category": "bkbg-marketing",
+    "description": "Full product detail section with image gallery, variant selectors, feature highlights, tabbed content, and trust signals.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-product-showcase-editor",
+    "style": "bkbg-product-showcase-style",
+    "viewScript": "bkbg-product-showcase-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "mainImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "mainImageId": {
+            "type": "integer",
+            "default": 0
+        },
+        "gallery": {
+            "type": "array",
+            "default": [],
+            "items": {
+                "type": "object"
+            }
+        },
+        "productName": {
+            "type": "string",
+            "default": "Premium Wireless Headphones"
+        },
+        "tagline": {
+            "type": "string",
+            "default": "Studio-quality sound, redefined."
+        },
+        "sku": {
+            "type": "string",
+            "default": "SKU-WH-001"
+        },
+        "showSku": {
+            "type": "boolean",
+            "default": false
+        },
+        "price": {
+            "type": "string",
+            "default": "249.00"
+        },
+        "originalPrice": {
+            "type": "string",
+            "default": "349.00"
+        },
+        "showOriginalPrice": {
+            "type": "boolean",
+            "default": true
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "currencyPos": {
+            "type": "string",
+            "default": "before"
+        },
+        "rating": {
+            "type": "number",
+            "default": 4.7
+        },
+        "reviewCount": {
+            "type": "integer",
+            "default": 2134
+        },
+        "showRating": {
+            "type": "boolean",
+            "default": true
+        },
+        "inStock": {
+            "type": "boolean",
+            "default": true
+        },
+        "stockText": {
+            "type": "string",
+            "default": "In Stock \u2013 ships in 24h"
+        },
+        "showStock": {
+            "type": "boolean",
+            "default": true
+        },
+        "badge": {
+            "type": "string",
+            "default": "Best Seller"
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "features": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "f1",
+                    "text": "40-hour playtime with fast charge"
+                },
+                {
+                    "id": "f2",
+                    "text": "Active Noise Cancellation (ANC)"
+                },
+                {
+                    "id": "f3",
+                    "text": "Foldable design with premium carry case"
+                },
+                {
+                    "id": "f4",
+                    "text": "Compatible with all Bluetooth 5.0+ devices"
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "showFeatures": {
+            "type": "boolean",
+            "default": true
+        },
+        "featuresTitle": {
+            "type": "string",
+            "default": "Why you'll love it"
+        },
+        "featureIcon": {
+            "type": "string",
+            "default": "\u2713"
+        },
+        "featureIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "featureIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "featureIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "tabs": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "t1",
+                    "label": "Description",
+                    "content": "Experience audio like never before with our Premium Wireless Headphones. Engineered for audiophiles and everyday listeners alike, delivering crystal-clear highs and deep, punchy bass."
+                },
+                {
+                    "id": "t2",
+                    "label": "Specifications",
+                    "content": "Driver: 40mm dynamic | Frequency: 20Hz\u201320kHz | Impedance: 32\u03a9 | Battery: 800mAh | Charging: USB-C | Weight: 250g | Connectivity: Bluetooth 5.0, 3.5mm jack"
+                },
+                {
+                    "id": "t3",
+                    "label": "In the Box",
+                    "content": "1\u00d7 Premium Wireless Headphones, 1\u00d7 USB-C charging cable, 1\u00d7 3.5mm audio cable, 1\u00d7 Premium carry case, 1\u00d7 Quick start guide"
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "showTabs": {
+            "type": "boolean",
+            "default": true
+        },
+        "variantGroups": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "vg1",
+                    "label": "Color",
+                    "type": "swatches",
+                    "options": [
+                        {
+                            "id": "v1",
+                            "value": "Midnight Black",
+                            "color": "#1a1a2e"
+                        },
+                        {
+                            "id": "v2",
+                            "value": "Arctic White",
+                            "color": "#f8f8ff"
+                        },
+                        {
+                            "id": "v3",
+                            "value": "Deep Ocean",
+                            "color": "#1e3a5f"
+                        }
+                    ]
+                },
+                {
+                    "id": "vg2",
+                    "label": "Warranty",
+                    "type": "buttons",
+                    "options": [
+                        {
+                            "id": "v4",
+                            "value": "1 Year",
+                            "color": ""
+                        },
+                        {
+                            "id": "v5",
+                            "value": "2 Years",
+                            "color": ""
+                        }
+                    ]
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "showVariants": {
+            "type": "boolean",
+            "default": true
+        },
+        "trustBadges": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "tb1",
+                    "icon": "\ud83d\ude9a",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "Free Shipping"
+                },
+                {
+                    "id": "tb2",
+                    "icon": "\u21a9\ufe0f",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "30-Day Returns"
+                },
+                {
+                    "id": "tb3",
+                    "icon": "\ud83d\udd12",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "Secure Payment"
+                },
+                {
+                    "id": "tb4",
+                    "icon": "\ud83c\udfc6",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "2-Year Warranty"
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "showTrustBadges": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Add to Cart"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showSecCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "secCtaLabel": {
+            "type": "string",
+            "default": "Add to Wishlist"
+        },
+        "secCtaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "imagePosition": {
+            "type": "string",
+            "default": "left"
+        },
+        "imageRatio": {
+            "type": "string",
+            "default": "1/1"
+        },
+        "gap": {
+            "type": "integer",
+            "default": 48
+        },
+        "cardRadius": {
+            "type": "integer",
+            "default": 20
+        },
+        "cardPadding": {
+            "type": "integer",
+            "default": 40
+        },
+        "imageRadius": {
+            "type": "integer",
+            "default": 16
+        },
+        "ctaRadius": {
+            "type": "integer",
+            "default": 10
+        },
+        "badgeRadius": {
+            "type": "integer",
+            "default": 99
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "taglineTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "priceTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "featureTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "ctaTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "priceColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "originalPriceColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "taglineColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "ratingStarColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "inStockColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "outStockColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "featureColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "featureIconColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "secCtaBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "secCtaColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "tabActiveBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "tabActiveColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "tabIdleBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "tabIdleColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 64
+        }
+    }
+}

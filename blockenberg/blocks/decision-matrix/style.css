@@ -1,0 +1,170 @@
+/* Decision Matrix Block */
+.bkbg-dm-block {
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.bkbg-dm-header {
+    margin-bottom: 20px;
+}
+
+.bkbg-dm-header .bkbg-dm-title {
+    font-family: var(--bkbg-dm-ttl-font-family, inherit);
+    font-weight: var(--bkbg-dm-ttl-font-weight, 700);
+    font-size: var(--bkbg-dm-ttl-font-size-d, var(--bkbg-dm-ttl-fs, 24px));
+    line-height: var(--bkbg-dm-ttl-line-height-d, 1.3);
+    letter-spacing: var(--bkbg-dm-ttl-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-dm-ttl-word-spacing-d, normal);
+    text-transform: var(--bkbg-dm-ttl-text-transform, none);
+    font-style: var(--bkbg-dm-ttl-font-style, normal);
+    text-decoration: var(--bkbg-dm-ttl-text-decoration, none);
+    margin: 0 0 6px;
+}
+
+.bkbg-dm-subtitle {
+    font-family: var(--bkbg-dm-sub-font-family, inherit);
+    font-weight: var(--bkbg-dm-sub-font-weight, normal);
+    font-size: var(--bkbg-dm-sub-font-size-d, var(--bkbg-dm-sub-fs, 14px));
+    line-height: var(--bkbg-dm-sub-line-height-d, 1.5);
+    letter-spacing: var(--bkbg-dm-sub-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-dm-sub-word-spacing-d, normal);
+    text-transform: var(--bkbg-dm-sub-text-transform, none);
+    font-style: var(--bkbg-dm-sub-font-style, normal);
+    text-decoration: var(--bkbg-dm-sub-text-decoration, none);
+    margin: 0;
+}
+
+.bkbg-dm-table {
+    font-family: var(--bkbg-dm-cel-font-family, inherit);
+    font-size: var(--bkbg-dm-cel-font-size-d, var(--bkbg-dm-cel-fs, 14px));
+    font-weight: var(--bkbg-dm-cel-font-weight, normal);
+    letter-spacing: var(--bkbg-dm-cel-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-dm-cel-word-spacing-d, normal);
+    text-transform: var(--bkbg-dm-cel-text-transform, none);
+    font-style: var(--bkbg-dm-cel-font-style, normal);
+    text-decoration: var(--bkbg-dm-cel-text-decoration, none);
+}
+
+/* Winner banner */
+.bkbg-dm-winner-banner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    margin-bottom: 16px;
+}
+
+/* Table container */
+.bkbg-dm-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.bkbg-dm-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bkbg-dm-table th,
+.bkbg-dm-table td {
+    padding: 10px 16px;
+    border: 1px solid var(--bkbg-dm-border, #e2e8f0);
+    vertical-align: middle;
+    line-height: 1.4;
+}
+
+.bkbg-dm-table th {
+    font-weight: 700;
+}
+
+.bkbg-dm-table tbody tr:hover td {
+    filter: brightness(.97);
+}
+
+/* Winner column */
+.bkbg-dm-table th.is-winner,
+.bkbg-dm-table td.is-winner {
+    position: relative;
+}
+
+/* Total row */
+.bkbg-dm-total-row td {
+    font-size: 16px;
+    font-weight: 800;
+    padding: 12px 16px;
+}
+
+/* Score cell content */
+.bkbg-dm-score {
+    font-weight: 600;
+}
+
+.bkbg-dm-weighted {
+    font-size: 11px;
+    margin-left: 4px;
+    opacity: .8;
+}
+
+/* Progress bar inside cell */
+.bkbg-dm-bar-wrap {
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(0,0,0,.08);
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.bkbg-dm-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width .5s ease;
+}
+
+@media (max-width: 1024px) {
+    .bkbg-dm-header .bkbg-dm-title {
+        font-size: var(--bkbg-dm-ttl-font-size-t, var(--bkbg-dm-ttl-font-size-d, var(--bkbg-dm-ttl-fs, 24px)));
+        line-height: var(--bkbg-dm-ttl-line-height-t, var(--bkbg-dm-ttl-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-dm-ttl-letter-spacing-t, var(--bkbg-dm-ttl-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-dm-ttl-word-spacing-t, var(--bkbg-dm-ttl-word-spacing-d, normal));
+    }
+    .bkbg-dm-subtitle {
+        font-size: var(--bkbg-dm-sub-font-size-t, var(--bkbg-dm-sub-font-size-d, var(--bkbg-dm-sub-fs, 14px)));
+        line-height: var(--bkbg-dm-sub-line-height-t, var(--bkbg-dm-sub-line-height-d, 1.5));
+            letter-spacing: var(--bkbg-dm-sub-letter-spacing-t, var(--bkbg-dm-sub-letter-spacing-d, normal));
+            word-spacing: var(--bkbg-dm-sub-word-spacing-t, var(--bkbg-dm-sub-word-spacing-d, normal));
+    }
+    .bkbg-dm-table {
+        font-size: var(--bkbg-dm-cel-font-size-t, var(--bkbg-dm-cel-font-size-d, var(--bkbg-dm-cel-fs, 14px)));
+            letter-spacing: var(--bkbg-dm-cel-letter-spacing-t, var(--bkbg-dm-cel-letter-spacing-d, normal));
+            word-spacing: var(--bkbg-dm-cel-word-spacing-t, var(--bkbg-dm-cel-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-dm-header .bkbg-dm-title {
+        font-size: var(--bkbg-dm-ttl-font-size-m, var(--bkbg-dm-ttl-font-size-t, var(--bkbg-dm-ttl-font-size-d, var(--bkbg-dm-ttl-fs, 24px))));
+        line-height: var(--bkbg-dm-ttl-line-height-m, var(--bkbg-dm-ttl-line-height-t, var(--bkbg-dm-ttl-line-height-d, 1.3)));
+        letter-spacing: var(--bkbg-dm-ttl-letter-spacing-m, var(--bkbg-dm-ttl-letter-spacing-t, var(--bkbg-dm-ttl-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-dm-ttl-word-spacing-m, var(--bkbg-dm-ttl-word-spacing-t, var(--bkbg-dm-ttl-word-spacing-d, normal)));
+    }
+    .bkbg-dm-subtitle {
+        font-size: var(--bkbg-dm-sub-font-size-m, var(--bkbg-dm-sub-font-size-t, var(--bkbg-dm-sub-font-size-d, var(--bkbg-dm-sub-fs, 14px))));
+        line-height: var(--bkbg-dm-sub-line-height-m, var(--bkbg-dm-sub-line-height-t, var(--bkbg-dm-sub-line-height-d, 1.5)));
+            letter-spacing: var(--bkbg-dm-sub-letter-spacing-m, var(--bkbg-dm-sub-letter-spacing-t, var(--bkbg-dm-sub-letter-spacing-d, normal)));
+            word-spacing: var(--bkbg-dm-sub-word-spacing-m, var(--bkbg-dm-sub-word-spacing-t, var(--bkbg-dm-sub-word-spacing-d, normal)));
+    }
+    .bkbg-dm-table {
+        font-size: var(--bkbg-dm-cel-font-size-m, var(--bkbg-dm-cel-font-size-t, var(--bkbg-dm-cel-font-size-d, var(--bkbg-dm-cel-fs, 14px))));
+            letter-spacing: var(--bkbg-dm-cel-letter-spacing-m, var(--bkbg-dm-cel-letter-spacing-t, var(--bkbg-dm-cel-letter-spacing-d, normal)));
+            word-spacing: var(--bkbg-dm-cel-word-spacing-m, var(--bkbg-dm-cel-word-spacing-t, var(--bkbg-dm-cel-word-spacing-d, normal)));
+    }
+}
+
+@media (max-width: 640px) {
+    .bkbg-dm-table th:first-child,
+    .bkbg-dm-table td:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 1;
+    }
+}

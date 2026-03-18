@@ -1,0 +1,112 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/related-posts",
+    "title": "Related Posts",
+    "category": "bkbg-blog",
+    "icon": "networking",
+    "description": "Shows posts sharing the category or tag with the current post via AJAX on the frontend.",
+    "keywords": [
+        "related",
+        "posts",
+        "similar",
+        "recommended",
+        "articles"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-related-posts-editor",
+    "editorStyle": "bkbg-related-posts-style",
+    "style": "bkbg-related-posts-style",
+    "viewScript": "bkbg-related-posts-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "relation": {
+            "type": "string",
+            "default": "category"
+        },
+        "count": {
+            "type": "number",
+            "default": 3
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "showImage": {
+            "type": "boolean",
+            "default": true
+        },
+        "showExcerpt": {
+            "type": "boolean",
+            "default": false
+        },
+        "showDate": {
+            "type": "boolean",
+            "default": true
+        },
+        "imageRatio": {
+            "type": "string",
+            "default": "16/9"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Related Posts"
+        },
+        "headingTag": {
+            "type": "string",
+            "default": "h3"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "cardShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "gap": {
+            "type": "number",
+            "default": 20
+        },
+        "placeholderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headingFontSize": {
+            "type": "number",
+            "default": 20
+        },
+        "headingFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "headingLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

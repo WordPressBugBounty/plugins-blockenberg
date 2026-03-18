@@ -1,0 +1,205 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/event-recap",
+    "title": "Event Recap",
+    "description": "Post-event summary with key stats, highlights and next event info.",
+    "category": "bkbg-blog",
+    "icon": "calendar-alt",
+    "keywords": [
+        "event",
+        "recap",
+        "conference",
+        "summary",
+        "highlights",
+        "stats"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-event-recap-editor",
+    "style": "bkbg-event-recap-style",
+    "viewScript": "bkbg-event-recap-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eventName": {
+            "type": "string",
+            "default": "Event Name 2026"
+        },
+        "eventDate": {
+            "type": "string",
+            "default": ""
+        },
+        "eventLocation": {
+            "type": "string",
+            "default": ""
+        },
+        "showMeta": {
+            "type": "boolean",
+            "default": true
+        },
+        "summary": {
+            "type": "string",
+            "default": ""
+        },
+        "showSummary": {
+            "type": "boolean",
+            "default": true
+        },
+        "stats": {
+            "type": "array",
+            "default": [
+                {
+                    "number": "5,000+",
+                    "label": "Attendees"
+                },
+                {
+                    "number": "120",
+                    "label": "Sessions"
+                },
+                {
+                    "number": "80",
+                    "label": "Speakers"
+                },
+                {
+                    "number": "40",
+                    "label": "Countries"
+                }
+            ]
+        },
+        "showStats": {
+            "type": "boolean",
+            "default": true
+        },
+        "highlights": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "🎤",
+                    "text": "Opening keynote by industry leaders",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "icon": "🏆",
+                    "text": "Announced key product launch",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "icon": "🤝",
+                    "text": "1,200+ networking meetings held",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                }
+            ]
+        },
+        "showHighlights": {
+            "type": "boolean",
+            "default": true
+        },
+        "highlightsLabel": {
+            "type": "string",
+            "default": "Key Highlights"
+        },
+        "nextEventInfo": {
+            "type": "string",
+            "default": ""
+        },
+        "showNextEvent": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "headerTextColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#ddd6fe"
+        },
+        "summaryColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "statsBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "statNumColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "statLabelColor": {
+            "type": "string",
+            "default": "#ddd6fe"
+        },
+        "highlightColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "highlightBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "highlightBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "nextBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "nextTextColor": {
+            "type": "string",
+            "default": "#5b21b6"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "eventNameFontSize": { "type": "number", "default": 26 },
+        "eventNameFontWeight": { "type": "string", "default": "800" },
+        "eventNameLineHeight": { "type": "number", "default": 1.2 },
+        "summaryFontSize": { "type": "number", "default": 15 },
+        "summaryFontWeight": { "type": "string", "default": "400" },
+        "summaryLineHeight": { "type": "number", "default": 1.7 },
+        "typoTitle": { "type": "object", "default": {} },
+        "typoSummary": { "type": "object", "default": {} }
+    }
+}

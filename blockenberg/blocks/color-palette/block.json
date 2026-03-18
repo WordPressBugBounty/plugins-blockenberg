@@ -1,0 +1,173 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/color-palette",
+    "title": "Color Palette",
+    "category": "bkbg-dev",
+    "icon": "art",
+    "description": "Display brand color swatches with HEX, RGB, and CSS variable labels. Perfect for style guides and design systems.",
+    "keywords": [
+        "color",
+        "palette",
+        "swatch",
+        "brand",
+        "design",
+        "style guide"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-color-palette-editor",
+    "style": "bkbg-color-palette-style",
+    "viewScript": "bkbg-color-palette-frontend",
+    "attributes": {
+        "colors": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Primary",
+                    "hex": "#6c3fb5",
+                    "cssVar": "--color-primary"
+                },
+                {
+                    "name": "Secondary",
+                    "hex": "#a855f7",
+                    "cssVar": "--color-secondary"
+                },
+                {
+                    "name": "Accent",
+                    "hex": "#3b82f6",
+                    "cssVar": "--color-accent"
+                },
+                {
+                    "name": "Success",
+                    "hex": "#10b981",
+                    "cssVar": "--color-success"
+                },
+                {
+                    "name": "Warning",
+                    "hex": "#f59e0b",
+                    "cssVar": "--color-warning"
+                },
+                {
+                    "name": "Danger",
+                    "hex": "#ef4444",
+                    "cssVar": "--color-danger"
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "swatchHeight": {
+            "type": "number",
+            "default": 120
+        },
+        "swatchRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "showName": {
+            "type": "boolean",
+            "default": true
+        },
+        "showHex": {
+            "type": "boolean",
+            "default": true
+        },
+        "showRGB": {
+            "type": "boolean",
+            "default": false
+        },
+        "showCssVar": {
+            "type": "boolean",
+            "default": false
+        },
+        "showCopyBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "copyFormat": {
+            "type": "string",
+            "default": "hex"
+        },
+        "labelBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "labelTextColor": {
+            "type": "string",
+            "default": "#1e1e1e"
+        },
+        "labelMeta": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "gap": {
+            "type": "number",
+            "default": 16
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "showShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBorder": {
+            "type": "boolean",
+            "default": false
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "labelPadding": {
+            "type": "number",
+            "default": 12
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "left"
+        },
+        "title": {
+            "type": "string",
+            "default": ""
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": false
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1e1e"
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 20
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoLabel": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

@@ -1,0 +1,167 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/image-text-rows",
+    "version": "1.0.0",
+    "title": "Image Text Rows",
+    "category": "bkbg-content",
+    "description": "Multiple alternating image + text rows in one block. Perfect for feature descriptions, how-it-works sections, and product showcases.",
+    "keywords": [
+        "image text",
+        "alternating",
+        "rows",
+        "features",
+        "media",
+        "layout",
+        "split"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-image-text-rows-editor",
+    "style": "bkbg-image-text-rows-style",
+    "viewScript": "bkbg-image-text-rows-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "rows": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "",
+                    "badge": "",
+                    "description": "",
+                    "features": [],
+                    "btnLabel": "",
+                    "btnUrl": "",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": ""
+                }
+            ]
+        },
+        "imagePosition": {
+            "type": "string",
+            "default": "alternate"
+        },
+        "imageRatio": {
+            "type": "string",
+            "default": "4:3"
+        },
+        "imageRadius": {
+            "type": "integer",
+            "default": 12
+        },
+        "imageShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "imageWidth": {
+            "type": "integer",
+            "default": 45
+        },
+        "gap": {
+            "type": "integer",
+            "default": 80
+        },
+        "verticalAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "showFeatures": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBtns": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBadges": {
+            "type": "boolean",
+            "default": true
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 0
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "featureColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "featureDot": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "headingFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "headingFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "headingLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "bodyFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "bodyFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "bodyLineHeight": {
+            "type": "number",
+            "default": 1.6
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

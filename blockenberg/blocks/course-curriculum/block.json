@@ -1,0 +1,300 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/course-curriculum",
+    "title": "Course Curriculum",
+    "category": "bkbg-blog",
+    "icon": "book",
+    "description": "Expandable course curriculum / syllabus with sections and lessons. Each lesson shows duration, type, and free/locked status. Perfect for online courses and training pages.",
+    "keywords": [
+        "course",
+        "curriculum",
+        "syllabus",
+        "lessons",
+        "education",
+        "lms",
+        "outline"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-course-curriculum-editor",
+    "style": "bkbg-course-curriculum-style",
+    "viewScript": "bkbg-course-curriculum-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "courseTitle": {
+            "type": "string",
+            "default": "Complete Web Development Bootcamp"
+        },
+        "courseMeta": {
+            "type": "string",
+            "default": "12 sections • 48 lessons • 24 hours total"
+        },
+        "showCourseMeta": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSearch": {
+            "type": "boolean",
+            "default": false
+        },
+        "expandAll": {
+            "type": "boolean",
+            "default": false
+        },
+        "defaultOpen": {
+            "type": "number",
+            "default": 0
+        },
+        "sections": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "sec1",
+                    "title": "1. Getting Started with HTML",
+                    "lessons": [
+                        {
+                            "id": "l1",
+                            "title": "Introduction to HTML",
+                            "duration": "12:30",
+                            "type": "video",
+                            "free": true
+                        },
+                        {
+                            "id": "l2",
+                            "title": "HTML Document Structure",
+                            "duration": "18:45",
+                            "type": "video",
+                            "free": true
+                        },
+                        {
+                            "id": "l3",
+                            "title": "HTML Elements & Tags",
+                            "duration": "22:10",
+                            "type": "video",
+                            "free": false
+                        },
+                        {
+                            "id": "l4",
+                            "title": "HTML Quiz",
+                            "duration": "5 Q",
+                            "type": "quiz",
+                            "free": false
+                        }
+                    ]
+                },
+                {
+                    "id": "sec2",
+                    "title": "2. CSS Fundamentals",
+                    "lessons": [
+                        {
+                            "id": "l5",
+                            "title": "CSS Selectors & Specificity",
+                            "duration": "25:00",
+                            "type": "video",
+                            "free": false
+                        },
+                        {
+                            "id": "l6",
+                            "title": "Box Model Deep Dive",
+                            "duration": "30:15",
+                            "type": "video",
+                            "free": false
+                        },
+                        {
+                            "id": "l7",
+                            "title": "Flexbox & Grid Layouts",
+                            "duration": "40:00",
+                            "type": "video",
+                            "free": false
+                        },
+                        {
+                            "id": "l8",
+                            "title": "Hands-on: Build a Layout",
+                            "duration": "45 min",
+                            "type": "exercise",
+                            "free": false
+                        }
+                    ]
+                },
+                {
+                    "id": "sec3",
+                    "title": "3. JavaScript Essentials",
+                    "lessons": [
+                        {
+                            "id": "l9",
+                            "title": "Variables, Types & Scope",
+                            "duration": "20:30",
+                            "type": "video",
+                            "free": false
+                        },
+                        {
+                            "id": "l10",
+                            "title": "Functions & Arrow Functions",
+                            "duration": "18:00",
+                            "type": "video",
+                            "free": false
+                        },
+                        {
+                            "id": "l11",
+                            "title": "DOM Manipulation",
+                            "duration": "35:20",
+                            "type": "video",
+                            "free": false
+                        },
+                        {
+                            "id": "l12",
+                            "title": "Reading: JS Best Practices",
+                            "duration": "8 min",
+                            "type": "article",
+                            "free": false
+                        }
+                    ]
+                }
+            ]
+        },
+        "totalLessons": {
+            "type": "number",
+            "default": 48
+        },
+        "totalHours": {
+            "type": "string",
+            "default": "24 hours"
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Enroll Now"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "sectionBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "sectionHoverBg": {
+            "type": "string",
+            "default": "#f3f0fc"
+        },
+        "lessonBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "lessonHoverBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "freeBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "freeColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "lockedColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "sectionTitleColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "lessonTitleColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "sectionRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 26
+        },
+        "sectionTitleSize": {
+            "type": "number",
+            "default": 16
+        },
+        "lessonTitleSize": {
+            "type": "number",
+            "default": 14
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSection": {
+            "type": "object",
+            "default": {}
+        },
+        "typoLesson": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

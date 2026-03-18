@@ -1,0 +1,156 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/content-menu",
+    "title": "Content Menu",
+    "description": "In-page anchor navigation that highlights the current section as the user scrolls — can float fixed on the left or right, or sit inline.",
+    "category": "bkbg-layout",
+    "icon": "list-view",
+    "keywords": [
+        "anchor",
+        "navigation",
+        "toc",
+        "floating",
+        "sticky",
+        "menu",
+        "scroll"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-content-menu-editor",
+    "style": "bkbg-content-menu-style",
+    "viewScript": "bkbg-content-menu-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "links": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Overview",
+                    "anchor": "overview",
+                    "icon": "📋",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "label": "Features",
+                    "anchor": "features",
+                    "icon": "⚡",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "label": "Pricing",
+                    "anchor": "pricing",
+                    "icon": "💰",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "label": "FAQ",
+                    "anchor": "faq",
+                    "icon": "❓",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "label": "Contact",
+                    "anchor": "contact",
+                    "icon": "✉️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                }
+            ]
+        },
+        "position": {
+            "type": "string",
+            "default": "inline"
+        },
+        "menuStyle": {
+            "type": "string",
+            "default": "pills"
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        },
+        "showNumbers": {
+            "type": "boolean",
+            "default": false
+        },
+        "animateScroll": {
+            "type": "boolean",
+            "default": true
+        },
+        "fixedTop": {
+            "type": "number",
+            "default": 50
+        },
+        "fixedOffset": {
+            "type": "number",
+            "default": 24
+        },
+        "menuWidth": {
+            "type": "number",
+            "default": 180
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "activeBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "activeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "shadowColor": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.08)"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "linkFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "typoLink": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

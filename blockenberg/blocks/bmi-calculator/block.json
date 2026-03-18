@@ -1,0 +1,209 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/bmi-calculator",
+    "title": "BMI Calculator",
+    "category": "bkbg-calculators",
+    "icon": "heart",
+    "description": "Interactive Body Mass Index calculator with metric and imperial units, animated result gauge, weight category indicator, and fully customizable styling.",
+    "keywords": [
+        "bmi",
+        "body mass index",
+        "calculator",
+        "health",
+        "fitness",
+        "weight",
+        "height"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-bmi-calculator-editor",
+    "style": "bkbg-bmi-calculator-style",
+    "viewScript": "bkbg-bmi-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "BMI Calculator"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Find out if you are at a healthy weight for your height."
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "unitSystem": {
+            "type": "string",
+            "default": "metric"
+        },
+        "showUnitToggle": {
+            "type": "boolean",
+            "default": true
+        },
+        "weightDefaultKg": {
+            "type": "number",
+            "default": 70
+        },
+        "weightMinKg": {
+            "type": "number",
+            "default": 20
+        },
+        "weightMaxKg": {
+            "type": "number",
+            "default": 200
+        },
+        "heightDefaultCm": {
+            "type": "number",
+            "default": 170
+        },
+        "heightMinCm": {
+            "type": "number",
+            "default": 100
+        },
+        "heightMaxCm": {
+            "type": "number",
+            "default": 220
+        },
+        "weightDefaultLbs": {
+            "type": "number",
+            "default": 154
+        },
+        "weightMinLbs": {
+            "type": "number",
+            "default": 44
+        },
+        "weightMaxLbs": {
+            "type": "number",
+            "default": 440
+        },
+        "heightDefaultFt": {
+            "type": "number",
+            "default": 5
+        },
+        "heightDefaultIn": {
+            "type": "number",
+            "default": 7
+        },
+        "showGauge": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCategories": {
+            "type": "boolean",
+            "default": true
+        },
+        "showInterpretation": {
+            "type": "boolean",
+            "default": true
+        },
+        "showIdealWeight": {
+            "type": "boolean",
+            "default": true
+        },
+        "disclaimer": {
+            "type": "string",
+            "default": "This calculator is for informational purposes only and not a substitute for medical advice."
+        },
+        "showDisclaimer": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "underweightColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "normalColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "overweightColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "obeseColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "resultBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "bmiSize": {
+            "type": "number",
+            "default": 52
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 680
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBmi": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

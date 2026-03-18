@@ -1,0 +1,217 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/feature-showcase",
+    "version": "1.0.0",
+    "title": "Feature Showcase",
+    "category": "bkbg-marketing",
+    "icon": "align-left",
+    "description": "Alternating zigzag rows of image + headline + body text + bullet checklist + CTA. The definitive landing page feature section.",
+    "keywords": [
+        "feature",
+        "showcase",
+        "zigzag",
+        "alternating",
+        "landing",
+        "benefits",
+        "image text"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-feature-showcase-editor",
+    "editorStyle": "bkbg-feature-showcase-style",
+    "style": "bkbg-feature-showcase-style",
+    "viewScript": "bkbg-feature-showcase-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "rows": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "fs1",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imagePosition": "right",
+                    "badge": "Fast & Reliable",
+                    "headline": "Performance that scales with you",
+                    "body": "Built on a modern architecture, the platform handles millions of requests without breaking a sweat — giving your team the speed it needs.",
+                    "bullets": [
+                        {
+                            "id": "b1",
+                            "text": "99.99% uptime SLA guaranteed"
+                        },
+                        {
+                            "id": "b2",
+                            "text": "Sub-100ms response times globally"
+                        },
+                        {
+                            "id": "b3",
+                            "text": "Auto-scaling infrastructure"
+                        }
+                    ],
+                    "ctaLabel": "Get started",
+                    "ctaUrl": "#",
+                    "ctaTarget": false,
+                    "ctaStyle": "filled"
+                },
+                {
+                    "id": "fs2",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imagePosition": "left",
+                    "badge": "Integrated",
+                    "headline": "Connect every tool in your stack",
+                    "body": "Native integrations with 200+ tools mean your data flows automatically — no Zapier hacks, no brittle scripts, just reliable automation.",
+                    "bullets": [
+                        {
+                            "id": "b4",
+                            "text": "One-click native integrations"
+                        },
+                        {
+                            "id": "b5",
+                            "text": "Bi-directional data sync"
+                        },
+                        {
+                            "id": "b6",
+                            "text": "Webhook & REST API support"
+                        }
+                    ],
+                    "ctaLabel": "See integrations",
+                    "ctaUrl": "#",
+                    "ctaTarget": false,
+                    "ctaStyle": "outline"
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "gap": {
+            "type": "number",
+            "default": 96
+        },
+        "imageWidth": {
+            "type": "number",
+            "default": 50
+        },
+        "imageRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "imageShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "imageRatio": {
+            "type": "string",
+            "default": "4/3"
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBullets": {
+            "type": "boolean",
+            "default": true
+        },
+        "bulletIcon": {
+            "type": "string",
+            "default": "check"
+        },
+        "headlineTag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "headlineSize": {
+            "type": "number",
+            "default": 36
+        },
+        "bodySize": {
+            "type": "number",
+            "default": 16
+        },
+        "bulletSize": {
+            "type": "number",
+            "default": 15
+        },
+        "badgeSize": {
+            "type": "number",
+            "default": 13
+        },
+        "typoHeadline": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBullet": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBadge": {
+            "type": "object",
+            "default": {}
+        },
+        "ctaRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#f3f0ff"
+        },
+        "headlineColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "bodyColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "bulletColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "bulletIconColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        }
+    }
+}

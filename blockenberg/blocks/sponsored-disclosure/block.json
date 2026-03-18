@@ -1,0 +1,130 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/sponsored-disclosure",
+    "title": "Sponsored Disclosure",
+    "description": "FTC-compliant sponsored/paid partnership disclosure label.",
+    "category": "bkbg-blog",
+    "icon": "warning",
+    "keywords": [
+        "sponsored",
+        "paid",
+        "disclosure",
+        "advertisement",
+        "ftc",
+        "partnership"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-sponsored-disclosure-editor",
+    "style": "bkbg-sponsored-disclosure-style",
+    "viewScript": "bkbg-sponsored-disclosure-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "disclosureType": {
+            "type": "string",
+            "default": "sponsored"
+        },
+        "customLabel": {
+            "type": "string",
+            "default": ""
+        },
+        "text": {
+            "type": "string",
+            "default": ""
+        },
+        "showText": {
+            "type": "boolean",
+            "default": false
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "icon": {
+            "type": "string",
+            "default": "📢"
+        },
+        "iconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "iconDashicon": {
+            "type": "string",
+            "default": "megaphone"
+        },
+        "iconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "style": {
+            "type": "string",
+            "default": "pill"
+        },
+        "align": {
+            "type": "string",
+            "default": "left"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#fff7ed"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#fed7aa"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#9a3412"
+        },
+        "labelBg": {
+            "type": "string",
+            "default": "#f97316"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "600"
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "letterSpacing": {
+            "type": "string",
+            "default": "0.04em"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 999
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

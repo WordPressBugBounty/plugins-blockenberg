@@ -1,0 +1,126 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/toggle",
+    "title": "Toggle / Read More",
+    "description": "A single expandable panel for 'Read More', spoilers, or collapsible content sections.",
+    "category": "bkbg-content",
+    "icon": "arrow-down",
+    "keywords": [
+        "toggle",
+        "read more",
+        "spoiler",
+        "collapse",
+        "expand",
+        "accordion"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-toggle-editor",
+    "editorStyle": "bkbg-toggle-style",
+    "style": "bkbg-toggle-style",
+    "viewScript": "bkbg-toggle-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Click to read more"
+        },
+        "content": {
+            "type": "string",
+            "source": "html",
+            "selector": ".bkbg-tgl-body"
+        },
+        "defaultOpen": {
+            "type": "boolean",
+            "default": false
+        },
+        "titleTag": {
+            "type": "string",
+            "default": "h3"
+        },
+        "iconType": {
+            "type": "string",
+            "default": "chevron"
+        },
+        "iconPosition": {
+            "type": "string",
+            "default": "right"
+        },
+        "layout": {
+            "type": "string",
+            "default": "default"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "contentTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "padding": {
+            "type": "number",
+            "default": 16
+        },
+        "animationSpeed": {
+            "type": "number",
+            "default": 280
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "titleBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleHoverBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "activeTitleBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "activeTitleColor": {
+            "type": "string",
+            "default": "#1d4ed8"
+        },
+        "contentColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "contentBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "iconActiveColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        }
+    }
+}

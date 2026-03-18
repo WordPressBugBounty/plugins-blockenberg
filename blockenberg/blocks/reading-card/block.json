@@ -1,0 +1,163 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/reading-card",
+    "title": "Reading Card",
+    "category": "bkbg-blog",
+    "icon": "book",
+    "description": "Book, article, podcast or course recommendation card with cover image, rating, category badge and CTA link. Multiple visual styles.",
+    "keywords": [
+        "book",
+        "reading",
+        "recommend",
+        "resource",
+        "podcast",
+        "course",
+        "card"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-reading-card-editor",
+    "style": "bkbg-reading-card-style",
+    "viewScript": "bkbg-reading-card-frontend",
+    "attributes": {
+        "coverUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "coverId": {
+            "type": "number",
+            "default": 0
+        },
+        "coverAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "contentType": {
+            "type": "string",
+            "default": "book"
+        },
+        "badge": {
+            "type": "string",
+            "default": ""
+        },
+        "title": {
+            "type": "string",
+            "default": "The Design of Everyday Things"
+        },
+        "author": {
+            "type": "string",
+            "default": "Don Norman"
+        },
+        "description": {
+            "type": "string",
+            "default": "A classic read on user-centered design, explaining how design communicates and guides user behavior through affordances and feedback."
+        },
+        "rating": {
+            "type": "number",
+            "default": 5
+        },
+        "showRating": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Get the book →"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaIsExternal": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "authorColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "ratingColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "authorTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "coverWidth": {
+            "type": "number",
+            "default": 120
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 720
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 32
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 32
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

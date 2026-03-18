@@ -1,0 +1,152 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/github-card",
+    "title": "GitHub Card",
+    "category": "bkbg-dev",
+    "description": "Display a GitHub user profile or repository card with live stats fetched from the GitHub API.",
+    "keywords": [
+        "github",
+        "card",
+        "repository",
+        "profile",
+        "developer",
+        "stats",
+        "api"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-github-card-editor",
+    "style": "bkbg-github-card-style",
+    "viewScript": "bkbg-github-card-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "mode": {
+            "type": "string",
+            "default": "repo"
+        },
+        "username": {
+            "type": "string",
+            "default": ""
+        },
+        "repoName": {
+            "type": "string",
+            "default": ""
+        },
+        "showAvatar": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBio": {
+            "type": "boolean",
+            "default": true
+        },
+        "showStats": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLanguage": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTopics": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLastUpdate": {
+            "type": "boolean",
+            "default": true
+        },
+        "openInNewTab": {
+            "type": "boolean",
+            "default": true
+        },
+        "cacheMinutes": {
+            "type": "number",
+            "default": 60
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "padding": {
+            "type": "number",
+            "default": 24
+        },
+        "avatarSize": {
+            "type": "number",
+            "default": 64
+        },
+        "align2": {
+            "type": "string",
+            "default": "center"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 480
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#0d1117"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#e6edf3"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#8b949e"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#8b949e"
+        },
+        "statBg": {
+            "type": "string",
+            "default": "#161b22"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#58a6ff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#30363d"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "headingFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "bodyFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "metaFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "typoHeading": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        },
+        "typoMeta": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

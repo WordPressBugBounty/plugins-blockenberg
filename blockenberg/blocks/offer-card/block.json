@@ -1,0 +1,237 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/offer-card",
+    "version": "1.0.0",
+    "title": "Offer Card",
+    "category": "bkbg-marketing",
+    "icon": "tag",
+    "description": "Special offer and deal card with urgency badge, original/sale price, includes list, CTA, and optional countdown timer.",
+    "keywords": [
+        "offer",
+        "deal",
+        "sale",
+        "price",
+        "countdown",
+        "urgency",
+        "card",
+        "promo"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-offer-card-editor",
+    "style": "bkbg-offer-card-style",
+    "viewScript": "bkbg-offer-card-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "badge": {
+            "type": "string",
+            "default": "🔥 Limited Time"
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "badgeStyle": {
+            "type": "string",
+            "default": "hot"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Get lifetime access — today only"
+        },
+        "description": {
+            "type": "string",
+            "default": "Everything you need to launch, grow, and scale. One-time payment, no subscriptions."
+        },
+        "originalPrice": {
+            "type": "string",
+            "default": "497"
+        },
+        "salePrice": {
+            "type": "string",
+            "default": "197"
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "showPrice": {
+            "type": "boolean",
+            "default": true
+        },
+        "includes": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "Full course access (42 lessons)"
+                },
+                {
+                    "text": "Private community membership"
+                },
+                {
+                    "text": "Monthly live Q&A sessions"
+                },
+                {
+                    "text": "Lifetime updates included"
+                },
+                {
+                    "text": "30-day money-back guarantee"
+                }
+            ]
+        },
+        "showIncludes": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Get instant access →"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaOpenNewTab": {
+            "type": "boolean",
+            "default": false
+        },
+        "showCountdown": {
+            "type": "boolean",
+            "default": true
+        },
+        "countdownEnd": {
+            "type": "string",
+            "default": ""
+        },
+        "disclaimer": {
+            "type": "string",
+            "default": "Secure checkout · 30-day refund · Cancel anytime"
+        },
+        "showDisclaimer": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "card"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#fef2f2"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#b91c1c"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "priceColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "strikethroughColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "includeColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "checkColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "disclaimerColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "borderRadius": {
+            "type": "integer",
+            "default": 16
+        },
+        "maxWidth": {
+            "type": "integer",
+            "default": 540
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 64
+        },
+        "headingFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "headingFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "headingLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "descFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "descLineHeight": {
+            "type": "number",
+            "default": 1.6
+        },
+        "ctaFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "ctaTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

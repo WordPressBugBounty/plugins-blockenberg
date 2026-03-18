@@ -1,0 +1,157 @@
+/* ========================================
+   Vimeo Performance Embed
+   ======================================== */
+
+.bkbg-vmp-wrap {
+    --bkbg-vmp-radius: 12px;
+    --bkbg-vmp-min-height: 350px;
+    --bkbg-vmp-play-size: 50px;
+    --bkbg-vmp-play-bg: #01adee;
+    --bkbg-vmp-play-color: #ffffff;
+    --bkbg-vmp-play-hover: 1.05;
+
+    width: 100%;
+}
+
+.bkbg-vmp-aspect {
+    width: 100%;
+}
+
+.bkbg-vmp-inner {
+    position: relative;
+    width: 100%;
+    min-height: var(--bkbg-vmp-min-height);
+    border-radius: var(--bkbg-vmp-radius);
+    overflow: hidden;
+    background: #0b1220;
+}
+
+.bkbg-vmp-wrap.has-shadow .bkbg-vmp-inner {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+}
+
+.bkbg-vmp-media-layer {
+    position: absolute;
+    inset: 0;
+}
+
+.bkbg-vmp-poster-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transform: scale(1.02);
+}
+
+.bkbg-vmp-iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.bkbg-vmp-embed {
+    position: absolute;
+    inset: 0;
+}
+
+.bkbg-vmp-wrap.is-playing .bkbg-vmp-media-layer,
+.bkbg-vmp-wrap.is-playing .bkbg-vmp-play {
+    display: none;
+}
+
+.bkbg-vmp-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: var(--bkbg-vmp-play-size);
+    height: var(--bkbg-vmp-play-size);
+    border: 0;
+    background: var(--bkbg-vmp-play-bg);
+    color: var(--bkbg-vmp-play-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    transition: transform 160ms ease, filter 160ms ease;
+    z-index: 3;
+}
+
+.bkbg-vmp-wrap.is-play-circle .bkbg-vmp-play {
+    border-radius: 999px;
+}
+
+.bkbg-vmp-wrap.is-play-rounded .bkbg-vmp-play {
+    border-radius: 16px;
+}
+
+.bkbg-vmp-wrap.is-play-square .bkbg-vmp-play {
+    border-radius: 8px;
+}
+
+.bkbg-vmp-wrap.is-play-youtube .bkbg-vmp-play {
+    width: calc(var(--bkbg-vmp-play-size) * 1.65);
+    height: calc(var(--bkbg-vmp-play-size) * 1.08);
+    border-radius: calc(var(--bkbg-vmp-play-size) * 0.28);
+}
+
+.bkbg-vmp-play:hover {
+    transform: translate(-50%, -50%) scale(var(--bkbg-vmp-play-hover));
+    filter: brightness(1.03);
+}
+
+.bkbg-vmp-play:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.bkbg-vmp-play-triangle {
+    width: 0;
+    height: 0;
+    border-left: calc(var(--bkbg-vmp-play-size) * 0.28) solid currentColor;
+    border-top: calc(var(--bkbg-vmp-play-size) * 0.17) solid transparent;
+    border-bottom: calc(var(--bkbg-vmp-play-size) * 0.17) solid transparent;
+    margin-left: calc(var(--bkbg-vmp-play-size) * 0.06);
+}
+
+.bkbg-vmp-empty {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(255,255,255,0.88);
+    padding: 18px;
+}
+
+/* Inspector helpers */
+.bkbg-vmp-media {
+    display: grid;
+    gap: 10px;
+}
+
+.bkbg-vmp-media-thumb {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.12);
+}
+
+.bkbg-vmp-media-placeholder {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    border: 1px dashed rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0,0,0,0.6);
+    font-size: 12px;
+}

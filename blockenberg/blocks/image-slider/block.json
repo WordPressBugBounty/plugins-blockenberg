@@ -1,0 +1,139 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/image-slider",
+    "title": "Image Slider",
+    "category": "bkbg-media",
+    "icon": "images-alt2",
+    "description": "A responsive image carousel with captions, autoplay, arrows, dots and touch support.",
+    "keywords": [
+        "slider",
+        "carousel",
+        "gallery",
+        "images"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-image-slider-editor",
+    "style": "bkbg-image-slider-style",
+    "viewScript": "bkbg-image-slider-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "slides": {
+            "type": "array",
+            "default": [
+                {
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "alt": "",
+                    "title": "Slide Title",
+                    "subtitle": "Slide subtitle text",
+                    "buttonText": "",
+                    "buttonUrl": "",
+                    "buttonTarget": false,
+                    "overlayColor": ""
+                },
+                {
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "alt": "",
+                    "title": "Another Slide",
+                    "subtitle": "Compelling subtitle here",
+                    "buttonText": "Learn more",
+                    "buttonUrl": "#",
+                    "buttonTarget": false,
+                    "overlayColor": ""
+                }
+            ]
+        },
+        "autoplay": {
+            "type": "boolean",
+            "default": true
+        },
+        "autoplaySpeed": {
+            "type": "number",
+            "default": 4000
+        },
+        "pauseOnHover": {
+            "type": "boolean",
+            "default": true
+        },
+        "loop": {
+            "type": "boolean",
+            "default": true
+        },
+        "transition": {
+            "type": "string",
+            "default": "slide"
+        },
+        "showArrows": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDots": {
+            "type": "boolean",
+            "default": true
+        },
+        "arrowStyle": {
+            "type": "string",
+            "default": "rounded"
+        },
+        "height": {
+            "type": "number",
+            "default": 480
+        },
+        "mobileHeight": {
+            "type": "number",
+            "default": 280
+        },
+        "objectFit": {
+            "type": "string",
+            "default": "cover"
+        },
+        "captionPosition": {
+            "type": "string",
+            "default": "bottom-left"
+        },
+        "captionBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.45)"
+        },
+        "captionColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 32
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 16
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "btnStyle": {
+            "type": "string",
+            "default": "primary"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        }
+    }
+}

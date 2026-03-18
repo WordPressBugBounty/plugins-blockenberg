@@ -1,0 +1,83 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/pricing-switcher",
+    "title": "Pricing Switcher",
+    "category": "bkbg-marketing",
+    "icon": "controls-repeat",
+    "description": "Monthly/Yearly toggle that shows or hides pricing columns on the page.",
+    "keywords": [
+        "pricing",
+        "toggle",
+        "switcher",
+        "billing"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-pricing-switcher-editor",
+    "editorStyle": "bkbg-pricing-switcher-style",
+    "style": "bkbg-pricing-switcher-style",
+    "viewScript": "bkbg-pricing-switcher-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "labelMonthly": {
+            "type": "string",
+            "default": "Monthly"
+        },
+        "labelYearly": {
+            "type": "string",
+            "default": "Yearly"
+        },
+        "defaultActive": {
+            "type": "string",
+            "default": "monthly"
+        },
+        "switchStyle": {
+            "type": "string",
+            "default": "pills"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f3f3f7"
+        },
+        "activeText": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inactiveText": {
+            "type": "string",
+            "default": "#555555"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 40
+        },
+        "savingBadge": {
+            "type": "string",
+            "default": "Save 20%"
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "badgeTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

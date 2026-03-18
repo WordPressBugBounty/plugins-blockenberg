@@ -1,0 +1,133 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/scatter-chart",
+    "title": "Scatter Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-area",
+    "description": "Interactive X/Y scatter plot powered by Chart.js. Reveal correlations and distributions in your data.",
+    "keywords": [
+        "chart",
+        "scatter",
+        "scatter plot",
+        "correlation",
+        "data",
+        "points",
+        "xy"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-scatter-chart-editor",
+    "style": "bkbg-scatter-chart-style",
+    "viewScript": "bkbg-scatter-chart-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "chartTitle": {
+            "type": "string",
+            "default": "Scatter Chart"
+        },
+        "chartSubtitle": {
+            "type": "string",
+            "default": "Correlation analysis"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "datasetsJson": {
+            "type": "string",
+            "default": "[{\"label\":\"Group A\",\"color\":\"#6c3fb5\",\"points\":\"5,28\\n12,35\\n22,42\\n38,20\\n55,60\\n70,45\\n85,72\"},{\"label\":\"Group B\",\"color\":\"#ec4899\",\"points\":\"8,55\\n18,48\\n30,75\\n45,62\\n60,88\\n78,70\\n92,95\"}]"
+        },
+        "showGrid": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "legendPos": {
+            "type": "string",
+            "default": "bottom"
+        },
+        "pointSize": {
+            "type": "number",
+            "default": 7
+        },
+        "pointStyle": {
+            "type": "string",
+            "default": "circle"
+        },
+        "fillAlpha": {
+            "type": "number",
+            "default": 85
+        },
+        "xLabel": {
+            "type": "string",
+            "default": ""
+        },
+        "yLabel": {
+            "type": "string",
+            "default": ""
+        },
+        "xMin": {
+            "type": "string",
+            "default": ""
+        },
+        "xMax": {
+            "type": "string",
+            "default": ""
+        },
+        "yMin": {
+            "type": "string",
+            "default": ""
+        },
+        "yMax": {
+            "type": "string",
+            "default": ""
+        },
+        "animate": {
+            "type": "boolean",
+            "default": true
+        },
+        "chartHeight": {
+            "type": "number",
+            "default": 400
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 12
+        }
+    }
+}

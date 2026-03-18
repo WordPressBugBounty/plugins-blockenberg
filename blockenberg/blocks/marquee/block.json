@@ -1,0 +1,186 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/marquee",
+    "title": "Marquee / Announcement Bar",
+    "category": "bkbg-effects",
+    "icon": "megaphone",
+    "description": "Scrolling announcement bar with pause on hover and accessibility support.",
+    "keywords": [
+        "marquee",
+        "announcement",
+        "bar",
+        "ticker",
+        "scroll",
+        "banner",
+        "news"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-marquee-editor",
+    "editorStyle": "bkbg-marquee-style",
+    "style": "bkbg-marquee-style",
+    "viewScript": "bkbg-marquee-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "🎉 Welcome to our website!",
+                    "link": "",
+                    "newTab": false
+                },
+                {
+                    "text": "📢 Check out our latest updates",
+                    "link": "",
+                    "newTab": false
+                },
+                {
+                    "text": "⭐ Special offer - Limited time only!",
+                    "link": "",
+                    "newTab": false
+                }
+            ]
+        },
+        "direction": {
+            "type": "string",
+            "default": "left"
+        },
+        "speed": {
+            "type": "number",
+            "default": 50
+        },
+        "durationSeconds": {
+            "type": "number",
+            "default": 30
+        },
+        "instanceId": {
+            "type": "string",
+            "default": ""
+        },
+        "pauseOnHover": {
+            "type": "boolean",
+            "default": true
+        },
+        "pauseOnClick": {
+            "type": "boolean",
+            "default": false
+        },
+        "separator": {
+            "type": "string",
+            "default": "•"
+        },
+        "separatorSpacing": {
+            "type": "number",
+            "default": 40
+        },
+        "showSeparator": {
+            "type": "boolean",
+            "default": true
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#1e40af"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "linkHoverColor": {
+            "type": "string",
+            "default": "#fbbf24"
+        },
+        "paddingY": {
+            "type": "number",
+            "default": 12
+        },
+        "paddingX": {
+            "type": "number",
+            "default": 20
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "fontWeight": {
+            "type": "number",
+            "default": 500
+        },
+        "letterSpacing": {
+            "type": "number",
+            "default": 0
+        },
+        "textTransform": {
+            "type": "string",
+            "default": "none"
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "showCloseButton": {
+            "type": "boolean",
+            "default": false
+        },
+        "closeButtonColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "closePersist": {
+            "type": "boolean",
+            "default": true
+        },
+        "closePersistDays": {
+            "type": "number",
+            "default": 7
+        },
+        "sticky": {
+            "type": "boolean",
+            "default": false
+        },
+        "stickyPosition": {
+            "type": "string",
+            "default": "top"
+        },
+        "stickyZIndex": {
+            "type": "number",
+            "default": 999
+        },
+        "borderTop": {
+            "type": "boolean",
+            "default": false
+        },
+        "borderBottom": {
+            "type": "boolean",
+            "default": false
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.2)"
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 1
+        },
+        "shadow": {
+            "type": "boolean",
+            "default": false
+        },
+        "reduceMotion": {
+            "type": "boolean",
+            "default": true
+        },
+        "ariaLabel": {
+            "type": "string",
+            "default": "Announcements"
+        }
+    }
+}

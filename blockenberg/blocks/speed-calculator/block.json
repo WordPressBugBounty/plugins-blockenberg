@@ -1,0 +1,128 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/speed-calculator",
+    "version": "1.0.0",
+    "title": "Speed / Distance / Time Calculator",
+    "category": "bkbg-calculators",
+    "icon": "car",
+    "description": "Solve any part of the Speed / Distance / Time triangle. Enter two values to calculate the third, with unit conversion between km/h, mph, m/s and more.",
+    "keywords": [
+        "speed",
+        "distance",
+        "time",
+        "calculator",
+        "physics",
+        "travel",
+        "mph",
+        "km/h",
+        "velocity"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-speed-calculator-editor",
+    "style": "bkbg-speed-calculator-style",
+    "viewScript": "bkbg-speed-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Speed / Distance / Time Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Enter any two values to instantly calculate the third"
+        },
+        "defaultSolveFor": {
+            "type": "string",
+            "default": "speed"
+        },
+        "defaultSpeedUnit": {
+            "type": "string",
+            "default": "km/h"
+        },
+        "defaultDistUnit": {
+            "type": "string",
+            "default": "km"
+        },
+        "defaultTimeUnit": {
+            "type": "string",
+            "default": "hours"
+        },
+        "showUnitConversions": {
+            "type": "boolean",
+            "default": true
+        },
+        "showFormula": {
+            "type": "boolean",
+            "default": true
+        },
+        "showExamples": {
+            "type": "boolean",
+            "default": false
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "speedColor": {
+            "type": "string",
+            "default": "#8b5cf6"
+        },
+        "distColor": {
+            "type": "string",
+            "default": "#0ea5e9"
+        },
+        "timeColor": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#dbeafe"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "contentMaxWidth": {
+            "type": "integer",
+            "default": 680
+        }
+    }
+}

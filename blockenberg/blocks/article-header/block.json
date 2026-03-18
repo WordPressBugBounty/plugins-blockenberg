@@ -1,0 +1,172 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/article-header",
+    "version": "1.0.0",
+    "title": "Article Header",
+    "category": "bkbg-blog",
+    "icon": "format-aside",
+    "description": "Rich editorial-style article/blog post header with category badge, headline, subheadline, author meta bar, and optional hero image.",
+    "keywords": [
+        "article",
+        "header",
+        "blog",
+        "post",
+        "author",
+        "hero",
+        "editorial"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-article-header-editor",
+    "style": "bkbg-article-header-style",
+    "viewScript": "bkbg-article-header-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "category": {
+            "type": "string",
+            "default": "Design"
+        },
+        "categoryColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "categoryBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "showCategory": {
+            "type": "boolean",
+            "default": true
+        },
+        "headline": {
+            "type": "string",
+            "default": "The Art of Creating Content That Resonates"
+        },
+        "subheadline": {
+            "type": "string",
+            "default": "A deep dive into the principles behind great editorial design and timeless storytelling."
+        },
+        "showSubheadline": {
+            "type": "boolean",
+            "default": true
+        },
+        "headlineTag": {
+            "type": "string",
+            "default": "h1"
+        },
+        "headlineSize": {
+            "type": "integer",
+            "default": 48
+        },
+        "authorName": {
+            "type": "string",
+            "default": "Jane Cooper"
+        },
+        "authorRole": {
+            "type": "string",
+            "default": "Senior Editor"
+        },
+        "authorAvatarUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "authorAvatarId": {
+            "type": "integer",
+            "default": 0
+        },
+        "publishDate": {
+            "type": "string",
+            "default": "June 12, 2025"
+        },
+        "readingTime": {
+            "type": "string",
+            "default": "8 min read"
+        },
+        "showAuthor": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDate": {
+            "type": "boolean",
+            "default": true
+        },
+        "showReadingTime": {
+            "type": "boolean",
+            "default": true
+        },
+        "heroImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "heroImageId": {
+            "type": "integer",
+            "default": 0
+        },
+        "heroImageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "showHeroImage": {
+            "type": "boolean",
+            "default": true
+        },
+        "heroRadius": {
+            "type": "integer",
+            "default": 12
+        },
+        "layout": {
+            "type": "string",
+            "default": "simple"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headlineColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "subSize": {
+            "type": "integer",
+            "default": 20
+        },
+        "headlineTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "maxWidth": {
+            "type": "integer",
+            "default": 860
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 48
+        }
+    }
+}

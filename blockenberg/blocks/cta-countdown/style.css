@@ -1,0 +1,248 @@
+/* ============================================================
+   CTA with Countdown — style.css
+   Prefix: bkbg-ctc-
+   ============================================================ */
+
+.bkbg-ctc-wrap {
+    box-sizing: border-box;
+    width: 100%;
+    background: var(--bkbg-ctc-bg, #0f172a);
+    padding: var(--bkbg-ctc-pt, 80px) 24px var(--bkbg-ctc-pb, 80px);
+    border-radius: var(--bkbg-ctc-r, 0px);
+}
+
+.bkbg-ctc-inner { width: 100%; }
+
+/* ============================================================
+   Layout: Centered (default)
+   ============================================================ */
+.bkbg-ctc-layout--centered .bkbg-ctc-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.bkbg-ctc-layout--centered .bkbg-ctc-content { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+
+/* ============================================================
+   Layout: Split
+   ============================================================ */
+.bkbg-ctc-layout--split .bkbg-ctc-split {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 64px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.bkbg-ctc-layout--split .bkbg-ctc-content { display: flex; flex-direction: column; gap: 16px; }
+
+/* ---- Content elements ---- */
+.bkbg-ctc-eyebrow {
+    font-size: var(--bkbg-ctc-eye-font-size-d, var(--bkbg-ctc-eyebrow-sz, 12px));
+    font-family: var(--bkbg-ctc-eye-font-family, inherit);
+    font-weight: var(--bkbg-ctc-eye-font-weight, 700);
+    font-style: var(--bkbg-ctc-eye-font-style, normal);
+    letter-spacing: var(--bkbg-ctc-eye-letter-spacing-d, .1em);
+    text-transform: var(--bkbg-ctc-eye-text-transform, uppercase);
+    text-decoration: var(--bkbg-ctc-eye-text-decoration, none);
+    line-height: var(--bkbg-ctc-eye-line-height-d, normal);
+    word-spacing: var(--bkbg-ctc-eye-word-spacing-d, normal);
+    color: var(--bkbg-ctc-eyebrow-c, #a78bfa);
+}
+
+.bkbg-ctc-wrap .bkbg-ctc-heading {
+    margin: 0;
+    font-size: var(--bkbg-ctc-hdg-font-size-d, var(--bkbg-ctc-heading-sz, 36px));
+    font-family: var(--bkbg-ctc-hdg-font-family, inherit);
+    font-weight: var(--bkbg-ctc-hdg-font-weight, var(--bkbg-ctc-heading-w, 800));
+    font-style: var(--bkbg-ctc-hdg-font-style, normal);
+    text-transform: var(--bkbg-ctc-hdg-text-transform, none);
+    text-decoration: var(--bkbg-ctc-hdg-text-decoration, none);
+    color: var(--bkbg-ctc-heading-c, #ffffff);
+    letter-spacing: var(--bkbg-ctc-hdg-letter-spacing-d, -.03em);
+    line-height: var(--bkbg-ctc-hdg-line-height-d, 1.15);
+    word-spacing: var(--bkbg-ctc-hdg-word-spacing-d, normal);
+}
+
+.bkbg-ctc-sub {
+    margin: 0;
+    font-size: var(--bkbg-ctc-sub-font-size-d, var(--bkbg-ctc-sub-sz, 17px));
+    font-family: var(--bkbg-ctc-sub-font-family, inherit);
+    font-weight: var(--bkbg-ctc-sub-font-weight, normal);
+    font-style: var(--bkbg-ctc-sub-font-style, normal);
+    text-transform: var(--bkbg-ctc-sub-text-transform, none);
+    text-decoration: var(--bkbg-ctc-sub-text-decoration, none);
+    color: var(--bkbg-ctc-sub-c, rgba(255,255,255,0.7));
+    letter-spacing: var(--bkbg-ctc-sub-letter-spacing-d, normal);
+    line-height: var(--bkbg-ctc-sub-line-height-d, 1.65);
+    word-spacing: var(--bkbg-ctc-sub-word-spacing-d, normal);
+    max-width: 560px;
+}
+
+/* ---- Buttons ---- */
+.bkbg-ctc-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.bkbg-ctc-layout--centered .bkbg-ctc-buttons { justify-content: center; }
+
+.bkbg-ctc-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    font-size: var(--bkbg-ctc-btn-sz, 16px);
+    font-weight: 700;
+    border-radius: var(--bkbg-ctc-btn-r, 8px);
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: filter .15s, transform .15s;
+    border: none;
+}
+.bkbg-ctc-btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
+
+.bkbg-ctc-btn--primary {
+    background: var(--bkbg-ctc-btn-bg, #6c3fb5);
+    color: var(--bkbg-ctc-btn-text, #ffffff);
+}
+
+.bkbg-ctc-btn--secondary {
+    background: var(--bkbg-ctc-btn2-bg, transparent);
+    color: var(--bkbg-ctc-btn2-text, #ffffff);
+    border: 1px solid var(--bkbg-ctc-btn2-border, rgba(255,255,255,0.3));
+}
+
+/* ============================================================
+   Timer
+   ============================================================ */
+.bkbg-ctc-timer {
+    display: flex;
+    gap: var(--bkbg-ctc-timer-gap, 12px);
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+/* Timer: box */
+.bkbg-ctc-timer--box .bkbg-ctc-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-width: calc(var(--bkbg-ctc-num-sz, 48px) * 1.6);
+    padding: 18px 14px;
+    background: var(--bkbg-ctc-timer-bg, rgba(255,255,255,0.08));
+    border: 1px solid var(--bkbg-ctc-timer-border, rgba(255,255,255,0.12));
+    border-radius: 12px;
+}
+
+/* Timer: minimal (no box) */
+.bkbg-ctc-timer--minimal .bkbg-ctc-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 0 12px;
+    border-right: 1px solid rgba(255,255,255,.15);
+}
+.bkbg-ctc-timer--minimal .bkbg-ctc-unit:last-child { border-right: none; }
+
+/* Timer: outlined */
+.bkbg-ctc-timer--outlined .bkbg-ctc-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-width: calc(var(--bkbg-ctc-num-sz, 48px) * 1.6);
+    padding: 12px;
+    border: 2px solid var(--bkbg-ctc-timer-border, rgba(255,255,255,0.25));
+    border-radius: 8px;
+}
+
+.bkbg-ctc-unit-num {
+    font-size: var(--bkbg-ctc-num-font-size-d, var(--bkbg-ctc-num-sz, 48px));
+    font-family: var(--bkbg-ctc-num-font-family, inherit);
+    font-weight: var(--bkbg-ctc-num-font-weight, var(--bkbg-ctc-num-w, 800));
+    font-style: var(--bkbg-ctc-num-font-style, normal);
+    text-transform: var(--bkbg-ctc-num-text-transform, none);
+    text-decoration: var(--bkbg-ctc-num-text-decoration, none);
+    color: var(--bkbg-ctc-num-c, #ffffff);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: var(--bkbg-ctc-num-letter-spacing-d, -.04em);
+    line-height: var(--bkbg-ctc-num-line-height-d, 1);
+    word-spacing: var(--bkbg-ctc-num-word-spacing-d, normal);
+}
+
+.bkbg-ctc-unit-label {
+    font-size: var(--bkbg-ctc-label-sz, 12px);
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--bkbg-ctc-label-c, rgba(255,255,255,0.5));
+}
+
+/* ============================================================
+   Style Variants
+   ============================================================ */
+
+/* light */
+.bkbg-ctc-style--light {
+    background: var(--bkbg-ctc-bg, #f8fafc);
+}
+.bkbg-ctc-style--light .bkbg-ctc-heading { color: #0f172a; }
+.bkbg-ctc-style--light .bkbg-ctc-sub { color: #64748b; }
+.bkbg-ctc-style--light .bkbg-ctc-eyebrow { color: var(--bkbg-ctc-accent, #6c3fb5); }
+.bkbg-ctc-style--light .bkbg-ctc-unit-num { color: #0f172a; }
+.bkbg-ctc-style--light .bkbg-ctc-unit-label { color: #64748b; }
+.bkbg-ctc-style--light .bkbg-ctc-timer--box .bkbg-ctc-unit {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+.bkbg-ctc-style--light .bkbg-ctc-btn--secondary {
+    color: var(--bkbg-ctc-accent, #6c3fb5);
+    border-color: color-mix(in srgb, var(--bkbg-ctc-accent, #6c3fb5) 30%, transparent);
+}
+
+/* gradient */
+.bkbg-ctc-style--gradient {
+    background: linear-gradient(135deg, var(--bkbg-ctc-accent, #6c3fb5) 0%, color-mix(in srgb, var(--bkbg-ctc-accent, #6c3fb5) 60%, #1e1b4b) 100%);
+}
+
+/* banner (wide, less padding, no border-radius) */
+.bkbg-ctc-style--banner {
+    border-radius: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.bkbg-ctc-style--banner .bkbg-ctc-heading { font-size: clamp(22px, 3vw, 32px); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bkbg-ctc-layout--split .bkbg-ctc-split { grid-template-columns: 1fr; gap: 32px; }
+    .bkbg-ctc-timer { flex-wrap: wrap; justify-content: center; }
+    .bkbg-ctc-wrap .bkbg-ctc-heading { font-size: clamp(24px, 6vw, 40px); }
+}
+
+/* Typography responsive — tablet */
+@media (max-width: 1024px) {
+    .bkbg-ctc-wrap .bkbg-ctc-heading { font-size: var(--bkbg-ctc-hdg-font-size-t, var(--bkbg-ctc-hdg-font-size-d, var(--bkbg-ctc-heading-sz, 36px))); letter-spacing: var(--bkbg-ctc-hdg-letter-spacing-t, var(--bkbg-ctc-hdg-letter-spacing-d, -.03em)); line-height: var(--bkbg-ctc-hdg-line-height-t, var(--bkbg-ctc-hdg-line-height-d, 1.15)); word-spacing: var(--bkbg-ctc-hdg-word-spacing-t, var(--bkbg-ctc-hdg-word-spacing-d, normal)); }
+    .bkbg-ctc-sub { font-size: var(--bkbg-ctc-sub-font-size-t, var(--bkbg-ctc-sub-font-size-d, var(--bkbg-ctc-sub-sz, 17px))); letter-spacing: var(--bkbg-ctc-sub-letter-spacing-t, var(--bkbg-ctc-sub-letter-spacing-d, normal)); line-height: var(--bkbg-ctc-sub-line-height-t, var(--bkbg-ctc-sub-line-height-d, 1.65)); word-spacing: var(--bkbg-ctc-sub-word-spacing-t, var(--bkbg-ctc-sub-word-spacing-d, normal)); }
+    .bkbg-ctc-eyebrow { font-size: var(--bkbg-ctc-eye-font-size-t, var(--bkbg-ctc-eye-font-size-d, var(--bkbg-ctc-eyebrow-sz, 12px))); letter-spacing: var(--bkbg-ctc-eye-letter-spacing-t, var(--bkbg-ctc-eye-letter-spacing-d, .1em)); line-height: var(--bkbg-ctc-eye-line-height-t, var(--bkbg-ctc-eye-line-height-d, normal)); word-spacing: var(--bkbg-ctc-eye-word-spacing-t, var(--bkbg-ctc-eye-word-spacing-d, normal)); }
+    .bkbg-ctc-unit-num { font-size: var(--bkbg-ctc-num-font-size-t, var(--bkbg-ctc-num-font-size-d, var(--bkbg-ctc-num-sz, 48px))); letter-spacing: var(--bkbg-ctc-num-letter-spacing-t, var(--bkbg-ctc-num-letter-spacing-d, -.04em)); line-height: var(--bkbg-ctc-num-line-height-t, var(--bkbg-ctc-num-line-height-d, 1)); word-spacing: var(--bkbg-ctc-num-word-spacing-t, var(--bkbg-ctc-num-word-spacing-d, normal)); }
+}
+
+/* Typography responsive — mobile */
+@media (max-width: 767px) {
+    .bkbg-ctc-wrap .bkbg-ctc-heading { font-size: var(--bkbg-ctc-hdg-font-size-m, var(--bkbg-ctc-hdg-font-size-t, var(--bkbg-ctc-hdg-font-size-d, var(--bkbg-ctc-heading-sz, 36px)))); letter-spacing: var(--bkbg-ctc-hdg-letter-spacing-m, var(--bkbg-ctc-hdg-letter-spacing-t, var(--bkbg-ctc-hdg-letter-spacing-d, -.03em))); line-height: var(--bkbg-ctc-hdg-line-height-m, var(--bkbg-ctc-hdg-line-height-t, var(--bkbg-ctc-hdg-line-height-d, 1.15))); word-spacing: var(--bkbg-ctc-hdg-word-spacing-m, var(--bkbg-ctc-hdg-word-spacing-t, var(--bkbg-ctc-hdg-word-spacing-d, normal))); }
+    .bkbg-ctc-sub { font-size: var(--bkbg-ctc-sub-font-size-m, var(--bkbg-ctc-sub-font-size-t, var(--bkbg-ctc-sub-font-size-d, var(--bkbg-ctc-sub-sz, 17px)))); letter-spacing: var(--bkbg-ctc-sub-letter-spacing-m, var(--bkbg-ctc-sub-letter-spacing-t, var(--bkbg-ctc-sub-letter-spacing-d, normal))); line-height: var(--bkbg-ctc-sub-line-height-m, var(--bkbg-ctc-sub-line-height-t, var(--bkbg-ctc-sub-line-height-d, 1.65))); word-spacing: var(--bkbg-ctc-sub-word-spacing-m, var(--bkbg-ctc-sub-word-spacing-t, var(--bkbg-ctc-sub-word-spacing-d, normal))); }
+    .bkbg-ctc-eyebrow { font-size: var(--bkbg-ctc-eye-font-size-m, var(--bkbg-ctc-eye-font-size-t, var(--bkbg-ctc-eye-font-size-d, var(--bkbg-ctc-eyebrow-sz, 12px)))); letter-spacing: var(--bkbg-ctc-eye-letter-spacing-m, var(--bkbg-ctc-eye-letter-spacing-t, var(--bkbg-ctc-eye-letter-spacing-d, .1em))); line-height: var(--bkbg-ctc-eye-line-height-m, var(--bkbg-ctc-eye-line-height-t, var(--bkbg-ctc-eye-line-height-d, normal))); word-spacing: var(--bkbg-ctc-eye-word-spacing-m, var(--bkbg-ctc-eye-word-spacing-t, var(--bkbg-ctc-eye-word-spacing-d, normal))); }
+    .bkbg-ctc-unit-num { font-size: var(--bkbg-ctc-num-font-size-m, var(--bkbg-ctc-num-font-size-t, var(--bkbg-ctc-num-font-size-d, var(--bkbg-ctc-num-sz, 48px)))); letter-spacing: var(--bkbg-ctc-num-letter-spacing-m, var(--bkbg-ctc-num-letter-spacing-t, var(--bkbg-ctc-num-letter-spacing-d, -.04em))); line-height: var(--bkbg-ctc-num-line-height-m, var(--bkbg-ctc-num-line-height-t, var(--bkbg-ctc-num-line-height-d, 1))); word-spacing: var(--bkbg-ctc-num-word-spacing-m, var(--bkbg-ctc-num-word-spacing-t, var(--bkbg-ctc-num-word-spacing-d, normal))); }
+}

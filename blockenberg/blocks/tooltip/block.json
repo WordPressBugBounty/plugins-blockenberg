@@ -1,0 +1,102 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/tooltip",
+    "title": "Tooltip",
+    "category": "bkbg-content",
+    "icon": "info",
+    "description": "Display a word or phrase with a hover tooltip popup — great for definitions, abbreviations, and inline explanations.",
+    "keywords": [
+        "tooltip",
+        "popover",
+        "hint",
+        "definition",
+        "abbreviation",
+        "hover",
+        "info"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-tooltip-editor",
+    "editorStyle": "bkbg-tooltip-style",
+    "style": "bkbg-tooltip-style",
+    "viewScript": "bkbg-tooltip-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "triggerText": {
+            "type": "string",
+            "default": "Hover over me"
+        },
+        "tooltipContent": {
+            "type": "string",
+            "default": "This is the tooltip explanation. Add any helpful context here."
+        },
+        "position": {
+            "type": "string",
+            "default": "top"
+        },
+        "triggerStyle": {
+            "type": "string",
+            "default": "underline-dotted"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 260
+        },
+        "showArrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "animationType": {
+            "type": "string",
+            "default": "fade"
+        },
+        "align": {
+            "type": "string",
+            "default": "left"
+        },
+        "triggerTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "tooltipTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "tooltipPadding": {
+            "type": "number",
+            "default": 12
+        },
+        "tooltipRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "triggerColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "underlineColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "highlightBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "tooltipBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "tooltipColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        }
+    }
+}

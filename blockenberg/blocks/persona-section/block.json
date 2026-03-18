@@ -1,0 +1,222 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/persona-section",
+    "title": "Persona Section",
+    "description": "\"Who Is This For?\" target audience section with persona cards, each showing a role, icon, pain points, and benefits. Ideal for landing pages and sales pages.",
+    "category": "bkbg-marketing",
+    "icon": "groups",
+    "keywords": [
+        "persona",
+        "audience",
+        "who is this for",
+        "customer",
+        "target",
+        "profile",
+        "ideal customer"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-persona-section-editor",
+    "style": "bkbg-persona-section-style",
+    "viewScript": "bkbg-persona-section-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "Who Is This For?"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Built for Teams Who Move Fast"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Whether you're a solo founder or a growing team, Blockenberg fits your workflow."
+        },
+        "personas": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "\ud83d\ude80",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "role": "Solo Founders",
+                    "description": "You wear every hat and need tools that don't slow you down.",
+                    "painPoints": [
+                        "Spending hours on tasks that should take minutes",
+                        "Paying for 5 tools that barely integrate",
+                        "Can't afford to hire help yet"
+                    ],
+                    "benefits": [
+                        "Ship campaigns in minutes, not hours",
+                        "Everything in one dashboard",
+                        "Automates the repetitive work"
+                    ]
+                },
+                {
+                    "icon": "\ud83d\udcc8",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "role": "Growth Marketers",
+                    "description": "You're obsessed with data and need a platform that keeps up.",
+                    "painPoints": [
+                        "Siloed data across 10 platforms",
+                        "Reports that take days to compile",
+                        "A/B testing requires developers"
+                    ],
+                    "benefits": [
+                        "Unified analytics in real time",
+                        "Automated reporting and dashboards",
+                        "No-code experiment builder"
+                    ]
+                },
+                {
+                    "icon": "\ud83c\udfe2",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "role": "Agency Teams",
+                    "description": "You manage clients at scale and need reliable, white-label solutions.",
+                    "painPoints": [
+                        "Different tools for every client",
+                        "Inconsistent reporting",
+                        "Onboarding every new hire"
+                    ],
+                    "benefits": [
+                        "White-label client portals",
+                        "Standardized reporting templates",
+                        "Role-based access control"
+                    ]
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "showPainPoints": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBenefits": {
+            "type": "boolean",
+            "default": true
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1200
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 100
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 100
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "iconBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "roleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "painLabel": {
+            "type": "string",
+            "default": "Pain points:"
+        },
+        "benefitLabel": {
+            "type": "string",
+            "default": "With Blockenberg:"
+        },
+        "painColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "painIconColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "benefitColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "benefitIconColor": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "eyebrowTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "roleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "itemTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

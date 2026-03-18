@@ -1,0 +1,259 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/webinar-section",
+    "title": "Webinar Section",
+    "description": "Promote a live webinar or online event with date, speakers, agenda topics, countdown timer, and CTA.",
+    "category": "bkbg-marketing",
+    "icon": "video-alt3",
+    "keywords": [
+        "webinar",
+        "event",
+        "live",
+        "session",
+        "speakers",
+        "countdown",
+        "registration"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-webinar-section-editor",
+    "style": "bkbg-webinar-section-style",
+    "viewScript": "bkbg-webinar-section-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "badge": {
+            "type": "string",
+            "default": "FREE LIVE WEBINAR"
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "heading": {
+            "type": "string",
+            "default": "How to 10X Your Revenue Without 10X the Work"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Join us for a live training session where we break down the exact system our top clients use to scale predictably."
+        },
+        "showSubtext": {
+            "type": "boolean",
+            "default": true
+        },
+        "eventDate": {
+            "type": "string",
+            "default": ""
+        },
+        "eventTime": {
+            "type": "string",
+            "default": "2:00 PM"
+        },
+        "eventTimezone": {
+            "type": "string",
+            "default": "EST"
+        },
+        "showDateTime": {
+            "type": "boolean",
+            "default": true
+        },
+        "speakers": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Dr. Sarah Chen",
+                    "title": "Founder & CEO",
+                    "bio": "20+ years helping founders scale.",
+                    "avatarUrl": "",
+                    "avatarId": 0
+                },
+                {
+                    "name": "Mark Rivera",
+                    "title": "Head of Growth",
+                    "bio": "Built 3 companies to $10M+ ARR.",
+                    "avatarUrl": "",
+                    "avatarId": 0
+                }
+            ]
+        },
+        "showSpeakers": {
+            "type": "boolean",
+            "default": true
+        },
+        "topics": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "The #1 reason most businesses plateau (and how to break through)"
+                },
+                {
+                    "text": "Our 5-step revenue acceleration framework"
+                },
+                {
+                    "text": "Live Q&A and case study breakdowns"
+                },
+                {
+                    "text": "Special offer for attendees only"
+                }
+            ]
+        },
+        "showTopics": {
+            "type": "boolean",
+            "default": true
+        },
+        "topicsHeading": {
+            "type": "string",
+            "default": "What You'll Learn"
+        },
+        "showCountdown": {
+            "type": "boolean",
+            "default": true
+        },
+        "countdownEnd": {
+            "type": "string",
+            "default": ""
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Reserve My Free Spot →"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaSubtext": {
+            "type": "string",
+            "default": "Limited to 500 attendees • Replay available afterward"
+        },
+        "showCtaSubtext": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "split"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#a78bfa"
+        },
+        "dateBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "dateBorder": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "dateColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "topicColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "checkColor": {
+            "type": "string",
+            "default": "#a78bfa"
+        },
+        "speakerCardBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "speakerNameColor": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "speakerTitleColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "countdownBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "countdownNumColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "countdownLabelColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "ctaSubtextColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 36
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "topicsHeadingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "ctaTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1100
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        }
+    }
+}

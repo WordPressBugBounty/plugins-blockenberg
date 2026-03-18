@@ -1,0 +1,187 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/marimekko-chart",
+    "title": "Marimekko Chart",
+    "category": "bkbg-charts",
+    "icon": "layout",
+    "description": "Mosaic / Mekko chart — column widths represent segment size, inner stacks show composition. Ideal for market share visualisation.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-marimekko-chart-editor",
+    "style": "bkbg-marimekko-chart-style",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Market Share by Region & Segment"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "number",
+            "default": 700
+        },
+        "svgHeight": {
+            "type": "number",
+            "default": 400
+        },
+        "padTop": {
+            "type": "number",
+            "default": 30
+        },
+        "padLeft": {
+            "type": "number",
+            "default": 50
+        },
+        "padRight": {
+            "type": "number",
+            "default": 20
+        },
+        "padBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "colGap": {
+            "type": "number",
+            "default": 3
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "showColLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "showYAxis": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "valueFontSize": {
+            "type": "number",
+            "default": 10
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "segmentColors": {
+            "type": "array",
+            "default": [
+                "#6366f1",
+                "#10b981",
+                "#f59e0b",
+                "#ef4444",
+                "#8b5cf6",
+                "#ec4899"
+            ],
+            "items": {
+                "type": "string"
+            }
+        },
+        "columns": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "North America",
+                    "size": 40,
+                    "segments": [
+                        {
+                            "label": "Enterprise",
+                            "value": 50
+                        },
+                        {
+                            "label": "SMB",
+                            "value": 30
+                        },
+                        {
+                            "label": "Consumer",
+                            "value": 20
+                        }
+                    ]
+                },
+                {
+                    "label": "Europe",
+                    "size": 30,
+                    "segments": [
+                        {
+                            "label": "Enterprise",
+                            "value": 40
+                        },
+                        {
+                            "label": "SMB",
+                            "value": 35
+                        },
+                        {
+                            "label": "Consumer",
+                            "value": 25
+                        }
+                    ]
+                },
+                {
+                    "label": "Asia-Pacific",
+                    "size": 20,
+                    "segments": [
+                        {
+                            "label": "Enterprise",
+                            "value": 30
+                        },
+                        {
+                            "label": "SMB",
+                            "value": 40
+                        },
+                        {
+                            "label": "Consumer",
+                            "value": 30
+                        }
+                    ]
+                },
+                {
+                    "label": "Rest of World",
+                    "size": 10,
+                    "segments": [
+                        {
+                            "label": "Enterprise",
+                            "value": 20
+                        },
+                        {
+                            "label": "SMB",
+                            "value": 45
+                        },
+                        {
+                            "label": "Consumer",
+                            "value": 35
+                        }
+                    ]
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        }
+    }
+}

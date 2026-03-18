@@ -1,0 +1,128 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/line-chart",
+    "title": "Line Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-line",
+    "description": "Interactive line chart using Chart.js (loaded from CDN). Supports multiple datasets, fill, tension, and grid styling.",
+    "keywords": [
+        "chart",
+        "line",
+        "graph",
+        "data",
+        "visualization",
+        "chartjs"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-line-chart-editor",
+    "editorStyle": "bkbg-line-chart-style",
+    "style": "bkbg-line-chart-style",
+    "viewScript": "bkbg-line-chart-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "labels": {
+            "type": "string",
+            "default": "Jan,Feb,Mar,Apr,May,Jun"
+        },
+        "datasets": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Sales",
+                    "data": "65,59,80,81,56,72",
+                    "color": "#6c3fb5",
+                    "fill": false,
+                    "tension": 0.4
+                },
+                {
+                    "label": "Revenue",
+                    "data": "28,48,40,19,86,60",
+                    "color": "#e040fb",
+                    "fill": false,
+                    "tension": 0.4
+                }
+            ]
+        },
+        "height": {
+            "type": "number",
+            "default": 340
+        },
+        "showGrid": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "legendPos": {
+            "type": "string",
+            "default": "top"
+        },
+        "pointStyle": {
+            "type": "string",
+            "default": "circle"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "title": {
+            "type": "string",
+            "default": ""
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "labelFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "labelLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "legendFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "legendFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "legendLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "titleFontWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

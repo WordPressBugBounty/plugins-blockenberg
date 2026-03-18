@@ -1,0 +1,208 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/social-feed",
+	"title": "Social Feed",
+	"description": "Display a grid of social media post cards with images, captions, engagement metrics, and platform badges.",
+	"category": "bkbg-marketing",
+	"icon": "share",
+	"keywords": [
+		"social",
+		"feed",
+		"instagram",
+		"twitter",
+		"posts",
+		"cards"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-social-feed-editor",
+	"style": "bkbg-social-feed-style",
+	"viewScript": "bkbg-social-feed-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"posts": {
+			"type": "array",
+			"default": [
+				{
+					"id": "sf001",
+					"platform": "instagram",
+					"username": "@studio.design",
+					"avatarUrl": "",
+					"avatarId": 0,
+					"content": "Just launched our new design system 🎨 Six months of work, thousands of components, and a whole lot of coffee. Swipe to see the highlights!",
+					"imageUrl": "",
+					"imageId": 0,
+					"likes": "4.2k",
+					"comments": "138",
+					"timeAgo": "2h ago"
+				},
+				{
+					"id": "sf002",
+					"platform": "twitter",
+					"username": "@devteam",
+					"avatarUrl": "",
+					"avatarId": 0,
+					"content": "Hot take: the best code is the code you never have to write again. Build once, reuse forever. That's the power of a great component library. 🚀",
+					"imageUrl": "",
+					"imageId": 0,
+					"likes": "891",
+					"comments": "74",
+					"timeAgo": "5h ago"
+				},
+				{
+					"id": "sf003",
+					"platform": "linkedin",
+					"username": "Creative Agency",
+					"avatarUrl": "",
+					"avatarId": 0,
+					"content": "Excited to announce we've crossed 10,000 clients worldwide! 🌍 From a team of 3 to a global studio, this journey has been incredible. Thank you to every client who believed in us.",
+					"imageUrl": "",
+					"imageId": 0,
+					"likes": "2.1k",
+					"comments": "312",
+					"timeAgo": "1d ago"
+				}
+			]
+		},
+		"columns": {
+			"type": "integer",
+			"default": 3
+		},
+		"columnsTablet": {
+			"type": "integer",
+			"default": 2
+		},
+		"columnsMobile": {
+			"type": "integer",
+			"default": 1
+		},
+		"gap": {
+			"type": "integer",
+			"default": 20
+		},
+		"cardStyle": {
+			"type": "string",
+			"default": "card"
+		},
+		"cardPadding": {
+			"type": "integer",
+			"default": 20
+		},
+		"cardRadius": {
+			"type": "integer",
+			"default": 16
+		},
+		"imageRatio": {
+			"type": "string",
+			"default": "1/1"
+		},
+		"imageRadius": {
+			"type": "integer",
+			"default": 12
+		},
+		"contentLines": {
+			"type": "integer",
+			"default": 4
+		},
+		"showImage": {
+			"type": "boolean",
+			"default": true
+		},
+		"showPlatformBadge": {
+			"type": "boolean",
+			"default": true
+		},
+		"showAvatar": {
+			"type": "boolean",
+			"default": true
+		},
+		"showUsername": {
+			"type": "boolean",
+			"default": true
+		},
+		"showTimeAgo": {
+			"type": "boolean",
+			"default": true
+		},
+		"showMetrics": {
+			"type": "boolean",
+			"default": true
+		},
+		"hoverEffect": {
+			"type": "string",
+			"default": "lift"
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"cardBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"cardBorderColor": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"usernameColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"metricsColor": {
+			"type": "string",
+			"default": "#9ca3af"
+		},
+		"contentSize": {
+			"type": "integer",
+			"default": 14
+		},
+		"usernameSize": {
+			"type": "integer",
+			"default": 14
+		},
+		"metricsSize": {
+			"type": "integer",
+			"default": 13
+		},
+		"bgColor": {
+			"type": "string",
+			"default": ""
+		},
+		"paddingTop": {
+			"type": "integer",
+			"default": 60
+		},
+		"paddingBottom": {
+			"type": "integer",
+			"default": 60
+		},
+		"usernameFontWeight": {
+			"type": "number",
+			"default": 600
+		},
+		"usernameTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"contentTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"metricsTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

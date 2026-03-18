@@ -1,0 +1,251 @@
+/* =========================================================
+   Blockenberg — Monthly Budget Planner  (bkbg-bp-*)
+   ========================================================= */
+
+.bkbg-bp-wrap {
+    box-sizing:    border-box;
+    border-radius: 14px;
+    padding:       32px 24px;
+    font-family:   inherit;
+    margin:        0 auto;
+}
+
+.bkbg-bp-title {
+    margin: 0 0 6px 0;
+    font-family: var(--bkbg-bp-title-font-family, inherit);
+    font-weight: var(--bkbg-bp-title-font-weight, 700);
+    font-style: var(--bkbg-bp-title-font-style, normal);
+    text-transform: var(--bkbg-bp-title-text-transform, none);
+    text-decoration: var(--bkbg-bp-title-text-decoration, none);
+    font-size: var(--bkbg-bp-title-font-size-d, 26px);
+    line-height: var(--bkbg-bp-title-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-bp-title-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-bp-title-word-spacing-d, normal);
+}
+.bkbg-bp-subtitle {
+    margin: 0 0 24px 0;
+    font-family: var(--bkbg-bp-sub-font-family, inherit);
+    font-weight: var(--bkbg-bp-sub-font-weight, 400);
+    font-style: var(--bkbg-bp-sub-font-style, normal);
+    text-transform: var(--bkbg-bp-sub-text-transform, none);
+    text-decoration: var(--bkbg-bp-sub-text-decoration, none);
+    font-size: var(--bkbg-bp-sub-font-size-d, 14px);
+    line-height: var(--bkbg-bp-sub-line-height-d, 1.5);
+    letter-spacing: var(--bkbg-bp-sub-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-bp-sub-word-spacing-d, normal);
+}
+
+/* ── Income card ────────────────────────────────────────── */
+.bkbg-bp-income-card {
+    display:       flex;
+    align-items:   center;
+    gap:           14px;
+    border-radius: 12px;
+    border:        1.5px solid #e5e7eb;
+    padding:       14px 18px;
+    margin-bottom: 18px;
+}
+.bkbg-bp-income-icon { font-size:24px; }
+.bkbg-bp-income-info { flex:1; }
+.bkbg-bp-income-caption {
+    font-size:      11px;
+    font-weight:    600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color:          #6b7280;
+    margin-bottom:  3px;
+}
+.bkbg-bp-income-value {
+    font-size:   24px;
+    font-weight: 700;
+}
+.bkbg-bp-income-input {
+    width:         130px;
+    border:        1.5px solid #e5e7eb;
+    border-radius: 9px;
+    padding:       9px 12px;
+    font-size:     16px;
+    font-family:   inherit;
+    outline:       none;
+    transition:    border-color 0.18s;
+    -moz-appearance: textfield;
+}
+.bkbg-bp-income-input::-webkit-outer-spin-button,
+.bkbg-bp-income-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.bkbg-bp-income-input:focus { border-color: var(--bp-accent, #22c55e); box-shadow: 0 0 0 3px rgba(34,197,94,0.15); }
+
+/* ── Section label ──────────────────────────────────────── */
+.bkbg-bp-section-title {
+    font-size:      12px;
+    font-weight:    700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom:  10px;
+}
+
+/* ── Category rows ──────────────────────────────────────── */
+.bkbg-bp-categories { margin-bottom:18px; }
+.bkbg-bp-cat-row {
+    display:       flex;
+    align-items:   center;
+    gap:           10px;
+    padding:       10px 14px;
+    border-radius: 10px;
+    margin-bottom: 7px;
+    border:        1.5px solid #f3f4f6;
+    transition:    box-shadow 0.15s;
+}
+.bkbg-bp-cat-row:hover { box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+.bkbg-bp-cat-icon  { font-size:18px; min-width:24px; }
+.bkbg-bp-cat-name  { flex:1; font-size:14px; font-weight:500; }
+.bkbg-bp-cat-bar-wrap { width:80px; height:6px; background:#e5e7eb; border-radius:999px; overflow:hidden; }
+.bkbg-bp-cat-bar-fill { height:100%; border-radius:999px; transition:width 0.4s; }
+.bkbg-bp-cat-amount { font-weight:700; font-size:14px; min-width:70px; text-align:right; }
+.bkbg-bp-cat-input {
+    width:         90px;
+    border:        1.5px solid #e5e7eb;
+    border-radius: 7px;
+    padding:       6px 9px;
+    font-size:     14px;
+    font-family:   inherit;
+    outline:       none;
+    transition:    border-color 0.18s;
+    -moz-appearance: textfield;
+    text-align:    right;
+}
+.bkbg-bp-cat-input::-webkit-outer-spin-button,
+.bkbg-bp-cat-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.bkbg-bp-cat-input:focus { border-color: var(--bp-accent, #22c55e); }
+
+/* ── Add category ───────────────────────────────────────── */
+.bkbg-bp-add-row {
+    display:     flex;
+    gap:         8px;
+    margin-bottom:16px;
+}
+.bkbg-bp-add-input {
+    flex:          1;
+    border:        1.5px solid #e5e7eb;
+    border-radius: 8px;
+    padding:       8px 12px;
+    font-size:     14px;
+    font-family:   inherit;
+    outline:       none;
+}
+.bkbg-bp-add-input:focus { border-color: var(--bp-accent, #22c55e); }
+.bkbg-bp-add-btn {
+    padding:      8px 16px;
+    border-radius:8px;
+    border:       none;
+    background:   var(--bp-accent, #22c55e);
+    color:        #fff;
+    font-size:    13px;
+    font-weight:  700;
+    cursor:       pointer;
+    white-space:  nowrap;
+    transition:   opacity 0.18s;
+}
+.bkbg-bp-add-btn:hover { opacity:0.88; }
+
+/* ── Savings goal ───────────────────────────────────────── */
+.bkbg-bp-savings-card {
+    display:       flex;
+    align-items:   center;
+    gap:           14px;
+    border-radius: 12px;
+    border:        1.5px solid #e9d5ff;
+    padding:       12px 18px;
+    margin-bottom: 18px;
+}
+
+/* ── Summary strip ──────────────────────────────────────── */
+.bkbg-bp-summary {
+    display:               grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap:                   10px;
+    margin-bottom:         18px;
+}
+.bkbg-bp-sum-card {
+    border-radius: 10px;
+    padding:       12px 14px;
+    border-left:   4px solid var(--bp-accent, #22c55e);
+}
+.bkbg-bp-sum-label {
+    font-size:      11px;
+    font-weight:    600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color:          #6b7280;
+    margin-bottom:  4px;
+}
+.bkbg-bp-sum-value { font-size:20px; font-weight:700; }
+
+/* ── Allocation bar ─────────────────────────────────────── */
+.bkbg-bp-alloc { margin-bottom:8px; }
+.bkbg-bp-alloc-heading { font-size:12px; font-weight:700; margin-bottom:8px; }
+.bkbg-bp-alloc-bar { display:flex; border-radius:999px; overflow:hidden; height:20px; }
+.bkbg-bp-alloc-seg { transition:width 0.4s ease; height:100%; }
+.bkbg-bp-alloc-legend { display:flex; gap:14px; margin-top:7px; flex-wrap:wrap; }
+.bkbg-bp-alloc-legend span { font-size:12px; font-weight:600; }
+
+/* ── Tips box ───────────────────────────────────────────── */
+.bkbg-bp-tips {
+    background:   #fefce8;
+    border:       1.5px solid #fde68a;
+    border-radius:12px;
+    padding:      14px 18px;
+    margin-top:   16px;
+}
+.bkbg-bp-tips-title { font-size:13px; font-weight:700; color:#92400e; margin-bottom:8px; }
+.bkbg-bp-tips-list  { margin:0; padding-left:18px; }
+.bkbg-bp-tips-list li { font-size:13px; color:#78350f; margin-bottom:4px; }
+
+/* ── Surplus / deficit banner ───────────────────────────── */
+.bkbg-bp-deficit-banner {
+    background:    #fef2f2;
+    border:        1.5px solid #fca5a5;
+    border-radius: 10px;
+    padding:       12px 16px;
+    color:         #dc2626;
+    font-size:     14px;
+    font-weight:   700;
+    margin-bottom: 14px;
+    display:       flex;
+    align-items:   center;
+    gap:           8px;
+}
+
+/* ── Animations ─────────────────────────────────────────── */
+@keyframes bkbg-bp-fadein { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+.bkbg-bp-sum-card, .bkbg-bp-alloc { animation:bkbg-bp-fadein 0.3s ease both; }
+
+/* === Typography responsive === */
+@media (max-width: 1024px) {
+    .bkbg-bp-title {
+        font-size: var(--bkbg-bp-title-font-size-t, var(--bkbg-bp-title-font-size-d, 26px));
+        line-height: var(--bkbg-bp-title-line-height-t, var(--bkbg-bp-title-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-bp-title-letter-spacing-t, var(--bkbg-bp-title-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-bp-title-word-spacing-t, var(--bkbg-bp-title-word-spacing-d, normal));
+    }
+    .bkbg-bp-subtitle {
+        font-size: var(--bkbg-bp-sub-font-size-t, var(--bkbg-bp-sub-font-size-d, 14px));
+        line-height: var(--bkbg-bp-sub-line-height-t, var(--bkbg-bp-sub-line-height-d, 1.5));
+        letter-spacing: var(--bkbg-bp-sub-letter-spacing-t, var(--bkbg-bp-sub-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-bp-sub-word-spacing-t, var(--bkbg-bp-sub-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-bp-title {
+        font-size: var(--bkbg-bp-title-font-size-m, var(--bkbg-bp-title-font-size-t, var(--bkbg-bp-title-font-size-d, 26px)));
+        line-height: var(--bkbg-bp-title-line-height-m, var(--bkbg-bp-title-line-height-t, var(--bkbg-bp-title-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-bp-title-letter-spacing-m, var(--bkbg-bp-title-letter-spacing-t, var(--bkbg-bp-title-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-bp-title-word-spacing-m, var(--bkbg-bp-title-word-spacing-t, var(--bkbg-bp-title-word-spacing-d, normal)));
+    }
+    .bkbg-bp-subtitle {
+        font-size: var(--bkbg-bp-sub-font-size-m, var(--bkbg-bp-sub-font-size-t, var(--bkbg-bp-sub-font-size-d, 14px)));
+        line-height: var(--bkbg-bp-sub-line-height-m, var(--bkbg-bp-sub-line-height-t, var(--bkbg-bp-sub-line-height-d, 1.5)));
+        letter-spacing: var(--bkbg-bp-sub-letter-spacing-m, var(--bkbg-bp-sub-letter-spacing-t, var(--bkbg-bp-sub-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-bp-sub-word-spacing-m, var(--bkbg-bp-sub-word-spacing-t, var(--bkbg-bp-sub-word-spacing-d, normal)));
+    }
+}

@@ -1,0 +1,177 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/card-cta-grid",
+    "title": "Card CTA Grid",
+    "category": "bkbg-marketing",
+    "icon": "grid-view",
+    "description": "A grid of action cards — each with icon, title, description and link. Perfect for get-started, help, or navigation sections.",
+    "keywords": [
+        "cta",
+        "cards",
+        "grid",
+        "action",
+        "get started",
+        "navigation",
+        "hub"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-card-cta-grid-editor",
+    "style": "bkbg-card-cta-grid-style",
+    "attributes": {
+        "cards": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "c1",
+                    "icon": "🚀",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Get started",
+                    "description": "Set up your account in minutes. No credit card required.",
+                    "ctaLabel": "Create account →",
+                    "ctaUrl": "#",
+                    "ctaTarget": "_self",
+                    "accentColor": "#6c3fb5"
+                },
+                {
+                    "id": "c2",
+                    "icon": "📖",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Read the docs",
+                    "description": "Dive into guides, API references, and code examples.",
+                    "ctaLabel": "View docs →",
+                    "ctaUrl": "#",
+                    "ctaTarget": "_blank",
+                    "accentColor": "#0ea5e9"
+                },
+                {
+                    "id": "c3",
+                    "icon": "💬",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Join community",
+                    "description": "Connect with thousands of users and the core team on Discord.",
+                    "ctaLabel": "Join Discord →",
+                    "ctaUrl": "#",
+                    "ctaTarget": "_blank",
+                    "accentColor": "#10b981"
+                },
+                {
+                    "id": "c4",
+                    "icon": "🎯",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Book a demo",
+                    "description": "See the product live with a personalized walkthrough.",
+                    "ctaLabel": "Book demo →",
+                    "ctaUrl": "#",
+                    "ctaTarget": "_self",
+                    "accentColor": "#f59e0b"
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "columns": {
+            "type": "number",
+            "default": 4
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "border"
+        },
+        "gap": {
+            "type": "number",
+            "default": 20
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 36
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDesc": {
+            "type": "boolean",
+            "default": true
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 17
+        },
+        "descSize": {
+            "type": "number",
+            "default": 14
+        },
+        "ctaSize": {
+            "type": "number",
+            "default": 14
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoDesc": {
+            "type": "object",
+            "default": {}
+        },
+        "typoCta": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ],
+        "spacing": {
+            "margin": true
+        }
+    }
+}

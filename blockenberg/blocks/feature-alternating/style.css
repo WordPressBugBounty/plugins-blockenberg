@@ -1,0 +1,232 @@
+/* ============================================================
+   Feature Alternating — style.css
+   Prefix: bkbg-falt-
+   ============================================================ */
+
+.bkbg-falt-wrap {
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--bkbg-falt-pt, 72px) 24px var(--bkbg-falt-pb, 72px);
+    background: var(--bkbg-falt-sec-bg, transparent);
+    display: flex;
+    flex-direction: column;
+    gap: var(--bkbg-falt-row-gap, 96px);
+}
+
+/* ---- Row ---- */
+.bkbg-falt-row {
+    display: flex;
+    align-items: center;
+    gap: var(--bkbg-falt-col-gap, 64px);
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.bkbg-falt-row--reverse {
+    flex-direction: row-reverse;
+}
+
+/* ---- Columns ---- */
+.bkbg-falt-col {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ---- Image col ---- */
+.bkbg-falt-col--image { flex-shrink: 0; }
+
+.bkbg-falt-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--bkbg-falt-r, 16px);
+    object-fit: cover;
+}
+.bkbg-falt-img--shadow {
+    box-shadow: 0 20px 60px rgba(0,0,0,.12), 0 4px 16px rgba(0,0,0,.08);
+}
+
+/* Placeholder when no image is set */
+.bkbg-falt-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: var(--bkbg-falt-r, 16px);
+    background: var(--bkbg-falt-ph-bg, #f0ebff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    opacity: .5;
+}
+
+/* ---- Text col ---- */
+.bkbg-falt-col--text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bkbg-falt-eyebrow {
+    display: inline-block;
+    font-family: var(--bkbg-falt-eb-font-family, inherit);
+    font-size: var(--bkbg-falt-eb-font-size-d, 12px);
+    font-weight: var(--bkbg-falt-eb-font-weight, 700);
+    line-height: var(--bkbg-falt-eb-line-height-d, 1.2);
+    text-transform: var(--bkbg-falt-eb-text-transform, uppercase);
+    font-style: var(--bkbg-falt-eb-font-style, normal);
+    text-decoration: var(--bkbg-falt-eb-text-decoration, none);
+    letter-spacing: var(--bkbg-falt-eb-letter-spacing-d, .1em);
+    word-spacing: var(--bkbg-falt-eb-word-spacing-d, normal);
+    color: var(--bkbg-falt-accent, #6c3fb5);
+}
+
+.bkbg-falt-wrap .bkbg-falt-title {
+    margin: 0;
+    font-family: var(--bkbg-falt-tt-font-family, inherit);
+    font-size: var(--bkbg-falt-tt-font-size-d, 36px);
+    font-weight: var(--bkbg-falt-tt-font-weight, 800);
+    line-height: var(--bkbg-falt-tt-line-height-d, 1.2);
+    text-transform: var(--bkbg-falt-tt-text-transform, none);
+    font-style: var(--bkbg-falt-tt-font-style, normal);
+    text-decoration: var(--bkbg-falt-tt-text-decoration, none);
+    letter-spacing: var(--bkbg-falt-tt-letter-spacing-d, -.02em);
+    word-spacing: var(--bkbg-falt-tt-word-spacing-d, normal);
+    color: var(--bkbg-falt-ttl-c, #0f172a);
+}
+
+.bkbg-falt-desc {
+    margin: 0;
+    font-family: var(--bkbg-falt-ds-font-family, inherit);
+    font-size: var(--bkbg-falt-ds-font-size-d, 17px);
+    font-weight: var(--bkbg-falt-ds-font-weight, 400);
+    line-height: var(--bkbg-falt-ds-line-height-d, 1.7);
+    text-transform: var(--bkbg-falt-ds-text-transform, none);
+    font-style: var(--bkbg-falt-ds-font-style, normal);
+    text-decoration: var(--bkbg-falt-ds-text-decoration, none);
+    letter-spacing: var(--bkbg-falt-ds-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-falt-ds-word-spacing-d, normal);
+    color: var(--bkbg-falt-desc-c, #475569);
+}
+
+/* ---- Features list ---- */
+.bkbg-falt-features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bkbg-falt-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-family: var(--bkbg-falt-fl-font-family, inherit);
+    font-size: var(--bkbg-falt-fl-font-size-d, 14px);
+    font-weight: var(--bkbg-falt-fl-font-weight, 500);
+    line-height: var(--bkbg-falt-fl-line-height-d, 1.5);
+    text-transform: var(--bkbg-falt-fl-text-transform, none);
+    font-style: var(--bkbg-falt-fl-font-style, normal);
+    text-decoration: var(--bkbg-falt-fl-text-decoration, none);
+    letter-spacing: var(--bkbg-falt-fl-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-falt-fl-word-spacing-d, normal);
+    color: var(--bkbg-falt-feat-c, #1e293b);
+}
+
+.bkbg-falt-feat-icon {
+    font-size: var(--bkbg-falt-icon-sz, 20px);
+    line-height: 1.3;
+    flex-shrink: 0;
+    color: var(--bkbg-falt-accent, #6c3fb5);
+}
+
+.bkbg-falt-feat-label { }
+
+/* ---- CTA link ---- */
+.bkbg-falt-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--bkbg-falt-accent, #6c3fb5);
+    text-decoration: none;
+    transition: gap .15s;
+    margin-top: 4px;
+}
+.bkbg-falt-cta:hover { text-decoration: underline; gap: 10px; }
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 860px) {
+    .bkbg-falt-row,
+    .bkbg-falt-row--reverse {
+        flex-direction: column;
+        gap: 32px;
+    }
+    .bkbg-falt-col--image { width: 100%; }
+    .bkbg-falt-wrap .bkbg-falt-title { font-size: clamp(24px, 6vw, var(--bkbg-falt-tt-font-size-d, 36px)); }
+    .bkbg-falt-wrap  { gap: 56px; }
+}
+@media (max-width: 480px) {
+    .bkbg-falt-wrap  { padding: var(--bkbg-falt-pt, 48px) 16px var(--bkbg-falt-pb, 48px); }
+}
+
+/* Typography responsive */
+@media (max-width: 1024px) {
+    .bkbg-falt-eyebrow {
+        font-size: var(--bkbg-falt-eb-font-size-t, var(--bkbg-falt-eb-font-size-d, 12px));
+        line-height: var(--bkbg-falt-eb-line-height-t, var(--bkbg-falt-eb-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-falt-eb-letter-spacing-t, var(--bkbg-falt-eb-letter-spacing-d, .1em));
+        word-spacing: var(--bkbg-falt-eb-word-spacing-t, var(--bkbg-falt-eb-word-spacing-d, normal));
+    }
+    .bkbg-falt-wrap .bkbg-falt-title {
+        font-size: var(--bkbg-falt-tt-font-size-t, var(--bkbg-falt-tt-font-size-d, 36px));
+        line-height: var(--bkbg-falt-tt-line-height-t, var(--bkbg-falt-tt-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-falt-tt-letter-spacing-t, var(--bkbg-falt-tt-letter-spacing-d, -.02em));
+        word-spacing: var(--bkbg-falt-tt-word-spacing-t, var(--bkbg-falt-tt-word-spacing-d, normal));
+    }
+    .bkbg-falt-desc {
+        font-size: var(--bkbg-falt-ds-font-size-t, var(--bkbg-falt-ds-font-size-d, 17px));
+        line-height: var(--bkbg-falt-ds-line-height-t, var(--bkbg-falt-ds-line-height-d, 1.7));
+        letter-spacing: var(--bkbg-falt-ds-letter-spacing-t, var(--bkbg-falt-ds-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-falt-ds-word-spacing-t, var(--bkbg-falt-ds-word-spacing-d, normal));
+    }
+    .bkbg-falt-feature {
+        font-size: var(--bkbg-falt-fl-font-size-t, var(--bkbg-falt-fl-font-size-d, 14px));
+        line-height: var(--bkbg-falt-fl-line-height-t, var(--bkbg-falt-fl-line-height-d, 1.5));
+        letter-spacing: var(--bkbg-falt-fl-letter-spacing-t, var(--bkbg-falt-fl-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-falt-fl-word-spacing-t, var(--bkbg-falt-fl-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-falt-eyebrow {
+        font-size: var(--bkbg-falt-eb-font-size-m, var(--bkbg-falt-eb-font-size-t, var(--bkbg-falt-eb-font-size-d, 12px)));
+        line-height: var(--bkbg-falt-eb-line-height-m, var(--bkbg-falt-eb-line-height-t, var(--bkbg-falt-eb-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-falt-eb-letter-spacing-m, var(--bkbg-falt-eb-letter-spacing-t, var(--bkbg-falt-eb-letter-spacing-d, .1em)));
+        word-spacing: var(--bkbg-falt-eb-word-spacing-m, var(--bkbg-falt-eb-word-spacing-t, var(--bkbg-falt-eb-word-spacing-d, normal)));
+    }
+    .bkbg-falt-wrap .bkbg-falt-title {
+        font-size: var(--bkbg-falt-tt-font-size-m, var(--bkbg-falt-tt-font-size-t, var(--bkbg-falt-tt-font-size-d, 36px)));
+        line-height: var(--bkbg-falt-tt-line-height-m, var(--bkbg-falt-tt-line-height-t, var(--bkbg-falt-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-falt-tt-letter-spacing-m, var(--bkbg-falt-tt-letter-spacing-t, var(--bkbg-falt-tt-letter-spacing-d, -.02em)));
+        word-spacing: var(--bkbg-falt-tt-word-spacing-m, var(--bkbg-falt-tt-word-spacing-t, var(--bkbg-falt-tt-word-spacing-d, normal)));
+    }
+    .bkbg-falt-desc {
+        font-size: var(--bkbg-falt-ds-font-size-m, var(--bkbg-falt-ds-font-size-t, var(--bkbg-falt-ds-font-size-d, 17px)));
+        line-height: var(--bkbg-falt-ds-line-height-m, var(--bkbg-falt-ds-line-height-t, var(--bkbg-falt-ds-line-height-d, 1.7)));
+        letter-spacing: var(--bkbg-falt-ds-letter-spacing-m, var(--bkbg-falt-ds-letter-spacing-t, var(--bkbg-falt-ds-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-falt-ds-word-spacing-m, var(--bkbg-falt-ds-word-spacing-t, var(--bkbg-falt-ds-word-spacing-d, normal)));
+    }
+    .bkbg-falt-feature {
+        font-size: var(--bkbg-falt-fl-font-size-m, var(--bkbg-falt-fl-font-size-t, var(--bkbg-falt-fl-font-size-d, 14px)));
+        line-height: var(--bkbg-falt-fl-line-height-m, var(--bkbg-falt-fl-line-height-t, var(--bkbg-falt-fl-line-height-d, 1.5)));
+        letter-spacing: var(--bkbg-falt-fl-letter-spacing-m, var(--bkbg-falt-fl-letter-spacing-t, var(--bkbg-falt-fl-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-falt-fl-word-spacing-m, var(--bkbg-falt-fl-word-spacing-t, var(--bkbg-falt-fl-word-spacing-d, normal)));
+    }
+}

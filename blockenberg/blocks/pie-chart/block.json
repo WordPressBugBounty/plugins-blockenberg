@@ -1,0 +1,148 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/pie-chart",
+    "version": "1.0.0",
+    "title": "Pie Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-pie",
+    "description": "SVG-based pie chart with labelled wedge segments, percentage display, and an optional legend. Renders inline without external libraries \u2014 no doughnut/ring, true pie slices with mid-wedge labels and hover tooltips.",
+    "keywords": [
+        "pie chart",
+        "chart",
+        "graph",
+        "statistics",
+        "data visualization",
+        "donut",
+        "wedge"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-pie-chart-editor",
+    "style": "bkbg-pie-chart-style",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Revenue by Channel"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Q1 2025 breakdown"
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "slices": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Organic Search",
+                    "value": 42,
+                    "color": "#6c3fb5"
+                },
+                {
+                    "label": "Direct",
+                    "value": 28,
+                    "color": "#3b82f6"
+                },
+                {
+                    "label": "Referral",
+                    "value": 18,
+                    "color": "#10b981"
+                },
+                {
+                    "label": "Social Media",
+                    "value": 12,
+                    "color": "#f59e0b"
+                }
+            ]
+        },
+        "size": {
+            "type": "integer",
+            "default": 280
+        },
+        "showLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPercentages": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "legendPosition": {
+            "type": "string",
+            "default": "right"
+        },
+        "strokeWidth": {
+            "type": "integer",
+            "default": 2
+        },
+        "strokeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "layout": {
+            "type": "string",
+            "default": "side"
+        },
+        "titleAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "borderRadius": {
+            "type": "integer",
+            "default": 16
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 48
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 48
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "legendTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "legendColor": {
+            "type": "string",
+            "default": "#374151"
+        }
+    }
+}

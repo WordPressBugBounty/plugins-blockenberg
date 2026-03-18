@@ -1,0 +1,179 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/icon-stats",
+    "version": "1.0.0",
+    "title": "Icon Stats",
+    "category": "bkbg-content",
+    "description": "Statistics displayed with large decorative icons, bold numbers, and descriptive labels.",
+    "keywords": [
+        "stats",
+        "icon",
+        "numbers",
+        "metrics",
+        "kpi",
+        "counter"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-icon-stats-editor",
+    "style": "bkbg-icon-stats-style",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "By the Numbers"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Real results from real teams"
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "columns": {
+            "type": "number",
+            "default": 4
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 32
+        },
+        "iconBgSize": {
+            "type": "number",
+            "default": 64
+        },
+        "iconBgRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "valueFontSize": {
+            "type": "number",
+            "default": 32
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "descFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "valueTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 24
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "gap": {
+            "type": "number",
+            "default": 16
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "valueColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "stats": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "🚀",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "value": "10M+",
+                    "label": "Users Served",
+                    "desc": "Across 120+ countries",
+                    "accentColor": "#6366f1"
+                },
+                {
+                    "icon": "⭐",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "value": "4.9",
+                    "label": "Average Rating",
+                    "desc": "From 50K+ reviews",
+                    "accentColor": "#f59e0b"
+                },
+                {
+                    "icon": "⚡",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "value": "99.9%",
+                    "label": "Uptime SLA",
+                    "desc": "Enterprise reliability",
+                    "accentColor": "#10b981"
+                },
+                {
+                    "icon": "💬",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "value": "2 min",
+                    "label": "Support Response",
+                    "desc": "Median first response",
+                    "accentColor": "#ec4899"
+                }
+            ]
+        }
+    }
+}

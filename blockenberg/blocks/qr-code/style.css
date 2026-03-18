@@ -1,0 +1,55 @@
+/* ── QR Code ────────────────────────────────────────────────────────────── */
+.bkqr-wrap {
+    line-height: 1;
+}
+.bkqr-box {
+    display: inline-block;
+    box-sizing: border-box;
+}
+.bkqr-canvas {
+    display: flex;
+    justify-content: center;
+}
+.bkqr-canvas img,
+.bkqr-canvas canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.bkqr-caption {
+    margin: 10px 0 0;
+    font-family: var(--bkqr-cap-font-family, inherit);
+    font-size: var(--bkqr-cap-font-size-d, 13px);
+    font-weight: var(--bkqr-cap-font-weight, 400);
+    font-style: var(--bkqr-cap-font-style, normal);
+    text-decoration: var(--bkqr-cap-text-decoration, none);
+    text-transform: var(--bkqr-cap-text-transform, none);
+    line-height: var(--bkqr-cap-line-height-d, 1.4);
+    letter-spacing: var(--bkqr-cap-letter-spacing-d, normal);
+    word-spacing: var(--bkqr-cap-word-spacing-d, normal);
+}
+.bkqr-download {
+    transition: background 0.2s, border-color 0.2s;
+}
+.bkqr-download:hover {
+    background: #f9fafb !important;
+    border-color: #9ca3af !important;
+}
+
+@media (max-width: 1024px) {
+    .bkqr-caption {
+        font-size: var(--bkqr-cap-font-size-t, var(--bkqr-cap-font-size-d, 13px));
+        line-height: var(--bkqr-cap-line-height-t, var(--bkqr-cap-line-height-d, 1.4));
+        letter-spacing: var(--bkqr-cap-letter-spacing-t, var(--bkqr-cap-letter-spacing-d, normal));
+        word-spacing: var(--bkqr-cap-word-spacing-t, var(--bkqr-cap-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkqr-caption {
+        font-size: var(--bkqr-cap-font-size-m, var(--bkqr-cap-font-size-t, var(--bkqr-cap-font-size-d, 13px)));
+        line-height: var(--bkqr-cap-line-height-m, var(--bkqr-cap-line-height-t, var(--bkqr-cap-line-height-d, 1.4)));
+        letter-spacing: var(--bkqr-cap-letter-spacing-m, var(--bkqr-cap-letter-spacing-t, var(--bkqr-cap-letter-spacing-d, normal)));
+        word-spacing: var(--bkqr-cap-word-spacing-m, var(--bkqr-cap-word-spacing-t, var(--bkqr-cap-word-spacing-d, normal)));
+    }
+}

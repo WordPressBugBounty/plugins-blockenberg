@@ -1,0 +1,153 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/creative-stats-waterfall",
+    "title": "Creative Stats Waterfall",
+    "category": "bkbg-charts",
+    "icon": "chart-bar",
+    "description": "Staggered waterfall layout of large statistics with animated counters and accent colors.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-creative-stats-waterfall-editor",
+    "style": "bkbg-creative-stats-waterfall-style",
+    "attributes": {
+        "stats": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "s1",
+                    "prefix": "",
+                    "value": "10",
+                    "suffix": "x",
+                    "label": "Faster deployment",
+                    "description": "Compared to manual setup",
+                    "accentColor": "#6c3fb5"
+                },
+                {
+                    "id": "s2",
+                    "prefix": "$",
+                    "value": "2.4",
+                    "suffix": "M",
+                    "label": "Revenue generated",
+                    "description": "By our customers in Q1",
+                    "accentColor": "#0ea5e9"
+                },
+                {
+                    "id": "s3",
+                    "prefix": "",
+                    "value": "98",
+                    "suffix": "%",
+                    "label": "Uptime guaranteed",
+                    "description": "SLA across all plans",
+                    "accentColor": "#10b981"
+                },
+                {
+                    "id": "s4",
+                    "prefix": "",
+                    "value": "500",
+                    "suffix": "+",
+                    "label": "Happy clients",
+                    "description": "Across 40+ countries",
+                    "accentColor": "#f59e0b"
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "waterfall"
+        },
+        "columns": {
+            "type": "number",
+            "default": 4
+        },
+        "waterfallOffset": {
+            "type": "number",
+            "default": 40
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDivider": {
+            "type": "boolean",
+            "default": true
+        },
+        "dividerStyle": {
+            "type": "string",
+            "default": "line"
+        },
+        "numberSize": {
+            "type": "number",
+            "default": 56
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 14
+        },
+        "descSize": {
+            "type": "number",
+            "default": 13
+        },
+        "gap": {
+            "type": "number",
+            "default": 32
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 72
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 72
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "numberColor": {
+            "type": "string",
+            "default": ""
+        },
+        "prefixSuffixColor": {
+            "type": "string",
+            "default": ""
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "typoNumber": {
+            "type": "object",
+            "default": {}
+        },
+        "typoLabel": {
+            "type": "object",
+            "default": {}
+        },
+        "typoDesc": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "keywords": [
+        "stats",
+        "numbers",
+        "metrics",
+        "waterfall",
+        "counter"
+    ]
+}

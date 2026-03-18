@@ -1,0 +1,166 @@
+.bkbg-lkc-wrap {
+    box-sizing: border-box;
+}
+
+.bkbg-lkc-wrap *,
+.bkbg-lkc-wrap *::before,
+.bkbg-lkc-wrap *::after {
+    box-sizing: inherit;
+}
+
+/* ── Grid ── */
+.bkbg-lkc-grid {
+    display: grid;
+    margin: 0 auto;
+}
+
+/* ── Card base ── */
+.bkbg-lkc-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    position: relative;
+    transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+    overflow: hidden;
+}
+
+/* ── Card styles ── */
+.bkbg-lkc-card--bordered {
+    border: 1px solid #e5e7eb;
+    background: #fff;
+}
+
+.bkbg-lkc-card--filled {
+    border: 1px solid transparent;
+}
+
+.bkbg-lkc-card--gradient {
+    border: 1px solid transparent;
+    background: linear-gradient(135deg, #faf5ff 0%, #f0fdf4 100%);
+}
+
+.bkbg-lkc-card--minimal {
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #e5e7eb;
+    border-radius: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* ── Slide accent bar (left border grow on hover) ── */
+.bkbg-lkc-card--slide::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--lkc-accent, #7c3aed);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.25s ease;
+}
+
+.bkbg-lkc-card--slide:hover::before {
+    transform: scaleY(1);
+}
+
+/* ── Hover effects ── */
+.bkbg-lkc-card--hover-lift:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.bkbg-lkc-card--hover-glow:hover {
+    box-shadow: 0 0 0 3px var(--lkc-accent, #7c3aed), 0 4px 16px rgba(124, 58, 237, 0.15);
+    transform: translateY(-2px);
+}
+
+.bkbg-lkc-card--hover-none:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* ── Content ── */
+.bkbg-lkc-card-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.bkbg-lkc-icon {
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.bkbg-lkc-icon svg { width: 1em; height: 1em; fill: currentColor; }
+.bkbg-lkc-icon .dashicons { font-size: inherit; width: 1em; height: 1em; line-height: 1; }
+.bkbg-lkc-icon .bkbg-icon-img { width: 1em; height: 1em; object-fit: contain; }
+
+.bkbg-lkc-title {
+    font-family: var(--bkbg-lkc-tt-font-family, inherit);
+    font-weight: var(--bkbg-lkc-tt-font-weight, 700);
+    font-style: var(--bkbg-lkc-tt-font-style, normal);
+    text-decoration: var(--bkbg-lkc-tt-text-decoration, none);
+    text-transform: var(--bkbg-lkc-tt-text-transform, none);
+    font-size: var(--bkbg-lkc-tt-font-size-d, 17px);
+    line-height: var(--bkbg-lkc-tt-line-height-d, var(--bkbg-lkc-tt-line-height, 1.3));
+    letter-spacing: var(--bkbg-lkc-tt-letter-spacing-d, var(--bkbg-lkc-tt-letter-spacing, 0px));
+    word-spacing: var(--bkbg-lkc-tt-word-spacing-d, var(--bkbg-lkc-tt-word-spacing, 0px));
+    color: inherit;
+    margin: 0;
+    flex: 1;
+}
+
+.bkbg-lkc-desc {
+    font-family: var(--bkbg-lkc-d-font-family, inherit);
+    font-weight: var(--bkbg-lkc-d-font-weight, 400);
+    font-style: var(--bkbg-lkc-d-font-style, normal);
+    text-decoration: var(--bkbg-lkc-d-text-decoration, none);
+    text-transform: var(--bkbg-lkc-d-text-transform, none);
+    font-size: var(--bkbg-lkc-d-font-size-d, 14px);
+    line-height: var(--bkbg-lkc-d-line-height-d, var(--bkbg-lkc-d-line-height, 1.6));
+    letter-spacing: var(--bkbg-lkc-d-letter-spacing-d, var(--bkbg-lkc-d-letter-spacing, 0px));
+    word-spacing: var(--bkbg-lkc-d-word-spacing-d, var(--bkbg-lkc-d-word-spacing, 0px));
+    margin: 0;
+    flex: 1;
+}
+
+/* Typography – responsive */
+@media (max-width: 1024px) {
+    .bkbg-lkc-wrap .bkbg-lkc-title { font-size: var(--bkbg-lkc-tt-font-size-t, var(--bkbg-lkc-tt-font-size-d, 17px)); line-height: var(--bkbg-lkc-tt-line-height-t, var(--bkbg-lkc-tt-line-height-d, 1.3));letter-spacing:var(--bkbg-lkc-tt-letter-spacing-t, var(--bkbg-lkc-tt-letter-spacing-d, var(--bkbg-lkc-tt-letter-spacing, 0px)));word-spacing:var(--bkbg-lkc-tt-word-spacing-t, var(--bkbg-lkc-tt-word-spacing-d, var(--bkbg-lkc-tt-word-spacing, 0px)))}
+    .bkbg-lkc-wrap .bkbg-lkc-desc { font-size: var(--bkbg-lkc-d-font-size-t, var(--bkbg-lkc-d-font-size-d, 14px)); line-height: var(--bkbg-lkc-d-line-height-t, var(--bkbg-lkc-d-line-height-d, 1.6));letter-spacing:var(--bkbg-lkc-d-letter-spacing-t, var(--bkbg-lkc-d-letter-spacing-d, var(--bkbg-lkc-d-letter-spacing, 0px)));word-spacing:var(--bkbg-lkc-d-word-spacing-t, var(--bkbg-lkc-d-word-spacing-d, var(--bkbg-lkc-d-word-spacing, 0px)))}
+}
+@media (max-width: 767px) {
+    .bkbg-lkc-wrap .bkbg-lkc-title { font-size: var(--bkbg-lkc-tt-font-size-m, var(--bkbg-lkc-tt-font-size-t, var(--bkbg-lkc-tt-font-size-d, 17px))); line-height: var(--bkbg-lkc-tt-line-height-m, var(--bkbg-lkc-tt-line-height-t, var(--bkbg-lkc-tt-line-height-d, 1.3)));letter-spacing:var(--bkbg-lkc-tt-letter-spacing-m, var(--bkbg-lkc-tt-letter-spacing-t, var(--bkbg-lkc-tt-letter-spacing-d, var(--bkbg-lkc-tt-letter-spacing, 0px))));word-spacing:var(--bkbg-lkc-tt-word-spacing-m, var(--bkbg-lkc-tt-word-spacing-t, var(--bkbg-lkc-tt-word-spacing-d, var(--bkbg-lkc-tt-word-spacing, 0px))))}
+    .bkbg-lkc-wrap .bkbg-lkc-desc { font-size: var(--bkbg-lkc-d-font-size-m, var(--bkbg-lkc-d-font-size-t, var(--bkbg-lkc-d-font-size-d, 14px))); line-height: var(--bkbg-lkc-d-line-height-m, var(--bkbg-lkc-d-line-height-t, var(--bkbg-lkc-d-line-height-d, 1.6)));letter-spacing:var(--bkbg-lkc-d-letter-spacing-m, var(--bkbg-lkc-d-letter-spacing-t, var(--bkbg-lkc-d-letter-spacing-d, var(--bkbg-lkc-d-letter-spacing, 0px))));word-spacing:var(--bkbg-lkc-d-word-spacing-m, var(--bkbg-lkc-d-word-spacing-t, var(--bkbg-lkc-d-word-spacing-d, var(--bkbg-lkc-d-word-spacing, 0px))))}
+}
+
+/* ── Arrow ── */
+.bkbg-lkc-arrow {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    transition: transform 0.2s;
+    align-self: flex-start;
+}
+
+.bkbg-lkc-card:hover .bkbg-lkc-arrow {
+    transform: translateX(4px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .bkbg-lkc-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .bkbg-lkc-grid[data-cols="2"],
+    .bkbg-lkc-grid[data-cols="3"],
+    .bkbg-lkc-grid[data-cols="4"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}

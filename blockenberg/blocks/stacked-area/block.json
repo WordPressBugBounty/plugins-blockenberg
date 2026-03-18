@@ -1,0 +1,167 @@
+{
+  "apiVersion": 3,
+  "name": "blockenberg/stacked-area",
+  "title": "Stacked Area Chart",
+  "category": "bkbg-charts",
+  "icon": "chart-area",
+  "description": "Area chart with multiple series stacked cumulatively.",
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-stacked-area-editor",
+  "style": "bkbg-stacked-area-style",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Monthly Active Users by Platform"
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "svgWidth": {
+      "type": "number",
+      "default": 700
+    },
+    "svgHeight": {
+      "type": "number",
+      "default": 360
+    },
+    "padTop": {
+      "type": "number",
+      "default": 30
+    },
+    "padLeft": {
+      "type": "number",
+      "default": 60
+    },
+    "padRight": {
+      "type": "number",
+      "default": 30
+    },
+    "padBottom": {
+      "type": "number",
+      "default": 50
+    },
+    "fillOpacity": {
+      "type": "number",
+      "default": 80
+    },
+    "showGridLines": {
+      "type": "boolean",
+      "default": true
+    },
+    "showDots": {
+      "type": "boolean",
+      "default": false
+    },
+    "showLegend": {
+      "type": "boolean",
+      "default": true
+    },
+    "showValues": {
+      "type": "boolean",
+      "default": false
+    },
+    "labelFontSize": {
+      "type": "number",
+      "default": 12
+    },
+    "valueFontSize": {
+      "type": "number",
+      "default": 10
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "gridColor": {
+      "type": "string",
+      "default": "#f3f4f6"
+    },
+    "titleColor": {
+      "type": "string",
+      "default": "#111827"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#374151"
+    },
+    "xLabels": {
+      "type": "array",
+      "default": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "series": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Mobile",
+          "color": "#6366f1",
+          "values": [
+            120,
+            145,
+            132,
+            168,
+            155,
+            180,
+            192,
+            210
+          ]
+        },
+        {
+          "label": "Desktop",
+          "color": "#10b981",
+          "values": [
+            95,
+            88,
+            102,
+            98,
+            110,
+            105,
+            115,
+            108
+          ]
+        },
+        {
+          "label": "Tablet",
+          "color": "#f59e0b",
+          "values": [
+            28,
+            32,
+            25,
+            38,
+            31,
+            35,
+            40,
+            42
+          ]
+        }
+      ],
+      "items": {
+        "type": "object"
+      }
+    },
+    "labelFontWeight": {
+      "type": "string",
+      "default": "400"
+    },
+    "labelLineHeight": {
+      "type": "number",
+      "default": 1.4
+    },
+    "titleTypo": {
+      "type": "object",
+      "default": {}
+    }
+  }
+}

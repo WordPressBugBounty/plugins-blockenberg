@@ -1,0 +1,348 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/quiz",
+    "title": "Scored Quiz",
+    "category": "bkbg-interactive",
+    "description": "Multi-question scored quiz with points-based result ranges. Shows personalised outcome based on total score. Includes progress bar and retake button.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-quiz-editor",
+    "style": "bkbg-quiz-style",
+    "viewScript": "bkbg-quiz-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "quizTitle": {
+            "type": "string",
+            "default": "What's Your Productivity Style?"
+        },
+        "quizDescription": {
+            "type": "string",
+            "default": "Answer 3 quick questions to discover which work style fits you best."
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "questions": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "q1",
+                    "question": "How do you prefer to organise your day?",
+                    "options": [
+                        {
+                            "id": "q1o1",
+                            "text": "Strict timed blocks — every hour is scheduled",
+                            "points": 3
+                        },
+                        {
+                            "id": "q1o2",
+                            "text": "A prioritised to-do list I work through flexibly",
+                            "points": 2
+                        },
+                        {
+                            "id": "q1o3",
+                            "text": "I react to what comes up as the day unfolds",
+                            "points": 1
+                        },
+                        {
+                            "id": "q1o4",
+                            "text": "I have a general direction but no set plan",
+                            "points": 0
+                        }
+                    ]
+                },
+                {
+                    "id": "q2",
+                    "question": "When distractions hit, you usually…",
+                    "options": [
+                        {
+                            "id": "q2o1",
+                            "text": "Block notifications and return to deep focus fast",
+                            "points": 3
+                        },
+                        {
+                            "id": "q2o2",
+                            "text": "Finish the distraction then get back on track",
+                            "points": 2
+                        },
+                        {
+                            "id": "q2o3",
+                            "text": "Find it hard to return with the same momentum",
+                            "points": 1
+                        },
+                        {
+                            "id": "q2o4",
+                            "text": "Rarely recover focus the same day",
+                            "points": 0
+                        }
+                    ]
+                },
+                {
+                    "id": "q3",
+                    "question": "How do you feel about planning tomorrow the night before?",
+                    "options": [
+                        {
+                            "id": "q3o1",
+                            "text": "I always do it — it's non-negotiable",
+                            "points": 3
+                        },
+                        {
+                            "id": "q3o2",
+                            "text": "Usually yes, if I remember",
+                            "points": 2
+                        },
+                        {
+                            "id": "q3o3",
+                            "text": "Sometimes, but I often skip it",
+                            "points": 1
+                        },
+                        {
+                            "id": "q3o4",
+                            "text": "Rarely — I prefer to improvise",
+                            "points": 0
+                        }
+                    ]
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "resultRanges": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "r1",
+                    "minScore": 0,
+                    "maxScore": 3,
+                    "icon": "🌱",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "The Free-Spirited Explorer",
+                    "description": "You prefer spontaneity over structure. Embracing a few simple habits could unlock a big jump in your output without sacrificing your flexibility.",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "r2",
+                    "minScore": 4,
+                    "maxScore": 6,
+                    "icon": "⚡",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "The Balanced Achiever",
+                    "description": "You mix structure with adaptability well. Fine-tuning your focus rituals and planning consistency could push you from good to exceptional.",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "r3",
+                    "minScore": 7,
+                    "maxScore": 9,
+                    "icon": "🏆",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "The Power Planner",
+                    "description": "You're a productivity powerhouse! Your systems are strong — focus now on protecting energy and avoiding burnout while scaling what works.",
+                    "imageUrl": "",
+                    "imageId": 0
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "progressStyle": {
+            "type": "string",
+            "default": "bar"
+        },
+        "showProgress": {
+            "type": "boolean",
+            "default": true
+        },
+        "oneAtATime": {
+            "type": "boolean",
+            "default": true
+        },
+        "randomize": {
+            "type": "boolean",
+            "default": false
+        },
+        "submitLabel": {
+            "type": "string",
+            "default": "See My Results"
+        },
+        "retakeLabel": {
+            "type": "string",
+            "default": "Retake Quiz"
+        },
+        "showRetake": {
+            "type": "boolean",
+            "default": true
+        },
+        "resultHeading": {
+            "type": "string",
+            "default": "Your Result"
+        },
+        "formMaxWidth": {
+            "type": "integer",
+            "default": 640
+        },
+        "cardRadius": {
+            "type": "integer",
+            "default": 20
+        },
+        "cardPadding": {
+            "type": "integer",
+            "default": 40
+        },
+        "optionRadius": {
+            "type": "integer",
+            "default": 10
+        },
+        "optionPadding": {
+            "type": "integer",
+            "default": 16
+        },
+        "btnRadius": {
+            "type": "integer",
+            "default": 10
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "questionTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "optionTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "resTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "resDescTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "selectedBg": {
+            "type": "string",
+            "default": "#ede9f7"
+        },
+        "selectedColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "selectedBorder": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "optionBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "optionBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "optionText": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "retakeBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "retakeColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "progressFill": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "progressTrack": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "resultCardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "resultIconSize": {
+            "type": "integer",
+            "default": 48
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "questionColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "resultTitleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "resultDescColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 64
+        }
+    }
+}

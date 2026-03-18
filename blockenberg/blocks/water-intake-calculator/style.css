@@ -1,0 +1,165 @@
+/* Water Intake Calculator — bkbg-wic-* */
+.bkbg-wic-app {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.bkbg-wic-app *, .bkbg-wic-app *::before, .bkbg-wic-app *::after { box-sizing: border-box; }
+
+.bkbg-wic-wrap {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 32px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+}
+.bkbg-wic-header { margin-bottom: 22px; }
+.bkbg-wic-title {
+    margin: 0 0 6px;
+    font-family: var(--bkwic-tt-ff, inherit);
+    font-size: var(--bkwic-tt-fsd, 28px);
+    line-height: var(--bkwic-tt-lhd, 1.2);
+    letter-spacing: var(--bkwic-tt-lsd, normal);
+    word-spacing: var(--bkwic-tt-wsd, normal);
+    font-weight: var(--bkwic-tt-fw, 700);
+    font-style: var(--bkwic-tt-fst, normal);
+    text-decoration: var(--bkwic-tt-td, none);
+    text-transform: var(--bkwic-tt-tt, none);
+}
+.bkbg-wic-subtitle {
+    margin: 0;
+    opacity: .7;
+    font-family: var(--bkwic-st-ff, inherit);
+    font-size: var(--bkwic-st-fsd, 15px);
+    line-height: var(--bkwic-st-lhd, normal);
+    letter-spacing: var(--bkwic-st-lsd, normal);
+    word-spacing: var(--bkwic-st-wsd, normal);
+    font-weight: var(--bkwic-st-fw, normal);
+    font-style: var(--bkwic-st-fst, normal);
+    text-decoration: var(--bkwic-st-td, none);
+    text-transform: var(--bkwic-st-tt, none);
+}
+
+.bkbg-wic-field { margin-bottom: 14px; }
+.bkbg-wic-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+.bkbg-wic-unit-toggle { display: flex; gap: 4px; }
+.bkbg-wic-unit-btn {
+    padding: 3px 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background .15s, color .15s;
+}
+.bkbg-wic-input, .bkbg-wic-select {
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 15px;
+    font-family: inherit;
+    border-radius: 8px;
+    border: 1.5px solid #e5e7eb;
+    outline: none;
+    background: #fff;
+    transition: border-color .15s;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.bkbg-wic-input:focus, .bkbg-wic-select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,.12);
+}
+.bkbg-wic-select { cursor: pointer; }
+
+.bkbg-wic-result {
+    background: #3b82f6;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.bkbg-wic-result-label  { font-size: 13px; font-weight: 600; opacity: .8; margin-bottom: 4px; }
+.bkbg-wic-result-main   { font-size: 56px; font-weight: 800; line-height: 1; margin-bottom: 4px; }
+.bkbg-wic-result-sub    { font-size: 16px; opacity: .85; }
+
+.bkbg-wic-glasses {
+    background: #eff6ff;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    text-align: center;
+    animation: bkbg-wic-fadein .3s ease;
+}
+.bkbg-wic-glasses-label { font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+.bkbg-wic-glasses-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
+.bkbg-wic-glass-icon { font-size: 22px; line-height: 1; }
+.bkbg-wic-glass-more { font-size: 13px; align-self: center; }
+
+.bkbg-wic-tips {
+    background: #f0fdf4;
+    border: 1.5px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 16px 20px;
+}
+.bkbg-wic-tips-heading { font-weight: 700; font-size: 13px; margin-bottom: 10px; }
+.bkbg-wic-tips-list {
+    margin: 0;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.bkbg-wic-tips-list li { font-size: 13px; line-height: 1.5; }
+
+@keyframes bkbg-wic-fadein {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 480px) {
+    .bkbg-wic-wrap { padding: 24px 16px; }
+    .bkbg-wic-result-main { font-size: 42px; }
+}
+
+/* ── Responsive typography ───────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-wic-title {
+        font-size: var(--bkwic-tt-fst1, var(--bkwic-tt-fsd, 28px));
+        line-height: var(--bkwic-tt-lht, var(--bkwic-tt-lhd, 1.2));
+        letter-spacing: var(--bkwic-tt-lst, var(--bkwic-tt-lsd, normal));
+        word-spacing: var(--bkwic-tt-wst, var(--bkwic-tt-wsd, normal));
+    }
+    .bkbg-wic-subtitle {
+        font-size: var(--bkwic-st-fst1, var(--bkwic-st-fsd, 15px));
+        line-height: var(--bkwic-st-lht, var(--bkwic-st-lhd, normal));
+        letter-spacing: var(--bkwic-st-lst, var(--bkwic-st-lsd, normal));
+        word-spacing: var(--bkwic-st-wst, var(--bkwic-st-wsd, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-wic-title {
+        font-size: var(--bkwic-tt-fsm, var(--bkwic-tt-fst1, var(--bkwic-tt-fsd, 28px)));
+        line-height: var(--bkwic-tt-lhm, var(--bkwic-tt-lht, var(--bkwic-tt-lhd, 1.2)));
+        letter-spacing: var(--bkwic-tt-lsm, var(--bkwic-tt-lst, var(--bkwic-tt-lsd, normal)));
+        word-spacing: var(--bkwic-tt-wsm, var(--bkwic-tt-wst, var(--bkwic-tt-wsd, normal)));
+    }
+    .bkbg-wic-subtitle {
+        font-size: var(--bkwic-st-fsm, var(--bkwic-st-fst1, var(--bkwic-st-fsd, 15px)));
+        line-height: var(--bkwic-st-lhm, var(--bkwic-st-lht, var(--bkwic-st-lhd, normal)));
+        letter-spacing: var(--bkwic-st-lsm, var(--bkwic-st-lst, var(--bkwic-st-lsd, normal)));
+        word-spacing: var(--bkwic-st-wsm, var(--bkwic-st-wst, var(--bkwic-st-wsd, normal)));
+    }
+}

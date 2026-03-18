@@ -1,0 +1,94 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/milestone",
+    "title": "Milestone",
+    "category": "bkbg-business",
+    "icon": "chart-pie",
+    "description": "Circular progress ring showing progress toward a numeric goal with animated ring and center label.",
+    "keywords": [
+        "milestone",
+        "goal",
+        "progress",
+        "ring",
+        "circular",
+        "chart"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-milestone-editor",
+    "editorStyle": "bkbg-milestone-style",
+    "style": "bkbg-milestone-style",
+    "viewScript": "bkbg-milestone-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": []
+    },
+    "attributes": {
+        "current": {
+            "type": "number",
+            "default": 75
+        },
+        "goal": {
+            "type": "number",
+            "default": 100
+        },
+        "label": {
+            "type": "string",
+            "default": "Completion"
+        },
+        "centerLabel": {
+            "type": "string",
+            "default": "auto"
+        },
+        "customCenterLabel": {
+            "type": "string",
+            "default": ""
+        },
+        "size": {
+            "type": "number",
+            "default": 160
+        },
+        "strokeWidth": {
+            "type": "number",
+            "default": 12
+        },
+        "ringColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "trackColor": {
+            "type": "string",
+            "default": "#e9e3ff"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#222222"
+        },
+        "labelSz": {
+            "type": "number",
+            "default": 14
+        },
+        "centerSz": {
+            "type": "number",
+            "default": 28
+        },
+        "glow": {
+            "type": "boolean",
+            "default": false
+        },
+        "animateOnView": {
+            "type": "boolean",
+            "default": true
+        },
+        "centerTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,150 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/salary-calculator",
+    "version": "1.0.0",
+    "title": "Salary Calculator",
+    "category": "bkbg-calculators",
+    "icon": "money-alt",
+    "description": "Calculate take-home pay after federal/state taxes, Social Security, Medicare and retirement contributions.",
+    "keywords": [
+        "salary",
+        "paycheck",
+        "take-home",
+        "income",
+        "tax",
+        "net pay",
+        "calculator"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-salary-calculator-editor",
+    "style": "bkbg-salary-calculator-style",
+    "viewScript": "bkbg-salary-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Salary & Take-Home Pay Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Estimate your net pay after taxes and deductions"
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "defaultIncome": {
+            "type": "number",
+            "default": 75000
+        },
+        "defaultPeriod": {
+            "type": "string",
+            "default": "annual"
+        },
+        "defaultFiling": {
+            "type": "string",
+            "default": "single"
+        },
+        "defaultStateTax": {
+            "type": "number",
+            "default": 5.0
+        },
+        "default401k": {
+            "type": "number",
+            "default": 6.0
+        },
+        "defaultOtherDed": {
+            "type": "number",
+            "default": 0
+        },
+        "showBreakdown": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAllPeriods": {
+            "type": "boolean",
+            "default": true
+        },
+        "showEffectiveRate": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#0ea5e9"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f0f9ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#e0f2fe"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0c4a6e"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "netColor": {
+            "type": "string",
+            "default": "#0ea5e9"
+        },
+        "taxColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "dedColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "titleFontSize": {
+            "type": "integer",
+            "default": 26
+        },
+        "contentMaxWidth": {
+            "type": "integer",
+            "default": 720
+        },
+        "titleFontWeight": {
+            "type": "integer",
+            "default": 700
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

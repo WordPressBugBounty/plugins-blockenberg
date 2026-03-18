@@ -1,0 +1,128 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/star-rating",
+    "title": "Star Rating",
+    "category": "bkbg-blog",
+    "icon": "star-filled",
+    "description": "Static visual star rating (1–5 stars) with optional label and numeric score. CSS-only, perfect inside testimonial cards.",
+    "keywords": [
+        "star",
+        "rating",
+        "review",
+        "testimonial",
+        "score"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-star-rating-editor",
+    "editorStyle": "bkbg-star-rating-style",
+    "style": "bkbg-star-rating-style",
+    "viewScript": "bkbg-star-rating-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true
+    },
+    "attributes": {
+        "blockId": {
+            "type": "string",
+            "default": ""
+        },
+        "rating": {
+            "type": "number",
+            "default": 4
+        },
+        "maxStars": {
+            "type": "number",
+            "default": 5
+        },
+        "starShape": {
+            "type": "string",
+            "default": "star"
+        },
+        "starSize": {
+            "type": "number",
+            "default": 28
+        },
+        "starGap": {
+            "type": "number",
+            "default": 3
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "left"
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "label": {
+            "type": "string",
+            "default": "Excellent product!"
+        },
+        "labelPosition": {
+            "type": "string",
+            "default": "below"
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 14
+        },
+        "labelWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelLH": {
+            "type": "number",
+            "default": 1.5
+        },
+        "labelSpacing": {
+            "type": "number",
+            "default": 8
+        },
+        "showNumeric": {
+            "type": "boolean",
+            "default": false
+        },
+        "numericTemplate": {
+            "type": "string",
+            "default": "{rating} out of {max}"
+        },
+        "numericSize": {
+            "type": "number",
+            "default": 13
+        },
+        "numericWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "numericColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "numericSpacing": {
+            "type": "number",
+            "default": 6
+        },
+        "filledColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "emptyColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "numericTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

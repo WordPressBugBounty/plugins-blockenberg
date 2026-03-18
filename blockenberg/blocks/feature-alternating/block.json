@@ -1,0 +1,249 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/feature-alternating",
+    "title": "Feature Alternating",
+    "category": "bkbg-marketing",
+    "icon": "columns",
+    "description": "Zigzag alternating feature rows — image on one side, feature list + CTA on the other. Pairs alternate left↔right automatically.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-feature-alternating-editor",
+    "style": "bkbg-feature-alternating-style",
+    "attributes": {
+        "rows": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "r1",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "eyebrow": "Simple",
+                    "title": "Set up in minutes, not months",
+                    "description": "Our CLI scaffolds your entire project in one command. No YAML. No DevOps PhD required.",
+                    "features": [
+                        {
+                            "id": "f1",
+                            "icon": "⚡",
+                            "label": "One-command install"
+                        },
+                        {
+                            "id": "f2",
+                            "icon": "📦",
+                            "label": "Zero-config defaults"
+                        },
+                        {
+                            "id": "f3",
+                            "icon": "🔌",
+                            "label": "Works with your stack"
+                        }
+                    ],
+                    "ctaLabel": "Get started free",
+                    "ctaUrl": "#",
+                    "ctaTarget": "_self",
+                    "showCta": true,
+                    "accentColor": "#6c3fb5"
+                },
+                {
+                    "id": "r2",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "eyebrow": "Powerful",
+                    "title": "Collaborate without friction",
+                    "description": "Real-time multiplayer editing, threaded comments, and instant previews keep your whole team in sync.",
+                    "features": [
+                        {
+                            "id": "f4",
+                            "icon": "👥",
+                            "label": "Multiplayer editing"
+                        },
+                        {
+                            "id": "f5",
+                            "icon": "💬",
+                            "label": "Inline comments"
+                        },
+                        {
+                            "id": "f6",
+                            "icon": "🔀",
+                            "label": "Branch & merge"
+                        }
+                    ],
+                    "ctaLabel": "See collaboration →",
+                    "ctaUrl": "#",
+                    "ctaTarget": "_self",
+                    "showCta": true,
+                    "accentColor": "#0ea5e9"
+                },
+                {
+                    "id": "r3",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "eyebrow": "Reliable",
+                    "title": "Deploy with complete confidence",
+                    "description": "99.99% uptime SLA, automatic rollbacks, and real-time monitoring so you can ship without fear.",
+                    "features": [
+                        {
+                            "id": "f7",
+                            "icon": "🛡️",
+                            "label": "99.99% uptime SLA"
+                        },
+                        {
+                            "id": "f8",
+                            "icon": "↩️",
+                            "label": "Auto-rollback"
+                        },
+                        {
+                            "id": "f9",
+                            "icon": "📊",
+                            "label": "Live monitoring"
+                        }
+                    ],
+                    "ctaLabel": "View reliability →",
+                    "ctaUrl": "#",
+                    "ctaTarget": "_self",
+                    "showCta": true,
+                    "accentColor": "#10b981"
+                }
+            ]
+        },
+        "imageRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "imageShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "rowGap": {
+            "type": "number",
+            "default": 96
+        },
+        "colGap": {
+            "type": "number",
+            "default": 64
+        },
+        "featureIconSize": {
+            "type": "number",
+            "default": 20
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 36
+        },
+        "titleWeight": {
+            "type": "string",
+            "default": "800"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "descSize": {
+            "type": "number",
+            "default": 17
+        },
+        "descWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "descLineHeight": {
+            "type": "number",
+            "default": 1.7
+        },
+        "featureLabelSize": {
+            "type": "number",
+            "default": 14
+        },
+        "featureLabelWeight": {
+            "type": "string",
+            "default": "500"
+        },
+        "featureLabelLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "eyebrowSize": {
+            "type": "number",
+            "default": 12
+        },
+        "eyebrowWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "eyebrowLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "typoEyebrow": {
+            "type": "object",
+            "default": {}
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoDescription": {
+            "type": "object",
+            "default": {}
+        },
+        "typoFeatureLabel": {
+            "type": "object",
+            "default": {}
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "showFeatures": {
+            "type": "boolean",
+            "default": true
+        },
+        "imageSide": {
+            "type": "string",
+            "default": "auto"
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 72
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 72
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "featureLabelColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "imagePlaceholderBg": {
+            "type": "string",
+            "default": "#f0ebff"
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "keywords": [
+        "features",
+        "alternating",
+        "zigzag",
+        "split",
+        "image",
+        "rows",
+        "section"
+    ]
+}

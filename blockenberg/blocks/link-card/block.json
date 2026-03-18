@@ -1,0 +1,173 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/link-card",
+    "version": "1.0.0",
+    "title": "Link Card Grid",
+    "category": "bkbg-content",
+    "icon": "grid-view",
+    "description": "Visual navigation card grid for resource hubs and docs pages. Each card has icon, title, description, and URL.",
+    "keywords": [
+        "link",
+        "card",
+        "grid",
+        "navigation",
+        "docs",
+        "resources",
+        "hub"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-link-card-editor",
+    "style": "bkbg-link-card-style",
+    "viewScript": "bkbg-link-card-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "cards": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "🚀",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Getting Started",
+                    "description": "Everything you need to set up and launch quickly.",
+                    "url": "#",
+                    "isExternal": false,
+                    "accentColor": ""
+                },
+                {
+                    "icon": "📖",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Documentation",
+                    "description": "Detailed guides and API references.",
+                    "url": "#",
+                    "isExternal": false,
+                    "accentColor": ""
+                },
+                {
+                    "icon": "💡",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Examples",
+                    "description": "Explore real-world use cases and demos.",
+                    "url": "#",
+                    "isExternal": false,
+                    "accentColor": ""
+                },
+                {
+                    "icon": "🛟",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Support",
+                    "description": "Get help from our team or community.",
+                    "url": "#",
+                    "isExternal": false,
+                    "accentColor": ""
+                }
+            ]
+        },
+        "columns": {
+            "type": "integer",
+            "default": 2
+        },
+        "gap": {
+            "type": "integer",
+            "default": 20
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "bordered"
+        },
+        "showArrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "hoverEffect": {
+            "type": "string",
+            "default": "lift"
+        },
+        "iconSize": {
+            "type": "integer",
+            "default": 32
+        },
+        "cardRadius": {
+            "type": "integer",
+            "default": 12
+        },
+        "cardPadding": {
+            "type": "integer",
+            "default": 24
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "arrowColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "titleSize": {
+            "type": "integer",
+            "default": 17
+        },
+        "descSize": {
+            "type": "integer",
+            "default": 14
+        },
+        "maxWidth": {
+            "type": "integer",
+            "default": 1000
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 48
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 48
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

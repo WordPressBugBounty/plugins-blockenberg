@@ -1,0 +1,179 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/tip-calculator",
+    "title": "Tip Calculator",
+    "category": "bkbg-calculators",
+    "icon": "tickets-alt",
+    "description": "Interactive bill, tip and split calculator. Enter the bill amount, choose a tip percentage with quick preset buttons, split by number of people, and instantly see total and per-person amounts.",
+    "keywords": [
+        "tip",
+        "bill",
+        "gratuity",
+        "split",
+        "calculator",
+        "restaurant",
+        "dining"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-tip-calculator-editor",
+    "style": "bkbg-tip-calculator-style",
+    "viewScript": "bkbg-tip-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Tip Calculator"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Calculate tip and split the bill with ease."
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "currencyPos": {
+            "type": "string",
+            "default": "before"
+        },
+        "defaultBill": {
+            "type": "number",
+            "default": 50
+        },
+        "defaultTip": {
+            "type": "number",
+            "default": 15
+        },
+        "defaultPeople": {
+            "type": "number",
+            "default": 2
+        },
+        "quickTips": {
+            "type": "array",
+            "default": [
+                10,
+                15,
+                18,
+                20,
+                25
+            ]
+        },
+        "showSplitter": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPerPerson": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTipAmount": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTotal": {
+            "type": "boolean",
+            "default": true
+        },
+        "allowCustomTip": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "quickBtnBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "quickBtnColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "activeBtnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "activeBtnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "resultBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "resultNumColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "resultTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 520
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        }
+    }
+}

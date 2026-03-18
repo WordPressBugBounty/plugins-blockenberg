@@ -1,0 +1,223 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/content-switcher",
+    "version": "1.0.0",
+    "title": "Content Switcher",
+    "category": "bkbg-content",
+    "icon": "controls-repeat",
+    "description": "Two-panel toggle block — a pill/tab switch with a label for each state, each panel containing its own headline, body text, bullet list, image, and CTA. Great for Individual/Team, Starter/Pro, Before/After content.",
+    "keywords": [
+        "switcher",
+        "toggle",
+        "panels",
+        "tabs",
+        "compare",
+        "before after"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-content-switcher-editor",
+    "style": "bkbg-content-switcher-style",
+    "viewScript": "bkbg-content-switcher-frontend",
+    "attributes": {
+        "switchStyle": {
+            "type": "string",
+            "default": "pill"
+        },
+        "switchAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "panelLayout": {
+            "type": "string",
+            "default": "image-right"
+        },
+        "defaultActive": {
+            "type": "number",
+            "default": 0
+        },
+        "panels": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "p0",
+                    "switchLabel": "For Individuals",
+                    "badge": "🙋 Personal",
+                    "showBadge": true,
+                    "headline": "Everything you need as an individual",
+                    "body": "Manage your projects, track progress, and stay on top of your tasks — all in one place designed just for you.",
+                    "bullets": [
+                        {
+                            "id": "b1",
+                            "text": "Unlimited personal projects"
+                        },
+                        {
+                            "id": "b2",
+                            "text": "Smart task prioritization"
+                        },
+                        {
+                            "id": "b3",
+                            "text": "Daily focus mode"
+                        }
+                    ],
+                    "ctaLabel": "Start for Free",
+                    "ctaUrl": "#",
+                    "ctaTarget": false,
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "p1",
+                    "switchLabel": "For Teams",
+                    "badge": "👥 Teams",
+                    "showBadge": true,
+                    "headline": "Collaborate and move faster as a team",
+                    "body": "Real-time collaboration, shared workspaces, and team dashboards that keep everyone aligned and moving in the same direction.",
+                    "bullets": [
+                        {
+                            "id": "b1",
+                            "text": "Shared team workspaces"
+                        },
+                        {
+                            "id": "b2",
+                            "text": "Role-based permissions"
+                        },
+                        {
+                            "id": "b3",
+                            "text": "Team analytics dashboard"
+                        }
+                    ],
+                    "ctaLabel": "Start with Your Team",
+                    "ctaUrl": "#",
+                    "ctaTarget": false,
+                    "imageUrl": "",
+                    "imageId": 0
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "imageRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "imageShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "imageRatio": {
+            "type": "string",
+            "default": "4/3"
+        },
+        "showBullets": {
+            "type": "boolean",
+            "default": true
+        },
+        "bulletIcon": {
+            "type": "string",
+            "default": "check"
+        },
+        "switchRadius": {
+            "type": "number",
+            "default": 99
+        },
+        "ctaRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "headlineSize": {
+            "type": "number",
+            "default": 34
+        },
+        "bodySize": {
+            "type": "number",
+            "default": 16
+        },
+        "bulletSize": {
+            "type": "number",
+            "default": 14
+        },
+        "badgeSize": {
+            "type": "number",
+            "default": 13
+        },
+        "switchSize": {
+            "type": "number",
+            "default": 15
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "switchBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "switchActiveText": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headlineColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "bodyColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "bulletColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "bulletIconColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "animate": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "typoHeadline": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ],
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    }
+}

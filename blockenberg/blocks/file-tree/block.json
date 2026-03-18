@@ -1,0 +1,256 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/file-tree",
+    "version": "1.0.0",
+    "title": "File Tree",
+    "category": "bkbg-dev",
+    "icon": "media-default",
+    "description": "Display a visual file and folder tree structure — ideal for documentation, project overviews, and tutorials.",
+    "keywords": [
+        "file",
+        "tree",
+        "folder",
+        "directory",
+        "code",
+        "structure",
+        "docs"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-file-tree-editor",
+    "editorStyle": "bkbg-file-tree-style",
+    "style": "bkbg-file-tree-style",
+    "viewScript": "bkbg-file-tree-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "treeTitle": {
+            "type": "string",
+            "default": "Project Structure"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLines": {
+            "type": "boolean",
+            "default": true
+        },
+        "showExtensionColors": {
+            "type": "boolean",
+            "default": true
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 180
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoItem": {
+            "type": "object",
+            "default": {}
+        },
+        "files": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "my-project",
+                    "type": "folder",
+                    "indent": 0,
+                    "isOpen": true
+                },
+                {
+                    "name": "src",
+                    "type": "folder",
+                    "indent": 1,
+                    "isOpen": true
+                },
+                {
+                    "name": "components",
+                    "type": "folder",
+                    "indent": 2,
+                    "isOpen": true
+                },
+                {
+                    "name": "Button.tsx",
+                    "type": "file",
+                    "indent": 3,
+                    "isOpen": false
+                },
+                {
+                    "name": "Modal.tsx",
+                    "type": "file",
+                    "indent": 3,
+                    "isOpen": false
+                },
+                {
+                    "name": "index.ts",
+                    "type": "file",
+                    "indent": 2,
+                    "isOpen": false
+                },
+                {
+                    "name": "App.tsx",
+                    "type": "file",
+                    "indent": 2,
+                    "isOpen": false
+                },
+                {
+                    "name": "styles",
+                    "type": "folder",
+                    "indent": 1,
+                    "isOpen": true
+                },
+                {
+                    "name": "globals.css",
+                    "type": "file",
+                    "indent": 2,
+                    "isOpen": false
+                },
+                {
+                    "name": "variables.css",
+                    "type": "file",
+                    "indent": 2,
+                    "isOpen": false
+                },
+                {
+                    "name": "public",
+                    "type": "folder",
+                    "indent": 1,
+                    "isOpen": true
+                },
+                {
+                    "name": "favicon.ico",
+                    "type": "file",
+                    "indent": 2,
+                    "isOpen": false
+                },
+                {
+                    "name": "logo.svg",
+                    "type": "file",
+                    "indent": 2,
+                    "isOpen": false
+                },
+                {
+                    "name": "package.json",
+                    "type": "file",
+                    "indent": 1,
+                    "isOpen": false
+                },
+                {
+                    "name": "tsconfig.json",
+                    "type": "file",
+                    "indent": 1,
+                    "isOpen": false
+                },
+                {
+                    "name": "README.md",
+                    "type": "file",
+                    "indent": 1,
+                    "isOpen": false
+                }
+            ]
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "folderColor": {
+            "type": "string",
+            "default": "#60a5fa"
+        },
+        "folderIconColor": {
+            "type": "string",
+            "default": "#fbbf24"
+        },
+        "fileColor": {
+            "type": "string",
+            "default": "#cbd5e1"
+        },
+        "lineColor": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "dotRed": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "dotYellow": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "dotGreen": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "jsColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "tsColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "cssColor": {
+            "type": "string",
+            "default": "#a78bfa"
+        },
+        "htmlColor": {
+            "type": "string",
+            "default": "#f97316"
+        },
+        "jsonColor": {
+            "type": "string",
+            "default": "#6ee7b7"
+        },
+        "mdColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "pyColor": {
+            "type": "string",
+            "default": "#4ade80"
+        },
+        "imgColor": {
+            "type": "string",
+            "default": "#fb7185"
+        }
+    }
+}

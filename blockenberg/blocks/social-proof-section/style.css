@@ -1,0 +1,69 @@
+.bkbg-sps-wrap { box-sizing: border-box; width: 100%; }
+.bkbg-sps-inner { margin-left: auto; margin-right: auto; text-align: center; }
+
+.bkbg-sps-eyebrow {
+    font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;
+    margin: 0 0 12px;
+}
+.bkbg-sps-heading { font-weight: 700; margin: 0 0 12px; line-height: 1.2; }
+.bkbg-sps-subtext { line-height: 1.6; margin: 0 0 32px; }
+
+/* Logos */
+.bkbg-sps-logos {
+    display: flex; gap: 40px; align-items: center;
+    justify-content: center; flex-wrap: wrap; margin-bottom: 40px;
+}
+.bkbg-sps-logo { display: flex; align-items: center; }
+.bkbg-sps-logo img {
+    object-fit: contain; max-width: none;
+    transition: filter 0.3s, opacity 0.3s;
+}
+.bkbg-sps-logos--grayscale .bkbg-sps-logo img {
+    filter: grayscale(1); opacity: 0.55;
+}
+.bkbg-sps-logos--grayscale-hover .bkbg-sps-logo img {
+    filter: grayscale(1); opacity: 0.5;
+}
+.bkbg-sps-logos--grayscale-hover .bkbg-sps-logo:hover img {
+    filter: grayscale(0); opacity: 1;
+}
+
+/* Stats */
+.bkbg-sps-stats {
+    display: flex; justify-content: center; flex-wrap: wrap;
+    border-top: 1px solid var(--bkbg-sps-divider, #e5e7eb);
+    border-bottom: 1px solid var(--bkbg-sps-divider, #e5e7eb);
+    padding: 32px 0; margin-bottom: 40px;
+}
+.bkbg-sps-stat { flex: 1; min-width: 120px; padding: 0 24px; }
+.bkbg-sps-stat + .bkbg-sps-stat { border-left: 1px solid var(--bkbg-sps-divider, #e5e7eb); }
+.bkbg-sps-stat-value { font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
+.bkbg-sps-stat-label { margin-top: 4px; }
+
+@media (max-width: 560px) {
+    .bkbg-sps-stat { min-width: 45%; margin-bottom: 24px; border-left: none !important; }
+}
+
+/* Quote */
+.bkbg-sps-quote-card {
+    border-radius: 16px; padding: 32px 40px;
+    text-align: left; max-width: 700px; margin: 0 auto;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.bkbg-sps-quote-mark {
+    font-size: 48px; line-height: 1; margin-bottom: 12px;
+    opacity: 0.35; font-family: Georgia, serif;
+}
+.bkbg-sps-quote-text { font-style: italic; line-height: 1.65; margin: 0 0 20px; }
+.bkbg-sps-author-row { display: flex; align-items: center; gap: 12px; }
+.bkbg-sps-author-avatar {
+    width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
+}
+.bkbg-sps-author-avatar-ph {
+    width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+}
+.bkbg-sps-author-name { font-weight: 700; font-size: 15px; }
+.bkbg-sps-author-role { font-size: 13px; margin-top: 1px; }
+
+/* Editor */
+.bkbg-sps-editor { min-height: 40px; }

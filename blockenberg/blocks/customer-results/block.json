@@ -1,0 +1,243 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/customer-results",
+    "version": "1.0.0",
+    "title": "Customer Results",
+    "category": "bkbg-marketing",
+    "icon": "star-filled",
+    "description": "Customer success stories with company logo, author quote, key outcome metrics, and industry tags.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-customer-results-editor",
+    "style": "bkbg-customer-results-style",
+    "viewScript": "bkbg-customer-results-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "Customer Success"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Real Teams, Real Results"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "See how companies like yours are achieving measurable growth with Blockenberg."
+        },
+        "results": {
+            "type": "array",
+            "default": [
+                {
+                    "companyName": "Acme Corp",
+                    "companyLogo": "",
+                    "authorName": "Sarah Chen",
+                    "authorTitle": "Head of Marketing",
+                    "quote": "We reduced our content production time by 60% while doubling our output quality. Blockenberg paid for itself in the first month.",
+                    "metrics": [
+                        {
+                            "value": "60%",
+                            "label": "Faster production"
+                        },
+                        {
+                            "value": "2×",
+                            "label": "Output quality"
+                        },
+                        {
+                            "value": "1mo",
+                            "label": "ROI payback"
+                        }
+                    ],
+                    "tags": [
+                        "Marketing",
+                        "Content"
+                    ]
+                },
+                {
+                    "companyName": "TechFlow",
+                    "companyLogo": "",
+                    "authorName": "Marcus Reid",
+                    "authorTitle": "CEO",
+                    "quote": "Our team went from spending 40 hours/week on manual tasks to just 4. Blockenberg is genuinely transformative.",
+                    "metrics": [
+                        {
+                            "value": "90%",
+                            "label": "Time saved"
+                        },
+                        {
+                            "value": "10×",
+                            "label": "Team capacity"
+                        },
+                        {
+                            "value": "40hrs",
+                            "label": "Reclaimed weekly"
+                        }
+                    ],
+                    "tags": [
+                        "SaaS",
+                        "Operations"
+                    ]
+                },
+                {
+                    "companyName": "Studio Bright",
+                    "companyLogo": "",
+                    "authorName": "Emma Larsson",
+                    "authorTitle": "Creative Director",
+                    "quote": "Client satisfaction scores went up 35 points after we adopted Blockenberg. The consistency it brings to our workflow is unmatched.",
+                    "metrics": [
+                        {
+                            "value": "+35",
+                            "label": "NPS increase"
+                        },
+                        {
+                            "value": "100%",
+                            "label": "On-time delivery"
+                        },
+                        {
+                            "value": "4.9",
+                            "label": "Client rating"
+                        }
+                    ],
+                    "tags": [
+                        "Agency",
+                        "Creative"
+                    ]
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "showMetrics": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTags": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAuthor": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLogo": {
+            "type": "boolean",
+            "default": true
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1200
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "quoteColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "authorColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "metricNumColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "metricLabelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "tagBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "tagColor": {
+            "type": "string",
+            "default": "#6d28d9"
+        },
+        "logoBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "eyebrowFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "headingFontSize": {
+            "type": "number",
+            "default": 28
+        },
+        "subtextFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "metricNumFontSize": {
+            "type": "number",
+            "default": 28
+        },
+        "metricLabelFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "typoEyebrow": {
+            "type": "object",
+            "default": {}
+        },
+        "typoHeading": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtext": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

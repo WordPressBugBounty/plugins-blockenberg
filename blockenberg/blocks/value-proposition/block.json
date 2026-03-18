@@ -1,0 +1,229 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/value-proposition",
+    "title": "Value Proposition",
+    "category": "bkbg-marketing",
+    "icon": "star-filled",
+    "description": "Compelling value proposition section with headline, USP benefits, proof badges, and CTA.",
+    "keywords": [
+        "value proposition",
+        "usp",
+        "benefits",
+        "hero",
+        "marketing",
+        "cta",
+        "pitch",
+        "section"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-value-proposition-editor",
+    "editorStyle": "bkbg-value-proposition-style",
+    "style": "bkbg-value-proposition-style",
+    "viewScript": "bkbg-value-proposition-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "Why Choose Us"
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "headline": {
+            "type": "string",
+            "default": "The Smarter Way to Grow Your Business"
+        },
+        "subheadline": {
+            "type": "string",
+            "default": "Everything you need to reach your goals — in one powerful platform trusted by thousands of companies worldwide."
+        },
+        "showSubheadline": {
+            "type": "boolean",
+            "default": true
+        },
+        "benefits": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "⚡",
+                    "title": "Lightning Fast",
+                    "description": "Deploy in minutes, not months. Our streamlined onboarding gets you up and running instantly."
+                },
+                {
+                    "icon": "🔒",
+                    "title": "Enterprise Security",
+                    "description": "Bank-grade encryption and SOC 2 compliance keep your data safe and your customers confident."
+                },
+                {
+                    "icon": "📈",
+                    "title": "Proven Results",
+                    "description": "Customers see an average 3× ROI within 90 days. Real results backed by real data."
+                },
+                {
+                    "icon": "🤝",
+                    "title": "24/7 Support",
+                    "description": "Our expert team is always on call. No bots, no wait queues — just humans who care."
+                }
+            ]
+        },
+        "badges": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "⭐",
+                    "text": "4.9/5 Rating"
+                },
+                {
+                    "icon": "🏆",
+                    "text": "Best in Class 2025"
+                },
+                {
+                    "icon": "👥",
+                    "text": "50K+ Customers"
+                }
+            ]
+        },
+        "showBadges": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaText": {
+            "type": "string",
+            "default": "Get Started Free"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaSecondaryText": {
+            "type": "string",
+            "default": "See How It Works →"
+        },
+        "ctaSecondaryUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSecondaryCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "center"
+        },
+        "benefitColumns": {
+            "type": "number",
+            "default": 2
+        },
+        "style": {
+            "type": "string",
+            "default": "clean"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "gap": {
+            "type": "number",
+            "default": 20
+        },
+        "paddingV": {
+            "type": "number",
+            "default": 64
+        },
+        "paddingH": {
+            "type": "number",
+            "default": 32
+        },
+        "headlineTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "benefitTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "benefitTextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "headlineColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "benefitBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "benefitBorderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "benefitTitleColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "benefitTextColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "iconBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "ctaSecondaryColor": {
+            "type": "string",
+            "default": "#6366f1"
+        }
+    }
+}

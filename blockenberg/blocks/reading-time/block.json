@@ -1,0 +1,84 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/reading-time",
+    "title": "Reading Time",
+    "category": "bkbg-blog",
+    "icon": "clock",
+    "description": "Displays estimated reading time calculated from the post content. Fully customizable styling.",
+    "keywords": [
+        "reading time",
+        "read",
+        "estimate",
+        "minutes",
+        "clock"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-reading-time-editor",
+    "editorStyle": "bkbg-reading-time-style",
+    "style": "bkbg-reading-time-style",
+    "viewScript": "bkbg-reading-time-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "wpm": {
+            "type": "number",
+            "default": 200
+        },
+        "prefix": {
+            "type": "string",
+            "default": ""
+        },
+        "suffix": {
+            "type": "string",
+            "default": "min read"
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "icon": {
+            "type": "string",
+            "default": "clock"
+        },
+        "displayStyle": {
+            "type": "string",
+            "default": "badge"
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "left"
+        },
+        "badgeTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ede9fc"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingX": {
+            "type": "number",
+            "default": 14
+        },
+        "paddingY": {
+            "type": "number",
+            "default": 6
+        }
+    }
+}

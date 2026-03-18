@@ -1,0 +1,94 @@
+/* Sticky Note Block — bksn- prefix */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+
+.bksn-wrap {
+  display: inline-block;
+  position: relative;
+  width: var(--bksn-w, 220px);
+  padding: var(--bksn-p, 20px);
+  background: var(--bksn-bg, #fef08a);
+  color: var(--bksn-text, #333);
+  font-family: var(--bksn-tx-font-family, inherit);
+  font-size: var(--bksn-tx-font-size-d, var(--bksn-fs, 15px));
+  font-weight: var(--bksn-tx-font-weight, var(--bksn-fw, 400));
+  font-style: var(--bksn-tx-font-style, normal);
+  text-decoration: var(--bksn-tx-text-decoration, none);
+  text-transform: var(--bksn-tx-text-transform, none);
+  line-height: var(--bksn-tx-line-height-d, var(--bksn-lh, 1.6));
+  letter-spacing: var(--bksn-tx-letter-spacing-d, normal);
+  word-spacing: var(--bksn-tx-word-spacing-d, normal);
+  box-shadow: var(--bksn-shadow, 4px 6px 16px rgba(0,0,0,.2));
+  transform: rotate(var(--bksn-rot, -2deg));
+  box-sizing: border-box;
+  transition: transform .2s;
+}
+.bksn-wrap:hover { transform: rotate(0deg) scale(1.02); }
+
+.bksn-handwritten,
+.bksn-handwritten .bksn-heading,
+.bksn-handwritten .bksn-text {
+  font-family: 'Caveat', cursive !important;
+}
+
+/* Curl corner via pseudo-element */
+.bksn-curl::after {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 28px; height: 28px;
+  background: linear-gradient(
+    225deg,
+    rgba(0,0,0,.15) 50%,
+    var(--bksn-bg, #fef08a) 50%
+  );
+  border-top-left-radius: 4px;
+}
+
+.bksn-heading {
+  display: block;
+  font-family: var(--bksn-hd-font-family, inherit);
+  font-size: var(--bksn-hd-font-size-d, 1.05em);
+  font-weight: var(--bksn-hd-font-weight, 700);
+  font-style: var(--bksn-hd-font-style, normal);
+  text-decoration: var(--bksn-hd-text-decoration, none);
+  text-transform: var(--bksn-hd-text-transform, none);
+  line-height: var(--bksn-hd-line-height-d, 1.3);
+  letter-spacing: var(--bksn-hd-letter-spacing-d, normal);
+  word-spacing: var(--bksn-hd-word-spacing-d, normal);
+  margin-bottom: 6px;
+}
+.bksn-text { margin: 0; }
+
+/* ── Responsive Typography ── */
+@media (max-width: 1024px) {
+  .bksn-wrap {
+    font-size: var(--bksn-tx-font-size-t, var(--bksn-tx-font-size-d, var(--bksn-fs, 15px)));
+    line-height: var(--bksn-tx-line-height-t, var(--bksn-tx-line-height-d, var(--bksn-lh, 1.6)));
+    letter-spacing: var(--bksn-tx-letter-spacing-t, var(--bksn-tx-letter-spacing-d, normal));
+    word-spacing: var(--bksn-tx-word-spacing-t, var(--bksn-tx-word-spacing-d, normal));
+  }
+  .bksn-heading {
+    font-size: var(--bksn-hd-font-size-t, var(--bksn-hd-font-size-d, 1.05em));
+    line-height: var(--bksn-hd-line-height-t, var(--bksn-hd-line-height-d, 1.3));
+    letter-spacing: var(--bksn-hd-letter-spacing-t, var(--bksn-hd-letter-spacing-d, normal));
+    word-spacing: var(--bksn-hd-word-spacing-t, var(--bksn-hd-word-spacing-d, normal));
+  }
+}
+@media (max-width: 767px) {
+  .bksn-wrap {
+    font-size: var(--bksn-tx-font-size-m, var(--bksn-tx-font-size-t, var(--bksn-tx-font-size-d, var(--bksn-fs, 15px))));
+    line-height: var(--bksn-tx-line-height-m, var(--bksn-tx-line-height-t, var(--bksn-tx-line-height-d, var(--bksn-lh, 1.6))));
+    letter-spacing: var(--bksn-tx-letter-spacing-m, var(--bksn-tx-letter-spacing-t, var(--bksn-tx-letter-spacing-d, normal)));
+    word-spacing: var(--bksn-tx-word-spacing-m, var(--bksn-tx-word-spacing-t, var(--bksn-tx-word-spacing-d, normal)));
+  }
+  .bksn-heading {
+    font-size: var(--bksn-hd-font-size-m, var(--bksn-hd-font-size-t, var(--bksn-hd-font-size-d, 1.05em)));
+    line-height: var(--bksn-hd-line-height-m, var(--bksn-hd-line-height-t, var(--bksn-hd-line-height-d, 1.3)));
+    letter-spacing: var(--bksn-hd-letter-spacing-m, var(--bksn-hd-letter-spacing-t, var(--bksn-hd-letter-spacing-d, normal)));
+    word-spacing: var(--bksn-hd-word-spacing-m, var(--bksn-hd-word-spacing-t, var(--bksn-hd-word-spacing-d, normal)));
+  }
+}
+
+/* Editor */
+.wp-block-blockenberg-sticky-note .bksn-heading,
+.wp-block-blockenberg-sticky-note .bksn-text { outline: none; }

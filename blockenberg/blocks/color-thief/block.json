@@ -1,0 +1,148 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/color-thief",
+	"version": "1.0.0",
+	"title": "Color Thief",
+	"category": "bkbg-dev",
+	"icon": "art",
+	"description": "Upload an image to automatically extract its dominant color palette using canvas pixel analysis.",
+	"keywords": [
+		"color",
+		"palette",
+		"image",
+		"extract",
+		"swatch"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-color-thief-editor",
+	"style": "bkbg-color-thief-style",
+	"viewScript": "bkbg-color-thief-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"imageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"imageId": {
+			"type": "integer",
+			"default": 0
+		},
+		"imageAlt": {
+			"type": "string",
+			"default": ""
+		},
+		"paletteSize": {
+			"type": "integer",
+			"default": 6
+		},
+		"quality": {
+			"type": "integer",
+			"default": 10
+		},
+		"showHexValues": {
+			"type": "boolean",
+			"default": true
+		},
+		"showRgbValues": {
+			"type": "boolean",
+			"default": false
+		},
+		"showHslValues": {
+			"type": "boolean",
+			"default": false
+		},
+		"swatchSize": {
+			"type": "integer",
+			"default": 60
+		},
+		"swatchRadius": {
+			"type": "integer",
+			"default": 8
+		},
+		"swatchGap": {
+			"type": "integer",
+			"default": 8
+		},
+		"showCopyButton": {
+			"type": "boolean",
+			"default": true
+		},
+		"copyFormat": {
+			"type": "string",
+			"default": "hex"
+		},
+		"layout": {
+			"type": "string",
+			"default": "row"
+		},
+		"swatchColumns": {
+			"type": "integer",
+			"default": 6
+		},
+		"showImagePreview": {
+			"type": "boolean",
+			"default": true
+		},
+		"imageHeight": {
+			"type": "integer",
+			"default": 200
+		},
+		"imageObjectFit": {
+			"type": "string",
+			"default": "cover"
+		},
+		"borderRadius": {
+			"type": "integer",
+			"default": 12
+		},
+		"showDominant": {
+			"type": "boolean",
+			"default": true
+		},
+		"showSwatchNames": {
+			"type": "boolean",
+			"default": false
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"labelColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"borderColor": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"padding": {
+			"type": "integer",
+			"default": 20
+		},
+		"labelFontSize": {
+			"type": "integer",
+			"default": 11
+		},
+		"labelFontWeight": {
+			"type": "string",
+			"default": "400"
+		},
+		"labelLineHeight": {
+			"type": "number",
+			"default": 1.4
+		},
+		"typoLabel": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

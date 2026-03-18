@@ -1,0 +1,162 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/link-preview",
+    "title": "Link Preview",
+    "category": "bkbg-content",
+    "icon": "admin-links",
+    "description": "Manually-configured link preview card (OpenGraph style) with image, favicon, title, description, and domain.",
+    "keywords": [
+        "link",
+        "preview",
+        "card",
+        "opengraph",
+        "og",
+        "url",
+        "unfurl",
+        "embed"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-link-preview-editor",
+    "editorStyle": "bkbg-link-preview-style",
+    "style": "bkbg-link-preview-style",
+    "viewScript": "bkbg-link-preview-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide"
+        ]
+    },
+    "attributes": {
+        "url": {
+            "type": "string",
+            "default": ""
+        },
+        "siteName": {
+            "type": "string",
+            "default": ""
+        },
+        "domain": {
+            "type": "string",
+            "default": ""
+        },
+        "title": {
+            "type": "string",
+            "default": "An Interesting Article Title"
+        },
+        "description": {
+            "type": "string",
+            "default": "A short excerpt or description of the linked page that gives visitors context about what they'll find there."
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "faviconUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "faviconId": {
+            "type": "number",
+            "default": 0
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "showImage": {
+            "type": "boolean",
+            "default": true
+        },
+        "showFavicon": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDomain": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDesc": {
+            "type": "boolean",
+            "default": true
+        },
+        "openNewTab": {
+            "type": "boolean",
+            "default": true
+        },
+        "imageHeight": {
+            "type": "number",
+            "default": 160
+        },
+        "imageWidth": {
+            "type": "number",
+            "default": 220
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 1
+        },
+        "shadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "hoverLift": {
+            "type": "boolean",
+            "default": true
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 600
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "domainColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 16
+        },
+        "descSize": {
+            "type": "number",
+            "default": 13
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

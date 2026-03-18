@@ -1,0 +1,162 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/content-score",
+    "title": "Content Score",
+    "category": "bkbg-interactive",
+    "icon": "chart-pie",
+    "description": "Visual content or SEO scoring card with circular gauge, color-coded criteria rows, and overall grade.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-content-score-editor",
+    "style": "bkbg-content-score-style",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Content Quality Score"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "label": {
+            "type": "string",
+            "default": "Overall Score"
+        },
+        "showGauge": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGrade": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCriteria": {
+            "type": "boolean",
+            "default": true
+        },
+        "gaugeSize": {
+            "type": "number",
+            "default": 160
+        },
+        "strokeWidth": {
+            "type": "number",
+            "default": 14
+        },
+        "layout": {
+            "type": "string",
+            "default": "side"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "mutedColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "trackColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "passColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "warnColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "failColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "criteria": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Keyword Usage",
+                    "score": 90,
+                    "max": 100,
+                    "note": "Primary keyword appears 8 times"
+                },
+                {
+                    "label": "Readability",
+                    "score": 78,
+                    "max": 100,
+                    "note": "Flesch–Kincaid grade 9.2"
+                },
+                {
+                    "label": "Title Tag",
+                    "score": 95,
+                    "max": 100,
+                    "note": "Optimal length, includes keyword"
+                },
+                {
+                    "label": "Meta Description",
+                    "score": 60,
+                    "max": 100,
+                    "note": "Slightly below recommended length"
+                },
+                {
+                    "label": "Internal Links",
+                    "score": 50,
+                    "max": 100,
+                    "note": "Add 2–3 more internal links"
+                },
+                {
+                    "label": "Image Alt Text",
+                    "score": 100,
+                    "max": 100,
+                    "note": "All images have descriptive alt"
+                },
+                {
+                    "label": "Content Length",
+                    "score": 85,
+                    "max": 100,
+                    "note": "1,840 words — good depth"
+                },
+                {
+                    "label": "Heading Structure",
+                    "score": 70,
+                    "max": 100,
+                    "note": "Missing H2 subheadings"
+                }
+            ]
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 13
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

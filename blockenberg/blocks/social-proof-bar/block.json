@@ -1,0 +1,237 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/social-proof-bar",
+	"version": "1.0.0",
+	"title": "Social Proof Bar",
+	"category": "bkbg-marketing",
+	"icon": "groups",
+	"description": "Combined trust bar with avatar stack, star rating, review count, and partner / 'as seen in' logo strip.",
+	"keywords": [
+		"social proof",
+		"trust",
+		"testimonial",
+		"logos",
+		"avatars",
+		"rating",
+		"as seen in",
+		"trusted by",
+		"reviews"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-social-proof-bar-editor",
+	"editorStyle": "bkbg-social-proof-bar-style",
+	"style": "bkbg-social-proof-bar-style",
+	"viewScript": "bkbg-social-proof-bar-frontend",
+	"supports": {
+		"html": false,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"layout": {
+			"type": "string",
+			"default": "centered"
+		},
+		"showAvatars": {
+			"type": "boolean",
+			"default": true
+		},
+		"avatars": {
+			"type": "array",
+			"default": [
+				{
+					"id": "a1",
+					"imageUrl": "",
+					"name": "User 1",
+					"initials": "JD"
+				},
+				{
+					"id": "a2",
+					"imageUrl": "",
+					"name": "User 2",
+					"initials": "AM"
+				},
+				{
+					"id": "a3",
+					"imageUrl": "",
+					"name": "User 3",
+					"initials": "SK"
+				},
+				{
+					"id": "a4",
+					"imageUrl": "",
+					"name": "User 4",
+					"initials": "RL"
+				}
+			]
+		},
+		"avatarSize": {
+			"type": "number",
+			"default": 40
+		},
+		"avatarOverlap": {
+			"type": "number",
+			"default": 10
+		},
+		"avatarBorderColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"avatarFallbackBg": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"showRating": {
+			"type": "boolean",
+			"default": true
+		},
+		"ratingValue": {
+			"type": "number",
+			"default": 4.9
+		},
+		"reviewCount": {
+			"type": "string",
+			"default": "2,400+"
+		},
+		"ratingLabel": {
+			"type": "string",
+			"default": "reviews"
+		},
+		"starColor": {
+			"type": "string",
+			"default": "#f59e0b"
+		},
+		"showTagline": {
+			"type": "boolean",
+			"default": true
+		},
+		"tagline": {
+			"type": "string",
+			"default": "Trusted by 10,000+ marketers worldwide"
+		},
+		"dividerStyle": {
+			"type": "string",
+			"default": "line"
+		},
+		"showLogos": {
+			"type": "boolean",
+			"default": true
+		},
+		"logosLabel": {
+			"type": "string",
+			"default": "As seen in"
+		},
+		"showLogosLabel": {
+			"type": "boolean",
+			"default": true
+		},
+		"logos": {
+			"type": "array",
+			"default": [
+				{
+					"id": "l1",
+					"imageUrl": "",
+					"name": "Forbes",
+					"url": ""
+				},
+				{
+					"id": "l2",
+					"imageUrl": "",
+					"name": "TechCrunch",
+					"url": ""
+				},
+				{
+					"id": "l3",
+					"imageUrl": "",
+					"name": "Wired",
+					"url": ""
+				},
+				{
+					"id": "l4",
+					"imageUrl": "",
+					"name": "Product Hunt",
+					"url": ""
+				}
+			]
+		},
+		"logoHeight": {
+			"type": "number",
+			"default": 28
+		},
+		"logoOpacity": {
+			"type": "number",
+			"default": 50
+		},
+		"logoGrayscale": {
+			"type": "boolean",
+			"default": true
+		},
+		"logoGap": {
+			"type": "number",
+			"default": 40
+		},
+		"gap": {
+			"type": "number",
+			"default": 32
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 0
+		},
+		"borderTop": {
+			"type": "boolean",
+			"default": false
+		},
+		"borderBottom": {
+			"type": "boolean",
+			"default": false
+		},
+		"taglineSize": {
+			"type": "number",
+			"default": 14
+		},
+		"ratingNumSize": {
+			"type": "number",
+			"default": 16
+		},
+		"bgColor": {
+			"type": "string",
+			"default": ""
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"dividerColor": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 32
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 32
+		},
+		"ratingNumFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"taglineFontWeight": {
+			"type": "number",
+			"default": 600
+		},
+		"ratingTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"taglineTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

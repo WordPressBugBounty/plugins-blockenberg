@@ -1,0 +1,155 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/tag-cloud",
+    "title": "Tag Cloud",
+    "category": "bkbg-blog",
+    "icon": "tag",
+    "description": "A styled, interactive tag cloud with custom tags or live WordPress tags.",
+    "keywords": [
+        "tag",
+        "cloud",
+        "tags",
+        "labels",
+        "taxonomy"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-tag-cloud-editor",
+    "style": "bkbg-tag-cloud-style",
+    "viewScript": "bkbg-tag-cloud-frontend",
+    "attributes": {
+        "sourceType": {
+            "type": "string",
+            "default": "custom"
+        },
+        "tags": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Design",
+                    "url": "#",
+                    "weight": 5
+                },
+                {
+                    "label": "Development",
+                    "url": "#",
+                    "weight": 4
+                },
+                {
+                    "label": "WordPress",
+                    "url": "#",
+                    "weight": 3
+                },
+                {
+                    "label": "Gutenberg",
+                    "url": "#",
+                    "weight": 2
+                },
+                {
+                    "label": "Blocks",
+                    "url": "#",
+                    "weight": 1
+                }
+            ]
+        },
+        "maxTags": {
+            "type": "number",
+            "default": 20
+        },
+        "showCount": {
+            "type": "boolean",
+            "default": false
+        },
+        "tagStyle": {
+            "type": "string",
+            "default": "rounded"
+        },
+        "colorMode": {
+            "type": "string",
+            "default": "single"
+        },
+        "primaryColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "secondaryColor": {
+            "type": "string",
+            "default": "#a855f7"
+        },
+        "multiColors": {
+            "type": "string",
+            "default": "#6c3fb5,#a855f7,#3b82f6,#10b981,#f59e0b,#ef4444"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "hoverBg": {
+            "type": "string",
+            "default": "#5a2fa0"
+        },
+        "hoverTextColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "fontSizeMin": {
+            "type": "number",
+            "default": 13
+        },
+        "fontSizeMax": {
+            "type": "number",
+            "default": 22
+        },
+        "tagTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "gap": {
+            "type": "number",
+            "default": 8
+        },
+        "paddingX": {
+            "type": "number",
+            "default": 14
+        },
+        "paddingY": {
+            "type": "number",
+            "default": 7
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 1
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "sortBy": {
+            "type": "string",
+            "default": "input"
+        },
+        "randomize": {
+            "type": "boolean",
+            "default": false
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "animateHover": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

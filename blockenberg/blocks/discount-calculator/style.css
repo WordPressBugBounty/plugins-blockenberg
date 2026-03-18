@@ -1,0 +1,137 @@
+/* Discount Calculator Block — bkbg-disc-* */
+
+.bkbg-disc-editor,
+.bkbg-disc-app {
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.bkbg-disc-editor *,
+.bkbg-disc-app * {
+    box-sizing: border-box;
+}
+
+/* Mode buttons */
+.bkbg-disc-mode-btn {
+    transition: background .15s, color .15s, border-color .15s;
+    cursor: pointer;
+    line-height: 1.3;
+}
+.bkbg-disc-mode-btn:hover {
+    opacity: .88;
+}
+
+/* Input rows */
+.bkbg-disc-input-row input[type="number"] {
+    width: 100%;
+    transition: border-color .2s, box-shadow .2s;
+    -moz-appearance: textfield;
+}
+.bkbg-disc-input-row input[type="number"]::-webkit-outer-spin-button,
+.bkbg-disc-input-row input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.bkbg-disc-input-row input[type="number"]:focus {
+    outline: none;
+    border-color: #6c3fb5 !important;
+    box-shadow: 0 0 0 3px rgba(108, 63, 181, .15);
+}
+
+/* Result card */
+.bkbg-disc-result {
+    text-align: center;
+}
+
+.bkbg-disc-badge {
+    display: inline-block;
+    border-radius: 100px;
+    letter-spacing: .03em;
+    animation: bkbg-disc-pop .25s cubic-bezier(.34,1.56,.64,1);
+}
+
+@keyframes bkbg-disc-pop {
+    from { transform: scale(.7); opacity: 0; }
+    to   { transform: scale(1);  opacity: 1; }
+}
+
+.bkbg-disc-sale-price {
+    line-height: 1.1;
+}
+
+.bkbg-disc-orig-price {
+    text-decoration: line-through;
+}
+
+/* Savings bar */
+.bkbg-disc-bar-track {
+    height: 10px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+.bkbg-disc-bar-fill {
+    height: 100%;
+    border-radius: 100px;
+    transition: width .35s cubic-bezier(.4,0,.2,1);
+}
+
+/* Frontend card */
+.bkbg-disc-app > .bkbg-disc-card {
+    box-shadow: 0 4px 24px rgba(0,0,0,.09);
+}
+
+/* Title */
+.bkbg-disc-title {
+    font-family: var(--bkbg-disc-ttl-font-family, inherit);
+    font-weight: var(--bkbg-disc-ttl-font-weight, 700);
+    font-size: var(--bkbg-disc-ttl-font-size-d, var(--bkbg-disc-ttl-fs, 28px));
+    line-height: var(--bkbg-disc-ttl-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-disc-ttl-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-disc-ttl-word-spacing-d, normal);
+    text-transform: var(--bkbg-disc-ttl-text-transform, none);
+    font-style: var(--bkbg-disc-ttl-font-style, normal);
+    text-decoration: var(--bkbg-disc-ttl-text-decoration, none);
+    margin-bottom: 6px;
+}
+
+/* Subtitle */
+.bkbg-disc-subtitle {
+    font-family: var(--bkbg-disc-sub-font-family, inherit);
+    font-weight: var(--bkbg-disc-sub-font-weight, normal);
+    font-size: var(--bkbg-disc-sub-font-size-d, var(--bkbg-disc-sub-fs, 15px));
+    line-height: var(--bkbg-disc-sub-line-height-d, 1.5);
+    letter-spacing: var(--bkbg-disc-sub-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-disc-sub-word-spacing-d, normal);
+    text-transform: var(--bkbg-disc-sub-text-transform, none);
+    font-style: var(--bkbg-disc-sub-font-style, normal);
+    text-decoration: var(--bkbg-disc-sub-text-decoration, none);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-disc-title {
+        font-size: var(--bkbg-disc-ttl-font-size-t, var(--bkbg-disc-ttl-font-size-d, var(--bkbg-disc-ttl-fs, 28px)));
+        line-height: var(--bkbg-disc-ttl-line-height-t, var(--bkbg-disc-ttl-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-disc-ttl-letter-spacing-t, var(--bkbg-disc-ttl-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-disc-ttl-word-spacing-t, var(--bkbg-disc-ttl-word-spacing-d, normal));
+    }
+    .bkbg-disc-subtitle {
+        font-size: var(--bkbg-disc-sub-font-size-t, var(--bkbg-disc-sub-font-size-d, var(--bkbg-disc-sub-fs, 15px)));
+        line-height: var(--bkbg-disc-sub-line-height-t, var(--bkbg-disc-sub-line-height-d, 1.5));
+        letter-spacing: var(--bkbg-disc-sub-letter-spacing-t, var(--bkbg-disc-sub-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-disc-sub-word-spacing-t, var(--bkbg-disc-sub-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-disc-title {
+        font-size: var(--bkbg-disc-ttl-font-size-m, var(--bkbg-disc-ttl-font-size-t, var(--bkbg-disc-ttl-font-size-d, var(--bkbg-disc-ttl-fs, 28px))));
+        line-height: var(--bkbg-disc-ttl-line-height-m, var(--bkbg-disc-ttl-line-height-t, var(--bkbg-disc-ttl-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-disc-ttl-letter-spacing-m, var(--bkbg-disc-ttl-letter-spacing-t, var(--bkbg-disc-ttl-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-disc-ttl-word-spacing-m, var(--bkbg-disc-ttl-word-spacing-t, var(--bkbg-disc-ttl-word-spacing-d, normal)));
+    }
+    .bkbg-disc-subtitle {
+        font-size: var(--bkbg-disc-sub-font-size-m, var(--bkbg-disc-sub-font-size-t, var(--bkbg-disc-sub-font-size-d, var(--bkbg-disc-sub-fs, 15px))));
+        line-height: var(--bkbg-disc-sub-line-height-m, var(--bkbg-disc-sub-line-height-t, var(--bkbg-disc-sub-line-height-d, 1.5)));
+        letter-spacing: var(--bkbg-disc-sub-letter-spacing-m, var(--bkbg-disc-sub-letter-spacing-t, var(--bkbg-disc-sub-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-disc-sub-word-spacing-m, var(--bkbg-disc-sub-word-spacing-t, var(--bkbg-disc-sub-word-spacing-d, normal)));
+    }
+}

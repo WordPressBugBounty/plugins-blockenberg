@@ -1,0 +1,237 @@
+/* === Gradient Border Card === */
+
+.bkbg-gbc-wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: var(--bkbg-gbc-max-width, 420px);
+    margin: 0 auto;
+    border-radius: var(--bkbg-gbc-radius, 20px);
+    transition: transform 0.3s ease;
+}
+
+.bkbg-gbc-wrap.bkbg-gbc-hover-scale:hover {
+    transform: scale(1.035);
+}
+
+/* Outer: the "border" layer */
+.bkbg-gbc-outer {
+    position: relative;
+    border-radius: var(--bkbg-gbc-radius, 20px);
+    padding: var(--bkbg-gbc-border-width, 2px);
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Spinning gradient pseudo-element */
+.bkbg-gbc-outer::before {
+    content: '';
+    position: absolute;
+    inset: -100%;
+    background: conic-gradient(var(--bkbg-gbc-c1, #7c3aed), var(--bkbg-gbc-c2, #ec4899), var(--bkbg-gbc-c3, #06b6d4), var(--bkbg-gbc-c4, #f59e0b), var(--bkbg-gbc-c1, #7c3aed));
+    border-radius: 0;
+    z-index: -1;
+    animation: bkbg-gbc-spin var(--bkbg-gbc-speed, 4s) linear infinite;
+}
+
+/* Shift mode — background-position animation */
+.bkbg-gbc-outer.bkbg-gbc-shift::before {
+    animation: bkbg-gbc-shift var(--bkbg-gbc-speed, 4s) linear infinite;
+    background: linear-gradient(135deg, var(--bkbg-gbc-c1, #7c3aed), var(--bkbg-gbc-c2, #ec4899), var(--bkbg-gbc-c3, #06b6d4), var(--bkbg-gbc-c4, #f59e0b));
+    background-size: 300% 300%;
+    inset: 0;
+    transform: none;
+}
+
+/* Pulse mode */
+.bkbg-gbc-outer.bkbg-gbc-pulse::before {
+    animation: bkbg-gbc-pulse var(--bkbg-gbc-speed, 4s) ease-in-out infinite;
+    inset: 0;
+    transform: none;
+}
+
+/* Static mode */
+.bkbg-gbc-outer.bkbg-gbc-static::before {
+    animation: none;
+    inset: 0;
+    transform: none;
+    background: linear-gradient(135deg, var(--bkbg-gbc-c1, #7c3aed), var(--bkbg-gbc-c2, #ec4899), var(--bkbg-gbc-c3, #06b6d4), var(--bkbg-gbc-c4, #f59e0b));
+}
+
+/* Glow — softer duplicate behind */
+.bkbg-gbc-outer::after {
+    content: '';
+    position: absolute;
+    inset: -100%;
+    background: conic-gradient(var(--bkbg-gbc-c1, #7c3aed), var(--bkbg-gbc-c2, #ec4899), var(--bkbg-gbc-c3, #06b6d4), var(--bkbg-gbc-c4, #f59e0b), var(--bkbg-gbc-c1, #7c3aed));
+    border-radius: 0;
+    z-index: -2;
+    animation: bkbg-gbc-spin var(--bkbg-gbc-speed, 4s) linear infinite;
+    filter: blur(var(--bkbg-gbc-glow-blur, 14px));
+    opacity: var(--bkbg-gbc-glow-opacity, 0.7);
+}
+
+.bkbg-gbc-outer.bkbg-gbc-shift::after,
+.bkbg-gbc-outer.bkbg-gbc-pulse::after,
+.bkbg-gbc-outer.bkbg-gbc-static::after {
+    animation: none;
+    inset: var(--bkbg-gbc-border-width, 2px);
+    transform: none;
+    background: linear-gradient(135deg, var(--bkbg-gbc-c1, #7c3aed), var(--bkbg-gbc-c2, #ec4899), var(--bkbg-gbc-c3, #06b6d4), var(--bkbg-gbc-c4, #f59e0b));
+}
+
+/* Pause on hover */
+.bkbg-gbc-pause-hover:hover .bkbg-gbc-outer::before,
+.bkbg-gbc-pause-hover:hover .bkbg-gbc-outer::after {
+    animation-play-state: paused;
+}
+
+/* Inner card content */
+.bkbg-gbc-inner {
+    position: relative;
+    z-index: 1;
+    border-radius: var(--bkbg-gbc-inner-radius, 18px);
+    background: var(--bkbg-gbc-card-bg, #0f172a);
+    padding: var(--bkbg-gbc-pad-v, 32px) var(--bkbg-gbc-pad-h, 28px);
+    text-align: var(--bkbg-gbc-text-align, left);
+    color: var(--bkbg-gbc-text-color, #e2e8f0);
+}
+
+/* Badge */
+.bkbg-gbc-badge {
+    display: inline-block;
+    background: var(--bkbg-gbc-badge-bg, #7c3aed);
+    color: var(--bkbg-gbc-badge-color, #fff);
+    border-radius: 50px;
+    padding: 3px 14px;
+    font-family: var(--bkbg-gbc-bg-font-family, inherit);
+    font-size: var(--bkbg-gbc-bg-font-size-d, 12px);
+    font-weight: var(--bkbg-gbc-bg-font-weight, 700);
+    font-style: var(--bkbg-gbc-bg-font-style, normal);
+    text-decoration: var(--bkbg-gbc-bg-text-decoration, none);
+    text-transform: var(--bkbg-gbc-bg-text-transform, uppercase);
+    line-height: var(--bkbg-gbc-bg-line-height-d, 1.4);
+    letter-spacing: var(--bkbg-gbc-bg-letter-spacing-d, 0.06em);
+    word-spacing: var(--bkbg-gbc-bg-word-spacing-d, normal);
+    margin-bottom: 14px;
+}
+
+/* Icon */
+.bkbg-gbc-icon {
+    font-size: var(--bkbg-gbc-icon-size, 36px);
+    color: var(--bkbg-gbc-icon-color, #a78bfa);
+    line-height: 1;
+    margin-bottom: 14px;
+}
+.bkbg-gbc-icon svg { width: 1em; height: 1em; fill: currentColor; }
+.bkbg-gbc-icon .dashicons { font-size: inherit; width: 1em; height: 1em; line-height: 1; }
+.bkbg-gbc-icon .bkbg-icon-img { width: 1em; height: 1em; object-fit: contain; }
+
+/* Title */
+.bkbg-gbc-title {
+    margin: 0 0 12px;
+    font-family: var(--bkbg-gbc-tt-font-family, inherit);
+    font-size: var(--bkbg-gbc-tt-font-size-d, 22px);
+    font-weight: var(--bkbg-gbc-tt-font-weight, 700);
+    font-style: var(--bkbg-gbc-tt-font-style, normal);
+    text-decoration: var(--bkbg-gbc-tt-text-decoration, none);
+    text-transform: var(--bkbg-gbc-tt-text-transform, none);
+    line-height: var(--bkbg-gbc-tt-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-gbc-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-gbc-tt-word-spacing-d, normal);
+    color: var(--bkbg-gbc-title-color, #fff);
+}
+
+/* Title heading specificity (0,2,0) beats editor theme heading rules */
+.bkbg-gbc-inner h2.bkbg-gbc-title,
+.bkbg-gbc-inner h3.bkbg-gbc-title,
+.bkbg-gbc-inner h4.bkbg-gbc-title,
+.bkbg-gbc-inner h5.bkbg-gbc-title {
+    font-family: var(--bkbg-gbc-tt-font-family, inherit);
+    font-size: var(--bkbg-gbc-tt-font-size-d, 22px);
+    font-weight: var(--bkbg-gbc-tt-font-weight, 700);
+    font-style: var(--bkbg-gbc-tt-font-style, normal);
+    text-decoration: var(--bkbg-gbc-tt-text-decoration, none);
+    text-transform: var(--bkbg-gbc-tt-text-transform, none);
+    line-height: var(--bkbg-gbc-tt-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-gbc-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-gbc-tt-word-spacing-d, normal);
+    color: var(--bkbg-gbc-title-color, #fff);
+    margin: 0 0 12px;
+}
+
+/* Body */
+.bkbg-gbc-desc {
+    margin: 0;
+    font-family: var(--bkbg-gbc-bd-font-family, inherit);
+    font-size: var(--bkbg-gbc-bd-font-size-d, 16px);
+    font-weight: var(--bkbg-gbc-bd-font-weight, 400);
+    font-style: var(--bkbg-gbc-bd-font-style, normal);
+    text-decoration: var(--bkbg-gbc-bd-text-decoration, none);
+    text-transform: var(--bkbg-gbc-bd-text-transform, none);
+    line-height: var(--bkbg-gbc-bd-line-height-d, 1.6);
+    letter-spacing: var(--bkbg-gbc-bd-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-gbc-bd-word-spacing-d, normal);
+    color: var(--bkbg-gbc-text-color, #e2e8f0);
+}
+
+/* Keyframes */
+@keyframes bkbg-gbc-spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes bkbg-gbc-shift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes bkbg-gbc-pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.45; }
+}
+
+/* Typography responsive – tablet */
+@media (max-width: 1024px) {
+    .bkbg-gbc-inner .bkbg-gbc-title {
+        font-size: var(--bkbg-gbc-tt-font-size-t, var(--bkbg-gbc-tt-font-size-d, 22px));
+        line-height: var(--bkbg-gbc-tt-line-height-t, var(--bkbg-gbc-tt-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-gbc-tt-letter-spacing-t, var(--bkbg-gbc-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-gbc-tt-word-spacing-t, var(--bkbg-gbc-tt-word-spacing-d, normal));
+    }
+    .bkbg-gbc-desc {
+        font-size: var(--bkbg-gbc-bd-font-size-t, var(--bkbg-gbc-bd-font-size-d, 16px));
+        line-height: var(--bkbg-gbc-bd-line-height-t, var(--bkbg-gbc-bd-line-height-d, 1.6));
+        letter-spacing: var(--bkbg-gbc-bd-letter-spacing-t, var(--bkbg-gbc-bd-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-gbc-bd-word-spacing-t, var(--bkbg-gbc-bd-word-spacing-d, normal));
+    }
+    .bkbg-gbc-badge {
+        font-size: var(--bkbg-gbc-bg-font-size-t, var(--bkbg-gbc-bg-font-size-d, 12px));
+        line-height: var(--bkbg-gbc-bg-line-height-t, var(--bkbg-gbc-bg-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-gbc-bg-letter-spacing-t, var(--bkbg-gbc-bg-letter-spacing-d, 0.06em));
+        word-spacing: var(--bkbg-gbc-bg-word-spacing-t, var(--bkbg-gbc-bg-word-spacing-d, normal));
+    }
+}
+
+/* Typography responsive – mobile */
+@media (max-width: 767px) {
+    .bkbg-gbc-inner .bkbg-gbc-title {
+        font-size: var(--bkbg-gbc-tt-font-size-m, var(--bkbg-gbc-tt-font-size-t, var(--bkbg-gbc-tt-font-size-d, 22px)));
+        line-height: var(--bkbg-gbc-tt-line-height-m, var(--bkbg-gbc-tt-line-height-t, var(--bkbg-gbc-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-gbc-tt-letter-spacing-m, var(--bkbg-gbc-tt-letter-spacing-t, var(--bkbg-gbc-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-gbc-tt-word-spacing-m, var(--bkbg-gbc-tt-word-spacing-t, var(--bkbg-gbc-tt-word-spacing-d, normal)));
+    }
+    .bkbg-gbc-desc {
+        font-size: var(--bkbg-gbc-bd-font-size-m, var(--bkbg-gbc-bd-font-size-t, var(--bkbg-gbc-bd-font-size-d, 16px)));
+        line-height: var(--bkbg-gbc-bd-line-height-m, var(--bkbg-gbc-bd-line-height-t, var(--bkbg-gbc-bd-line-height-d, 1.6)));
+        letter-spacing: var(--bkbg-gbc-bd-letter-spacing-m, var(--bkbg-gbc-bd-letter-spacing-t, var(--bkbg-gbc-bd-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-gbc-bd-word-spacing-m, var(--bkbg-gbc-bd-word-spacing-t, var(--bkbg-gbc-bd-word-spacing-d, normal)));
+    }
+    .bkbg-gbc-badge {
+        font-size: var(--bkbg-gbc-bg-font-size-m, var(--bkbg-gbc-bg-font-size-t, var(--bkbg-gbc-bg-font-size-d, 12px)));
+        line-height: var(--bkbg-gbc-bg-line-height-m, var(--bkbg-gbc-bg-line-height-t, var(--bkbg-gbc-bg-line-height-d, 1.4)));
+        letter-spacing: var(--bkbg-gbc-bg-letter-spacing-m, var(--bkbg-gbc-bg-letter-spacing-t, var(--bkbg-gbc-bg-letter-spacing-d, 0.06em)));
+        word-spacing: var(--bkbg-gbc-bg-word-spacing-m, var(--bkbg-gbc-bg-word-spacing-t, var(--bkbg-gbc-bg-word-spacing-d, normal)));
+    }
+}

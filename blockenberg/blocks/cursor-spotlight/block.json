@@ -1,0 +1,146 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/cursor-spotlight",
+    "version": "1.0.0",
+    "title": "Cursor Spotlight",
+    "category": "bkbg-effects",
+    "icon": "visibility",
+    "description": "A dark section with a radial spotlight that follows the cursor, dramatically revealing the content beneath.",
+    "keywords": [
+        "spotlight",
+        "cursor",
+        "mouse",
+        "reveal",
+        "dark",
+        "torch",
+        "interactive"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-cursor-spotlight-editor",
+    "style": "bkbg-cursor-spotlight-style",
+    "viewScript": "bkbg-cursor-spotlight-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Move your cursor to reveal"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Interactive spotlight effect — your cursor lights the way"
+        },
+        "tag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "spotlightSize": {
+            "type": "integer",
+            "default": 280
+        },
+        "spotlightBlur": {
+            "type": "integer",
+            "default": 40
+        },
+        "spotlightOpacity": {
+            "type": "number",
+            "default": 0.85
+        },
+        "dimColor": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "dimOpacity": {
+            "type": "number",
+            "default": 0.92
+        },
+        "spotColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "lightTint": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionHeight": {
+            "type": "integer",
+            "default": 500
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#0c0a1e"
+        },
+        "bgImage": {
+            "type": "string",
+            "default": ""
+        },
+        "bgImageId": {
+            "type": "integer",
+            "default": 0
+        },
+        "bgImageOpacity": {
+            "type": "number",
+            "default": 0.5
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#a78bfa"
+        },
+        "fontSize": {
+            "type": "integer",
+            "default": 48
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "800"
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "showHint": {
+            "type": "boolean",
+            "default": true
+        },
+        "hintText": {
+            "type": "string",
+            "default": "Move cursor to reveal"
+        },
+        "idleMode": {
+            "type": "string",
+            "default": "center"
+        },
+        "followSmooth": {
+            "type": "boolean",
+            "default": true
+        },
+        "borderRadius": {
+            "type": "integer",
+            "default": 16
+        },
+        "subtextSize": {
+            "type": "number",
+            "default": 18
+        },
+        "typoHeading": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtext": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

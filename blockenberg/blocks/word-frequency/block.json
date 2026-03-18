@@ -1,0 +1,164 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/word-frequency",
+    "version": "1.0.0",
+    "title": "Word Frequency",
+    "category": "bkbg-charts",
+    "icon": "chart-bar",
+    "description": "Ranked horizontal bar chart for word frequency, survey results, language rankings, or any comparative data set.",
+    "keywords": [
+        "word frequency",
+        "bar chart",
+        "ranking",
+        "horizontal bars",
+        "statistics"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-word-frequency-editor",
+    "style": "bkbg-word-frequency-style",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Most Popular Languages 2024"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPercent": {
+            "type": "boolean",
+            "default": false
+        },
+        "showRank": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "sortDesc": {
+            "type": "boolean",
+            "default": true
+        },
+        "barHeight": {
+            "type": "number",
+            "default": 34
+        },
+        "barGap": {
+            "type": "number",
+            "default": 8
+        },
+        "barRadius": {
+            "type": "number",
+            "default": 4
+        },
+        "labelWidth": {
+            "type": "number",
+            "default": 130
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "valueFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "valueTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "trackColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "words": {
+            "type": "array",
+            "default": [
+                {
+                    "word": "JavaScript",
+                    "count": 63,
+                    "color": "#f7df1e"
+                },
+                {
+                    "word": "Python",
+                    "count": 51,
+                    "color": "#3776ab"
+                },
+                {
+                    "word": "TypeScript",
+                    "count": 44,
+                    "color": "#3178c6"
+                },
+                {
+                    "word": "Rust",
+                    "count": 38,
+                    "color": "#ce422b"
+                },
+                {
+                    "word": "Go",
+                    "count": 33,
+                    "color": "#00acd7"
+                },
+                {
+                    "word": "Java",
+                    "count": 30,
+                    "color": "#f89820"
+                },
+                {
+                    "word": "C#",
+                    "count": 27,
+                    "color": "#178600"
+                },
+                {
+                    "word": "PHP",
+                    "count": 22,
+                    "color": "#8892be"
+                },
+                {
+                    "word": "C++",
+                    "count": 19,
+                    "color": "#f34b7d"
+                },
+                {
+                    "word": "Kotlin",
+                    "count": 14,
+                    "color": "#7f52ff"
+                }
+            ]
+        }
+    }
+}

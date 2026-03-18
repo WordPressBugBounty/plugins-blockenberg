@@ -1,0 +1,159 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/binary-text-converter",
+    "title": "Binary & Text Converter",
+    "category": "bkbg-calculators",
+    "description": "Convert text to binary, hexadecimal, and octal — and back. Includes an interactive ASCII table.",
+    "keywords": [
+        "binary",
+        "hex",
+        "hexadecimal",
+        "octal",
+        "ascii",
+        "encoder",
+        "decoder",
+        "converter"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-binary-text-converter-editor",
+    "style": "bkbg-binary-text-converter-style",
+    "viewScript": "bkbg-binary-text-converter-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "title": {
+            "type": "string",
+            "default": "Binary & Text Converter"
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Encode and decode between text, binary, hex, and octal"
+        },
+        "defaultTab": {
+            "type": "string",
+            "default": "binary"
+        },
+        "defaultMode": {
+            "type": "string",
+            "default": "encode"
+        },
+        "showAsciiTable": {
+            "type": "boolean",
+            "default": true
+        },
+        "groupAscii": {
+            "type": "number",
+            "default": 8
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "binaryColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "hexColor": {
+            "type": "string",
+            "default": "#0ea5e9"
+        },
+        "octalColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "asciiColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "inputBorder": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "outputBg": {
+            "type": "string",
+            "default": "#f0f9ff"
+        },
+        "outputBorder": {
+            "type": "string",
+            "default": "#bae6fd"
+        },
+        "errorColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "tabRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 700
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "subtitleFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "titleTypo": { "type": "object", "default": {} },
+        "subtitleTypo": { "type": "object", "default": {} }
+    }
+}

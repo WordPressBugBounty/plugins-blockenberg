@@ -1,0 +1,167 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/objection-handler",
+    "title": "Objection Handler",
+    "description": "Address common sales objections with paired concern/response cards — great for landing pages, pricing pages, and sales copy.",
+    "category": "bkbg-marketing",
+    "icon": "format-chat",
+    "keywords": [
+        "objection",
+        "faq",
+        "sales",
+        "concerns",
+        "response",
+        "landing page",
+        "conversion"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-objection-handler-editor",
+    "editorStyle": "bkbg-objection-handler-style",
+    "style": "bkbg-objection-handler-style",
+    "viewScript": "bkbg-objection-handler-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "headline": {
+            "type": "string",
+            "default": "Still have questions?"
+        },
+        "subheadline": {
+            "type": "string",
+            "default": "We hear these concerns all the time. Here's what you should know."
+        },
+        "showHeadline": {
+            "type": "boolean",
+            "default": true
+        },
+        "objections": {
+            "type": "array",
+            "default": [
+                {
+                    "objection": "It's too expensive for my budget.",
+                    "response": "We offer flexible monthly plans starting at $9/month, and you can cancel anytime. Most users see positive ROI within the first 30 days — or we'll refund you, no questions asked.",
+                    "icon": "💰"
+                },
+                {
+                    "objection": "I'm not sure it will work for my use case.",
+                    "response": "We support over 50 integrations and serve customers in 40+ industries. Start a free 14-day trial — no credit card required — and see first-hand how it fits your workflow.",
+                    "icon": "🤔"
+                },
+                {
+                    "objection": "I don't have time to learn a new tool.",
+                    "response": "Most users are up and running in under 30 minutes. We provide onboarding videos, live chat support, and a dedicated success manager for all plans above Starter.",
+                    "icon": "⏱️"
+                },
+                {
+                    "objection": "What if I need to cancel?",
+                    "response": "Cancel anytime in two clicks — no phone calls, no cancellation fees, no questions. Your data is always yours and we'll export it for you on request.",
+                    "icon": "❌"
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "stack"
+        },
+        "style": {
+            "type": "string",
+            "default": "split"
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "objectionLabel": {
+            "type": "string",
+            "default": "Concern"
+        },
+        "responseLabel": {
+            "type": "string",
+            "default": "Our Answer"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "gap": {
+            "type": "number",
+            "default": 16
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headlineColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "objectionBg": {
+            "type": "string",
+            "default": "#fff7ed"
+        },
+        "objectionColor": {
+            "type": "string",
+            "default": "#9a3412"
+        },
+        "objectionBorderColor": {
+            "type": "string",
+            "default": "#fed7aa"
+        },
+        "responseBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "responseColor": {
+            "type": "string",
+            "default": "#166534"
+        },
+        "responseBorderColor": {
+            "type": "string",
+            "default": "#bbf7d0"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "iconBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "headlineFontSize": {
+            "type": "number",
+            "default": 28
+        },
+        "headlineFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "bodyFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.6
+        },
+        "headlineTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

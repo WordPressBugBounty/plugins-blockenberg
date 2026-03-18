@@ -1,0 +1,263 @@
+/* =====================================================
+   Code Tabs – bkbg-ctabs-*
+   ===================================================== */
+
+.bkbg-ctabs-wrap {
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+/* ---- Browser chrome bar ---- */
+.bkbg-ctabs-chrome {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.bkbg-ctabs-dots {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.bkbg-ctabs-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+/* ---- Tab bar ---- */
+.bkbg-ctabs-tabbar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.15) transparent;
+    padding-bottom: 2px;
+}
+
+.bkbg-ctabs-tabbar::-webkit-scrollbar {
+    height: 4px;
+}
+
+.bkbg-ctabs-tabbar::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: rgba(255,255,255,0.15);
+}
+
+/* Tab alignment */
+.bkbg-ctabs-tabbar.is-center {
+    justify-content: center;
+}
+
+.bkbg-ctabs-tabbar.is-right {
+    justify-content: flex-end;
+}
+
+/* ---- Individual tab ---- */
+.bkbg-ctabs-tab {
+    padding: 5px 14px;
+    border: none;
+    cursor: pointer;
+    font-family: ui-monospace, SFMono-Regular, "Fira Code", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    line-height: 1.4;
+    outline: none;
+    flex-shrink: 0;
+}
+
+/* Pill style */
+.bkbg-ctabs-wrap[data-tab-style="pills"] .bkbg-ctabs-tab {
+    border-radius: 20px;
+}
+
+/* Button style */
+.bkbg-ctabs-wrap[data-tab-style="buttons"] .bkbg-ctabs-tab {
+    border-radius: 6px;
+}
+
+/* Underline style */
+.bkbg-ctabs-wrap[data-tab-style="underline"] .bkbg-ctabs-tab {
+    border-radius: 0;
+    border-bottom: 2px solid transparent;
+    background: transparent !important;
+    padding-bottom: 8px;
+}
+
+.bkbg-ctabs-wrap[data-tab-style="underline"] .bkbg-ctabs-tab.is-active {
+    background: transparent !important;
+}
+
+.bkbg-ctabs-tab:focus-visible {
+    outline: 2px solid rgba(99,102,241,0.6);
+    outline-offset: 2px;
+}
+
+/* ---- Filename / lang badge ---- */
+.bkbg-ctabs-filename {
+    margin-left: auto;
+    font-size: 11px;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    opacity: 0.5;
+    flex-shrink: 0;
+}
+
+.bkbg-ctabs-lang {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.08);
+}
+
+/* ---- Code body ---- */
+.bkbg-ctabs-body {
+    overflow-x: auto;
+    position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.12) transparent;
+}
+
+.bkbg-ctabs-body::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+
+.bkbg-ctabs-body::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: rgba(255,255,255,0.12);
+}
+
+.bkbg-ctabs-inner {
+    padding: 16px;
+    font-family: ui-monospace, SFMono-Regular, "Fira Code", monospace;
+}
+
+/* ---- Code panel (one per tab) ---- */
+.bkbg-ctabs-panel {
+    display: none;
+    min-width: max-content;
+}
+
+.bkbg-ctabs-panel.is-active {
+    display: block;
+}
+
+/* ---- Line row ---- */
+.bkbg-ctabs-line {
+    display: flex;
+    align-items: flex-start;
+}
+
+.bkbg-ctabs-linenum {
+    user-select: none;
+    min-width: 40px;
+    padding-right: 16px;
+    text-align: right;
+    flex-shrink: 0;
+    opacity: 0.5;
+}
+
+.bkbg-ctabs-code {
+    flex: 1;
+    white-space: pre;
+}
+
+/* ---- Copy button ---- */
+.bkbg-ctabs-copy {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.15s;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.bkbg-ctabs-body:hover .bkbg-ctabs-copy,
+.bkbg-ctabs-copy:focus {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.bkbg-ctabs-copy.is-copied {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* =====================================================
+   Light theme overrides (via .bkbg-ctabs-wrap.theme-light)
+   ===================================================== */
+.bkbg-ctabs-wrap.theme-light .bkbg-ctabs-code,
+.bkbg-ctabs-wrap.theme-github-light .bkbg-ctabs-code,
+.bkbg-ctabs-wrap.theme-solarized-light .bkbg-ctabs-code {
+    color: #1f2328;
+}
+
+/* =====================================================
+   Responsive
+   ===================================================== */
+@media (max-width: 600px) {
+    .bkbg-ctabs-filename {
+        display: none;
+    }
+}
+
+/* =====================================================
+   Typography — CSS-var driven
+   ===================================================== */
+.bkbg-ctabs-inner {
+    font-size: var(--bkbg-ctabs-cd-font-size-d, 13px);
+    line-height: var(--bkbg-ctabs-cd-line-height-d, 1.65);
+    font-family: var(--bkbg-ctabs-cd-font-family, ui-monospace, SFMono-Regular, "Fira Code", monospace);
+    font-weight: var(--bkbg-ctabs-cd-font-weight, 400);
+    font-style: var(--bkbg-ctabs-cd-font-style, normal);
+    text-transform: var(--bkbg-ctabs-cd-text-transform, none);
+    text-decoration: var(--bkbg-ctabs-cd-text-decoration, none);
+    letter-spacing: var(--bkbg-ctabs-cd-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-ctabs-cd-word-spacing-d, normal);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-ctabs-inner {
+        font-size: var(--bkbg-ctabs-cd-font-size-t, var(--bkbg-ctabs-cd-font-size-d, 13px));
+        line-height: var(--bkbg-ctabs-cd-line-height-t, var(--bkbg-ctabs-cd-line-height-d, 1.65));
+        letter-spacing: var(--bkbg-ctabs-cd-letter-spacing-t, var(--bkbg-ctabs-cd-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-ctabs-cd-word-spacing-t, var(--bkbg-ctabs-cd-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-ctabs-inner {
+        font-size: var(--bkbg-ctabs-cd-font-size-m, var(--bkbg-ctabs-cd-font-size-t, var(--bkbg-ctabs-cd-font-size-d, 13px)));
+        line-height: var(--bkbg-ctabs-cd-line-height-m, var(--bkbg-ctabs-cd-line-height-t, var(--bkbg-ctabs-cd-line-height-d, 1.65)));
+        letter-spacing: var(--bkbg-ctabs-cd-letter-spacing-m, var(--bkbg-ctabs-cd-letter-spacing-t, var(--bkbg-ctabs-cd-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-ctabs-cd-word-spacing-m, var(--bkbg-ctabs-cd-word-spacing-t, var(--bkbg-ctabs-cd-word-spacing-d, normal)));
+    }
+}
+
+/* =====================================================
+   Editor preview – inside Gutenberg
+   ===================================================== */
+.wp-block-blockenberg-code-tabs .bkbg-ctabs-app {
+    display: none;
+}

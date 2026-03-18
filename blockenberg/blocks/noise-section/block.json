@@ -1,0 +1,179 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/noise-section",
+    "title": "Noise / Grain Section",
+    "description": "Hero or section block with a cinematic animated film-grain noise overlay rendered via Canvas. Supports solid, gradient, and image backgrounds with full heading, subtext, and CTA controls.",
+    "category": "bkbg-effects",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-noise-section-editor",
+    "style": "bkbg-noise-section-style",
+    "viewScript": "bkbg-noise-section-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Make Noise."
+        },
+        "subtext": {
+            "type": "string",
+            "default": "The gritty edge your brand deserves. Animated grain texture, zero compromise."
+        },
+        "tag": {
+            "type": "string",
+            "default": "h1"
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Get Started"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaLabel2": {
+            "type": "string",
+            "default": ""
+        },
+        "ctaUrl2": {
+            "type": "string",
+            "default": "#"
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCta2": {
+            "type": "boolean",
+            "default": false
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "sectionHeight": {
+            "type": "number",
+            "default": 600
+        },
+        "bgType": {
+            "type": "string",
+            "default": "gradient"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#0a0a0f"
+        },
+        "bgColor2": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "bgAngle": {
+            "type": "number",
+            "default": 135
+        },
+        "bgImage": {
+            "type": "string",
+            "default": ""
+        },
+        "bgImageId": {
+            "type": "number",
+            "default": 0
+        },
+        "bgImageOpacity": {
+            "type": "number",
+            "default": 0.5
+        },
+        "noiseOpacity": {
+            "type": "number",
+            "default": 0.3
+        },
+        "noiseTint": {
+            "type": "string",
+            "default": "dark"
+        },
+        "noiseFps": {
+            "type": "number",
+            "default": 12
+        },
+        "noiseScale": {
+            "type": "number",
+            "default": 1
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#0a0a0f"
+        },
+        "ctaBg2": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "ctaColor2": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "ctaBorder2": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.4)"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 72
+        },
+        "fontWeight": {
+            "type": "number",
+            "default": 800
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.05
+        },
+        "letterSpacing": {
+            "type": "number",
+            "default": -2
+        },
+        "subtextSize": {
+            "type": "number",
+            "default": 20
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 800
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 100
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 100
+        }
+    }
+}

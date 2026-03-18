@@ -1,0 +1,230 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/week-schedule",
+    "title": "Weekly Schedule",
+    "category": "bkbg-blog",
+    "icon": "calendar",
+    "description": "Visual weekly schedule grid with Mon–Sun columns and color-coded time-slot events. Ideal for fitness classes, teachers, and consultants.",
+    "keywords": [
+        "schedule",
+        "timetable",
+        "calendar",
+        "weekly",
+        "classes",
+        "fitness",
+        "agenda",
+        "planner"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-week-schedule-editor",
+    "editorStyle": "bkbg-week-schedule-style",
+    "style": "bkbg-week-schedule-style",
+    "viewScript": "bkbg-week-schedule-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "events": {
+            "type": "array",
+            "default": [
+                {
+                    "day": 0,
+                    "startHour": 9,
+                    "startMinute": 0,
+                    "duration": 1,
+                    "title": "Morning Yoga",
+                    "instructor": "Emma T.",
+                    "location": "Studio A",
+                    "color": "#6366f1"
+                },
+                {
+                    "day": 1,
+                    "startHour": 10,
+                    "startMinute": 0,
+                    "duration": 1.5,
+                    "title": "HIIT Training",
+                    "instructor": "Mike R.",
+                    "location": "Gym Floor",
+                    "color": "#ef4444"
+                },
+                {
+                    "day": 2,
+                    "startHour": 9,
+                    "startMinute": 0,
+                    "duration": 1,
+                    "title": "Morning Yoga",
+                    "instructor": "Emma T.",
+                    "location": "Studio A",
+                    "color": "#6366f1"
+                },
+                {
+                    "day": 3,
+                    "startHour": 11,
+                    "startMinute": 0,
+                    "duration": 2,
+                    "title": "Pilates",
+                    "instructor": "Sara L.",
+                    "location": "Studio B",
+                    "color": "#0ea5e9"
+                },
+                {
+                    "day": 4,
+                    "startHour": 10,
+                    "startMinute": 0,
+                    "duration": 1.5,
+                    "title": "HIIT Training",
+                    "instructor": "Mike R.",
+                    "location": "Gym Floor",
+                    "color": "#ef4444"
+                },
+                {
+                    "day": 5,
+                    "startHour": 9,
+                    "startMinute": 0,
+                    "duration": 1,
+                    "title": "Weekend Yoga",
+                    "instructor": "Emma T.",
+                    "location": "Studio A",
+                    "color": "#22c55e"
+                },
+                {
+                    "day": 0,
+                    "startHour": 18,
+                    "startMinute": 0,
+                    "duration": 1,
+                    "title": "Evening Stretch",
+                    "instructor": "Sara L.",
+                    "location": "Studio B",
+                    "color": "#f59e0b"
+                },
+                {
+                    "day": 2,
+                    "startHour": 18,
+                    "startMinute": 0,
+                    "duration": 1,
+                    "title": "Evening Stretch",
+                    "instructor": "Sara L.",
+                    "location": "Studio B",
+                    "color": "#f59e0b"
+                },
+                {
+                    "day": 4,
+                    "startHour": 18,
+                    "startMinute": 30,
+                    "duration": 1,
+                    "title": "Spin Class",
+                    "instructor": "James K.",
+                    "location": "Cycling Room",
+                    "color": "#8b5cf6"
+                }
+            ]
+        },
+        "dayLabels": {
+            "type": "array",
+            "default": [
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat",
+                "Sun"
+            ]
+        },
+        "startHour": {
+            "type": "number",
+            "default": 8
+        },
+        "endHour": {
+            "type": "number",
+            "default": 20
+        },
+        "cellHeight": {
+            "type": "number",
+            "default": 60
+        },
+        "showTime": {
+            "type": "boolean",
+            "default": true
+        },
+        "showInstructor": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLocation": {
+            "type": "boolean",
+            "default": false
+        },
+        "showWeekend": {
+            "type": "boolean",
+            "default": true
+        },
+        "timeFormat": {
+            "type": "string",
+            "default": "12h"
+        },
+        "title": {
+            "type": "string",
+            "default": "Class Schedule"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "timeBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "timeColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "eventRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "eventTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

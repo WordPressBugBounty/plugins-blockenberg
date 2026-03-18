@@ -1,0 +1,288 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/tutorial-card",
+    "title": "Tutorial Card",
+    "description": "A structured tutorial block with steps, prerequisites, materials, learning outcomes, and progress tracking.",
+    "category": "bkbg-blog",
+    "icon": "welcome-learn-more",
+    "keywords": [
+        "tutorial",
+        "guide",
+        "steps",
+        "how-to",
+        "lesson",
+        "course"
+    ],
+    "editorScript": "bkbg-tutorial-card-editor",
+    "editorStyle": "bkbg-tutorial-card-style",
+    "style": "bkbg-tutorial-card-style",
+    "viewScript": "bkbg-tutorial-card-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "tutorialTitle": {
+            "type": "string",
+            "default": "Getting Started with React Hooks"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "A hands-on guide for intermediate developers"
+        },
+        "author": {
+            "type": "string",
+            "default": "Alex Johnson"
+        },
+        "showAuthor": {
+            "type": "boolean",
+            "default": true
+        },
+        "difficulty": {
+            "type": "string",
+            "default": "intermediate"
+        },
+        "duration": {
+            "type": "string",
+            "default": "45 minutes"
+        },
+        "showDuration": {
+            "type": "boolean",
+            "default": true
+        },
+        "completionRate": {
+            "type": "number",
+            "default": 0
+        },
+        "showProgress": {
+            "type": "boolean",
+            "default": false
+        },
+        "layout": {
+            "type": "string",
+            "default": "vertical"
+        },
+        "showStepDurations": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTips": {
+            "type": "boolean",
+            "default": true
+        },
+        "prerequisites": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "Basic JavaScript (variables, functions, arrays)"
+                },
+                {
+                    "text": "Familiarity with React class components"
+                },
+                {
+                    "text": "Node.js installed (v16+)"
+                }
+            ]
+        },
+        "showPrerequisites": {
+            "type": "boolean",
+            "default": true
+        },
+        "prerequisitesLabel": {
+            "type": "string",
+            "default": "Prerequisites"
+        },
+        "steps": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Set Up Your Project",
+                    "content": "Create a new React app using Create React App or Vite. Make sure you're using React 16.8 or higher to access Hooks.",
+                    "duration": "5 min",
+                    "tip": "Use `npm create vite@latest my-app -- --template react` for a faster setup."
+                },
+                {
+                    "title": "Your First useState Hook",
+                    "content": "Replace your class component's `this.state` with the `useState` hook. Call `const [count, setCount] = useState(0)` at the top of your function component.",
+                    "duration": "10 min",
+                    "tip": "Hooks must be called at the top level of your component — never inside loops or conditions."
+                },
+                {
+                    "title": "Handle Side Effects with useEffect",
+                    "content": "Move your `componentDidMount` and `componentDidUpdate` logic into `useEffect`. Return a cleanup function to replicate `componentWillUnmount`.",
+                    "duration": "15 min",
+                    "tip": "Pass an empty dependency array `[]` to run the effect only once on mount."
+                },
+                {
+                    "title": "Build a Custom Hook",
+                    "content": "Extract reusable stateful logic into a function prefixed with `use`. Custom hooks let you share logic across components without changing the component hierarchy.",
+                    "duration": "10 min",
+                    "tip": "Name custom hooks starting with `use` so React knows to apply the rules of Hooks."
+                },
+                {
+                    "title": "Test Your Hooks",
+                    "content": "Use React Testing Library and `renderHook` from `@testing-library/react-hooks` to unit-test your custom hooks in isolation.",
+                    "duration": "5 min",
+                    "tip": ""
+                }
+            ]
+        },
+        "showSteps": {
+            "type": "boolean",
+            "default": true
+        },
+        "stepsLabel": {
+            "type": "string",
+            "default": "Steps"
+        },
+        "materials": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "Code editor (VS Code recommended)"
+                },
+                {
+                    "text": "Node.js v16+ and npm"
+                },
+                {
+                    "text": "Basic React project or sandbox"
+                }
+            ]
+        },
+        "showMaterials": {
+            "type": "boolean",
+            "default": true
+        },
+        "materialsLabel": {
+            "type": "string",
+            "default": "What you'll need"
+        },
+        "outcomes": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "Understand the motivation behind React Hooks"
+                },
+                {
+                    "text": "Use useState and useEffect confidently"
+                },
+                {
+                    "text": "Build reusable custom hooks"
+                },
+                {
+                    "text": "Migrate class components to functional components"
+                }
+            ]
+        },
+        "showOutcomes": {
+            "type": "boolean",
+            "default": true
+        },
+        "outcomesLabel": {
+            "type": "string",
+            "default": "What you'll learn"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "stepNumberBg": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "stepNumberColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "stepBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "stepTipBg": {
+            "type": "string",
+            "default": "#fffbeb"
+        },
+        "stepTipColor": {
+            "type": "string",
+            "default": "#92400e"
+        },
+        "stepTipBorderColor": {
+            "type": "string",
+            "default": "#fcd34d"
+        },
+        "prerequisiteBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "prerequisiteColor": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "materialBg": {
+            "type": "string",
+            "default": "#f0f9ff"
+        },
+        "materialColor": {
+            "type": "string",
+            "default": "#0c4a6e"
+        },
+        "outcomeBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "outcomeColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "progressBg": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "progressFill": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 11
+        },
+        "authorSize": {
+            "type": "number",
+            "default": 12
+        }
+    }
+}

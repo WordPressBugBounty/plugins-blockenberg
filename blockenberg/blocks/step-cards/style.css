@@ -1,0 +1,300 @@
+/* ============================================================
+   Step Cards — style.css
+   Prefix: bkbg-sc-
+   ============================================================ */
+
+.bkbg-sc-wrap {
+    box-sizing: border-box;
+    width: 100%;
+    padding: var(--bkbg-sc-pt, 0px) 0 var(--bkbg-sc-pb, 0px);
+}
+
+/* ============================================================
+   Layout: Horizontal (default flex row)
+   ============================================================ */
+.bkbg-sc-layout--horizontal .bkbg-sc-steps {
+    display: grid;
+    grid-template-columns: repeat(var(--bkbg-sc-cols, 4), 1fr);
+    gap: var(--bkbg-sc-gap, 24px);
+}
+
+/* ============================================================
+   Layout: Grid (wrapping grid)
+   ============================================================ */
+.bkbg-sc-layout--grid .bkbg-sc-steps {
+    display: grid;
+    grid-template-columns: repeat(var(--bkbg-sc-cols, 4), 1fr);
+    gap: var(--bkbg-sc-gap, 24px);
+}
+
+/* ============================================================
+   Layout: Vertical stack
+   ============================================================ */
+.bkbg-sc-layout--vertical .bkbg-sc-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.bkbg-sc-layout--vertical .bkbg-sc-step {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 0 24px;
+}
+
+.bkbg-sc-layout--vertical .bkbg-sc-step-header {
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+.bkbg-sc-layout--vertical .bkbg-sc-connector {
+    width: 2px;
+    height: 100%;
+    min-height: 32px;
+    background: var(--bkbg-sc-connector, #e2e8f0);
+    flex: 1;
+    margin: 4px auto 0;
+}
+
+.bkbg-sc-layout--vertical .bkbg-sc-step-content {
+    padding-bottom: 32px;
+    grid-column: 2;
+}
+
+/* ============================================================
+   Step base
+   ============================================================ */
+.bkbg-sc-step {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+}
+
+.bkbg-sc-step-header {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    position: relative;
+}
+
+/* Connector line (horizontal between steps) */
+.bkbg-sc-connector {
+    flex: 1;
+    height: 2px;
+    background: var(--bkbg-sc-connector, #e2e8f0);
+    position: relative;
+    margin: 0 8px;
+}
+.bkbg-sc-connector::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0; height: 0;
+    border-left: 6px solid var(--bkbg-sc-connector, #e2e8f0);
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+
+/* ============================================================
+   Step number — style variants
+   ============================================================ */
+.bkbg-sc-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: var(--bkbg-sc-num-sz, 44px);
+    height: var(--bkbg-sc-num-sz, 44px);
+    font-weight: 900;
+    line-height: 1;
+    transition: transform .2s;
+}
+.bkbg-sc-step:hover .bkbg-sc-num { transform: scale(1.05); }
+
+/* circle filled */
+.bkbg-sc-num--circle {
+    border-radius: 50%;
+    background: var(--bkbg-sc-num-bg, #6c3fb5);
+    color: var(--bkbg-sc-num-c, #ffffff);
+    font-size: calc(var(--bkbg-sc-num-sz, 44px) * .4);
+}
+
+/* circle outline */
+.bkbg-sc-num--circle-outline {
+    border-radius: 50%;
+    border: 2px solid var(--bkbg-sc-num-bg, #6c3fb5);
+    color: var(--bkbg-sc-num-bg, #6c3fb5);
+    background: transparent;
+    font-size: calc(var(--bkbg-sc-num-sz, 44px) * .4);
+}
+
+/* square */
+.bkbg-sc-num--square {
+    border-radius: 10px;
+    background: var(--bkbg-sc-num-bg, #6c3fb5);
+    color: var(--bkbg-sc-num-c, #ffffff);
+    font-size: calc(var(--bkbg-sc-num-sz, 44px) * .4);
+}
+
+/* large background number */
+.bkbg-sc-num--large-bg {
+    width: auto;
+    height: auto;
+    background: transparent;
+    color: color-mix(in srgb, var(--bkbg-sc-num-bg, #6c3fb5) 12%, transparent);
+    font-size: calc(var(--bkbg-sc-num-sz, 44px) * 1.8);
+    font-weight: 900;
+    letter-spacing: -.06em;
+    line-height: .8;
+}
+
+/* Icon in number circle */
+.bkbg-sc-num-icon {
+    font-size: var(--bkbg-sc-icon-sz, 22px);
+    color: inherit;
+    width: var(--bkbg-sc-icon-sz, 22px);
+    height: var(--bkbg-sc-icon-sz, 22px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bkbg-sc-num-digit {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    line-height: 1;
+}
+
+/* ============================================================
+   Step content
+   ============================================================ */
+.bkbg-sc-step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.bkbg-sc-step-content h3.bkbg-sc-title {
+    margin: 0;
+    font-family: var(--bkbg-sc-tt-font-family, inherit);
+    font-size: var(--bkbg-sc-tt-font-size-d, var(--bkbg-sc-title-sz, 18px));
+    font-weight: var(--bkbg-sc-tt-font-weight, var(--bkbg-sc-title-w, 700));
+    font-style: var(--bkbg-sc-tt-font-style, normal);
+    text-decoration: var(--bkbg-sc-tt-text-decoration, none);
+    text-transform: var(--bkbg-sc-tt-text-transform, none);
+    line-height: var(--bkbg-sc-tt-line-height-d, var(--bkbg-sc-title-lh, 1.3));
+    letter-spacing: var(--bkbg-sc-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-sc-tt-word-spacing-d, normal);
+    color: var(--bkbg-sc-title-c, #0f172a);
+}
+
+.bkbg-sc-body {
+    margin: 0;
+    font-family: var(--bkbg-sc-bd-font-family, inherit);
+    font-size: var(--bkbg-sc-bd-font-size-d, var(--bkbg-sc-body-sz, 14px));
+    font-weight: var(--bkbg-sc-bd-font-weight, 400);
+    font-style: var(--bkbg-sc-bd-font-style, normal);
+    text-decoration: var(--bkbg-sc-bd-text-decoration, none);
+    text-transform: var(--bkbg-sc-bd-text-transform, none);
+    line-height: var(--bkbg-sc-bd-line-height-d, var(--bkbg-sc-body-lh, 1.65));
+    letter-spacing: var(--bkbg-sc-bd-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-sc-bd-word-spacing-d, normal);
+    color: var(--bkbg-sc-body-c, #64748b);
+}
+
+/* ── Responsive Typography ── */
+@media (max-width: 1024px) {
+    .bkbg-sc-step-content h3.bkbg-sc-title {
+        font-size: var(--bkbg-sc-tt-font-size-t, var(--bkbg-sc-tt-font-size-d, var(--bkbg-sc-title-sz, 18px)));
+        line-height: var(--bkbg-sc-tt-line-height-t, var(--bkbg-sc-tt-line-height-d, var(--bkbg-sc-title-lh, 1.3)));
+        letter-spacing: var(--bkbg-sc-tt-letter-spacing-t, var(--bkbg-sc-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-sc-tt-word-spacing-t, var(--bkbg-sc-tt-word-spacing-d, normal));
+    }
+    .bkbg-sc-body {
+        font-size: var(--bkbg-sc-bd-font-size-t, var(--bkbg-sc-bd-font-size-d, var(--bkbg-sc-body-sz, 14px)));
+        line-height: var(--bkbg-sc-bd-line-height-t, var(--bkbg-sc-bd-line-height-d, var(--bkbg-sc-body-lh, 1.65)));
+        letter-spacing: var(--bkbg-sc-bd-letter-spacing-t, var(--bkbg-sc-bd-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-sc-bd-word-spacing-t, var(--bkbg-sc-bd-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-sc-step-content h3.bkbg-sc-title {
+        font-size: var(--bkbg-sc-tt-font-size-m, var(--bkbg-sc-tt-font-size-t, var(--bkbg-sc-tt-font-size-d, var(--bkbg-sc-title-sz, 18px))));
+        line-height: var(--bkbg-sc-tt-line-height-m, var(--bkbg-sc-tt-line-height-t, var(--bkbg-sc-tt-line-height-d, var(--bkbg-sc-title-lh, 1.3))));
+        letter-spacing: var(--bkbg-sc-tt-letter-spacing-m, var(--bkbg-sc-tt-letter-spacing-t, var(--bkbg-sc-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-sc-tt-word-spacing-m, var(--bkbg-sc-tt-word-spacing-t, var(--bkbg-sc-tt-word-spacing-d, normal)));
+    }
+    .bkbg-sc-body {
+        font-size: var(--bkbg-sc-bd-font-size-m, var(--bkbg-sc-bd-font-size-t, var(--bkbg-sc-bd-font-size-d, var(--bkbg-sc-body-sz, 14px))));
+        line-height: var(--bkbg-sc-bd-line-height-m, var(--bkbg-sc-bd-line-height-t, var(--bkbg-sc-bd-line-height-d, var(--bkbg-sc-body-lh, 1.65))));
+        letter-spacing: var(--bkbg-sc-bd-letter-spacing-m, var(--bkbg-sc-bd-letter-spacing-t, var(--bkbg-sc-bd-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-sc-bd-word-spacing-m, var(--bkbg-sc-bd-word-spacing-t, var(--bkbg-sc-bd-word-spacing-d, normal)));
+    }
+}
+
+/* ============================================================
+   Card Style Variants
+   ============================================================ */
+
+/* card (default) */
+.bkbg-sc-card-style--card {
+    background: var(--bkbg-sc-card-bg, #ffffff);
+    border-radius: var(--bkbg-sc-card-r, 16px);
+    padding: var(--bkbg-sc-card-p, 28px);
+    box-shadow: 0 2px 8px rgba(0,0,0,.06), 0 0 0 1px rgba(0,0,0,.04);
+    transition: box-shadow .18s, transform .18s;
+}
+.bkbg-sc-card-style--card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(0,0,0,.09);
+}
+
+/* bordered */
+.bkbg-sc-card-style--bordered {
+    border: 1px solid var(--bkbg-sc-card-border, #e2e8f0);
+    border-radius: var(--bkbg-sc-card-r, 16px);
+    padding: var(--bkbg-sc-card-p, 28px);
+    background: var(--bkbg-sc-card-bg, #ffffff);
+    transition: border-color .18s;
+}
+.bkbg-sc-card-style--bordered:hover { border-color: var(--bkbg-sc-accent, #6c3fb5); }
+
+/* flat */
+.bkbg-sc-card-style--flat {
+    padding: var(--bkbg-sc-card-p, 28px) 0;
+}
+
+/* ghost */
+.bkbg-sc-card-style--ghost {
+    background: color-mix(in srgb, var(--bkbg-sc-num-bg, #6c3fb5) 5%, transparent);
+    border-radius: var(--bkbg-sc-card-r, 16px);
+    padding: var(--bkbg-sc-card-p, 28px);
+    border: 1px dashed color-mix(in srgb, var(--bkbg-sc-num-bg, #6c3fb5) 30%, transparent);
+    transition: background .18s;
+}
+.bkbg-sc-card-style--ghost:hover { background: color-mix(in srgb, var(--bkbg-sc-num-bg, #6c3fb5) 10%, transparent); }
+
+/* Inspector helpers */
+.bkbg-sc-step-ctrl { border-bottom: 1px solid #e2e8f0; padding-bottom: 12px; margin-bottom: 12px; }
+.bkbg-sc-step-head { display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 4px 0; }
+.bkbg-sc-step-num { background: var(--bkbg-sc-num-bg, #6c3fb5); color: #fff; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; flex-shrink: 0; }
+.bkbg-sc-step-actions { display: flex; gap: 4px; margin-top: 8px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .bkbg-sc-layout--horizontal .bkbg-sc-steps,
+    .bkbg-sc-layout--grid .bkbg-sc-steps { grid-template-columns: repeat(2, 1fr); }
+    .bkbg-sc-connector { display: none; }
+}
+@media (max-width: 520px) {
+    .bkbg-sc-layout--horizontal .bkbg-sc-steps,
+    .bkbg-sc-layout--grid .bkbg-sc-steps { grid-template-columns: 1fr; }
+    .bkbg-sc-layout--vertical .bkbg-sc-step { grid-template-columns: 48px 1fr; }
+}

@@ -1,0 +1,130 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/text-analyzer",
+    "title": "Text Analyzer",
+    "category": "bkbg-dev",
+    "icon": "editor-paste-text",
+    "description": "Comprehensive text analysis tool: word/character/sentence counts, vocabulary richness, top word frequency chart, average lengths, and more. Live updates as you type.",
+    "keywords": [
+        "text",
+        "analyzer",
+        "analysis",
+        "words",
+        "frequency",
+        "statistics",
+        "writing",
+        "NLP"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-text-analyzer-editor",
+    "style": "bkbg-text-analyzer-style",
+    "viewScript": "bkbg-text-analyzer-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Text Analyzer"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Paste or type any text to get instant insights"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBasicStats": {
+            "type": "boolean",
+            "default": true
+        },
+        "showVocabStats": {
+            "type": "boolean",
+            "default": true
+        },
+        "showFrequency": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLongestWord": {
+            "type": "boolean",
+            "default": true
+        },
+        "freqTopN": {
+            "type": "number",
+            "default": 8
+        },
+        "defaultText": {
+            "type": "string",
+            "default": ""
+        },
+        "placeholder": {
+            "type": "string",
+            "default": "Paste your text here and watch the analysis update in real time…"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#8b5cf6"
+        },
+        "barColor": {
+            "type": "string",
+            "default": "#8b5cf6"
+        },
+        "statBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "statNumColor": {
+            "type": "string",
+            "default": "#6d28d9"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#faf5ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 760
+        }
+    }
+}

@@ -1,0 +1,69 @@
+.bkbg-tl-wrap { box-sizing: border-box; }
+
+/* ── Title (h3 — Rule 7 specificity) ──────────────────────────────── */
+.bkbg-tl-wrap h3.bkbg-tl-title {
+    font-family:     var(--bktl-tt-font-family, inherit);
+    font-size:       var(--bktl-tt-font-size-d, 20px);
+    line-height:     var(--bktl-tt-line-height-d, 1.3);
+    letter-spacing:  var(--bktl-tt-letter-spacing-d);
+    word-spacing:    var(--bktl-tt-word-spacing-d);
+    font-weight:     var(--bktl-tt-font-weight, 700);
+    font-style:      var(--bktl-tt-font-style);
+    text-decoration: var(--bktl-tt-text-decoration);
+    text-transform:  var(--bktl-tt-text-transform);
+}
+
+/* ── Pills ───────────────────────────────────────────────────────── */
+.bkbg-tl-pill {
+    font-family:     var(--bktl-pl-font-family, inherit);
+    font-size:       var(--bktl-pl-font-size-d, 14px);
+    line-height:     var(--bktl-pl-line-height-d, 1.3);
+    letter-spacing:  var(--bktl-pl-letter-spacing-d);
+    word-spacing:    var(--bktl-pl-word-spacing-d);
+    font-weight:     var(--bktl-pl-font-weight, 500);
+    font-style:      var(--bktl-pl-font-style);
+    text-decoration: var(--bktl-pl-text-decoration, none);
+    text-transform:  var(--bktl-pl-text-transform);
+}
+
+.bkbg-tl-subtitle {
+    font-size:       var(--bktl-pl-font-size-d, 14px);
+}
+
+.bkbg-tl-pill--link:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.18) !important; }
+
+.bkbg-tl-icon svg { width: 1em; height: 1em; fill: currentColor; }
+.bkbg-tl-icon .dashicons { font-size: inherit; width: 1em; height: 1em; line-height: 1; }
+.bkbg-tl-icon .bkbg-icon-img { width: 1em; height: 1em; object-fit: contain; }
+
+/* ── Responsive typography ──────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-tl-wrap h3.bkbg-tl-title {
+        font-size:      var(--bktl-tt-font-size-t, var(--bktl-tt-font-size-d, 20px));
+        line-height:    var(--bktl-tt-line-height-t, var(--bktl-tt-line-height-d, 1.3));
+        letter-spacing: var(--bktl-tt-letter-spacing-t, var(--bktl-tt-letter-spacing-d));
+        word-spacing:   var(--bktl-tt-word-spacing-t, var(--bktl-tt-word-spacing-d));
+    }
+    .bkbg-tl-pill {
+        font-size:      var(--bktl-pl-font-size-t, var(--bktl-pl-font-size-d, 14px));
+        line-height:    var(--bktl-pl-line-height-t, var(--bktl-pl-line-height-d, 1.3));
+        letter-spacing: var(--bktl-pl-letter-spacing-t, var(--bktl-pl-letter-spacing-d));
+        word-spacing:   var(--bktl-pl-word-spacing-t, var(--bktl-pl-word-spacing-d));
+    }
+    .bkbg-tl-subtitle { font-size: var(--bktl-pl-font-size-t, var(--bktl-pl-font-size-d, 14px));line-height:var(--bktl-pl-line-height-t, var(--bktl-pl-line-height-d, 1.3));letter-spacing:var(--bktl-pl-letter-spacing-t, var(--bktl-pl-letter-spacing-d));word-spacing:var(--bktl-pl-word-spacing-t, var(--bktl-pl-word-spacing-d))}
+}
+@media (max-width: 767px) {
+    .bkbg-tl-wrap h3.bkbg-tl-title {
+        font-size:      var(--bktl-tt-font-size-m, var(--bktl-tt-font-size-t, var(--bktl-tt-font-size-d, 20px)));
+        line-height:    var(--bktl-tt-line-height-m, var(--bktl-tt-line-height-t, var(--bktl-tt-line-height-d, 1.3)));
+        letter-spacing: var(--bktl-tt-letter-spacing-m, var(--bktl-tt-letter-spacing-t, var(--bktl-tt-letter-spacing-d)));
+        word-spacing:   var(--bktl-tt-word-spacing-m, var(--bktl-tt-word-spacing-t, var(--bktl-tt-word-spacing-d)));
+    }
+    .bkbg-tl-pill {
+        font-size:      var(--bktl-pl-font-size-m, var(--bktl-pl-font-size-t, var(--bktl-pl-font-size-d, 14px)));
+        line-height:    var(--bktl-pl-line-height-m, var(--bktl-pl-line-height-t, var(--bktl-pl-line-height-d, 1.3)));
+        letter-spacing: var(--bktl-pl-letter-spacing-m, var(--bktl-pl-letter-spacing-t, var(--bktl-pl-letter-spacing-d)));
+        word-spacing:   var(--bktl-pl-word-spacing-m, var(--bktl-pl-word-spacing-t, var(--bktl-pl-word-spacing-d)));
+    }
+    .bkbg-tl-subtitle { font-size: var(--bktl-pl-font-size-m, var(--bktl-pl-font-size-t, var(--bktl-pl-font-size-d, 14px)));line-height:var(--bktl-pl-line-height-m, var(--bktl-pl-line-height-t, var(--bktl-pl-line-height-d, 1.3)));letter-spacing:var(--bktl-pl-letter-spacing-m, var(--bktl-pl-letter-spacing-t, var(--bktl-pl-letter-spacing-d)));word-spacing:var(--bktl-pl-word-spacing-m, var(--bktl-pl-word-spacing-t, var(--bktl-pl-word-spacing-d)))}
+}

@@ -1,0 +1,108 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/typing-effect",
+    "title": "Typing Effect",
+    "category": "bkbg-effects",
+    "icon": "editor-insertmore",
+    "description": "Animated typewriter text that cycles through multiple phrases with a blinking cursor.",
+    "keywords": [
+        "typing",
+        "typewriter",
+        "animated",
+        "text",
+        "cursor"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-typing-effect-editor",
+    "editorStyle": "bkbg-typing-effect-style",
+    "style": "bkbg-typing-effect-style",
+    "viewScript": "bkbg-typing-effect-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "prefix": {
+            "type": "string",
+            "default": "We build "
+        },
+        "phrases": {
+            "type": "string",
+            "default": "beautiful websites,powerful apps,amazing brands"
+        },
+        "suffix": {
+            "type": "string",
+            "default": ""
+        },
+        "tag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "typeSpeed": {
+            "type": "number",
+            "default": 80
+        },
+        "deleteSpeed": {
+            "type": "number",
+            "default": 40
+        },
+        "pauseDelay": {
+            "type": "number",
+            "default": 1800
+        },
+        "loop": {
+            "type": "boolean",
+            "default": true
+        },
+        "cursorChar": {
+            "type": "string",
+            "default": "|"
+        },
+        "cursorBlink": {
+            "type": "boolean",
+            "default": true
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "prefixColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "typedColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "suffixColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "cursorColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 32
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 32
+        }
+    }
+}

@@ -1,0 +1,196 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/scroll-sticky-content",
+	"title": "Scroll Sticky Content",
+	"description": "Stripe/Linear-style two-column layout with a sticky heading panel on one side and scrollable feature cards on the other. Active item highlights as it enters the viewport.",
+	"category": "bkbg-effects",
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-scroll-sticky-content-editor",
+	"style": "bkbg-scroll-sticky-content-style",
+	"viewScript": "bkbg-scroll-sticky-content-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"sectionTitle": {
+			"type": "string",
+			"default": "Why Choose Us"
+		},
+		"sectionSubtitle": {
+			"type": "string",
+			"default": "Scroll through our core advantages and see why teams choose our platform."
+		},
+		"ctaLabel": {
+			"type": "string",
+			"default": "Get Started Free"
+		},
+		"ctaUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"showCta": {
+			"type": "boolean",
+			"default": true
+		},
+		"layout": {
+			"type": "string",
+			"default": "left-sticky"
+		},
+		"stickyOffset": {
+			"type": "number",
+			"default": 80
+		},
+		"features": {
+			"type": "array",
+			"default": [
+				{
+					"icon": "🚀",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"title": "Blazing Fast",
+					"desc": "Optimised from the ground up for sub-second load times and smooth 60 fps interactions."
+				},
+				{
+					"icon": "🔒",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"title": "Secure by Default",
+					"desc": "End-to-end encryption, role-based access, and SOC 2-compliant infrastructure out of the box."
+				},
+				{
+					"icon": "🎨",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"title": "Endlessly Flexible",
+					"desc": "Mix and match components, themes, and integrations without writing a single line of code."
+				},
+				{
+					"icon": "📊",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"title": "Deep Analytics",
+					"desc": "Rich dashboards and real-time reporting so you always know what's working and what isn't."
+				}
+			]
+		},
+		"sectionBg": {
+			"type": "string",
+			"default": "#0a0a0f"
+		},
+		"panelBg": {
+			"type": "string",
+			"default": ""
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#e2e8f0"
+		},
+		"headingColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#7c3aed"
+		},
+		"cardBg": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"cardBorder": {
+			"type": "string",
+			"default": "#1f2937"
+		},
+		"activeCardBg": {
+			"type": "string",
+			"default": "#1e1b4b"
+		},
+		"ctaBg": {
+			"type": "string",
+			"default": "#7c3aed"
+		},
+		"ctaColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 80
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 80
+		},
+		"titleSize": {
+			"type": "number",
+			"default": 42
+		},
+		"subtitleSize": {
+			"type": "number",
+			"default": 18
+		},
+		"cardIconSize": {
+			"type": "number",
+			"default": 36
+		},
+		"cardTitleSize": {
+			"type": "number",
+			"default": 20
+		},
+		"cardDescSize": {
+			"type": "number",
+			"default": 15
+		},
+		"iconStyle": {
+			"type": "string",
+			"default": "emoji"
+		},
+		"lineConnector": {
+			"type": "boolean",
+			"default": true
+		},
+		"animateCards": {
+			"type": "boolean",
+			"default": true
+		},
+		"threshold": {
+			"type": "number",
+			"default": 0.45
+		},
+		"titleFontWeight": {
+			"type": "number",
+			"default": 800
+		},
+		"cardTitleFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"headingTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"subtitleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"cardTitleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"cardDescTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

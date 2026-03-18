@@ -1,0 +1,114 @@
+/* ── Matrix Rain ─────────────────────────────────────────────── */
+.bkbg-mr-app { display: block; }
+
+.bkbg-mr-wrap {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.bkbg-mr-canvas {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* overlay */
+.bkbg-mr-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+.bkbg-mr-overlay-title {
+    font-family: var(--bkbg-mr-ot-font-family, monospace);
+    font-weight: var(--bkbg-mr-ot-font-weight, 700);
+    font-style: var(--bkbg-mr-ot-font-style, normal);
+    font-size: var(--bkbg-mr-ot-font-size-d, 48px);
+    line-height: var(--bkbg-mr-ot-line-height-d, 1.1);
+    letter-spacing: var(--bkbg-mr-ot-letter-spacing-d, 4px);
+    word-spacing: var(--bkbg-mr-ot-word-spacing-d, normal);
+    text-decoration: var(--bkbg-mr-ot-text-decoration, none);
+    text-transform: var(--bkbg-mr-ot-text-transform, none);
+    text-align: center;
+    text-shadow: 0 0 20px currentColor, 0 0 40px currentColor;
+    margin: 0 0 16px;
+}
+.bkbg-mr-overlay h2.bkbg-mr-overlay-title {
+    font-family: var(--bkbg-mr-ot-font-family, monospace);
+    font-weight: var(--bkbg-mr-ot-font-weight, 700);
+    font-style: var(--bkbg-mr-ot-font-style, normal);
+    font-size: var(--bkbg-mr-ot-font-size-d, 48px);
+    line-height: var(--bkbg-mr-ot-line-height-d, 1.1);
+    letter-spacing: var(--bkbg-mr-ot-letter-spacing-d, 4px);
+    word-spacing: var(--bkbg-mr-ot-word-spacing-d, normal);
+    text-decoration: var(--bkbg-mr-ot-text-decoration, none);
+    text-transform: var(--bkbg-mr-ot-text-transform, none);
+}
+.bkbg-mr-overlay-sub {
+    font-family: var(--bkbg-mr-os-font-family, monospace);
+    font-weight: var(--bkbg-mr-os-font-weight, 400);
+    font-style: var(--bkbg-mr-os-font-style, italic);
+    font-size: var(--bkbg-mr-os-font-size-d, 16px);
+    line-height: var(--bkbg-mr-os-line-height-d, 1.4);
+    letter-spacing: var(--bkbg-mr-os-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-mr-os-word-spacing-d, normal);
+    text-decoration: var(--bkbg-mr-os-text-decoration, none);
+    text-transform: var(--bkbg-mr-os-text-transform, none);
+    text-align: center;
+    margin: 0;
+    opacity: 0.8;
+}
+@media(max-width:1024px){
+    .bkbg-mr-overlay-title,
+    .bkbg-mr-overlay h2.bkbg-mr-overlay-title {
+        font-size: var(--bkbg-mr-ot-font-size-t, var(--bkbg-mr-ot-font-size-d, 48px));
+        line-height: var(--bkbg-mr-ot-line-height-t, var(--bkbg-mr-ot-line-height-d, 1.1));
+        letter-spacing: var(--bkbg-mr-ot-letter-spacing-t, var(--bkbg-mr-ot-letter-spacing-d, 4px));
+        word-spacing: var(--bkbg-mr-ot-word-spacing-t, var(--bkbg-mr-ot-word-spacing-d, normal));
+    }
+    .bkbg-mr-overlay-sub {
+        font-size: var(--bkbg-mr-os-font-size-t, var(--bkbg-mr-os-font-size-d, 16px));
+        line-height: var(--bkbg-mr-os-line-height-t, var(--bkbg-mr-os-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-mr-os-letter-spacing-t, var(--bkbg-mr-os-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-mr-os-word-spacing-t, var(--bkbg-mr-os-word-spacing-d, normal));
+    }
+}
+@media(max-width:767px){
+    .bkbg-mr-overlay-title,
+    .bkbg-mr-overlay h2.bkbg-mr-overlay-title {
+        font-size: var(--bkbg-mr-ot-font-size-m, var(--bkbg-mr-ot-font-size-d, 48px));
+        line-height: var(--bkbg-mr-ot-line-height-m, var(--bkbg-mr-ot-line-height-d, 1.1));
+        letter-spacing: var(--bkbg-mr-ot-letter-spacing-m, var(--bkbg-mr-ot-letter-spacing-d, 4px));
+        word-spacing: var(--bkbg-mr-ot-word-spacing-m, var(--bkbg-mr-ot-word-spacing-d, normal));
+    }
+    .bkbg-mr-overlay-sub {
+        font-size: var(--bkbg-mr-os-font-size-m, var(--bkbg-mr-os-font-size-d, 16px));
+        line-height: var(--bkbg-mr-os-line-height-m, var(--bkbg-mr-os-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-mr-os-letter-spacing-m, var(--bkbg-mr-os-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-mr-os-word-spacing-m, var(--bkbg-mr-os-word-spacing-d, normal));
+    }
+}
+
+/* pause indicator */
+.bkbg-mr-paused-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0,0,0,0.6);
+    color: #00ff41;
+    font-family: monospace;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid #00ff41;
+    pointer-events: none;
+    animation: bkbg-mr-blink 1s step-end infinite;
+}
+@keyframes bkbg-mr-blink {
+    0%,100% { opacity: 1; }
+    50%      { opacity: 0.2; }
+}

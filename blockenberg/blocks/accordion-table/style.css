@@ -1,0 +1,260 @@
+/* ── Accordion Table ── bkbg-actbl-* ── */
+
+.bkbg-actbl-editor-wrap {
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.bkbg-actbl-wrap {
+    font-family: system-ui, -apple-system, sans-serif;
+    box-sizing: border-box;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.bkbg-actbl-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 480px;
+}
+
+/* ── header ── */
+.bkbg-actbl-thead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.bkbg-actbl-thead th {
+    font-weight: 700;
+    white-space: nowrap;
+    user-select: none;
+}
+
+/* ── rows ── */
+.bkbg-actbl-row {
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.bkbg-actbl-row td {
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.bkbg-actbl-row:hover {
+    filter: brightness(0.96);
+}
+
+.bkbg-actbl-row.is-open {
+    filter: brightness(0.97);
+}
+
+/* ── highlight row ── */
+.bkbg-actbl-row.is-highlight {
+    border-left-style: solid;
+    border-left-width: 3px;
+}
+
+/* ── badge ── */
+.bkbg-actbl-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 20px;
+    margin-right: 6px;
+    vertical-align: middle;
+    color: #fff;
+    white-space: nowrap;
+}
+
+/* ── expand icon column ── */
+.bkbg-actbl-icon {
+    text-align: center;
+    width: 36px;
+    user-select: none;
+}
+
+.bkbg-actbl-icon-inner {
+    display: inline-block;
+    transition: transform 0.22s;
+    line-height: 1;
+}
+
+.bkbg-actbl-icon-inner.is-open {
+    transform: rotate(180deg);
+}
+
+.bkbg-actbl-icon-inner.is-open-arrow {
+    transform: rotate(90deg);
+}
+
+.bkbg-actbl-icon-inner.is-open-plus {
+    transform: rotate(45deg);
+}
+
+/* ── row number ── */
+.bkbg-actbl-rownum {
+    text-align: center;
+    width: 36px;
+    user-select: none;
+    opacity: 0.55;
+    font-size: 0.85em;
+}
+
+/* ── detail panel ── */
+.bkbg-actbl-detail-row td {
+    padding: 0;
+    border: none;
+}
+
+.bkbg-actbl-detail-inner {
+    overflow: hidden;
+    transition: max-height 0.24s ease, opacity 0.2s;
+    max-height: 0;
+    opacity: 0;
+}
+
+.bkbg-actbl-detail-inner.is-open {
+    opacity: 1;
+}
+
+.bkbg-actbl-detail-content {
+    padding: 14px 20px;
+    box-sizing: border-box;
+}
+
+.bkbg-actbl-detail-title {
+    font-weight: 700;
+    font-size: 0.82em;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.65;
+    margin: 0 0 10px;
+}
+
+.bkbg-actbl-detail-list {
+    margin: 0;
+    padding: 0 0 0 18px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 4px 20px;
+}
+
+.bkbg-actbl-detail-list li {
+    line-height: 1.55;
+}
+
+.bkbg-actbl-detail-text {
+    margin: 0;
+    line-height: 1.65;
+}
+
+/* ── responsive ── */
+@media (max-width: 640px) {
+    .bkbg-actbl-detail-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Typography (new system) ─────────────────────────────────────── */
+
+/* First cell in row gets bolder weight */
+.bkbg-actbl-wrap .bkbg-actbl-td-first {
+    font-weight: var(--bkbg-actbl-cell-font-weight, 600);
+}
+
+/* Header cells */
+.bkbg-actbl-wrap .bkbg-actbl-thead th,
+.bkbg-actbl-wrap .bkbg-actbl-th {
+    font-family:    var(--bkbg-actbl-header-font-family, inherit);
+    font-size:      var(--bkbg-actbl-header-font-size-d, var(--bkbg-actbl-header-sz, 13px));
+    font-weight:    var(--bkbg-actbl-header-font-weight, 700);
+    line-height:    var(--bkbg-actbl-header-line-height-d, 1.4);
+    text-transform: var(--bkbg-actbl-header-text-transform, none);
+    font-style:     var(--bkbg-actbl-header-font-style, normal);
+    text-decoration:var(--bkbg-actbl-header-text-decoration, none);
+    letter-spacing: var(--bkbg-actbl-header-letter-spacing-d, var(--bkbg-actbl-header-letter-spacing, normal));
+    word-spacing:   var(--bkbg-actbl-header-word-spacing-d, var(--bkbg-actbl-header-word-spacing, normal));
+}
+
+/* Body cells */
+.bkbg-actbl-wrap .bkbg-actbl-row td,
+.bkbg-actbl-wrap .bkbg-actbl-td {
+    font-family:    var(--bkbg-actbl-cell-font-family, inherit);
+    font-size:      var(--bkbg-actbl-cell-font-size-d, var(--bkbg-actbl-cell-sz, 14px));
+    font-weight:    var(--bkbg-actbl-cell-font-weight, 400);
+    line-height:    var(--bkbg-actbl-cell-line-height-d, 1.4);
+    text-transform: var(--bkbg-actbl-cell-text-transform, none);
+    font-style:     var(--bkbg-actbl-cell-font-style, normal);
+    text-decoration:var(--bkbg-actbl-cell-text-decoration, none);
+    letter-spacing: var(--bkbg-actbl-cell-letter-spacing-d, var(--bkbg-actbl-cell-letter-spacing, normal));
+    word-spacing:   var(--bkbg-actbl-cell-word-spacing-d, var(--bkbg-actbl-cell-word-spacing, normal));
+}
+
+/* Detail panel */
+.bkbg-actbl-wrap .bkbg-actbl-detail-content,
+.bkbg-actbl-wrap .bkbg-actbl-detail-li,
+.bkbg-actbl-wrap .bkbg-actbl-detail-text {
+    font-family:    var(--bkbg-actbl-detail-font-family, inherit);
+    font-size:      var(--bkbg-actbl-detail-font-size-d, var(--bkbg-actbl-detail-sz, 14px));
+    font-weight:    var(--bkbg-actbl-detail-font-weight, 400);
+    line-height:    var(--bkbg-actbl-detail-line-height-d, 1.55);
+    text-transform: var(--bkbg-actbl-detail-text-transform, none);
+    font-style:     var(--bkbg-actbl-detail-font-style, normal);
+    text-decoration:var(--bkbg-actbl-detail-text-decoration, none);
+    letter-spacing: var(--bkbg-actbl-detail-letter-spacing-d, var(--bkbg-actbl-detail-letter-spacing, normal));
+    word-spacing:   var(--bkbg-actbl-detail-word-spacing-d, var(--bkbg-actbl-detail-word-spacing, normal));
+}
+
+/* ── Responsive Typography ──────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+    .bkbg-actbl-wrap .bkbg-actbl-thead th,
+    .bkbg-actbl-wrap .bkbg-actbl-th {
+        font-size:      var(--bkbg-actbl-header-font-size-t, var(--bkbg-actbl-header-font-size-d, var(--bkbg-actbl-header-sz, 13px)));
+        line-height:    var(--bkbg-actbl-header-line-height-t, var(--bkbg-actbl-header-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-actbl-header-letter-spacing-t, var(--bkbg-actbl-header-letter-spacing-d, var(--bkbg-actbl-header-letter-spacing, normal)));
+        word-spacing:   var(--bkbg-actbl-header-word-spacing-t, var(--bkbg-actbl-header-word-spacing-d, var(--bkbg-actbl-header-word-spacing, normal)));
+    }
+    .bkbg-actbl-wrap .bkbg-actbl-row td,
+    .bkbg-actbl-wrap .bkbg-actbl-td {
+        font-size:      var(--bkbg-actbl-cell-font-size-t, var(--bkbg-actbl-cell-font-size-d, var(--bkbg-actbl-cell-sz, 14px)));
+        line-height:    var(--bkbg-actbl-cell-line-height-t, var(--bkbg-actbl-cell-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-actbl-cell-letter-spacing-t, var(--bkbg-actbl-cell-letter-spacing-d, var(--bkbg-actbl-cell-letter-spacing, normal)));
+        word-spacing:   var(--bkbg-actbl-cell-word-spacing-t, var(--bkbg-actbl-cell-word-spacing-d, var(--bkbg-actbl-cell-word-spacing, normal)));
+    }
+    .bkbg-actbl-wrap .bkbg-actbl-detail-content,
+    .bkbg-actbl-wrap .bkbg-actbl-detail-li,
+    .bkbg-actbl-wrap .bkbg-actbl-detail-text {
+        font-size:      var(--bkbg-actbl-detail-font-size-t, var(--bkbg-actbl-detail-font-size-d, var(--bkbg-actbl-detail-sz, 14px)));
+        line-height:    var(--bkbg-actbl-detail-line-height-t, var(--bkbg-actbl-detail-line-height-d, 1.55));
+        letter-spacing: var(--bkbg-actbl-detail-letter-spacing-t, var(--bkbg-actbl-detail-letter-spacing-d, var(--bkbg-actbl-detail-letter-spacing, normal)));
+        word-spacing:   var(--bkbg-actbl-detail-word-spacing-t, var(--bkbg-actbl-detail-word-spacing-d, var(--bkbg-actbl-detail-word-spacing, normal)));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-actbl-wrap .bkbg-actbl-thead th,
+    .bkbg-actbl-wrap .bkbg-actbl-th {
+        font-size:      var(--bkbg-actbl-header-font-size-m, var(--bkbg-actbl-header-font-size-t, var(--bkbg-actbl-header-font-size-d, var(--bkbg-actbl-header-sz, 13px))));
+        line-height:    var(--bkbg-actbl-header-line-height-m, var(--bkbg-actbl-header-line-height-t, var(--bkbg-actbl-header-line-height-d, 1.4)));
+        letter-spacing: var(--bkbg-actbl-header-letter-spacing-m, var(--bkbg-actbl-header-letter-spacing-t, var(--bkbg-actbl-header-letter-spacing-d, var(--bkbg-actbl-header-letter-spacing, normal))));
+        word-spacing:   var(--bkbg-actbl-header-word-spacing-m, var(--bkbg-actbl-header-word-spacing-t, var(--bkbg-actbl-header-word-spacing-d, var(--bkbg-actbl-header-word-spacing, normal))));
+    }
+    .bkbg-actbl-wrap .bkbg-actbl-row td,
+    .bkbg-actbl-wrap .bkbg-actbl-td {
+        font-size:      var(--bkbg-actbl-cell-font-size-m, var(--bkbg-actbl-cell-font-size-t, var(--bkbg-actbl-cell-font-size-d, var(--bkbg-actbl-cell-sz, 14px))));
+        line-height:    var(--bkbg-actbl-cell-line-height-m, var(--bkbg-actbl-cell-line-height-t, var(--bkbg-actbl-cell-line-height-d, 1.4)));
+        letter-spacing: var(--bkbg-actbl-cell-letter-spacing-m, var(--bkbg-actbl-cell-letter-spacing-t, var(--bkbg-actbl-cell-letter-spacing-d, var(--bkbg-actbl-cell-letter-spacing, normal))));
+        word-spacing:   var(--bkbg-actbl-cell-word-spacing-m, var(--bkbg-actbl-cell-word-spacing-t, var(--bkbg-actbl-cell-word-spacing-d, var(--bkbg-actbl-cell-word-spacing, normal))));
+    }
+    .bkbg-actbl-wrap .bkbg-actbl-detail-content,
+    .bkbg-actbl-wrap .bkbg-actbl-detail-li,
+    .bkbg-actbl-wrap .bkbg-actbl-detail-text {
+        font-size:      var(--bkbg-actbl-detail-font-size-m, var(--bkbg-actbl-detail-font-size-t, var(--bkbg-actbl-detail-font-size-d, var(--bkbg-actbl-detail-sz, 14px))));
+        line-height:    var(--bkbg-actbl-detail-line-height-m, var(--bkbg-actbl-detail-line-height-t, var(--bkbg-actbl-detail-line-height-d, 1.55)));
+        letter-spacing: var(--bkbg-actbl-detail-letter-spacing-m, var(--bkbg-actbl-detail-letter-spacing-t, var(--bkbg-actbl-detail-letter-spacing-d, var(--bkbg-actbl-detail-letter-spacing, normal))));
+        word-spacing:   var(--bkbg-actbl-detail-word-spacing-m, var(--bkbg-actbl-detail-word-spacing-t, var(--bkbg-actbl-detail-word-spacing-d, var(--bkbg-actbl-detail-word-spacing, normal))));
+    }
+}

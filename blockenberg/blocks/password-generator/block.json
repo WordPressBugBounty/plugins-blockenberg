@@ -1,0 +1,225 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/password-generator",
+    "title": "Password Generator",
+    "category": "bkbg-dev",
+    "icon": "lock",
+    "description": "Secure random password generator with configurable length, character types (uppercase, lowercase, numbers, symbols), strength indicator, copy button, and fully customizable styling.",
+    "keywords": [
+        "password",
+        "generator",
+        "security",
+        "random",
+        "strong",
+        "secure",
+        "tool"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-password-generator-editor",
+    "style": "bkbg-password-generator-style",
+    "viewScript": "bkbg-password-generator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Password Generator"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Generate a strong, secure random password instantly."
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultLength": {
+            "type": "number",
+            "default": 16
+        },
+        "minLength": {
+            "type": "number",
+            "default": 6
+        },
+        "maxLength": {
+            "type": "number",
+            "default": 64
+        },
+        "includeUppercase": {
+            "type": "boolean",
+            "default": true
+        },
+        "includeLowercase": {
+            "type": "boolean",
+            "default": true
+        },
+        "includeNumbers": {
+            "type": "boolean",
+            "default": true
+        },
+        "includeSymbols": {
+            "type": "boolean",
+            "default": true
+        },
+        "excludeAmbiguous": {
+            "type": "boolean",
+            "default": false
+        },
+        "showStrength": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLength": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCopyBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "showRefreshBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "showToggleVisible": {
+            "type": "boolean",
+            "default": true
+        },
+        "copyLabel": {
+            "type": "string",
+            "default": "Copy Password"
+        },
+        "copiedLabel": {
+            "type": "string",
+            "default": "Copied!"
+        },
+        "generateLabel": {
+            "type": "string",
+            "default": "Generate New"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "copyBtnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "copyBtnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "genBtnBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "genBtnColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "strengthWeak": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "strengthFair": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "strengthGood": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "strengthStrong": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "pwdBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "pwdBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "pwdColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 26
+        },
+        "pwdFontSize": {
+            "type": "number",
+            "default": 20
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 560
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "pwdFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "pwdTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

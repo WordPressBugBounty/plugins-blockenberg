@@ -1,0 +1,103 @@
+/* Related Posts Block — bkrp- prefix */
+.bkrp-wrap { container-type: inline-size; }
+.bkrp-heading {
+    font-family: var(--bkrp-ht-font-family, inherit);
+    font-size: var(--bkrp-ht-font-size-d, 20px);
+    font-weight: var(--bkrp-ht-font-weight, 700);
+    font-style: var(--bkrp-ht-font-style, normal);
+    text-decoration: var(--bkrp-ht-text-decoration, none);
+    text-transform: var(--bkrp-ht-text-transform, none);
+    line-height: var(--bkrp-ht-line-height-d, 1.3);
+    letter-spacing: var(--bkrp-ht-letter-spacing-d, normal);
+    word-spacing: var(--bkrp-ht-word-spacing-d, normal);
+    margin-bottom: 16px;
+}
+/* Heading specificity ≥ 0,2,0 for h2/h3/h4 to override editor theme styles */
+.bkrp-wrap h2.bkrp-heading,
+.bkrp-wrap h3.bkrp-heading,
+.bkrp-wrap h4.bkrp-heading {
+    font-family: var(--bkrp-ht-font-family, inherit);
+    font-size: var(--bkrp-ht-font-size-d, 20px);
+    font-weight: var(--bkrp-ht-font-weight, 700);
+    font-style: var(--bkrp-ht-font-style, normal);
+    text-decoration: var(--bkrp-ht-text-decoration, none);
+    text-transform: var(--bkrp-ht-text-transform, none);
+    line-height: var(--bkrp-ht-line-height-d, 1.3);
+    letter-spacing: var(--bkrp-ht-letter-spacing-d, normal);
+    word-spacing: var(--bkrp-ht-word-spacing-d, normal);
+    margin-bottom: 16px;
+}
+.bkrp-note { font-size: 12px; color: #9ca3af; margin-top: 8px; }
+
+.bkrp-layout-grid .bkrp-grid,
+.bkrp-layout-carousel .bkrp-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--bkrp-cols, 3), 1fr);
+  gap: var(--bkrp-gap, 20px);
+}
+.bkrp-layout-list .bkrp-grid { display: flex; flex-direction: column; gap: var(--bkrp-gap, 20px); }
+
+.bkrp-card {
+  background: var(--bkrp-cBg, #fff);
+  border: 1px solid var(--bkrp-cBrd, #e5e7eb);
+  border-radius: var(--bkrp-cR, 10px);
+  overflow: hidden;
+  box-shadow: var(--bkrp-shadow, none);
+  transition: transform .2s;
+  text-decoration: none; color: inherit;
+  display: block;
+}
+.bkrp-card:hover { transform: translateY(-2px); }
+
+.bkrp-layout-list .bkrp-card { display: flex; flex-direction: row; }
+.bkrp-layout-list .bkrp-img-wrap { width: 120px; flex-shrink: 0; }
+
+.bkrp-img-wrap img,
+.bkrp-img-wrap { width: 100%; }
+.bkrp-img-wrap img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.bkrp-body { padding: 14px; }
+.bkrp-date { font-size: .8em; color: #9ca3af; margin-bottom: 4px; }
+.bkrp-title { font-size: 1em; font-weight: 700; margin: 0 0 6px; line-height: 1.4; }
+.bkrp-excerpt { font-size: .88em; color: #6b7280; margin: 0; line-height: 1.5; }
+
+/* Placeholder shimmer */
+.bkrp-img-ph {
+  width: 100%; aspect-ratio: 16/9;
+  background: var(--bkrp-ph, #e5e7eb);
+  animation: bkrp-shimmer 1.4s infinite;
+}
+.bkrp-title-ph, .bkrp-date-ph, .bkrp-exc-ph {
+  height: 14px; border-radius: 4px;
+  background: var(--bkrp-ph, #e5e7eb);
+  animation: bkrp-shimmer 1.4s infinite;
+  margin-bottom: 8px;
+}
+.bkrp-title-ph { width: 80%; height: 18px; }
+.bkrp-exc-ph   { width: 60%; }
+@keyframes bkrp-shimmer {
+  0%, 100% { opacity: 1; } 50% { opacity: .5; }
+}
+
+@media (max-width: 1024px) {
+    .bkrp-wrap .bkrp-heading {
+        font-size: var(--bkrp-ht-font-size-t, var(--bkrp-ht-font-size-d, 20px));
+        line-height: var(--bkrp-ht-line-height-t, var(--bkrp-ht-line-height-d, 1.3));
+        letter-spacing: var(--bkrp-ht-letter-spacing-t, var(--bkrp-ht-letter-spacing-d, normal));
+        word-spacing: var(--bkrp-ht-word-spacing-t, var(--bkrp-ht-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkrp-wrap .bkrp-heading {
+        font-size: var(--bkrp-ht-font-size-m, var(--bkrp-ht-font-size-t, var(--bkrp-ht-font-size-d, 20px)));
+        line-height: var(--bkrp-ht-line-height-m, var(--bkrp-ht-line-height-t, var(--bkrp-ht-line-height-d, 1.3)));
+        letter-spacing: var(--bkrp-ht-letter-spacing-m, var(--bkrp-ht-letter-spacing-t, var(--bkrp-ht-letter-spacing-d, normal)));
+        word-spacing: var(--bkrp-ht-word-spacing-m, var(--bkrp-ht-word-spacing-t, var(--bkrp-ht-word-spacing-d, normal)));
+    }
+}
+
+@container (max-width: 480px) {
+  .bkrp-layout-grid .bkrp-grid { grid-template-columns: 1fr; }
+  .bkrp-layout-list .bkrp-card { flex-direction: column; }
+  .bkrp-layout-list .bkrp-img-wrap { width: 100%; }
+}

@@ -1,0 +1,186 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/speaker-lineup",
+    "version": "1.0.0",
+    "title": "Speaker Lineup",
+    "category": "bkbg-business",
+    "icon": "groups",
+    "description": "Event/conference speaker lineup section with avatar, topic, bio, and social links. Perfect for summits, webinars, and courses.",
+    "keywords": [
+        "speaker",
+        "lineup",
+        "event",
+        "conference",
+        "summit",
+        "webinar"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-speaker-lineup-editor",
+    "style": "bkbg-speaker-lineup-style",
+    "viewScript": "bkbg-speaker-lineup-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "Expert Speakers"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Learn From the Best"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "World-class speakers sharing their expertise, stories, and actionable strategies."
+        },
+        "speakers": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Sarah Johnson",
+                    "title": "CEO",
+                    "company": "TechVentures",
+                    "topic": "Future of AI in Business",
+                    "bio": "Sarah has 15 years of experience leading high-growth tech startups and has spoken at TED, SXSW, and Davos.",
+                    "avatarUrl": "",
+                    "twitterUrl": "",
+                    "linkedinUrl": ""
+                },
+                {
+                    "name": "Marcus Lee",
+                    "title": "Author & Advisor",
+                    "company": "Growth Lab",
+                    "topic": "Scaling to 7 Figures",
+                    "bio": "Marcus is a 3x founder and bestselling author whose companies have generated over $50M in revenue.",
+                    "avatarUrl": "",
+                    "twitterUrl": "",
+                    "linkedinUrl": ""
+                },
+                {
+                    "name": "Dr. Elena Vasquez",
+                    "title": "Research Director",
+                    "company": "Stanford AI Lab",
+                    "topic": "Human-Centered Design",
+                    "bio": "Elena leads cutting-edge research at the intersection of AI and human behavior, with 80+ published papers.",
+                    "avatarUrl": "",
+                    "twitterUrl": "",
+                    "linkedinUrl": ""
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "card"
+        },
+        "showBio": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTopic": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSocials": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "topicBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "topicColor": {
+            "type": "string",
+            "default": "#5b21b6"
+        },
+        "bioColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "socialColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1200
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "eyebrowTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

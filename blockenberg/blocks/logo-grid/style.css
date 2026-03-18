@@ -1,0 +1,118 @@
+/* ====================================================
+   Logo Grid — bkbg-logg-*
+   ==================================================== */
+.bkbg-logg-wrap {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top:    var(--bkbg-logg-pt, 48px);
+    padding-bottom: var(--bkbg-logg-pb, 48px);
+}
+
+/* Label */
+.bkbg-logg-label {
+    margin:          0 0 24px;
+    font-family:     var(--bkbg-logg-l-font-family, inherit);
+    font-size:       var(--bkbg-logg-l-font-size-d, 12px);
+    font-weight:     var(--bkbg-logg-l-font-weight, 500);
+    font-style:      var(--bkbg-logg-l-font-style, normal);
+    line-height:     var(--bkbg-logg-l-line-height-d, 1.4);
+    letter-spacing:  var(--bkbg-logg-l-letter-spacing-d, .1em);
+    word-spacing:    var(--bkbg-logg-l-word-spacing-d, normal);
+    text-decoration: var(--bkbg-logg-l-text-decoration, none);
+    text-transform:  var(--bkbg-logg-l-text-transform, uppercase);
+    color:           var(--bkbg-logg-label-c, #94a3b8);
+    text-align:      center;
+}
+.bkbg-logg-label--left { text-align: left; margin-bottom: 0; margin-right: 24px; flex-shrink: 0; white-space: nowrap; }
+
+/* Inline (label left) */
+.bkbg-logg-inline {
+    display:     flex;
+    align-items: center;
+    gap:         24px;
+}
+
+/* Grid */
+.bkbg-logg-grid {
+    display:         flex;
+    flex-wrap:       wrap;
+    align-items:     center;
+    justify-content: center;
+    gap:             var(--bkbg-logg-gap, 32px);
+}
+.bkbg-logg-layout--grid .bkbg-logg-grid {
+    display:               grid;
+    grid-template-columns: repeat(var(--bkbg-logg-cols, 6), 1fr);
+    gap:                   var(--bkbg-logg-gap, 32px);
+}
+
+/* Item */
+.bkbg-logg-item {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    height:          var(--bkbg-logg-h, 36px);
+    transition:      filter .25s, opacity .25s;
+}
+.bkbg-logg-box.bkbg-logg-item {
+    background:    var(--bkbg-logg-bg, #f8fafc);
+    border:        1px solid var(--bkbg-logg-brd, #e2e8f0);
+    border-radius: var(--bkbg-logg-r, 10px);
+    padding:       var(--bkbg-logg-pad, 20px);
+    height:        auto;
+    min-height:    var(--bkbg-logg-h, 36px);
+}
+
+/* Image */
+.bkbg-logg-img {
+    max-height: var(--bkbg-logg-h, 36px);
+    width:      auto;
+    max-width:  100%;
+    object-fit: contain;
+    display:    block;
+}
+/* Grayscale */
+.bkbg-logg-grayscale .bkbg-logg-img {
+    filter:  grayscale(100%) opacity(.5);
+    transition: filter .25s;
+}
+.bkbg-logg-hover-color .bkbg-logg-item:hover .bkbg-logg-img { filter: none; }
+
+/* Text fallback */
+.bkbg-logg-text {
+    font-size:   13px;
+    font-weight: 700;
+    color:       var(--bkbg-logg-tint, #94a3b8);
+    white-space: nowrap;
+}
+
+/* Upload btn (editor) */
+.bkbg-logg-upload-btn.components-button { display:block; font-size:10px; line-height:1; margin-top:3px; opacity:0; transition:opacity .2s; }
+.bkbg-logg-item:hover .bkbg-logg-upload-btn.components-button { opacity:1; }
+
+/* Responsive */
+@media (max-width: 720px) {
+    .bkbg-logg-layout--grid .bkbg-logg-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 480px) {
+    .bkbg-logg-grid { gap: 16px; }
+    .bkbg-logg-layout--grid .bkbg-logg-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Responsive typography ─────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-logg-label {
+        font-size: var(--bkbg-logg-l-font-size-t, var(--bkbg-logg-l-font-size-d, 12px));
+        line-height: var(--bkbg-logg-l-line-height-t, var(--bkbg-logg-l-line-height-d, 1.4));
+            letter-spacing: var(--bkbg-logg-l-letter-spacing-t, var(--bkbg-logg-l-letter-spacing-d, .1em));
+            word-spacing: var(--bkbg-logg-l-word-spacing-t, var(--bkbg-logg-l-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-logg-label {
+        font-size: var(--bkbg-logg-l-font-size-m, var(--bkbg-logg-l-font-size-t, var(--bkbg-logg-l-font-size-d, 12px)));
+        line-height: var(--bkbg-logg-l-line-height-m, var(--bkbg-logg-l-line-height-t, var(--bkbg-logg-l-line-height-d, 1.4)));
+            letter-spacing: var(--bkbg-logg-l-letter-spacing-m, var(--bkbg-logg-l-letter-spacing-t, var(--bkbg-logg-l-letter-spacing-d, .1em)));
+            word-spacing: var(--bkbg-logg-l-word-spacing-m, var(--bkbg-logg-l-word-spacing-t, var(--bkbg-logg-l-word-spacing-d, normal)));
+    }
+}

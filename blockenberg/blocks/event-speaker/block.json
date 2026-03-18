@@ -1,0 +1,212 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/event-speaker",
+    "version": "1.0.0",
+    "title": "Event Speakers",
+    "category": "bkbg-business",
+    "icon": "groups",
+    "description": "Showcase event or conference speakers with bios, session info, and social links.",
+    "keywords": [
+        "speaker",
+        "event",
+        "conference",
+        "bio",
+        "presenter",
+        "lineup",
+        "meetup"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-event-speaker-editor",
+    "editorStyle": "bkbg-event-speaker-style",
+    "style": "bkbg-event-speaker-style",
+    "viewScript": "bkbg-event-speaker-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eventTitle": {
+            "type": "string",
+            "default": "Speaker Lineup"
+        },
+        "eventSubtitle": {
+            "type": "string",
+            "default": "Meet the experts sharing their knowledge"
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "columns": {
+            "type": "number",
+            "default": 2
+        },
+        "showSession": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBio": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTwitter": {
+            "type": "boolean",
+            "default": true
+        },
+        "speakers": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Dr. Amara Johnson",
+                    "title": "Principal Engineer",
+                    "company": "Vercel",
+                    "bio": "Amara has spent 12 years building scalable frontend infrastructure. She leads the Edge Runtime team and is a core contributor to React Server Components.",
+                    "session": "The Future of React Server Components",
+                    "sessionTime": "10:00 AM – 10:45 AM",
+                    "avatarInitials": "AJ",
+                    "avatarBg": "#6366f1",
+                    "twitterHandle": "@amaraj_dev"
+                },
+                {
+                    "name": "Carlos Mendes",
+                    "title": "Staff Software Engineer",
+                    "company": "Stripe",
+                    "bio": "Carlos specializes in distributed systems and API design. He built Stripe's idempotency layer and writes about concurrency patterns on his popular blog.",
+                    "session": "Idempotency at Scale: Lessons from Stripe",
+                    "sessionTime": "11:00 AM – 11:45 AM",
+                    "avatarInitials": "CM",
+                    "avatarBg": "#0ea5e9",
+                    "twitterHandle": "@carlosmendes_io"
+                },
+                {
+                    "name": "Yuki Tanaka",
+                    "title": "DevRel Lead",
+                    "company": "PlanetScale",
+                    "bio": "Yuki bridges the gap between engineering and developer community. She created the popular 'DB for Devs' YouTube series with over 200k subscribers.",
+                    "session": "Branching Databases for Zero-Downtime Deploys",
+                    "sessionTime": "2:00 PM – 2:45 PM",
+                    "avatarInitials": "YT",
+                    "avatarBg": "#f59e0b",
+                    "twitterHandle": "@yukitanaka_dev"
+                },
+                {
+                    "name": "Marcus Webb",
+                    "title": "Senior Architect",
+                    "company": "Cloudflare",
+                    "bio": "Marcus designs globally distributed systems at the edge. His work on Workers KV has powered millions of real-time applications around the world.",
+                    "session": "Edge-First Architecture Patterns",
+                    "sessionTime": "3:00 PM – 3:45 PM",
+                    "avatarInitials": "MW",
+                    "avatarBg": "#22c55e",
+                    "twitterHandle": "@marcuswebb_cf"
+                }
+            ]
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 26
+        },
+        "subtitleFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "nameFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 165
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "avatarSize": {
+            "type": "number",
+            "default": 64
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "headerBgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "cardBgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "jobTitleColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "companyColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "bioColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "sessionBg": {
+            "type": "string",
+            "default": "#f0f9ff"
+        },
+        "sessionBorderColor": {
+            "type": "string",
+            "default": "#bae6fd"
+        },
+        "sessionTitleColor": {
+            "type": "string",
+            "default": "#0c4a6e"
+        },
+        "sessionTimeColor": {
+            "type": "string",
+            "default": "#0369a1"
+        },
+        "twitterColor": {
+            "type": "string",
+            "default": "#0ea5e9"
+        },
+        "typoTitle": { "type": "object", "default": {} },
+        "typoSubtitle": { "type": "object", "default": {} },
+        "typoName": { "type": "object", "default": {} },
+        "typoBody": { "type": "object", "default": {} }
+    }
+}

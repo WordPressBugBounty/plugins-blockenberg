@@ -1,0 +1,273 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/accordion",
+    "title": "Accordion",
+    "category": "bkbg-content",
+    "icon": "list-view",
+    "description": "Collapsible accordion panels for FAQ, features, and more.",
+    "keywords": [
+        "accordion",
+        "faq",
+        "collapse",
+        "toggle",
+        "expand",
+        "question",
+        "answer"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-accordion-editor",
+    "editorStyle": "bkbg-accordion-style",
+    "style": "bkbg-accordion-style",
+    "viewScript": "bkbg-accordion-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "What is this accordion block?",
+                    "content": "This is a fully customizable accordion block for WordPress. You can add unlimited items, style them any way you want, and they work great for FAQs, feature lists, and more."
+                },
+                {
+                    "title": "How do I add new items?",
+                    "content": "Simply click the \"+ Add Item\" button below the accordion, or use the sidebar panel to manage your items. You can also reorder items by dragging or using the arrow buttons."
+                },
+                {
+                    "title": "Can I customize the appearance?",
+                    "content": "Yes! Use the Inspector panel on the right to customize colors, typography, spacing, icons, animations, and more. All changes are reflected in real-time."
+                }
+            ]
+        },
+        "activeItems": {
+            "type": "array",
+            "default": [
+                0
+            ]
+        },
+        "allowMultiple": {
+            "type": "boolean",
+            "default": false
+        },
+        "firstOpen": {
+            "type": "boolean",
+            "default": true
+        },
+        "collapseAll": {
+            "type": "boolean",
+            "default": false
+        },
+        "iconType": {
+            "type": "string",
+            "default": "chevron"
+        },
+        "iconPosition": {
+            "type": "string",
+            "default": "right"
+        },
+        "accordionStyle": {
+            "type": "string",
+            "default": "default"
+        },
+        "gap": {
+            "type": "number",
+            "default": 12
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 1
+        },
+        "borderStyle": {
+            "type": "string",
+            "default": "solid"
+        },
+        "headerPaddingTop": {
+            "type": "number",
+            "default": 16
+        },
+        "headerPaddingRight": {
+            "type": "number",
+            "default": 20
+        },
+        "headerPaddingBottom": {
+            "type": "number",
+            "default": 16
+        },
+        "headerPaddingLeft": {
+            "type": "number",
+            "default": 20
+        },
+        "contentPaddingTop": {
+            "type": "number",
+            "default": 16
+        },
+        "contentPaddingRight": {
+            "type": "number",
+            "default": 20
+        },
+        "contentPaddingBottom": {
+            "type": "number",
+            "default": 20
+        },
+        "contentPaddingLeft": {
+            "type": "number",
+            "default": 20
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "headerBgHover": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "headerBgActive": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "headerColorHover": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "headerColorActive": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "contentBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "contentColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "borderColorActive": {
+            "type": "string",
+            "default": "#cbd5e1"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "iconColorActive": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "headerFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "headerFontWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "headerLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "contentFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "contentFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "contentLineHeight": {
+            "type": "number",
+            "default": 1.7
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 20
+        },
+        "enableShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "shadowHorizontal": {
+            "type": "number",
+            "default": 0
+        },
+        "shadowVertical": {
+            "type": "number",
+            "default": 2
+        },
+        "shadowBlur": {
+            "type": "number",
+            "default": 8
+        },
+        "shadowSpread": {
+            "type": "number",
+            "default": 0
+        },
+        "shadowColor": {
+            "type": "string",
+            "default": "rgba(0, 0, 0, 0.06)"
+        },
+        "enableHoverEffect": {
+            "type": "boolean",
+            "default": true
+        },
+        "enableAnimation": {
+            "type": "boolean",
+            "default": true
+        },
+        "animationDuration": {
+            "type": "number",
+            "default": 300
+        },
+        "animationType": {
+            "type": "string",
+            "default": "slide"
+        },
+        "dividerEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "dividerWidth": {
+            "type": "number",
+            "default": 1
+        },
+        "schemaEnabled": {
+            "type": "boolean",
+            "default": false
+        },
+        "headerTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "contentTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

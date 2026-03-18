@@ -1,0 +1,152 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/chord-diagram",
+    "version": "1.0.0",
+    "title": "Chord Diagram",
+    "category": "bkbg-charts",
+    "icon": "networking",
+    "description": "Circular diagram showing bidirectional relationships and flow volumes between groups. Great for migration patterns, trade flows, cross-referrals, and collaboration networks.",
+    "keywords": [
+        "chord",
+        "diagram",
+        "circular",
+        "relationship",
+        "flow",
+        "matrix",
+        "network"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-chord-diagram-editor",
+    "style": "bkbg-chord-diagram-style",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Cross-Department Collaboration"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgSize": {
+            "type": "number",
+            "default": 560
+        },
+        "arcThickness": {
+            "type": "number",
+            "default": 22
+        },
+        "arcGap": {
+            "type": "number",
+            "default": 8
+        },
+        "chordOpacity": {
+            "type": "number",
+            "default": 55
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "showLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "groups": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Engineering",
+                    "color": "#4f46e5"
+                },
+                {
+                    "label": "Design",
+                    "color": "#0891b2"
+                },
+                {
+                    "label": "Marketing",
+                    "color": "#059669"
+                },
+                {
+                    "label": "Sales",
+                    "color": "#d97706"
+                },
+                {
+                    "label": "Support",
+                    "color": "#dc2626"
+                }
+            ]
+        },
+        "matrix": {
+            "type": "array",
+            "default": [
+                [
+                    0,
+                    28,
+                    12,
+                    5,
+                    8
+                ],
+                [
+                    28,
+                    0,
+                    35,
+                    10,
+                    6
+                ],
+                [
+                    12,
+                    35,
+                    0,
+                    22,
+                    14
+                ],
+                [
+                    5,
+                    10,
+                    22,
+                    0,
+                    30
+                ],
+                [
+                    8,
+                    6,
+                    14,
+                    30,
+                    0
+                ]
+            ]
+        },
+        "labelFontWeight": {
+            "type": "string",
+            "default": "600"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

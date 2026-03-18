@@ -1,0 +1,213 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/article-series",
+    "title": "Article Series",
+    "description": "Multi-part series navigator showing all articles with the current one highlighted and progress indicator.",
+    "category": "bkbg-blog",
+    "icon": "list-view",
+    "keywords": [
+        "series",
+        "articles",
+        "parts",
+        "navigation",
+        "multi-part",
+        "sequence",
+        "reading"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-article-series-editor",
+    "editorStyle": "bkbg-article-series-style",
+    "style": "bkbg-article-series-style",
+    "viewScript": "bkbg-article-series-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "seriesTitle": {
+            "type": "string",
+            "default": "The Complete Guide to Web Performance"
+        },
+        "seriesDescription": {
+            "type": "string",
+            "default": "A 6-part deep dive into making your website blazingly fast."
+        },
+        "currentPart": {
+            "type": "number",
+            "default": 2
+        },
+        "parts": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Introduction: Why Speed Matters",
+                    "url": "#",
+                    "excerpt": "The business case for web performance and where to start."
+                },
+                {
+                    "title": "Core Web Vitals Explained",
+                    "url": "#",
+                    "excerpt": "LCP, FID, and CLS — what they measure and how to improve them."
+                },
+                {
+                    "title": "Image Optimization Techniques",
+                    "url": "#",
+                    "excerpt": "Formats, lazy loading, and responsive images at scale."
+                },
+                {
+                    "title": "JavaScript Performance Patterns",
+                    "url": "#",
+                    "excerpt": "Code splitting, tree shaking, and reducing main thread work."
+                },
+                {
+                    "title": "Caching Strategies",
+                    "url": "#",
+                    "excerpt": "HTTP caching, CDN configuration, and service workers."
+                },
+                {
+                    "title": "Measuring and Monitoring",
+                    "url": "#",
+                    "excerpt": "Tools and workflows to track performance continuously."
+                }
+            ]
+        },
+        "showProgress": {
+            "type": "boolean",
+            "default": true
+        },
+        "showExcerpt": {
+            "type": "boolean",
+            "default": true
+        },
+        "showNumbers": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSeriesDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "collapsible": {
+            "type": "boolean",
+            "default": false
+        },
+        "layout": {
+            "type": "string",
+            "default": "list"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "itemBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "itemColor": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "itemBorderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "excerptColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "currentBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "currentColor": {
+            "type": "string",
+            "default": "#1d4ed8"
+        },
+        "currentBorderColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "progressBg": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "progressColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "numberBg": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "numberColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "currentNumberBg": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "currentNumberColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 20
+        },
+        "descFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "partTitleFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "excerptFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "partTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "excerptTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

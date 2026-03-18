@@ -1,0 +1,254 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/verdict-box",
+    "title": "Verdict Box",
+    "category": "bkbg-blog",
+    "icon": "awards",
+    "description": "Final verdict block for product reviews with a score, pros & cons, verdict text, recommendation, and award badges.",
+    "keywords": [
+        "verdict",
+        "review",
+        "score",
+        "pros",
+        "cons",
+        "recommendation",
+        "award",
+        "rating",
+        "final"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-verdict-box-editor",
+    "editorStyle": "bkbg-verdict-box-style",
+    "style": "bkbg-verdict-box-style",
+    "viewScript": "bkbg-verdict-box-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "productName": {
+            "type": "string",
+            "default": "Acme Pro 5000"
+        },
+        "productTagline": {
+            "type": "string",
+            "default": "Wireless Noise-Cancelling Headphones"
+        },
+        "showTagline": {
+            "type": "boolean",
+            "default": true
+        },
+        "overallScore": {
+            "type": "number",
+            "default": 8.7
+        },
+        "scoreMax": {
+            "type": "number",
+            "default": 10
+        },
+        "scoreLabel": {
+            "type": "string",
+            "default": "Overall Score"
+        },
+        "scoreDisplay": {
+            "type": "string",
+            "default": "circle"
+        },
+        "badge": {
+            "type": "string",
+            "default": "recommended"
+        },
+        "pros": {
+            "type": "array",
+            "default": [
+                "Exceptional 40-hour battery life",
+                "Industry-leading noise cancellation",
+                "Premium build quality and comfort",
+                "Crystal-clear call quality with 6 microphones",
+                "Folds flat — great for travel"
+            ]
+        },
+        "cons": {
+            "type": "array",
+            "default": [
+                "Premium price point ($349)",
+                "Touch controls have a learning curve",
+                "No IP rating for moisture resistance"
+            ]
+        },
+        "verdictText": {
+            "type": "string",
+            "default": "The Acme Pro 5000 raises the bar for premium wireless headphones. The noise cancellation is unmatched, battery life is among the best in class, and the build quality justifies the price. Minor niggles aside, this is the headphone to beat in 2026."
+        },
+        "showVerdict": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaText": {
+            "type": "string",
+            "default": "Check Price on Amazon"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "https://example.com"
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaSecondaryText": {
+            "type": "string",
+            "default": "Read Full Review"
+        },
+        "ctaSecondaryUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "showSecondaryCta": {
+            "type": "boolean",
+            "default": false
+        },
+        "prosLabel": {
+            "type": "string",
+            "default": "✅ Pros"
+        },
+        "consLabel": {
+            "type": "string",
+            "default": "❌ Cons"
+        },
+        "layout": {
+            "type": "string",
+            "default": "split"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "productNameSize": {
+            "type": "number",
+            "default": 24
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "taglineTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "scoreTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "prosConsLabelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "ctaTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "scoreCircleBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "scoreCircleColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "prosBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "prosBorderColor": {
+            "type": "string",
+            "default": "#86efac"
+        },
+        "prosColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "prosIconColor": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "consBg": {
+            "type": "string",
+            "default": "#fef2f2"
+        },
+        "consBorderColor": {
+            "type": "string",
+            "default": "#fca5a5"
+        },
+        "consColor": {
+            "type": "string",
+            "default": "#7f1d1d"
+        },
+        "consIconColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "verdictBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "verdictBorderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "verdictColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "ctaSecondaryColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "badgeRecommendedBg": {
+            "type": "string",
+            "default": "#fbbf24"
+        },
+        "badgeRecommendedColor": {
+            "type": "string",
+            "default": "#451a03"
+        }
+    }
+}

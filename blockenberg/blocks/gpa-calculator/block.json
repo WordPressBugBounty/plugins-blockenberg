@@ -1,0 +1,171 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/gpa-calculator",
+	"title": "GPA Calculator",
+	"category": "bkbg-calculators",
+	"icon": "awards",
+	"description": "Interactive GPA calculator for students. Enter courses, credit hours, and letter grades to calculate cumulative GPA on a 4.0 or custom scale.",
+	"keywords": [
+		"gpa",
+		"grade",
+		"calculator",
+		"student",
+		"college",
+		"university",
+		"academic",
+		"points"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-gpa-calculator-editor",
+	"style": "bkbg-gpa-calculator-style",
+	"viewScript": "bkbg-gpa-calculator-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "GPA Calculator"
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Enter your courses, credits, and grades to calculate your GPA."
+		},
+		"showTitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"showSubtitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"scale": {
+			"type": "string",
+			"default": "4.0"
+		},
+		"showGradeClass": {
+			"type": "boolean",
+			"default": true
+		},
+		"showTotals": {
+			"type": "boolean",
+			"default": true
+		},
+		"showHelp": {
+			"type": "boolean",
+			"default": true
+		},
+		"defaultCourses": {
+			"type": "array",
+			"default": [
+				{
+					"name": "Mathematics",
+					"grade": "A",
+					"credits": 3
+				},
+				{
+					"name": "English",
+					"grade": "B+",
+					"credits": 3
+				},
+				{
+					"name": "Biology",
+					"grade": "A-",
+					"credits": 4
+				},
+				{
+					"name": "History",
+					"grade": "B",
+					"credits": 3
+				}
+			]
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"cardBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"resultBg": {
+			"type": "string",
+			"default": "#f5f3ff"
+		},
+		"resultBorder": {
+			"type": "string",
+			"default": "#ede9fe"
+		},
+		"gpaColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"tableHeaderBg": {
+			"type": "string",
+			"default": "#f9fafb"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#1e1b4b"
+		},
+		"subtitleColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"labelColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"sectionBg": {
+			"type": "string",
+			"default": ""
+		},
+		"titleSize": {
+			"type": "number",
+			"default": 28
+		},
+		"gpaSize": {
+			"type": "number",
+			"default": 56
+		},
+		"cardRadius": {
+			"type": "number",
+			"default": 16
+		},
+		"inputRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"maxWidth": {
+			"type": "number",
+			"default": 680
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 60
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 60
+		},
+		"titleFontWeight": {
+			"type": "string",
+			"default": "700"
+		},
+		"typoTitle": {
+			"type": "object",
+			"default": {}
+		},
+		"typoGpa": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

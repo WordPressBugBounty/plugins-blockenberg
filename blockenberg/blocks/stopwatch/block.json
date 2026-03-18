@@ -1,0 +1,137 @@
+{
+  "apiVersion": 3,
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "blockenberg/stopwatch",
+  "title": "Stopwatch",
+  "category": "bkbg-interactive",
+  "icon": "clock",
+  "description": "Interactive stopwatch with start/pause/reset controls and lap recording. Fully styled with customizable colors, display format, and rich Inspector settings.",
+  "keywords": [
+    "stopwatch",
+    "timer",
+    "clock",
+    "lap",
+    "time",
+    "counter",
+    "interactive"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-stopwatch-editor",
+  "style": "bkbg-stopwatch-style",
+  "viewScript": "bkbg-stopwatch-frontend",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Stopwatch"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Track elapsed time with laps"
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "showSubtitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "showLaps": {
+      "type": "boolean",
+      "default": true
+    },
+    "showMilliseconds": {
+      "type": "boolean",
+      "default": true
+    },
+    "maxLaps": {
+      "type": "number",
+      "default": 20
+    },
+    "accentColor": {
+      "type": "string",
+      "default": "#6366f1"
+    },
+    "startColor": {
+      "type": "string",
+      "default": "#22c55e"
+    },
+    "stopColor": {
+      "type": "string",
+      "default": "#ef4444"
+    },
+    "resetColor": {
+      "type": "string",
+      "default": "#6b7280"
+    },
+    "lapColor": {
+      "type": "string",
+      "default": "#f59e0b"
+    },
+    "clockBg": {
+      "type": "string",
+      "default": "#1e1b4b"
+    },
+    "clockColor": {
+      "type": "string",
+      "default": "#e0e7ff"
+    },
+    "sectionBg": {
+      "type": "string",
+      "default": "#f5f3ff"
+    },
+    "cardBg": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "titleColor": {
+      "type": "string",
+      "default": "#111827"
+    },
+    "subtitleColor": {
+      "type": "string",
+      "default": "#6b7280"
+    },
+    "labelColor": {
+      "type": "string",
+      "default": "#374151"
+    },
+    "titleFontSize": {
+      "type": "number",
+      "default": 26
+    },
+    "clockFontSize": {
+      "type": "number",
+      "default": 64
+    },
+    "contentMaxWidth": {
+      "type": "number",
+      "default": 560
+    },
+    "titleFontWeight": {
+      "type": "string",
+      "default": "700"
+    },
+    "titleLineHeight": {
+      "type": "number",
+      "default": 1.2
+    },
+    "titleTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "subtitleTypo": {
+      "type": "object",
+      "default": {}
+    }
+  }
+}

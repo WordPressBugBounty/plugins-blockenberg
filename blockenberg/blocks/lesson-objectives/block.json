@@ -1,0 +1,192 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/lesson-objectives",
+    "title": "Lesson Objectives",
+    "description": "\"What You'll Learn\" educational objectives box with bullet points, level badge, and estimated read time.",
+    "category": "bkbg-blog",
+    "icon": "welcome-learn-more",
+    "keywords": [
+        "lesson",
+        "objectives",
+        "learn",
+        "educational",
+        "what you'll learn",
+        "course",
+        "tutorial",
+        "guide"
+    ],
+    "editorScript": "bkbg-lesson-objectives-editor",
+    "style": "bkbg-lesson-objectives-style",
+    "viewScript": "bkbg-lesson-objectives-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "What You'll Learn"
+        },
+        "headingIcon": {
+            "type": "string",
+            "default": "🎯"
+        },
+        "headingIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "headingIconDashicon": {
+            "type": "string",
+            "default": "flag"
+        },
+        "headingIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "objectives": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "Understand the core principles of on-page SEO"
+                },
+                {
+                    "text": "Build a keyword research strategy from scratch"
+                },
+                {
+                    "text": "Audit and fix technical SEO issues on any site"
+                },
+                {
+                    "text": "Create content that consistently ranks on page one"
+                }
+            ]
+        },
+        "showLevel": {
+            "type": "boolean",
+            "default": true
+        },
+        "level": {
+            "type": "string",
+            "default": "beginner"
+        },
+        "showReadTime": {
+            "type": "boolean",
+            "default": true
+        },
+        "readTime": {
+            "type": "string",
+            "default": "12 min read"
+        },
+        "bulletStyle": {
+            "type": "string",
+            "default": "check"
+        },
+        "customBullet": {
+            "type": "string",
+            "default": "✓"
+        },
+        "style": {
+            "type": "string",
+            "default": "card"
+        },
+        "columns": {
+            "type": "number",
+            "default": 1
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#86efac"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "bulletColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "bulletBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#166534"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#4b7a5a"
+        },
+        "levelBg": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "levelColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "titleFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "objectiveFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "objectiveFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "objectiveLineHeight": {
+            "type": "number",
+            "default": 1.6
+        },
+        "objectiveTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

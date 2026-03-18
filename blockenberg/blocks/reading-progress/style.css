@@ -1,0 +1,58 @@
+.bkbg-rp-anchor {
+    display: none; /* invisible anchor in content — bar is inserted into body */
+}
+.bkbg-rp-bar-wrap {
+    position: fixed;
+    left:     0;
+    right:    0;
+    z-index:  var(--bkbg-rp-z, 9999);
+    height:   var(--bkbg-rp-h, 4px);
+    background: var(--bkbg-rp-bg, #e5e7eb);
+    pointer-events: none;
+}
+.bkbg-rp-bar-wrap.bkbg-rp-top    { top:    0; }
+.bkbg-rp-bar-wrap.bkbg-rp-bottom { bottom: 0; }
+
+.bkbg-rp-bar {
+    height:   100%;
+    width:     0%;
+    background: var(--bkbg-rp-color, #2563eb);
+}
+.bkbg-rp-bar.bkbg-rp-smooth {
+    transition: width 0.1s linear;
+}
+
+.bkbg-rp-pct {
+    position:   absolute;
+    right:      8px;
+    top:        50%;
+    transform:  translateY(-50%);
+    font-family: var(--bkrp-lt-font-family, inherit);
+    font-size: var(--bkrp-lt-font-size-d, 10px);
+    font-weight: var(--bkrp-lt-font-weight, 700);
+    font-style: var(--bkrp-lt-font-style, normal);
+    text-decoration: var(--bkrp-lt-text-decoration, none);
+    text-transform: var(--bkrp-lt-text-transform, none);
+    line-height: var(--bkrp-lt-line-height-d, 1);
+    letter-spacing: var(--bkrp-lt-letter-spacing-d, normal);
+    word-spacing: var(--bkrp-lt-word-spacing-d, normal);
+    color:      #374151;
+    pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    .bkbg-rp-pct {
+        font-size: var(--bkrp-lt-font-size-t, var(--bkrp-lt-font-size-d, 10px));
+        line-height: var(--bkrp-lt-line-height-t, var(--bkrp-lt-line-height-d, 1));
+        letter-spacing: var(--bkrp-lt-letter-spacing-t, var(--bkrp-lt-letter-spacing-d, normal));
+        word-spacing: var(--bkrp-lt-word-spacing-t, var(--bkrp-lt-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-rp-pct {
+        font-size: var(--bkrp-lt-font-size-m, var(--bkrp-lt-font-size-t, var(--bkrp-lt-font-size-d, 10px)));
+        line-height: var(--bkrp-lt-line-height-m, var(--bkrp-lt-line-height-t, var(--bkrp-lt-line-height-d, 1)));
+        letter-spacing: var(--bkrp-lt-letter-spacing-m, var(--bkrp-lt-letter-spacing-t, var(--bkrp-lt-letter-spacing-d, normal)));
+        word-spacing: var(--bkrp-lt-word-spacing-m, var(--bkrp-lt-word-spacing-t, var(--bkrp-lt-word-spacing-d, normal)));
+    }
+}

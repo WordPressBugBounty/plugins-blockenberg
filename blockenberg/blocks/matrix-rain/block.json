@@ -1,0 +1,132 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/matrix-rain",
+    "title": "Matrix Rain",
+    "category": "bkbg-effects",
+    "icon": "editor-code",
+    "description": "Canvas-rendered Matrix-style digital rain with falling character columns. Fully customizable character set, colors, speed and overlay content.",
+    "keywords": [
+        "matrix",
+        "rain",
+        "code",
+        "digital",
+        "falling",
+        "characters",
+        "canvas",
+        "cyberpunk",
+        "effect",
+        "background"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-matrix-rain-editor",
+    "style": "bkbg-matrix-rain-style",
+    "viewScript": "bkbg-matrix-rain-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "height": {
+            "type": "number",
+            "default": 400
+        },
+        "charSet": {
+            "type": "string",
+            "default": "matrix"
+        },
+        "customChars": {
+            "type": "string",
+            "default": "01"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "speed": {
+            "type": "number",
+            "default": 50
+        },
+        "density": {
+            "type": "number",
+            "default": 100
+        },
+        "colorStyle": {
+            "type": "string",
+            "default": "classic-green"
+        },
+        "primaryColor": {
+            "type": "string",
+            "default": "#00ff41"
+        },
+        "headColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "bgOpacity": {
+            "type": "number",
+            "default": 8
+        },
+        "fadeLength": {
+            "type": "number",
+            "default": 20
+        },
+        "showOverlay": {
+            "type": "boolean",
+            "default": true
+        },
+        "overlayText": {
+            "type": "string",
+            "default": "THE MATRIX"
+        },
+        "overlaySubtext": {
+            "type": "string",
+            "default": "Follow the white rabbit."
+        },
+        "overlayTextColor": {
+            "type": "string",
+            "default": "#00ff41"
+        },
+        "overlayFontSize": {
+            "type": "number",
+            "default": 48
+        },
+        "overlayTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "overlayBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.35)"
+        },
+        "clickToPause": {
+            "type": "boolean",
+            "default": true
+        },
+        "pauseOnHover": {
+            "type": "boolean",
+            "default": false
+        },
+        "glowEffect": {
+            "type": "boolean",
+            "default": true
+        },
+        "randomStart": {
+            "type": "boolean",
+            "default": true
+        }
+    }
+}

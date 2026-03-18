@@ -1,0 +1,255 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/bio-card",
+    "version": "1.0.0",
+    "title": "Bio Card",
+    "category": "bkbg-business",
+    "icon": "id",
+    "description": "Rich individual profile card with photo, name, role, bio text, skill tags, social links, availability badge, and CTA button.",
+    "keywords": [
+        "bio",
+        "profile",
+        "person",
+        "card",
+        "about",
+        "team",
+        "author",
+        "speaker",
+        "freelancer"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-bio-card-editor",
+    "editorStyle": "bkbg-bio-card-style",
+    "style": "bkbg-bio-card-style",
+    "viewScript": "bkbg-bio-card-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "photoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "photoId": {
+            "type": "number",
+            "default": 0
+        },
+        "photoShape": {
+            "type": "string",
+            "default": "circle"
+        },
+        "photoSize": {
+            "type": "number",
+            "default": 120
+        },
+        "photoBorderWidth": {
+            "type": "number",
+            "default": 3
+        },
+        "photoBorderColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "name": {
+            "type": "string",
+            "default": "Alex Johnson"
+        },
+        "nameTag": {
+            "type": "string",
+            "default": "h3"
+        },
+        "role": {
+            "type": "string",
+            "default": "UX Designer & Developer"
+        },
+        "company": {
+            "type": "string",
+            "default": ""
+        },
+        "bio": {
+            "type": "string",
+            "default": "Passionate about crafting intuitive digital experiences. 10+ years building products that users love, from early-stage startups to Fortune 500 companies."
+        },
+        "showAvailability": {
+            "type": "boolean",
+            "default": true
+        },
+        "availabilityStatus": {
+            "type": "string",
+            "default": "available"
+        },
+        "availabilityLabel": {
+            "type": "string",
+            "default": "Available for freelance"
+        },
+        "skills": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "sk1",
+                    "label": "UX Design",
+                    "color": "#6c3fb5"
+                },
+                {
+                    "id": "sk2",
+                    "label": "React",
+                    "color": "#3b82f6"
+                },
+                {
+                    "id": "sk3",
+                    "label": "Figma",
+                    "color": "#f59e0b"
+                },
+                {
+                    "id": "sk4",
+                    "label": "TypeScript",
+                    "color": "#10b981"
+                },
+                {
+                    "id": "sk5",
+                    "label": "Prototyping",
+                    "color": "#ef4444"
+                }
+            ]
+        },
+        "showSkills": {
+            "type": "boolean",
+            "default": true
+        },
+        "socialLinks": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "sl1",
+                    "platform": "twitter",
+                    "url": "#"
+                },
+                {
+                    "id": "sl2",
+                    "platform": "linkedin",
+                    "url": "#"
+                },
+                {
+                    "id": "sl3",
+                    "platform": "github",
+                    "url": "#"
+                }
+            ]
+        },
+        "showSocial": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaText": {
+            "type": "string",
+            "default": "Get in Touch"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaTarget": {
+            "type": "boolean",
+            "default": false
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaStyle": {
+            "type": "string",
+            "default": "filled"
+        },
+        "layout": {
+            "type": "string",
+            "default": "card-center"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 20
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 40
+        },
+        "showShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 480
+        },
+        "nameSize": {
+            "type": "number",
+            "default": 24
+        },
+        "roleSize": {
+            "type": "number",
+            "default": 14
+        },
+        "bioSize": {
+            "type": "number",
+            "default": 15
+        },
+        "skillTagSize": {
+            "type": "number",
+            "default": 12
+        },
+        "skillTagRadius": {
+            "type": "number",
+            "default": 99
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "roleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "bioColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 40
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "roleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bioTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

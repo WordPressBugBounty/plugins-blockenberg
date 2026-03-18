@@ -1,0 +1,204 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/marquee-cards",
+    "title": "Marquee Cards",
+    "category": "bkbg-effects",
+    "icon": "slides",
+    "description": "Infinitely scrolling row of rich cards — images, headings, tags, and links. Ideal for features, use-cases, portfolio pieces, or team showcases.",
+    "keywords": [
+        "marquee",
+        "cards",
+        "scroll",
+        "infinite",
+        "loop",
+        "features",
+        "showcase",
+        "carousel"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-marquee-cards-editor",
+    "editorStyle": "bkbg-marquee-cards-style",
+    "style": "bkbg-marquee-cards-style",
+    "viewScript": "bkbg-marquee-cards-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "cards": {
+            "type": "array",
+            "default": [
+                {
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "tag": "Feature",
+                    "heading": "Lightning Fast",
+                    "text": "Built for modern web performance with zero bloat.",
+                    "link": "",
+                    "linkLabel": "Learn more →"
+                },
+                {
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "tag": "Design",
+                    "heading": "Pixel Perfect",
+                    "text": "Every detail crafted to delight your visitors.",
+                    "link": "",
+                    "linkLabel": "Learn more →"
+                },
+                {
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "tag": "Support",
+                    "heading": "Always Reliable",
+                    "text": "24/7 support and 99.9% uptime guaranteed.",
+                    "link": "",
+                    "linkLabel": "Learn more →"
+                },
+                {
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "tag": "Scale",
+                    "heading": "Grows With You",
+                    "text": "From startup to enterprise with the same platform.",
+                    "link": "",
+                    "linkLabel": "Learn more →"
+                }
+            ]
+        },
+        "speed": {
+            "type": "number",
+            "default": 40
+        },
+        "direction": {
+            "type": "string",
+            "default": "left"
+        },
+        "pauseOnHover": {
+            "type": "boolean",
+            "default": true
+        },
+        "twoRows": {
+            "type": "boolean",
+            "default": false
+        },
+        "cardWidth": {
+            "type": "number",
+            "default": 280
+        },
+        "cardGap": {
+            "type": "number",
+            "default": 20
+        },
+        "imageHeight": {
+            "type": "number",
+            "default": 160
+        },
+        "showImage": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTag": {
+            "type": "boolean",
+            "default": true
+        },
+        "showText": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLink": {
+            "type": "boolean",
+            "default": true
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "cardBorderWidth": {
+            "type": "number",
+            "default": 1
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 20
+        },
+        "cardShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "tagBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "tagColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 18
+        },
+        "textSize": {
+            "type": "number",
+            "default": 14
+        },
+        "tagSize": {
+            "type": "number",
+            "default": 11
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "tagTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "wrapperBg": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingY": {
+            "type": "number",
+            "default": 32
+        },
+        "fadeEdges": {
+            "type": "boolean",
+            "default": true
+        },
+        "hoverLift": {
+            "type": "boolean",
+            "default": true
+        }
+    }
+}

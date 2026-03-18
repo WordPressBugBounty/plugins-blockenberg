@@ -1,0 +1,92 @@
+/* ===================================================
+   Hovering Image Stack — bkbg-his-*  (style.css)
+   =================================================== */
+
+.bkbg-his-wrap {
+    width: 100%;
+}
+
+.bkbg-his-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+}
+
+/* ── Stack container ───────────────────────────────────────────────── */
+.bkbg-his-stack {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* ── Individual card ───────────────────────────────────────────────── */
+.bkbg-his-card {
+    position: absolute;
+    overflow: hidden;
+    will-change: transform;
+    transition: transform 0.45s cubic-bezier(.34,1.56,.64,1),
+                box-shadow 0.3s ease,
+                z-index 0s;
+}
+
+.bkbg-his-card img {
+    width:   100%;
+    height:  100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* ── Caption typography (CSS-var driven) ───────────────────────────── */
+.bkbg-his-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 8px 12px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    font-family: var(--bkbg-his-cap-font-family, inherit);
+    font-size: var(--bkbg-his-cap-font-size-d, var(--bkbg-his-cap-sz, 13px));
+    font-weight: var(--bkbg-his-cap-font-weight, 600);
+    font-style: var(--bkbg-his-cap-font-style, normal);
+    text-decoration: var(--bkbg-his-cap-text-decoration, none);
+    text-transform: var(--bkbg-his-cap-text-transform, none);
+    line-height: var(--bkbg-his-cap-line-height-d, 1.4);
+    letter-spacing: var(--bkbg-his-cap-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-his-cap-word-spacing-d, normal);
+}
+
+/* ── Responsive: Tablet ── */
+@media (max-width: 1024px) {
+    .bkbg-his-caption {
+        font-size: var(--bkbg-his-cap-font-size-t, var(--bkbg-his-cap-font-size-d, var(--bkbg-his-cap-sz, 13px)));
+        line-height: var(--bkbg-his-cap-line-height-t, var(--bkbg-his-cap-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-his-cap-letter-spacing-t, var(--bkbg-his-cap-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-his-cap-word-spacing-t, var(--bkbg-his-cap-word-spacing-d, normal));
+    }
+}
+
+/* ── Responsive: Mobile ── */
+@media (max-width: 767px) {
+    .bkbg-his-caption {
+        font-size: var(--bkbg-his-cap-font-size-m, var(--bkbg-his-cap-font-size-t, var(--bkbg-his-cap-font-size-d, var(--bkbg-his-cap-sz, 13px))));
+        line-height: var(--bkbg-his-cap-line-height-m, var(--bkbg-his-cap-line-height-t, var(--bkbg-his-cap-line-height-d, 1.4)));
+        letter-spacing: var(--bkbg-his-cap-letter-spacing-m, var(--bkbg-his-cap-letter-spacing-t, var(--bkbg-his-cap-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-his-cap-word-spacing-m, var(--bkbg-his-cap-word-spacing-t, var(--bkbg-his-cap-word-spacing-d, normal)));
+    }
+}
+
+.bkbg-his-stack:hover .bkbg-his-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Reduced motion ────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .bkbg-his-card { transition: none !important; }
+}

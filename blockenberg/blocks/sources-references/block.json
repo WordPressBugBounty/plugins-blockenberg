@@ -1,0 +1,160 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/sources-references",
+    "title": "Sources & References",
+    "description": "A formatted bibliography/citations section for articles and research. Add numbered references with title, author, publication, URL, and access date. Styles: academic, card list, or minimal.",
+    "category": "bkbg-blog",
+    "icon": "book-alt",
+    "keywords": [
+        "sources",
+        "references",
+        "citations",
+        "bibliography",
+        "footnotes",
+        "research",
+        "journalism"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-sources-references-editor",
+    "style": "bkbg-sources-references-style",
+    "viewScript": "bkbg-sources-references-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "label": {
+            "type": "string",
+            "default": "Sources & References"
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "references": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "The State of SEO 2025 Report",
+                    "author": "Ahrefs Research Team",
+                    "publication": "Ahrefs Blog",
+                    "url": "https://ahrefs.com/blog/seo-statistics/",
+                    "accessDate": "February 2025",
+                    "note": ""
+                },
+                {
+                    "title": "How Search Engines Work: Crawling, Indexing, and Ranking",
+                    "author": "Moz Staff",
+                    "publication": "Moz",
+                    "url": "https://moz.com/beginners-guide-to-seo/how-search-engines-work",
+                    "accessDate": "January 2025",
+                    "note": ""
+                },
+                {
+                    "title": "Core Web Vitals: The Complete Guide",
+                    "author": "John Mueller",
+                    "publication": "Google Search Central Blog",
+                    "url": "https://developers.google.com/search/blog/",
+                    "accessDate": "January 2025",
+                    "note": ""
+                }
+            ]
+        },
+        "style": {
+            "type": "string",
+            "default": "academic"
+        },
+        "showAuthor": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPublication": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDate": {
+            "type": "boolean",
+            "default": true
+        },
+        "showUrl": {
+            "type": "boolean",
+            "default": true
+        },
+        "openInNewTab": {
+            "type": "boolean",
+            "default": true
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 40
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "numberColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "authorColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "pubColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "urlColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "labelFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "refFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "refTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

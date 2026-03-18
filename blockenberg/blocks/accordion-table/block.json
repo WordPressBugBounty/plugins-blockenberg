@@ -1,0 +1,301 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/accordion-table",
+    "title": "Accordion Table",
+    "category": "bkbg-content",
+    "description": "A data table where each row expands on click to reveal rich detail content — specs, bullet points, sub-data, or notes. Perfect for pricing tiers, product specs, API docs, and comparison matrices.",
+    "keywords": [
+        "accordion",
+        "table",
+        "expandable",
+        "collapsible",
+        "rows",
+        "data",
+        "specs",
+        "details"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-accordion-table-editor",
+    "editorStyle": "bkbg-accordion-table-style",
+    "style": "bkbg-accordion-table-style",
+    "viewScript": "bkbg-accordion-table-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": ""
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": false
+        },
+        "columns": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Plan",
+                    "align": "left",
+                    "width": ""
+                },
+                {
+                    "label": "Price",
+                    "align": "center",
+                    "width": "100px"
+                },
+                {
+                    "label": "Users",
+                    "align": "center",
+                    "width": "100px"
+                },
+                {
+                    "label": "Storage",
+                    "align": "center",
+                    "width": "110px"
+                },
+                {
+                    "label": "Support",
+                    "align": "center",
+                    "width": "120px"
+                }
+            ]
+        },
+        "rows": {
+            "type": "array",
+            "default": [
+                {
+                    "cells": [
+                        "Starter",
+                        "$9/mo",
+                        "1 user",
+                        "10 GB",
+                        "Email"
+                    ],
+                    "badge": "",
+                    "badgeColor": "#6366f1",
+                    "highlight": false,
+                    "detailTitle": "What's included in Starter",
+                    "detailType": "list",
+                    "detailText": "",
+                    "detailItems": [
+                        "1 website",
+                        "Basic analytics",
+                        "10 GB storage",
+                        "Email support (48h response)",
+                        "SSL certificate",
+                        "99.9% uptime SLA"
+                    ]
+                },
+                {
+                    "cells": [
+                        "Pro",
+                        "$29/mo",
+                        "5 users",
+                        "50 GB",
+                        "Priority"
+                    ],
+                    "badge": "Popular",
+                    "badgeColor": "#6366f1",
+                    "highlight": true,
+                    "detailTitle": "Everything in Starter, plus",
+                    "detailType": "list",
+                    "detailText": "",
+                    "detailItems": [
+                        "5 websites",
+                        "Advanced analytics & reports",
+                        "50 GB storage",
+                        "Priority email & chat support (4h response)",
+                        "Custom domain mapping",
+                        "API access (1,000 req/day)",
+                        "Remove branding"
+                    ]
+                },
+                {
+                    "cells": [
+                        "Business",
+                        "$79/mo",
+                        "25 users",
+                        "250 GB",
+                        "24/7 Phone"
+                    ],
+                    "badge": "",
+                    "badgeColor": "#6366f1",
+                    "highlight": false,
+                    "detailTitle": "Everything in Pro, plus",
+                    "detailType": "list",
+                    "detailText": "",
+                    "detailItems": [
+                        "Unlimited websites",
+                        "White-label dashboard",
+                        "250 GB storage",
+                        "24/7 phone support (1h response)",
+                        "Dedicated account manager",
+                        "SLA guarantee",
+                        "API access (unlimited)",
+                        "SSO / SAML integration"
+                    ]
+                },
+                {
+                    "cells": [
+                        "Enterprise",
+                        "Custom",
+                        "Unlimited",
+                        "1 TB+",
+                        "Dedicated CSM"
+                    ],
+                    "badge": "",
+                    "badgeColor": "#8b5cf6",
+                    "highlight": false,
+                    "detailTitle": "Custom enterprise package",
+                    "detailType": "text",
+                    "detailText": "Our enterprise plan is fully customized to your organization's needs. Contact our sales team to discuss volume pricing, custom SLAs, on-premise deployment options, and dedicated infrastructure.",
+                    "detailItems": []
+                }
+            ]
+        },
+        "allowMultiple": {
+            "type": "boolean",
+            "default": false
+        },
+        "showRowNumbers": {
+            "type": "boolean",
+            "default": false
+        },
+        "stripedRows": {
+            "type": "boolean",
+            "default": true
+        },
+        "stickyHeader": {
+            "type": "boolean",
+            "default": false
+        },
+        "expandIconPosition": {
+            "type": "string",
+            "default": "right"
+        },
+        "expandIcon": {
+            "type": "string",
+            "default": "chevron"
+        },
+        "animDuration": {
+            "type": "number",
+            "default": 240
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "cellPaddingV": {
+            "type": "number",
+            "default": 14
+        },
+        "cellPaddingH": {
+            "type": "number",
+            "default": 16
+        },
+        "headerSize": {
+            "type": "number",
+            "default": 13
+        },
+        "cellSize": {
+            "type": "number",
+            "default": 14
+        },
+        "detailSize": {
+            "type": "number",
+            "default": 14
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 900
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "rowBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "rowAltBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "rowHoverBg": {
+            "type": "string",
+            "default": "#f0f4ff"
+        },
+        "rowColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "highlightRowBg": {
+            "type": "string",
+            "default": "#f0f0ff"
+        },
+        "highlightRowBorder": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "detailBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "detailColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "detailBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "headerTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "cellTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "detailTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

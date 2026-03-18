@@ -1,0 +1,163 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/image-filter",
+    "title": "Image Filter",
+    "category": "bkbg-media",
+    "icon": "format-image",
+    "description": "Upload an image and apply real-time CSS filter adjustments — brightness, contrast, saturation, hue, blur, sepia, grayscale, and more. Choose from presets or build a custom look. Optionally expose live filter sliders to visitors.",
+    "keywords": [
+        "image",
+        "filter",
+        "photo",
+        "css",
+        "effects",
+        "brightness",
+        "contrast",
+        "instagram",
+        "preset"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-image-filter-editor",
+    "style": "bkbg-image-filter-style",
+    "viewScript": "bkbg-image-filter-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "caption": {
+            "type": "string",
+            "default": ""
+        },
+        "preset": {
+            "type": "string",
+            "default": "none"
+        },
+        "brightness": {
+            "type": "number",
+            "default": 100
+        },
+        "contrast": {
+            "type": "number",
+            "default": 100
+        },
+        "saturation": {
+            "type": "number",
+            "default": 100
+        },
+        "hueRotate": {
+            "type": "number",
+            "default": 0
+        },
+        "blur": {
+            "type": "number",
+            "default": 0
+        },
+        "sepia": {
+            "type": "number",
+            "default": 0
+        },
+        "grayscale": {
+            "type": "number",
+            "default": 0
+        },
+        "invert": {
+            "type": "number",
+            "default": 0
+        },
+        "opacity": {
+            "type": "number",
+            "default": 100
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 0
+        },
+        "objectFit": {
+            "type": "string",
+            "default": "cover"
+        },
+        "imageHeight": {
+            "type": "number",
+            "default": 0
+        },
+        "blendMode": {
+            "type": "string",
+            "default": "normal"
+        },
+        "showControls": {
+            "type": "boolean",
+            "default": false
+        },
+        "showReset": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPresets": {
+            "type": "boolean",
+            "default": true
+        },
+        "transitionMs": {
+            "type": "number",
+            "default": 300
+        },
+        "overlayColor": {
+            "type": "string",
+            "default": ""
+        },
+        "overlayOpacity": {
+            "type": "number",
+            "default": 0
+        },
+        "captionColor": {
+            "type": "string",
+            "default": "#555555"
+        },
+        "captionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "borderColor": {
+            "type": "string",
+            "default": ""
+        },
+        "captionFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "captionFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "captionLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "captionTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

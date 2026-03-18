@@ -1,0 +1,123 @@
+/* ── Image Collage ───────────────────────────────────────────── */
+.bkbg-image-collage-wrap {
+    box-sizing: border-box;
+}
+.bkbg-image-collage {
+    position: relative;
+    overflow: visible !important; /* allow rotated images to overflow */
+}
+.bkbg-ic-img {
+    box-sizing: border-box;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.bkbg-image-collage[data-hover-lift='1'] .bkbg-ic-img:hover {
+    transform: translateY(-8px) rotate(0deg) scale(1.04) !important;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2) !important;
+    z-index: 99 !important;
+}
+.bkbg-image-collage[data-animate-in='1'] .bkbg-ic-img {
+    opacity: 0;
+    transform: translateY(20px) !important;
+}
+
+/* ── Editor: always show images (frontend.js / IntersectionObserver does not
+   run inside the block editor, so images would stay invisible) ── */
+.editor-styles-wrapper .bkbg-image-collage[data-animate-in='1'] .bkbg-ic-img {
+    opacity: 1 !important;
+    transform: none !important;
+}
+.bkbg-image-collage[data-animate-in='1'].bkbg-ic--visible .bkbg-ic-img {
+    opacity: 1;
+    transform: translateY(0) !important;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.bkbg-image-collage[data-animate-in='1'].bkbg-ic--visible .bkbg-ic-img:nth-child(1) { transition-delay: 0.0s; }
+.bkbg-image-collage[data-animate-in='1'].bkbg-ic--visible .bkbg-ic-img:nth-child(2) { transition-delay: 0.12s; }
+.bkbg-image-collage[data-animate-in='1'].bkbg-ic--visible .bkbg-ic-img:nth-child(3) { transition-delay: 0.24s; }
+.bkbg-image-collage[data-animate-in='1'].bkbg-ic--visible .bkbg-ic-img:nth-child(4) { transition-delay: 0.36s; }
+.bkbg-image-collage[data-animate-in='1'].bkbg-ic--visible .bkbg-ic-img:nth-child(5) { transition-delay: 0.48s; }
+.bkbg-ic-overlay-card {
+    position: absolute;
+    z-index: 20;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    pointer-events: none;
+}
+
+/* ── Typography: Headline ─────────────────────────────────────── */
+.bkbg-ic-overlay-card .bkbg-ic-headline {
+    font-family:      var(--bkbg-ic-ht-font-family, inherit);
+    font-size:        var(--bkbg-ic-ht-font-size-d, var(--bkbg-ic-ht-sz, 16px));
+    font-weight:      var(--bkbg-ic-ht-font-weight, var(--bkbg-ic-ht-w, 700));
+    font-style:       var(--bkbg-ic-ht-font-style, normal);
+    text-decoration:  var(--bkbg-ic-ht-text-decoration, none);
+    text-transform:   var(--bkbg-ic-ht-text-transform, none);
+    line-height:      var(--bkbg-ic-ht-line-height-d, var(--bkbg-ic-ht-lh, 1.3));
+    letter-spacing:   var(--bkbg-ic-ht-letter-spacing-d, normal);
+    word-spacing:     var(--bkbg-ic-ht-word-spacing-d, normal);
+}
+
+/* ── Typography: Subtext ──────────────────────────────────────── */
+.bkbg-ic-overlay-card .bkbg-ic-subtext {
+    font-family:      var(--bkbg-ic-st-font-family, inherit);
+    font-size:        var(--bkbg-ic-st-font-size-d, var(--bkbg-ic-st-sz, 13px));
+    font-weight:      var(--bkbg-ic-st-font-weight, var(--bkbg-ic-st-w, 400));
+    font-style:       var(--bkbg-ic-st-font-style, normal);
+    text-decoration:  var(--bkbg-ic-st-text-decoration, none);
+    text-transform:   var(--bkbg-ic-st-text-transform, none);
+    line-height:      var(--bkbg-ic-st-line-height-d, var(--bkbg-ic-st-lh, 1.5));
+    letter-spacing:   var(--bkbg-ic-st-letter-spacing-d, normal);
+    word-spacing:     var(--bkbg-ic-st-word-spacing-d, normal);
+}
+
+/* ── Responsive typography ────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-ic-overlay-card .bkbg-ic-headline {
+        font-size:      var(--bkbg-ic-ht-font-size-t, var(--bkbg-ic-ht-font-size-d, var(--bkbg-ic-ht-sz, 16px)));
+        line-height:    var(--bkbg-ic-ht-line-height-t, var(--bkbg-ic-ht-line-height-d, var(--bkbg-ic-ht-lh, 1.3)));
+        letter-spacing: var(--bkbg-ic-ht-letter-spacing-t, var(--bkbg-ic-ht-letter-spacing-d, normal));
+        word-spacing:   var(--bkbg-ic-ht-word-spacing-t, var(--bkbg-ic-ht-word-spacing-d, normal));
+    }
+    .bkbg-ic-overlay-card .bkbg-ic-subtext {
+        font-size:      var(--bkbg-ic-st-font-size-t, var(--bkbg-ic-st-font-size-d, var(--bkbg-ic-st-sz, 13px)));
+        line-height:    var(--bkbg-ic-st-line-height-t, var(--bkbg-ic-st-line-height-d, var(--bkbg-ic-st-lh, 1.5)));
+        letter-spacing: var(--bkbg-ic-st-letter-spacing-t, var(--bkbg-ic-st-letter-spacing-d, normal));
+        word-spacing:   var(--bkbg-ic-st-word-spacing-t, var(--bkbg-ic-st-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-ic-overlay-card .bkbg-ic-headline {
+        font-size:      var(--bkbg-ic-ht-font-size-m, var(--bkbg-ic-ht-font-size-t, var(--bkbg-ic-ht-font-size-d, var(--bkbg-ic-ht-sz, 16px))));
+        line-height:    var(--bkbg-ic-ht-line-height-m, var(--bkbg-ic-ht-line-height-t, var(--bkbg-ic-ht-line-height-d, var(--bkbg-ic-ht-lh, 1.3))));
+        letter-spacing: var(--bkbg-ic-ht-letter-spacing-m, var(--bkbg-ic-ht-letter-spacing-t, var(--bkbg-ic-ht-letter-spacing-d, normal)));
+        word-spacing:   var(--bkbg-ic-ht-word-spacing-m, var(--bkbg-ic-ht-word-spacing-t, var(--bkbg-ic-ht-word-spacing-d, normal)));
+    }
+    .bkbg-ic-overlay-card .bkbg-ic-subtext {
+        font-size:      var(--bkbg-ic-st-font-size-m, var(--bkbg-ic-st-font-size-t, var(--bkbg-ic-st-font-size-d, var(--bkbg-ic-st-sz, 13px))));
+        line-height:    var(--bkbg-ic-st-line-height-m, var(--bkbg-ic-st-line-height-t, var(--bkbg-ic-st-line-height-d, var(--bkbg-ic-st-lh, 1.5))));
+        letter-spacing: var(--bkbg-ic-st-letter-spacing-m, var(--bkbg-ic-st-letter-spacing-t, var(--bkbg-ic-st-letter-spacing-d, normal)));
+        word-spacing:   var(--bkbg-ic-st-word-spacing-m, var(--bkbg-ic-st-word-spacing-t, var(--bkbg-ic-st-word-spacing-d, normal)));
+    }
+}
+@media (max-width: 640px) {
+    .bkbg-image-collage {
+        height: 280px !important;
+    }
+    .bkbg-ic-img {
+        transform: none !important;
+        position: static !important;
+        display: block;
+        margin-bottom: 12px;
+    }
+    .bkbg-image-collage {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        position: static !important;
+        height: auto !important;
+        overflow: hidden !important;
+    }
+    .bkbg-ic-img {
+        width: 46% !important;
+        height: 140px !important;
+    }
+}

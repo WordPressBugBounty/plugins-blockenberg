@@ -1,0 +1,126 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/treemap-chart",
+    "version": "1.0.0",
+    "title": "Treemap Chart",
+    "category": "bkbg-charts",
+    "icon": "grid-view",
+    "description": "Hierarchical data visualized as proportional nested rectangles. Great for market share, budget breakdowns, and category comparisons.",
+    "keywords": [
+        "treemap",
+        "chart",
+        "hierarchy",
+        "proportion",
+        "data",
+        "visualization"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-treemap-chart-editor",
+    "style": "bkbg-treemap-chart-style",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Market Share"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "number",
+            "default": 800
+        },
+        "svgHeight": {
+            "type": "number",
+            "default": 480
+        },
+        "gap": {
+            "type": "number",
+            "default": 3
+        },
+        "cornerRadius": {
+            "type": "number",
+            "default": 4
+        },
+        "showLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPercent": {
+            "type": "boolean",
+            "default": false
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "valueFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Product A",
+                    "value": 38,
+                    "color": "#4f46e5"
+                },
+                {
+                    "label": "Product B",
+                    "value": 22,
+                    "color": "#0891b2"
+                },
+                {
+                    "label": "Product C",
+                    "value": 16,
+                    "color": "#059669"
+                },
+                {
+                    "label": "Product D",
+                    "value": 11,
+                    "color": "#d97706"
+                },
+                {
+                    "label": "Product E",
+                    "value": 7,
+                    "color": "#dc2626"
+                },
+                {
+                    "label": "Product F",
+                    "value": 4,
+                    "color": "#7c3aed"
+                },
+                {
+                    "label": "Other",
+                    "value": 2,
+                    "color": "#6b7280"
+                }
+            ]
+        }
+    }
+}

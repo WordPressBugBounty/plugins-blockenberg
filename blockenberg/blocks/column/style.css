@@ -1,0 +1,519 @@
+/* ========================================
+   Column Block Styles
+   Prefix: bkbg-column
+   ======================================== */
+
+/* CSS Custom Properties */
+.bkbg-column {
+    --bkbg-col-desktop: 50%;
+    --bkbg-col-tablet: 50%;
+    --bkbg-col-mobile: 100%;
+    --bkbg-col-padding-none: 0;
+    --bkbg-col-padding-xs: 8px;
+    --bkbg-col-padding-s: 16px;
+    --bkbg-col-padding-m: 24px;
+    --bkbg-col-padding-l: 32px;
+    --bkbg-col-padding-xl: 48px;
+    position: relative;
+    box-sizing: border-box;
+    min-height: 1px;
+    min-width: 0;
+    overflow: visible;
+}
+
+/* Default desktop width */
+.bkbg-column {
+    flex: 0 0 var(--bkbg-col-desktop);
+    max-width: var(--bkbg-col-desktop);
+    width: var(--bkbg-col-desktop);
+}
+
+/* Column inner container */
+.bkbg-column__inner {
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Column Vertical Alignment */
+.bkbg-column--valign-top .bkbg-column__inner {
+    justify-content: flex-start;
+}
+
+.bkbg-column--valign-middle .bkbg-column__inner {
+    justify-content: center;
+}
+
+.bkbg-column--valign-bottom .bkbg-column__inner {
+    justify-content: flex-end;
+}
+
+/* Inner Padding Variants */
+.bkbg-column--padding-none .bkbg-column__inner {
+    padding: var(--bkbg-col-padding-none);
+}
+
+.bkbg-column--padding-xs .bkbg-column__inner {
+    padding: var(--bkbg-col-padding-xs);
+}
+
+.bkbg-column--padding-s .bkbg-column__inner {
+    padding: var(--bkbg-col-padding-s);
+}
+
+.bkbg-column--padding-m .bkbg-column__inner {
+    padding: var(--bkbg-col-padding-m);
+}
+
+.bkbg-column--padding-l .bkbg-column__inner {
+    padding: var(--bkbg-col-padding-l);
+}
+
+.bkbg-column--padding-xl .bkbg-column__inner {
+    padding: var(--bkbg-col-padding-xl);
+}
+
+/* Typography */
+.bkbg-column { font-size: var(--bkbg-col-cn-font-size-d, 16px); font-weight: var(--bkbg-col-cn-font-weight, 400); line-height: var(--bkbg-col-cn-line-height-d, 1.6); font-family: var(--bkbg-col-cn-font-family, inherit); font-style: var(--bkbg-col-cn-font-style, normal); text-transform: var(--bkbg-col-cn-text-transform, none); text-decoration: var(--bkbg-col-cn-text-decoration, none); letter-spacing: var(--bkbg-col-cn-letter-spacing-d, normal); word-spacing: var(--bkbg-col-cn-word-spacing-d, normal); }
+
+/* ========================================
+   Responsive Breakpoints
+   ======================================== */
+
+/* Tablet: 768px - 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .bkbg-column {
+        flex-basis: var(--bkbg-col-tablet, var(--bkbg-col-desktop));
+        max-width: var(--bkbg-col-tablet, var(--bkbg-col-desktop));
+        width: var(--bkbg-col-tablet, var(--bkbg-col-desktop));
+    }
+    .bkbg-column { font-size: var(--bkbg-col-cn-font-size-t, var(--bkbg-col-cn-font-size-d, 16px)); line-height: var(--bkbg-col-cn-line-height-t, var(--bkbg-col-cn-line-height-d, 1.6)); letter-spacing: var(--bkbg-col-cn-letter-spacing-t, var(--bkbg-col-cn-letter-spacing-d, normal)); word-spacing: var(--bkbg-col-cn-word-spacing-t, var(--bkbg-col-cn-word-spacing-d, normal)); }
+}
+
+/* Mobile: < 768px */
+@media (max-width: 767px) {
+    .bkbg-column {
+        flex-basis: var(--bkbg-col-mobile, 100%);
+        max-width: var(--bkbg-col-mobile, 100%);
+        width: var(--bkbg-col-mobile, 100%);
+    }
+    
+    /* Stack on mobile override */
+    .bkbg-row--stack-mobile .bkbg-column {
+        flex-basis: 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    .bkbg-column { font-size: var(--bkbg-col-cn-font-size-m, var(--bkbg-col-cn-font-size-t, var(--bkbg-col-cn-font-size-d, 16px))); line-height: var(--bkbg-col-cn-line-height-m, var(--bkbg-col-cn-line-height-t, var(--bkbg-col-cn-line-height-d, 1.6))); letter-spacing: var(--bkbg-col-cn-letter-spacing-m, var(--bkbg-col-cn-letter-spacing-t, var(--bkbg-col-cn-letter-spacing-d, normal))); word-spacing: var(--bkbg-col-cn-word-spacing-m, var(--bkbg-col-cn-word-spacing-t, var(--bkbg-col-cn-word-spacing-d, normal))); }
+}
+
+/* ========================================
+   Editor-specific Styles
+   ======================================== */
+
+/* Column in editor */
+.editor-styles-wrapper .bkbg-column {
+    min-height: 40px;
+    border: 1px dashed transparent;
+    border-radius: 3px;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.editor-styles-wrapper .bkbg-column:hover {
+    border-color: rgba(59, 130, 246, 0.25);
+    background-color: rgba(59, 130, 246, 0.02);
+}
+
+.editor-styles-wrapper .bkbg-column.is-selected,
+.editor-styles-wrapper .bkbg-column:focus-within {
+    border-color: rgba(59, 130, 246, 0.4);
+    background-color: rgba(59, 130, 246, 0.03);
+}
+
+/* ========================================
+   Column Hover Move Controls (Editor)
+   ======================================== */
+
+.bkbg-column__move-actions {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    display: flex;
+    gap: 2px;
+    padding: 2px 3px;
+    background: rgba(59, 130, 246, 0.04);
+    border: 1px dashed rgba(59, 130, 246, 0.35);
+    border-radius: 999px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+    z-index: 5;
+}
+
+.editor-styles-wrapper .bkbg-column:hover .bkbg-column__move-actions,
+.editor-styles-wrapper .bkbg-column.is-selected .bkbg-column__move-actions,
+.editor-styles-wrapper .bkbg-column:focus-within .bkbg-column__move-actions {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.bkbg-column__move-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 22px !important;
+    height: 22px !important;
+    min-width: 22px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 6px !important;
+    color: rgba(59, 130, 246, 0.85) !important;
+    opacity: 0.85;
+}
+
+.bkbg-column__move-btn:hover:not(:disabled) {
+    background: rgba(59, 130, 246, 0.10) !important;
+    color: #2563eb !important;
+    opacity: 1;
+}
+
+.bkbg-column__move-btn:disabled {
+    opacity: 0.25 !important;
+    cursor: not-allowed !important;
+}
+
+.bkbg-column__move-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+    fill: currentColor !important;
+}
+
+/* Don't show move controls while resizing the row */
+.bkbg-row--is-resizing .bkbg-column__move-actions {
+    display: none !important;
+}
+
+/* Width label in editor */
+.bkbg-column__width-label {
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 9px;
+    font-weight: 600;
+    color: #64748b;
+    background: #f1f5f9;
+    padding: 1px 5px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.editor-styles-wrapper .bkbg-column:hover .bkbg-column__width-label,
+.editor-styles-wrapper .bkbg-column.is-selected .bkbg-column__width-label {
+    opacity: 1;
+}
+
+/* Ensure inner blocks fill column */
+.editor-styles-wrapper .bkbg-column .bkbg-column__inner {
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.editor-styles-wrapper .bkbg-column .block-editor-inner-blocks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100%;
+}
+
+.editor-styles-wrapper .bkbg-column .block-editor-block-list__layout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100%;
+}
+
+/* Editor preview: vertical alignment must target block list layout wrappers */
+.editor-styles-wrapper .bkbg-column.bkbg-column--valign-top > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    justify-content: flex-start !important;
+}
+
+.editor-styles-wrapper .bkbg-column.bkbg-column--valign-middle > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    justify-content: center !important;
+}
+
+.editor-styles-wrapper .bkbg-column.bkbg-column--valign-bottom > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    justify-content: flex-end !important;
+}
+
+/* Column width controls in inspector */
+.bkbg-column-widths-controls {
+    margin-top: 8px;
+}
+
+.bkbg-column-widths-controls .components-range-control {
+    margin-bottom: 16px;
+}
+
+/* Column info in inspector */
+.bkbg-column-info {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.bkbg-column-info p {
+    margin: 4px 0;
+}
+
+.bkbg-column-info strong {
+    color: #1e293b;
+}
+
+/* ========================================
+   Block Appender Styling - Context aware
+   ======================================== */
+
+.editor-styles-wrapper .bkbg-column > .bkbg-column__inner > .block-editor-inner-blocks .block-editor-inserter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Make sure the layout can contain positioned appender */
+.editor-styles-wrapper .bkbg-column > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    position: relative;
+    min-height: 40px;
+}
+
+/* ----------------------------------------
+   EMPTY COLUMN: Full drop zone with outline icon
+   ---------------------------------------- */
+
+/* When appender is the only child = empty column */
+.editor-styles-wrapper .bkbg-column > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender:only-child {
+    position: relative !important;
+    width: 100% !important;
+    margin: 0 !important;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+/* Show empty column drop zone only when parent SECTION is hovered/selected */
+.editor-styles-wrapper [data-type="blockenberg/section"]:hover .bkbg-column > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender:only-child,
+.editor-styles-wrapper [data-type="blockenberg/section"].is-selected .bkbg-column > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender:only-child,
+.editor-styles-wrapper [data-type="blockenberg/section"]:focus-within .bkbg-column > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender:only-child {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Empty column drop zone style */
+.editor-styles-wrapper .bkbg-column > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender:only-child .block-editor-button-block-appender {
+    background: transparent !important;
+    border: 2px dashed rgba(59, 130, 246, 0.3) !important;
+    border-radius: 6px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 60px !important;
+    min-width: 100% !important;
+    padding: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: none !important;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.editor-styles-wrapper .bkbg-column > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender:only-child .block-editor-button-block-appender:hover {
+    background: rgba(59, 130, 246, 0.05) !important;
+    border-color: rgba(59, 130, 246, 0.5) !important;
+    transform: none;
+}
+
+/* Outline plus icon for empty column */
+.editor-styles-wrapper .bkbg-column > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender:only-child .block-editor-button-block-appender svg {
+    fill: none !important;
+    stroke: rgba(59, 130, 246, 0.5) !important;
+    stroke-width: 2px !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.editor-styles-wrapper .bkbg-column > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender:only-child .block-editor-button-block-appender:hover svg {
+    stroke: rgba(59, 130, 246, 0.8) !important;
+}
+
+/* ----------------------------------------
+   COLUMN WITH CONTENT: Hide appender completely
+   ---------------------------------------- */
+
+/* When appender is NOT the only child = has content - hide it */
+.editor-styles-wrapper .bkbg-column > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender:not(:only-child) {
+    display: none !important;
+}
+
+/* Ensure inner blocks layout is flex column - direct children only */
+.editor-styles-wrapper .bkbg-column > .bkbg-column__inner > .block-editor-inner-blocks {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.editor-styles-wrapper .bkbg-column > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* ========================================
+   Prevent column shrink/grow issues
+   ======================================== */
+
+.bkbg-column {
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+}
+
+/* Editor: Ensure column wrapper respects width */
+.editor-styles-wrapper [data-type="blockenberg/column"] {
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+}
+
+/* Allow flex grow only when explicitly needed */
+.bkbg-row--flex-grow .bkbg-column {
+    flex-grow: 1;
+}
+
+/* ========================================
+   Drag and Drop States
+   ======================================== */
+
+/* Show drop zones when dragging blocks globally */
+body.bkbg-is-dragging .bkbg-column > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender:only-child {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+/* Show all borders during drag - like hover state */
+body.bkbg-is-dragging .bkbg-section {
+    border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+body.bkbg-is-dragging .bkbg-row {
+    border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+body.bkbg-is-dragging .bkbg-column {
+    border-color: rgba(59, 130, 246, 0.25) !important;
+}
+
+/* Highlight when dragging over - stronger highlight */
+body.bkbg-is-dragging .bkbg-section.bkbg-drop-target {
+    border-color: rgba(59, 130, 246, 0.6) !important;
+    background-color: rgba(59, 130, 246, 0.03) !important;
+}
+
+body.bkbg-is-dragging .bkbg-row.bkbg-drop-target {
+    border-color: rgba(59, 130, 246, 0.6) !important;
+    background-color: rgba(59, 130, 246, 0.03) !important;
+}
+
+body.bkbg-is-dragging .bkbg-column.bkbg-drop-target {
+    border-color: rgba(59, 130, 246, 0.6) !important;
+    background-color: rgba(59, 130, 246, 0.05) !important;
+}
+
+/* Highlight drop zone (appender button) when dragging over */
+.block-editor-button-block-appender.bkbg-drop-target,
+.bkbg-column .block-editor-button-block-appender.bkbg-drop-target,
+.editor-styles-wrapper .bkbg-column > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender:only-child .block-editor-button-block-appender.bkbg-drop-target {
+    background: rgba(59, 130, 246, 0.15) !important;
+    border-color: rgba(59, 130, 246, 0.8) !important;
+    border-style: solid !important;
+}
+
+.block-editor-button-block-appender.bkbg-drop-target svg,
+.bkbg-column .block-editor-button-block-appender.bkbg-drop-target svg,
+.editor-styles-wrapper .bkbg-column > .bkbg-column__inner > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender:only-child .block-editor-button-block-appender.bkbg-drop-target svg {
+    stroke: rgba(59, 130, 246, 1) !important;
+    fill: rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Also highlight when parent block-list-appender has bkbg-drop-target */
+.block-list-appender.bkbg-drop-target .block-editor-button-block-appender,
+.editor-styles-wrapper .bkbg-column .block-list-appender.bkbg-drop-target .block-editor-button-block-appender {
+    background: rgba(59, 130, 246, 0.15) !important;
+    border-color: rgba(59, 130, 246, 0.8) !important;
+    border-style: solid !important;
+}
+
+.block-list-appender.bkbg-drop-target .block-editor-button-block-appender svg,
+.editor-styles-wrapper .bkbg-column .block-list-appender.bkbg-drop-target .block-editor-button-block-appender svg {
+    stroke: rgba(59, 130, 246, 1) !important;
+    fill: rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Inspector: spacing controls */
+.block-editor-page .bkbg-spacing-control,
+.interface-interface-skeleton__editor .bkbg-spacing-control {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.block-editor-page .bkbg-spacing-control__title,
+.interface-interface-skeleton__editor .bkbg-spacing-control__title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.block-editor-page .bkbg-spacing-control__grid,
+.interface-interface-skeleton__editor .bkbg-spacing-control__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 12px;
+}
+
+.block-editor-page .bkbg-spacing-control__item,
+.interface-interface-skeleton__editor .bkbg-spacing-control__item {
+    min-width: 0;
+}
+
+.block-editor-page .bkbg-spacing-control__label,
+.interface-interface-skeleton__editor .bkbg-spacing-control__label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.block-editor-page .bkbg-spacing-control__row,
+.interface-interface-skeleton__editor .bkbg-spacing-control__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 78px;
+    gap: 6px;
+    align-items: center;
+}
+
+.block-editor-page .bkbg-spacing-control__custom-unit,
+.interface-interface-skeleton__editor .bkbg-spacing-control__custom-unit {
+    margin-top: 6px;
+}

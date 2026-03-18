@@ -1,0 +1,162 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/area-chart",
+    "title": "Area Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-area",
+    "description": "Smooth filled area chart with multiple datasets, gradient fills, and animation using Chart.js (CDN). Great for showing trends over time.",
+    "keywords": [
+        "chart",
+        "area",
+        "graph",
+        "data",
+        "visualization",
+        "fill",
+        "trend"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-area-chart-editor",
+    "style": "bkbg-area-chart-style",
+    "viewScript": "bkbg-area-chart-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": ""
+        },
+        "subtitle": {
+            "type": "string",
+            "default": ""
+        },
+        "labels": {
+            "type": "string",
+            "default": "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug"
+        },
+        "datasets": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "d1",
+                    "label": "Revenue",
+                    "data": "40,55,72,65,90,85,100,95",
+                    "color": "#6c3fb5",
+                    "fill": true,
+                    "tension": 0.45
+                },
+                {
+                    "id": "d2",
+                    "label": "Expenses",
+                    "data": "30,38,45,50,55,60,62,58",
+                    "color": "#e040fb",
+                    "fill": true,
+                    "tension": 0.45
+                }
+            ]
+        },
+        "height": {
+            "type": "number",
+            "default": 340
+        },
+        "gradientFill": {
+            "type": "boolean",
+            "default": true
+        },
+        "gradientAlpha": {
+            "type": "number",
+            "default": 20
+        },
+        "showGrid": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "legendPos": {
+            "type": "string",
+            "default": "top"
+        },
+        "showPoints": {
+            "type": "boolean",
+            "default": true
+        },
+        "pointSize": {
+            "type": "number",
+            "default": 4
+        },
+        "lineWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "yMin": {
+            "type": "string",
+            "default": ""
+        },
+        "yMax": {
+            "type": "string",
+            "default": ""
+        },
+        "xLabel": {
+            "type": "string",
+            "default": ""
+        },
+        "yLabel": {
+            "type": "string",
+            "default": ""
+        },
+        "animate": {
+            "type": "boolean",
+            "default": true
+        },
+        "animDuration": {
+            "type": "number",
+            "default": 800
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 20
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

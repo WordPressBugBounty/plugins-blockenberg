@@ -1,0 +1,104 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/barcode-generator",
+    "title": "Barcode Generator",
+    "category": "bkbg-dev",
+    "icon": "editor-code",
+    "description": "Generate Code128 barcodes from any text or number. Customize bar height, width, colors, and download as PNG.",
+    "keywords": [
+        "barcode",
+        "code128",
+        "qr",
+        "scan",
+        "label",
+        "generator"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-barcode-generator-editor",
+    "style": "bkbg-barcode-generator-style",
+    "viewScript": "bkbg-barcode-generator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Barcode Generator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Enter text to generate a barcode"
+        },
+        "defaultText": {
+            "type": "string",
+            "default": "BLOCKENBERG-2024"
+        },
+        "barHeight": {
+            "type": "number",
+            "default": 80
+        },
+        "barWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDownload": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCopy": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "barColor": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "buttonBg": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 26
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

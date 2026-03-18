@@ -1,0 +1,136 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/newsletter",
+    "title": "Newsletter Signup",
+    "category": "bkbg-marketing",
+    "icon": "email",
+    "description": "Email opt-in form that stores subscribers via the built-in /subscribe REST endpoint.",
+    "keywords": [
+        "newsletter",
+        "subscribe",
+        "email",
+        "opt-in"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-newsletter-editor",
+    "style": "bkbg-newsletter-style",
+    "viewScript": "bkbg-newsletter-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Stay in the Loop"
+        },
+        "subheading": {
+            "type": "string",
+            "default": "Get the latest updates delivered straight to your inbox."
+        },
+        "showName": {
+            "type": "boolean",
+            "default": false
+        },
+        "placeholderEmail": {
+            "type": "string",
+            "default": "Your email address"
+        },
+        "placeholderName": {
+            "type": "string",
+            "default": "Your name"
+        },
+        "submitLabel": {
+            "type": "string",
+            "default": "Subscribe"
+        },
+        "successMessage": {
+            "type": "string",
+            "default": "🎉 You're subscribed! Thank you."
+        },
+        "errorMessage": {
+            "type": "string",
+            "default": "Please enter a valid email address."
+        },
+        "layout": {
+            "type": "string",
+            "default": "vertical"
+        },
+        "style": {
+            "type": "string",
+            "default": "card"
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f0f9ff"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#1e3a5f"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "fieldBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "fieldBorderColor": {
+            "type": "string",
+            "default": "#cbd5e1"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 560
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 26
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 15
+        },
+        "padding": {
+            "type": "number",
+            "default": 40
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

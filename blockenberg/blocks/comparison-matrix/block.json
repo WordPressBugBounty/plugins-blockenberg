@@ -1,0 +1,252 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/comparison-matrix",
+	"title": "Comparison Matrix",
+	"description": "Feature comparison table with checkmarks, icons, and highlighted columns.",
+	"category": "bkbg-marketing",
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-comparison-matrix-editor",
+	"style": "bkbg-comparison-matrix-style",
+	"viewScript": "bkbg-comparison-matrix-frontend",
+	"icon": "grid-view",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"plans": {
+			"type": "array",
+			"default": [
+				{
+					"name": "Starter",
+					"subtitle": "Perfect for individuals",
+					"highlight": false,
+					"badge": ""
+				},
+				{
+					"name": "Pro",
+					"subtitle": "Most popular",
+					"highlight": true,
+					"badge": "Popular"
+				},
+				{
+					"name": "Agency",
+					"subtitle": "For growing teams",
+					"highlight": false,
+					"badge": ""
+				}
+			]
+		},
+		"features": {
+			"type": "array",
+			"default": [
+				{
+					"label": "Projects",
+					"group": "",
+					"values": [
+						"3",
+						"Unlimited",
+						"Unlimited"
+					]
+				},
+				{
+					"label": "Storage",
+					"group": "",
+					"values": [
+						"5 GB",
+						"50 GB",
+						"500 GB"
+					]
+				},
+				{
+					"label": "Team Members",
+					"group": "",
+					"values": [
+						"1",
+						"10",
+						"Unlimited"
+					]
+				},
+				{
+					"label": "Custom Domain",
+					"group": "",
+					"values": [
+						"false",
+						"true",
+						"true"
+					]
+				},
+				{
+					"label": "Analytics",
+					"group": "",
+					"values": [
+						"Basic",
+						"Advanced",
+						"Advanced"
+					]
+				},
+				{
+					"label": "API Access",
+					"group": "",
+					"values": [
+						"false",
+						"true",
+						"true"
+					]
+				},
+				{
+					"label": "Priority Support",
+					"group": "",
+					"values": [
+						"false",
+						"false",
+						"true"
+					]
+				},
+				{
+					"label": "SLA",
+					"group": "",
+					"values": [
+						"false",
+						"false",
+						"true"
+					]
+				}
+			]
+		},
+		"showGroupHeaders": {
+			"type": "boolean",
+			"default": false
+		},
+		"stickyHeader": {
+			"type": "boolean",
+			"default": true
+		},
+		"checkIcon": {
+			"type": "string",
+			"default": "✓"
+		},
+		"checkIconType": {
+			"type": "string",
+			"default": "custom-char"
+		},
+		"checkIconDashicon": {
+			"type": "string",
+			"default": "yes"
+		},
+		"checkIconImageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"crossIcon": {
+			"type": "string",
+			"default": "✕"
+		},
+		"crossIconType": {
+			"type": "string",
+			"default": "custom-char"
+		},
+		"crossIconDashicon": {
+			"type": "string",
+			"default": "no"
+		},
+		"crossIconImageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"firstColWidth": {
+			"type": "integer",
+			"default": 200
+		},
+		"cellPadding": {
+			"type": "integer",
+			"default": 16
+		},
+		"headerRadius": {
+			"type": "integer",
+			"default": 12
+		},
+		"rowRadius": {
+			"type": "integer",
+			"default": 8
+		},
+		"fontSize": {
+			"type": "integer",
+			"default": 14
+		},
+		"headerBg": {
+			"type": "string",
+			"default": "#f8fafc"
+		},
+		"headerColor": {
+			"type": "string",
+			"default": "#0f172a"
+		},
+		"highlightBg": {
+			"type": "string",
+			"default": "#6366f1"
+		},
+		"highlightColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"rowBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"rowAltBg": {
+			"type": "string",
+			"default": "#f8fafc"
+		},
+		"rowColor": {
+			"type": "string",
+			"default": "#334155"
+		},
+		"borderColor": {
+			"type": "string",
+			"default": "#e2e8f0"
+		},
+		"checkColor": {
+			"type": "string",
+			"default": "#10b981"
+		},
+		"crossColor": {
+			"type": "string",
+			"default": "#f43f5e"
+		},
+		"badgeBg": {
+			"type": "string",
+			"default": "#fef3c7"
+		},
+		"badgeColor": {
+			"type": "string",
+			"default": "#92400e"
+		},
+		"sectionBg": {
+			"type": "string",
+			"default": ""
+		},
+		"fontWeight": {
+			"type": "string",
+			"default": "400"
+		},
+		"lineHeight": {
+			"type": "number",
+			"default": 1.5
+		},
+		"typoHeader": {
+			"type": "object",
+			"default": {}
+		},
+		"typoBody": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

@@ -1,0 +1,207 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/newsletter-section",
+    "title": "Newsletter Section",
+    "description": "Full newsletter landing section with past issue previews, subscriber count social proof, benefits bullets, and a prominent subscribe form. Distinct from a simple newsletter widget.",
+    "category": "bkbg-marketing",
+    "icon": "email",
+    "keywords": [
+        "newsletter",
+        "subscribe",
+        "email list",
+        "mailing list",
+        "issues",
+        "digest"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-newsletter-section-editor",
+    "style": "bkbg-newsletter-section-style",
+    "viewScript": "bkbg-newsletter-section-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "Weekly Newsletter"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Join 12,000+ Marketers Getting Smarter Every Week"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "No fluff. Just the most actionable strategies, tools, and case studies — curated every Tuesday."
+        },
+        "subscriberCount": {
+            "type": "string",
+            "default": "12,000+ subscribers"
+        },
+        "showSubscriberBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "formPlaceholder": {
+            "type": "string",
+            "default": "Your email address"
+        },
+        "formSubmitLabel": {
+            "type": "string",
+            "default": "Subscribe Free"
+        },
+        "formAction": {
+            "type": "string",
+            "default": "#"
+        },
+        "successMessage": {
+            "type": "string",
+            "default": "🎉 You're in! Check your inbox for a confirmation."
+        },
+        "privacyNote": {
+            "type": "string",
+            "default": "No spam. Unsubscribe anytime."
+        },
+        "benefits": {
+            "type": "array",
+            "default": [
+                "Proven marketing strategies that actually work",
+                "Tool reviews and comparisons (unbiased)",
+                "Real-world case studies with numbers",
+                "Exclusive subscriber-only resources"
+            ]
+        },
+        "showBenefits": {
+            "type": "boolean",
+            "default": true
+        },
+        "sampleIssues": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "How Loom grew to $975M with zero cold outreach",
+                    "date": "Mar 12, 2024",
+                    "excerpt": "The video messaging playbook that turned a simple screen-recorder into a category-defining tool..."
+                },
+                {
+                    "title": "7 SEO tactics that still work in the AI era",
+                    "date": "Mar 5, 2024",
+                    "excerpt": "Google's latest changes killed many old-school tactics — but these seven are stronger than ever..."
+                },
+                {
+                    "title": "The onboarding email sequence that converts 43%",
+                    "date": "Feb 27, 2024",
+                    "excerpt": "A step-by-step teardown of the email sequence Buffer used to hit 43% trial-to-paid conversion..."
+                }
+            ]
+        },
+        "showSamples": {
+            "type": "boolean",
+            "default": true
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1100
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 100
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 100
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#818cf8"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "benefitColor": {
+            "type": "string",
+            "default": "#cbd5e1"
+        },
+        "checkColor": {
+            "type": "string",
+            "default": "#22d3ee"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "inputBorder": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "inputColor": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "submitBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "submitColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "privacyColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "issueBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "issueBorder": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "issueTitleColor": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "issueDateColor": {
+            "type": "string",
+            "default": "#818cf8"
+        },
+        "issueExcerptColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "subscriberBadgeBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "subscriberBadgeColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

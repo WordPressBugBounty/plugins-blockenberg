@@ -1,0 +1,325 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/side-menu",
+	"title": "Side Menu",
+	"description": "Hierarchical vertical navigation with collapsible sections for docs, wikis, and multi-section pages.",
+	"category": "bkbg-layout",
+	"icon": "list-view",
+	"keywords": [
+		"navigation",
+		"menu",
+		"sidebar",
+		"docs",
+		"wiki",
+		"toc"
+	],
+	"editorScript": "bkbg-side-menu-editor",
+	"editorStyle": "bkbg-side-menu-style",
+	"style": "bkbg-side-menu-style",
+	"viewScript": "bkbg-side-menu-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"items": {
+			"type": "array",
+			"default": [
+				{
+					"label": "Getting Started",
+					"url": "#",
+					"icon": "📚",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"level": 0,
+					"badge": "",
+					"badgeColor": "#6366f1",
+					"dividerBefore": false
+				},
+				{
+					"label": "Installation",
+					"url": "#",
+					"icon": "",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"level": 1,
+					"badge": "",
+					"badgeColor": "#6366f1",
+					"dividerBefore": false
+				},
+				{
+					"label": "Quick Start",
+					"url": "#",
+					"icon": "",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"level": 1,
+					"badge": "New",
+					"badgeColor": "#10b981",
+					"dividerBefore": false
+				},
+				{
+					"label": "Configuration",
+					"url": "#",
+					"icon": "",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"level": 2,
+					"badge": "",
+					"badgeColor": "#6366f1",
+					"dividerBefore": false
+				},
+				{
+					"label": "Core Concepts",
+					"url": "#",
+					"icon": "🧩",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"level": 0,
+					"badge": "",
+					"badgeColor": "#6366f1",
+					"dividerBefore": true
+				},
+				{
+					"label": "Architecture",
+					"url": "#",
+					"icon": "",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"level": 1,
+					"badge": "",
+					"badgeColor": "#6366f1",
+					"dividerBefore": false
+				},
+				{
+					"label": "Components",
+					"url": "#",
+					"icon": "",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"level": 1,
+					"badge": "",
+					"badgeColor": "#6366f1",
+					"dividerBefore": false
+				},
+				{
+					"label": "Hooks",
+					"url": "#",
+					"icon": "",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"level": 2,
+					"badge": "",
+					"badgeColor": "#6366f1",
+					"dividerBefore": false
+				},
+				{
+					"label": "Context API",
+					"url": "#",
+					"icon": "",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"level": 2,
+					"badge": "",
+					"badgeColor": "#6366f1",
+					"dividerBefore": false
+				},
+				{
+					"label": "API Reference",
+					"url": "#",
+					"icon": "📖",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"level": 0,
+					"badge": "",
+					"badgeColor": "#6366f1",
+					"dividerBefore": true
+				},
+				{
+					"label": "REST API",
+					"url": "#",
+					"icon": "",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"level": 1,
+					"badge": "v2",
+					"badgeColor": "#8b5cf6",
+					"dividerBefore": false
+				},
+				{
+					"label": "Changelog",
+					"url": "#",
+					"icon": "📝",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"level": 0,
+					"badge": "",
+					"badgeColor": "#6366f1",
+					"dividerBefore": true
+				}
+			]
+		},
+		"headingText": {
+			"type": "string",
+			"default": "Documentation"
+		},
+		"showHeading": {
+			"type": "boolean",
+			"default": true
+		},
+		"menuStyle": {
+			"type": "string",
+			"default": "default"
+		},
+		"collapsible": {
+			"type": "boolean",
+			"default": true
+		},
+		"defaultExpanded": {
+			"type": "boolean",
+			"default": true
+		},
+		"showIcons": {
+			"type": "boolean",
+			"default": true
+		},
+		"showBadges": {
+			"type": "boolean",
+			"default": true
+		},
+		"showDividers": {
+			"type": "boolean",
+			"default": true
+		},
+		"activeIndex": {
+			"type": "number",
+			"default": 1
+		},
+		"width": {
+			"type": "number",
+			"default": 260
+		},
+		"itemPaddingV": {
+			"type": "number",
+			"default": 8
+		},
+		"itemPaddingH": {
+			"type": "number",
+			"default": 14
+		},
+		"fontSize": {
+			"type": "number",
+			"default": 14
+		},
+		"headingSize": {
+			"type": "number",
+			"default": 11
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 0
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 0
+		},
+		"bgColor": {
+			"type": "string",
+			"default": ""
+		},
+		"menuBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"menuBorder": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"headingColor": {
+			"type": "string",
+			"default": "#9ca3af"
+		},
+		"itemColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"itemHoverBg": {
+			"type": "string",
+			"default": "#f3f4f6"
+		},
+		"itemHoverColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"activeItemBg": {
+			"type": "string",
+			"default": "#ede9fe"
+		},
+		"activeItemColor": {
+			"type": "string",
+			"default": "#6366f1"
+		},
+		"activeIndicatorColor": {
+			"type": "string",
+			"default": "#6366f1"
+		},
+		"sectionHeadingColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"dividerColor": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"badgeBg": {
+			"type": "string",
+			"default": "#6366f1"
+		},
+		"badgeColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"arrowColor": {
+			"type": "string",
+			"default": "#9ca3af"
+		},
+		"fontWeight": {
+			"type": "number",
+			"default": 600
+		},
+		"headingFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"headingTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"itemTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

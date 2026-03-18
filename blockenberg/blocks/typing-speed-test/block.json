@@ -1,0 +1,125 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/typing-speed-test",
+    "title": "Typing Speed Test",
+    "category": "bkbg-interactive",
+    "icon": "editor-spellcheck",
+    "description": "Interactive typing speed test. Measures WPM (words per minute), accuracy, and calculates a score. Choose from multiple difficulty levels, track errors in real time, and see a detailed results summary.",
+    "keywords": [
+        "typing",
+        "speed",
+        "wpm",
+        "test",
+        "accuracy",
+        "words per minute",
+        "keyboard"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-typing-speed-test-editor",
+    "style": "bkbg-typing-speed-test-style",
+    "viewScript": "bkbg-typing-speed-test-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Typing Speed Test"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "How fast can you type?"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "duration": {
+            "type": "number",
+            "default": 60
+        },
+        "defaultDifficulty": {
+            "type": "string",
+            "default": "medium"
+        },
+        "showLiveWpm": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAccuracy": {
+            "type": "boolean",
+            "default": true
+        },
+        "showErrors": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDifficultyBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#8b5cf6"
+        },
+        "correctColor": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "errorColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "textAreaBg": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "textAreaColor": {
+            "type": "string",
+            "default": "#c4b5fd"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#4c1d95"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 700
+        }
+    }
+}

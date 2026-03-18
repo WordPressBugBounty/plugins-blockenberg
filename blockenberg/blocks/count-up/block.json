@@ -1,0 +1,114 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/count-up",
+    "title": "Count Up",
+    "category": "bkbg-effects",
+    "icon": "chart-bar",
+    "description": "Animated number counter that counts up when scrolled into view.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-count-up-editor",
+    "style": "bkbg-count-up-style",
+    "viewScript": "bkbg-count-up-frontend",
+    "attributes": {
+        "value": {
+            "type": "number",
+            "default": 1000
+        },
+        "prefix": {
+            "type": "string",
+            "default": ""
+        },
+        "suffix": {
+            "type": "string",
+            "default": "+"
+        },
+        "duration": {
+            "type": "number",
+            "default": 2000
+        },
+        "separator": {
+            "type": "string",
+            "default": ","
+        },
+        "decimals": {
+            "type": "number",
+            "default": 0
+        },
+        "label": {
+            "type": "string",
+            "default": "Happy Clients"
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "icon": {
+            "type": "string",
+            "default": "😊"
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 40
+        },
+        "valueSize": {
+            "type": "number",
+            "default": 72
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 18
+        },
+        "valueColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 360
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 48
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 48
+        },
+        "typoValue": {
+            "type": "object",
+            "default": {}
+        },
+        "typoLabel": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

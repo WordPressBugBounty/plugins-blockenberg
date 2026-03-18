@@ -1,0 +1,111 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/particle-text",
+    "title": "Particle Text",
+    "description": "HTML5 Canvas text that assembles from scattered particles on load. Hover to scatter and re-assemble. Perfect for hero sections and dramatic reveal effects.",
+    "category": "bkbg-effects",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-particle-text-editor",
+    "style": "bkbg-particle-text-style",
+    "viewScript": "bkbg-particle-text-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "text": {
+            "type": "string",
+            "default": "BLOCKENBERG"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Build anything. Fast."
+        },
+        "sampleFontSize": {
+            "type": "number",
+            "default": 100
+        },
+        "fontFamily": {
+            "type": "string",
+            "default": "system-ui, sans-serif"
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "900"
+        },
+        "particleSize": {
+            "type": "number",
+            "default": 2
+        },
+        "particleGap": {
+            "type": "number",
+            "default": 4
+        },
+        "particleColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "particleColor2": {
+            "type": "string",
+            "default": "#ec4899"
+        },
+        "useGradient": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#0a0a0f"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "subtextSize": {
+            "type": "number",
+            "default": 18
+        },
+        "canvasHeight": {
+            "type": "number",
+            "default": 300
+        },
+        "scatterRadius": {
+            "type": "number",
+            "default": 500
+        },
+        "enterDuration": {
+            "type": "number",
+            "default": 1200
+        },
+        "easing": {
+            "type": "string",
+            "default": "ease-out"
+        },
+        "hoverEffect": {
+            "type": "boolean",
+            "default": true
+        },
+        "hoverRadius": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

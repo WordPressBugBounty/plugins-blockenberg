@@ -1,0 +1,224 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/link-in-bio",
+    "title": "Link in Bio",
+    "description": "Linktree-style profile block: avatar, name, bio, and a customizable stack of link buttons.",
+    "category": "bkbg-business",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-link-in-bio-editor",
+    "style": "bkbg-link-in-bio-style",
+    "viewScript": "bkbg-link-in-bio-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "avatarUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "avatarId": {
+            "type": "number",
+            "default": 0
+        },
+        "name": {
+            "type": "string",
+            "default": "Alex Johnson"
+        },
+        "title": {
+            "type": "string",
+            "default": "Designer & Developer"
+        },
+        "bio": {
+            "type": "string",
+            "default": "Building beautiful things on the internet. ✨ Open to collaborations."
+        },
+        "showBio": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "avatarSize": {
+            "type": "number",
+            "default": 96
+        },
+        "avatarRadius": {
+            "type": "number",
+            "default": 50
+        },
+        "avatarBorderWidth": {
+            "type": "number",
+            "default": 3
+        },
+        "avatarBorderColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "links": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "l1",
+                    "icon": "🌐",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "My Website",
+                    "url": "https://example.com",
+                    "newTab": true,
+                    "style": "filled"
+                },
+                {
+                    "id": "l2",
+                    "icon": "📸",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "Instagram",
+                    "url": "https://instagram.com",
+                    "newTab": true,
+                    "style": "filled"
+                },
+                {
+                    "id": "l3",
+                    "icon": "🐦",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "Twitter / X",
+                    "url": "https://twitter.com",
+                    "newTab": true,
+                    "style": "outline"
+                },
+                {
+                    "id": "l4",
+                    "icon": "💼",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "LinkedIn",
+                    "url": "https://linkedin.com",
+                    "newTab": true,
+                    "style": "ghost"
+                }
+            ]
+        },
+        "buttonStyle": {
+            "type": "string",
+            "default": "filled"
+        },
+        "buttonRadius": {
+            "type": "number",
+            "default": 99
+        },
+        "buttonGap": {
+            "type": "number",
+            "default": 12
+        },
+        "buttonMaxWidth": {
+            "type": "number",
+            "default": 480
+        },
+        "buttonPaddingV": {
+            "type": "number",
+            "default": 14
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        },
+        "socials": {
+            "type": "array",
+            "default": []
+        },
+        "showSocials": {
+            "type": "boolean",
+            "default": false
+        },
+        "socialSize": {
+            "type": "number",
+            "default": 32
+        },
+        "nameSize": {
+            "type": "number",
+            "default": 22
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 15
+        },
+        "bioSize": {
+            "type": "number",
+            "default": 15
+        },
+        "buttonFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "bioColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btnBorderColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 48
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 48
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "taglineTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bioTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "buttonTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

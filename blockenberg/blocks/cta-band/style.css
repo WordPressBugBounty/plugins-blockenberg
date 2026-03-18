@@ -1,0 +1,93 @@
+/* CTA Band Block — bkcb- prefix */
+.bkcb-wrap {
+  background: var(--bkcb-bg, linear-gradient(135deg,#1a73e8,#0d47a1));
+  color: var(--bkcb-text, #fff);
+  padding: var(--bkcb-pv, 60px) var(--bkcb-ph, 40px);
+  box-sizing: border-box;
+}
+.bkcb-layout-center {
+  display: flex; flex-direction: column;
+  align-items: center; text-align: center; gap: 24px;
+}
+.bkcb-layout-side {
+  display: flex;
+  align-items: center; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap;
+}
+.bkcb-layout-side .bkcb-text { flex: 1; text-align: left; }
+
+.bkcb-wrap .bkcb-headline {
+  margin: 0; color: var(--bkcb-text, #fff);
+  font-family: var(--bkcb-hdl-font-family, inherit);
+  font-size: var(--bkcb-hdl-font-size-d, var(--bkcb-hSz, 32px));
+  font-weight: var(--bkcb-hdl-font-weight, 700);
+  font-style: var(--bkcb-hdl-font-style, normal);
+  text-transform: var(--bkcb-hdl-text-transform, none);
+  text-decoration: var(--bkcb-hdl-text-decoration, none);
+  line-height: var(--bkcb-hdl-line-height-d, 1.25);
+  letter-spacing: var(--bkcb-hdl-letter-spacing-d, normal);
+  word-spacing: var(--bkcb-hdl-word-spacing-d, normal);
+}
+.bkcb-subtext {
+  margin: 8px 0 0; color: var(--bkcb-text, #fff);
+  font-family: var(--bkcb-sub-font-family, inherit);
+  font-size: var(--bkcb-sub-font-size-d, var(--bkcb-sSz, 16px));
+  font-weight: var(--bkcb-sub-font-weight, normal);
+  font-style: var(--bkcb-sub-font-style, normal);
+  text-transform: var(--bkcb-sub-text-transform, none);
+  text-decoration: var(--bkcb-sub-text-decoration, none);
+  line-height: var(--bkcb-sub-line-height-d, 1.5);
+  letter-spacing: var(--bkcb-sub-letter-spacing-d, normal);
+  word-spacing: var(--bkcb-sub-word-spacing-d, normal);
+  opacity: .9;
+}
+.bkcb-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--bkcb-btnBg, #fff);
+  color: var(--bkcb-btnText, #1a73e8);
+  border-radius: var(--bkcb-btnR, 6px);
+  font-weight: 700; font-size: 1em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity .2s, transform .15s;
+}
+.bkcb-btn:hover { opacity: .9; transform: translateY(-1px); color: var(--bkcb-btnText, #1a73e8); }
+
+@media (max-width: 600px) {
+  .bkcb-layout-side { flex-direction: column; text-align: center; }
+  .bkcb-layout-side .bkcb-text { text-align: center; }
+}
+
+.wp-block-blockenberg-cta-band .bkcb-headline,
+.wp-block-blockenberg-cta-band .bkcb-subtext { outline: none; }
+
+/* Typography responsive */
+@media (max-width: 1024px) {
+  .bkcb-wrap .bkcb-headline {
+    font-size: var(--bkcb-hdl-font-size-t, var(--bkcb-hdl-font-size-d, var(--bkcb-hSz, 32px)));
+    line-height: var(--bkcb-hdl-line-height-t, var(--bkcb-hdl-line-height-d, 1.25));
+    letter-spacing: var(--bkcb-hdl-letter-spacing-t, var(--bkcb-hdl-letter-spacing-d, normal));
+    word-spacing: var(--bkcb-hdl-word-spacing-t, var(--bkcb-hdl-word-spacing-d, normal));
+  }
+  .bkcb-subtext {
+    font-size: var(--bkcb-sub-font-size-t, var(--bkcb-sub-font-size-d, var(--bkcb-sSz, 16px)));
+    line-height: var(--bkcb-sub-line-height-t, var(--bkcb-sub-line-height-d, 1.5));
+    letter-spacing: var(--bkcb-sub-letter-spacing-t, var(--bkcb-sub-letter-spacing-d, normal));
+    word-spacing: var(--bkcb-sub-word-spacing-t, var(--bkcb-sub-word-spacing-d, normal));
+  }
+}
+@media (max-width: 767px) {
+  .bkcb-wrap .bkcb-headline {
+    font-size: var(--bkcb-hdl-font-size-m, var(--bkcb-hdl-font-size-t, var(--bkcb-hdl-font-size-d, var(--bkcb-hSz, 32px))));
+    line-height: var(--bkcb-hdl-line-height-m, var(--bkcb-hdl-line-height-t, var(--bkcb-hdl-line-height-d, 1.25)));
+    letter-spacing: var(--bkcb-hdl-letter-spacing-m, var(--bkcb-hdl-letter-spacing-t, var(--bkcb-hdl-letter-spacing-d, normal)));
+    word-spacing: var(--bkcb-hdl-word-spacing-m, var(--bkcb-hdl-word-spacing-t, var(--bkcb-hdl-word-spacing-d, normal)));
+  }
+  .bkcb-subtext {
+    font-size: var(--bkcb-sub-font-size-m, var(--bkcb-sub-font-size-t, var(--bkcb-sub-font-size-d, var(--bkcb-sSz, 16px))));
+    line-height: var(--bkcb-sub-line-height-m, var(--bkcb-sub-line-height-t, var(--bkcb-sub-line-height-d, 1.5)));
+    letter-spacing: var(--bkcb-sub-letter-spacing-m, var(--bkcb-sub-letter-spacing-t, var(--bkcb-sub-letter-spacing-d, normal)));
+    word-spacing: var(--bkcb-sub-word-spacing-m, var(--bkcb-sub-word-spacing-t, var(--bkcb-sub-word-spacing-d, normal)));
+  }
+}

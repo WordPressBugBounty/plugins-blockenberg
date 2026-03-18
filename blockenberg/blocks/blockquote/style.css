@@ -1,0 +1,397 @@
+/* ========================================
+   Blockquote / Pull Quote Block
+   Prefix: bkbg-bq-
+   ======================================== */
+
+/* ── CSS Custom Properties (fallbacks) ────────────────────────────────────── */
+.bkbg-bq-wrap {
+  --bkbg-bq-accent-color:  #3b82f6;
+  --bkbg-bq-accent-w:      4px;
+  --bkbg-bq-accent-r:      2px;
+  --bkbg-bq-bg:            transparent;
+  --bkbg-bq-radius:        8px;
+  --bkbg-bq-mark-opacity:  0.20;
+  --bkbg-bq-pad-t:         28px;
+  --bkbg-bq-pad-r:         32px;
+  --bkbg-bq-pad-b:         28px;
+  --bkbg-bq-pad-l:         32px;
+  --bkbg-bq-shadow:        none;
+  --bkbg-bq-quote-color:   #1e293b;
+  --bkbg-bq-quote-spacing: 20px;
+  --bkbg-bq-name-color:    #1e293b;
+  --bkbg-bq-role-color:    #6b7280;
+  --bkbg-bq-photo-size:    52px;
+  --bkbg-bq-photo-border:  none;
+  --bkbg-bq-gap-photo:     12px;
+}
+
+/* ── Wrapper ───────────────────────────────────────────────────────────────── */
+.bkbg-bq-wrap {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: var(--bkbg-bq-pad-t) var(--bkbg-bq-pad-r) var(--bkbg-bq-pad-b) var(--bkbg-bq-pad-l);
+  background: var(--bkbg-bq-bg);
+  border-radius: var(--bkbg-bq-radius);
+  box-shadow: var(--bkbg-bq-shadow);
+}
+
+/* ── Body (sits above float mark) ─────────────────────────────────────────── */
+.bkbg-bq-body {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Quote text ────────────────────────────────────────────────────────────── */
+.bkbg-bq-text {
+  display: block;
+  margin: 0 0 var(--bkbg-bq-quote-spacing) 0;
+  padding: 0;
+  border: none;
+  font-family: var(--bkbg-bq-quote-font-family, inherit);
+  font-weight: var(--bkbg-bq-quote-font-weight, 400);
+  font-style: var(--bkbg-bq-quote-font-style, italic);
+  text-transform: var(--bkbg-bq-quote-text-transform, none);
+  text-decoration: var(--bkbg-bq-quote-text-decoration, none);
+  font-size: var(--bkbg-bq-quote-font-size-d, 22px);
+  line-height: var(--bkbg-bq-quote-line-height-d, 1.65);
+  letter-spacing: var(--bkbg-bq-quote-letter-spacing-d, normal);
+  word-spacing: var(--bkbg-bq-quote-word-spacing-d, normal);
+  color: var(--bkbg-bq-quote-color);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────── */
+/*  QUOTE STYLE VARIANTS                                                        */
+/* ──────────────────────────────────────────────────────────────────────────── */
+
+/* ── Line: left accent bar ─────────────────────────────────────────────────── */
+.bkbg-bq-wrap[data-style="line"] {
+  border-left: var(--bkbg-bq-accent-w) solid var(--bkbg-bq-accent-color);
+  border-radius: 0 var(--bkbg-bq-radius) var(--bkbg-bq-radius) 0;
+}
+
+/* ── Top Bar: top accent stripe ─────────────────────────────────────────────── */
+.bkbg-bq-wrap[data-style="top-bar"] {
+  border-top: var(--bkbg-bq-accent-w) solid var(--bkbg-bq-accent-color);
+  border-radius: 0 0 var(--bkbg-bq-radius) var(--bkbg-bq-radius);
+}
+
+/* ── Bordered: full outline ─────────────────────────────────────────────────── */
+.bkbg-bq-wrap[data-style="bordered"] {
+  border: var(--bkbg-bq-accent-w) solid var(--bkbg-bq-accent-color);
+}
+
+/* ── Card: tinted background + shadow ─────────────────────────────────────── */
+.bkbg-bq-wrap[data-style="card"] {
+  /* bg set via inline CSS var; shadow controlled by toggle */
+  border-radius: var(--bkbg-bq-radius);
+}
+
+/* ── Quotes: mark is the main visual focus — no extra rules needed, typography
+   controlled entirely via inspector controls ──────────────────────────────── */
+
+/* ── Minimal: no decorations — inherits base styles ────────────────────────── */
+
+/* ──────────────────────────────────────────────────────────────────────────── */
+/*  DECORATIVE QUOTE MARK                                                       */
+/* ──────────────────────────────────────────────────────────────────────────── */
+
+/* Mark shared base */
+.bkbg-bq-mark {
+  display: block;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Float → Side: mark in its own left column, body takes remaining space */
+.bkbg-bq-wrap[data-mark-pos="float"],
+.bkbg-bq-wrap[data-mark-pos="right"] {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--bkbg-bq-mark-side-gap, 16px);
+}
+
+/* Left: mark first (default DOM order) */
+.bkbg-bq-wrap[data-mark-pos="float"] .bkbg-bq-mark {
+  position: static;
+  flex-shrink: 0;
+  opacity: 1;
+  pointer-events: none;
+  user-select: none;
+  margin-top: -4px;
+}
+
+/* Right: mark last — push it after body via order */
+.bkbg-bq-wrap[data-mark-pos="right"] .bkbg-bq-mark {
+  position: static;
+  flex-shrink: 0;
+  opacity: 1;
+  pointer-events: none;
+  user-select: none;
+  margin-top: -4px;
+  order: 1; /* body is 0 (default), mark goes after */
+}
+
+.bkbg-bq-wrap[data-mark-pos="float"] .bkbg-bq-body,
+.bkbg-bq-wrap[data-mark-pos="right"] .bkbg-bq-body {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Above: in-flow block before quote text */
+.bkbg-bq-wrap[data-mark-pos="above"] .bkbg-bq-mark {
+  position: static;
+  margin-bottom: 8px;
+}
+
+/* Center the mark for center-aligned blocks */
+.bkbg-bq-wrap[data-quote-align="center"][data-mark-pos="above"] .bkbg-bq-body,
+.bkbg-bq-wrap[data-quote-align="center"][data-mark-pos="above"] .bkbg-bq-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────── */
+/*  TEXT ALIGNMENT                                                               */
+/* ──────────────────────────────────────────────────────────────────────────── */
+
+.bkbg-bq-wrap[data-quote-align="left"]   .bkbg-bq-body { text-align: left;   }
+.bkbg-bq-wrap[data-quote-align="center"] .bkbg-bq-body { text-align: center; }
+.bkbg-bq-wrap[data-quote-align="right"]  .bkbg-bq-body { text-align: right;  }
+
+/* ──────────────────────────────────────────────────────────────────────────── */
+/*  AUTHOR ROW                                                                   */
+/* ──────────────────────────────────────────────────────────────────────────── */
+
+.bkbg-bq-author {
+  display: flex;
+  gap: var(--bkbg-bq-gap-photo);
+}
+
+/* Horizontal: photo on left, text on right, vertically centred */
+.bkbg-bq-author[data-layout="horizontal"] {
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Horizontal-right: photo on right, text on left, text right-aligned towards photo */
+.bkbg-bq-author[data-layout="horizontal-right"] {
+  flex-direction: row;
+  align-items: center;
+}
+.bkbg-bq-author[data-layout="horizontal-right"] .bkbg-bq-photo-wrap {
+  order: 1;
+}
+.bkbg-bq-author[data-layout="horizontal-right"] .bkbg-bq-info {
+  text-align: right;
+}
+
+/* Vertical: photo above, text below, stacked */
+.bkbg-bq-author[data-layout="vertical"] {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Align author row with text alignment */
+.bkbg-bq-wrap[data-quote-align="center"] .bkbg-bq-author {
+  justify-content: center;
+}
+.bkbg-bq-wrap[data-quote-align="center"] .bkbg-bq-author[data-layout="vertical"] {
+  align-items: center;
+}
+/* When horizontal + photo visible + centre align: keep name/role left-aligned to photo */
+.bkbg-bq-wrap[data-quote-align="center"] .bkbg-bq-author[data-layout="horizontal"] .bkbg-bq-info {
+  text-align: left;
+}
+/* horizontal-right keeps right-align regardless of quote alignment */
+.bkbg-bq-wrap[data-quote-align="center"] .bkbg-bq-author[data-layout="horizontal-right"] .bkbg-bq-info,
+.bkbg-bq-wrap[data-quote-align="left"] .bkbg-bq-author[data-layout="horizontal-right"] .bkbg-bq-info {
+  text-align: right;
+}
+.bkbg-bq-wrap[data-quote-align="right"] .bkbg-bq-author {
+  justify-content: flex-end;
+}
+.bkbg-bq-wrap[data-quote-align="right"] .bkbg-bq-author[data-layout="vertical"] {
+  align-items: flex-end;
+}
+.bkbg-bq-wrap[data-quote-align="right"] .bkbg-bq-author[data-layout="horizontal"] .bkbg-bq-info {
+  text-align: left;
+}
+.bkbg-bq-wrap[data-quote-align="right"] .bkbg-bq-author[data-layout="horizontal-right"] .bkbg-bq-info {
+  text-align: right;
+}
+
+/* Info column */
+.bkbg-bq-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  justify-content: center;
+}
+
+/* ── Author name ───────────────────────────────────────────────────────────── */
+.bkbg-bq-name,
+.bkbg-bq-wrap .bkbg-bq-name {
+  margin: 0;
+  padding: 0;
+  font-family: var(--bkbg-bq-name-font-family, inherit);
+  font-weight: var(--bkbg-bq-name-font-weight, 700);
+  font-style: var(--bkbg-bq-name-font-style, normal);
+  text-transform: var(--bkbg-bq-name-text-transform, none);
+  text-decoration: var(--bkbg-bq-name-text-decoration, none);
+  font-size: var(--bkbg-bq-name-font-size-d, 15px);
+  line-height: var(--bkbg-bq-name-line-height-d, 1.3);
+  letter-spacing: var(--bkbg-bq-name-letter-spacing-d, normal);
+  word-spacing: var(--bkbg-bq-name-word-spacing-d, normal);
+  color: var(--bkbg-bq-name-color);
+  text-align: inherit;
+}
+
+/* ── Author role ───────────────────────────────────────────────────────────── */
+.bkbg-bq-role,
+.bkbg-bq-wrap .bkbg-bq-role {
+  margin: 0;
+  padding: 0;
+  font-family: var(--bkbg-bq-role-font-family, inherit);
+  font-weight: var(--bkbg-bq-role-font-weight, 400);
+  font-style: var(--bkbg-bq-role-font-style, normal);
+  text-transform: var(--bkbg-bq-role-text-transform, none);
+  text-decoration: var(--bkbg-bq-role-text-decoration, none);
+  font-size: var(--bkbg-bq-role-font-size-d, 13px);
+  line-height: var(--bkbg-bq-role-line-height-d, 1.4);
+  letter-spacing: var(--bkbg-bq-role-letter-spacing-d, normal);
+  word-spacing: var(--bkbg-bq-role-word-spacing-d, normal);
+  color: var(--bkbg-bq-role-color);
+  text-align: inherit;
+}
+
+/* ── Author photo ──────────────────────────────────────────────────────────── */
+.bkbg-bq-photo-wrap {
+  flex-shrink: 0;
+  width: var(--bkbg-bq-photo-size);
+  height: var(--bkbg-bq-photo-size);
+  overflow: hidden;
+}
+
+.bkbg-bq-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: var(--bkbg-bq-photo-border);
+}
+
+/* Photo shapes */
+.bkbg-bq-photo-wrap[data-shape="circle"] {
+  border-radius: 50%;
+}
+.bkbg-bq-photo-wrap[data-shape="circle"] .bkbg-bq-photo {
+  border-radius: 50%;
+}
+.bkbg-bq-photo-wrap[data-shape="rounded"] {
+  border-radius: 12px;
+}
+.bkbg-bq-photo-wrap[data-shape="rounded"] .bkbg-bq-photo {
+  border-radius: 12px;
+}
+.bkbg-bq-photo-wrap[data-shape="square"] {
+  border-radius: 0;
+}
+
+/* ── Photo placeholder (editor only) ──────────────────────────────────────── */
+.bkbg-bq-photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #e5e7eb;
+  border: 2px dashed #9ca3af;
+  border-radius: inherit;
+  color: #6b7280;
+  font-size: 11px;
+  font-weight: 600;
+  user-select: none;
+}
+
+/* ── Editor adjustments ────────────────────────────────────────────────────── */
+.editor-styles-wrapper .bkbg-bq-wrap {
+  display: block !important;
+}
+
+.editor-styles-wrapper .bkbg-bq-wrap[data-mark-pos="float"],
+.editor-styles-wrapper .bkbg-bq-wrap[data-mark-pos="right"] {
+  display: flex !important;
+}
+
+/* Prevent figure default margin in editor */
+.editor-styles-wrapper .bkbg-bq-wrap {
+  margin-block: 0;
+}
+
+/* Prevent theme blockquote styles leaking in */
+.bkbg-bq-text {
+  quotes: none;
+}
+.bkbg-bq-text::before,
+.bkbg-bq-text::after {
+  content: none;
+}
+
+/* In editor, RichText does not need the dash either */
+
+/* Vertical layout: photo placeholder full-width is wrong — cap it */
+.bkbg-bq-author[data-layout="vertical"] .bkbg-bq-photo-wrap {
+  width: var(--bkbg-bq-photo-size);
+}
+
+/* === Typography responsive === */
+@media (max-width: 1024px) {
+    .bkbg-bq-text {
+        font-size: var(--bkbg-bq-quote-font-size-t, var(--bkbg-bq-quote-font-size-d, 22px));
+        line-height: var(--bkbg-bq-quote-line-height-t, var(--bkbg-bq-quote-line-height-d, 1.65));
+        letter-spacing: var(--bkbg-bq-quote-letter-spacing-t, var(--bkbg-bq-quote-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-bq-quote-word-spacing-t, var(--bkbg-bq-quote-word-spacing-d, normal));
+    }
+    .bkbg-bq-name,
+    .bkbg-bq-wrap .bkbg-bq-name {
+        font-size: var(--bkbg-bq-name-font-size-t, var(--bkbg-bq-name-font-size-d, 15px));
+        line-height: var(--bkbg-bq-name-line-height-t, var(--bkbg-bq-name-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-bq-name-letter-spacing-t, var(--bkbg-bq-name-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-bq-name-word-spacing-t, var(--bkbg-bq-name-word-spacing-d, normal));
+    }
+    .bkbg-bq-role,
+    .bkbg-bq-wrap .bkbg-bq-role {
+        font-size: var(--bkbg-bq-role-font-size-t, var(--bkbg-bq-role-font-size-d, 13px));
+        line-height: var(--bkbg-bq-role-line-height-t, var(--bkbg-bq-role-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-bq-role-letter-spacing-t, var(--bkbg-bq-role-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-bq-role-word-spacing-t, var(--bkbg-bq-role-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-bq-text {
+        font-size: var(--bkbg-bq-quote-font-size-m, var(--bkbg-bq-quote-font-size-t, var(--bkbg-bq-quote-font-size-d, 22px)));
+        line-height: var(--bkbg-bq-quote-line-height-m, var(--bkbg-bq-quote-line-height-t, var(--bkbg-bq-quote-line-height-d, 1.65)));
+        letter-spacing: var(--bkbg-bq-quote-letter-spacing-m, var(--bkbg-bq-quote-letter-spacing-t, var(--bkbg-bq-quote-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-bq-quote-word-spacing-m, var(--bkbg-bq-quote-word-spacing-t, var(--bkbg-bq-quote-word-spacing-d, normal)));
+    }
+    .bkbg-bq-name,
+    .bkbg-bq-wrap .bkbg-bq-name {
+        font-size: var(--bkbg-bq-name-font-size-m, var(--bkbg-bq-name-font-size-t, var(--bkbg-bq-name-font-size-d, 15px)));
+        line-height: var(--bkbg-bq-name-line-height-m, var(--bkbg-bq-name-line-height-t, var(--bkbg-bq-name-line-height-d, 1.3)));
+        letter-spacing: var(--bkbg-bq-name-letter-spacing-m, var(--bkbg-bq-name-letter-spacing-t, var(--bkbg-bq-name-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-bq-name-word-spacing-m, var(--bkbg-bq-name-word-spacing-t, var(--bkbg-bq-name-word-spacing-d, normal)));
+    }
+    .bkbg-bq-role,
+    .bkbg-bq-wrap .bkbg-bq-role {
+        font-size: var(--bkbg-bq-role-font-size-m, var(--bkbg-bq-role-font-size-t, var(--bkbg-bq-role-font-size-d, 13px)));
+        line-height: var(--bkbg-bq-role-line-height-m, var(--bkbg-bq-role-line-height-t, var(--bkbg-bq-role-line-height-d, 1.4)));
+        letter-spacing: var(--bkbg-bq-role-letter-spacing-m, var(--bkbg-bq-role-letter-spacing-t, var(--bkbg-bq-role-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-bq-role-word-spacing-m, var(--bkbg-bq-role-word-spacing-t, var(--bkbg-bq-role-word-spacing-d, normal)));
+    }
+}

@@ -1,0 +1,151 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/event-card",
+    "title": "Event Card",
+    "category": "bkbg-business",
+    "icon": "calendar-alt",
+    "description": "Event display card with date, time, venue, description, speakers, call-to-action button, and Event JSON-LD structured data.",
+    "keywords": [
+        "event",
+        "calendar",
+        "schedule",
+        "conference",
+        "webinar",
+        "schema"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-event-card-editor",
+    "editorStyle": "bkbg-event-card-style",
+    "style": "bkbg-event-card-style",
+    "viewScript": "bkbg-event-card-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide"
+        ]
+    },
+    "attributes": {
+        "eventName": {
+            "type": "string",
+            "default": "Annual Design Summit 2026"
+        },
+        "description": {
+            "type": "string",
+            "default": "Join designers, developers, and product leaders for a day of inspiring talks, hands-on workshops, and networking."
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "startDate": {
+            "type": "string",
+            "default": "2026-06-15"
+        },
+        "startTime": {
+            "type": "string",
+            "default": "09:00"
+        },
+        "endDate": {
+            "type": "string",
+            "default": "2026-06-15"
+        },
+        "endTime": {
+            "type": "string",
+            "default": "18:00"
+        },
+        "timezone": {
+            "type": "string",
+            "default": "America/New_York"
+        },
+        "venueName": {
+            "type": "string",
+            "default": "Javits Center"
+        },
+        "venueAddress": {
+            "type": "string",
+            "default": "429 11th Ave, New York, NY 10001"
+        },
+        "eventType": {
+            "type": "string",
+            "default": "In-Person"
+        },
+        "eventUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ticketUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ticketLabel": {
+            "type": "string",
+            "default": "Get Tickets"
+        },
+        "badges": {
+            "type": "string",
+            "default": "Free,Workshops,Networking"
+        },
+        "organizer": {
+            "type": "string",
+            "default": ""
+        },
+        "layoutStyle": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "cardShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "schemaEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "eventNameFontSize": { "type": "number", "default": 22 },
+        "eventNameFontWeight": { "type": "string", "default": "800" },
+        "eventNameLineHeight": { "type": "number", "default": 1.2 },
+        "descFontSize": { "type": "number", "default": 14 },
+        "descFontWeight": { "type": "string", "default": "400" },
+        "descLineHeight": { "type": "number", "default": 1.6 },
+        "typoName": { "type": "object", "default": {} },
+        "typoDesc": { "type": "object", "default": {} },
+        "typoBadge": { "type": "object", "default": {} },
+        "typoMeta": { "type": "object", "default": {} },
+        "typoBtn": { "type": "object", "default": {} }
+    }
+}

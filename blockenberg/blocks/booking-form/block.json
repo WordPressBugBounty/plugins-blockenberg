@@ -1,0 +1,225 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/booking-form",
+    "title": "Booking Form",
+    "category": "bkbg-marketing",
+    "description": "Appointment booking form with calendar date picker, time slot selection, service type and confirmation message.",
+    "keywords": [
+        "booking",
+        "appointment",
+        "calendar",
+        "schedule",
+        "reservation",
+        "form",
+        "date",
+        "time"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-booking-form-editor",
+    "style": "bkbg-booking-form-style",
+    "viewScript": "bkbg-booking-form-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "formTitle": {
+            "type": "string",
+            "default": "Book an Appointment"
+        },
+        "formSubtitle": {
+            "type": "string",
+            "default": "Choose your preferred date and time."
+        },
+        "services": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Consultation (30 min)",
+                    "duration": 30,
+                    "price": "$50"
+                },
+                {
+                    "label": "Full Session (60 min)",
+                    "duration": 60,
+                    "price": "$90"
+                },
+                {
+                    "label": "Workshop (90 min)",
+                    "duration": 90,
+                    "price": "$120"
+                }
+            ]
+        },
+        "timeSlots": {
+            "type": "array",
+            "default": [
+                "09:00",
+                "09:30",
+                "10:00",
+                "10:30",
+                "11:00",
+                "11:30",
+                "14:00",
+                "14:30",
+                "15:00",
+                "15:30",
+                "16:00",
+                "16:30"
+            ]
+        },
+        "blockedDays": {
+            "type": "array",
+            "default": [
+                0,
+                6
+            ]
+        },
+        "showServiceSelect": {
+            "type": "boolean",
+            "default": true
+        },
+        "showNameField": {
+            "type": "boolean",
+            "default": true
+        },
+        "showEmailField": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPhoneField": {
+            "type": "boolean",
+            "default": true
+        },
+        "showNotes": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPrice": {
+            "type": "boolean",
+            "default": true
+        },
+        "confirmationTitle": {
+            "type": "string",
+            "default": "Booking Confirmed! 🎉"
+        },
+        "confirmationMsg": {
+            "type": "string",
+            "default": "Thank you! We've received your booking and will send a confirmation email shortly."
+        },
+        "submitLabel": {
+            "type": "string",
+            "default": "Confirm Booking"
+        },
+        "formWidth": {
+            "type": "number",
+            "default": 600
+        },
+        "formRadius": {
+            "type": "number",
+            "default": 20
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "calendarRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "formBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "formBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "calendarBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "calendarHeaderBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "calendarHeaderColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "selectedDayBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "selectedDayColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "slotBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "slotSelectedBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "slotSelectedColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "inputBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "mutedColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "formTitleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "formSubtitleFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,240 @@
+/* =========================================================
+   Blockenberg — Recipe Scaler  (bkbg-rsc-*)
+   ========================================================= */
+
+.bkbg-rsc-wrap {
+    box-sizing:    border-box;
+    border-radius: 14px;
+    padding:       32px 24px;
+    font-family:   inherit;
+    margin:        0 auto;
+}
+
+.bkbg-rsc-wrap h3.bkbg-rsc-title {
+    font-family: var(--bkrsc-tt-font-family, inherit);
+    font-size: var(--bkrsc-tt-font-size-d, 26px);
+    font-weight: var(--bkrsc-tt-font-weight, 700);
+    font-style: var(--bkrsc-tt-font-style, normal);
+    text-decoration: var(--bkrsc-tt-text-decoration, none);
+    text-transform: var(--bkrsc-tt-text-transform, none);
+    line-height: var(--bkrsc-tt-line-height-d, 1.2);
+    letter-spacing: var(--bkrsc-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkrsc-tt-word-spacing-d, normal);
+    margin: 0 0 4px 0;
+}
+.bkbg-rsc-subtitle { font-size:14px; margin:0 0 20px 0; line-height:1.5; }
+
+/* ── Recipe name card ───────────────────────────────────── */
+.bkbg-rsc-name-card {
+    display:       flex;
+    align-items:   center;
+    gap:           12px;
+    border-radius: 12px;
+    border:        1.5px solid #e5e7eb;
+    padding:       14px 18px;
+    margin-bottom: 18px;
+}
+.bkbg-rsc-name-icon { font-size:26px; }
+.bkbg-rsc-name-text { font-size:18px; font-weight:700; }
+
+/* ── Servings control ───────────────────────────────────── */
+.bkbg-rsc-servings-card {
+    border-radius: 12px;
+    border:        1.5px solid #e5e7eb;
+    padding:       16px 18px;
+    margin-bottom: 18px;
+}
+.bkbg-rsc-servings-label {
+    font-size:      12px;
+    font-weight:    700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom:  10px;
+}
+.bkbg-rsc-servings-row {
+    display:     flex;
+    align-items: center;
+    gap:         12px;
+    flex-wrap:   wrap;
+}
+.bkbg-rsc-sv-btn {
+    width:        36px;
+    height:       36px;
+    border-radius:8px;
+    border:       2px solid var(--rsc-accent, #f97316);
+    background:   none;
+    color:        var(--rsc-accent, #f97316);
+    font-size:    20px;
+    font-weight:  700;
+    cursor:       pointer;
+    line-height:  1;
+    transition:   background 0.15s, color 0.15s;
+    flex-shrink:  0;
+}
+.bkbg-rsc-sv-btn:hover {
+    background: var(--rsc-accent, #f97316);
+    color:      #ffffff;
+}
+.bkbg-rsc-sv-count {
+    font-size:  32px;
+    font-weight:700;
+    color:      var(--rsc-accent, #f97316);
+    min-width:  44px;
+    text-align: center;
+}
+.bkbg-rsc-sv-unit { font-size:14px; }
+.bkbg-rsc-sv-input {
+    width:         70px;
+    border:        1.5px solid #e5e7eb;
+    border-radius: 8px;
+    padding:       6px 10px;
+    font-size:     20px;
+    font-weight:   700;
+    text-align:    center;
+    color:         var(--rsc-accent, #f97316);
+    outline:       none;
+    -moz-appearance: textfield;
+}
+.bkbg-rsc-sv-input::-webkit-outer-spin-button,
+.bkbg-rsc-sv-input::-webkit-inner-spin-button { -webkit-appearance:none; }
+.bkbg-rsc-sv-input:focus { border-color: var(--rsc-accent, #f97316); }
+
+/* ── Quick buttons ──────────────────────────────────────── */
+.bkbg-rsc-quick-row {
+    display:    flex;
+    gap:        6px;
+    flex-wrap:  wrap;
+    margin-top: 12px;
+}
+.bkbg-rsc-quick-btn {
+    padding:      5px 13px;
+    border-radius:6px;
+    border:       1.5px solid #e5e7eb;
+    background:   transparent;
+    font-size:    13px;
+    font-weight:  500;
+    cursor:       pointer;
+    transition:   all 0.15s;
+}
+.bkbg-rsc-quick-btn.active,
+.bkbg-rsc-quick-btn:hover {
+    border-color: var(--rsc-accent, #f97316);
+    background:   var(--rsc-accent, #f97316);
+    color:        #fff;
+    font-weight:  700;
+}
+
+/* ── Ingredients ────────────────────────────────────────── */
+.bkbg-rsc-ing-section { margin-bottom:18px; }
+.bkbg-rsc-ing-heading {
+    font-size:      12px;
+    font-weight:    700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom:  10px;
+}
+.bkbg-rsc-ing-list {}
+.bkbg-rsc-ing-row {
+    display:       flex;
+    align-items:   center;
+    gap:           10px;
+    padding:       9px 12px;
+    border-radius: 9px;
+    margin-bottom: 6px;
+    transition:    transform 0.12s;
+}
+.bkbg-rsc-ing-row:hover { transform:translateX(2px); }
+.bkbg-rsc-ing-qty {
+    font-size:   15px;
+    font-weight: 700;
+    min-width:   52px;
+    color:       var(--rsc-accent, #f97316);
+}
+.bkbg-rsc-ing-unit  { font-size:13px; color:#6b7280; min-width:40px; }
+.bkbg-rsc-ing-name  { flex:1; font-size:14px; }
+.bkbg-rsc-ing-del   { background:none; border:none; font-size:14px; cursor:pointer; color:#9ca3af; padding:0 2px; opacity:0.6; transition:opacity 0.15s; }
+.bkbg-rsc-ing-del:hover { opacity:1; color:#f43f5e; }
+
+/* ── Add ingredient form ────────────────────────────────── */
+.bkbg-rsc-add-form {
+    display:       flex;
+    gap:           7px;
+    flex-wrap:     wrap;
+    margin-bottom: 18px;
+    align-items:   center;
+}
+.bkbg-rsc-add-input {
+    border:        1.5px solid #e5e7eb;
+    border-radius: 8px;
+    padding:       8px 11px;
+    font-size:     13px;
+    font-family:   inherit;
+    outline:       none;
+    transition:    border-color 0.18s;
+}
+.bkbg-rsc-add-input:focus { border-color: var(--rsc-accent, #f97316); }
+.bkbg-rsc-add-qty   { width:70px; }
+.bkbg-rsc-add-unit  { width:80px; }
+.bkbg-rsc-add-name  { flex:1; min-width:120px; }
+.bkbg-rsc-add-btn {
+    padding:      8px 16px;
+    border-radius:8px;
+    border:       none;
+    background:   var(--rsc-accent, #f97316);
+    color:        #fff;
+    font-size:    13px;
+    font-weight:  700;
+    cursor:       pointer;
+    white-space:  nowrap;
+    transition:   opacity 0.18s;
+}
+.bkbg-rsc-add-btn:hover { opacity:0.88; }
+
+/* ── Notes box ──────────────────────────────────────────── */
+.bkbg-rsc-notes {
+    background:   #fef9c3;
+    border:       1.5px solid #fde047;
+    border-radius:10px;
+    padding:      12px 16px;
+}
+.bkbg-rsc-notes-title { font-size:12px; font-weight:700; color:#854d0e; margin-bottom:5px; }
+.bkbg-rsc-notes-text  { font-size:13px; color:#78350f; line-height:1.5; }
+
+/* ── Scale badge ────────────────────────────────────────── */
+.bkbg-rsc-scale-badge {
+    display:         inline-flex;
+    align-items:     center;
+    gap:             5px;
+    background:      var(--rsc-accent, #f97316);
+    color:           #fff;
+    font-size:       12px;
+    font-weight:     700;
+    border-radius:   999px;
+    padding:         3px 11px;
+    margin-left:     10px;
+    vertical-align:  middle;
+}
+
+/* ── Responsive typography ───────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-rsc-wrap h3.bkbg-rsc-title {
+        font-size: var(--bkrsc-tt-font-size-t, var(--bkrsc-tt-font-size-d, 26px));
+        line-height: var(--bkrsc-tt-line-height-t, var(--bkrsc-tt-line-height-d, 1.2));
+        letter-spacing: var(--bkrsc-tt-letter-spacing-t, var(--bkrsc-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkrsc-tt-word-spacing-t, var(--bkrsc-tt-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-rsc-wrap h3.bkbg-rsc-title {
+        font-size: var(--bkrsc-tt-font-size-m, var(--bkrsc-tt-font-size-t, var(--bkrsc-tt-font-size-d, 26px)));
+        line-height: var(--bkrsc-tt-line-height-m, var(--bkrsc-tt-line-height-t, var(--bkrsc-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bkrsc-tt-letter-spacing-m, var(--bkrsc-tt-letter-spacing-t, var(--bkrsc-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkrsc-tt-word-spacing-m, var(--bkrsc-tt-word-spacing-t, var(--bkrsc-tt-word-spacing-d, normal)));
+    }
+}
+
+/* ── Animations ─────────────────────────────────────────── */
+@keyframes bkbg-rsc-pop { 0%{transform:scale(1)} 50%{transform:scale(1.12)} 100%{transform:scale(1)} }
+.bkbg-rsc-sv-count.pop { animation: bkbg-rsc-pop 0.22s ease; }
+@keyframes bkbg-rsc-fadein { from{opacity:0;transform:translateY(5px)} to{opacity:1;transform:translateY(0)} }
+.bkbg-rsc-ing-row { animation: bkbg-rsc-fadein 0.2s ease both; }

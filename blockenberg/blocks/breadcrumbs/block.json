@@ -1,0 +1,113 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/breadcrumbs",
+    "title": "Breadcrumbs",
+    "description": "SEO-friendly navigation trail with Schema.org markup showing the current page hierarchy.",
+    "category": "bkbg-layout",
+    "icon": "networking",
+    "keywords": [
+        "breadcrumbs",
+        "navigation",
+        "seo",
+        "hierarchy",
+        "schema",
+        "path"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-breadcrumbs-editor",
+    "editorStyle": "bkbg-breadcrumbs-style",
+    "style": "bkbg-breadcrumbs-style",
+    "viewScript": "bkbg-breadcrumbs-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "homeLabel": {
+            "type": "string",
+            "default": "Home"
+        },
+        "homeUrl": {
+            "type": "string",
+            "default": "/"
+        },
+        "showHome": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCurrentPage": {
+            "type": "boolean",
+            "default": true
+        },
+        "separator": {
+            "type": "string",
+            "default": "chevron"
+        },
+        "customSeparator": {
+            "type": "string",
+            "default": "/"
+        },
+        "schemaEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "alignment": {
+            "type": "string",
+            "default": "left"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "itemSpacing": {
+            "type": "number",
+            "default": 8
+        },
+        "paddingV": {
+            "type": "number",
+            "default": 10
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "linkHoverColor": {
+            "type": "string",
+            "default": "#1d4ed8"
+        },
+        "separatorColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "activeColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "fontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "showHomeIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "typoText": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,86 @@
+/* Affiliate Disclosure block */
+.bkbg-afd-app { display: block; }
+
+.bkbg-afd-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.bkbg-afd-banner {
+    padding: 14px 18px;
+    border: 1px solid;
+    border-top-width: 3px;
+}
+.bkbg-afd-left-bar {
+    padding: 12px 16px;
+    border-left-width: 4px;
+    border-left-style: solid;
+}
+.bkbg-afd-box {
+    padding: 16px 20px;
+    border-width: 2px;
+    border-style: solid;
+}
+.bkbg-afd-minimal {
+    padding: 8px 0;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.bkbg-afd-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.bkbg-afd-body { flex: 1; }
+.bkbg-afd-label { font-weight: 700; margin-right: 4px; }
+.bkbg-afd-link {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+/* Collapsible */
+.bkbg-afd-summary {
+    display: flex; align-items: center; gap: 10px; cursor: pointer;
+    list-style: none; user-select: none;
+}
+.bkbg-afd-summary::-webkit-details-marker { display: none; }
+.bkbg-afd-arrow { font-size: 11px; transition: transform 0.2s; display: inline-block; }
+details[open] .bkbg-afd-arrow { transform: rotate(90deg); }
+.bkbg-afd-detail-body { margin-top: 10px; }
+
+/* ── Typography (new system) ─────────────────────────────────────── */
+
+.bkbg-afd-wrap .bkbg-afd-body {
+    font-family:    var(--bkbg-afd-text-font-family, inherit);
+    font-size:      var(--bkbg-afd-text-font-size-d, var(--bkbg-afd-text-sz, 13px));
+    font-weight:    var(--bkbg-afd-text-font-weight, 400);
+    line-height:    var(--bkbg-afd-text-line-height-d, 1.55);
+    text-transform: var(--bkbg-afd-text-text-transform, none);
+    font-style:     var(--bkbg-afd-text-font-style, normal);
+    text-decoration:var(--bkbg-afd-text-text-decoration, none);
+    letter-spacing: var(--bkbg-afd-text-letter-spacing-d, var(--bkbg-afd-text-letter-spacing, normal));
+    word-spacing:   var(--bkbg-afd-text-word-spacing-d, var(--bkbg-afd-text-word-spacing, normal));
+}
+
+/* ── Responsive Typography ──────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+    .bkbg-afd-wrap .bkbg-afd-body {
+        font-size:      var(--bkbg-afd-text-font-size-t,      var(--bkbg-afd-text-font-size-d,      var(--bkbg-afd-text-sz, 13px)));
+        line-height:    var(--bkbg-afd-text-line-height-t,    var(--bkbg-afd-text-line-height-d,    1.55));
+        letter-spacing: var(--bkbg-afd-text-letter-spacing-t, var(--bkbg-afd-text-letter-spacing-d, var(--bkbg-afd-text-letter-spacing, normal)));
+        word-spacing:   var(--bkbg-afd-text-word-spacing-t,   var(--bkbg-afd-text-word-spacing-d,   var(--bkbg-afd-text-word-spacing, normal)));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-afd-wrap .bkbg-afd-body {
+        font-size:      var(--bkbg-afd-text-font-size-m,      var(--bkbg-afd-text-font-size-t,      var(--bkbg-afd-text-font-size-d,      var(--bkbg-afd-text-sz, 13px))));
+        line-height:    var(--bkbg-afd-text-line-height-m,    var(--bkbg-afd-text-line-height-t,    var(--bkbg-afd-text-line-height-d,    1.55)));
+        letter-spacing: var(--bkbg-afd-text-letter-spacing-m, var(--bkbg-afd-text-letter-spacing-t, var(--bkbg-afd-text-letter-spacing-d, var(--bkbg-afd-text-letter-spacing, normal))));
+        word-spacing:   var(--bkbg-afd-text-word-spacing-m,   var(--bkbg-afd-text-word-spacing-t,   var(--bkbg-afd-text-word-spacing-d,   var(--bkbg-afd-text-word-spacing, normal))));
+    }
+}

@@ -1,0 +1,94 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/promo-banner",
+    "title": "Promo Banner",
+    "category": "bkbg-marketing",
+    "icon": "megaphone",
+    "description": "Dismissible announcement ribbon with message, link/button, gradient background and cookie memory.",
+    "keywords": [
+        "promo",
+        "banner",
+        "announcement",
+        "ribbon",
+        "deal",
+        "alert",
+        "bar"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-promo-banner-editor",
+    "editorStyle": "bkbg-promo-banner-style",
+    "style": "bkbg-promo-banner-style",
+    "viewScript": "bkbg-promo-banner-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "message": {
+            "type": "string",
+            "default": "\ud83c\udf89 Limited time offer \u2014 Save 20% today!"
+        },
+        "linkLabel": {
+            "type": "string",
+            "default": "Shop Now"
+        },
+        "linkUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "linkNewTab": {
+            "type": "boolean",
+            "default": false
+        },
+        "showLink": {
+            "type": "boolean",
+            "default": true
+        },
+        "showClose": {
+            "type": "boolean",
+            "default": true
+        },
+        "cookieDays": {
+            "type": "number",
+            "default": 3
+        },
+        "position": {
+            "type": "string",
+            "default": "top"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "bgColor2": {
+            "type": "string",
+            "default": "#e91e8c"
+        },
+        "useGradient": {
+            "type": "boolean",
+            "default": true
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "msgTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "paddingV": {
+            "type": "number",
+            "default": 12
+        },
+        "animation": {
+            "type": "string",
+            "default": "slideDown"
+        }
+    }
+}

@@ -1,0 +1,144 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/lorem-ipsum-generator",
+    "title": "Lorem Ipsum Generator",
+    "category": "bkbg-dev",
+    "icon": "editor-paragraph",
+    "description": "Generate placeholder Lorem Ipsum text by paragraphs, sentences, words, or lists — with optional HTML output and one-click copy.",
+    "keywords": [
+        "lorem ipsum",
+        "placeholder",
+        "dummy text",
+        "generator",
+        "writing",
+        "content"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-lorem-ipsum-generator-editor",
+    "style": "bkbg-lorem-ipsum-generator-style",
+    "viewScript": "bkbg-lorem-ipsum-generator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Lorem Ipsum Generator"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Generate professional placeholder text instantly."
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultMode": {
+            "type": "string",
+            "default": "paragraphs"
+        },
+        "defaultCount": {
+            "type": "number",
+            "default": 3
+        },
+        "startWithLorem": {
+            "type": "boolean",
+            "default": true
+        },
+        "showHtmlToggle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showStats": {
+            "type": "boolean",
+            "default": true
+        },
+        "outputHeight": {
+            "type": "number",
+            "default": 260
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "outputBg": {
+            "type": "string",
+            "default": "#fafafa"
+        },
+        "outputBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "outputTextColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "tabBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "outputRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 720
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "outputTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

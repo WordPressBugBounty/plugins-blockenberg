@@ -1,0 +1,266 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/resume",
+    "title": "Resume / CV",
+    "category": "bkbg-business",
+    "icon": "id-alt",
+    "description": "A complete professional resume or CV with experience timeline, education, skills, and contact header.",
+    "keywords": [
+        "resume",
+        "cv",
+        "curriculum vitae",
+        "portfolio",
+        "experience",
+        "skills",
+        "job"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-resume-editor",
+    "editorStyle": "bkbg-resume-style",
+    "style": "bkbg-resume-style",
+    "viewScript": "bkbg-resume-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "name": {
+            "type": "string",
+            "default": "Alex Morgan"
+        },
+        "jobTitle": {
+            "type": "string",
+            "default": "Senior Product Designer"
+        },
+        "summary": {
+            "type": "string",
+            "default": "Passionate designer with 8+ years of experience crafting user-centred digital products. Skilled at leading cross-functional teams and translating complex problems into elegant, scalable solutions."
+        },
+        "email": {
+            "type": "string",
+            "default": "alex@example.com"
+        },
+        "phone": {
+            "type": "string",
+            "default": "+1 555 000 1234"
+        },
+        "location": {
+            "type": "string",
+            "default": "New York, NY"
+        },
+        "website": {
+            "type": "string",
+            "default": "alexmorgan.design"
+        },
+        "photoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "photoId": {
+            "type": "number",
+            "default": 0
+        },
+        "showPhoto": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSummary": {
+            "type": "boolean",
+            "default": true
+        },
+        "showExperience": {
+            "type": "boolean",
+            "default": true
+        },
+        "showEducation": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSkills": {
+            "type": "boolean",
+            "default": true
+        },
+        "showContact": {
+            "type": "boolean",
+            "default": true
+        },
+        "experienceTitle": {
+            "type": "string",
+            "default": "Work Experience"
+        },
+        "educationTitle": {
+            "type": "string",
+            "default": "Education"
+        },
+        "skillsTitle": {
+            "type": "string",
+            "default": "Skills"
+        },
+        "summaryTitle": {
+            "type": "string",
+            "default": "About"
+        },
+        "experience": {
+            "type": "array",
+            "default": [
+                {
+                    "role": "Senior Product Designer",
+                    "company": "Stripe",
+                    "startDate": "Jan 2021",
+                    "endDate": "",
+                    "isCurrent": true,
+                    "location": "New York, NY",
+                    "description": "Led end-to-end design for the Stripe Dashboard redesign. Collaborated with engineers and PMs to ship 14 major features. Established the Design System v3 used across 30+ products."
+                },
+                {
+                    "role": "UX/UI Designer",
+                    "company": "Figma",
+                    "startDate": "Mar 2018",
+                    "endDate": "Dec 2020",
+                    "isCurrent": false,
+                    "location": "San Francisco, CA",
+                    "description": "Designed core collaboration features including real-time commenting, version history, and the component library panel. Improved user onboarding flow, reducing drop-off by 34%."
+                },
+                {
+                    "role": "Product Designer",
+                    "company": "Intercom",
+                    "startDate": "Jun 2016",
+                    "endDate": "Feb 2018",
+                    "isCurrent": false,
+                    "location": "Dublin, Ireland",
+                    "description": "Worked on the Messenger and Inbox products. Ran user research sessions and translated insights into actionable design improvements."
+                }
+            ]
+        },
+        "education": {
+            "type": "array",
+            "default": [
+                {
+                    "degree": "B.Sc. Interaction Design",
+                    "institution": "Rhode Island School of Design",
+                    "startYear": "2012",
+                    "endYear": "2016",
+                    "description": "Graduated with honours. Thesis on adaptive interfaces for low-vision users."
+                },
+                {
+                    "degree": "Certificate in Front-End Development",
+                    "institution": "General Assembly",
+                    "startYear": "2017",
+                    "endYear": "2017",
+                    "description": ""
+                }
+            ]
+        },
+        "skills": {
+            "type": "array",
+            "default": [
+                {
+                    "category": "Design",
+                    "items": "Figma, Sketch, Adobe XD, Illustrator, Photoshop, Framer"
+                },
+                {
+                    "category": "Research",
+                    "items": "User interviews, Usability testing, A/B testing, Heuristic evaluation"
+                },
+                {
+                    "category": "Development",
+                    "items": "HTML, CSS, JavaScript (basics), Storybook, Design tokens"
+                },
+                {
+                    "category": "Tools",
+                    "items": "Notion, Linear, Jira, Confluence, Loom, Maze"
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "classic"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 820
+        },
+        "containerPadding": {
+            "type": "number",
+            "default": 40
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "headerPadding": {
+            "type": "number",
+            "default": 32
+        },
+        "sectionGap": {
+            "type": "number",
+            "default": 36
+        },
+        "avatarSize": {
+            "type": "number",
+            "default": 88
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "sectionHeadingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "tagBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "tagColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "timelineDotColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "nameSize": {
+            "type": "number",
+            "default": 24
+        },
+        "summarySize": {
+            "type": "number",
+            "default": 15
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

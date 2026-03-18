@@ -1,0 +1,87 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/avatar-group",
+    "title": "Avatar Group",
+    "category": "bkbg-business",
+    "icon": "groups",
+    "description": "Overlapping stack of user or team avatars with an optional +X counter bubble.",
+    "keywords": [
+        "avatar",
+        "group",
+        "users",
+        "team",
+        "overlap",
+        "stack",
+        "faces"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-avatar-group-editor",
+    "editorStyle": "bkbg-avatar-group-style",
+    "style": "bkbg-avatar-group-style",
+    "viewScript": "bkbg-avatar-group-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": []
+    },
+    "attributes": {
+        "avatars": {
+            "type": "array",
+            "default": []
+        },
+        "maxShown": {
+            "type": "number",
+            "default": 5
+        },
+        "avatarSize": {
+            "type": "number",
+            "default": 48
+        },
+        "overlap": {
+            "type": "number",
+            "default": 14
+        },
+        "direction": {
+            "type": "string",
+            "default": "right"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 3
+        },
+        "counterBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "counterText": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "label": {
+            "type": "string",
+            "default": ""
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "counterFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "counterTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

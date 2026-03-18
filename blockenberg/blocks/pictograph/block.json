@@ -1,0 +1,121 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/pictograph",
+    "title": "Pictograph",
+    "category": "bkbg-charts",
+    "icon": "grid-view",
+    "description": "An icon-based unit chart where coloured glyphs represent proportional data \u2014 great for infographic-style statistics.",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Population by Age Group"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "icon": {
+            "type": "string",
+            "default": "\ud83d\udc64"
+        },
+        "iconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "iconDashicon": {
+            "type": "string",
+            "default": "admin-users"
+        },
+        "iconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "gridCols": {
+            "type": "integer",
+            "default": 10
+        },
+        "totalUnits": {
+            "type": "integer",
+            "default": 100
+        },
+        "cellSize": {
+            "type": "integer",
+            "default": 36
+        },
+        "cellGap": {
+            "type": "integer",
+            "default": 4
+        },
+        "iconFontSize": {
+            "type": "integer",
+            "default": 22
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "legendFontSize": {
+            "type": "integer",
+            "default": 13
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "emptyColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "segments": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Under 18",
+                    "value": 22,
+                    "color": "#6366f1"
+                },
+                {
+                    "label": "18 \u2013 34",
+                    "value": 28,
+                    "color": "#0ea5e9"
+                },
+                {
+                    "label": "35 \u2013 54",
+                    "value": 30,
+                    "color": "#10b981"
+                },
+                {
+                    "label": "55 \u2013 74",
+                    "value": 14,
+                    "color": "#f59e0b"
+                },
+                {
+                    "label": "75+",
+                    "value": 6,
+                    "color": "#ef4444"
+                }
+            ]
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "editorScript": "bkbg-pictograph-editor",
+    "style": "bkbg-pictograph-style"
+}

@@ -1,0 +1,137 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/rotating-banner",
+    "title": "Rotating Banner",
+    "description": "A multi-message announcement carousel that auto-rotates between messages. Each message can have its own colors, link, and optional countdown timer.",
+    "category": "bkbg-effects",
+    "icon": "megaphone",
+    "keywords": [
+        "banner",
+        "announcement",
+        "carousel",
+        "ticker",
+        "rotating",
+        "bar",
+        "notice"
+    ],
+    "editorScript": "bkbg-rotating-banner-editor",
+    "editorStyle": "bkbg-rotating-banner-style",
+    "style": "bkbg-rotating-banner-style",
+    "viewScript": "bkbg-rotating-banner-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "messages": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "🎉 Free shipping on all orders over $50 — Shop now!",
+                    "linkLabel": "Shop Now",
+                    "linkUrl": "#",
+                    "linkTarget": "_self",
+                    "bgColor": "#6366f1",
+                    "textColor": "#ffffff",
+                    "countdownTo": ""
+                },
+                {
+                    "text": "👋 New arrivals every week — Don't miss out.",
+                    "linkLabel": "Browse",
+                    "linkUrl": "#",
+                    "linkTarget": "_self",
+                    "bgColor": "#0ea5e9",
+                    "textColor": "#ffffff",
+                    "countdownTo": ""
+                },
+                {
+                    "text": "🔥 Limited time: 20% off everything with code SAVE20",
+                    "linkLabel": "Use Code",
+                    "linkUrl": "#",
+                    "linkTarget": "_self",
+                    "bgColor": "#ef4444",
+                    "textColor": "#ffffff",
+                    "countdownTo": ""
+                }
+            ]
+        },
+        "autoPlay": {
+            "type": "boolean",
+            "default": true
+        },
+        "interval": {
+            "type": "number",
+            "default": 5000
+        },
+        "animationType": {
+            "type": "string",
+            "default": "slide"
+        },
+        "showArrows": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDots": {
+            "type": "boolean",
+            "default": true
+        },
+        "showClose": {
+            "type": "boolean",
+            "default": true
+        },
+        "cookieDays": {
+            "type": "number",
+            "default": 7
+        },
+        "height": {
+            "type": "number",
+            "default": 44
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "500"
+        },
+        "linkStyle": {
+            "type": "string",
+            "default": "inline"
+        },
+        "arrowBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.15)"
+        },
+        "arrowColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "dotColor": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.4)"
+        },
+        "dotActiveColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "closeBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.15)"
+        },
+        "closeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "messageTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,243 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/skills",
+	"version": "1.0.0",
+	"title": "Skills",
+	"category": "bkbg-content",
+	"icon": "hammer",
+	"description": "Skills and expertise block with category groups, proficiency levels, and multiple display styles: bars, dots, tags, or circles.",
+	"keywords": [
+		"skills",
+		"expertise",
+		"proficiency",
+		"abilities",
+		"competencies",
+		"cv",
+		"resume",
+		"portfolio"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-skills-editor",
+	"editorStyle": "bkbg-skills-style",
+	"style": "bkbg-skills-style",
+	"viewScript": "bkbg-skills-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"categories": {
+			"type": "array",
+			"default": [
+				{
+					"id": "cat1",
+					"label": "Design",
+					"items": [
+						{
+							"id": "s1",
+							"name": "Figma",
+							"level": 5
+						},
+						{
+							"id": "s2",
+							"name": "UI Design",
+							"level": 5
+						},
+						{
+							"id": "s3",
+							"name": "Prototyping",
+							"level": 4
+						},
+						{
+							"id": "s4",
+							"name": "Illustration",
+							"level": 3
+						}
+					]
+				},
+				{
+					"id": "cat2",
+					"label": "Development",
+					"items": [
+						{
+							"id": "s5",
+							"name": "React",
+							"level": 4
+						},
+						{
+							"id": "s6",
+							"name": "TypeScript",
+							"level": 4
+						},
+						{
+							"id": "s7",
+							"name": "Node.js",
+							"level": 3
+						},
+						{
+							"id": "s8",
+							"name": "CSS / Tailwind",
+							"level": 5
+						}
+					]
+				}
+			]
+		},
+		"displayStyle": {
+			"type": "string",
+			"default": "bars"
+		},
+		"showLevels": {
+			"type": "boolean",
+			"default": true
+		},
+		"levelLabels": {
+			"type": "array",
+			"default": [
+				"Beginner",
+				"Basic",
+				"Intermediate",
+				"Advanced",
+				"Expert"
+			]
+		},
+		"maxLevel": {
+			"type": "number",
+			"default": 5
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"showTitle": {
+			"type": "boolean",
+			"default": false
+		},
+		"columns": {
+			"type": "number",
+			"default": 2
+		},
+		"showCategories": {
+			"type": "boolean",
+			"default": true
+		},
+		"gap": {
+			"type": "number",
+			"default": 32
+		},
+		"itemGap": {
+			"type": "number",
+			"default": 12
+		},
+		"barHeight": {
+			"type": "number",
+			"default": 8
+		},
+		"barRadius": {
+			"type": "number",
+			"default": 99
+		},
+		"dotSize": {
+			"type": "number",
+			"default": 12
+		},
+		"dotGap": {
+			"type": "number",
+			"default": 4
+		},
+		"circleSize": {
+			"type": "number",
+			"default": 80
+		},
+		"circleThickness": {
+			"type": "number",
+			"default": 6
+		},
+		"animateOnScroll": {
+			"type": "boolean",
+			"default": true
+		},
+		"titleSize": {
+			"type": "number",
+			"default": 22
+		},
+		"categorySize": {
+			"type": "number",
+			"default": 13
+		},
+		"skillNameSize": {
+			"type": "number",
+			"default": 14
+		},
+		"levelSize": {
+			"type": "number",
+			"default": 12
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"trackColor": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#1e293b"
+		},
+		"categoryColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"skillNameColor": {
+			"type": "string",
+			"default": "#1e293b"
+		},
+		"levelColor": {
+			"type": "string",
+			"default": "#9ca3af"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": ""
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 40
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 40
+		},
+		"titleFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"skillNameFontWeight": {
+			"type": "number",
+			"default": 500
+		},
+		"titleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"categoryTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"skillTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"levelTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

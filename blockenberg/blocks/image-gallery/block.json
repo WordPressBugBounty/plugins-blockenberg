@@ -1,0 +1,158 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/image-gallery",
+    "version": "1.0.0",
+    "title": "Image Gallery",
+    "category": "bkbg-media",
+    "icon": "format-gallery",
+    "description": "Responsive image gallery with grid/masonry layouts, lightbox, and hover effects.",
+    "keywords": [
+        "gallery",
+        "images",
+        "photos",
+        "lightbox",
+        "masonry",
+        "grid"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-image-gallery-editor",
+    "style": "bkbg-image-gallery-style",
+    "viewScript": "bkbg-image-gallery-frontend",
+    "attributes": {
+        "images": {
+            "type": "array",
+            "default": [],
+            "items": {
+                "type": "object"
+            }
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "columnsMobile": {
+            "type": "number",
+            "default": 1
+        },
+        "columnsTablet": {
+            "type": "number",
+            "default": 2
+        },
+        "gap": {
+            "type": "number",
+            "default": 12
+        },
+        "aspectRatio": {
+            "type": "string",
+            "default": "square"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "lightbox": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCaptions": {
+            "type": "boolean",
+            "default": false
+        },
+        "captionStyle": {
+            "type": "string",
+            "default": "overlay"
+        },
+        "hoverEffect": {
+            "type": "string",
+            "default": "zoom"
+        },
+        "hoverOverlayBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.45)"
+        },
+        "overlayIconColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "captionBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.55)"
+        },
+        "captionColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "filterEnabled": {
+            "type": "boolean",
+            "default": false
+        },
+        "filterBgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "filterActiveColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "filterTextColor": {
+            "type": "string",
+            "default": ""
+        },
+        "filterBorderRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "captionFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "captionFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "captionLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "filterFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "filterFontWeight": {
+            "type": "number",
+            "default": 500
+        },
+        "filterLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "captionTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "filterTypo": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ],
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    }
+}

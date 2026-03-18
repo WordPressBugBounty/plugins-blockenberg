@@ -1,0 +1,253 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/split-price-cta",
+	"title": "Split Price CTA",
+	"category": "bkbg-marketing",
+	"icon": "columns",
+	"description": "Two-column sales section: pricing offer on the left, CTA with supporting benefits on the right. Common on SaaS pricing and checkout pages.",
+	"keywords": [
+		"pricing",
+		"cta",
+		"split",
+		"offer",
+		"sales",
+		"conversion",
+		"plan"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-split-price-cta-editor",
+	"style": "bkbg-split-price-cta-style",
+	"attributes": {
+		"priceLabel": {
+			"type": "string",
+			"default": "Start for free"
+		},
+		"priceValue": {
+			"type": "string",
+			"default": "$0"
+		},
+		"pricePeriod": {
+			"type": "string",
+			"default": "forever"
+		},
+		"priceNote": {
+			"type": "string",
+			"default": "No credit card required"
+		},
+		"showOldPrice": {
+			"type": "boolean",
+			"default": false
+		},
+		"oldPrice": {
+			"type": "string",
+			"default": "$49"
+		},
+		"showBadge": {
+			"type": "boolean",
+			"default": true
+		},
+		"badge": {
+			"type": "string",
+			"default": "🔥 Limited offer"
+		},
+		"features": {
+			"type": "array",
+			"default": [
+				{
+					"id": "f1",
+					"text": "Up to 5 projects"
+				},
+				{
+					"id": "f2",
+					"text": "10 GB cloud storage"
+				},
+				{
+					"id": "f3",
+					"text": "Community support"
+				},
+				{
+					"id": "f4",
+					"text": "Core integrations"
+				}
+			],
+			"items": {
+				"type": "object"
+			}
+		},
+		"ctaHeading": {
+			"type": "string",
+			"default": "Ready to get started?"
+		},
+		"ctaSubtitle": {
+			"type": "string",
+			"default": "Join over 50,000 teams already building with us. Setup takes less than 2 minutes."
+		},
+		"primaryLabel": {
+			"type": "string",
+			"default": "Start free — upgrade anytime"
+		},
+		"primaryUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"primaryTarget": {
+			"type": "string",
+			"default": "_self"
+		},
+		"showSecondary": {
+			"type": "boolean",
+			"default": true
+		},
+		"secondaryLabel": {
+			"type": "string",
+			"default": "Talk to sales"
+		},
+		"secondaryUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"secondaryTarget": {
+			"type": "string",
+			"default": "_self"
+		},
+		"showSocialProof": {
+			"type": "boolean",
+			"default": true
+		},
+		"socialProofText": {
+			"type": "string",
+			"default": "\"Best investment our team made this year.\""
+		},
+		"socialProofAuthor": {
+			"type": "string",
+			"default": "— Sarah K., CTO at Acme"
+		},
+		"leftStyle": {
+			"type": "string",
+			"default": "gradient"
+		},
+		"leftGradient": {
+			"type": "string",
+			"default": "linear-gradient(135deg,#6c3fb5 0%,#2563eb 100%)"
+		},
+		"leftBg": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"checkColor": {
+			"type": "string",
+			"default": "#a78bfa"
+		},
+		"priceLabelColor": {
+			"type": "string",
+			"default": "rgba(255,255,255,0.75)"
+		},
+		"priceValueColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"priceNoteColor": {
+			"type": "string",
+			"default": "rgba(255,255,255,0.55)"
+		},
+		"featureColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"rightBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"ctaHeadingColor": {
+			"type": "string",
+			"default": "#0f172a"
+		},
+		"ctaSubtitleColor": {
+			"type": "string",
+			"default": "#475569"
+		},
+		"primaryBg": {
+			"type": "string",
+			"default": "#7c3aed"
+		},
+		"primaryColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"proofColor": {
+			"type": "string",
+			"default": "#64748b"
+		},
+		"borderColor": {
+			"type": "string",
+			"default": "#e2e8f0"
+		},
+		"blockRadius": {
+			"type": "number",
+			"default": 20
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 64
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 64
+		},
+		"btnRadius": {
+			"type": "number",
+			"default": 10
+		},
+		"priceSize": {
+			"type": "number",
+			"default": 60
+		},
+		"ctaHeadingSize": {
+			"type": "number",
+			"default": 28
+		},
+		"priceFontWeight": {
+			"type": "number",
+			"default": 800
+		},
+		"ctaHeadingFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"priceTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"headingTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"subtitleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"badgeTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"featureTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"btnTypo": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [
+			"wide",
+			"full"
+		],
+		"spacing": {
+			"margin": true
+		}
+	}
+}

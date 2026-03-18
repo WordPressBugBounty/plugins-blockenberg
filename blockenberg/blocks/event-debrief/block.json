@@ -1,0 +1,270 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/event-debrief",
+    "title": "Event Debrief",
+    "description": "Post-event recap: highlights, attendee quotes, outcomes, and lessons learned.",
+    "category": "bkbg-blog",
+    "icon": "megaphone",
+    "keywords": [
+        "event",
+        "debrief",
+        "recap",
+        "conference",
+        "webinar"
+    ],
+    "editorScript": "bkbg-event-debrief-editor",
+    "editorStyle": "bkbg-event-debrief-style",
+    "style": "bkbg-event-debrief-style",
+    "viewScript": "bkbg-event-debrief-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eventName": {
+            "type": "string",
+            "default": "LeadDev Berlin 2026"
+        },
+        "eventDate": {
+            "type": "string",
+            "default": "February 20–21, 2026"
+        },
+        "eventLocation": {
+            "type": "string",
+            "default": "Berlin, Germany"
+        },
+        "eventType": {
+            "type": "string",
+            "default": "conference"
+        },
+        "attendees": {
+            "type": "number",
+            "default": 1200
+        },
+        "onlineAttendees": {
+            "type": "number",
+            "default": 3400
+        },
+        "nps": {
+            "type": "number",
+            "default": 72
+        },
+        "showStats": {
+            "type": "boolean",
+            "default": true
+        },
+        "summary": {
+            "type": "string",
+            "default": "LeadDev Berlin brought together engineering leaders from across Europe and beyond for two days of talks, workshops, and deep conversations about scaling teams, building resilient systems, and leading with empathy in high-growth environments."
+        },
+        "showSummary": {
+            "type": "boolean",
+            "default": true
+        },
+        "highlights": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Keynote: Engineering Culture at Scale",
+                    "description": "Sarah Drasner opened with a compelling look at how engineering culture can make or break a scaling organization — covering psychological safety, async communication, and the hidden cost of hero culture."
+                },
+                {
+                    "title": "Workshop: Incident Response Playbooks",
+                    "description": "A packed 90-minute hands-on workshop where teams built their own incident runbooks and practiced blameless post-mortems using real-world case studies."
+                },
+                {
+                    "title": "Panel: AI-Augmented Development",
+                    "description": "Five CTOs discussed practical experiences integrating AI coding tools into their workflows, the productivity wins, the unexpected failure modes, and the impact on junior developer growth."
+                }
+            ]
+        },
+        "showHighlights": {
+            "type": "boolean",
+            "default": true
+        },
+        "highlightsLabel": {
+            "type": "string",
+            "default": "Event Highlights"
+        },
+        "quotes": {
+            "type": "array",
+            "default": [
+                {
+                    "quote": "This was the most practically useful engineering conference I've attended in five years. Real problems, real solutions, no fluff.",
+                    "speaker": "Marta Lindqvist",
+                    "role": "VP Engineering, Klarna"
+                },
+                {
+                    "quote": "The async communication workshop alone was worth the trip. We shipped a new remote-work charter the week after we got back.",
+                    "speaker": "Daniel Osei",
+                    "role": "Engineering Director, N26"
+                }
+            ]
+        },
+        "showQuotes": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotesLabel": {
+            "type": "string",
+            "default": "Attendee Voices"
+        },
+        "outcomes": {
+            "type": "array",
+            "default": [
+                "Published open-source incident response template used by 400+ teams",
+                "Launched LeadDev Community Slack with 2,100 founding members",
+                "Secured speakers for LeadDev London 2026 across all three tracks",
+                "Released full talk recordings to LeadDev+ subscribers within 48 hours"
+            ]
+        },
+        "showOutcomes": {
+            "type": "boolean",
+            "default": true
+        },
+        "outcomesLabel": {
+            "type": "string",
+            "default": "Key Outcomes"
+        },
+        "lessonsLearned": {
+            "type": "array",
+            "default": [
+                "Morning workshop sessions had significantly higher attendance — move all workshops before lunch in future events",
+                "Hybrid Q&A needs a dedicated moderator; chat-only remote questions were frequently missed",
+                "Networking lounge capacity was too small; 40% of attendees couldn't find seating during breaks"
+            ]
+        },
+        "showLessons": {
+            "type": "boolean",
+            "default": true
+        },
+        "lessonsLabel": {
+            "type": "string",
+            "default": "Lessons Learned"
+        },
+        "nextEventName": {
+            "type": "string",
+            "default": "LeadDev London 2026"
+        },
+        "nextEventDate": {
+            "type": "string",
+            "default": "June 12–13, 2026"
+        },
+        "nextEventUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showNextEvent": {
+            "type": "boolean",
+            "default": true
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 24
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 168
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#a5b4fc"
+        },
+        "statBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "statColor": {
+            "type": "string",
+            "default": "#4338ca"
+        },
+        "summaryBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "summaryColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "highlightBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "highlightBorder": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "quoteBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "quoteColor": {
+            "type": "string",
+            "default": "#4338ca"
+        },
+        "quoteBorder": {
+            "type": "string",
+            "default": "#818cf8"
+        },
+        "outcomeColor": {
+            "type": "string",
+            "default": "#166534"
+        },
+        "outcomeBullet": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "lessonColor": {
+            "type": "string",
+            "default": "#92400e"
+        },
+        "lessonBullet": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "nextEventBg": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "nextEventColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "typoTitle": { "type": "object", "default": {} },
+        "typoBody": { "type": "object", "default": {} }
+    }
+}

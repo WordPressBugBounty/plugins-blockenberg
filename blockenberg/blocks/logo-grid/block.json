@@ -1,0 +1,153 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/logo-grid",
+    "version": "1.0.0",
+    "title": "Logo Grid",
+    "category": "bkbg-marketing",
+    "icon": "images-alt2",
+    "description": "A clean partner, client or 'as seen in' logo grid with optional label, grayscale effect, box backgrounds and multiple layouts.",
+    "keywords": [
+        "logos",
+        "partners",
+        "brands",
+        "press",
+        "featured",
+        "as seen in",
+        "clients"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-logo-grid-editor",
+    "style": "bkbg-logo-grid-style",
+    "viewScript": "bkbg-logo-grid-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "logos": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "l1",
+                    "name": "Acme Corp",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "l2",
+                    "name": "TechCorp",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "l3",
+                    "name": "GlobalCo",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "l4",
+                    "name": "StartupInc",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "l5",
+                    "name": "BigBrand",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "l6",
+                    "name": "Partners",
+                    "imageUrl": "",
+                    "imageId": 0
+                }
+            ]
+        },
+        "label": {
+            "type": "string",
+            "default": "Trusted by leading companies"
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelPosition": {
+            "type": "string",
+            "default": "top"
+        },
+        "layout": {
+            "type": "string",
+            "default": "flex-row"
+        },
+        "columns": {
+            "type": "number",
+            "default": 6
+        },
+        "gap": {
+            "type": "number",
+            "default": 32
+        },
+        "logoHeight": {
+            "type": "number",
+            "default": 36
+        },
+        "logoPadding": {
+            "type": "number",
+            "default": 20
+        },
+        "logoRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "grayscale": {
+            "type": "boolean",
+            "default": true
+        },
+        "hoverColor": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBox": {
+            "type": "boolean",
+            "default": true
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 48
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 48
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "logoBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "logoBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "logoTint": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

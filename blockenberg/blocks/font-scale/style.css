@@ -1,0 +1,41 @@
+.bkbg-fs-wrap {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.bkbg-fs-wrap * { box-sizing: border-box; }
+.bkbg-fs-wrap .bkbg-fs-title {
+    font-family: var(--bkbg-fs-tt-font-family, inherit);
+    font-size: var(--bkbg-fs-tt-font-size-d, 24px);
+    font-weight: var(--bkbg-fs-tt-font-weight, 700);
+    font-style: var(--bkbg-fs-tt-font-style, normal);
+    text-decoration: var(--bkbg-fs-tt-text-decoration, none);
+    text-transform: var(--bkbg-fs-tt-text-transform, none);
+    line-height: var(--bkbg-fs-tt-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-fs-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fs-tt-word-spacing-d, normal);
+}
+.bkbg-fs-subtitle {
+    font-family: var(--bkbg-fs-ts-font-family, inherit);
+    font-size: var(--bkbg-fs-ts-font-size-d, 15px);
+    font-weight: var(--bkbg-fs-ts-font-weight, 400);
+    font-style: var(--bkbg-fs-ts-font-style, normal);
+    text-decoration: var(--bkbg-fs-ts-text-decoration, none);
+    text-transform: var(--bkbg-fs-ts-text-transform, none);
+    line-height: var(--bkbg-fs-ts-line-height-d, 1.5);
+    letter-spacing: var(--bkbg-fs-ts-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fs-ts-word-spacing-d, normal);
+}
+.bkbg-fs-scale { width: 100%; }
+.bkbg-fs-row { display: flex; align-items: flex-start; gap: 16px; }
+.bkbg-fs-sample { word-break: break-word; min-width: 0; }
+.bkbg-fs-meta { display: flex; flex-direction: column; gap: 2px; align-items: flex-end; min-width: 80px; flex-shrink: 0; }
+
+/* Typography responsive */
+@media (max-width: 1024px) {
+    .bkbg-fs-wrap .bkbg-fs-title { font-size: var(--bkbg-fs-tt-font-size-t, var(--bkbg-fs-tt-font-size-d, 24px)); line-height: var(--bkbg-fs-tt-line-height-t, var(--bkbg-fs-tt-line-height-d, 1.2)); letter-spacing: var(--bkbg-fs-tt-letter-spacing-t, var(--bkbg-fs-tt-letter-spacing-d, normal)); word-spacing: var(--bkbg-fs-tt-word-spacing-t, var(--bkbg-fs-tt-word-spacing-d, normal)); }
+    .bkbg-fs-subtitle { font-size: var(--bkbg-fs-ts-font-size-t, var(--bkbg-fs-ts-font-size-d, 15px)); line-height: var(--bkbg-fs-ts-line-height-t, var(--bkbg-fs-ts-line-height-d, 1.5)); letter-spacing: var(--bkbg-fs-ts-letter-spacing-t, var(--bkbg-fs-ts-letter-spacing-d, normal)); word-spacing: var(--bkbg-fs-ts-word-spacing-t, var(--bkbg-fs-ts-word-spacing-d, normal)); }
+}
+@media (max-width: 767px) {
+    .bkbg-fs-wrap .bkbg-fs-title { font-size: var(--bkbg-fs-tt-font-size-m, var(--bkbg-fs-tt-font-size-t, var(--bkbg-fs-tt-font-size-d, 24px))); line-height: var(--bkbg-fs-tt-line-height-m, var(--bkbg-fs-tt-line-height-t, var(--bkbg-fs-tt-line-height-d, 1.2))); letter-spacing: var(--bkbg-fs-tt-letter-spacing-m, var(--bkbg-fs-tt-letter-spacing-t, var(--bkbg-fs-tt-letter-spacing-d, normal))); word-spacing: var(--bkbg-fs-tt-word-spacing-m, var(--bkbg-fs-tt-word-spacing-t, var(--bkbg-fs-tt-word-spacing-d, normal))); }
+    .bkbg-fs-subtitle { font-size: var(--bkbg-fs-ts-font-size-m, var(--bkbg-fs-ts-font-size-t, var(--bkbg-fs-ts-font-size-d, 15px))); line-height: var(--bkbg-fs-ts-line-height-m, var(--bkbg-fs-ts-line-height-t, var(--bkbg-fs-ts-line-height-d, 1.5))); letter-spacing: var(--bkbg-fs-ts-letter-spacing-m, var(--bkbg-fs-ts-letter-spacing-t, var(--bkbg-fs-ts-letter-spacing-d, normal))); word-spacing: var(--bkbg-fs-ts-word-spacing-m, var(--bkbg-fs-ts-word-spacing-t, var(--bkbg-fs-ts-word-spacing-d, normal))); }
+}

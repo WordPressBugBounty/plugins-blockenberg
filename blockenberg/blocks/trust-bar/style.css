@@ -1,0 +1,106 @@
+.bkbg-trust-bar-wrap {
+    box-sizing: border-box;
+}
+
+.bkbg-trust-bar {
+    align-items: stretch;
+}
+
+/* Row layout: don't stretch vertically */
+.bkbg-trust-bar[style*="flex"] {
+    align-items: center;
+}
+
+.bkbg-trust-bar-item {
+    box-sizing: border-box;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.bkbg-trust-bar-item:hover {
+    transform: translateY(-2px);
+}
+
+/* Dividers only appear in row mode (JS inserts them between items) */
+.bkbg-trust-bar-divider {
+    flex-shrink: 0;
+    align-self: center;
+}
+
+/* Icon sizing */
+.bkbg-trust-bar-item svg {
+    flex-shrink: 0;
+}
+.bkbg-trust-bar-item img {
+    display: block;
+    flex-shrink: 0;
+}
+
+/* Label typography */
+.bkbg-tb-label {
+    font-family:      var(--bktb-lb-font-family, inherit);
+    font-size:        var(--bktb-lb-font-size-d, 15px);
+    font-weight:      var(--bktb-lb-font-weight, 700);
+    line-height:      var(--bktb-lb-line-height-d, 1.3);
+    letter-spacing:   var(--bktb-lb-letter-spacing-d, normal);
+    word-spacing:     var(--bktb-lb-word-spacing-d, normal);
+    text-transform:   var(--bktb-lb-text-transform, none);
+    font-style:       var(--bktb-lb-font-style, normal);
+    text-decoration:  var(--bktb-lb-text-decoration, none);
+}
+.bkbg-tb-sublabel {
+    font-family:      var(--bktb-sl-font-family, inherit);
+    font-size:        var(--bktb-sl-font-size-d, 12px);
+    font-weight:      var(--bktb-sl-font-weight, normal);
+    line-height:      var(--bktb-sl-line-height-d, 1.4);
+    letter-spacing:   var(--bktb-sl-letter-spacing-d, normal);
+    word-spacing:     var(--bktb-sl-word-spacing-d, normal);
+    text-transform:   var(--bktb-sl-text-transform, none);
+    font-style:       var(--bktb-sl-font-style, normal);
+    text-decoration:  var(--bktb-sl-text-decoration, none);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    /* Row → wraps naturally with flexWrap:wrap in inline style */
+    .bkbg-trust-bar[style*="grid-template-columns: repeat(3"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+@media (max-width: 480px) {
+    .bkbg-trust-bar[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+    }
+    .bkbg-trust-bar[style*="flex"] {
+        justify-content: center;
+    }
+}
+
+/* Typography responsive — tablet */
+@media (max-width: 1024px) {
+    .bkbg-tb-label {
+        font-size:        var(--bktb-lb-font-size-t, var(--bktb-lb-font-size-d, 15px));
+        line-height:      var(--bktb-lb-line-height-t, var(--bktb-lb-line-height-d, 1.3));
+        letter-spacing:   var(--bktb-lb-letter-spacing-t, var(--bktb-lb-letter-spacing-d, normal));
+        word-spacing:     var(--bktb-lb-word-spacing-t, var(--bktb-lb-word-spacing-d, normal));
+    }
+    .bkbg-tb-sublabel {
+        font-size:        var(--bktb-sl-font-size-t, var(--bktb-sl-font-size-d, 12px));
+        line-height:      var(--bktb-sl-line-height-t, var(--bktb-sl-line-height-d, 1.4));
+        letter-spacing:   var(--bktb-sl-letter-spacing-t, var(--bktb-sl-letter-spacing-d, normal));
+        word-spacing:     var(--bktb-sl-word-spacing-t, var(--bktb-sl-word-spacing-d, normal));
+    }
+}
+/* Typography responsive — mobile */
+@media (max-width: 767px) {
+    .bkbg-tb-label {
+        font-size:        var(--bktb-lb-font-size-m, var(--bktb-lb-font-size-t, var(--bktb-lb-font-size-d, 15px)));
+        line-height:      var(--bktb-lb-line-height-m, var(--bktb-lb-line-height-t, var(--bktb-lb-line-height-d, 1.3)));
+        letter-spacing:   var(--bktb-lb-letter-spacing-m, var(--bktb-lb-letter-spacing-t, var(--bktb-lb-letter-spacing-d, normal)));
+        word-spacing:     var(--bktb-lb-word-spacing-m, var(--bktb-lb-word-spacing-t, var(--bktb-lb-word-spacing-d, normal)));
+    }
+    .bkbg-tb-sublabel {
+        font-size:        var(--bktb-sl-font-size-m, var(--bktb-sl-font-size-t, var(--bktb-sl-font-size-d, 12px)));
+        line-height:      var(--bktb-sl-line-height-m, var(--bktb-sl-line-height-t, var(--bktb-sl-line-height-d, 1.4)));
+        letter-spacing:   var(--bktb-sl-letter-spacing-m, var(--bktb-sl-letter-spacing-t, var(--bktb-sl-letter-spacing-d, normal)));
+        word-spacing:     var(--bktb-sl-word-spacing-m, var(--bktb-sl-word-spacing-t, var(--bktb-sl-word-spacing-d, normal)));
+    }
+}

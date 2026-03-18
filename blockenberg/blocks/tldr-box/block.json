@@ -1,0 +1,153 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/tldr-box",
+    "version": "1.0.0",
+    "title": "TL;DR Box",
+    "category": "bkbg-blog",
+    "description": "Article TL;DR / executive summary box with optional bullet points and read-time indicator.",
+    "keywords": [
+        "tldr",
+        "summary",
+        "abstract",
+        "overview",
+        "short"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-tldr-box-editor",
+    "style": "bkbg-tldr-box-style",
+    "viewScript": "bkbg-tldr-box-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "headingIcon": {
+            "type": "string",
+            "default": "⚡"
+        },
+        "iconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "iconDashicon": {
+            "type": "string",
+            "default": "lightbulb"
+        },
+        "iconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "heading": {
+            "type": "string",
+            "default": "TL;DR"
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "summary": {
+            "type": "string",
+            "default": ""
+        },
+        "points": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "type": "string"
+                    }
+                }
+            },
+            "default": [
+                {
+                    "text": ""
+                }
+            ]
+        },
+        "showPoints": {
+            "type": "boolean",
+            "default": true
+        },
+        "readTime": {
+            "type": "string",
+            "default": ""
+        },
+        "showReadTime": {
+            "type": "boolean",
+            "default": false
+        },
+        "expandable": {
+            "type": "boolean",
+            "default": false
+        },
+        "expandLabel": {
+            "type": "string",
+            "default": "Show less"
+        },
+        "collapseLabel": {
+            "type": "string",
+            "default": "Read full article"
+        },
+        "style": {
+            "type": "string",
+            "default": "highlight"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#fef9c3"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#fde047"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#ca8a04"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#713f12"
+        },
+        "summaryColor": {
+            "type": "string",
+            "default": "#1c1917"
+        },
+        "pointColor": {
+            "type": "string",
+            "default": "#292524"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#a8a29e"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#ca8a04"
+        },
+        "borderRadius": {
+            "type": "integer",
+            "default": 10
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 0
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "summaryTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

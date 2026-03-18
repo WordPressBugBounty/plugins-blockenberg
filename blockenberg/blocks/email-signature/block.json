@@ -1,0 +1,200 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/email-signature",
+    "version": "1.0.0",
+    "title": "Email Signature",
+    "category": "bkbg-business",
+    "icon": "email",
+    "description": "Design and preview a rich HTML email signature with avatar, name, title, company, phone, email, website, social links, and an optional branded banner or divider. Outputs email-client-safe table-based HTML.",
+    "keywords": [
+        "email signature",
+        "email",
+        "signature",
+        "contact",
+        "business card",
+        "gmail signature"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-email-signature-editor",
+    "style": "bkbg-email-signature-style",
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "name": {
+            "type": "string",
+            "default": "Sarah Mitchell"
+        },
+        "title": {
+            "type": "string",
+            "default": "Head of Marketing"
+        },
+        "company": {
+            "type": "string",
+            "default": "Luminary Technologies"
+        },
+        "phone": {
+            "type": "string",
+            "default": "+1 (555) 234-5678"
+        },
+        "email": {
+            "type": "string",
+            "default": "sarah@luminary.io"
+        },
+        "website": {
+            "type": "string",
+            "default": "luminary.io"
+        },
+        "showPhone": {
+            "type": "boolean",
+            "default": true
+        },
+        "showEmail": {
+            "type": "boolean",
+            "default": true
+        },
+        "showWebsite": {
+            "type": "boolean",
+            "default": true
+        },
+        "avatarUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "avatarId": {
+            "type": "integer",
+            "default": 0
+        },
+        "avatarSize": {
+            "type": "integer",
+            "default": 72
+        },
+        "showAvatar": {
+            "type": "boolean",
+            "default": true
+        },
+        "avatarRadius": {
+            "type": "integer",
+            "default": 50
+        },
+        "showBanner": {
+            "type": "boolean",
+            "default": false
+        },
+        "bannerUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "bannerId": {
+            "type": "integer",
+            "default": 0
+        },
+        "bannerLink": {
+            "type": "string",
+            "default": "#"
+        },
+        "bannerWidth": {
+            "type": "integer",
+            "default": 400
+        },
+        "twitterUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "linkedinUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "githubUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "instagramUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "youtubeUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "showSocials": {
+            "type": "boolean",
+            "default": true
+        },
+        "style": {
+            "type": "string",
+            "default": "modern"
+        },
+        "dividerStyle": {
+            "type": "string",
+            "default": "line"
+        },
+        "nameSize": {
+            "type": "integer",
+            "default": 17
+        },
+        "nameWeight": {
+            "type": "integer",
+            "default": 700
+        },
+        "nameLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "titleSize": {
+            "type": "integer",
+            "default": 13
+        },
+        "titleWeight": {
+            "type": "string",
+            "default": "600"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "infoSize": {
+            "type": "integer",
+            "default": 13
+        },
+        "socialIconSize": {
+            "type": "integer",
+            "default": 16
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "companyColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "infoColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "socialColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "typoName": { "type": "object", "default": {} },
+        "typoJobTitle": { "type": "object", "default": {} }
+    }
+}

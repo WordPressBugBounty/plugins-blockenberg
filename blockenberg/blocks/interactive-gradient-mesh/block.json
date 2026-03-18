@@ -1,0 +1,134 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/interactive-gradient-mesh",
+    "title": "Interactive Gradient Mesh",
+    "description": "A mouse-reactive multi-colour gradient mesh background with optional heading and CTA overlay.",
+    "category": "bkbg-effects",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-interactive-gradient-mesh-editor",
+    "style": "bkbg-interactive-gradient-mesh-style",
+    "viewScript": "bkbg-interactive-gradient-mesh-frontend",
+    "icon": "art",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "colors": {
+            "type": "array",
+            "default": [
+                "#6366f1",
+                "#f43f5e",
+                "#06b6d4",
+                "#f59e0b",
+                "#10b981"
+            ]
+        },
+        "blobCount": {
+            "type": "integer",
+            "default": 5
+        },
+        "blobSize": {
+            "type": "integer",
+            "default": 55
+        },
+        "blurAmount": {
+            "type": "integer",
+            "default": 80
+        },
+        "blendMode": {
+            "type": "string",
+            "default": "screen"
+        },
+        "mouseInfluence": {
+            "type": "integer",
+            "default": 30
+        },
+        "autoAnimate": {
+            "type": "boolean",
+            "default": true
+        },
+        "animateSpeed": {
+            "type": "number",
+            "default": 0.6
+        },
+        "baseBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "height": {
+            "type": "integer",
+            "default": 480
+        },
+        "showContent": {
+            "type": "boolean",
+            "default": true
+        },
+        "heading": {
+            "type": "string",
+            "default": "Beautiful Gradients"
+        },
+        "subheading": {
+            "type": "string",
+            "default": "Move your mouse to interact"
+        },
+        "ctaText": {
+            "type": "string",
+            "default": "Get Started"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "headingSize": {
+            "type": "integer",
+            "default": 48
+        },
+        "subheadingSize": {
+            "type": "integer",
+            "default": 18
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "subheadingColor": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.75)"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "ctaRadius": {
+            "type": "integer",
+            "default": 100
+        },
+        "contentAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "ctaSize": {
+            "type": "number",
+            "default": 15
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subheadingTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

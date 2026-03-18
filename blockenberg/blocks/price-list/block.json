@@ -1,0 +1,179 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/price-list",
+    "title": "Price List",
+    "description": "Display restaurant menus, service pricing, or product catalogues with category sections, images, badges and rich styling.",
+    "category": "bkbg-marketing",
+    "icon": "tag",
+    "keywords": [
+        "menu",
+        "price",
+        "food",
+        "restaurant",
+        "service",
+        "list"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-price-list-editor",
+    "editorStyle": "bkbg-price-list-style",
+    "style": "bkbg-price-list-style",
+    "viewScript": "bkbg-price-list-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "sections": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "s1",
+                    "title": "Starters",
+                    "items": [
+                        {
+                            "id": "i1",
+                            "name": "Bruschetta",
+                            "description": "Toasted bread with fresh tomatoes, garlic and basil.",
+                            "price": "$8.00",
+                            "badge": "Popular",
+                            "imageUrl": "",
+                            "imageId": 0
+                        },
+                        {
+                            "id": "i2",
+                            "name": "Caesar Salad",
+                            "description": "Crisp romaine, parmesan, croutons and house dressing.",
+                            "price": "$12.00",
+                            "badge": "",
+                            "imageUrl": "",
+                            "imageId": 0
+                        }
+                    ]
+                },
+                {
+                    "id": "s2",
+                    "title": "Main Course",
+                    "items": [
+                        {
+                            "id": "i3",
+                            "name": "Grilled Salmon",
+                            "description": "Atlantic salmon with lemon butter and seasonal vegetables.",
+                            "price": "$28.00",
+                            "badge": "Chef's Pick",
+                            "imageUrl": "",
+                            "imageId": 0
+                        },
+                        {
+                            "id": "i4",
+                            "name": "Margherita Pizza",
+                            "description": "San Marzano tomato, fresh mozzarella and basil.",
+                            "price": "$18.00",
+                            "badge": "",
+                            "imageUrl": "",
+                            "imageId": 0
+                        },
+                        {
+                            "id": "i5",
+                            "name": "Beef Tenderloin",
+                            "description": "8oz tenderloin with truffle mash and red wine jus.",
+                            "price": "$42.00",
+                            "badge": "Premium",
+                            "imageUrl": "",
+                            "imageId": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "list"
+        },
+        "columns": {
+            "type": "number",
+            "default": 2
+        },
+        "showImage": {
+            "type": "boolean",
+            "default": false
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "imageSize": {
+            "type": "number",
+            "default": 72
+        },
+        "imageRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "sectionSpacing": {
+            "type": "number",
+            "default": 40
+        },
+        "itemSpacing": {
+            "type": "number",
+            "default": 16
+        },
+        "dividerEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "sectionTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "priceTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "sectionColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "priceColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#fef3c7"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#92400e"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        }
+    }
+}

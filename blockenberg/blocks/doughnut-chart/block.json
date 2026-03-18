@@ -1,0 +1,107 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/doughnut-chart",
+    "title": "Doughnut Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-pie",
+    "description": "Pie/doughnut chart with adjustable cutout, center label, and per-slice colors using Chart.js (CDN).",
+    "keywords": [
+        "chart",
+        "doughnut",
+        "pie",
+        "donut",
+        "data",
+        "visualization"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-doughnut-chart-editor",
+    "editorStyle": "bkbg-doughnut-chart-style",
+    "style": "bkbg-doughnut-chart-style",
+    "viewScript": "bkbg-doughnut-chart-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": []
+    },
+    "attributes": {
+        "slices": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Product A",
+                    "value": 35,
+                    "color": "#6c3fb5"
+                },
+                {
+                    "label": "Product B",
+                    "value": 25,
+                    "color": "#e040fb"
+                },
+                {
+                    "label": "Product C",
+                    "value": 20,
+                    "color": "#f5a623"
+                },
+                {
+                    "label": "Product D",
+                    "value": 20,
+                    "color": "#22c55e"
+                }
+            ]
+        },
+        "cutout": {
+            "type": "number",
+            "default": 60
+        },
+        "centerLabel": {
+            "type": "string",
+            "default": ""
+        },
+        "centerSubLabel": {
+            "type": "string",
+            "default": ""
+        },
+        "size": {
+            "type": "number",
+            "default": 300
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "legendPos": {
+            "type": "string",
+            "default": "bottom"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "title": {
+            "type": "string",
+            "default": ""
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

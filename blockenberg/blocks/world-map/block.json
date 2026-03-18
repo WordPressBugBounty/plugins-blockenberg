@@ -1,0 +1,247 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/world-map",
+    "title": "World Map",
+    "category": "bkbg-charts",
+    "icon": "admin-site-alt3",
+    "description": "Interactive SVG world map with country highlighting, data values, tooltips and a legend. Perfect for global presence, customer distribution, and sales territory sections.",
+    "keywords": [
+        "map",
+        "world",
+        "countries",
+        "geography",
+        "data",
+        "global",
+        "presence"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-world-map-editor",
+    "editorStyle": "bkbg-world-map-style",
+    "style": "bkbg-world-map-style",
+    "viewScript": "bkbg-world-map-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Global Presence"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Serving customers across 10+ countries worldwide."
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "countries": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "c1",
+                    "code": "US",
+                    "name": "United States",
+                    "value": 1250,
+                    "color": "",
+                    "url": ""
+                },
+                {
+                    "id": "c2",
+                    "code": "GB",
+                    "name": "United Kingdom",
+                    "value": 480,
+                    "color": "",
+                    "url": ""
+                },
+                {
+                    "id": "c3",
+                    "code": "DE",
+                    "name": "Germany",
+                    "value": 390,
+                    "color": "",
+                    "url": ""
+                },
+                {
+                    "id": "c4",
+                    "code": "FR",
+                    "name": "France",
+                    "value": 320,
+                    "color": "",
+                    "url": ""
+                },
+                {
+                    "id": "c5",
+                    "code": "CA",
+                    "name": "Canada",
+                    "value": 290,
+                    "color": "",
+                    "url": ""
+                },
+                {
+                    "id": "c6",
+                    "code": "AU",
+                    "name": "Australia",
+                    "value": 220,
+                    "color": "",
+                    "url": ""
+                },
+                {
+                    "id": "c7",
+                    "code": "JP",
+                    "name": "Japan",
+                    "value": 340,
+                    "color": "",
+                    "url": ""
+                },
+                {
+                    "id": "c8",
+                    "code": "BR",
+                    "name": "Brazil",
+                    "value": 180,
+                    "color": "",
+                    "url": ""
+                },
+                {
+                    "id": "c9",
+                    "code": "IN",
+                    "name": "India",
+                    "value": 410,
+                    "color": "",
+                    "url": ""
+                },
+                {
+                    "id": "c10",
+                    "code": "ZA",
+                    "name": "South Africa",
+                    "value": 95,
+                    "color": "",
+                    "url": ""
+                }
+            ]
+        },
+        "colorMode": {
+            "type": "string",
+            "default": "gradient"
+        },
+        "lowColor": {
+            "type": "string",
+            "default": "#c4b5fd"
+        },
+        "highColor": {
+            "type": "string",
+            "default": "#5b21b6"
+        },
+        "defaultFill": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "hoverFill": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "projection": {
+            "type": "string",
+            "default": "NaturalEarth1"
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "legendTitle": {
+            "type": "string",
+            "default": "Customers"
+        },
+        "showTooltips": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCountryList": {
+            "type": "boolean",
+            "default": true
+        },
+        "mapHeight": {
+            "type": "number",
+            "default": 480
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "mapBg": {
+            "type": "string",
+            "default": "#f0f4f8"
+        },
+        "tooltipBg": {
+            "type": "string",
+            "default": "#1e1e2e"
+        },
+        "tooltipColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "listBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "listBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 32
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 17
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

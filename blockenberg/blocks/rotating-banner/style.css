@@ -1,0 +1,206 @@
+/* =====================================================
+   Rotating Banner – bkbg-rbnr-*
+   ===================================================== */
+
+.bkbg-rbnr-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+/* Hidden after close */
+.bkbg-rbnr-wrap.is-dismissed {
+    display: none !important;
+}
+
+/* ---- Viewport (clips slides) ---- */
+.bkbg-rbnr-viewport {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ---- Slides track ---- */
+.bkbg-rbnr-track {
+    display: flex;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.bkbg-rbnr-wrap[data-anim="fade"] .bkbg-rbnr-track {
+    display: block;
+    position: relative;
+}
+
+/* ---- Individual slide ---- */
+.bkbg-rbnr-slide {
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    transition: color 0.2s;
+    font-family: var(--bkrbnr-mt-font-family, inherit);
+    font-size: var(--bkrbnr-mt-font-size-d, 14px);
+    font-weight: var(--bkrbnr-mt-font-weight, 500);
+    font-style: var(--bkrbnr-mt-font-style, normal);
+    text-decoration: var(--bkrbnr-mt-text-decoration, none);
+    text-transform: var(--bkrbnr-mt-text-transform, none);
+    line-height: var(--bkrbnr-mt-line-height-d, 1.3);
+    letter-spacing: var(--bkrbnr-mt-letter-spacing-d, normal);
+    word-spacing: var(--bkrbnr-mt-word-spacing-d, normal);
+}
+
+.bkbg-rbnr-wrap[data-anim="fade"] .bkbg-rbnr-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+}
+
+.bkbg-rbnr-wrap[data-anim="fade"] .bkbg-rbnr-slide.is-active {
+    opacity: 1;
+    position: relative;
+    pointer-events: auto;
+}
+
+/* ---- Message content ---- */
+.bkbg-rbnr-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    min-width: 0;
+}
+
+.bkbg-rbnr-text {
+    line-height: 1.3;
+}
+
+.bkbg-rbnr-link-inline {
+    font-weight: 700;
+    text-decoration: underline;
+    color: inherit;
+    white-space: nowrap;
+}
+
+.bkbg-rbnr-link-inline:hover {
+    opacity: 0.8;
+}
+
+.bkbg-rbnr-link-btn {
+    font-weight: 700;
+    text-decoration: none;
+    padding: 3px 12px;
+    border-radius: 14px;
+    white-space: nowrap;
+    display: inline-block;
+    transition: opacity 0.15s;
+}
+
+.bkbg-rbnr-link-btn:hover {
+    opacity: 0.85;
+}
+
+/* ---- Countdown ---- */
+.bkbg-rbnr-countdown {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* ---- Arrow buttons ---- */
+.bkbg-rbnr-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 1;
+    z-index: 2;
+    transition: opacity 0.15s;
+    flex-shrink: 0;
+}
+
+.bkbg-rbnr-arrow:hover { opacity: 0.85; }
+.bkbg-rbnr-arrow.is-prev { left: 8px; }
+.bkbg-rbnr-arrow.is-next { right: 8px; }
+
+/* When close button is also shown, shift the next arrow */
+.bkbg-rbnr-wrap.has-close .bkbg-rbnr-arrow.is-next { right: 38px; }
+
+/* ---- Close button ---- */
+.bkbg-rbnr-close {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    z-index: 3;
+    transition: opacity 0.15s;
+    flex-shrink: 0;
+}
+
+.bkbg-rbnr-close:hover { opacity: 0.85; }
+
+/* ---- Dot indicators ---- */
+.bkbg-rbnr-dots {
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 4px;
+    z-index: 2;
+}
+
+.bkbg-rbnr-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    transition: background 0.15s;
+}
+
+@media (max-width: 1024px) {
+    .bkbg-rbnr-slide {
+        font-size: var(--bkrbnr-mt-font-size-t, var(--bkrbnr-mt-font-size-d, 14px));
+        line-height: var(--bkrbnr-mt-line-height-t, var(--bkrbnr-mt-line-height-d, 1.3));
+        letter-spacing: var(--bkrbnr-mt-letter-spacing-t, var(--bkrbnr-mt-letter-spacing-d, normal));
+        word-spacing: var(--bkrbnr-mt-word-spacing-t, var(--bkrbnr-mt-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-rbnr-slide {
+        font-size: var(--bkrbnr-mt-font-size-m, var(--bkrbnr-mt-font-size-t, var(--bkrbnr-mt-font-size-d, 14px)));
+        line-height: var(--bkrbnr-mt-line-height-m, var(--bkrbnr-mt-line-height-t, var(--bkrbnr-mt-line-height-d, 1.3)));
+        letter-spacing: var(--bkrbnr-mt-letter-spacing-m, var(--bkrbnr-mt-letter-spacing-t, var(--bkrbnr-mt-letter-spacing-d, normal)));
+        word-spacing: var(--bkrbnr-mt-word-spacing-m, var(--bkrbnr-mt-word-spacing-t, var(--bkrbnr-mt-word-spacing-d, normal)));
+    }
+}

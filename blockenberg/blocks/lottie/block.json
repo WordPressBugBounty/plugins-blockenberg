@@ -1,0 +1,86 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/lottie",
+    "title": "Lottie Animation",
+    "category": "bkbg-media",
+    "icon": "format-video",
+    "description": "Play a Lottie JSON animation with trigger modes: autoplay, hover, click or scroll.",
+    "keywords": [
+        "lottie",
+        "animation",
+        "motion",
+        "json",
+        "svg"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-lottie-editor",
+    "style": "bkbg-lottie-style",
+    "viewScript": "bkbg-lottie-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "center",
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "lottieUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "playTrigger": {
+            "type": "string",
+            "default": "autoplay"
+        },
+        "loop": {
+            "type": "boolean",
+            "default": true
+        },
+        "speed": {
+            "type": "number",
+            "default": 1
+        },
+        "direction": {
+            "type": "string",
+            "default": "1"
+        },
+        "keepLastFrame": {
+            "type": "boolean",
+            "default": false
+        },
+        "width": {
+            "type": "number",
+            "default": 400
+        },
+        "autoWidth": {
+            "type": "boolean",
+            "default": false
+        },
+        "height": {
+            "type": "number",
+            "default": 400
+        },
+        "autoHeight": {
+            "type": "boolean",
+            "default": true
+        },
+        "align": {
+            "type": "string",
+            "default": "center"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 0
+        },
+        "padding": {
+            "type": "number",
+            "default": 0
+        },
+    }
+}

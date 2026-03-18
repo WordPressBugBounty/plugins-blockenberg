@@ -1,0 +1,226 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/comparison-section",
+    "version": "1.0.0",
+    "title": "Comparison Section",
+    "category": "bkbg-marketing",
+    "icon": "columns",
+    "description": "Us vs. Them comparison table with feature rows, checkmark/cross icons, highlighted winner column, and full colour/typography controls.",
+    "keywords": [
+        "comparison",
+        "vs",
+        "table",
+        "features",
+        "competitor"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-comparison-section-editor",
+    "style": "bkbg-comparison-section-style",
+    "viewScript": "bkbg-comparison-section-frontend",
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Why choose us?"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "See how we stack up against the alternatives."
+        },
+        "showHeading": {
+            "type": "boolean",
+            "default": true
+        },
+        "col1Label": {
+            "type": "string",
+            "default": "Us"
+        },
+        "col2Label": {
+            "type": "string",
+            "default": "Others"
+        },
+        "col1Icon": {
+            "type": "string",
+            "default": "★"
+        },
+        "col1IconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "col1IconDashicon": {
+            "type": "string",
+            "default": "star-filled"
+        },
+        "col1IconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "col2Icon": {
+            "type": "string",
+            "default": "🏢"
+        },
+        "col2IconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "col2IconDashicon": {
+            "type": "string",
+            "default": "building"
+        },
+        "col2IconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "highlightCol": {
+            "type": "string",
+            "default": "col1"
+        },
+        "showColIcons": {
+            "type": "boolean",
+            "default": true
+        },
+        "rows": {
+            "type": "array",
+            "default": [
+                {
+                    "feature": "Free onboarding & setup",
+                    "col1": "yes",
+                    "col2": "no"
+                },
+                {
+                    "feature": "24/7 priority support",
+                    "col1": "yes",
+                    "col2": "no"
+                },
+                {
+                    "feature": "No long-term contracts",
+                    "col1": "yes",
+                    "col2": "no"
+                },
+                {
+                    "feature": "Dedicated account manager",
+                    "col1": "yes",
+                    "col2": "partial"
+                },
+                {
+                    "feature": "API access included",
+                    "col1": "yes",
+                    "col2": "partial"
+                },
+                {
+                    "feature": "Money-back guarantee",
+                    "col1": "yes",
+                    "col2": "no"
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "tableHeaderBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "highlightBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "highlightColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "featureColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "yesColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "noColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "partialColor": {
+            "type": "string",
+            "default": "#d97706"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "tableWidth": {
+            "type": "string",
+            "default": "720"
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 36
+        },
+        "textSize": {
+            "type": "number",
+            "default": 16
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1200
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Get Started Free"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "typoHeading": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

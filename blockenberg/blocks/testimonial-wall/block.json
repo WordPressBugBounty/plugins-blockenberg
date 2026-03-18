@@ -1,0 +1,235 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockenberg/testimonial-wall",
+  "version": "1.0.0",
+  "title": "Testimonial Wall",
+  "category": "bkbg-marketing",
+  "icon": "format-chat",
+  "description": "Masonry-style testimonial wall with platform source badges (Google, G2, Capterra, Twitter/X), per-card ratings, and featured card highlights.",
+  "keywords": [
+    "testimonial",
+    "wall",
+    "reviews",
+    "masonry",
+    "google",
+    "g2",
+    "capterra",
+    "twitter",
+    "social proof"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-testimonial-wall-editor",
+  "editorStyle": "bkbg-testimonial-wall-style",
+  "style": "bkbg-testimonial-wall-style",
+  "viewScript": "bkbg-testimonial-wall-frontend",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "id": "tw1",
+          "quote": "Absolutely love this product. It has transformed the way our team collaborates every single day.",
+          "author": "Sarah Mitchell",
+          "role": "Product Manager",
+          "company": "Acme Corp",
+          "avatarUrl": "",
+          "avatarId": 0,
+          "rating": 5,
+          "platform": "google",
+          "date": "Jan 2025",
+          "featured": true,
+          "cardBg": ""
+        },
+        {
+          "id": "tw2",
+          "quote": "Best purchase this year. The support team is incredibly responsive.",
+          "author": "James Carter",
+          "role": "CTO",
+          "company": "Techno",
+          "avatarUrl": "",
+          "avatarId": 0,
+          "rating": 5,
+          "platform": "g2",
+          "date": "Feb 2025",
+          "featured": false,
+          "cardBg": ""
+        },
+        {
+          "id": "tw3",
+          "quote": "I switched from a competitor and couldn't be happier. Onboarding was seamless and ROI came fast.",
+          "author": "Priya Nair",
+          "role": "Marketing Lead",
+          "company": "GrowthCo",
+          "avatarUrl": "",
+          "avatarId": 0,
+          "rating": 4,
+          "platform": "capterra",
+          "date": "Mar 2025",
+          "featured": false,
+          "cardBg": ""
+        },
+        {
+          "id": "tw4",
+          "quote": "Game changer for our workflow.",
+          "author": "Tom Nguyen",
+          "role": "Designer",
+          "company": "",
+          "avatarUrl": "",
+          "avatarId": 0,
+          "rating": 5,
+          "platform": "twitter",
+          "date": "Dec 2024",
+          "featured": false,
+          "cardBg": ""
+        },
+        {
+          "id": "tw5",
+          "quote": "Highly recommend to any team looking to scale without headache. The feature set is unmatched.",
+          "author": "Elena Ruiz",
+          "role": "VP Engineering",
+          "company": "ScaleAI",
+          "avatarUrl": "",
+          "avatarId": 0,
+          "rating": 5,
+          "platform": "google",
+          "date": "Jan 2025",
+          "featured": false,
+          "cardBg": ""
+        },
+        {
+          "id": "tw6",
+          "quote": "Solid and reliable. Does exactly what it promises.",
+          "author": "Marcus Webb",
+          "role": "Founder",
+          "company": "WebStart",
+          "avatarUrl": "",
+          "avatarId": 0,
+          "rating": 4,
+          "platform": "g2",
+          "date": "Nov 2024",
+          "featured": false,
+          "cardBg": ""
+        }
+      ]
+    },
+    "layout": {
+      "type": "string",
+      "default": "masonry"
+    },
+    "columns": {
+      "type": "number",
+      "default": 3
+    },
+    "gap": {
+      "type": "number",
+      "default": 20
+    },
+    "showRating": {
+      "type": "boolean",
+      "default": true
+    },
+    "showPlatform": {
+      "type": "boolean",
+      "default": true
+    },
+    "showDate": {
+      "type": "boolean",
+      "default": false
+    },
+    "showAvatar": {
+      "type": "boolean",
+      "default": true
+    },
+    "showCompany": {
+      "type": "boolean",
+      "default": true
+    },
+    "cardStyle": {
+      "type": "string",
+      "default": "shadow"
+    },
+    "cardRadius": {
+      "type": "number",
+      "default": 14
+    },
+    "cardPadding": {
+      "type": "number",
+      "default": 24
+    },
+    "avatarSize": {
+      "type": "number",
+      "default": 40
+    },
+
+    "starSize": {
+      "type": "number",
+      "default": 14
+    },
+    "quoteMarkSize": {
+      "type": "number",
+      "default": 32
+    },
+    "showQuoteMark": {
+      "type": "boolean",
+      "default": true
+    },
+    "featuredAccent": {
+      "type": "string",
+      "default": "#6c3fb5"
+    },
+    "starColor": {
+      "type": "string",
+      "default": "#f59e0b"
+    },
+    "globalCardBg": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "quoteColor": {
+      "type": "string",
+      "default": "#1e293b"
+    },
+    "authorColor": {
+      "type": "string",
+      "default": "#1e293b"
+    },
+    "roleColor": {
+      "type": "string",
+      "default": "#6b7280"
+    },
+    "bgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "paddingTop": {
+      "type": "number",
+      "default": 40
+    },
+    "paddingBottom": {
+      "type": "number",
+      "default": 40
+    },
+    "quoteTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "nameTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "roleTypo": {
+      "type": "object",
+      "default": {}
+    }
+  }
+}

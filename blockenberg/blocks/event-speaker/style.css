@@ -1,0 +1,128 @@
+.bkbg-event-speaker-app {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Title (h2) — specificity 0,2,0 to beat editor themes */
+.bkbg-esp-wrap .bkbg-esp-title {
+    font-family: var(--bkbg-esp-ttl-font-family, inherit);
+    font-size: var(--bkbg-esp-ttl-font-size-d, 26px);
+    font-weight: var(--bkbg-esp-ttl-font-weight, 800);
+    font-style: var(--bkbg-esp-ttl-font-style, normal);
+    line-height: var(--bkbg-esp-ttl-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-esp-ttl-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-esp-ttl-word-spacing-d, normal);
+    text-transform: var(--bkbg-esp-ttl-text-transform, none);
+    text-decoration: var(--bkbg-esp-ttl-text-decoration, none);
+}
+
+/* Subtitle */
+.bkbg-esp-subtitle {
+    font-family: var(--bkbg-esp-sub-font-family, inherit);
+    font-size: var(--bkbg-esp-sub-font-size-d, 16px);
+    font-weight: var(--bkbg-esp-sub-font-weight, 400);
+    font-style: var(--bkbg-esp-sub-font-style, normal);
+    line-height: var(--bkbg-esp-sub-line-height-d, 1.5);
+    letter-spacing: var(--bkbg-esp-sub-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-esp-sub-word-spacing-d, normal);
+    text-transform: var(--bkbg-esp-sub-text-transform, none);
+    text-decoration: var(--bkbg-esp-sub-text-decoration, none);
+}
+
+/* Speaker name */
+.bkbg-esp-name {
+    font-family: var(--bkbg-esp-nm-font-family, inherit);
+    font-size: var(--bkbg-esp-nm-font-size-d, 18px);
+    font-weight: var(--bkbg-esp-nm-font-weight, 700);
+    font-style: var(--bkbg-esp-nm-font-style, normal);
+    line-height: var(--bkbg-esp-nm-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-esp-nm-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-esp-nm-word-spacing-d, normal);
+    text-transform: var(--bkbg-esp-nm-text-transform, none);
+    text-decoration: var(--bkbg-esp-nm-text-decoration, none);
+}
+
+/* Body text (bio, job title, company, session title, twitter) */
+.bkbg-esp-body {
+    font-family: var(--bkbg-esp-bd-font-family, inherit);
+    font-size: var(--bkbg-esp-bd-font-size-d, 14px);
+    font-weight: var(--bkbg-esp-bd-font-weight, 400);
+    font-style: var(--bkbg-esp-bd-font-style, normal);
+    line-height: var(--bkbg-esp-bd-line-height-d, 1.65);
+    letter-spacing: var(--bkbg-esp-bd-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-esp-bd-word-spacing-d, normal);
+    text-transform: var(--bkbg-esp-bd-text-transform, none);
+    text-decoration: var(--bkbg-esp-bd-text-decoration, none);
+}
+
+/* Sub-elements that inherit body but with specific weight overrides */
+.bkbg-esp-company { font-size: calc(var(--bkbg-esp-bd-font-size-d, 14px) - 1px); }
+.bkbg-esp-twitter { font-size: calc(var(--bkbg-esp-bd-font-size-d, 14px) - 1px); font-weight: 600; }
+.bkbg-esp-session-time {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* Card container */
+.bkbg-esp-card {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+    .bkbg-esp-wrap .bkbg-esp-title {
+        font-size: var(--bkbg-esp-ttl-font-size-t, var(--bkbg-esp-ttl-font-size-d, 26px));
+        line-height: var(--bkbg-esp-ttl-line-height-t, var(--bkbg-esp-ttl-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-esp-ttl-letter-spacing-t, var(--bkbg-esp-ttl-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-esp-ttl-word-spacing-t, var(--bkbg-esp-ttl-word-spacing-d, normal));
+    }
+    .bkbg-esp-subtitle {
+        font-size: var(--bkbg-esp-sub-font-size-t, var(--bkbg-esp-sub-font-size-d, 16px));
+        line-height: var(--bkbg-esp-sub-line-height-t, var(--bkbg-esp-sub-line-height-d, 1.5));
+        letter-spacing: var(--bkbg-esp-sub-letter-spacing-t, var(--bkbg-esp-sub-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-esp-sub-word-spacing-t, var(--bkbg-esp-sub-word-spacing-d, normal));
+    }
+    .bkbg-esp-name {
+        font-size: var(--bkbg-esp-nm-font-size-t, var(--bkbg-esp-nm-font-size-d, 18px));
+        line-height: var(--bkbg-esp-nm-line-height-t, var(--bkbg-esp-nm-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-esp-nm-letter-spacing-t, var(--bkbg-esp-nm-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-esp-nm-word-spacing-t, var(--bkbg-esp-nm-word-spacing-d, normal));
+    }
+    .bkbg-esp-body {
+        font-size: var(--bkbg-esp-bd-font-size-t, var(--bkbg-esp-bd-font-size-d, 14px));
+        line-height: var(--bkbg-esp-bd-line-height-t, var(--bkbg-esp-bd-line-height-d, 1.65));
+        letter-spacing: var(--bkbg-esp-bd-letter-spacing-t, var(--bkbg-esp-bd-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-esp-bd-word-spacing-t, var(--bkbg-esp-bd-word-spacing-d, normal));
+    }
+    .bkbg-esp-company { font-size: calc(var(--bkbg-esp-bd-font-size-t, var(--bkbg-esp-bd-font-size-d, 14px)) - 1px);line-height:var(--bkbg-esp-bd-line-height-t, var(--bkbg-esp-bd-line-height-d, 1.65));letter-spacing:var(--bkbg-esp-bd-letter-spacing-t, var(--bkbg-esp-bd-letter-spacing-d, normal));word-spacing:var(--bkbg-esp-bd-word-spacing-t, var(--bkbg-esp-bd-word-spacing-d, normal))}
+    .bkbg-esp-twitter { font-size: calc(var(--bkbg-esp-bd-font-size-t, var(--bkbg-esp-bd-font-size-d, 14px)) - 1px);line-height:var(--bkbg-esp-bd-line-height-t, var(--bkbg-esp-bd-line-height-d, 1.65));letter-spacing:var(--bkbg-esp-bd-letter-spacing-t, var(--bkbg-esp-bd-letter-spacing-d, normal));word-spacing:var(--bkbg-esp-bd-word-spacing-t, var(--bkbg-esp-bd-word-spacing-d, normal))}
+}
+@media (max-width: 767px) {
+    .bkbg-esp-wrap .bkbg-esp-title {
+        font-size: var(--bkbg-esp-ttl-font-size-m, var(--bkbg-esp-ttl-font-size-t, var(--bkbg-esp-ttl-font-size-d, 26px)));
+        line-height: var(--bkbg-esp-ttl-line-height-m, var(--bkbg-esp-ttl-line-height-t, var(--bkbg-esp-ttl-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-esp-ttl-letter-spacing-m, var(--bkbg-esp-ttl-letter-spacing-t, var(--bkbg-esp-ttl-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-esp-ttl-word-spacing-m, var(--bkbg-esp-ttl-word-spacing-t, var(--bkbg-esp-ttl-word-spacing-d, normal)));
+    }
+    .bkbg-esp-subtitle {
+        font-size: var(--bkbg-esp-sub-font-size-m, var(--bkbg-esp-sub-font-size-t, var(--bkbg-esp-sub-font-size-d, 16px)));
+        line-height: var(--bkbg-esp-sub-line-height-m, var(--bkbg-esp-sub-line-height-t, var(--bkbg-esp-sub-line-height-d, 1.5)));
+        letter-spacing: var(--bkbg-esp-sub-letter-spacing-m, var(--bkbg-esp-sub-letter-spacing-t, var(--bkbg-esp-sub-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-esp-sub-word-spacing-m, var(--bkbg-esp-sub-word-spacing-t, var(--bkbg-esp-sub-word-spacing-d, normal)));
+    }
+    .bkbg-esp-name {
+        font-size: var(--bkbg-esp-nm-font-size-m, var(--bkbg-esp-nm-font-size-t, var(--bkbg-esp-nm-font-size-d, 18px)));
+        line-height: var(--bkbg-esp-nm-line-height-m, var(--bkbg-esp-nm-line-height-t, var(--bkbg-esp-nm-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-esp-nm-letter-spacing-m, var(--bkbg-esp-nm-letter-spacing-t, var(--bkbg-esp-nm-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-esp-nm-word-spacing-m, var(--bkbg-esp-nm-word-spacing-t, var(--bkbg-esp-nm-word-spacing-d, normal)));
+    }
+    .bkbg-esp-body {
+        font-size: var(--bkbg-esp-bd-font-size-m, var(--bkbg-esp-bd-font-size-t, var(--bkbg-esp-bd-font-size-d, 14px)));
+        line-height: var(--bkbg-esp-bd-line-height-m, var(--bkbg-esp-bd-line-height-t, var(--bkbg-esp-bd-line-height-d, 1.65)));
+        letter-spacing: var(--bkbg-esp-bd-letter-spacing-m, var(--bkbg-esp-bd-letter-spacing-t, var(--bkbg-esp-bd-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-esp-bd-word-spacing-m, var(--bkbg-esp-bd-word-spacing-t, var(--bkbg-esp-bd-word-spacing-d, normal)));
+    }
+    .bkbg-esp-company { font-size: calc(var(--bkbg-esp-bd-font-size-m, var(--bkbg-esp-bd-font-size-t, var(--bkbg-esp-bd-font-size-d, 14px))) - 1px);line-height:var(--bkbg-esp-bd-line-height-m, var(--bkbg-esp-bd-line-height-t, var(--bkbg-esp-bd-line-height-d, 1.65)));letter-spacing:var(--bkbg-esp-bd-letter-spacing-m, var(--bkbg-esp-bd-letter-spacing-t, var(--bkbg-esp-bd-letter-spacing-d, normal)));word-spacing:var(--bkbg-esp-bd-word-spacing-m, var(--bkbg-esp-bd-word-spacing-t, var(--bkbg-esp-bd-word-spacing-d, normal)))}
+    .bkbg-esp-twitter { font-size: calc(var(--bkbg-esp-bd-font-size-m, var(--bkbg-esp-bd-font-size-t, var(--bkbg-esp-bd-font-size-d, 14px))) - 1px);line-height:var(--bkbg-esp-bd-line-height-m, var(--bkbg-esp-bd-line-height-t, var(--bkbg-esp-bd-line-height-d, 1.65)));letter-spacing:var(--bkbg-esp-bd-letter-spacing-m, var(--bkbg-esp-bd-letter-spacing-t, var(--bkbg-esp-bd-letter-spacing-d, normal)));word-spacing:var(--bkbg-esp-bd-word-spacing-m, var(--bkbg-esp-bd-word-spacing-t, var(--bkbg-esp-bd-word-spacing-d, normal)))}
+}

@@ -1,0 +1,179 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/savings-calculator",
+    "title": "Savings Calculator",
+    "category": "bkbg-calculators",
+    "icon": "chart-line",
+    "description": "An interactive compound interest savings calculator. Enter initial deposit, monthly contribution, annual interest rate, and years to see total savings, interest earned, and a year-by-year growth breakdown.",
+    "keywords": [
+        "savings",
+        "calculator",
+        "compound interest",
+        "investment",
+        "retirement",
+        "finance",
+        "money",
+        "interest",
+        "growth"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-savings-calculator-editor",
+    "style": "bkbg-savings-calculator-style",
+    "viewScript": "bkbg-savings-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Savings Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "See how your money grows with compound interest"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "currencyPos": {
+            "type": "string",
+            "default": "before"
+        },
+        "defaultInitial": {
+            "type": "number",
+            "default": 5000
+        },
+        "defaultMonthly": {
+            "type": "number",
+            "default": 200
+        },
+        "defaultRate": {
+            "type": "number",
+            "default": 7
+        },
+        "defaultYears": {
+            "type": "number",
+            "default": 10
+        },
+        "defaultCompounding": {
+            "type": "string",
+            "default": "monthly"
+        },
+        "showContributedBreakdown": {
+            "type": "boolean",
+            "default": true
+        },
+        "showInterestBreakdown": {
+            "type": "boolean",
+            "default": true
+        },
+        "showYearTable": {
+            "type": "boolean",
+            "default": true
+        },
+        "tableRows": {
+            "type": "number",
+            "default": 10
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "resultBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "totalColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "contributedColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "interestColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "tableBg": {
+            "type": "string",
+            "default": "#fafafa"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 26
+        },
+        "resultSize": {
+            "type": "number",
+            "default": 44
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 680
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

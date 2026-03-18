@@ -1,0 +1,93 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/perspective-device",
+    "title": "Perspective Device",
+    "category": "bkbg-effects",
+    "icon": "desktop",
+    "description": "CSS device mockup (browser, phone, tablet, laptop) with screenshot inside — perfect for hero sections.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-perspective-device-editor",
+    "style": "bkbg-perspective-device-style",
+    "attributes": {
+        "screenshotUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "screenshotId": {
+            "type": "number",
+            "default": 0
+        },
+        "screenshotAlt": {
+            "type": "string",
+            "default": "App screenshot"
+        },
+        "deviceType": {
+            "type": "string",
+            "default": "browser"
+        },
+        "perspective": {
+            "type": "string",
+            "default": "flat"
+        },
+        "deviceTheme": {
+            "type": "string",
+            "default": "light"
+        },
+        "showReflection": {
+            "type": "boolean",
+            "default": false
+        },
+        "showShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 860
+        },
+        "align": {
+            "type": "string",
+            "default": "center"
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 48
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 48
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "frameColor": {
+            "type": "string",
+            "default": ""
+        },
+        "screenBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "shadowColor": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "keywords": [
+        "device",
+        "mockup",
+        "browser",
+        "phone",
+        "screenshot",
+        "hero"
+    ]
+}

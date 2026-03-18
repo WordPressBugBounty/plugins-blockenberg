@@ -1,0 +1,42 @@
+/* Reading Time — bkrt- */
+.bkrt-wrap {
+  width: 100%;
+  box-sizing: border-box;
+}
+.bkrt-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  font-family: var(--bkrt-bt-font-family, inherit);
+  font-size: var(--bkrt-bt-font-size-d, 14px);
+  font-weight: var(--bkrt-bt-font-weight, 600);
+  font-style: var(--bkrt-bt-font-style, normal);
+  text-decoration: var(--bkrt-bt-text-decoration, none);
+  text-transform: var(--bkrt-bt-text-transform, none);
+  line-height: var(--bkrt-bt-line-height-d, 1.3);
+  letter-spacing: var(--bkrt-bt-letter-spacing-d, normal);
+  word-spacing: var(--bkrt-bt-word-spacing-d, normal);
+}
+.bkrt-badge .dashicons {
+  width: 1em;
+  height: 1em;
+  font-size: inherit;
+  line-height: 1;
+}
+@media (max-width: 1024px) {
+  .bkrt-badge {
+    font-size: var(--bkrt-bt-font-size-t, var(--bkrt-bt-font-size-d, 14px));
+    line-height: var(--bkrt-bt-line-height-t, var(--bkrt-bt-line-height-d, 1.3));
+    letter-spacing: var(--bkrt-bt-letter-spacing-t, var(--bkrt-bt-letter-spacing-d, normal));
+    word-spacing: var(--bkrt-bt-word-spacing-t, var(--bkrt-bt-word-spacing-d, normal));
+  }
+}
+@media (max-width: 767px) {
+  .bkrt-badge {
+    font-size: var(--bkrt-bt-font-size-m, var(--bkrt-bt-font-size-t, var(--bkrt-bt-font-size-d, 14px)));
+    line-height: var(--bkrt-bt-line-height-m, var(--bkrt-bt-line-height-t, var(--bkrt-bt-line-height-d, 1.3)));
+    letter-spacing: var(--bkrt-bt-letter-spacing-m, var(--bkrt-bt-letter-spacing-t, var(--bkrt-bt-letter-spacing-d, normal)));
+    word-spacing: var(--bkrt-bt-word-spacing-m, var(--bkrt-bt-word-spacing-t, var(--bkrt-bt-word-spacing-d, normal)));
+  }
+}

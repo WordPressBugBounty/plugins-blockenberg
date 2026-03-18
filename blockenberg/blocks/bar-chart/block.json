@@ -1,0 +1,108 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/bar-chart",
+    "title": "Bar Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-bar",
+    "description": "Vertical or horizontal bar chart with multiple datasets using Chart.js (CDN). Supports stacked, border radius, and custom colors.",
+    "keywords": [
+        "chart",
+        "bar",
+        "graph",
+        "data",
+        "visualization",
+        "histogram"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-bar-chart-editor",
+    "editorStyle": "bkbg-bar-chart-style",
+    "style": "bkbg-bar-chart-style",
+    "viewScript": "bkbg-bar-chart-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "labels": {
+            "type": "string",
+            "default": "Q1,Q2,Q3,Q4"
+        },
+        "datasets": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "2023",
+                    "data": "45,72,60,88",
+                    "color": "#6c3fb5"
+                },
+                {
+                    "label": "2024",
+                    "data": "52,80,71,95",
+                    "color": "#e040fb"
+                }
+            ]
+        },
+        "orientation": {
+            "type": "string",
+            "default": "vertical"
+        },
+        "stacked": {
+            "type": "boolean",
+            "default": false
+        },
+        "barRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "height": {
+            "type": "number",
+            "default": 340
+        },
+        "showGrid": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "legendPos": {
+            "type": "string",
+            "default": "top"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "title": {
+            "type": "string",
+            "default": ""
+        },
+        "chartTitleFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "legendFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "axisLabelFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

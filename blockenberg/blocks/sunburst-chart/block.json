@@ -1,0 +1,152 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockenberg/sunburst-chart",
+  "title": "Sunburst Chart",
+  "category": "bkbg-charts",
+  "icon": "chart-pie",
+  "description": "A two-ring radial hierarchy chart \u2014 the inner ring shows main segments and the outer ring shows their sub-categories.",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Revenue by Region & Channel"
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "svgSize": {
+      "type": "integer",
+      "default": 520
+    },
+    "innerRadius": {
+      "type": "integer",
+      "default": 80
+    },
+    "midRadius": {
+      "type": "integer",
+      "default": 180
+    },
+    "outerRadius": {
+      "type": "integer",
+      "default": 240
+    },
+    "showLabels": {
+      "type": "boolean",
+      "default": true
+    },
+    "showValues": {
+      "type": "boolean",
+      "default": true
+    },
+    "showLegend": {
+      "type": "boolean",
+      "default": true
+    },
+    "labelFontSize": {
+      "type": "integer",
+      "default": 11
+    },
+    "valueFontSize": {
+      "type": "integer",
+      "default": 10
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "titleColor": {
+      "type": "string",
+      "default": "#111827"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#374151"
+    },
+    "segments": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Americas",
+          "color": "#6366f1",
+          "children": [
+            {
+              "label": "Direct",
+              "value": 38
+            },
+            {
+              "label": "Partners",
+              "value": 24
+            },
+            {
+              "label": "Online",
+              "value": 18
+            }
+          ]
+        },
+        {
+          "label": "Europe",
+          "color": "#10b981",
+          "children": [
+            {
+              "label": "Direct",
+              "value": 29
+            },
+            {
+              "label": "Partners",
+              "value": 15
+            }
+          ]
+        },
+        {
+          "label": "Asia",
+          "color": "#f59e0b",
+          "children": [
+            {
+              "label": "Direct",
+              "value": 20
+            },
+            {
+              "label": "Online",
+              "value": 32
+            },
+            {
+              "label": "Resellers",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "label": "Other",
+          "color": "#ef4444",
+          "children": [
+            {
+              "label": "Direct",
+              "value": 14
+            }
+          ]
+        }
+      ]
+    },
+    "labelFontWeight": {
+      "type": "string",
+      "default": "400"
+    },
+    "labelLineHeight": {
+      "type": "number",
+      "default": 1.4
+    },
+    "titleTypo": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "editorScript": "bkbg-sunburst-chart-editor",
+  "style": "bkbg-sunburst-chart-style"
+}

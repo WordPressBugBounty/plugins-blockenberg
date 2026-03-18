@@ -1,0 +1,144 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/fact-check",
+    "title": "Fact Check",
+    "description": "Editorial fact-check verdict box with claim, verdict rating, explanation, and sources.",
+    "category": "bkbg-blog",
+    "icon": "shield",
+    "keywords": [
+        "fact check",
+        "verdict",
+        "claim",
+        "true",
+        "false",
+        "misinformation",
+        "journalism",
+        "editorial"
+    ],
+    "editorScript": "bkbg-fact-check-editor",
+    "style": "bkbg-fact-check-style",
+    "viewScript": "bkbg-fact-check-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "claim": {
+            "type": "string",
+            "default": "\"This policy will create one million new jobs by 2030.\""
+        },
+        "verdict": {
+            "type": "string",
+            "default": "mostly-false"
+        },
+        "explanation": {
+            "type": "string",
+            "default": ""
+        },
+        "sources": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Bureau of Labor Statistics Report",
+                    "url": ""
+                },
+                {
+                    "title": "Congressional Budget Office Analysis",
+                    "url": ""
+                }
+            ]
+        },
+        "reviewerName": {
+            "type": "string",
+            "default": ""
+        },
+        "reviewerTitle": {
+            "type": "string",
+            "default": ""
+        },
+        "reviewDate": {
+            "type": "string",
+            "default": ""
+        },
+        "showReviewer": {
+            "type": "boolean",
+            "default": false
+        },
+        "showSources": {
+            "type": "boolean",
+            "default": true
+        },
+        "showRatingScale": {
+            "type": "boolean",
+            "default": true
+        },
+        "style": {
+            "type": "string",
+            "default": "card"
+        },
+        "openInNewTab": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "claimBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "claimColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "explanationColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "sourceTitleColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "sourceLinkColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "reviewerColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "claimFontSize": { "type": "number", "default": 15 },
+        "claimFontWeight": { "type": "string", "default": "400" },
+        "claimLineHeight": { "type": "number", "default": 1.6 },
+        "explanationFontSize": { "type": "number", "default": 14 },
+        "explanationFontWeight": { "type": "string", "default": "400" },
+        "explanationLineHeight": { "type": "number", "default": 1.7 },
+        "typoClaim": { "type": "object", "default": {} },
+        "typoExplanation": { "type": "object", "default": {} }
+    }
+}

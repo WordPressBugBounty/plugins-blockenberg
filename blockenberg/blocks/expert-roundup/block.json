@@ -1,0 +1,179 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/expert-roundup",
+    "title": "Expert Roundup",
+    "description": "Collect expert opinions, tips, or predictions on a topic. Each expert has a photo, name, title, and their contributed insight. Great for SEO-rich editorial articles.",
+    "category": "bkbg-blog",
+    "icon": "groups",
+    "keywords": [
+        "expert",
+        "roundup",
+        "opinion",
+        "contributors",
+        "quote",
+        "panel",
+        "insights"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-expert-roundup-editor",
+    "style": "bkbg-expert-roundup-style",
+    "viewScript": "bkbg-expert-roundup-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "Expert Roundup"
+        },
+        "heading": {
+            "type": "string",
+            "default": "9 Experts Share Their #1 SEO Tip for 2025"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "We asked leading SEO professionals what strategy they're doubling down on this year. Here's what they said."
+        },
+        "experts": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Ahrefs Team",
+                    "title": "Head of SEO",
+                    "company": "Ahrefs",
+                    "avatarUrl": "",
+                    "contribution": "Topical authority is the name of the game. Build a comprehensive content cluster around every key topic in your niche before competitors do. One well-linked hub page with 15 supporting articles outperforms 15 isolated pages every time."
+                },
+                {
+                    "name": "Lily Ray",
+                    "title": "VP of SEO Strategy",
+                    "company": "Amsive",
+                    "avatarUrl": "",
+                    "contribution": "Focus ruthlessly on E-E-A-T signals. Update your author bios, link to primary sources, build genuine backlinks from industry sites — and never publish anything you wouldn't put your real name on."
+                },
+                {
+                    "name": "Barry Schwartz",
+                    "title": "Founder & Editor",
+                    "company": "Search Engine Roundtable",
+                    "avatarUrl": "",
+                    "contribution": "Speed and Core Web Vitals still matter more than most people realize. A page that loads half a second faster than a competitor's will win in a tie. Invest in performance before you invest in more content."
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "cards"
+        },
+        "columns": {
+            "type": "number",
+            "default": 2
+        },
+        "showCompany": {
+            "type": "boolean",
+            "default": true
+        },
+        "showNumber": {
+            "type": "boolean",
+            "default": true
+        },
+        "quoteStyle": {
+            "type": "string",
+            "default": "block"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1100
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "companyColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "quoteColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "numberBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "numberColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "avatarBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "avatarColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "eyebrowFontSize": { "type": "number", "default": 13 },
+        "eyebrowFontWeight": { "type": "string", "default": "700" },
+        "headingFontSize": { "type": "number", "default": 32 },
+        "headingFontWeight": { "type": "string", "default": "800" },
+        "headingLineHeight": { "type": "number", "default": 1.25 },
+        "subtextFontSize": { "type": "number", "default": 17 },
+        "subtextFontWeight": { "type": "string", "default": "400" },
+        "subtextLineHeight": { "type": "number", "default": 1.6 },
+        "quoteFontSize": { "type": "number", "default": 14 },
+        "quoteLineHeight": { "type": "number", "default": 1.65 },
+        "typoEyebrow": { "type": "object", "default": {} },
+        "typoHeading": { "type": "object", "default": {} },
+        "typoSubtext": { "type": "object", "default": {} },
+        "typoQuote": { "type": "object", "default": {} }
+    }
+}

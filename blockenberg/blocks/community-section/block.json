@@ -1,0 +1,229 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/community-section",
+	"version": "1.0.0",
+	"title": "Community Section",
+	"category": "bkbg-business",
+	"icon": "groups",
+	"description": "Social community proof section with overlapping member avatars, member count, heading, CTA button, and trust badges.",
+	"keywords": [
+		"community",
+		"members",
+		"avatars",
+		"social",
+		"proof",
+		"trust",
+		"badge"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-community-section-editor",
+	"style": "bkbg-community-section-style",
+	"viewScript": "bkbg-community-section-frontend",
+	"supports": {
+		"html": false,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"avatars": {
+			"type": "array",
+			"default": [
+				{
+					"imageUrl": "",
+					"imageId": 0,
+					"alt": "Member 1",
+					"name": "Alex"
+				},
+				{
+					"imageUrl": "",
+					"imageId": 0,
+					"alt": "Member 2",
+					"name": "Jordan"
+				},
+				{
+					"imageUrl": "",
+					"imageId": 0,
+					"alt": "Member 3",
+					"name": "Sam"
+				},
+				{
+					"imageUrl": "",
+					"imageId": 0,
+					"alt": "Member 4",
+					"name": "Taylor"
+				},
+				{
+					"imageUrl": "",
+					"imageId": 0,
+					"alt": "Member 5",
+					"name": "Morgan"
+				}
+			]
+		},
+		"memberCount": {
+			"type": "string",
+			"default": "12,000+"
+		},
+		"memberCountLabel": {
+			"type": "string",
+			"default": "members and growing"
+		},
+		"heading": {
+			"type": "string",
+			"default": "Join thousands of creators already inside"
+		},
+		"subtext": {
+			"type": "string",
+			"default": "Get instant access to our private community, resources, and weekly live sessions."
+		},
+		"showHeading": {
+			"type": "boolean",
+			"default": true
+		},
+		"ctaEnabled": {
+			"type": "boolean",
+			"default": true
+		},
+		"ctaLabel": {
+			"type": "string",
+			"default": "Join the community"
+		},
+		"ctaUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"ctaIsExternal": {
+			"type": "boolean",
+			"default": false
+		},
+		"badgeText": {
+			"type": "string",
+			"default": "Free to join"
+		},
+		"showBadge": {
+			"type": "boolean",
+			"default": true
+		},
+		"trusts": {
+			"type": "array",
+			"default": [
+				{
+					"text": "No credit card required"
+				},
+				{
+					"text": "Cancel anytime"
+				},
+				{
+					"text": "Trusted by 500+ companies"
+				}
+			]
+		},
+		"showTrusts": {
+			"type": "boolean",
+			"default": true
+		},
+		"avatarOverlap": {
+			"type": "integer",
+			"default": -14
+		},
+		"avatarSize": {
+			"type": "integer",
+			"default": 48
+		},
+		"layout": {
+			"type": "string",
+			"default": "centered"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#7c3aed"
+		},
+		"headingColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"ctaBg": {
+			"type": "string",
+			"default": "#7c3aed"
+		},
+		"ctaColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"badgeBg": {
+			"type": "string",
+			"default": "#f0fdf4"
+		},
+		"badgeColor": {
+			"type": "string",
+			"default": "#15803d"
+		},
+		"avatarBorderColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"trustColor": {
+			"type": "string",
+			"default": "#9ca3af"
+		},
+		"countColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"headingSize": {
+			"type": "integer",
+			"default": 30
+		},
+		"maxWidth": {
+			"type": "integer",
+			"default": 700
+		},
+		"paddingTop": {
+			"type": "integer",
+			"default": 80
+		},
+		"paddingBottom": {
+			"type": "integer",
+			"default": 80
+		},
+		"headingFontWeight": {
+			"type": "string",
+			"default": "800"
+		},
+		"headingLineHeight": {
+			"type": "number",
+			"default": 1.3
+		},
+		"subtextFontSize": {
+			"type": "integer",
+			"default": 16
+		},
+		"subtextFontWeight": {
+			"type": "string",
+			"default": "400"
+		},
+		"subtextLineHeight": {
+			"type": "number",
+			"default": 1.6
+		},
+		"typoHeading": {
+			"type": "object",
+			"default": {}
+		},
+		"typoBody": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

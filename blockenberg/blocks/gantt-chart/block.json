@@ -1,0 +1,270 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/gantt-chart",
+    "title": "Gantt Chart",
+    "description": "Project timeline Gantt chart with tasks, phases, milestones, and a today indicator. Rendered in pure CSS — no library required.",
+    "category": "bkbg-charts",
+    "icon": "calendar-alt",
+    "keywords": [
+        "gantt",
+        "project",
+        "timeline",
+        "schedule",
+        "tasks",
+        "plan",
+        "roadmap",
+        "chart"
+    ],
+    "editorScript": "bkbg-gantt-chart-editor",
+    "editorStyle": "bkbg-gantt-chart-style",
+    "style": "bkbg-gantt-chart-style",
+    "viewScript": "bkbg-gantt-chart-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "tasks": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "t1",
+                    "name": "Project Kickoff",
+                    "phase": "Discovery",
+                    "startDate": "2025-01-06",
+                    "endDate": "2025-01-10",
+                    "color": "#6366f1",
+                    "milestone": false,
+                    "completed": 100,
+                    "assignee": "Alex"
+                },
+                {
+                    "id": "t2",
+                    "name": "Requirements Gathering",
+                    "phase": "Discovery",
+                    "startDate": "2025-01-08",
+                    "endDate": "2025-01-17",
+                    "color": "#6366f1",
+                    "milestone": false,
+                    "completed": 80,
+                    "assignee": "Sam"
+                },
+                {
+                    "id": "t3",
+                    "name": "Design System Setup",
+                    "phase": "Design",
+                    "startDate": "2025-01-20",
+                    "endDate": "2025-02-07",
+                    "color": "#0ea5e9",
+                    "milestone": false,
+                    "completed": 60,
+                    "assignee": "Jordan"
+                },
+                {
+                    "id": "t4",
+                    "name": "Wireframes",
+                    "phase": "Design",
+                    "startDate": "2025-01-27",
+                    "endDate": "2025-02-14",
+                    "color": "#0ea5e9",
+                    "milestone": false,
+                    "completed": 40,
+                    "assignee": "Jordan"
+                },
+                {
+                    "id": "t5",
+                    "name": "Design Review ✓",
+                    "phase": "Design",
+                    "startDate": "2025-02-14",
+                    "endDate": "2025-02-14",
+                    "color": "#f59e0b",
+                    "milestone": true,
+                    "completed": 0,
+                    "assignee": ""
+                },
+                {
+                    "id": "t6",
+                    "name": "Frontend Development",
+                    "phase": "Development",
+                    "startDate": "2025-02-17",
+                    "endDate": "2025-03-14",
+                    "color": "#10b981",
+                    "milestone": false,
+                    "completed": 20,
+                    "assignee": "Alex"
+                },
+                {
+                    "id": "t7",
+                    "name": "Backend API",
+                    "phase": "Development",
+                    "startDate": "2025-02-17",
+                    "endDate": "2025-03-07",
+                    "color": "#10b981",
+                    "milestone": false,
+                    "completed": 30,
+                    "assignee": "Sam"
+                },
+                {
+                    "id": "t8",
+                    "name": "QA & Testing",
+                    "phase": "Launch",
+                    "startDate": "2025-03-10",
+                    "endDate": "2025-03-21",
+                    "color": "#ef4444",
+                    "milestone": false,
+                    "completed": 0,
+                    "assignee": "Pat"
+                },
+                {
+                    "id": "t9",
+                    "name": "Launch 🚀",
+                    "phase": "Launch",
+                    "startDate": "2025-03-24",
+                    "endDate": "2025-03-24",
+                    "color": "#f59e0b",
+                    "milestone": true,
+                    "completed": 0,
+                    "assignee": ""
+                }
+            ]
+        },
+        "view": {
+            "type": "string",
+            "default": "month"
+        },
+        "showPhases": {
+            "type": "boolean",
+            "default": true
+        },
+        "showMilestones": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAssignee": {
+            "type": "boolean",
+            "default": false
+        },
+        "showProgress": {
+            "type": "boolean",
+            "default": true
+        },
+        "highlightToday": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "showWeekends": {
+            "type": "boolean",
+            "default": true
+        },
+        "rowHeight": {
+            "type": "number",
+            "default": 40
+        },
+        "taskRadius": {
+            "type": "number",
+            "default": 4
+        },
+        "labelWidth": {
+            "type": "number",
+            "default": 200
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "rowBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "rowAltBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "weekendBg": {
+            "type": "string",
+            "default": "#f0f0f5"
+        },
+        "todayLine": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "phaseColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "milestoneColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "labelFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "labelLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "headerFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "headerFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "headerLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "typoLabel": {
+            "type": "object",
+            "default": {}
+        },
+        "typoHeader": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

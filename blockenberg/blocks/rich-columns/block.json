@@ -1,0 +1,184 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/rich-columns",
+    "title": "Rich Columns",
+    "category": "bkbg-layout",
+    "icon": "columns",
+    "description": "Multi-column layout with icons, headings, rich text, and optional links — ideal for features, benefits, or service descriptions.",
+    "keywords": [
+        "columns",
+        "features",
+        "benefits",
+        "grid",
+        "icon",
+        "services"
+    ],
+    "editorScript": "bkbg-rich-columns-editor",
+    "style": "bkbg-rich-columns-style",
+    "viewScript": "bkbg-rich-columns-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "columns": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "⚡",
+                    "iconType": "emoji",
+                    "iconPickerType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "heading": "Lightning Fast",
+                    "content": "<p>Set up in minutes with a streamlined onboarding that gets you to value without friction or technical overhead.</p>",
+                    "linkLabel": "Learn more",
+                    "linkUrl": "",
+                    "linkNewTab": false,
+                    "bgColor": "",
+                    "accentColor": ""
+                },
+                {
+                    "icon": "🔒",
+                    "iconType": "emoji",
+                    "iconPickerType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "heading": "Secure by Default",
+                    "content": "<p>Enterprise-grade security and end-to-end encryption keep your data safe without additional configuration.</p>",
+                    "linkLabel": "Learn more",
+                    "linkUrl": "",
+                    "linkNewTab": false,
+                    "bgColor": "",
+                    "accentColor": ""
+                },
+                {
+                    "icon": "📈",
+                    "iconType": "emoji",
+                    "iconPickerType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "heading": "Scales With You",
+                    "content": "<p>From solo creator to large team, the platform grows with your needs — no migration headaches, ever.</p>",
+                    "linkLabel": "Learn more",
+                    "linkUrl": "",
+                    "linkNewTab": false,
+                    "bgColor": "",
+                    "accentColor": ""
+                }
+            ]
+        },
+        "columnCount": {
+            "type": "number",
+            "default": 3
+        },
+        "layout": {
+            "type": "string",
+            "default": "cards"
+        },
+        "gap": {
+            "type": "number",
+            "default": 24
+        },
+        "containerPadding": {
+            "type": "number",
+            "default": 0
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1100
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 28
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 28
+        },
+        "iconBgSize": {
+            "type": "number",
+            "default": 56
+        },
+        "iconBgRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLink": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDivider": {
+            "type": "boolean",
+            "default": false
+        },
+        "headingTag": {
+            "type": "string",
+            "default": "h3"
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 19
+        },
+        "bodySize": {
+            "type": "number",
+            "default": 15
+        },
+        "containerBg": {
+            "type": "string",
+            "default": ""
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "iconBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

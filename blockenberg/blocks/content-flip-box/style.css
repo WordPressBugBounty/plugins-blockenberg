@@ -1,0 +1,274 @@
+/* ========================================
+   Content Flip Box Block Styles
+   Prefix: bkbg-cfb-
+   ======================================== */
+
+.bkbg-cfb-grid {
+    --bkbg-cfb-cols: 3;
+    --bkbg-cfb-gap: 24px;
+    --bkbg-cfb-height: 280px;
+    --bkbg-cfb-radius: 16px;
+    --bkbg-cfb-speed: 0.6s;
+    --bkbg-cfb-icon-size: 48px;
+    --bkbg-cfb-title-size: 20px;
+    --bkbg-cfb-text-size: 14px;
+    --bkbg-cfb-btn-radius: 50px;
+    --bkbg-cfb-btn-padding: 12px;
+    --bkbg-cfb-btn-font: 14px;
+    display: grid;
+    grid-template-columns: repeat(var(--bkbg-cfb-cols), 1fr);
+    gap: var(--bkbg-cfb-gap);
+    box-sizing: border-box;
+}
+
+/* ── Card ── */
+.bkbg-cfb-card {
+    perspective: 1200px;
+    height: var(--bkbg-cfb-height);
+    border-radius: var(--bkbg-cfb-radius);
+    overflow: visible; /* must be visible for 3d */
+}
+
+/* ── Inner (rotates) ── */
+.bkbg-cfb-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    border-radius: var(--bkbg-cfb-radius);
+    transition: transform var(--bkbg-cfb-speed) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Faces (front & back) ── */
+.bkbg-cfb-face {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--bkbg-cfb-radius);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 28px 24px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Back face: rotated by default (hidden) */
+.bkbg-cfb-back {
+    transform: rotateY(180deg);
+}
+
+/* Vertical back */
+.bkbg-cfb-grid[data-direction="vertical"] .bkbg-cfb-back {
+    transform: rotateX(180deg);
+}
+
+/* Fade back: no 3D rotation */
+.bkbg-cfb-grid[data-direction="fade"] .bkbg-cfb-back {
+    transform: none;
+    opacity: 0;
+    transition: opacity var(--bkbg-cfb-speed) ease;
+    z-index: 1;
+}
+
+/* ── Hover trigger (horizontal) ── */
+.bkbg-cfb-grid[data-trigger="hover"][data-direction="horizontal"] .bkbg-cfb-card:hover .bkbg-cfb-inner {
+    transform: rotateY(180deg);
+}
+
+/* ── Hover trigger (vertical) ── */
+.bkbg-cfb-grid[data-trigger="hover"][data-direction="vertical"] .bkbg-cfb-card:hover .bkbg-cfb-inner {
+    transform: rotateX(180deg);
+}
+
+/* ── Hover trigger (fade) ── */
+.bkbg-cfb-grid[data-trigger="hover"][data-direction="fade"] .bkbg-cfb-card:hover .bkbg-cfb-back {
+    opacity: 1;
+}
+
+/* ── Click trigger: JS adds .is-flipped ── */
+.bkbg-cfb-grid[data-trigger="click"][data-direction="horizontal"] .bkbg-cfb-card.is-flipped .bkbg-cfb-inner {
+    transform: rotateY(180deg);
+}
+
+.bkbg-cfb-grid[data-trigger="click"][data-direction="vertical"] .bkbg-cfb-card.is-flipped .bkbg-cfb-inner {
+    transform: rotateX(180deg);
+}
+
+.bkbg-cfb-grid[data-trigger="click"][data-direction="fade"] .bkbg-cfb-card.is-flipped .bkbg-cfb-back {
+    opacity: 1;
+}
+
+/* ── Content elements ── */
+.bkbg-cfb-icon {
+    font-size: var(--bkbg-cfb-icon-size);
+    line-height: 1;
+    display: block;
+}
+.bkbg-cfb-icon svg { width: 1em; height: 1em; fill: currentColor; }
+.bkbg-cfb-icon .dashicons { font-size: inherit; width: 1em; height: 1em; line-height: 1; }
+.bkbg-cfb-icon .bkbg-icon-img { width: 1em; height: 1em; object-fit: contain; }
+
+.bkbg-cfb-title {
+    font-family: var(--bkcfb-title-font-family, inherit);
+    font-size: var(--bkcfb-title-font-size-d, var(--bkcfb-title-font-size, var(--bkbg-cfb-title-size, 20px)));
+    font-weight: var(--bkcfb-title-font-weight, 700);
+    font-style: var(--bkcfb-title-font-style, normal);
+    text-transform: var(--bkcfb-title-text-transform, none);
+    text-decoration: var(--bkcfb-title-text-decoration, none);
+    line-height: var(--bkcfb-title-line-height-d, var(--bkcfb-title-line-height, 1.25));
+    letter-spacing: var(--bkcfb-title-letter-spacing-d, var(--bkcfb-title-letter-spacing, normal));
+    word-spacing: var(--bkcfb-title-word-spacing-d, var(--bkcfb-title-word-spacing, normal));
+    margin: 0;
+}
+
+.bkbg-cfb-text {
+    font-family: var(--bkcfb-text-font-family, inherit);
+    font-size: var(--bkcfb-text-font-size-d, var(--bkcfb-text-font-size, var(--bkbg-cfb-text-size, 14px)));
+    font-weight: var(--bkcfb-text-font-weight, 400);
+    font-style: var(--bkcfb-text-font-style, normal);
+    text-transform: var(--bkcfb-text-text-transform, none);
+    text-decoration: var(--bkcfb-text-text-decoration, none);
+    line-height: var(--bkcfb-text-line-height-d, var(--bkcfb-text-line-height, 1.6));
+    letter-spacing: var(--bkcfb-text-letter-spacing-d, var(--bkcfb-text-letter-spacing, normal));
+    word-spacing: var(--bkcfb-text-word-spacing-d, var(--bkcfb-text-word-spacing, normal));
+    opacity: 0.9;
+    margin: 0;
+}
+
+.bkbg-cfb-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--bkbg-cfb-btn-radius);
+    padding: 8px var(--bkbg-cfb-btn-padding);
+    font-size: var(--bkbg-cfb-btn-font);
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.bkbg-cfb-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+/* ── Editor overrides ── */
+.bkbg-editor-flip-grid.bkbg-cfb-grid {
+    pointer-events: auto;
+}
+
+.bkbg-editor-flip-grid .bkbg-cfb-card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* In editor we show flat faces, not 3D */
+.bkbg-editor-flip-grid .bkbg-cfb-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    transform: none !important;
+    transition: none;
+}
+
+.bkbg-editor-flip-grid .bkbg-cfb-inner {
+    transform: none !important;
+    transition: none;
+}
+
+/* Active card border */
+.bkbg-cfb-card--active {
+    outline: 2px dashed #6c3fb5;
+    outline-offset: -2px;
+}
+
+/* Tiny flip toggle button in editor */
+.bkbg-cfb-editor-flip-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    transition: background 0.15s;
+}
+
+.bkbg-cfb-editor-flip-btn:hover {
+    background: white;
+}
+
+.bkbg-cfb-editor-active-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 10;
+    background: #6c3fb5;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .bkbg-cfb-title {
+        font-size: var(--bkcfb-title-font-size-t, var(--bkcfb-title-font-size-d, var(--bkcfb-title-font-size, var(--bkbg-cfb-title-size, 20px))));
+        line-height: var(--bkcfb-title-line-height-t, var(--bkcfb-title-line-height-d, var(--bkcfb-title-line-height, 1.25)));
+        letter-spacing: var(--bkcfb-title-letter-spacing-t, var(--bkcfb-title-letter-spacing-d, var(--bkcfb-title-letter-spacing, normal)));
+        word-spacing: var(--bkcfb-title-word-spacing-t, var(--bkcfb-title-word-spacing-d, var(--bkcfb-title-word-spacing, normal)));
+    }
+    .bkbg-cfb-text {
+        font-size: var(--bkcfb-text-font-size-t, var(--bkcfb-text-font-size-d, var(--bkcfb-text-font-size, var(--bkbg-cfb-text-size, 14px))));
+        line-height: var(--bkcfb-text-line-height-t, var(--bkcfb-text-line-height-d, var(--bkcfb-text-line-height, 1.6)));
+        letter-spacing: var(--bkcfb-text-letter-spacing-t, var(--bkcfb-text-letter-spacing-d, var(--bkcfb-text-letter-spacing, normal)));
+        word-spacing: var(--bkcfb-text-word-spacing-t, var(--bkcfb-text-word-spacing-d, var(--bkcfb-text-word-spacing, normal)));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-cfb-title {
+        font-size: var(--bkcfb-title-font-size-m, var(--bkcfb-title-font-size-t, var(--bkcfb-title-font-size-d, var(--bkcfb-title-font-size, var(--bkbg-cfb-title-size, 20px)))));
+        line-height: var(--bkcfb-title-line-height-m, var(--bkcfb-title-line-height-t, var(--bkcfb-title-line-height-d, var(--bkcfb-title-line-height, 1.25))));
+        letter-spacing: var(--bkcfb-title-letter-spacing-m, var(--bkcfb-title-letter-spacing-t, var(--bkcfb-title-letter-spacing-d, var(--bkcfb-title-letter-spacing, normal))));
+        word-spacing: var(--bkcfb-title-word-spacing-m, var(--bkcfb-title-word-spacing-t, var(--bkcfb-title-word-spacing-d, var(--bkcfb-title-word-spacing, normal))));
+    }
+    .bkbg-cfb-text {
+        font-size: var(--bkcfb-text-font-size-m, var(--bkcfb-text-font-size-t, var(--bkcfb-text-font-size-d, var(--bkcfb-text-font-size, var(--bkbg-cfb-text-size, 14px)))));
+        line-height: var(--bkcfb-text-line-height-m, var(--bkcfb-text-line-height-t, var(--bkcfb-text-line-height-d, var(--bkcfb-text-line-height, 1.6))));
+        letter-spacing: var(--bkcfb-text-letter-spacing-m, var(--bkcfb-text-letter-spacing-t, var(--bkcfb-text-letter-spacing-d, var(--bkcfb-text-letter-spacing, normal))));
+        word-spacing: var(--bkcfb-text-word-spacing-m, var(--bkcfb-text-word-spacing-t, var(--bkcfb-text-word-spacing-d, var(--bkcfb-text-word-spacing, normal))));
+    }
+}
+
+@media (max-width: 900px) {
+    .bkbg-cfb-grid {
+        grid-template-columns: repeat(min(var(--bkbg-cfb-cols), 2), 1fr);
+    }
+}
+
+@media (max-width: 580px) {
+    .bkbg-cfb-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,161 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/population-pyramid",
+    "title": "Population Pyramid",
+    "category": "bkbg-charts",
+    "icon": "chart-bar",
+    "description": "Back-to-back horizontal bar chart showing two population groups (e.g. male/female, 2020/2030) by age or category.",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Age Distribution: Male vs Female"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelA": {
+            "type": "string",
+            "default": "Male"
+        },
+        "labelB": {
+            "type": "string",
+            "default": "Female"
+        },
+        "svgWidth": {
+            "type": "integer",
+            "default": 700
+        },
+        "padTop": {
+            "type": "integer",
+            "default": 36
+        },
+        "padLeft": {
+            "type": "integer",
+            "default": 20
+        },
+        "padRight": {
+            "type": "integer",
+            "default": 20
+        },
+        "padCenter": {
+            "type": "integer",
+            "default": 60
+        },
+        "barHeight": {
+            "type": "integer",
+            "default": 26
+        },
+        "barGap": {
+            "type": "integer",
+            "default": 4
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPercentage": {
+            "type": "boolean",
+            "default": false
+        },
+        "showGridLines": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelFontSize": {
+            "type": "integer",
+            "default": 12
+        },
+        "valueFontSize": {
+            "type": "integer",
+            "default": 10
+        },
+        "colorA": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "colorB": {
+            "type": "string",
+            "default": "#ec4899"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "75+",
+                    "a": 2.1,
+                    "b": 3.2
+                },
+                {
+                    "label": "65\u201374",
+                    "a": 4.8,
+                    "b": 5.6
+                },
+                {
+                    "label": "55\u201364",
+                    "a": 6.9,
+                    "b": 7.4
+                },
+                {
+                    "label": "45\u201354",
+                    "a": 8.2,
+                    "b": 8.5
+                },
+                {
+                    "label": "35\u201344",
+                    "a": 8.7,
+                    "b": 8.6
+                },
+                {
+                    "label": "25\u201334",
+                    "a": 9.1,
+                    "b": 8.8
+                },
+                {
+                    "label": "15\u201324",
+                    "a": 8.4,
+                    "b": 7.9
+                },
+                {
+                    "label": "5\u201314",
+                    "a": 7.6,
+                    "b": 7.2
+                },
+                {
+                    "label": "0\u20134",
+                    "a": 4.3,
+                    "b": 4.1
+                }
+            ]
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "editorScript": "bkbg-population-pyramid-editor",
+    "style": "bkbg-population-pyramid-style"
+}

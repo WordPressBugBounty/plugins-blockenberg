@@ -1,0 +1,216 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/tabs",
+    "title": "Tabs",
+    "category": "bkbg-content",
+    "icon": "screenoptions",
+    "description": "Tabbed content panels with full WYSIWYG editing per tab.",
+    "keywords": [
+        "tabs",
+        "tabbed",
+        "panel",
+        "content",
+        "switch",
+        "navigation"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-tabs-editor",
+    "editorStyle": "bkbg-tabs-style",
+    "style": "bkbg-tabs-style",
+    "viewScript": "bkbg-tabs-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Tab One",
+                    "content": "<p>Add your content here. Click to edit this tab panel.</p>",
+                    "icon": "dashicons-star-filled",
+                    "showIcon": true
+                },
+                {
+                    "title": "Tab Two",
+                    "content": "<p>This is the second tab panel. Each tab has its own rich text content area.</p>",
+                    "icon": "dashicons-heart",
+                    "showIcon": true
+                },
+                {
+                    "title": "Tab Three",
+                    "content": "<p>Add unlimited tabs, each with full WYSIWYG support for images, lists, headings, and more.</p>",
+                    "icon": "dashicons-admin-site",
+                    "showIcon": true
+                }
+            ]
+        },
+        "activeTab": {
+            "type": "number",
+            "default": 0
+        },
+        "tabStyle": {
+            "type": "string",
+            "default": "underline"
+        },
+        "tabPosition": {
+            "type": "string",
+            "default": "top"
+        },
+        "tabAlign": {
+            "type": "string",
+            "default": "left"
+        },
+        "tabGap": {
+            "type": "number",
+            "default": 4
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconPosition": {
+            "type": "string",
+            "default": "left"
+        },
+        "animationType": {
+            "type": "string",
+            "default": "fade"
+        },
+        "tabBarBg": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "tabBg": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "tabColor": {
+            "type": "string",
+            "default": "#555555"
+        },
+        "tabHoverBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.04)"
+        },
+        "tabHoverColor": {
+            "type": "string",
+            "default": "#222222"
+        },
+        "tabActiveBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "tabActiveColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "indicatorColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "indicatorHeight": {
+            "type": "number",
+            "default": 3
+        },
+        "tabTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "tabPaddingV": {
+            "type": "number",
+            "default": 12
+        },
+        "tabPaddingH": {
+            "type": "number",
+            "default": 20
+        },
+        "tabBorderRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "contentBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "contentColor": {
+            "type": "string",
+            "default": "#333333"
+        },
+        "contentPaddingTop": {
+            "type": "number",
+            "default": 28
+        },
+        "contentPaddingRight": {
+            "type": "number",
+            "default": 28
+        },
+        "contentPaddingBottom": {
+            "type": "number",
+            "default": 28
+        },
+        "contentPaddingLeft": {
+            "type": "number",
+            "default": 28
+        },
+        "contentBorderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "contentMinHeight": {
+            "type": "number",
+            "default": 0
+        },
+        "contentTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 1
+        },
+        "wrapperBg": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "wrapperPaddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "wrapperPaddingRight": {
+            "type": "number",
+            "default": 0
+        },
+        "wrapperPaddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "wrapperPaddingLeft": {
+            "type": "number",
+            "default": 0
+        },
+        "wrapperBorderRadius": {
+            "type": "number",
+            "default": 0
+        },
+        "boxShadow": {
+            "type": "string",
+            "default": "none"
+        }
+    }
+}

@@ -1,0 +1,233 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/org-chart",
+    "title": "Org Chart",
+    "category": "bkbg-business",
+    "icon": "networking",
+    "description": "Organizational hierarchy chart with avatar, name, role, and department for every node.",
+    "keywords": [
+        "org chart",
+        "organization",
+        "hierarchy",
+        "team",
+        "structure",
+        "tree"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-org-chart-editor",
+    "style": "bkbg-org-chart-style",
+    "viewScript": "bkbg-org-chart-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Our Team"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "nodes": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "n1",
+                    "parentId": "",
+                    "name": "Sarah Mitchell",
+                    "role": "Chief Executive Officer",
+                    "department": "Executive",
+                    "avatarUrl": "",
+                    "avatarId": 0,
+                    "color": "#6c3fb5"
+                },
+                {
+                    "id": "n2",
+                    "parentId": "n1",
+                    "name": "James Wheeler",
+                    "role": "Chief Technology Officer",
+                    "department": "Technology",
+                    "avatarUrl": "",
+                    "avatarId": 0,
+                    "color": "#3b82f6"
+                },
+                {
+                    "id": "n3",
+                    "parentId": "n1",
+                    "name": "Priya Sharma",
+                    "role": "Chief Marketing Officer",
+                    "department": "Marketing",
+                    "avatarUrl": "",
+                    "avatarId": 0,
+                    "color": "#ec4899"
+                },
+                {
+                    "id": "n4",
+                    "parentId": "n1",
+                    "name": "David Chen",
+                    "role": "Chief Financial Officer",
+                    "department": "Finance",
+                    "avatarUrl": "",
+                    "avatarId": 0,
+                    "color": "#10b981"
+                },
+                {
+                    "id": "n5",
+                    "parentId": "n2",
+                    "name": "Lena Hoffmann",
+                    "role": "VP of Engineering",
+                    "department": "Technology",
+                    "avatarUrl": "",
+                    "avatarId": 0,
+                    "color": "#6366f1"
+                },
+                {
+                    "id": "n6",
+                    "parentId": "n2",
+                    "name": "Carlos Rivera",
+                    "role": "Head of Design",
+                    "department": "Technology",
+                    "avatarUrl": "",
+                    "avatarId": 0,
+                    "color": "#8b5cf6"
+                },
+                {
+                    "id": "n7",
+                    "parentId": "n3",
+                    "name": "Amara Osei",
+                    "role": "Growth Manager",
+                    "department": "Marketing",
+                    "avatarUrl": "",
+                    "avatarId": 0,
+                    "color": "#f59e0b"
+                },
+                {
+                    "id": "n8",
+                    "parentId": "n3",
+                    "name": "Tom Nakamura",
+                    "role": "Brand Director",
+                    "department": "Marketing",
+                    "avatarUrl": "",
+                    "avatarId": 0,
+                    "color": "#ef4444"
+                }
+            ]
+        },
+        "showAvatars": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDepartment": {
+            "type": "boolean",
+            "default": true
+        },
+        "collapseOnClick": {
+            "type": "boolean",
+            "default": true
+        },
+        "connectorStyle": {
+            "type": "string",
+            "default": "elbow"
+        },
+        "avatarSize": {
+            "type": "number",
+            "default": 56
+        },
+        "nodeRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "connectorColor": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "connectorWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "roleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "deptColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "nameSize": {
+            "type": "number",
+            "default": 14
+        },
+        "roleSize": {
+            "type": "number",
+            "default": 12
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 40
+        },
+        "nameFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "800"
+        },
+        "roleFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "roleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

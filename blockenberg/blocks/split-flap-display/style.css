@@ -1,0 +1,190 @@
+/* ── split-flap-display block ──────────────────────────────────── */
+
+.bkbg-sfd-wrap {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.bkbg-sfd-board {
+    display: inline-block;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* ── Label ────────────────────────────────────────────────────── */
+.bkbg-sfd-label {
+    font-family: var(--bksfd-lb-font-family, inherit);
+    font-size: var(--bksfd-lb-font-size-d, 11px);
+    font-weight: var(--bksfd-lb-font-weight, 600);
+    font-style: var(--bksfd-lb-font-style);
+    text-decoration: var(--bksfd-lb-text-decoration);
+    text-transform: var(--bksfd-lb-text-transform, uppercase);
+    letter-spacing: var(--bksfd-lb-letter-spacing-d, 0.15em);
+    line-height: var(--bksfd-lb-line-height-d);
+    word-spacing: var(--bksfd-lb-word-spacing-d);
+    margin-bottom: 12px;
+    user-select: none;
+}
+
+/* ── Board rows (multiple messages = single visible row) ────────── */
+.bkbg-sfd-rows {
+    display: flex;
+    flex-direction: column;
+}
+
+.bkbg-sfd-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ── Single character tile ────────────────────────────────────── */
+.bkbg-sfd-char {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    /* background, size, radius, color set via inline style */
+}
+
+/* Divider line at midpoint */
+.bkbg-sfd-divider {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    z-index: 2;
+    /* background set inline */
+}
+
+/* ── Flap halves ───────────────────────────────────────────────── */
+/* Top half — static top of current char */
+.bkbg-sfd-top {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transform-origin: bottom center;
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+/* Bottom half - static bottom of current char */
+.bkbg-sfd-bottom {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transform-origin: top center;
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+/* Flipping top flap (shows previous char top, rotates down) */
+.bkbg-sfd-flip-top {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transform-origin: bottom center;
+    z-index: 3;
+    backface-visibility: hidden;
+    animation: bkbg-sfd-flip-top-anim var(--sfd-speed) ease-in forwards;
+}
+
+/* Flipping bottom flap (shows next char bottom, rotates from up) */
+.bkbg-sfd-flip-bottom {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transform-origin: top center;
+    z-index: 3;
+    backface-visibility: hidden;
+    animation: bkbg-sfd-flip-bottom-anim var(--sfd-speed) ease-out forwards;
+}
+
+@keyframes bkbg-sfd-flip-top-anim {
+    0%   { transform: rotateX(0deg); }
+    100% { transform: rotateX(-90deg); }
+}
+
+@keyframes bkbg-sfd-flip-bottom-anim {
+    0%   { transform: rotateX(90deg); box-shadow: 0 -4px 8px rgba(0,0,0,0.5) inset; }
+    100% { transform: rotateX(0deg);  box-shadow: none; }
+}
+
+.bkbg-sfd-char-text {
+    position: relative;
+    z-index: 1;
+    user-select: none;
+    font-family: var(--bksfd-ch-font-family, monospace);
+    font-size: var(--bksfd-ch-font-size-d, 28px);
+    font-weight: var(--bksfd-ch-font-weight, 700);
+    font-style: var(--bksfd-ch-font-style);
+    text-decoration: var(--bksfd-ch-text-decoration);
+    text-transform: var(--bksfd-ch-text-transform);
+}
+
+/* ── Responsive typography ─────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-sfd-label {
+        font-size: var(--bksfd-lb-font-size-t, var(--bksfd-lb-font-size-d, 11px));
+        line-height: var(--bksfd-lb-line-height-t, var(--bksfd-lb-line-height-d));
+        letter-spacing: var(--bksfd-lb-letter-spacing-t, var(--bksfd-lb-letter-spacing-d, 0.15em));
+        word-spacing: var(--bksfd-lb-word-spacing-t, var(--bksfd-lb-word-spacing-d));
+    }
+    .bkbg-sfd-char-text {
+        font-size: var(--bksfd-ch-font-size-t, var(--bksfd-ch-font-size-d, 28px));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-sfd-label {
+        font-size: var(--bksfd-lb-font-size-m, var(--bksfd-lb-font-size-t, var(--bksfd-lb-font-size-d, 11px)));
+        line-height: var(--bksfd-lb-line-height-m, var(--bksfd-lb-line-height-t, var(--bksfd-lb-line-height-d)));
+        letter-spacing: var(--bksfd-lb-letter-spacing-m, var(--bksfd-lb-letter-spacing-t, var(--bksfd-lb-letter-spacing-d, 0.15em)));
+        word-spacing: var(--bksfd-lb-word-spacing-m, var(--bksfd-lb-word-spacing-t, var(--bksfd-lb-word-spacing-d)));
+    }
+    .bkbg-sfd-char-text {
+        font-size: var(--bksfd-ch-font-size-m, var(--bksfd-ch-font-size-t, var(--bksfd-ch-font-size-d, 28px)));
+    }
+}
+
+/* ── Ticker dots ───────────────────────────────────────────────── */
+.bkbg-sfd-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.bkbg-sfd-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transition: opacity 0.3s;
+}
+
+.bkbg-sfd-dot.bkbg-sfd-dot-active {
+    opacity: 1;
+}
+
+.bkbg-sfd-dot:not(.bkbg-sfd-dot-active) {
+    opacity: 0.3;
+}

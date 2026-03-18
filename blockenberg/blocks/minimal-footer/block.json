@@ -1,0 +1,280 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/minimal-footer",
+    "title": "Minimal Footer",
+    "category": "bkbg-layout",
+    "icon": "align-pull-left",
+    "description": "Clean, minimal site footer with logo (image or text), navigation columns, social icon links, and copyright line. A lighter alternative to the mega-footer.",
+    "keywords": [
+        "footer",
+        "minimal",
+        "nav",
+        "copyright",
+        "social",
+        "links",
+        "bottom"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-minimal-footer-editor",
+    "style": "bkbg-minimal-footer-style",
+    "attributes": {
+        "logoType": {
+            "type": "string",
+            "default": "text"
+        },
+        "logoText": {
+            "type": "string",
+            "default": "Acme Inc."
+        },
+        "logoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "logoImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "logoImageId": {
+            "type": "number",
+            "default": 0
+        },
+        "logoWidth": {
+            "type": "number",
+            "default": 120
+        },
+        "tagline": {
+            "type": "string",
+            "default": "Building the modern web."
+        },
+        "showTagline": {
+            "type": "boolean",
+            "default": true
+        },
+        "navColumns": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "nc1",
+                    "heading": "Product",
+                    "links": [
+                        {
+                            "id": "l1",
+                            "label": "Features",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l2",
+                            "label": "Pricing",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l3",
+                            "label": "Changelog",
+                            "url": "#"
+                        }
+                    ]
+                },
+                {
+                    "id": "nc2",
+                    "heading": "Company",
+                    "links": [
+                        {
+                            "id": "l4",
+                            "label": "About",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l5",
+                            "label": "Blog",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l6",
+                            "label": "Careers",
+                            "url": "#"
+                        }
+                    ]
+                },
+                {
+                    "id": "nc3",
+                    "heading": "Resources",
+                    "links": [
+                        {
+                            "id": "l7",
+                            "label": "Docs",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l8",
+                            "label": "Support",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l9",
+                            "label": "Status",
+                            "url": "#"
+                        }
+                    ]
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "socials": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "s1",
+                    "platform": "twitter",
+                    "url": "#",
+                    "label": "Twitter"
+                },
+                {
+                    "id": "s2",
+                    "platform": "github",
+                    "url": "#",
+                    "label": "GitHub"
+                },
+                {
+                    "id": "s3",
+                    "platform": "linkedin",
+                    "url": "#",
+                    "label": "LinkedIn"
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "showSocials": {
+            "type": "boolean",
+            "default": true
+        },
+        "copyright": {
+            "type": "string",
+            "default": "© 2026 Acme Inc. All rights reserved."
+        },
+        "showCopyright": {
+            "type": "boolean",
+            "default": true
+        },
+        "legalLinks": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "ll1",
+                    "label": "Privacy Policy",
+                    "url": "#"
+                },
+                {
+                    "id": "ll2",
+                    "label": "Terms of Service",
+                    "url": "#"
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "showLegalLinks": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "logo-left-nav-right"
+        },
+        "dividerStyle": {
+            "type": "string",
+            "default": "line"
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 56
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 32
+        },
+        "footerBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "logoColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "taglineColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "linkHoverColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "socialColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "copyrightColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "logoSize": {
+            "type": "number",
+            "default": 22
+        },
+        "linkSize": {
+            "type": "number",
+            "default": 14
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 13
+        },
+        "logoTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "taglineTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "linkTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "copyrightTypo": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ],
+        "spacing": {
+            "margin": true
+        }
+    }
+}

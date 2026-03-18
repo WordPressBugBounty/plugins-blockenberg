@@ -1,0 +1,109 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/word-scramble",
+    "title": "Word Scramble",
+    "category": "bkbg-interactive",
+    "icon": "editor-spellcheck",
+    "description": "Interactive word unscramble game with categories, hints, scoring, and timer. Multiple difficulty levels.",
+    "keywords": [
+        "word",
+        "scramble",
+        "game",
+        "unscramble",
+        "puzzle",
+        "quiz",
+        "spelling"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-word-scramble-editor",
+    "style": "bkbg-word-scramble-style",
+    "viewScript": "bkbg-word-scramble-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Word Scramble"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Unscramble the letters to find the hidden word!"
+        },
+        "defaultCategory": {
+            "type": "string",
+            "default": "animals"
+        },
+        "defaultDifficulty": {
+            "type": "string",
+            "default": "medium"
+        },
+        "hintsAllowed": {
+            "type": "number",
+            "default": 3
+        },
+        "showTimer": {
+            "type": "boolean",
+            "default": true
+        },
+        "showScore": {
+            "type": "boolean",
+            "default": true
+        },
+        "showStreak": {
+            "type": "boolean",
+            "default": true
+        },
+        "timeLimit": {
+            "type": "number",
+            "default": 60
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "correctColor": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "wrongColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#fffbeb"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#92400e"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 28
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

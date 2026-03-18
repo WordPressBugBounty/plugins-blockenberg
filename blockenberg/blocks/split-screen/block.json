@@ -1,0 +1,268 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/split-screen",
+    "title": "Split Screen",
+    "category": "bkbg-layout",
+    "icon": "columns",
+    "description": "Two-panel side-by-side layout with independent backgrounds, content, and optional scroll-snap.",
+    "keywords": [
+        "split",
+        "screen",
+        "two column",
+        "hero",
+        "half"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-split-screen-editor",
+    "editorStyle": "bkbg-split-screen-style",
+    "style": "bkbg-split-screen-style",
+    "viewScript": "bkbg-split-screen-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "minHeight": {
+            "type": "number",
+            "default": 500
+        },
+        "splitRatio": {
+            "type": "string",
+            "default": "50-50"
+        },
+        "stackOnMobile": {
+            "type": "boolean",
+            "default": true
+        },
+        "verticalAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "gap": {
+            "type": "number",
+            "default": 0
+        },
+        "leftBgType": {
+            "type": "string",
+            "default": "color"
+        },
+        "leftBgColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "leftBgGradient": {
+            "type": "string",
+            "default": "linear-gradient(135deg,#6c3fb5,#4f2d85)"
+        },
+        "leftBgImage": {
+            "type": "string",
+            "default": ""
+        },
+        "leftBgImageId": {
+            "type": "number",
+            "default": 0
+        },
+        "leftBgPosition": {
+            "type": "string",
+            "default": "center center"
+        },
+        "leftOverlay": {
+            "type": "string",
+            "default": ""
+        },
+        "leftOverlayOpacity": {
+            "type": "number",
+            "default": 40
+        },
+        "leftPaddingX": {
+            "type": "number",
+            "default": 48
+        },
+        "leftPaddingY": {
+            "type": "number",
+            "default": 48
+        },
+        "leftTag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "leftHeading": {
+            "type": "string",
+            "default": "Bold headline here"
+        },
+        "leftText": {
+            "type": "string",
+            "default": "Supporting paragraph that tells your story. Keep it concise and impactful."
+        },
+        "leftBtnLabel": {
+            "type": "string",
+            "default": "Get Started"
+        },
+        "leftBtnUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "leftBtnBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "leftBtnColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "leftBtnRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "leftTextAlign": {
+            "type": "string",
+            "default": "left"
+        },
+        "leftHeadingColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "leftTextColor": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.85)"
+        },
+        "leftHeadingSize": {
+            "type": "number",
+            "default": 36
+        },
+        "leftHeadingWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "leftShowBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "rightBgType": {
+            "type": "string",
+            "default": "color"
+        },
+        "rightBgColor": {
+            "type": "string",
+            "default": "#f5f5f7"
+        },
+        "rightBgGradient": {
+            "type": "string",
+            "default": "linear-gradient(135deg,#f5f5f7,#e0e0e8)"
+        },
+        "rightBgImage": {
+            "type": "string",
+            "default": ""
+        },
+        "rightBgImageId": {
+            "type": "number",
+            "default": 0
+        },
+        "rightBgPosition": {
+            "type": "string",
+            "default": "center center"
+        },
+        "rightOverlay": {
+            "type": "string",
+            "default": ""
+        },
+        "rightOverlayOpacity": {
+            "type": "number",
+            "default": 40
+        },
+        "rightPaddingX": {
+            "type": "number",
+            "default": 48
+        },
+        "rightPaddingY": {
+            "type": "number",
+            "default": 48
+        },
+        "rightTag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "rightHeading": {
+            "type": "string",
+            "default": "Second panel headline"
+        },
+        "rightText": {
+            "type": "string",
+            "default": "This panel can showcase a complementary message, an offer, or a visual highlight."
+        },
+        "rightBtnLabel": {
+            "type": "string",
+            "default": "Learn More"
+        },
+        "rightBtnUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "rightBtnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "rightBtnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "rightBtnRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "rightTextAlign": {
+            "type": "string",
+            "default": "left"
+        },
+        "rightHeadingColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "rightTextColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "rightHeadingSize": {
+            "type": "number",
+            "default": 36
+        },
+        "rightHeadingWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "rightShowBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "leftHeadingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "leftTextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "leftBtnTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "rightHeadingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "rightTextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "rightBtnTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

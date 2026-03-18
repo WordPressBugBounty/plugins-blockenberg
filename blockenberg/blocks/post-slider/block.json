@@ -1,0 +1,110 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/post-slider",
+    "title": "Post Slider",
+    "category": "bkbg-blog",
+    "icon": "slides",
+    "description": "Hero-style slider cycling through posts with full-width background images and overlay captions.",
+    "keywords": [
+        "post",
+        "hero",
+        "slider",
+        "carousel",
+        "featured",
+        "image"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-post-slider-editor",
+    "editorStyle": "bkbg-post-slider-style",
+    "style": "bkbg-post-slider-style",
+    "viewScript": "bkbg-post-slider-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "slides": {
+            "type": "array",
+            "default": [
+                {
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "title": "Slide One Headline",
+                    "excerpt": "A short caption describing this featured post or section.",
+                    "btnLabel": "Read More",
+                    "btnUrl": "#"
+                },
+                {
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "title": "Slide Two Headline",
+                    "excerpt": "A short caption describing this featured post or section.",
+                    "btnLabel": "Read More",
+                    "btnUrl": "#"
+                }
+            ]
+        },
+        "height": {
+            "type": "number",
+            "default": 500
+        },
+        "heightUnit": {
+            "type": "string",
+            "default": "px"
+        },
+        "transition": {
+            "type": "string",
+            "default": "fade"
+        },
+        "autoplay": {
+            "type": "boolean",
+            "default": true
+        },
+        "speed": {
+            "type": "number",
+            "default": 4000
+        },
+        "overlayBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.45)"
+        },
+        "captionAlign": {
+            "type": "string",
+            "default": "left"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "showArrows": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDots": {
+            "type": "boolean",
+            "default": true
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 0
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "excerptTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

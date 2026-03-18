@@ -1,0 +1,91 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/radar-chart",
+    "title": "Radar Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-area",
+    "description": "Spider/radar chart with multiple datasets, fill transparency, and axis customization using Chart.js (CDN).",
+    "keywords": [
+        "chart",
+        "radar",
+        "spider",
+        "web",
+        "data",
+        "visualization"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-radar-chart-editor",
+    "editorStyle": "bkbg-radar-chart-style",
+    "style": "bkbg-radar-chart-style",
+    "viewScript": "bkbg-radar-chart-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": []
+    },
+    "attributes": {
+        "labels": {
+            "type": "string",
+            "default": "Speed,Power,Range,Accuracy,Endurance,Agility"
+        },
+        "datasets": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Team A",
+                    "data": "65,80,75,90,60,85",
+                    "color": "#6c3fb5",
+                    "fillAlpha": 0.2
+                },
+                {
+                    "label": "Team B",
+                    "data": "80,55,90,70,85,65",
+                    "color": "#e040fb",
+                    "fillAlpha": 0.2
+                }
+            ]
+        },
+        "size": {
+            "type": "number",
+            "default": 340
+        },
+        "scaleMin": {
+            "type": "number",
+            "default": 0
+        },
+        "scaleMax": {
+            "type": "number",
+            "default": 100
+        },
+        "gridLines": {
+            "type": "number",
+            "default": 5
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "legendPos": {
+            "type": "string",
+            "default": "top"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "title": {
+            "type": "string",
+            "default": ""
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

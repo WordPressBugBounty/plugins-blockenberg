@@ -1,0 +1,125 @@
+/* ── Rating Summary ─────────────────────────────────────────── */
+.bkbg-rating-summary-wrap {
+    box-sizing: border-box;
+}
+.bkbg-rs {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+.bkbg-rs--vertical {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.bkbg-rs--compact {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.bkbg-rs-score-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex-shrink: 0;
+}
+.bkbg-rs-breakdown {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.bkbg-rs-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.bkbg-rs-bar-track {
+    flex: 1;
+    overflow: hidden;
+}
+.bkbg-rs-fill {
+    height: 100%;
+    width: 0;
+    transition: width 0.9s ease;
+}
+.bkbg-rs-platform-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 99px;
+    letter-spacing: 0.05em;
+}
+.bkbg-rs-score-value {
+    font-family: var(--bkrs-sc-font-family, inherit);
+    font-size: var(--bkrs-sc-font-size-d, 52px);
+    font-weight: var(--bkrs-sc-font-weight, 800);
+    font-style: var(--bkrs-sc-font-style, normal);
+    text-decoration: var(--bkrs-sc-text-decoration, none);
+    text-transform: var(--bkrs-sc-text-transform, none);
+    line-height: var(--bkrs-sc-line-height-d, 1);
+    letter-spacing: var(--bkrs-sc-letter-spacing-d, normal);
+    word-spacing: var(--bkrs-sc-word-spacing-d, normal);
+}
+.bkbg-rs-label,
+.bkbg-rs-total,
+.bkbg-rs-bar-label,
+.bkbg-rs-bar-count,
+.bkbg-rs-platform {
+    font-family: var(--bkrs-lb-font-family, inherit);
+    font-size: var(--bkrs-lb-font-size-d, 13px);
+    font-weight: var(--bkrs-lb-font-weight, 500);
+    font-style: var(--bkrs-lb-font-style, normal);
+    text-decoration: var(--bkrs-lb-text-decoration, none);
+    text-transform: var(--bkrs-lb-text-transform, none);
+    line-height: var(--bkrs-lb-line-height-d, 1.4);
+    letter-spacing: var(--bkrs-lb-letter-spacing-d, normal);
+    word-spacing: var(--bkrs-lb-word-spacing-d, normal);
+}
+.bkbg-rs-total {
+    font-size: calc(var(--bkrs-lb-font-size-d, 13px) - 1px);
+}
+@media (max-width: 1024px) {
+    .bkbg-rs-score-value {
+        font-size: var(--bkrs-sc-font-size-t, var(--bkrs-sc-font-size-d, 52px));
+        line-height: var(--bkrs-sc-line-height-t, var(--bkrs-sc-line-height-d, 1));
+        letter-spacing: var(--bkrs-sc-letter-spacing-t, var(--bkrs-sc-letter-spacing-d, normal));
+        word-spacing: var(--bkrs-sc-word-spacing-t, var(--bkrs-sc-word-spacing-d, normal));
+    }
+    .bkbg-rs-label,
+    .bkbg-rs-total,
+    .bkbg-rs-bar-label,
+    .bkbg-rs-bar-count,
+    .bkbg-rs-platform {
+        font-size: var(--bkrs-lb-font-size-t, var(--bkrs-lb-font-size-d, 13px));
+        line-height: var(--bkrs-lb-line-height-t, var(--bkrs-lb-line-height-d, 1.4));
+        letter-spacing: var(--bkrs-lb-letter-spacing-t, var(--bkrs-lb-letter-spacing-d, normal));
+        word-spacing: var(--bkrs-lb-word-spacing-t, var(--bkrs-lb-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-rs-score-value {
+        font-size: var(--bkrs-sc-font-size-m, var(--bkrs-sc-font-size-t, var(--bkrs-sc-font-size-d, 52px)));
+        line-height: var(--bkrs-sc-line-height-m, var(--bkrs-sc-line-height-t, var(--bkrs-sc-line-height-d, 1)));
+        letter-spacing: var(--bkrs-sc-letter-spacing-m, var(--bkrs-sc-letter-spacing-t, var(--bkrs-sc-letter-spacing-d, normal)));
+        word-spacing: var(--bkrs-sc-word-spacing-m, var(--bkrs-sc-word-spacing-t, var(--bkrs-sc-word-spacing-d, normal)));
+    }
+    .bkbg-rs-label,
+    .bkbg-rs-total,
+    .bkbg-rs-bar-label,
+    .bkbg-rs-bar-count,
+    .bkbg-rs-platform {
+        font-size: var(--bkrs-lb-font-size-m, var(--bkrs-lb-font-size-t, var(--bkrs-lb-font-size-d, 13px)));
+        line-height: var(--bkrs-lb-line-height-m, var(--bkrs-lb-line-height-t, var(--bkrs-lb-line-height-d, 1.4)));
+        letter-spacing: var(--bkrs-lb-letter-spacing-m, var(--bkrs-lb-letter-spacing-t, var(--bkrs-lb-letter-spacing-d, normal)));
+        word-spacing: var(--bkrs-lb-word-spacing-m, var(--bkrs-lb-word-spacing-t, var(--bkrs-lb-word-spacing-d, normal)));
+    }
+}
+@media (max-width: 600px) {
+    .bkbg-rs {
+        flex-direction: column;
+    }
+    .bkbg-rs-breakdown {
+        width: 100%;
+    }
+}

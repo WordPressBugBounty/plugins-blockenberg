@@ -1,0 +1,157 @@
+{
+  "apiVersion": 3,
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "blockenberg/sticky-video",
+  "title": "Sticky Video",
+  "category": "bkbg-media",
+  "description": "Video player that minimises into a floating corner player when scrolled past, with close and restore controls.",
+  "keywords": [
+    "video",
+    "sticky",
+    "floating",
+    "pip",
+    "player",
+    "embed",
+    "youtube",
+    "vimeo"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-sticky-video-editor",
+  "style": "bkbg-sticky-video-style",
+  "viewScript": "bkbg-sticky-video-frontend",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "videoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "videoType": {
+      "type": "string",
+      "default": "youtube"
+    },
+    "posterUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "title": {
+      "type": "string",
+      "default": "Watch our video"
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "subtitle": {
+      "type": "string",
+      "default": ""
+    },
+    "autoplay": {
+      "type": "boolean",
+      "default": false
+    },
+    "muted": {
+      "type": "boolean",
+      "default": false
+    },
+    "loop": {
+      "type": "boolean",
+      "default": false
+    },
+    "controls": {
+      "type": "boolean",
+      "default": true
+    },
+    "aspectRatio": {
+      "type": "string",
+      "default": "16:9"
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 16
+    },
+    "stickyEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "stickyCorner": {
+      "type": "string",
+      "default": "bottom-right"
+    },
+    "stickyWidth": {
+      "type": "number",
+      "default": 320
+    },
+    "stickyOffset": {
+      "type": "number",
+      "default": 24
+    },
+    "stickyRadius": {
+      "type": "number",
+      "default": 12
+    },
+    "stickyOnPlay": {
+      "type": "boolean",
+      "default": false
+    },
+    "showOverlayPlay": {
+      "type": "boolean",
+      "default": true
+    },
+    "overlayBg": {
+      "type": "string",
+      "default": "rgba(0,0,0,0.35)"
+    },
+    "overlayColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "stickyBg": {
+      "type": "string",
+      "default": "#1e293b"
+    },
+    "sectionBg": {
+      "type": "string",
+      "default": ""
+    },
+    "titleSize": {
+      "type": "number",
+      "default": 16
+    },
+    "subtitleSize": {
+      "type": "number",
+      "default": 13
+    },
+    "titleFontWeight": {
+      "type": "string",
+      "default": "700"
+    },
+    "subtitleFontWeight": {
+      "type": "string",
+      "default": "400"
+    },
+    "titleLineHeight": {
+      "type": "number",
+      "default": 1.2
+    },
+    "subtitleLineHeight": {
+      "type": "number",
+      "default": 1.5
+    },
+    "titleTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "subtitleTypo": {
+      "type": "object",
+      "default": {}
+    }
+  }
+}

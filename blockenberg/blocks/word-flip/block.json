@@ -1,0 +1,143 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/word-flip",
+    "version": "1.0.0",
+    "title": "Word Flip",
+    "category": "bkbg-effects",
+    "icon": "sort",
+    "description": "Headline with a vertically flipping word that cycles through alternatives — like a slot machine or departure board embedded in text.",
+    "keywords": [
+        "flip",
+        "word",
+        "text",
+        "animation",
+        "headline",
+        "rotating",
+        "slot"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-word-flip-editor",
+    "style": "bkbg-word-flip-style",
+    "viewScript": "bkbg-word-flip-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "staticBefore": {
+            "type": "string",
+            "default": "We are"
+        },
+        "staticAfter": {
+            "type": "string",
+            "default": ""
+        },
+        "words": {
+            "type": "array",
+            "default": [
+                "designers",
+                "developers",
+                "creators",
+                "innovators"
+            ]
+        },
+        "flipMode": {
+            "type": "string",
+            "default": "roll"
+        },
+        "interval": {
+            "type": "number",
+            "default": 2200
+        },
+        "flipSpeed": {
+            "type": "number",
+            "default": 420
+        },
+        "tag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "fontSize": {
+            "type": "integer",
+            "default": 56
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "800"
+        },
+        "letterSpacing": {
+            "type": "number",
+            "default": -1
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.1
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "fontFamily": {
+            "type": "string",
+            "default": "inherit"
+        },
+        "staticColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "flipColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "flipBg": {
+            "type": "string",
+            "default": ""
+        },
+        "flipBorderRadius": {
+            "type": "integer",
+            "default": 4
+        },
+        "flipPaddingH": {
+            "type": "integer",
+            "default": 8
+        },
+        "underlineStyle": {
+            "type": "string",
+            "default": "none"
+        },
+        "underlineColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "showBg": {
+            "type": "boolean",
+            "default": false
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "paddingV": {
+            "type": "integer",
+            "default": 32
+        },
+        "paddingH": {
+            "type": "integer",
+            "default": 24
+        },
+        "borderRadius": {
+            "type": "integer",
+            "default": 0
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

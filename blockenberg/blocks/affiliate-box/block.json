@@ -1,0 +1,311 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/affiliate-box",
+    "title": "Affiliate Review Box",
+    "category": "bkbg-marketing",
+    "description": "Structured product review block with score badge, pros & cons columns, verdict summary, price display, and affiliate CTA button.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-affiliate-box-editor",
+    "style": "bkbg-affiliate-box-style",
+    "viewScript": "bkbg-affiliate-box-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "productName": {
+            "type": "string",
+            "default": "Sony WH-1000XM5"
+        },
+        "tagline": {
+            "type": "string",
+            "default": "The best noise-cancelling headphones you can buy"
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "integer",
+            "default": 0
+        },
+        "overallScore": {
+            "type": "number",
+            "default": 9.2
+        },
+        "maxScore": {
+            "type": "number",
+            "default": 10
+        },
+        "scoreLabel": {
+            "type": "string",
+            "default": "Expert Score"
+        },
+        "verdict": {
+            "type": "string",
+            "default": "The WH-1000XM5 sets the standard for consumer noise-cancelling headphones. Outstanding ANC, superb sound quality, and excellent call performance make it the go-to choice for frequent travellers and remote workers."
+        },
+        "verdictLabel": {
+            "type": "string",
+            "default": "Our Verdict"
+        },
+        "showVerdict": {
+            "type": "boolean",
+            "default": true
+        },
+        "pros": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "p1",
+                    "text": "Best-in-class active noise cancellation"
+                },
+                {
+                    "id": "p2",
+                    "text": "Exceptional 30-hour battery life"
+                },
+                {
+                    "id": "p3",
+                    "text": "Premium build quality with multipoint connection"
+                },
+                {
+                    "id": "p4",
+                    "text": "Outstanding transparency / ambient sound mode"
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "cons": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "c1",
+                    "text": "Expensive compared to competition"
+                },
+                {
+                    "id": "c2",
+                    "text": "No IP rating (not waterproof)"
+                },
+                {
+                    "id": "c3",
+                    "text": "Plastic build feels less premium than price suggests"
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "prosLabel": {
+            "type": "string",
+            "default": "Pros"
+        },
+        "consLabel": {
+            "type": "string",
+            "default": "Cons"
+        },
+        "price": {
+            "type": "string",
+            "default": "379.99"
+        },
+        "priceLabel": {
+            "type": "string",
+            "default": "Check Price"
+        },
+        "originalPrice": {
+            "type": "string",
+            "default": ""
+        },
+        "showOriginalPrice": {
+            "type": "boolean",
+            "default": false
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "showImage": {
+            "type": "boolean",
+            "default": true
+        },
+        "showScore": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPrice": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Check Best Price →"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaTarget": {
+            "type": "string",
+            "default": "_blank"
+        },
+        "showAffiliateNote": {
+            "type": "boolean",
+            "default": true
+        },
+        "affiliateNote": {
+            "type": "string",
+            "default": "We may earn a commission if you buy through our links."
+        },
+        "layout": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "imageRadius": {
+            "type": "integer",
+            "default": 12
+        },
+        "cardRadius": {
+            "type": "integer",
+            "default": 16
+        },
+        "cardPadding": {
+            "type": "integer",
+            "default": 32
+        },
+        "scoreSize": {
+            "type": "integer",
+            "default": 48
+        },
+        "scoreRadius": {
+            "type": "integer",
+            "default": 12
+        },
+        "verdictRadius": {
+            "type": "integer",
+            "default": 10
+        },
+        "ctaRadius": {
+            "type": "integer",
+            "default": 8
+        },
+        "namSize": {
+            "type": "integer",
+            "default": 22
+        },
+        "taglineSize": {
+            "type": "integer",
+            "default": 14
+        },
+        "verdictSize": {
+            "type": "integer",
+            "default": 14
+        },
+        "listItemSize": {
+            "type": "integer",
+            "default": 14
+        },
+        "scoreBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "scoreColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "prosHeaderColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "prosIconColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "prosBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "consHeaderColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "consIconColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "consBg": {
+            "type": "string",
+            "default": "#fef2f2"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "verdictBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "verdictBorderColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "verdictColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "taglineColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 48
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 48
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "taglineTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "listTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "verdictTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

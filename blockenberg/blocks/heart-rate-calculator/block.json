@@ -1,0 +1,140 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/heart-rate-calculator",
+    "version": "1.0.0",
+    "title": "Heart Rate Calculator",
+    "category": "bkbg-calculators",
+    "icon": "heart",
+    "description": "Calculate target heart rate training zones based on age and formula.",
+    "keywords": [
+        "heart rate",
+        "training zones",
+        "fitness",
+        "cardio",
+        "workout"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-heart-rate-calculator-editor",
+    "style": "bkbg-heart-rate-calculator-style",
+    "viewScript": "bkbg-heart-rate-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Heart Rate Zone Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Find your personalized training zones based on your age"
+        },
+        "defaultAge": {
+            "type": "integer",
+            "default": 30
+        },
+        "defaultFormula": {
+            "type": "string",
+            "default": "fox"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#fff7f7"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "z1Color": {
+            "type": "string",
+            "default": "#6ee7b7"
+        },
+        "z2Color": {
+            "type": "string",
+            "default": "#34d399"
+        },
+        "z3Color": {
+            "type": "string",
+            "default": "#fbbf24"
+        },
+        "z4Color": {
+            "type": "string",
+            "default": "#f97316"
+        },
+        "z5Color": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "showZoneIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPurpose": {
+            "type": "boolean",
+            "default": true
+        },
+        "titleFontSize": {
+            "type": "integer",
+            "default": 28
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "subtitleFontSize": {
+            "type": "integer",
+            "default": 16
+        },
+        "subtitleFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "subtitleLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "contentMaxWidth": {
+            "type": "integer",
+            "default": 760
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

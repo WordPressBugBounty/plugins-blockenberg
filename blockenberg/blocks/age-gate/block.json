@@ -1,0 +1,132 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/age-gate",
+    "title": "Age Gate",
+    "category": "bkbg-marketing",
+    "icon": "shield",
+    "description": "Age verification overlay that protects page content behind a customizable age confirmation dialog.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-age-gate-editor",
+    "style": "bkbg-age-gate-style",
+    "viewScript": "bkbg-age-gate-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "minimumAge": {
+            "type": "number",
+            "default": 18
+        },
+        "verificationMode": {
+            "type": "string",
+            "default": "yesno"
+        },
+        "logoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "title": {
+            "type": "string",
+            "default": "Age Verification Required"
+        },
+        "message": {
+            "type": "string",
+            "default": "You must be at least 18 years old to access this website. Please confirm your age below."
+        },
+        "confirmText": {
+            "type": "string",
+            "default": "Yes, I am old enough"
+        },
+        "denyText": {
+            "type": "string",
+            "default": "No, take me back"
+        },
+        "denyRedirectUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "rememberDays": {
+            "type": "number",
+            "default": 30
+        },
+        "disclaimer": {
+            "type": "string",
+            "default": "By entering, you agree to our Terms & Conditions and Privacy Policy."
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 48
+        },
+        "cardMaxWidth": {
+            "type": "number",
+            "default": 480
+        },
+        "logoSize": {
+            "type": "number",
+            "default": 80
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 26
+        },
+        "messageSize": {
+            "type": "number",
+            "default": 15
+        },
+        "overlayBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.75)"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "messageColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "confirmBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "confirmColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "denyBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "denyColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "messageTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,240 @@
+/* Glitch Text — style */
+.bkgl-wrap {
+    box-sizing: border-box;
+    display: block;
+    line-height: 1;
+}
+
+.bkgl-outer {
+    position: relative;
+    display: inline-block;
+}
+
+/* ── shared pseudo-element setup ──────────────────────────────────────────── */
+.bkgl-outer .bkgl-text {
+    position: relative;
+    font-family: var(--bkgl-tt-font-family, inherit);
+    font-size: var(--bkgl-tt-font-size-d, 64px);
+    font-weight: var(--bkgl-tt-font-weight, 900);
+    font-style: var(--bkgl-tt-font-style, normal);
+    text-decoration: var(--bkgl-tt-text-decoration, none);
+    text-transform: var(--bkgl-tt-text-transform, uppercase);
+    line-height: var(--bkgl-tt-line-height-d, 1.1);
+    letter-spacing: var(--bkgl-tt-letter-spacing-d, 4px);
+    word-spacing: var(--bkgl-tt-word-spacing-d, normal);
+}
+
+/* Pseudo-elements via .bkgl-before / .bkgl-after classes (injected by frontend.js) */
+.bkgl-clone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    user-select: none;
+}
+
+.bkgl-clone-red {
+    color: var(--bkgl-red, #ff0040);
+    left: calc(-1 * var(--bkgl-shift, 6px));
+    animation: bkglRed var(--bkgl-ms, 800ms) steps(1) infinite;
+}
+
+.bkgl-clone-blue {
+    color: var(--bkgl-blue, #00e5ff);
+    left: var(--bkgl-shift, 6px);
+    animation: bkglBlue var(--bkgl-ms, 800ms) steps(1) infinite;
+}
+
+/* ── chromatic keyframes ───────────────────────────────────────────────────── */
+@keyframes bkglRed {
+    0%   { clip-path: inset(80% 0 0 0);        transform: translateY(2px); }
+    5%   { clip-path: inset(5% 0 60% 0);       transform: translateY(-2px); }
+    10%  { clip-path: inset(40% 0 30% 0);      transform: translateY(1px); }
+    15%  { clip-path: inset(70% 0 10% 0);      transform: translateY(0); }
+    20%  { clip-path: inset(20% 0 50% 0);      transform: translateY(-3px); }
+    25%  { clip-path: inset(90% 0 0 0);        transform: translateY(1px); }
+    30%  { clip-path: inset(0 0 80% 0);        transform: translateY(2px); }
+    35%  { clip-path: inset(55% 0 25% 0);      transform: translateY(-1px); }
+    40%  { clip-path: inset(30% 0 45% 0);      transform: translateY(3px); }
+    45%  { clip-path: inset(0 0 0 0);          transform: translateY(0); }
+    50%  { clip-path: inset(60% 0 20% 0);      transform: translateY(-2px); }
+    55%  { clip-path: inset(10% 0 70% 0);      transform: translateY(1px); }
+    60%  { clip-path: inset(45% 0 35% 0);      transform: translateY(-3px); }
+    65%  { clip-path: inset(0 0 90% 0);        transform: translateY(2px); }
+    70%  { clip-path: inset(75% 0 5% 0);       transform: translateY(-1px); }
+    75%  { clip-path: inset(15% 0 65% 0);      transform: translateY(0); }
+    80%  { clip-path: inset(85% 0 0 0);        transform: translateY(2px); }
+    85%  { clip-path: inset(25% 0 55% 0);      transform: translateY(-2px); }
+    90%  { clip-path: inset(50% 0 30% 0);      transform: translateY(1px); }
+    95%  { clip-path: inset(0 0 75% 0);        transform: translateY(-1px); }
+    100% { clip-path: inset(65% 0 15% 0);      transform: translateY(0); }
+}
+
+@keyframes bkglBlue {
+    0%   { clip-path: inset(0 0 80% 0);        transform: translateY(-2px); }
+    5%   { clip-path: inset(60% 0 10% 0);      transform: translateY(2px); }
+    10%  { clip-path: inset(25% 0 55% 0);      transform: translateY(-1px); }
+    15%  { clip-path: inset(0 0 0 0);          transform: translateY(3px); }
+    20%  { clip-path: inset(50% 0 20% 0);      transform: translateY(0); }
+    25%  { clip-path: inset(5% 0 75% 0);       transform: translateY(-2px); }
+    30%  { clip-path: inset(80% 0 0 0);        transform: translateY(1px); }
+    35%  { clip-path: inset(35% 0 40% 0);      transform: translateY(-3px); }
+    40%  { clip-path: inset(0 0 60% 0);        transform: translateY(2px); }
+    45%  { clip-path: inset(70% 0 15% 0);      transform: translateY(-1px); }
+    50%  { clip-path: inset(20% 0 65% 0);      transform: translateY(0); }
+    55%  { clip-path: inset(90% 0 0 0);        transform: translateY(1px); }
+    60%  { clip-path: inset(10% 0 80% 0);      transform: translateY(-2px); }
+    65%  { clip-path: inset(45% 0 30% 0);      transform: translateY(3px); }
+    70%  { clip-path: inset(0 0 50% 0);        transform: translateY(-1px); }
+    75%  { clip-path: inset(65% 0 20% 0);      transform: translateY(0); }
+    80%  { clip-path: inset(30% 0 45% 0);      transform: translateY(2px); }
+    85%  { clip-path: inset(0 0 85% 0);        transform: translateY(-2px); }
+    90%  { clip-path: inset(55% 0 35% 0);      transform: translateY(1px); }
+    95%  { clip-path: inset(15% 0 70% 0);      transform: translateY(-3px); }
+    100% { clip-path: inset(40% 0 25% 0);      transform: translateY(0); }
+}
+
+/* ── shake animation ───────────────────────────────────────────────────────── */
+@keyframes bkglShake {
+    0%, 100% { transform: translateX(0); }
+    10% { transform: translateX(calc(-1 * var(--bkgl-shift, 6px))); }
+    20% { transform: translateX(var(--bkgl-shift, 6px)); }
+    30% { transform: translateX(calc(-0.7 * var(--bkgl-shift, 6px))) skewX(-2deg); }
+    40% { transform: translateX(calc(0.6 * var(--bkgl-shift, 6px))); }
+    50% { transform: translateX(0) skewX(1deg); }
+    60% { transform: translateX(calc(-0.5 * var(--bkgl-shift, 6px))); }
+    70% { transform: translateX(var(--bkgl-shift, 6px)) skewX(-1deg); }
+    80% { transform: translateX(0); }
+    90% { transform: translateX(calc(-0.3 * var(--bkgl-shift, 6px))); }
+}
+
+.bkgl-outer[data-type="shake"] .bkgl-text {
+    animation: bkglShake var(--bkgl-ms, 800ms) steps(1) infinite;
+}
+
+/* ── flicker animation ─────────────────────────────────────────────────────── */
+@keyframes bkglFlicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+    20%, 22%, 24%, 55% { opacity: 0.1; }
+}
+
+.bkgl-outer[data-type="flicker"] .bkgl-text {
+    animation: bkglFlicker var(--bkgl-ms, 800ms) linear infinite;
+}
+
+/* ── cursor blink ──────────────────────────────────────────────────────────── */
+.bkgl-cursor {
+    display: inline-block;
+    margin-left: 2px;
+    animation: bkglBlink 1s step-end infinite;
+    font-size: var(--bkgl-tt-font-size-d, 64px);
+    font-weight: var(--bkgl-tt-font-weight, 900);
+}
+
+@keyframes bkglBlink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+/* ── scanlines ─────────────────────────────────────────────────────────────── */
+.bkgl-scanlines {
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* ── hover trigger: pause when not hovered ─────────────────────────────────── */
+.bkgl-outer[data-trigger="hover"] .bkgl-clone-red,
+.bkgl-outer[data-trigger="hover"] .bkgl-clone-blue,
+.bkgl-outer[data-trigger="hover"][data-type="shake"] .bkgl-text,
+.bkgl-outer[data-trigger="hover"][data-type="flicker"] .bkgl-text {
+    animation-play-state: paused;
+}
+
+.bkgl-outer[data-trigger="hover"]:hover .bkgl-clone-red,
+.bkgl-outer[data-trigger="hover"]:hover .bkgl-clone-blue,
+.bkgl-outer[data-trigger="hover"]:hover[data-type="shake"] .bkgl-text,
+.bkgl-outer[data-trigger="hover"]:hover[data-type="flicker"] .bkgl-text {
+    animation-play-state: running;
+}
+
+/* ── interval trigger: paused at start, JS controls ───────────────────────── */
+.bkgl-outer[data-trigger="interval"] .bkgl-clone-red,
+.bkgl-outer[data-trigger="interval"] .bkgl-clone-blue,
+.bkgl-outer[data-trigger="interval"][data-type="shake"] .bkgl-text,
+.bkgl-outer[data-trigger="interval"][data-type="flicker"] .bkgl-text,
+.bkgl-outer[data-trigger="click"] .bkgl-clone-red,
+.bkgl-outer[data-trigger="click"] .bkgl-clone-blue {
+    animation-play-state: paused;
+}
+
+.bkgl-outer.bkgl-playing .bkgl-clone-red,
+.bkgl-outer.bkgl-playing .bkgl-clone-blue,
+.bkgl-outer.bkgl-playing[data-type="shake"] .bkgl-text,
+.bkgl-outer.bkgl-playing[data-type="flicker"] .bkgl-text {
+    animation-play-state: running;
+}
+
+/* ── reduced motion ─────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .bkgl-clone-red, .bkgl-clone-blue, .bkgl-text, .bkgl-cursor {
+        animation: none !important;
+    }
+}
+
+/* Typography responsive */
+@media (max-width: 1024px) {
+    .bkgl-outer .bkgl-text {
+        font-size: var(--bkgl-tt-font-size-t, var(--bkgl-tt-font-size-d, 64px));
+        line-height: var(--bkgl-tt-line-height-t, var(--bkgl-tt-line-height-d, 1.1));
+        letter-spacing: var(--bkgl-tt-letter-spacing-t, var(--bkgl-tt-letter-spacing-d, 4px));
+        word-spacing: var(--bkgl-tt-word-spacing-t, var(--bkgl-tt-word-spacing-d, normal));
+    }
+    .bkgl-cursor {
+        font-size: var(--bkgl-tt-font-size-t, var(--bkgl-tt-font-size-d, 64px));
+            line-height: var(--bkgl-tt-line-height-t, var(--bkgl-tt-line-height-d, 1.1));
+            letter-spacing: var(--bkgl-tt-letter-spacing-t, var(--bkgl-tt-letter-spacing-d, 4px));
+            word-spacing: var(--bkgl-tt-word-spacing-t, var(--bkgl-tt-word-spacing-d, normal));
+    }
+    .bkgl-subtext {
+        font-size: var(--bkgl-st-font-size-t, var(--bkgl-st-font-size-d, 14px));
+        line-height: var(--bkgl-st-line-height-t, var(--bkgl-st-line-height-d, 1.5));
+        letter-spacing: var(--bkgl-st-letter-spacing-t, var(--bkgl-st-letter-spacing-d, 2px));
+        word-spacing: var(--bkgl-st-word-spacing-t, var(--bkgl-st-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkgl-outer .bkgl-text {
+        font-size: var(--bkgl-tt-font-size-m, var(--bkgl-tt-font-size-t, var(--bkgl-tt-font-size-d, 64px)));
+        line-height: var(--bkgl-tt-line-height-m, var(--bkgl-tt-line-height-t, var(--bkgl-tt-line-height-d, 1.1)));
+        letter-spacing: var(--bkgl-tt-letter-spacing-m, var(--bkgl-tt-letter-spacing-t, var(--bkgl-tt-letter-spacing-d, 4px)));
+        word-spacing: var(--bkgl-tt-word-spacing-m, var(--bkgl-tt-word-spacing-t, var(--bkgl-tt-word-spacing-d, normal)));
+    }
+    .bkgl-cursor {
+        font-size: var(--bkgl-tt-font-size-m, var(--bkgl-tt-font-size-t, var(--bkgl-tt-font-size-d, 64px)));
+            line-height: var(--bkgl-tt-line-height-m, var(--bkgl-tt-line-height-t, var(--bkgl-tt-line-height-d, 1.1)));
+            letter-spacing: var(--bkgl-tt-letter-spacing-m, var(--bkgl-tt-letter-spacing-t, var(--bkgl-tt-letter-spacing-d, 4px)));
+            word-spacing: var(--bkgl-tt-word-spacing-m, var(--bkgl-tt-word-spacing-t, var(--bkgl-tt-word-spacing-d, normal)));
+    }
+    .bkgl-subtext {
+        font-size: var(--bkgl-st-font-size-m, var(--bkgl-st-font-size-t, var(--bkgl-st-font-size-d, 14px)));
+        line-height: var(--bkgl-st-line-height-m, var(--bkgl-st-line-height-t, var(--bkgl-st-line-height-d, 1.5)));
+        letter-spacing: var(--bkgl-st-letter-spacing-m, var(--bkgl-st-letter-spacing-t, var(--bkgl-st-letter-spacing-d, 2px)));
+        word-spacing: var(--bkgl-st-word-spacing-m, var(--bkgl-st-word-spacing-t, var(--bkgl-st-word-spacing-d, normal)));
+    }
+}
+
+.bkgl-subtext {
+    margin-top: 16px;
+    font-family: var(--bkgl-st-font-family, inherit);
+    font-size: var(--bkgl-st-font-size-d, 14px);
+    font-weight: var(--bkgl-st-font-weight, 400);
+    font-style: var(--bkgl-st-font-style, normal);
+    text-decoration: var(--bkgl-st-text-decoration, none);
+    text-transform: var(--bkgl-st-text-transform, none);
+    line-height: var(--bkgl-st-line-height-d, 1.5);
+    letter-spacing: var(--bkgl-st-letter-spacing-d, 2px);
+    word-spacing: var(--bkgl-st-word-spacing-d, normal);
+}

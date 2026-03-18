@@ -1,0 +1,137 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/electricity-cost-calculator",
+    "title": "Electricity Cost Calculator",
+    "category": "bkbg-calculators",
+    "icon": "lightbulb",
+    "description": "Calculate electricity costs for home appliances. Add appliances with wattage and daily usage, set your rate per kWh, and see daily, monthly and annual costs.",
+    "keywords": [
+        "electricity",
+        "energy",
+        "cost",
+        "power",
+        "kWh",
+        "appliance",
+        "bill",
+        "calculator",
+        "utility"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-electricity-cost-calculator-editor",
+    "style": "bkbg-electricity-cost-calculator-style",
+    "viewScript": "bkbg-electricity-cost-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Electricity Cost Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Estimate your monthly energy bill"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultRate": {
+            "type": "number",
+            "default": 0.12
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "showPresets": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCarbon": {
+            "type": "boolean",
+            "default": true
+        },
+        "showChart": {
+            "type": "boolean",
+            "default": true
+        },
+        "carbonFactor": {
+            "type": "number",
+            "default": 0.92
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#fffbeb"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#fef9c3"
+        },
+        "lowCostColor": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "highCostColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#92400e"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 26
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "subtitleFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "subtitleFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 720
+        },
+        "typoTitle": { "type": "object", "default": {} },
+        "typoSubtitle": { "type": "object", "default": {} }
+    }
+}

@@ -1,0 +1,132 @@
+/* ── Testimonial Wall ────────────────────────────────────────── */
+.bkbg-testimonial-wall-wrap {
+    box-sizing: border-box;
+}
+.bkbg-tw {
+    box-sizing: border-box;
+    width: 100%;
+}
+/* Masonry via CSS columns */
+.bkbg-tw--masonry {
+    display: block;
+}
+.bkbg-tw--masonry .bkbg-tw-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+/* Grid */
+.bkbg-tw--grid {
+    display: grid;
+    align-items: start;
+}
+/* Scatter: slight rotation offsets for visual interest */
+.bkbg-tw--scatter {
+    display: grid;
+    align-items: start;
+}
+.bkbg-tw--scatter .bkbg-tw-card:nth-child(odd) {
+    transform: rotate(-0.6deg);
+}
+.bkbg-tw--scatter .bkbg-tw-card:nth-child(3n) {
+    transform: rotate(0.8deg);
+}
+.bkbg-tw-card {
+    box-sizing: border-box;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.bkbg-tw-card:hover {
+    transform: translateY(-4px) rotate(0deg) !important;
+}
+.bkbg-tw-card--featured {
+    position: relative;
+}
+/* ── Typography CSS-var rules ──────────────────────────────── */
+.bkbg-testimonial-wall-wrap .bkbg-tw-quote {
+    font-family: var(--bktw-qt-ff);
+    font-size: var(--bktw-qt-fs-d, 15px);
+    line-height: var(--bktw-qt-lh-d, 1.65);
+    letter-spacing: var(--bktw-qt-ls-d);
+    word-spacing: var(--bktw-qt-ws-d);
+    font-weight: var(--bktw-qt-fw, 400);
+    font-style: var(--bktw-qt-fst);
+    text-decoration: var(--bktw-qt-td);
+    text-transform: var(--bktw-qt-tt);
+}
+.bkbg-testimonial-wall-wrap .bkbg-tw-author-name {
+    font-family: var(--bktw-nm-ff);
+    font-size: var(--bktw-nm-fs-d, 14px);
+    line-height: var(--bktw-nm-lh-d, 1.3);
+    letter-spacing: var(--bktw-nm-ls-d);
+    word-spacing: var(--bktw-nm-ws-d);
+    font-weight: var(--bktw-nm-fw, 700);
+    font-style: var(--bktw-nm-fst);
+    text-decoration: var(--bktw-nm-td);
+    text-transform: var(--bktw-nm-tt);
+}
+.bkbg-testimonial-wall-wrap .bkbg-tw-role {
+    font-family: var(--bktw-rl-ff);
+    font-size: var(--bktw-rl-fs-d, 12px);
+    line-height: var(--bktw-rl-lh-d, 1.4);
+    letter-spacing: var(--bktw-rl-ls-d);
+    word-spacing: var(--bktw-rl-ws-d);
+    font-weight: var(--bktw-rl-fw);
+    font-style: var(--bktw-rl-fst);
+    text-decoration: var(--bktw-rl-td);
+    text-transform: var(--bktw-rl-tt);
+}
+
+/* ── Responsive typography ────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-testimonial-wall-wrap .bkbg-tw-quote {
+        font-size: var(--bktw-qt-fs-t, var(--bktw-qt-fs-d, 15px));
+        line-height: var(--bktw-qt-lh-t, var(--bktw-qt-lh-d, 1.65));
+        letter-spacing: var(--bktw-qt-ls-t, var(--bktw-qt-ls-d));
+        word-spacing: var(--bktw-qt-ws-t, var(--bktw-qt-ws-d));
+    }
+    .bkbg-testimonial-wall-wrap .bkbg-tw-author-name {
+        font-size: var(--bktw-nm-fs-t, var(--bktw-nm-fs-d, 14px));
+        line-height: var(--bktw-nm-lh-t, var(--bktw-nm-lh-d, 1.3));
+        letter-spacing: var(--bktw-nm-ls-t, var(--bktw-nm-ls-d));
+        word-spacing: var(--bktw-nm-ws-t, var(--bktw-nm-ws-d));
+    }
+    .bkbg-testimonial-wall-wrap .bkbg-tw-role {
+        font-size: var(--bktw-rl-fs-t, var(--bktw-rl-fs-d, 12px));
+        line-height: var(--bktw-rl-lh-t, var(--bktw-rl-lh-d, 1.4));
+        letter-spacing: var(--bktw-rl-ls-t, var(--bktw-rl-ls-d));
+        word-spacing: var(--bktw-rl-ws-t, var(--bktw-rl-ws-d));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-testimonial-wall-wrap .bkbg-tw-quote {
+        font-size: var(--bktw-qt-fs-m, var(--bktw-qt-fs-t, var(--bktw-qt-fs-d, 15px)));
+        line-height: var(--bktw-qt-lh-m, var(--bktw-qt-lh-t, var(--bktw-qt-lh-d, 1.65)));
+        letter-spacing: var(--bktw-qt-ls-m, var(--bktw-qt-ls-t, var(--bktw-qt-ls-d)));
+        word-spacing: var(--bktw-qt-ws-m, var(--bktw-qt-ws-t, var(--bktw-qt-ws-d)));
+    }
+    .bkbg-testimonial-wall-wrap .bkbg-tw-author-name {
+        font-size: var(--bktw-nm-fs-m, var(--bktw-nm-fs-t, var(--bktw-nm-fs-d, 14px)));
+        line-height: var(--bktw-nm-lh-m, var(--bktw-nm-lh-t, var(--bktw-nm-lh-d, 1.3)));
+        letter-spacing: var(--bktw-nm-ls-m, var(--bktw-nm-ls-t, var(--bktw-nm-ls-d)));
+        word-spacing: var(--bktw-nm-ws-m, var(--bktw-nm-ws-t, var(--bktw-nm-ws-d)));
+    }
+    .bkbg-testimonial-wall-wrap .bkbg-tw-role {
+        font-size: var(--bktw-rl-fs-m, var(--bktw-rl-fs-t, var(--bktw-rl-fs-d, 12px)));
+        line-height: var(--bktw-rl-lh-m, var(--bktw-rl-lh-t, var(--bktw-rl-lh-d, 1.4)));
+        letter-spacing: var(--bktw-rl-ls-m, var(--bktw-rl-ls-t, var(--bktw-rl-ls-d)));
+        word-spacing: var(--bktw-rl-ws-m, var(--bktw-rl-ws-t, var(--bktw-rl-ws-d)));
+    }
+}
+
+@media (max-width: 768px) {
+    .bkbg-tw--masonry {
+        column-count: 2 !important;
+    }
+}
+@media (max-width: 480px) {
+    .bkbg-tw--masonry,
+    .bkbg-tw--grid,
+    .bkbg-tw--scatter {
+        column-count: 1 !important;
+        grid-template-columns: 1fr !important;
+    }
+}

@@ -1,0 +1,216 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/page-header",
+    "version": "1.0.0",
+    "title": "Page Header",
+    "category": "bkbg-layout",
+    "icon": "welcome-view-site",
+    "description": "A versatile page hero/banner section: eyebrow label, headline, subtitle, breadcrumbs, CTA buttons, and rich background options.",
+    "keywords": [
+        "hero",
+        "banner",
+        "page header",
+        "heading",
+        "jumbotron",
+        "intro"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-page-header-editor",
+    "style": "bkbg-page-header-style",
+    "viewScript": "bkbg-page-header-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "style": {
+            "type": "string",
+            "default": "centered"
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "eyebrow": {
+            "type": "string",
+            "default": "Welcome"
+        },
+        "headline": {
+            "type": "string",
+            "default": "The headline that makes them stay"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "A compelling subtitle that explains your value proposition in one or two lines."
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBreadcrumbs": {
+            "type": "boolean",
+            "default": false
+        },
+        "breadcrumbs": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Home",
+                    "url": "/"
+                },
+                {
+                    "label": "Page",
+                    "url": ""
+                }
+            ]
+        },
+        "showPrimaryBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "primaryLabel": {
+            "type": "string",
+            "default": "Get Started"
+        },
+        "primaryUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "primaryTarget": {
+            "type": "boolean",
+            "default": false
+        },
+        "showSecondaryBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "secondaryLabel": {
+            "type": "string",
+            "default": "Learn More"
+        },
+        "secondaryUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "bgType": {
+            "type": "string",
+            "default": "color"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8f5ff"
+        },
+        "bgGradient": {
+            "type": "string",
+            "default": "linear-gradient(135deg,#ede9fe 0%,#eff6ff 100%)"
+        },
+        "bgImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "bgImageId": {
+            "type": "number",
+            "default": 0
+        },
+        "bgOverlayColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "bgOverlayOpacity": {
+            "type": "number",
+            "default": 55
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 760
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 100
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 100
+        },
+        "headlineSize": {
+            "type": "number",
+            "default": 52
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 19
+        },
+        "eyebrowSize": {
+            "type": "number",
+            "default": 13
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 50
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "eyebrowBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "headlineColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "primaryBtnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "primaryBtnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "secBtnColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "breadcrumbColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "headlineFontWeight": {
+            "type": "string",
+            "default": "800"
+        },
+        "subtitleFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "eyebrowFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "headlineTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "eyebrowTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

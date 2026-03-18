@@ -1,0 +1,152 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/gradient-generator",
+    "version": "1.0.0",
+    "title": "CSS Gradient Generator",
+    "category": "bkbg-dev",
+    "icon": "art",
+    "description": "Interactive CSS gradient builder with live preview, multiple color stops, and one-click CSS copy.",
+    "keywords": [
+        "gradient",
+        "css",
+        "color",
+        "design",
+        "linear",
+        "radial",
+        "generator"
+    ],
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-gradient-generator-editor",
+    "style": "bkbg-gradient-generator-style",
+    "viewScript": "bkbg-gradient-generator-frontend",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "CSS Gradient Generator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Build beautiful CSS gradients and copy the code instantly"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultStops": {
+            "type": "string",
+            "default": "#6c3fb5 0%,#06b6d4 100%"
+        },
+        "defaultType": {
+            "type": "string",
+            "default": "linear"
+        },
+        "defaultAngle": {
+            "type": "number",
+            "default": 135
+        },
+        "showPresets": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCssOutput": {
+            "type": "boolean",
+            "default": true
+        },
+        "previewHeight": {
+            "type": "number",
+            "default": 200
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": ""
+        },
+        "controlsBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "controlsBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "cssBg": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "cssColor": {
+            "type": "string",
+            "default": "#c4b5fd"
+        },
+        "copyBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "copyColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "previewRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 600
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

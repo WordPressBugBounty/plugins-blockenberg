@@ -1,0 +1,37 @@
+/* Dynamic Date Block — bkdd- prefix */
+.bkdd-wrap {
+  text-align: var(--bkdd-align, left);
+}
+.bkdd-output {
+  display: inline;
+  color: var(--bkdd-color, inherit);
+  font-family: var(--bkbg-dd-txt-font-family, inherit);
+  font-weight: var(--bkbg-dd-txt-font-weight, var(--bkdd-fw, 400));
+  font-size: var(--bkbg-dd-txt-font-size-d, var(--bkdd-fs, 16px));
+  line-height: var(--bkbg-dd-txt-line-height-d, var(--bkdd-lh, 1.5));
+  letter-spacing: var(--bkbg-dd-txt-letter-spacing-d, normal);
+  word-spacing: var(--bkbg-dd-txt-word-spacing-d, normal);
+  text-transform: var(--bkbg-dd-txt-text-transform, none);
+  font-style: var(--bkbg-dd-txt-font-style, normal);
+  text-decoration: var(--bkbg-dd-txt-text-decoration, none);
+}
+.bkdd-prefix { margin-right: .3em; }
+.bkdd-suffix { margin-left: .3em; }
+
+@media (max-width: 1024px) {
+    .bkdd-output {
+        font-size: var(--bkbg-dd-txt-font-size-t, var(--bkbg-dd-txt-font-size-d, var(--bkdd-fs, 16px)));
+        line-height: var(--bkbg-dd-txt-line-height-t, var(--bkbg-dd-txt-line-height-d, var(--bkdd-lh, 1.5)));
+        letter-spacing: var(--bkbg-dd-txt-letter-spacing-t, var(--bkbg-dd-txt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-dd-txt-word-spacing-t, var(--bkbg-dd-txt-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkdd-output {
+        font-size: var(--bkbg-dd-txt-font-size-m, var(--bkbg-dd-txt-font-size-t, var(--bkbg-dd-txt-font-size-d, var(--bkdd-fs, 16px))));
+        line-height: var(--bkbg-dd-txt-line-height-m, var(--bkbg-dd-txt-line-height-t, var(--bkbg-dd-txt-line-height-d, var(--bkdd-lh, 1.5))));
+        letter-spacing: var(--bkbg-dd-txt-letter-spacing-m, var(--bkbg-dd-txt-letter-spacing-t, var(--bkbg-dd-txt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-dd-txt-word-spacing-m, var(--bkbg-dd-txt-word-spacing-t, var(--bkbg-dd-txt-word-spacing-d, normal)));
+    }
+}

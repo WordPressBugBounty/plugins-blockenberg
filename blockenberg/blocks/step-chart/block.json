@@ -1,0 +1,165 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockenberg/step-chart",
+  "title": "Step Chart",
+  "category": "bkbg-charts",
+  "icon": "chart-line",
+  "description": "A step-function line chart where values change abruptly \u2014 ideal for pricing tiers, subscription counts, and discrete state changes over time.",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Subscription Tiers Over Time"
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "svgWidth": {
+      "type": "integer",
+      "default": 700
+    },
+    "svgHeight": {
+      "type": "integer",
+      "default": 340
+    },
+    "padTop": {
+      "type": "integer",
+      "default": 30
+    },
+    "padLeft": {
+      "type": "integer",
+      "default": 60
+    },
+    "padRight": {
+      "type": "integer",
+      "default": 30
+    },
+    "padBottom": {
+      "type": "integer",
+      "default": 50
+    },
+    "lineThickness": {
+      "type": "integer",
+      "default": 3
+    },
+    "dotRadius": {
+      "type": "integer",
+      "default": 5
+    },
+    "fillArea": {
+      "type": "boolean",
+      "default": true
+    },
+    "fillOpacity": {
+      "type": "integer",
+      "default": 20
+    },
+    "showGridLines": {
+      "type": "boolean",
+      "default": true
+    },
+    "showDots": {
+      "type": "boolean",
+      "default": true
+    },
+    "showValues": {
+      "type": "boolean",
+      "default": false
+    },
+    "showLegend": {
+      "type": "boolean",
+      "default": true
+    },
+    "labelFontSize": {
+      "type": "integer",
+      "default": 12
+    },
+    "valueFontSize": {
+      "type": "integer",
+      "default": 10
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "titleColor": {
+      "type": "string",
+      "default": "#111827"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#374151"
+    },
+    "gridColor": {
+      "type": "string",
+      "default": "#f3f4f6"
+    },
+    "xLabels": {
+      "type": "array",
+      "default": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4",
+        "Q5",
+        "Q6",
+        "Q7",
+        "Q8"
+      ]
+    },
+    "series": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Basic Plan",
+          "color": "#6366f1",
+          "values": [
+            120,
+            120,
+            150,
+            150,
+            150,
+            200,
+            200,
+            260
+          ]
+        },
+        {
+          "label": "Pro Plan",
+          "color": "#10b981",
+          "values": [
+            45,
+            45,
+            80,
+            80,
+            120,
+            120,
+            180,
+            180
+          ]
+        }
+      ]
+    },
+    "labelFontWeight": {
+      "type": "string",
+      "default": "400"
+    },
+    "labelLineHeight": {
+      "type": "number",
+      "default": 1.4
+    },
+    "titleTypo": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "editorScript": "bkbg-step-chart-editor",
+  "style": "bkbg-step-chart-style"
+}

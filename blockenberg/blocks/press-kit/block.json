@@ -1,0 +1,215 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/press-kit",
+    "version": "1.0.0",
+    "title": "Press Kit",
+    "category": "bkbg-business",
+    "icon": "format-image",
+    "description": "Press/media kit section with brand assets (logos, colors, photos, documents), company blurb, and download buttons. Perfect for press pages and media rooms.",
+    "keywords": [
+        "press",
+        "media",
+        "kit",
+        "brand",
+        "assets",
+        "download",
+        "logos",
+        "pr"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-press-kit-editor",
+    "style": "bkbg-press-kit-style",
+    "viewScript": "bkbg-press-kit-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "Press Room"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Media Kit & Brand Assets"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Everything you need to write about us. Download logos, brand guidelines, and executive photos."
+        },
+        "companyName": {
+            "type": "string",
+            "default": "Acme Inc."
+        },
+        "companyBlurb": {
+            "type": "string",
+            "default": "Acme Inc. is a leading provider of innovative software solutions that help businesses grow faster and smarter. Founded in 2018, we serve over 10,000 customers worldwide."
+        },
+        "assets": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Logo Pack (SVG + PNG)",
+                    "description": "Full color, white, and black variations",
+                    "fileUrl": "#",
+                    "previewUrl": "",
+                    "type": "logo"
+                },
+                {
+                    "label": "Brand Guidelines PDF",
+                    "description": "Fonts, colors, and usage rules",
+                    "fileUrl": "#",
+                    "previewUrl": "",
+                    "type": "document"
+                },
+                {
+                    "label": "CEO Headshot",
+                    "description": "High-resolution press photo",
+                    "fileUrl": "#",
+                    "previewUrl": "",
+                    "type": "photo"
+                },
+                {
+                    "label": "Product Screenshots",
+                    "description": "Latest UI screenshots in light and dark",
+                    "fileUrl": "#",
+                    "previewUrl": "",
+                    "type": "photo"
+                }
+            ]
+        },
+        "brandColors": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Indigo",
+                    "hex": "#6366f1"
+                },
+                {
+                    "name": "Slate 900",
+                    "hex": "#0f172a"
+                },
+                {
+                    "name": "White",
+                    "hex": "#ffffff"
+                },
+                {
+                    "name": "Violet",
+                    "hex": "#8b5cf6"
+                }
+            ]
+        },
+        "showBrandColors": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDownloadAll": {
+            "type": "boolean",
+            "default": true
+        },
+        "downloadAllUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "downloadAllLabel": {
+            "type": "string",
+            "default": "Download Full Press Kit"
+        },
+        "pressEmail": {
+            "type": "string",
+            "default": "press@example.com"
+        },
+        "showPressContact": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "assetLabelColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "assetDescColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "downloadBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "downloadColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "blurbColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1100
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "eyebrowTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "assetLabelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "assetDescTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

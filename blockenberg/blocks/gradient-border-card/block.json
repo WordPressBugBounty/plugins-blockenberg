@@ -1,0 +1,185 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/gradient-border-card",
+	"version": "1.0.0",
+	"title": "Gradient Border Card",
+	"category": "bkbg-effects",
+	"icon": "tagcloud",
+	"description": "Card with an animated rotating gradient border \u2014 conic-gradient glow effect popular in modern dark UI.",
+	"keywords": [
+		"gradient",
+		"border",
+		"card",
+		"glow",
+		"animated",
+		"conic",
+		"rainbow"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-gradient-border-card-editor",
+	"style": "bkbg-gradient-border-card-style",
+	"viewScript": "bkbg-gradient-border-card-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Feature Card"
+		},
+		"description": {
+			"type": "string",
+			"default": "An eye-catching card with an animated gradient border that draws attention and adds a premium feel to your design."
+		},
+		"badge": {
+			"type": "string",
+			"default": ""
+		},
+		"icon": {
+			"type": "string",
+			"default": "\u2726"
+		},		"iconType": {
+			"type": "string",
+			"default": "custom-char"
+		},
+		"iconDashicon": {
+			"type": "string",
+			"default": "star-filled"
+		},
+		"iconImageUrl": {
+			"type": "string",
+			"default": ""
+		},		"showIcon": {
+			"type": "boolean",
+			"default": true
+		},
+		"showBadge": {
+			"type": "boolean",
+			"default": false
+		},
+		"titleTag": {
+			"type": "string",
+			"default": "h3"
+		},
+		"borderColors": {
+			"type": "array",
+			"default": [
+				"#7c3aed",
+				"#ec4899",
+				"#06b6d4",
+				"#f59e0b"
+			]
+		},
+		"borderWidth": {
+			"type": "integer",
+			"default": 2
+		},
+		"borderRadius": {
+			"type": "integer",
+			"default": 20
+		},
+		"animSpeed": {
+			"type": "number",
+			"default": 4
+		},
+		"animType": {
+			"type": "string",
+			"default": "rotate"
+		},
+		"glowBlur": {
+			"type": "integer",
+			"default": 14
+		},
+		"glowOpacity": {
+			"type": "number",
+			"default": 0.7
+		},
+		"cardBg": {
+			"type": "string",
+			"default": "#0f172a"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#e2e8f0"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"iconColor": {
+			"type": "string",
+			"default": "#a78bfa"
+		},
+		"badgeBg": {
+			"type": "string",
+			"default": "#7c3aed"
+		},
+		"badgeColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"paddingV": {
+			"type": "integer",
+			"default": 32
+		},
+		"paddingH": {
+			"type": "integer",
+			"default": 28
+		},
+		"fontSize": {
+			"type": "integer",
+			"default": 16
+		},
+		"titleSize": {
+			"type": "integer",
+			"default": 22
+		},
+		"iconSize": {
+			"type": "integer",
+			"default": 36
+		},
+		"maxWidth": {
+			"type": "integer",
+			"default": 420
+		},
+		"hoverScale": {
+			"type": "boolean",
+			"default": true
+		},
+		"pauseOnHover": {
+			"type": "boolean",
+			"default": false
+		},
+		"textAlign": {
+			"type": "string",
+			"default": "left"
+		},
+		"titleFontWeight": {
+			"type": "string",
+			"default": "700"
+		},
+		"bodyLineHeight": {
+			"type": "number",
+			"default": 1.6
+		},
+		"typoTitle": {
+			"type": "object",
+			"default": {}
+		},
+		"typoBody": {
+			"type": "object",
+			"default": {}
+		},
+		"typoBadge": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

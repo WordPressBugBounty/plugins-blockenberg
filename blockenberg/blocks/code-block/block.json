@@ -1,0 +1,122 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/code-block",
+    "version": "1.0.0",
+    "title": "Code Block",
+    "category": "bkbg-dev",
+    "icon": "editor-code",
+    "description": "Syntax-highlighted code block with copy button, line numbers, and multiple themes.",
+    "keywords": [
+        "code",
+        "syntax",
+        "highlight",
+        "snippet",
+        "programming"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-code-block-editor",
+    "style": "bkbg-code-block-style",
+    "viewScript": "bkbg-code-block-frontend",
+    "attributes": {
+        "code": {
+            "type": "string",
+            "default": ""
+        },
+        "language": {
+            "type": "string",
+            "default": "javascript"
+        },
+        "theme": {
+            "type": "string",
+            "default": "dark"
+        },
+        "showLineNumbers": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCopyButton": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLanguageBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "fileName": {
+            "type": "string",
+            "default": ""
+        },
+        "highlightLines": {
+            "type": "string",
+            "default": ""
+        },
+        "startLine": {
+            "type": "number",
+            "default": 1
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "tabSize": {
+            "type": "number",
+            "default": 4
+        },
+        "typoCode": {
+            "type": "object",
+            "default": {}
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 175
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "maxHeight": {
+            "type": "number",
+            "default": 0
+        },
+        "wordWrap": {
+            "type": "boolean",
+            "default": false
+        },
+        "copyLabel": {
+            "type": "string",
+            "default": "Copy"
+        },
+        "copiedLabel": {
+            "type": "string",
+            "default": "Copied!"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "textColor": {
+            "type": "string",
+            "default": ""
+        },
+        "accentColor": {
+            "type": "string",
+            "default": ""
+        },
+        "headerBg": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ],
+        "spacing": {
+            "margin": true,
+            "padding": false
+        }
+    }
+}

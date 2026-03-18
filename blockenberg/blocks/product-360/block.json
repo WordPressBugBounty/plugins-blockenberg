@@ -1,0 +1,92 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/product-360",
+    "title": "Product 360\u00b0",
+    "description": "Drag or auto-spin through a sequence of images for immersive 360\u00b0 product views.",
+    "category": "bkbg-media",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-product-360-editor",
+    "style": "bkbg-product-360-style",
+    "viewScript": "bkbg-product-360-frontend",
+    "icon": "image-rotate",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "frames": {
+            "type": "array",
+            "default": []
+        },
+        "viewerWidth": {
+            "type": "integer",
+            "default": 600
+        },
+        "viewerHeight": {
+            "type": "integer",
+            "default": 400
+        },
+        "viewerRadius": {
+            "type": "integer",
+            "default": 16
+        },
+        "autoSpin": {
+            "type": "boolean",
+            "default": false
+        },
+        "autoSpeed": {
+            "type": "integer",
+            "default": 60
+        },
+        "dragSensitivity": {
+            "type": "integer",
+            "default": 4
+        },
+        "showProgress": {
+            "type": "boolean",
+            "default": true
+        },
+        "showHint": {
+            "type": "boolean",
+            "default": true
+        },
+        "hintText": {
+            "type": "string",
+            "default": "Drag to rotate"
+        },
+        "showControls": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "progressColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "hintColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "controlsBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "controlsColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "hintTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

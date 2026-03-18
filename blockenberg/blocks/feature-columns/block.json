@@ -1,0 +1,194 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/feature-columns",
+    "title": "Feature Columns",
+    "category": "bkbg-marketing",
+    "icon": "columns",
+    "description": "Responsive 2–4 column feature grid with icon, title, and description. Multiple icon and visual styles.",
+    "keywords": [
+        "features",
+        "columns",
+        "icons",
+        "benefits",
+        "grid",
+        "services",
+        "why us"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-feature-columns-editor",
+    "editorStyle": "bkbg-feature-columns-style",
+    "style": "bkbg-feature-columns-style",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "features": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "f1",
+                    "icon": "performance",
+                    "title": "Blazing Fast",
+                    "body": "Optimized for speed from the ground up. Your users get instant results every time."
+                },
+                {
+                    "id": "f2",
+                    "icon": "shield",
+                    "title": "Secure by Default",
+                    "body": "Enterprise-grade security out of the box. No extra configuration required."
+                },
+                {
+                    "id": "f3",
+                    "icon": "admin-customizer",
+                    "title": "Fully Flexible",
+                    "body": "Customize every aspect to match your brand and workflow perfectly."
+                },
+                {
+                    "id": "f4",
+                    "icon": "heart",
+                    "title": "Easy to Use",
+                    "body": "Designed for humans. Get started in minutes with zero technical knowledge."
+                },
+                {
+                    "id": "f5",
+                    "icon": "networking",
+                    "title": "Works Together",
+                    "body": "Integrates seamlessly with the tools your team already loves and uses."
+                },
+                {
+                    "id": "f6",
+                    "icon": "chart-line",
+                    "title": "Data-Driven",
+                    "body": "Built-in analytics help you understand what's working and what isn't."
+                }
+            ]
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "style": {
+            "type": "string",
+            "default": "plain"
+        },
+        "iconStyle": {
+            "type": "string",
+            "default": "box"
+        },
+        "align": {
+            "type": "string",
+            "default": "left"
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "showNumber": {
+            "type": "boolean",
+            "default": false
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 24
+        },
+        "numberSize": {
+            "type": "number",
+            "default": 32
+        },
+        "gap": {
+            "type": "number",
+            "default": 32
+        },
+        "rowGap": {
+            "type": "number",
+            "default": 40
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 17
+        },
+        "titleWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "bodySize": {
+            "type": "number",
+            "default": 15
+        },
+        "bodyWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "bodyLineHeight": {
+            "type": "number",
+            "default": 1.65
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 24
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "iconBg": {
+            "type": "string",
+            "default": "#f0ebff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "bodyColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "numberColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        }
+    }
+}

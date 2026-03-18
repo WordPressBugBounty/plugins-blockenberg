@@ -1,0 +1,204 @@
+.bkbg-ed-wrap {
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.bkbg-ed-header {
+    padding: 20px 24px;
+}
+.bkbg-ed-header-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+.bkbg-ed-type-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+}
+.bkbg-ed-meta-item {
+    font-size: 12px;
+}
+.bkbg-ed-wrap .bkbg-ed-title {
+    margin: 0;
+    font-family: var(--bkbg-ed-ttl-font-family, inherit);
+    font-size: var(--bkbg-ed-ttl-font-size-d, 24px);
+    font-weight: var(--bkbg-ed-ttl-font-weight, 700);
+    font-style: var(--bkbg-ed-ttl-font-style, normal);
+    line-height: var(--bkbg-ed-ttl-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-ed-ttl-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-ed-ttl-word-spacing-d, normal);
+    text-transform: var(--bkbg-ed-ttl-text-transform, none);
+    text-decoration: var(--bkbg-ed-ttl-text-decoration, none);
+}
+.bkbg-ed-stats {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 14px 24px;
+    border-bottom: 1px solid;
+}
+.bkbg-ed-stat {
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px 10px;
+    flex: 1 1 90px;
+}
+.bkbg-ed-stat-value {
+    font-size: 22px;
+    font-weight: 800;
+}
+.bkbg-ed-stat-label {
+    font-size: 11px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+.bkbg-ed-body {
+    padding: 18px 24px;
+    display: grid;
+    gap: 20px;
+    font-family: var(--bkbg-ed-bdy-font-family, inherit);
+    font-size: var(--bkbg-ed-bdy-font-size-d, 14px);
+    font-weight: var(--bkbg-ed-bdy-font-weight, 400);
+    font-style: var(--bkbg-ed-bdy-font-style, normal);
+    line-height: var(--bkbg-ed-bdy-line-height-d, 1.68);
+    letter-spacing: var(--bkbg-ed-bdy-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-ed-bdy-word-spacing-d, normal);
+    text-transform: var(--bkbg-ed-bdy-text-transform, none);
+    text-decoration: var(--bkbg-ed-bdy-text-decoration, none);
+}
+.bkbg-ed-summary {
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+.bkbg-ed-section-head {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    padding-bottom: 5px;
+    border-bottom: 2px solid;
+    margin-bottom: 10px;
+}
+.bkbg-ed-highlight {
+    padding: 12px 14px;
+    border-left: 4px solid;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 8px;
+}
+.bkbg-ed-highlight:last-child {
+    margin-bottom: 0;
+}
+.bkbg-ed-highlight-title {
+    display: block;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 5px;
+}
+.bkbg-ed-highlight-desc {
+    margin: 0;
+}
+.bkbg-ed-quote {
+    margin: 0;
+    border-left: 4px solid;
+    border-radius: 0 8px 8px 0;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+}
+.bkbg-ed-quote:last-child {
+    margin-bottom: 0;
+}
+.bkbg-ed-quote blockquote {
+    margin: 0 0 6px;
+    font-style: italic;
+}
+.bkbg-ed-quote figcaption {
+    font-size: 12px;
+    font-weight: 700;
+    opacity: .75;
+}
+.bkbg-ed-list {
+    margin: 0;
+    padding-left: 18px;
+}
+.bkbg-ed-list li {
+    margin-bottom: 5px;
+}
+.bkbg-ed-next {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-radius: 8px;
+    padding: 14px 18px;
+}
+.bkbg-ed-next-label {
+    font-size: 10px;
+    opacity: .5;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin-bottom: 4px;
+}
+.bkbg-ed-next-name {
+    font-weight: 700;
+}
+.bkbg-ed-next-date {
+    font-size: 12px;
+    opacity: .65;
+    margin-top: 2px;
+}
+.bkbg-ed-next-btn {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 7px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+}
+.bkbg-ed-next-btn:hover {
+    opacity: .88;
+}
+
+@media (max-width: 600px) {
+    .bkbg-ed-header,
+    .bkbg-ed-body,
+    .bkbg-ed-stats {
+        padding: 14px 16px;
+    }
+    .bkbg-ed-stats {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .bkbg-ed-wrap .bkbg-ed-title {
+        font-size: var(--bkbg-ed-ttl-font-size-t, var(--bkbg-ed-ttl-font-size-d, 24px));
+        line-height: var(--bkbg-ed-ttl-line-height-t, var(--bkbg-ed-ttl-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-ed-ttl-letter-spacing-t, var(--bkbg-ed-ttl-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-ed-ttl-word-spacing-t, var(--bkbg-ed-ttl-word-spacing-d, normal));
+    }
+    .bkbg-ed-body {
+        font-size: var(--bkbg-ed-bdy-font-size-t, var(--bkbg-ed-bdy-font-size-d, 14px));
+        line-height: var(--bkbg-ed-bdy-line-height-t, var(--bkbg-ed-bdy-line-height-d, 1.68));
+        letter-spacing: var(--bkbg-ed-bdy-letter-spacing-t, var(--bkbg-ed-bdy-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-ed-bdy-word-spacing-t, var(--bkbg-ed-bdy-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-ed-wrap .bkbg-ed-title {
+        font-size: var(--bkbg-ed-ttl-font-size-m, var(--bkbg-ed-ttl-font-size-t, var(--bkbg-ed-ttl-font-size-d, 24px)));
+        line-height: var(--bkbg-ed-ttl-line-height-m, var(--bkbg-ed-ttl-line-height-t, var(--bkbg-ed-ttl-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-ed-ttl-letter-spacing-m, var(--bkbg-ed-ttl-letter-spacing-t, var(--bkbg-ed-ttl-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-ed-ttl-word-spacing-m, var(--bkbg-ed-ttl-word-spacing-t, var(--bkbg-ed-ttl-word-spacing-d, normal)));
+    }
+    .bkbg-ed-body {
+        font-size: var(--bkbg-ed-bdy-font-size-m, var(--bkbg-ed-bdy-font-size-t, var(--bkbg-ed-bdy-font-size-d, 14px)));
+        line-height: var(--bkbg-ed-bdy-line-height-m, var(--bkbg-ed-bdy-line-height-t, var(--bkbg-ed-bdy-line-height-d, 1.68)));
+        letter-spacing: var(--bkbg-ed-bdy-letter-spacing-m, var(--bkbg-ed-bdy-letter-spacing-t, var(--bkbg-ed-bdy-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-ed-bdy-word-spacing-m, var(--bkbg-ed-bdy-word-spacing-t, var(--bkbg-ed-bdy-word-spacing-d, normal)));
+    }
+}

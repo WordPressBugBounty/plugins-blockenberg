@@ -1,0 +1,187 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/confetti-button",
+    "title": "Confetti Button",
+    "category": "bkbg-effects",
+    "icon": "star-filled",
+    "description": "A call-to-action button that triggers a burst of canvas confetti particles on click. Supports multiple confetti styles, custom colors, particle physics and link/action settings.",
+    "keywords": [
+        "confetti",
+        "button",
+        "celebration",
+        "cta",
+        "particles",
+        "fun",
+        "interactive",
+        "burst",
+        "fireworks"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-confetti-button-editor",
+    "style": "bkbg-confetti-button-style",
+    "viewScript": "bkbg-confetti-button-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "center",
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "text": {
+            "type": "string",
+            "default": "🎉 Celebrate!"
+        },
+        "subText": {
+            "type": "string",
+            "default": ""
+        },
+        "showSubText": {
+            "type": "boolean",
+            "default": false
+        },
+        "url": {
+            "type": "string",
+            "default": ""
+        },
+        "openInNewTab": {
+            "type": "boolean",
+            "default": false
+        },
+        "confettiStyle": {
+            "type": "string",
+            "default": "burst"
+        },
+        "particleCount": {
+            "type": "number",
+            "default": 120
+        },
+        "spread": {
+            "type": "number",
+            "default": 70
+        },
+        "gravity": {
+            "type": "number",
+            "default": 1
+        },
+        "particleSize": {
+            "type": "number",
+            "default": 8
+        },
+        "colors": {
+            "type": "array",
+            "default": [
+                "#ff6b6b",
+                "#ffd93d",
+                "#6bcb77",
+                "#4d96ff",
+                "#c77dff",
+                "#ff9f1c"
+            ]
+        },
+        "shapes": {
+            "type": "string",
+            "default": "mixed"
+        },
+        "origin": {
+            "type": "string",
+            "default": "button"
+        },
+        "duration": {
+            "type": "number",
+            "default": 3000
+        },
+        "repeat": {
+            "type": "boolean",
+            "default": true
+        },
+        "buttonBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "buttonColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "buttonHoverBg": {
+            "type": "string",
+            "default": "#4f46e5"
+        },
+        "buttonRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "buttonPaddingV": {
+            "type": "number",
+            "default": 16
+        },
+        "buttonPaddingH": {
+            "type": "number",
+            "default": 40
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "showShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "align": {
+            "type": "string",
+            "default": "center"
+        },
+        "fullWidth": {
+            "type": "boolean",
+            "default": false
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 400
+        },
+        "iconBefore": {
+            "type": "string",
+            "default": ""
+        },
+        "iconBeforeType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "iconBeforeDashicon": {
+            "type": "string",
+            "default": "arrow-left-alt"
+        },
+        "iconBeforeImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "iconAfter": {
+            "type": "string",
+            "default": ""
+        },
+        "iconAfterType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "iconAfterDashicon": {
+            "type": "string",
+            "default": "arrow-right-alt"
+        },
+        "iconAfterImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "typoButton": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

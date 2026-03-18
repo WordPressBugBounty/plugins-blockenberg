@@ -1,0 +1,129 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/mixed-heading",
+    "title": "Mixed Heading",
+    "category": "bkbg-content",
+    "description": "A heading or paragraph where each word/phrase segment can have its own style — gradient, highlight, stroke, badge, mono, or normal.",
+    "keywords": [
+        "heading",
+        "typography",
+        "styled text",
+        "gradient",
+        "highlight",
+        "mixed"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-mixed-heading-editor",
+    "editorStyle": "bkbg-mixed-heading-style",
+    "style": "bkbg-mixed-heading-style",
+    "viewScript": "bkbg-mixed-heading-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "segments": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "Build sites",
+                    "style": "normal",
+                    "color": "#111827",
+                    "color2": "#6366f1",
+                    "bg": "transparent",
+                    "weight": "700",
+                    "italic": false,
+                    "underline": false,
+                    "scale": 1,
+                    "spacing": 0
+                },
+                {
+                    "text": " ",
+                    "style": "normal",
+                    "color": "#111827",
+                    "color2": "#6366f1",
+                    "bg": "transparent",
+                    "weight": "700",
+                    "italic": false,
+                    "underline": false,
+                    "scale": 1,
+                    "spacing": 0
+                },
+                {
+                    "text": "that inspire.",
+                    "style": "gradient",
+                    "color": "#6366f1",
+                    "color2": "#ec4899",
+                    "bg": "transparent",
+                    "weight": "700",
+                    "italic": false,
+                    "underline": false,
+                    "scale": 1,
+                    "spacing": 0
+                }
+            ]
+        },
+        "tag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 48
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.15
+        },
+        "letterSpacing": {
+            "type": "number",
+            "default": 0
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 800
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "strokeWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "badgeRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "badgePaddingX": {
+            "type": "number",
+            "default": 8
+        },
+        "badgePaddingY": {
+            "type": "number",
+            "default": 3
+        },
+        "gradientDir": {
+            "type": "string",
+            "default": "to right"
+        }
+    }
+}

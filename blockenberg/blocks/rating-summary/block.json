@@ -1,0 +1,170 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/rating-summary",
+    "version": "1.0.0",
+    "title": "Rating Summary",
+    "category": "bkbg-blog",
+    "icon": "chart-bar",
+    "description": "Aggregated review rating with overall score, star breakdown bars (5★ 80%, 4★ 15%…), total count, and optional platform badge.",
+    "keywords": [
+        "rating",
+        "reviews",
+        "summary",
+        "stars",
+        "aggregate",
+        "score",
+        "breakdown",
+        "google",
+        "testimonial"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-rating-summary-editor",
+    "editorStyle": "bkbg-rating-summary-style",
+    "style": "bkbg-rating-summary-style",
+    "viewScript": "bkbg-rating-summary-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "overallScore": {
+            "type": "number",
+            "default": 4.3
+        },
+        "maxScore": {
+            "type": "number",
+            "default": 5
+        },
+        "totalReviews": {
+            "type": "number",
+            "default": 124
+        },
+        "showTotalReviews": {
+            "type": "boolean",
+            "default": true
+        },
+        "totalReviewsLabel": {
+            "type": "string",
+            "default": "reviews"
+        },
+        "showOverallScore": {
+            "type": "boolean",
+            "default": true
+        },
+        "showStars": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPlatformBadge": {
+            "type": "boolean",
+            "default": false
+        },
+        "platformName": {
+            "type": "string",
+            "default": "Google"
+        },
+        "breakdowns": {
+            "type": "array",
+            "default": [
+                {
+                    "stars": 5,
+                    "count": 89
+                },
+                {
+                    "stars": 4,
+                    "count": 22
+                },
+                {
+                    "stars": 3,
+                    "count": 8
+                },
+                {
+                    "stars": 2,
+                    "count": 3
+                },
+                {
+                    "stars": 1,
+                    "count": 2
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "barStyle": {
+            "type": "string",
+            "default": "rounded"
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "left"
+        },
+        "starSize": {
+            "type": "number",
+            "default": 20
+        },
+        "scoreTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "barHeight": {
+            "type": "number",
+            "default": 8
+        },
+        "barRadius": {
+            "type": "number",
+            "default": 99
+        },
+        "gap": {
+            "type": "number",
+            "default": 6
+        },
+        "barColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "barTrackColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "starColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "scoreColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "countColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 40
+        }
+    }
+}

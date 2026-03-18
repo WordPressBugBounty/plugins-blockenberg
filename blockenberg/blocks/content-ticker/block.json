@@ -1,0 +1,117 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/content-ticker",
+    "title": "Content Ticker",
+    "category": "bkbg-effects",
+    "icon": "megaphone",
+    "description": "A horizontal scrolling news/announcement ticker with a colored label prefix and clickable items.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-content-ticker-editor",
+    "style": "bkbg-content-ticker-style",
+    "viewScript": "bkbg-content-ticker-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "Welcome to our brand-new website — explore all our latest features!",
+                    "url": ""
+                },
+                {
+                    "text": "Big sale this weekend — up to 50% off across the entire store!",
+                    "url": ""
+                },
+                {
+                    "text": "We just published a new blog post — check it out now!",
+                    "url": ""
+                },
+                {
+                    "text": "Sign up for our newsletter and never miss an update!",
+                    "url": ""
+                }
+            ]
+        },
+        "prefix": {
+            "type": "string",
+            "default": "📢 Breaking"
+        },
+        "showPrefix": {
+            "type": "boolean",
+            "default": true
+        },
+        "speed": {
+            "type": "number",
+            "default": 60
+        },
+        "pauseOnHover": {
+            "type": "boolean",
+            "default": true
+        },
+        "separator": {
+            "type": "string",
+            "default": " ◉ "
+        },
+        "direction": {
+            "type": "string",
+            "default": "left"
+        },
+        "height": {
+            "type": "number",
+            "default": 44
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "fontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "prefixPadding": {
+            "type": "number",
+            "default": 20
+        },
+        "prefixBg": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "prefixColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "tickerBg": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "tickerColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#a5b4fc"
+        },
+        "separatorColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "typoText": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,140 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/handwriting-text",
+    "title": "Handwriting Text",
+    "category": "bkbg-effects",
+    "description": "SVG text that animates in as if being handwritten — stroke reveal effect triggered on scroll or load.",
+    "keywords": [
+        "handwriting",
+        "svg",
+        "text",
+        "animation",
+        "stroke",
+        "cursive",
+        "draw"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-handwriting-text-editor",
+    "style": "bkbg-handwriting-text-style",
+    "viewScript": "bkbg-handwriting-text-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "text": {
+            "type": "string",
+            "default": "Beautiful Handwriting"
+        },
+        "fontFamily": {
+            "type": "string",
+            "default": "'Dancing Script', cursive"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 72
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "svgWidth": {
+            "type": "number",
+            "default": 900
+        },
+        "svgHeight": {
+            "type": "number",
+            "default": 140
+        },
+        "textX": {
+            "type": "number",
+            "default": 50
+        },
+        "textY": {
+            "type": "number",
+            "default": 110
+        },
+        "textAnchor": {
+            "type": "string",
+            "default": "middle"
+        },
+        "strokeWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "duration": {
+            "type": "number",
+            "default": 3
+        },
+        "delay": {
+            "type": "number",
+            "default": 0.3
+        },
+        "trigger": {
+            "type": "string",
+            "default": "scroll"
+        },
+        "fillOnComplete": {
+            "type": "boolean",
+            "default": true
+        },
+        "fillDuration": {
+            "type": "number",
+            "default": 0.8
+        },
+        "repeatAnimation": {
+            "type": "boolean",
+            "default": false
+        },
+        "easing": {
+            "type": "string",
+            "default": "ease-in-out"
+        },
+        "showUnderline": {
+            "type": "boolean",
+            "default": false
+        },
+        "underlineWidth": {
+            "type": "number",
+            "default": 4
+        },
+        "underlineOffsetY": {
+            "type": "number",
+            "default": 12
+        },
+        "underlineDuration": {
+            "type": "number",
+            "default": 0.6
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "strokeColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "underlineColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "align2": {
+            "type": "string",
+            "default": "center"
+        },
+        "typoText": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,148 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/mind-map",
+    "version": "1.0.0",
+    "title": "Mind Map",
+    "category": "bkbg-charts",
+    "icon": "networking",
+    "description": "Visual mind map diagram with a central topic, branches, and sub-items. Great for brainstorming, planning, and knowledge visualization.",
+    "keywords": [
+        "mind map",
+        "brainstorm",
+        "diagram",
+        "branches",
+        "concept",
+        "radial"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-mind-map-editor",
+    "style": "bkbg-mind-map-style",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "centralTopic": {
+            "type": "string",
+            "default": "Main Topic"
+        },
+        "centralColor": {
+            "type": "string",
+            "default": "#4f46e5"
+        },
+        "centralRadius": {
+            "type": "number",
+            "default": 62
+        },
+        "centralFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "svgWidth": {
+            "type": "number",
+            "default": 820
+        },
+        "svgHeight": {
+            "type": "number",
+            "default": 620
+        },
+        "branchRadius": {
+            "type": "number",
+            "default": 46
+        },
+        "branchFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "itemFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "showLines": {
+            "type": "boolean",
+            "default": true
+        },
+        "dashedLines": {
+            "type": "boolean",
+            "default": false
+        },
+        "branches": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Research",
+                    "color": "#4f46e5",
+                    "items": [
+                        "Sources",
+                        "Data",
+                        "Analysis"
+                    ]
+                },
+                {
+                    "label": "Design",
+                    "color": "#0891b2",
+                    "items": [
+                        "Wireframes",
+                        "Mockups"
+                    ]
+                },
+                {
+                    "label": "Planning",
+                    "color": "#059669",
+                    "items": [
+                        "Timeline",
+                        "Resources"
+                    ]
+                },
+                {
+                    "label": "Development",
+                    "color": "#dc2626",
+                    "items": [
+                        "Frontend",
+                        "Backend"
+                    ]
+                },
+                {
+                    "label": "Marketing",
+                    "color": "#d97706",
+                    "items": [
+                        "SEO",
+                        "Social Media"
+                    ]
+                },
+                {
+                    "label": "Launch",
+                    "color": "#7c3aed",
+                    "items": [
+                        "Deploy",
+                        "Monitor"
+                    ]
+                }
+            ]
+        },
+        "centralTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "branchTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "itemTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

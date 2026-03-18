@@ -1,0 +1,213 @@
+/* =====================================================
+   Blockenberg — holographic-card  (bkbg-hgc-*)
+   ===================================================== */
+
+/* ── App / card shell ── */
+.bkbg-hgc-app {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: box-shadow 0.4s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    max-width: 100%;
+    will-change: transform;
+    vertical-align: top;
+}
+
+.bkbg-hgc-app:hover {
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* ── Background image ── */
+.bkbg-hgc-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: inherit;
+}
+
+/* ── Dark gradient overlay (readability) ── */
+.bkbg-hgc-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, transparent 65%);
+    pointer-events: none;
+    border-radius: inherit;
+    z-index: 1;
+}
+
+/* ── Grid texture ── */
+.bkbg-hgc-grid {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 2;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 30px, rgba(255, 255, 255, 0.03) 30px, rgba(255, 255, 255, 0.03) 31px),
+        repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(255, 255, 255, 0.03) 30px, rgba(255, 255, 255, 0.03) 31px);
+}
+
+/* ── Iridescent shine layer ── */
+.bkbg-hgc-shine {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 3;
+    mix-blend-mode: screen;
+    opacity: 0.6;
+    background: linear-gradient(
+        135deg,
+        hsl(0, 80%, 60%) 0%,
+        hsl(60, 90%, 70%) 16%,
+        hsl(120, 80%, 65%) 33%,
+        hsl(180, 90%, 65%) 50%,
+        hsl(240, 80%, 65%) 66%,
+        hsl(300, 90%, 65%) 83%,
+        hsl(360, 80%, 60%) 100%
+    );
+    transition: background-position 0.05s linear;
+    background-size: 200% 200%;
+}
+
+/* ── Glare / spotlight layer ── */
+.bkbg-hgc-glare {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 4;
+    opacity: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.5) 0%, transparent 60%);
+    transition: opacity 0.15s ease;
+    mix-blend-mode: overlay;
+}
+
+.bkbg-hgc-app:hover .bkbg-hgc-glare {
+    opacity: 0.4;
+}
+
+/* ── Content ── */
+.bkbg-hgc-content {
+    position: relative;
+    z-index: 5;
+}
+
+/* ── Badge ── */
+.bkbg-hgc-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* ── Title ── specificity (0,2,0)+ */
+.bkbg-hgc-app .bkbg-hgc-title,
+.bkbg-hgc-app h3.bkbg-hgc-title {
+    margin: 0 0 8px !important;
+    font-family: var(--bkbg-hgc-tt-font-family, inherit);
+    font-size: var(--bkbg-hgc-tt-font-size-d, var(--bkbg-hgc-tt-sz, 22px));
+    font-weight: var(--bkbg-hgc-tt-font-weight, var(--bkbg-hgc-tt-fw, 700));
+    font-style: var(--bkbg-hgc-tt-font-style, normal);
+    text-transform: var(--bkbg-hgc-tt-text-transform, none);
+    text-decoration: var(--bkbg-hgc-tt-text-decoration, none);
+    line-height: var(--bkbg-hgc-tt-line-height-d, var(--bkbg-hgc-tt-lh, 1.3));
+    letter-spacing: var(--bkbg-hgc-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-hgc-tt-word-spacing-d, normal);
+}
+
+/* ── Subtitle ── */
+.bkbg-hgc-app .bkbg-hgc-subtitle {
+    margin: 0 0 16px !important;
+    font-family: var(--bkbg-hgc-st-font-family, inherit);
+    font-size: var(--bkbg-hgc-st-font-size-d, var(--bkbg-hgc-st-sz, 14px));
+    font-weight: var(--bkbg-hgc-st-font-weight, var(--bkbg-hgc-st-fw, 400));
+    font-style: var(--bkbg-hgc-st-font-style, normal);
+    text-transform: var(--bkbg-hgc-st-text-transform, none);
+    text-decoration: var(--bkbg-hgc-st-text-decoration, none);
+    line-height: var(--bkbg-hgc-st-line-height-d, var(--bkbg-hgc-st-lh, 1.55));
+    letter-spacing: var(--bkbg-hgc-st-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-hgc-st-word-spacing-d, normal);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-hgc-app .bkbg-hgc-title,
+    .bkbg-hgc-app h3.bkbg-hgc-title {
+        font-size: var(--bkbg-hgc-tt-font-size-t, var(--bkbg-hgc-tt-font-size-d, var(--bkbg-hgc-tt-sz, 22px)));
+        line-height: var(--bkbg-hgc-tt-line-height-t, var(--bkbg-hgc-tt-line-height-d, var(--bkbg-hgc-tt-lh, 1.3)));
+        letter-spacing: var(--bkbg-hgc-tt-letter-spacing-t, var(--bkbg-hgc-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-hgc-tt-word-spacing-t, var(--bkbg-hgc-tt-word-spacing-d, normal));
+    }
+    .bkbg-hgc-app .bkbg-hgc-subtitle {
+        font-size: var(--bkbg-hgc-st-font-size-t, var(--bkbg-hgc-st-font-size-d, var(--bkbg-hgc-st-sz, 14px)));
+        line-height: var(--bkbg-hgc-st-line-height-t, var(--bkbg-hgc-st-line-height-d, var(--bkbg-hgc-st-lh, 1.55)));
+        letter-spacing: var(--bkbg-hgc-st-letter-spacing-t, var(--bkbg-hgc-st-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-hgc-st-word-spacing-t, var(--bkbg-hgc-st-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-hgc-app .bkbg-hgc-title,
+    .bkbg-hgc-app h3.bkbg-hgc-title {
+        font-size: var(--bkbg-hgc-tt-font-size-m, var(--bkbg-hgc-tt-font-size-t, var(--bkbg-hgc-tt-font-size-d, var(--bkbg-hgc-tt-sz, 22px))));
+        line-height: var(--bkbg-hgc-tt-line-height-m, var(--bkbg-hgc-tt-line-height-t, var(--bkbg-hgc-tt-line-height-d, var(--bkbg-hgc-tt-lh, 1.3))));
+        letter-spacing: var(--bkbg-hgc-tt-letter-spacing-m, var(--bkbg-hgc-tt-letter-spacing-t, var(--bkbg-hgc-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-hgc-tt-word-spacing-m, var(--bkbg-hgc-tt-word-spacing-t, var(--bkbg-hgc-tt-word-spacing-d, normal)));
+    }
+    .bkbg-hgc-app .bkbg-hgc-subtitle {
+        font-size: var(--bkbg-hgc-st-font-size-m, var(--bkbg-hgc-st-font-size-t, var(--bkbg-hgc-st-font-size-d, var(--bkbg-hgc-st-sz, 14px))));
+        line-height: var(--bkbg-hgc-st-line-height-m, var(--bkbg-hgc-st-line-height-t, var(--bkbg-hgc-st-line-height-d, var(--bkbg-hgc-st-lh, 1.55))));
+        letter-spacing: var(--bkbg-hgc-st-letter-spacing-m, var(--bkbg-hgc-st-letter-spacing-t, var(--bkbg-hgc-st-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-hgc-st-word-spacing-m, var(--bkbg-hgc-st-word-spacing-t, var(--bkbg-hgc-st-word-spacing-d, normal)));
+    }
+}
+
+/* ── CTA link ── */
+.bkbg-hgc-link {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: opacity 0.2s, transform 0.15s;
+}
+.bkbg-hgc-link:hover {
+    opacity: 0.85;
+    transform: scale(1.04);
+}
+
+/* ── Block wrapper centering ── */
+.wp-block-blockenberg-holographic-card {
+    display: flex;
+    justify-content: center;
+}
+
+/* ── Reset animation on reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+    .bkbg-hgc-app {
+        transition: none;
+    }
+    .bkbg-hgc-shine {
+        transition: none;
+    }
+}

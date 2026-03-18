@@ -1,0 +1,150 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/highlight-section",
+    "title": "Highlight Section",
+    "category": "bkbg-content",
+    "icon": "align-full-width",
+    "description": "Editorial hero section with a giant decorative background word, heading, subtext, and optional CTA button.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-highlight-section-editor",
+    "style": "bkbg-highlight-section-style",
+    "viewScript": "bkbg-highlight-section-frontend",
+    "attributes": {
+        "bgWord": {
+            "type": "string",
+            "default": "IMPACT"
+        },
+        "showBgWord": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgWordSize": {
+            "type": "number",
+            "default": 240
+        },
+        "bgWordColor": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.05)"
+        },
+        "bgWordWeight": {
+            "type": "string",
+            "default": "900"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Built for Bold Brands"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "We craft digital experiences that leave a lasting impression and drive real business results."
+        },
+        "showSubtext": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Get Started"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaOpenNewTab": {
+            "type": "boolean",
+            "default": false
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 56
+        },
+        "headingFontWeight": {
+            "type": "string",
+            "default": "800"
+        },
+        "headingLineHeight": {
+            "type": "number",
+            "default": 1.15
+        },
+        "subtextSize": {
+            "type": "number",
+            "default": 20
+        },
+        "subtextFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "subtextLineHeight": {
+            "type": "number",
+            "default": 1.6
+        },
+        "ctaFontWeight": {
+            "type": "string",
+            "default": "600"
+        },
+        "ctaFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 880
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 100
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 100
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "ctaTypo": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

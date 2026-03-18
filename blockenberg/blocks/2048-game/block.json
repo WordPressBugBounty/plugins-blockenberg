@@ -1,0 +1,105 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/game-2048",
+    "title": "2048 Game",
+    "category": "bkbg-interactive",
+    "icon": "games",
+    "description": "The classic sliding-tile 2048 puzzle. Swipe or use arrow keys to merge tiles and reach the 2048 tile.",
+    "keywords": [
+        "2048",
+        "game",
+        "puzzle",
+        "tiles",
+        "merge",
+        "sliding",
+        "numbers"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-2048-game-editor",
+    "style": "bkbg-2048-game-style",
+    "viewScript": "bkbg-2048-game-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "2048"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Combine tiles to reach 2048!"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 36
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 15
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "boardSize": {
+            "type": "number",
+            "default": 380
+        },
+        "tileRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "gridGap": {
+            "type": "number",
+            "default": 10
+        },
+        "showScore": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBestScore": {
+            "type": "boolean",
+            "default": true
+        },
+        "animateTiles": {
+            "type": "boolean",
+            "default": true
+        },
+        "gridBg": {
+            "type": "string",
+            "default": "#bbada0"
+        },
+        "tileBg": {
+            "type": "string",
+            "default": "#cdc1b4"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#fef9ee"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#776e65"
+        },
+        "scoreHeaderBg": {
+            "type": "string",
+            "default": "#bbada0"
+        },
+        "newGameBg": {
+            "type": "string",
+            "default": "#8f7a66"
+        }
+    }
+}

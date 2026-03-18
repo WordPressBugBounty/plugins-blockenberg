@@ -1,0 +1,157 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/code-tabs",
+    "title": "Code Tabs",
+    "description": "Multi-language tabbed code viewer with syntax highlighting. Show the same snippet in JavaScript, Python, PHP, and more.",
+    "category": "bkbg-dev",
+    "icon": "editor-code",
+    "keywords": [
+        "code",
+        "tabs",
+        "syntax",
+        "highlight",
+        "developer",
+        "programming",
+        "snippet",
+        "multi-language"
+    ],
+    "editorScript": "bkbg-code-tabs-editor",
+    "editorStyle": "bkbg-code-tabs-style",
+    "style": "bkbg-code-tabs-style",
+    "viewScript": "bkbg-code-tabs-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "tabs": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "JavaScript",
+                    "lang": "javascript",
+                    "fileName": "index.js",
+                    "code": "async function fetchUser(id) {\n  const res = await fetch(`/api/users/${id}`);\n  if (!res.ok) throw new Error('Not found');\n  return res.json();\n}\n\nconst user = await fetchUser(42);\nconsole.log(user.name);"
+                },
+                {
+                    "label": "Python",
+                    "lang": "python",
+                    "fileName": "main.py",
+                    "code": "import requests\n\ndef fetch_user(user_id: int) -> dict:\n    res = requests.get(f'/api/users/{user_id}')\n    res.raise_for_status()\n    return res.json()\n\nuser = fetch_user(42)\nprint(user['name'])"
+                },
+                {
+                    "label": "PHP",
+                    "lang": "php",
+                    "fileName": "index.php",
+                    "code": "<?php\nfunction fetch_user(int $id): array {\n    $res = file_get_contents(\"/api/users/$id\");\n    if ($res === false) throw new Exception('Not found');\n    return json_decode($res, true);\n}\n\n$user = fetch_user(42);\necho $user['name'];"
+                }
+            ]
+        },
+        "activeTab": {
+            "type": "number",
+            "default": 0
+        },
+        "theme": {
+            "type": "string",
+            "default": "dark"
+        },
+        "showLineNumbers": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCopyButton": {
+            "type": "boolean",
+            "default": true
+        },
+        "showFileName": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLangBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.65
+        },
+        "maxHeight": {
+            "type": "number",
+            "default": 0
+        },
+        "tabStyle": {
+            "type": "string",
+            "default": "pills"
+        },
+        "tabAlign": {
+            "type": "string",
+            "default": "left"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#1e1e2e"
+        },
+        "codeBg": {
+            "type": "string",
+            "default": "#13131f"
+        },
+        "tabActiveBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "tabActiveColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "tabIdleBg": {
+            "type": "string",
+            "default": "#2d2d3f"
+        },
+        "tabIdleColor": {
+            "type": "string",
+            "default": "#a0a0c0"
+        },
+        "lineNumColor": {
+            "type": "string",
+            "default": "#4a4a6a"
+        },
+        "copyBg": {
+            "type": "string",
+            "default": "#2d2d3f"
+        },
+        "copyColor": {
+            "type": "string",
+            "default": "#a0a0c0"
+        },
+        "typoCode": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

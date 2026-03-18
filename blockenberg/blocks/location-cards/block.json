@@ -1,0 +1,211 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/location-cards",
+    "title": "Location Cards",
+    "category": "bkbg-business",
+    "description": "Multi-location business directory grid. Each card shows address, phone, email, business hours snippet, and a directions link.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-location-cards-editor",
+    "style": "bkbg-location-cards-style",
+    "viewScript": "bkbg-location-cards-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "locations": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "l1",
+                    "name": "New York Office",
+                    "address": "350 Fifth Avenue",
+                    "city": "New York",
+                    "state": "NY",
+                    "zip": "10118",
+                    "country": "USA",
+                    "phone": "+1 (212) 555-0101",
+                    "email": "ny@example.com",
+                    "website": "",
+                    "mapUrl": "https://maps.google.com",
+                    "hoursSnippet": "Mon–Fri 9am–6pm",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "l2",
+                    "name": "Los Angeles Studio",
+                    "address": "6255 Sunset Blvd",
+                    "city": "Los Angeles",
+                    "state": "CA",
+                    "zip": "90028",
+                    "country": "USA",
+                    "phone": "+1 (323) 555-0187",
+                    "email": "la@example.com",
+                    "website": "",
+                    "mapUrl": "https://maps.google.com",
+                    "hoursSnippet": "Mon–Sat 10am–7pm",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "l3",
+                    "name": "Chicago Headquarters",
+                    "address": "233 S Wacker Dr",
+                    "city": "Chicago",
+                    "state": "IL",
+                    "zip": "60606",
+                    "country": "USA",
+                    "phone": "+1 (312) 555-0145",
+                    "email": "chi@example.com",
+                    "website": "",
+                    "mapUrl": "https://maps.google.com",
+                    "hoursSnippet": "Mon–Fri 8am–5pm",
+                    "imageUrl": "",
+                    "imageId": 0
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "columns": {
+            "type": "integer",
+            "default": 3
+        },
+        "columnsTablet": {
+            "type": "integer",
+            "default": 2
+        },
+        "columnsMobile": {
+            "type": "integer",
+            "default": 1
+        },
+        "gap": {
+            "type": "integer",
+            "default": 24
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "card"
+        },
+        "hoverEffect": {
+            "type": "string",
+            "default": "lift"
+        },
+        "imageRatio": {
+            "type": "string",
+            "default": "16/9"
+        },
+        "showImage": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPhone": {
+            "type": "boolean",
+            "default": true
+        },
+        "showEmail": {
+            "type": "boolean",
+            "default": true
+        },
+        "showWebsite": {
+            "type": "boolean",
+            "default": false
+        },
+        "showHours": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDirectionsLink": {
+            "type": "boolean",
+            "default": true
+        },
+        "directionsLabel": {
+            "type": "string",
+            "default": "Get Directions"
+        },
+        "cardRadius": {
+            "type": "integer",
+            "default": 16
+        },
+        "cardPadding": {
+            "type": "integer",
+            "default": 24
+        },
+        "imageRadius": {
+            "type": "integer",
+            "default": 0
+        },
+        "btnRadius": {
+            "type": "integer",
+            "default": 8
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "detailTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "btnTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "addressColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "hoursColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "directionsColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "directionsBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 64
+        }
+    }
+}

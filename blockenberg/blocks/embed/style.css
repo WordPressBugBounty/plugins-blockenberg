@@ -1,0 +1,36 @@
+/* ==========================================================
+   Embed / iFrame Block — bkbg-embed
+   ========================================================== */
+
+.bkbg-embed-block-wrap {
+    box-sizing: border-box;
+}
+
+.bkbg-embed-wrap {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.bkbg-embed-ratio {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.bkbg-embed-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* Responsive: on very small screens maintain aspect ratio naturally */
+@media (max-width: 480px) {
+    .bkbg-embed-wrap {
+        border-radius: 0 !important;
+    }
+}

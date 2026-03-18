@@ -1,0 +1,180 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/net-worth-calculator",
+	"title": "Net Worth Calculator",
+	"category": "bkbg-calculators",
+	"icon": "chart-line",
+	"description": "Track assets and liabilities to calculate total net worth. Categorised inputs for cash, investments, real estate, vehicles, and various debt types.",
+	"keywords": [
+		"net worth",
+		"assets",
+		"liabilities",
+		"finance",
+		"wealth",
+		"calculator"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-net-worth-calculator-editor",
+	"style": "bkbg-net-worth-calculator-style",
+	"viewScript": "bkbg-net-worth-calculator-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Net Worth Calculator"
+		},
+		"showTitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Add your assets and liabilities to calculate your net worth."
+		},
+		"showSubtitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"currency": {
+			"type": "string",
+			"default": "$"
+		},
+		"showChart": {
+			"type": "boolean",
+			"default": true
+		},
+		"showBreakdown": {
+			"type": "boolean",
+			"default": true
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#10b981"
+		},
+		"assetColor": {
+			"type": "string",
+			"default": "#10b981"
+		},
+		"liabilityColor": {
+			"type": "string",
+			"default": "#ef4444"
+		},
+		"netPositiveColor": {
+			"type": "string",
+			"default": "#10b981"
+		},
+		"netNegativeColor": {
+			"type": "string",
+			"default": "#ef4444"
+		},
+		"cashColor": {
+			"type": "string",
+			"default": "#0ea5e9"
+		},
+		"investColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"realEstateColor": {
+			"type": "string",
+			"default": "#f59e0b"
+		},
+		"vehicleColor": {
+			"type": "string",
+			"default": "#ec4899"
+		},
+		"otherAssetColor": {
+			"type": "string",
+			"default": "#9ca3af"
+		},
+		"sectionBg": {
+			"type": "string",
+			"default": "#f0fdf4"
+		},
+		"cardBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"panelBg": {
+			"type": "string",
+			"default": "#f9fafb"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"subtitleColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"labelColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"inputBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"inputBorder": {
+			"type": "string",
+			"default": "#d1d5db"
+		},
+		"cardRadius": {
+			"type": "number",
+			"default": 16
+		},
+		"panelRadius": {
+			"type": "number",
+			"default": 12
+		},
+		"inputRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"titleSize": {
+			"type": "number",
+			"default": 26
+		},
+		"maxWidth": {
+			"type": "number",
+			"default": 720
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 60
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 60
+		},
+		"titleFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"subtitleFontSize": {
+			"type": "number",
+			"default": 14
+		},
+		"lineHeight": {
+			"type": "number",
+			"default": 1.4
+		},
+		"titleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"subtitleTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

@@ -1,0 +1,71 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/bubble-chart",
+    "title": "Bubble Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-area",
+    "description": "Interactive bubble chart powered by Chart.js.",
+    "keywords": [
+        "chart",
+        "bubble",
+        "scatter",
+        "data"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-bubble-chart-editor",
+    "editorStyle": "bkbg-bubble-chart-style",
+    "style": "bkbg-bubble-chart-style",
+    "viewScript": "bkbg-bubble-chart-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "chartTitle": {
+            "type": "string",
+            "default": "Bubble Chart"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "datasetsJson": {
+            "type": "string",
+            "default": "[{\"label\":\"Dataset A\",\"color\":\"#6c3fb5\",\"bubbles\":\"10,20,15\\n30,10,25\\n50,40,10\"},{\"label\":\"Dataset B\",\"color\":\"#ec4899\",\"bubbles\":\"20,30,20\\n40,50,12\\n60,20,18\"}]"
+        },
+        "showGrid": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "legendPos": {
+            "type": "string",
+            "default": "bottom"
+        },
+        "fillAlpha": {
+            "type": "number",
+            "default": 50
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "chartHeight": {
+            "type": "number",
+            "default": 400
+        }
+    }
+}

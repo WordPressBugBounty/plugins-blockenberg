@@ -1,0 +1,240 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/commit-history",
+	"version": "1.0.0",
+	"title": "Commit History",
+	"category": "bkbg-dev",
+	"icon": "backup",
+	"description": "Display a Git-style commit history timeline — perfect for changelogs, devlogs, and project updates.",
+	"keywords": [
+		"commit",
+		"git",
+		"history",
+		"changelog",
+		"version",
+		"timeline",
+		"devlog"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-commit-history-editor",
+	"editorStyle": "bkbg-commit-history-style",
+	"style": "bkbg-commit-history-style",
+	"viewScript": "bkbg-commit-history-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"repoName": {
+			"type": "string",
+			"default": "my-project"
+		},
+		"branchName": {
+			"type": "string",
+			"default": "main"
+		},
+		"showBranch": {
+			"type": "boolean",
+			"default": true
+		},
+		"showHash": {
+			"type": "boolean",
+			"default": true
+		},
+		"showAuthorInitials": {
+			"type": "boolean",
+			"default": true
+		},
+		"showDate": {
+			"type": "boolean",
+			"default": true
+		},
+		"showTags": {
+			"type": "boolean",
+			"default": true
+		},
+		"commits": {
+			"type": "array",
+			"default": [
+				{
+					"hash": "a3f9d1e",
+					"message": "feat: add dark mode toggle with system preference detection",
+					"author": "Alex Chen",
+					"date": "Feb 24, 2026",
+					"tags": [
+						"v2.4.0"
+					]
+				},
+				{
+					"hash": "b82c7f0",
+					"message": "fix: resolve hydration mismatch on initial page load",
+					"author": "Maria Santos",
+					"date": "Feb 23, 2026",
+					"tags": []
+				},
+				{
+					"hash": "c5e1a3d",
+					"message": "chore: update dependencies and bump Node to v22",
+					"author": "Alex Chen",
+					"date": "Feb 22, 2026",
+					"tags": []
+				},
+				{
+					"hash": "d9f4b2c",
+					"message": "feat: implement image lazy-loading with blur placeholder",
+					"author": "Jordan Lee",
+					"date": "Feb 21, 2026",
+					"tags": []
+				},
+				{
+					"hash": "e7a0c9f",
+					"message": "refactor: extract useMediaQuery hook into shared utilities",
+					"author": "Maria Santos",
+					"date": "Feb 20, 2026",
+					"tags": []
+				},
+				{
+					"hash": "f2b3e8a",
+					"message": "docs: add contributing guide and PR template",
+					"author": "Alex Chen",
+					"date": "Feb 19, 2026",
+					"tags": []
+				},
+				{
+					"hash": "g6d5f1b",
+					"message": "feat: add CSV export for analytics dashboard",
+					"author": "Jordan Lee",
+					"date": "Feb 18, 2026",
+					"tags": [
+						"v2.3.0"
+					]
+				},
+				{
+					"hash": "h1c8a4e",
+					"message": "fix: correct timezone offset in date formatting utility",
+					"author": "Maria Santos",
+					"date": "Feb 17, 2026",
+					"tags": []
+				}
+			]
+		},
+		"fontSize": {
+			"type": "number",
+			"default": 14
+		},
+		"hashFontSize": {
+			"type": "number",
+			"default": 12
+		},
+		"lineHeight": {
+			"type": "number",
+			"default": 170
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 12
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#0f172a"
+		},
+		"headerBg": {
+			"type": "string",
+			"default": "#1e293b"
+		},
+		"borderColor": {
+			"type": "string",
+			"default": "#1e293b"
+		},
+		"repoColor": {
+			"type": "string",
+			"default": "#f8fafc"
+		},
+		"branchBg": {
+			"type": "string",
+			"default": "#166534"
+		},
+		"branchColor": {
+			"type": "string",
+			"default": "#4ade80"
+		},
+		"dotColor": {
+			"type": "string",
+			"default": "#3b82f6"
+		},
+		"lineColor": {
+			"type": "string",
+			"default": "#1e3a5f"
+		},
+		"hashColor": {
+			"type": "string",
+			"default": "#60a5fa"
+		},
+		"messageColor": {
+			"type": "string",
+			"default": "#e2e8f0"
+		},
+		"authorBg": {
+			"type": "string",
+			"default": "#334155"
+		},
+		"authorColor": {
+			"type": "string",
+			"default": "#94a3b8"
+		},
+		"dateColor": {
+			"type": "string",
+			"default": "#64748b"
+		},
+		"tagBg": {
+			"type": "string",
+			"default": "#1e3a5f"
+		},
+		"tagColor": {
+			"type": "string",
+			"default": "#60a5fa"
+		},
+		"rowHoverBg": {
+			"type": "string",
+			"default": "#1e293b"
+		},
+		"featColor": {
+			"type": "string",
+			"default": "#4ade80"
+		},
+		"fixColor": {
+			"type": "string",
+			"default": "#f87171"
+		},
+		"choreColor": {
+			"type": "string",
+			"default": "#94a3b8"
+		},
+		"docsColor": {
+			"type": "string",
+			"default": "#fbbf24"
+		},
+		"refactorColor": {
+			"type": "string",
+			"default": "#a78bfa"
+		},
+		"fontWeight": {
+			"type": "string",
+			"default": "500"
+		},
+		"typoMessage": {
+			"type": "object",
+			"default": {}
+		},
+		"typoMeta": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

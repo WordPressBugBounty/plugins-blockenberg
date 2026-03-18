@@ -1,0 +1,153 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/embed-preview",
+    "title": "Embed Preview",
+    "category": "bkbg-media",
+    "icon": "embed-generic",
+    "description": "Privacy-friendly click-to-load embed with a custom thumbnail, CTA overlay, and optional privacy notice.",
+    "keywords": [
+        "embed",
+        "figma",
+        "loom",
+        "iframe",
+        "preview",
+        "video",
+        "lazy"
+    ],
+    "editorScript": "bkbg-embed-preview-editor",
+    "style": "bkbg-embed-preview-style",
+    "viewScript": "bkbg-embed-preview-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "embedUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "embedProvider": {
+            "type": "string",
+            "default": "custom"
+        },
+        "embedTitle": {
+            "type": "string",
+            "default": "Open in Figma"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "description": {
+            "type": "string",
+            "default": ""
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": false
+        },
+        "thumbnailUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "thumbnailId": {
+            "type": "number",
+            "default": 0
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Click to open"
+        },
+        "ctaStyle": {
+            "type": "string",
+            "default": "filled"
+        },
+        "aspectRatio": {
+            "type": "string",
+            "default": "16-9"
+        },
+        "customHeight": {
+            "type": "number",
+            "default": 480
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 900
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "showBrand": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLoadingBar": {
+            "type": "boolean",
+            "default": true
+        },
+        "privacyNote": {
+            "type": "string",
+            "default": "No data is loaded until you click."
+        },
+        "showPrivacyNote": {
+            "type": "boolean",
+            "default": true
+        },
+        "iframeSandbox": {
+            "type": "string",
+            "default": "allow-scripts allow-same-origin allow-forms allow-popups allow-presentation"
+        },
+        "overlayBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "overlayOpacity": {
+            "type": "number",
+            "default": 55
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#cbd5e1"
+        },
+        "privacyColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "descSize": {
+            "type": "number",
+            "default": 14
+        },
+        "ctaLabelSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 18
+        },
+        "typoTitle": { "type": "object", "default": {} },
+        "typoDesc": { "type": "object", "default": {} },
+        "typoCta": { "type": "object", "default": {} }
+    }
+}

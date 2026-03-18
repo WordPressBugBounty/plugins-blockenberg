@@ -1,0 +1,158 @@
+/* Compound Interest Calculator — bkbg-cic-* */
+.bkbg-cic-app {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.bkbg-cic-app *, .bkbg-cic-app *::before, .bkbg-cic-app *::after { box-sizing: border-box; }
+
+.bkbg-cic-wrap {
+    max-width: 580px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 32px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+}
+.bkbg-cic-header { margin-bottom: 22px; }
+.bkbg-cic-title  {
+    font-family: var(--bkcic-title-font-family, inherit);
+    font-size: var(--bkcic-title-font-size-d, 28px);
+    font-weight: var(--bkcic-title-font-weight, 700);
+    line-height: var(--bkcic-title-line-height-d, 1.2);
+    text-transform: var(--bkcic-title-text-transform, none);
+    font-style: var(--bkcic-title-font-style, normal);
+    text-decoration: var(--bkcic-title-text-decoration, none);
+    letter-spacing: var(--bkcic-title-letter-spacing-d, normal);
+    word-spacing: var(--bkcic-title-word-spacing-d, normal);
+    margin: 0 0 6px;
+}
+.bkbg-cic-subtitle { font-size: 15px; margin: 0; opacity: .7; }
+
+.bkbg-cic-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+.bkbg-cic-field { flex: 1; min-width: 140px; }
+.bkbg-cic-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+.bkbg-cic-input, .bkbg-cic-select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 15px;
+    font-family: inherit;
+    border-radius: 8px;
+    border: 1.5px solid #e5e7eb;
+    outline: none;
+    background: #fff;
+    transition: border-color .15s;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.bkbg-cic-input:focus, .bkbg-cic-select:focus {
+    border-color: #6c3fb5;
+    box-shadow: 0 0 0 3px rgba(108,63,181,.12);
+}
+.bkbg-cic-select { cursor: pointer; }
+.bkbg-cic-freq-field { margin-bottom: 20px; }
+
+.bkbg-cic-result {
+    background: #6c3fb5;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 16px;
+}
+.bkbg-cic-result-label  { font-size: 13px; font-weight: 600; opacity: .8; margin-bottom: 4px; }
+.bkbg-cic-result-amount {
+    font-family: var(--bkcic-result-font-family, inherit);
+    font-size: var(--bkcic-result-font-size-d, 48px);
+    font-weight: var(--bkcic-result-font-weight, 800);
+    line-height: var(--bkcic-result-line-height-d, 1.1);
+    text-transform: var(--bkcic-result-text-transform, none);
+    font-style: var(--bkcic-result-font-style, normal);
+    text-decoration: var(--bkcic-result-text-decoration, none);
+    letter-spacing: var(--bkcic-result-letter-spacing-d, normal);
+    word-spacing: var(--bkcic-result-word-spacing-d, normal);
+    margin-bottom: 16px;
+}
+.bkbg-cic-result-breakdown { display: flex; gap: 20px; flex-wrap: wrap; }
+.bkbg-cic-result-sub-label { font-size: 12px; opacity: .7; margin-bottom: 2px; }
+.bkbg-cic-result-sub-value { font-size: 18px; font-weight: 700; }
+
+.bkbg-cic-bar-wrap { margin-bottom: 20px; }
+.bkbg-cic-bar-track { height: 10px; border-radius: 5px; background: #e5e7eb; overflow: hidden; }
+.bkbg-cic-bar-inner { display: flex; height: 100%; }
+.bkbg-cic-bar-principal { background: #3b82f6; transition: width .4s; }
+.bkbg-cic-bar-interest  { flex: 1; background: #10b981; }
+.bkbg-cic-bar-legend {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 5px;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.bkbg-cic-table-wrap { overflow-x: auto; }
+.bkbg-cic-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.bkbg-cic-table th {
+    padding: 10px 12px;
+    text-align: left;
+    background: #f3f4f6;
+    color: #374151;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-bottom: 1.5px solid #e5e7eb;
+}
+.bkbg-cic-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+.bkbg-cic-table tr:last-child td { border-bottom: none; }
+.bkbg-cic-table tr:hover td { background: #f9fafb; }
+
+@media (max-width: 1024px) {
+    .bkbg-cic-title {
+        font-size: var(--bkcic-title-font-size-t, var(--bkcic-title-font-size-d, 28px));
+        line-height: var(--bkcic-title-line-height-t, var(--bkcic-title-line-height-d, 1.2));
+        letter-spacing: var(--bkcic-title-letter-spacing-t, var(--bkcic-title-letter-spacing-d, normal));
+        word-spacing: var(--bkcic-title-word-spacing-t, var(--bkcic-title-word-spacing-d, normal));
+    }
+    .bkbg-cic-result-amount {
+        font-size: var(--bkcic-result-font-size-t, var(--bkcic-result-font-size-d, 48px));
+        line-height: var(--bkcic-result-line-height-t, var(--bkcic-result-line-height-d, 1.1));
+        letter-spacing: var(--bkcic-result-letter-spacing-t, var(--bkcic-result-letter-spacing-d, normal));
+        word-spacing: var(--bkcic-result-word-spacing-t, var(--bkcic-result-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-cic-title {
+        font-size: var(--bkcic-title-font-size-m, var(--bkcic-title-font-size-t, var(--bkcic-title-font-size-d, 28px)));
+        line-height: var(--bkcic-title-line-height-m, var(--bkcic-title-line-height-t, var(--bkcic-title-line-height-d, 1.2)));
+        letter-spacing: var(--bkcic-title-letter-spacing-m, var(--bkcic-title-letter-spacing-t, var(--bkcic-title-letter-spacing-d, normal)));
+        word-spacing: var(--bkcic-title-word-spacing-m, var(--bkcic-title-word-spacing-t, var(--bkcic-title-word-spacing-d, normal)));
+    }
+    .bkbg-cic-result-amount {
+        font-size: var(--bkcic-result-font-size-m, var(--bkcic-result-font-size-t, var(--bkcic-result-font-size-d, 48px)));
+        line-height: var(--bkcic-result-line-height-m, var(--bkcic-result-line-height-t, var(--bkcic-result-line-height-d, 1.1)));
+        letter-spacing: var(--bkcic-result-letter-spacing-m, var(--bkcic-result-letter-spacing-t, var(--bkcic-result-letter-spacing-d, normal)));
+        word-spacing: var(--bkcic-result-word-spacing-m, var(--bkcic-result-word-spacing-t, var(--bkcic-result-word-spacing-d, normal)));
+    }
+}
+
+@media (max-width: 520px) {
+    .bkbg-cic-wrap { padding: 24px 16px; }
+    .bkbg-cic-result-amount { font-size: 36px; }
+}

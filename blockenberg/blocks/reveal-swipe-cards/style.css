@@ -1,0 +1,138 @@
+/* =====================================================
+   Reveal Swipe Cards — bkbg-rsc-*
+   ===================================================== */
+
+.bkbg-rsc-app {
+    box-sizing: border-box;
+}
+
+.bkbg-rsc-grid {
+    display: grid;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ── Card wrapper ── */
+.bkbg-rsc-card {
+    position: relative;
+    overflow: hidden;
+    cursor: col-resize;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.bkbg-rsc-card.bkbg-rsc-vertical {
+    cursor: row-resize;
+}
+
+/* ── Back (revealed) layer ── */
+.bkbg-rsc-back {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ── Front (covering) layer ── */
+.bkbg-rsc-front {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    will-change: clip-path;
+}
+
+/* ── Divider line ── */
+.bkbg-rsc-divider {
+    position: absolute;
+    top: 0;
+    background: var(--rsc-divider, #ffffff);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.bkbg-rsc-card:not(.bkbg-rsc-vertical) .bkbg-rsc-divider {
+    width: var(--rsc-divider-w, 3px);
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+.bkbg-rsc-card.bkbg-rsc-vertical .bkbg-rsc-divider {
+    height: var(--rsc-divider-w, 3px);
+    width: 100%;
+    top: auto;
+    transform: translateY(-50%);
+}
+
+/* ── Handle ── */
+.bkbg-rsc-handle {
+    position: absolute;
+    z-index: 3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    box-shadow: 0 2px 10px rgba(0,0,0,.3);
+    transform: translate(-50%, -50%);
+    transition: transform 80ms;
+    cursor: inherit;
+}
+
+.bkbg-rsc-handle:hover {
+    transform: translate(-50%, -50%) scale(1.12);
+}
+
+/* ── Labels ── */
+.bkbg-rsc-label {
+    position: absolute;
+    top: 10px;
+    font-family: var(--bksc-lb-font-family, inherit);
+    font-size: var(--bksc-lb-font-size-d, 13px);
+    font-weight: var(--bksc-lb-font-weight, 600);
+    font-style: var(--bksc-lb-font-style, normal);
+    text-decoration: var(--bksc-lb-text-decoration, none);
+    text-transform: var(--bksc-lb-text-transform, none);
+    line-height: var(--bksc-lb-line-height-d, 1.3);
+    letter-spacing: var(--bksc-lb-letter-spacing-d, normal);
+    word-spacing: var(--bksc-lb-word-spacing-d, normal);
+    border-radius: 6px;
+    z-index: 4;
+    pointer-events: none;
+    padding: 3px 10px;
+    white-space: nowrap;
+}
+
+.bkbg-rsc-label-front {
+    left: 10px;
+}
+.bkbg-rsc-label-back {
+    right: 10px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .bkbg-rsc-label {
+        font-size: var(--bksc-lb-font-size-t, var(--bksc-lb-font-size-d, 13px));
+        line-height: var(--bksc-lb-line-height-t, var(--bksc-lb-line-height-d, 1.3));
+        letter-spacing: var(--bksc-lb-letter-spacing-t, var(--bksc-lb-letter-spacing-d, normal));
+        word-spacing: var(--bksc-lb-word-spacing-t, var(--bksc-lb-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-rsc-label {
+        font-size: var(--bksc-lb-font-size-m, var(--bksc-lb-font-size-t, var(--bksc-lb-font-size-d, 13px)));
+        line-height: var(--bksc-lb-line-height-m, var(--bksc-lb-line-height-t, var(--bksc-lb-line-height-d, 1.3)));
+        letter-spacing: var(--bksc-lb-letter-spacing-m, var(--bksc-lb-letter-spacing-t, var(--bksc-lb-letter-spacing-d, normal)));
+        word-spacing: var(--bksc-lb-word-spacing-m, var(--bksc-lb-word-spacing-t, var(--bksc-lb-word-spacing-d, normal)));
+    }
+}
+
+@media (max-width: 640px) {
+    .bkbg-rsc-grid {
+        grid-template-columns: 1fr !important;
+    }
+}

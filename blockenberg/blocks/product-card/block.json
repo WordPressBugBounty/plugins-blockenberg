@@ -1,0 +1,208 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/product-card",
+    "title": "Product Card",
+    "category": "bkbg-marketing",
+    "icon": "cart",
+    "description": "Showcase any product with image, name, price, star rating, features list, badges, and buy button \u2014 no WooCommerce required.",
+    "keywords": [
+        "product",
+        "shop",
+        "ecommerce",
+        "price",
+        "buy",
+        "card"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-product-card-editor",
+    "editorStyle": "bkbg-product-card-style",
+    "style": "bkbg-product-card-style",
+    "viewScript": "bkbg-product-card-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide"
+        ]
+    },
+    "attributes": {
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "productName": {
+            "type": "string",
+            "default": "Premium Wireless Headphones"
+        },
+        "description": {
+            "type": "string",
+            "default": "Crystal-clear audio with active noise cancellation, 30-hour battery life, and premium comfort cushions."
+        },
+        "price": {
+            "type": "string",
+            "default": "$149.99"
+        },
+        "originalPrice": {
+            "type": "string",
+            "default": "$199.99"
+        },
+        "showOriginal": {
+            "type": "boolean",
+            "default": true
+        },
+        "currency": {
+            "type": "string",
+            "default": ""
+        },
+        "badge": {
+            "type": "string",
+            "default": "Best Seller"
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "features": {
+            "type": "string",
+            "default": "Active Noise Cancellation\n30-hour battery\nBluetooth 5.3\nFoldable design\nCarrying case included"
+        },
+        "showFeatures": {
+            "type": "boolean",
+            "default": true
+        },
+        "rating": {
+            "type": "number",
+            "default": 4
+        },
+        "ratingCount": {
+            "type": "string",
+            "default": "128"
+        },
+        "showRating": {
+            "type": "boolean",
+            "default": true
+        },
+        "btnLabel": {
+            "type": "string",
+            "default": "Buy Now"
+        },
+        "btnUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "secondBtnLabel": {
+            "type": "string",
+            "default": "View Details"
+        },
+        "secondBtnUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showSecondBtn": {
+            "type": "boolean",
+            "default": false
+        },
+        "secondBtnBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "secondBtnColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "layoutStyle": {
+            "type": "string",
+            "default": "vertical"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "cardShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "imgHeight": {
+            "type": "number",
+            "default": 260
+        },
+        "imgBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "priceColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "originalPriceColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "featureColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "priceTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "featureTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "btnTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

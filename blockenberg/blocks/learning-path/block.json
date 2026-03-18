@@ -1,0 +1,318 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/learning-path",
+    "version": "1.0.0",
+    "title": "Learning Path",
+    "category": "bkbg-blog",
+    "icon": "welcome-learn-more",
+    "description": "Display a structured learning path with steps, skill tags, durations and type indicators.",
+    "keywords": [
+        "learning",
+        "path",
+        "course",
+        "steps",
+        "skills",
+        "education",
+        "tutorial"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-learning-path-editor",
+    "editorStyle": "bkbg-learning-path-style",
+    "style": "bkbg-learning-path-style",
+    "viewScript": "bkbg-learning-path-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "pathTitle": {
+            "type": "string",
+            "default": "Full-Stack Web Development Path"
+        },
+        "description": {
+            "type": "string",
+            "default": "A structured roadmap to become a proficient full-stack developer — from fundamentals to deployment."
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "totalDuration": {
+            "type": "string",
+            "default": "12 weeks"
+        },
+        "difficulty": {
+            "type": "string",
+            "default": "intermediate"
+        },
+        "showSkills": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDuration": {
+            "type": "boolean",
+            "default": true
+        },
+        "showStepNumbers": {
+            "type": "boolean",
+            "default": true
+        },
+        "steps": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "HTML & CSS Fundamentals",
+                    "description": "Learn the building blocks of the web. Master semantic HTML, CSS layout, flexbox, and grid.",
+                    "duration": "1 week",
+                    "type": "lesson",
+                    "skills": [
+                        "HTML5",
+                        "CSS3",
+                        "Flexbox",
+                        "Grid"
+                    ],
+                    "completed": false
+                },
+                {
+                    "title": "JavaScript Essentials",
+                    "description": "Core JavaScript concepts: variables, functions, DOM manipulation, events, and async programming.",
+                    "duration": "2 weeks",
+                    "type": "lesson",
+                    "skills": [
+                        "ES6+",
+                        "DOM",
+                        "Promises",
+                        "Fetch API"
+                    ],
+                    "completed": false
+                },
+                {
+                    "title": "Build a Static Website",
+                    "description": "Apply HTML/CSS/JS skills by building a multi-page portfolio website from scratch.",
+                    "duration": "1 week",
+                    "type": "project",
+                    "skills": [
+                        "HTML",
+                        "CSS",
+                        "JavaScript"
+                    ],
+                    "completed": false
+                },
+                {
+                    "title": "JavaScript Quiz",
+                    "description": "Test your JavaScript knowledge with 30 questions covering core concepts.",
+                    "duration": "2 hours",
+                    "type": "quiz",
+                    "skills": [
+                        "JavaScript"
+                    ],
+                    "completed": false
+                },
+                {
+                    "title": "React Fundamentals",
+                    "description": "Components, props, state, hooks, and the React component lifecycle.",
+                    "duration": "2 weeks",
+                    "type": "lesson",
+                    "skills": [
+                        "React",
+                        "JSX",
+                        "Hooks",
+                        "State"
+                    ],
+                    "completed": false
+                },
+                {
+                    "title": "Read: Clean Code by Robert Martin",
+                    "description": "Essential reading on writing maintainable, readable code that your future self will thank you for.",
+                    "duration": "1 week",
+                    "type": "reading",
+                    "skills": [
+                        "Best Practices"
+                    ],
+                    "completed": false
+                },
+                {
+                    "title": "Node.js & Express",
+                    "description": "Server-side JavaScript with Node.js, REST API design with Express, and middleware patterns.",
+                    "duration": "2 weeks",
+                    "type": "lesson",
+                    "skills": [
+                        "Node.js",
+                        "Express",
+                        "REST",
+                        "Middleware"
+                    ],
+                    "completed": false
+                },
+                {
+                    "title": "Full-Stack App Project",
+                    "description": "Build a complete CRUD application with React frontend, Express backend, and a database.",
+                    "duration": "2 weeks",
+                    "type": "project",
+                    "skills": [
+                        "React",
+                        "Node.js",
+                        "Express",
+                        "PostgreSQL"
+                    ],
+                    "completed": false
+                },
+                {
+                    "title": "Databases & SQL",
+                    "description": "Relational databases, SQL queries, joins, indexes, and PostgreSQL with Prisma ORM.",
+                    "duration": "1 week",
+                    "type": "video",
+                    "skills": [
+                        "SQL",
+                        "PostgreSQL",
+                        "Prisma"
+                    ],
+                    "completed": false
+                },
+                {
+                    "title": "Deployment & DevOps Basics",
+                    "description": "Deploy apps to the cloud with Docker, CI/CD pipelines, and environment configuration.",
+                    "duration": "1 week",
+                    "type": "lesson",
+                    "skills": [
+                        "Docker",
+                        "CI/CD",
+                        "Vercel",
+                        "Railway"
+                    ],
+                    "completed": false
+                }
+            ]
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 24
+        },
+        "stepTitleSize": {
+            "type": "number",
+            "default": 16
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 160
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "stepTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "stepBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "stepBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "stepTitleColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "stepDescColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "stepNumBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "stepNumColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "connectorColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "durationColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "skillBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "skillColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "metaBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "metaBorderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "difficultyBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "difficultyColor": {
+            "type": "string",
+            "default": "#5b21b6"
+        },
+        "lessonColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "projectColor": {
+            "type": "string",
+            "default": "#d97706"
+        },
+        "quizColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "readingColor": {
+            "type": "string",
+            "default": "#059669"
+        },
+        "videoColor": {
+            "type": "string",
+            "default": "#dc2626"
+        }
+    }
+}

@@ -1,0 +1,60 @@
+/* Tag Cloud — style */
+.bktagcl-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bktagcl-tag {
+    font-family:     var(--bktgc-tg-font-family, inherit);
+    font-weight:     var(--bktgc-tg-font-weight, 500);
+    font-style:      var(--bktgc-tg-font-style);
+    text-decoration: var(--bktgc-tg-text-decoration, none);
+    text-transform:  var(--bktgc-tg-text-transform);
+    line-height:     var(--bktgc-tg-line-height-d, 1.4);
+    letter-spacing:  var(--bktgc-tg-letter-spacing-d);
+    word-spacing:    var(--bktgc-tg-word-spacing-d);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+}
+
+.bktagcl-wrap[data-animate="1"] .bktagcl-tag:hover {
+    background: var(--bktagcl-hover-bg, #5a2fa0) !important;
+    color: var(--bktagcl-hover-text, #ffffff) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: transparent !important;
+}
+
+/* wp-tags loading state */
+.bktagcl-wrap[data-source="wp-tags"]:empty::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e5e7eb;
+    border-top-color: #6c3fb5;
+    border-radius: 50%;
+    animation: bktagclSpin 0.8s linear infinite;
+    margin: 16px auto;
+}
+
+@keyframes bktagclSpin {
+    to { transform: rotate(360deg); }
+}
+
+/* ── Responsive typography ──────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bktagcl-tag {
+        line-height:    var(--bktgc-tg-line-height-t, var(--bktgc-tg-line-height-d, 1.4));
+        letter-spacing: var(--bktgc-tg-letter-spacing-t, var(--bktgc-tg-letter-spacing-d));
+        word-spacing:   var(--bktgc-tg-word-spacing-t, var(--bktgc-tg-word-spacing-d));
+    }
+}
+@media (max-width: 767px) {
+    .bktagcl-tag {
+        line-height:    var(--bktgc-tg-line-height-m, var(--bktgc-tg-line-height-t, var(--bktgc-tg-line-height-d, 1.4)));
+        letter-spacing: var(--bktgc-tg-letter-spacing-m, var(--bktgc-tg-letter-spacing-t, var(--bktgc-tg-letter-spacing-d)));
+        word-spacing:   var(--bktgc-tg-word-spacing-m, var(--bktgc-tg-word-spacing-t, var(--bktgc-tg-word-spacing-d)));
+    }
+}

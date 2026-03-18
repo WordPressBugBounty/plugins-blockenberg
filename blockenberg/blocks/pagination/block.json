@@ -1,0 +1,93 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/pagination",
+    "title": "Pagination",
+    "category": "bkbg-layout",
+    "icon": "controls-forward",
+    "description": "Styled numeric pagination preview with prev/next, colors, shape and alignment controls.",
+    "keywords": [
+        "pagination",
+        "pages",
+        "nav",
+        "next",
+        "previous",
+        "page numbers"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-pagination-editor",
+    "editorStyle": "bkbg-pagination-style",
+    "style": "bkbg-pagination-style",
+    "viewScript": "bkbg-pagination-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "prevLabel": {
+            "type": "string",
+            "default": "\u2190 Previous"
+        },
+        "nextLabel": {
+            "type": "string",
+            "default": "Next \u2192"
+        },
+        "pageRange": {
+            "type": "number",
+            "default": 2
+        },
+        "alignment": {
+            "type": "string",
+            "default": "center"
+        },
+        "style": {
+            "type": "string",
+            "default": "rounded"
+        },
+        "itemSize": {
+            "type": "number",
+            "default": 40
+        },
+        "gap": {
+            "type": "number",
+            "default": 6
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "activeBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "activeText": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "normalBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "normalText": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "hoverBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "600"
+        },
+        "itemTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,180 @@
+.bkbg-rpk-app *,
+.bkbg-rpk-editor * {
+    box-sizing: border-box;
+}
+
+.bkbg-rpk-card {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.bkbg-rpk-textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #e5e7eb;
+    font-size: 14px;
+    font-family: monospace;
+    resize: vertical;
+    outline: none;
+    transition: border-color .15s;
+}
+.bkbg-rpk-textarea:focus {
+    border-color: inherit;
+}
+
+.bkbg-rpk-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background .15s, opacity .15s;
+    margin-bottom: 20px;
+}
+.bkbg-rpk-btn:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+.bkbg-rpk-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.bkbg-rpk-chip {
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: default;
+    transition: background .1s, color .1s, transform .1s;
+}
+
+.bkbg-rpk-chip.bkbg-rpk-highlight {
+    transform: scale(1.06);
+}
+
+.bkbg-rpk-chip.bkbg-rpk-winner {
+    transform: scale(1.1);
+    font-weight: 700;
+}
+
+.bkbg-rpk-winner-box {
+    text-align: center;
+    margin-bottom: 16px;
+    animation: bkbg-rpk-pop .3s ease;
+}
+
+@keyframes bkbg-rpk-pop {
+    0%   { transform: scale(.8); opacity: 0; }
+    60%  { transform: scale(1.08); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* typography */
+.bkbg-rpk-title {
+    font-family: var(--bkrpk-tt-font-family, inherit);
+    font-size: var(--bkrpk-tt-font-size-d, 28px);
+    font-weight: var(--bkrpk-tt-font-weight, 700);
+    font-style: var(--bkrpk-tt-font-style, normal);
+    text-decoration: var(--bkrpk-tt-text-decoration, none);
+    text-transform: var(--bkrpk-tt-text-transform, none);
+    line-height: var(--bkrpk-tt-line-height-d, 1.3);
+    letter-spacing: var(--bkrpk-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkrpk-tt-word-spacing-d, normal);
+}
+.bkbg-rpk-subtitle {
+    font-family: var(--bkrpk-st-font-family, inherit);
+    font-size: var(--bkrpk-st-font-size-d, 15px);
+    font-weight: var(--bkrpk-st-font-weight, 400);
+    font-style: var(--bkrpk-st-font-style, normal);
+    text-decoration: var(--bkrpk-st-text-decoration, none);
+    text-transform: var(--bkrpk-st-text-transform, none);
+    line-height: var(--bkrpk-st-line-height-d, 1.5);
+    letter-spacing: var(--bkrpk-st-letter-spacing-d, normal);
+    word-spacing: var(--bkrpk-st-word-spacing-d, normal);
+}
+.bkbg-rpk-winner-text {
+    font-family: var(--bkrpk-wn-font-family, inherit);
+    font-size: var(--bkrpk-wn-font-size-d, 32px);
+    font-weight: var(--bkrpk-wn-font-weight, 800);
+    font-style: var(--bkrpk-wn-font-style, normal);
+    text-decoration: var(--bkrpk-wn-text-decoration, none);
+    text-transform: var(--bkrpk-wn-text-transform, none);
+    line-height: var(--bkrpk-wn-line-height-d, 1.2);
+    letter-spacing: var(--bkrpk-wn-letter-spacing-d, normal);
+    word-spacing: var(--bkrpk-wn-word-spacing-d, normal);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-rpk-title {
+        font-size: var(--bkrpk-tt-font-size-t, var(--bkrpk-tt-font-size-d, 28px));
+        line-height: var(--bkrpk-tt-line-height-t, var(--bkrpk-tt-line-height-d, 1.3));
+        letter-spacing: var(--bkrpk-tt-letter-spacing-t, var(--bkrpk-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkrpk-tt-word-spacing-t, var(--bkrpk-tt-word-spacing-d, normal));
+    }
+    .bkbg-rpk-subtitle {
+        font-size: var(--bkrpk-st-font-size-t, var(--bkrpk-st-font-size-d, 15px));
+        line-height: var(--bkrpk-st-line-height-t, var(--bkrpk-st-line-height-d, 1.5));
+        letter-spacing: var(--bkrpk-st-letter-spacing-t, var(--bkrpk-st-letter-spacing-d, normal));
+        word-spacing: var(--bkrpk-st-word-spacing-t, var(--bkrpk-st-word-spacing-d, normal));
+    }
+    .bkbg-rpk-winner-text {
+        font-size: var(--bkrpk-wn-font-size-t, var(--bkrpk-wn-font-size-d, 32px));
+        line-height: var(--bkrpk-wn-line-height-t, var(--bkrpk-wn-line-height-d, 1.2));
+        letter-spacing: var(--bkrpk-wn-letter-spacing-t, var(--bkrpk-wn-letter-spacing-d, normal));
+        word-spacing: var(--bkrpk-wn-word-spacing-t, var(--bkrpk-wn-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-rpk-title {
+        font-size: var(--bkrpk-tt-font-size-m, var(--bkrpk-tt-font-size-t, var(--bkrpk-tt-font-size-d, 28px)));
+        line-height: var(--bkrpk-tt-line-height-m, var(--bkrpk-tt-line-height-t, var(--bkrpk-tt-line-height-d, 1.3)));
+        letter-spacing: var(--bkrpk-tt-letter-spacing-m, var(--bkrpk-tt-letter-spacing-t, var(--bkrpk-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkrpk-tt-word-spacing-m, var(--bkrpk-tt-word-spacing-t, var(--bkrpk-tt-word-spacing-d, normal)));
+    }
+    .bkbg-rpk-subtitle {
+        font-size: var(--bkrpk-st-font-size-m, var(--bkrpk-st-font-size-t, var(--bkrpk-st-font-size-d, 15px)));
+        line-height: var(--bkrpk-st-line-height-m, var(--bkrpk-st-line-height-t, var(--bkrpk-st-line-height-d, 1.5)));
+        letter-spacing: var(--bkrpk-st-letter-spacing-m, var(--bkrpk-st-letter-spacing-t, var(--bkrpk-st-letter-spacing-d, normal)));
+        word-spacing: var(--bkrpk-st-word-spacing-m, var(--bkrpk-st-word-spacing-t, var(--bkrpk-st-word-spacing-d, normal)));
+    }
+    .bkbg-rpk-winner-text {
+        font-size: var(--bkrpk-wn-font-size-m, var(--bkrpk-wn-font-size-t, var(--bkrpk-wn-font-size-d, 32px)));
+        line-height: var(--bkrpk-wn-line-height-m, var(--bkrpk-wn-line-height-t, var(--bkrpk-wn-line-height-d, 1.2)));
+        letter-spacing: var(--bkrpk-wn-letter-spacing-m, var(--bkrpk-wn-letter-spacing-t, var(--bkrpk-wn-letter-spacing-d, normal)));
+        word-spacing: var(--bkrpk-wn-word-spacing-m, var(--bkrpk-wn-word-spacing-t, var(--bkrpk-wn-word-spacing-d, normal)));
+    }
+}
+
+.bkbg-rpk-history {
+    padding: 14px 16px;
+    border-radius: 8px;
+}
+
+.bkbg-rpk-history-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin-bottom: 8px;
+}
+
+.bkbg-rpk-history-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.bkbg-rpk-history-chip {
+    padding: 4px 10px;
+    background: #ffffff;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #e5e7eb;
+}

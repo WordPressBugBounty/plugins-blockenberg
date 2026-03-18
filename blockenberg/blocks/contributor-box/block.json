@@ -1,0 +1,157 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/contributor-box",
+    "title": "Contributor Box",
+    "description": "Multi-author attribution block with avatars, bios and social links.",
+    "category": "bkbg-blog",
+    "icon": "groups",
+    "keywords": [
+        "author",
+        "contributor",
+        "team",
+        "bio",
+        "credit",
+        "writers"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-contributor-box-editor",
+    "style": "bkbg-contributor-box-style",
+    "viewScript": "bkbg-contributor-box-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "label": {
+            "type": "string",
+            "default": "Written by"
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "contributors": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Author Name",
+                    "title": "Staff Writer",
+                    "avatarUrl": "",
+                    "avatarId": 0,
+                    "bio": "Short description about this author and their expertise.",
+                    "twitter": "",
+                    "linkedin": "",
+                    "website": ""
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "showBio": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSocial": {
+            "type": "boolean",
+            "default": true
+        },
+        "avatarSize": {
+            "type": "number",
+            "default": 60
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "avatarBg": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "avatarColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "bioColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "socialColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "nameFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "roleFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "bioFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "typoName": {
+            "type": "object",
+            "default": {}
+        },
+        "typoRole": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBio": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

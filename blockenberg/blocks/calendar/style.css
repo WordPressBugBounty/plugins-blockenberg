@@ -1,0 +1,198 @@
+.bkbg-cal-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+}
+.bkbg-cal-title {
+    text-align: center;
+    color: var(--bkbg-cal-title-color, #111827);
+    margin: 0 0 20px;
+    font-family: var(--bkbg-cal-title-font-family, inherit);
+    font-weight: var(--bkbg-cal-title-font-weight, 900);
+    font-style: var(--bkbg-cal-title-font-style, normal);
+    text-transform: var(--bkbg-cal-title-text-transform, none);
+    text-decoration: var(--bkbg-cal-title-text-decoration, none);
+    font-size: var(--bkbg-cal-title-font-size-d, 24px);
+    line-height: var(--bkbg-cal-title-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-cal-title-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-cal-title-word-spacing-d, normal);
+}
+.bkbg-cal-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.bkbg-cal-nav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--bkbg-cal-accent, #6c3fb5);
+    padding: 4px 12px;
+    border-radius: 6px;
+    transition: background 0.15s;
+}
+.bkbg-cal-nav-btn:hover {
+    background: var(--bkbg-cal-day-hover, #f5f3ff);
+}
+.bkbg-cal-month-label {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--bkbg-cal-title-color, #111827);
+}
+.bkbg-cal-grid-wrap {
+    background: var(--bkbg-cal-grid-bg, #fff);
+    border-radius: var(--bkbg-cal-card-r, 14px);
+    overflow: hidden;
+    border: 1px solid var(--bkbg-cal-card-border, #e5e7eb);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.bkbg-cal-day-names {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: var(--bkbg-cal-header-bg, #6c3fb5);
+}
+.bkbg-cal-day-name {
+    text-align: center;
+    padding: 10px 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--bkbg-cal-header-color, #fff);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.bkbg-cal-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+.bkbg-cal-day {
+    min-height: 80px;
+    padding: 6px;
+    border-right: 1px solid var(--bkbg-cal-day-border, #e5e7eb);
+    border-bottom: 1px solid var(--bkbg-cal-day-border, #e5e7eb);
+    background: var(--bkbg-cal-grid-bg, #fff);
+    transition: background 0.15s;
+    cursor: default;
+    position: relative;
+}
+.bkbg-cal-day:hover {
+    background: var(--bkbg-cal-day-hover, #f5f3ff);
+}
+.bkbg-cal-day.is-other-month {
+    opacity: 0.38;
+}
+.bkbg-cal-day-number {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--bkbg-cal-title-color, #111827);
+    margin-bottom: 4px;
+    transition: background 0.15s, color 0.15s;
+}
+.bkbg-cal-day.is-today .bkbg-cal-day-number {
+    background: var(--bkbg-cal-today-bg, #6c3fb5);
+    color: var(--bkbg-cal-today-color, #fff);
+    font-weight: 800;
+}
+.bkbg-cal-event-pill {
+    background: var(--bkbg-cal-accent, #6c3fb5);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+.bkbg-cal-more {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--bkbg-cal-accent, #6c3fb5);
+}
+/* Event list */
+.bkbg-cal-event-list {
+    margin-top: 24px;
+}
+.bkbg-cal-list-heading {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--bkbg-cal-list-title, #111827);
+    margin: 0 0 12px;
+}
+.bkbg-cal-event-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    background: var(--bkbg-cal-card-bg, #fff);
+    border: 1px solid var(--bkbg-cal-card-border, #e5e7eb);
+    transition: box-shadow 0.15s;
+}
+.bkbg-cal-event-item:hover {
+    box-shadow: 0 2px 10px rgba(108,63,181,0.1);
+}
+.bkbg-cal-event-stripe {
+    width: 4px;
+    align-self: stretch;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.bkbg-cal-event-info {
+    flex: 1;
+    min-width: 0;
+}
+.bkbg-cal-event-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bkbg-cal-list-title, #111827);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.bkbg-cal-event-cat {
+    margin: 2px 0 0;
+    font-size: 11px;
+    color: var(--bkbg-cal-accent, #6c3fb5);
+    font-weight: 600;
+}
+.bkbg-cal-event-date {
+    font-size: 12px;
+    color: var(--bkbg-cal-list-date, #6b7280);
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+/* === Typography responsive === */
+@media (max-width: 1024px) {
+    .bkbg-cal-title {
+        font-size: var(--bkbg-cal-title-font-size-t, var(--bkbg-cal-title-font-size-d, 24px));
+        line-height: var(--bkbg-cal-title-line-height-t, var(--bkbg-cal-title-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-cal-title-letter-spacing-t, var(--bkbg-cal-title-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-cal-title-word-spacing-t, var(--bkbg-cal-title-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-cal-title {
+        font-size: var(--bkbg-cal-title-font-size-m, var(--bkbg-cal-title-font-size-t, var(--bkbg-cal-title-font-size-d, 24px)));
+        line-height: var(--bkbg-cal-title-line-height-m, var(--bkbg-cal-title-line-height-t, var(--bkbg-cal-title-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-cal-title-letter-spacing-m, var(--bkbg-cal-title-letter-spacing-t, var(--bkbg-cal-title-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-cal-title-word-spacing-m, var(--bkbg-cal-title-word-spacing-t, var(--bkbg-cal-title-word-spacing-d, normal)));
+    }
+}

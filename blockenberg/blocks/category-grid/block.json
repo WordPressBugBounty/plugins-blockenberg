@@ -1,0 +1,211 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/category-grid",
+    "title": "Category Grid",
+    "category": "bkbg-blog",
+    "icon": "category",
+    "description": "Display WordPress post categories in a responsive grid with post counts, icons, descriptions, and rich styling options.",
+    "keywords": [
+        "category",
+        "categories",
+        "grid",
+        "taxonomy",
+        "posts",
+        "archive",
+        "navigation"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-category-grid-editor",
+    "style": "bkbg-category-grid-style",
+    "viewScript": "bkbg-category-grid-frontend",
+    "attributes": {
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "maxCategories": {
+            "type": "number",
+            "default": 9
+        },
+        "excludeIds": {
+            "type": "string",
+            "default": ""
+        },
+        "includeIds": {
+            "type": "string",
+            "default": ""
+        },
+        "orderBy": {
+            "type": "string",
+            "default": "count"
+        },
+        "order": {
+            "type": "string",
+            "default": "desc"
+        },
+        "hideEmpty": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCount": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": false
+        },
+        "maxDescriptionLength": {
+            "type": "number",
+            "default": 80
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "card"
+        },
+        "iconStyle": {
+            "type": "string",
+            "default": "emoji"
+        },
+        "defaultIcon": {
+            "type": "string",
+            "default": "📁"
+        },
+        "iconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "iconDashicon": {
+            "type": "string",
+            "default": "portfolio"
+        },
+        "iconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 36
+        },
+        "iconPosition": {
+            "type": "string",
+            "default": "top"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBgHover": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 24
+        },
+        "cardShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "cardBorder": {
+            "type": "boolean",
+            "default": false
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#1e1e1e"
+        },
+        "nameSize": {
+            "type": "number",
+            "default": 16
+        },
+        "countColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "countBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "descSize": {
+            "type": "number",
+            "default": 13
+        },
+        "gap": {
+            "type": "number",
+            "default": 16
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "showArrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "countLabel": {
+            "type": "string",
+            "default": "posts"
+        },
+        "linkTarget": {
+            "type": "string",
+            "default": "_self"
+        },
+        "colorMode": {
+            "type": "string",
+            "default": "single"
+        },
+        "multiColors": {
+            "type": "string",
+            "default": "#6c3fb5,#3b82f6,#10b981,#f59e0b,#ef4444,#ec4899"
+        },
+        "animateOnHover": {
+            "type": "boolean",
+            "default": true
+        },
+        "gradientOverlay": {
+            "type": "boolean",
+            "default": false
+        },
+        "imageMode": {
+            "type": "boolean",
+            "default": false
+        },
+        "typoName": {
+            "type": "object",
+            "default": {}
+        },
+        "typoDesc": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

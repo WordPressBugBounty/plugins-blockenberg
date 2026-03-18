@@ -1,0 +1,250 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/research-brief",
+    "title": "Research Brief",
+    "description": "Academic or industry research summary: study details, findings with significance, limitations, and key takeaways.",
+    "category": "bkbg-blog",
+    "icon": "analytics",
+    "keywords": [
+        "research",
+        "study",
+        "academic",
+        "findings",
+        "brief"
+    ],
+    "editorScript": "bkbg-research-brief-editor",
+    "editorStyle": "bkbg-research-brief-style",
+    "style": "bkbg-research-brief-style",
+    "viewScript": "bkbg-research-brief-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "studyTitle": {
+            "type": "string",
+            "default": "AI Coding Tools & Developer Productivity: A Systematic Review"
+        },
+        "authors": {
+            "type": "string",
+            "default": "Chen, Liu, Patel & Okonkwo"
+        },
+        "publication": {
+            "type": "string",
+            "default": "Journal of Software Engineering Research"
+        },
+        "publicationYear": {
+            "type": "string",
+            "default": "2026"
+        },
+        "studyType": {
+            "type": "string",
+            "default": "meta-analysis"
+        },
+        "sampleSize": {
+            "type": "string",
+            "default": "n = 4,200 developers across 60 companies in 18 countries"
+        },
+        "methodology": {
+            "type": "string",
+            "default": "Systematic review of 38 peer-reviewed studies (2020–2025) evaluating AI-assisted coding tools. Included randomized controlled trials, observational studies, and longitudinal cohort analyses measuring productivity, code quality, and developer experience outcomes."
+        },
+        "showMethodology": {
+            "type": "boolean",
+            "default": true
+        },
+        "findings": {
+            "type": "array",
+            "default": [
+                {
+                    "finding": "Developers using AI coding tools completed tasks 26–40% faster on average compared to control groups, with the largest gains observed in boilerplate-heavy codebases.",
+                    "significance": "high"
+                },
+                {
+                    "finding": "Code review time increased by 15% in teams that adopted AI tools without explicit review guidelines, suggesting AI-generated code requires additional scrutiny.",
+                    "significance": "high"
+                },
+                {
+                    "finding": "Junior developers (< 2 years experience) showed greater productivity gains than seniors but also produced code with significantly higher defect rates when using AI without oversight.",
+                    "significance": "high"
+                },
+                {
+                    "finding": "AI tool adoption had no statistically significant effect on overall developer job satisfaction scores across 14 of 18 sub-scales.",
+                    "significance": "medium"
+                },
+                {
+                    "finding": "Teams that trained developers on effective prompting strategies saw 18% better outcomes than teams with unguided adoption.",
+                    "significance": "medium"
+                },
+                {
+                    "finding": "Usage patterns stabilized after 6–8 weeks, with a bimodal split between high-adopters (> 60% of tasks with AI) and low-adopters (< 20%).",
+                    "significance": "low"
+                }
+            ]
+        },
+        "findingsLabel": {
+            "type": "string",
+            "default": "Key Findings"
+        },
+        "showFindings": {
+            "type": "boolean",
+            "default": true
+        },
+        "limitations": {
+            "type": "array",
+            "default": [
+                "High heterogeneity across included studies limits the precision of pooled estimates",
+                "Most studies used self-reported productivity metrics rather than objective output measures",
+                "Generalizability may be limited given over-representation of tech companies in samples",
+                "Publication bias toward positive findings cannot be ruled out"
+            ]
+        },
+        "limitationsLabel": {
+            "type": "string",
+            "default": "Limitations"
+        },
+        "showLimitations": {
+            "type": "boolean",
+            "default": true
+        },
+        "takeaways": {
+            "type": "array",
+            "default": [
+                "Establish explicit AI review guidelines before team-wide adoption to prevent quality regression",
+                "Invest in prompting and AI-literacy training — unguided adoption underperforms by ~18%",
+                "Monitor junior developer code quality separately when AI tools are introduced; pair with mentorship",
+                "Expect a 6–8 week stabilization period; set realistic expectations with leadership during this window"
+            ]
+        },
+        "takeawaysLabel": {
+            "type": "string",
+            "default": "Practical Takeaways"
+        },
+        "showTakeaways": {
+            "type": "boolean",
+            "default": true
+        },
+        "doi": {
+            "type": "string",
+            "default": "10.1016/j.jser.2026.01.008"
+        },
+        "sourceUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showSource": {
+            "type": "boolean",
+            "default": true
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 168
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#0284c7"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "typeBadgeBg": {
+            "type": "string",
+            "default": "#e0f2fe"
+        },
+        "typeBadgeColor": {
+            "type": "string",
+            "default": "#0c4a6e"
+        },
+        "methodBg": {
+            "type": "string",
+            "default": "#f0f9ff"
+        },
+        "methodColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "highBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "highColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "medBg": {
+            "type": "string",
+            "default": "#fef9c3"
+        },
+        "medColor": {
+            "type": "string",
+            "default": "#713f12"
+        },
+        "lowBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "lowColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "limitColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "takeawayBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "takeawayBorder": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "takeawayColor": {
+            "type": "string",
+            "default": "#166534"
+        }
+    }
+}

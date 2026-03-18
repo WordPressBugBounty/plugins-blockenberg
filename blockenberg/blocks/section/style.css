@@ -1,0 +1,354 @@
+/* ========================================
+   Section Block Styles
+   Prefix: bkbg-section
+   ======================================== */
+
+/* CSS Custom Properties */
+.bkbg-section {
+    --bkbg-section-max-width: 1200px;
+    --bkbg-section-padding-none: 0;
+    --bkbg-section-padding-xs: 8px;
+    --bkbg-section-padding-s: 16px;
+    --bkbg-section-padding-m: 32px;
+    --bkbg-section-padding-l: 48px;
+    --bkbg-section-padding-xl: 64px;
+    --bkbg-section-bg-light: #f8fafc;
+    --bkbg-section-bg-dark: #1e293b;
+    --bkbg-section-bg-accent: #3b82f6;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Content Width (inside section) */
+.bkbg-section--content-full .bkbg-section__inner {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.bkbg-section--content-boxed .bkbg-section__inner {
+    width: 100%;
+    max-width: var(--bkbg-section-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+/* Vertical Padding */
+.bkbg-section--padding-none {
+    padding-top: var(--bkbg-section-padding-none);
+    padding-bottom: var(--bkbg-section-padding-none);
+}
+
+.bkbg-section--padding-xs {
+    padding-top: var(--bkbg-section-padding-xs);
+    padding-bottom: var(--bkbg-section-padding-xs);
+}
+
+.bkbg-section--padding-s {
+    padding-top: var(--bkbg-section-padding-s);
+    padding-bottom: var(--bkbg-section-padding-s);
+}
+
+.bkbg-section--padding-m {
+    padding-top: var(--bkbg-section-padding-m);
+    padding-bottom: var(--bkbg-section-padding-m);
+}
+
+.bkbg-section--padding-l {
+    padding-top: var(--bkbg-section-padding-l);
+    padding-bottom: var(--bkbg-section-padding-l);
+}
+
+.bkbg-section--padding-xl {
+    padding-top: var(--bkbg-section-padding-xl);
+    padding-bottom: var(--bkbg-section-padding-xl);
+}
+
+/* Background Presets */
+.bkbg-section--bg-none {
+    background-color: transparent;
+}
+
+.bkbg-section--bg-light {
+    background-color: var(--bkbg-section-bg-light);
+}
+
+.bkbg-section--bg-dark {
+    background-color: var(--bkbg-section-bg-dark);
+    color: #ffffff;
+}
+
+.bkbg-section--bg-accent {
+    background-color: var(--bkbg-section-bg-accent);
+    color: #ffffff;
+}
+
+.bkbg-section--bg-custom {
+    background-color: var(--bkbg-section-custom-bg, transparent);
+}
+
+/* Inner wrapper */
+.bkbg-section__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ========================================
+   Section Width (outer section)
+   ======================================== */
+
+/* Full width - break out of container (frontend) */
+.bkbg-section.alignfull,
+.bkbg-section--section-full {
+    width: 100vw;
+    max-width: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Support for themes using useRootPaddingAwareAlignments */
+.has-global-padding > .bkbg-section.alignfull,
+.has-global-padding > .bkbg-section--section-full {
+    margin-left: calc(-1 * var(--wp--style--root--padding-left, 0px)) !important;
+    margin-right: calc(-1 * var(--wp--style--root--padding-right, 0px)) !important;
+    width: calc(100% + var(--wp--style--root--padding-left, 0px) + var(--wp--style--root--padding-right, 0px)) !important;
+    max-width: none !important;
+    left: auto !important;
+    transform: none !important;
+}
+
+/* Wide - centered max width */
+.bkbg-section.alignwide,
+.bkbg-section--section-wide {
+    width: 100%;
+    max-width: var(--wp--style--global--wide-size, 1440px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Boxed - centered max width */
+.bkbg-section--section-boxed {
+    width: 100%;
+    max-width: var(--bkbg-section-section-max-width, var(--bkbg-section-max-width));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ensure theme-level max-width rules don't override Section Width modes */
+.wp-block-blockenberg-section.bkbg-section--section-boxed {
+    max-width: var(--bkbg-section-section-max-width, var(--bkbg-section-max-width)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.wp-block-blockenberg-section.bkbg-section--section-wide {
+    max-width: var(--wp--style--global--wide-size, 1440px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.wp-block-blockenberg-section.bkbg-section--section-full {
+    max-width: none !important;
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Editor-specific styles */
+.editor-styles-wrapper .bkbg-section {
+    min-height: 60px;
+    border: 1px dashed transparent;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.editor-styles-wrapper .bkbg-section:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.editor-styles-wrapper .bkbg-section.is-selected,
+.editor-styles-wrapper .bkbg-section:focus-within {
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Drag and drop state */
+.editor-styles-wrapper .bkbg-section.is-dragging-over,
+.editor-styles-wrapper [data-type="blockenberg/section"].is-dragging-over > .bkbg-section {
+    border-color: rgba(59, 130, 246, 0.6) !important;
+    background-color: rgba(59, 130, 246, 0.03) !important;
+}
+
+/* Ensure InnerBlocks placeholder shows correctly - direct children only */
+.editor-styles-wrapper .bkbg-section > .bkbg-section__inner > .block-editor-inner-blocks {
+    width: 100%;
+}
+
+.editor-styles-wrapper .bkbg-section > .bkbg-section__inner > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Section label in editor */
+.editor-styles-wrapper .bkbg-section::before {
+    content: 'Section';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 10px;
+    font-weight: 600;
+    color: #3b82f6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+}
+
+.editor-styles-wrapper .bkbg-section:hover::before,
+.editor-styles-wrapper .bkbg-section.is-selected::before {
+    opacity: 1;
+}
+
+/* (Alignment rules moved above; keep nested overrides below) */
+
+/* Nested sections inside columns should be full width of column */
+.bkbg-column .bkbg-section,
+.bkbg-column .bkbg-section.alignfull,
+.bkbg-column .bkbg-section.alignwide,
+.bkbg-column .bkbg-section--section-full,
+.bkbg-column .bkbg-section--section-wide,
+.bkbg-column .bkbg-section--section-boxed {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Editor: use margin-based breakout instead of transform (better for editor UI) */
+.editor-styles-wrapper .bkbg-section--section-full {
+    width: auto !important;
+    max-width: none !important;
+    
+    /* Break out of the content area */
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    
+    /* Reset frontend transform/left centering */
+    left: auto !important;
+    transform: none !important;
+}
+
+.editor-styles-wrapper .bkbg-section--section-wide {
+    width: 100% !important;
+    max-width: var(--wp--style--global--wide-size, 1440px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.editor-styles-wrapper .bkbg-section--section-boxed {
+    width: 100% !important;
+    max-width: var(--bkbg-section-section-max-width, var(--bkbg-section-max-width)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Editor: override generic .wp-block max-width constraints for this block */
+.editor-styles-wrapper .wp-block[data-type="blockenberg/section"].bkbg-section--section-boxed {
+    max-width: var(--bkbg-section-section-max-width, var(--bkbg-section-max-width)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.editor-styles-wrapper .wp-block[data-type="blockenberg/section"].bkbg-section--section-wide {
+    max-width: var(--wp--style--global--wide-size, 1440px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.editor-styles-wrapper .wp-block[data-type="blockenberg/section"].bkbg-section--section-full {
+    max-width: none !important;
+    width: auto !important;
+    /* Use margin breakout */
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    left: auto !important;
+    transform: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 782px) {
+    .bkbg-section--content-boxed .bkbg-section__inner,
+    .bkbg-section--content-full .bkbg-section__inner {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .bkbg-section--padding-l {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    
+    .bkbg-section--padding-xl {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+}
+
+/* Inspector: spacing controls */
+.block-editor-page .bkbg-spacing-control,
+.interface-interface-skeleton__editor .bkbg-spacing-control {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.block-editor-page .bkbg-spacing-control__title,
+.interface-interface-skeleton__editor .bkbg-spacing-control__title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.block-editor-page .bkbg-spacing-control__grid,
+.interface-interface-skeleton__editor .bkbg-spacing-control__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 12px;
+}
+
+.block-editor-page .bkbg-spacing-control__item,
+.interface-interface-skeleton__editor .bkbg-spacing-control__item {
+    min-width: 0;
+}
+
+.block-editor-page .bkbg-spacing-control__label,
+.interface-interface-skeleton__editor .bkbg-spacing-control__label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.block-editor-page .bkbg-spacing-control__row,
+.interface-interface-skeleton__editor .bkbg-spacing-control__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 78px;
+    gap: 6px;
+    align-items: center;
+}
+
+.block-editor-page .bkbg-spacing-control__custom-unit,
+.interface-interface-skeleton__editor .bkbg-spacing-control__custom-unit {
+    margin-top: 6px;
+}

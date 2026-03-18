@@ -1,0 +1,183 @@
+/* ── Social Proof Bar ────────────────────────────────────────── */
+
+.bksp-wrap {
+    box-sizing: border-box;
+}
+
+.bksp-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Centered layout */
+.bksp-layout--centered .bksp-inner {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Left layout */
+.bksp-layout--left .bksp-inner {
+    flex-direction: row;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+/* Spread layout */
+.bksp-layout--spread .bksp-inner {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+}
+
+/* Avatars */
+.bksp-avatars {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.bksp-avatar {
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* Stars */
+.bksp-rating {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* ── Rating number typography ── */
+.bksp-rating-val {
+    font-family: var(--bkspb-rt-font-family, inherit);
+    font-size: var(--bkspb-rt-font-size-d, 16px);
+    font-weight: var(--bkspb-rt-font-weight, 700);
+    font-style: var(--bkspb-rt-font-style, normal);
+    text-decoration: var(--bkspb-rt-text-decoration, none);
+    text-transform: var(--bkspb-rt-text-transform, none);
+    line-height: var(--bkspb-rt-line-height-d, normal);
+    letter-spacing: var(--bkspb-rt-letter-spacing-d, normal);
+    word-spacing: var(--bkspb-rt-word-spacing-d, normal);
+}
+
+/* ── Tagline / Labels typography ── */
+.bksp-review-text {
+    font-family: var(--bkspb-tg-font-family, inherit);
+    font-size: var(--bkspb-tg-font-size-d, 14px);
+    font-weight: var(--bkspb-tg-font-weight, normal);
+    font-style: var(--bkspb-tg-font-style, normal);
+    text-decoration: var(--bkspb-tg-text-decoration, none);
+    text-transform: var(--bkspb-tg-text-transform, none);
+    line-height: var(--bkspb-tg-line-height-d, normal);
+    letter-spacing: var(--bkspb-tg-letter-spacing-d, normal);
+    word-spacing: var(--bkspb-tg-word-spacing-d, normal);
+}
+
+/* Tagline */
+.bksp-tagline {
+    margin: 0;
+    font-family: var(--bkspb-tg-font-family, inherit);
+    font-size: var(--bkspb-tg-font-size-d, 14px);
+    font-weight: var(--bkspb-tg-font-weight, normal);
+    font-style: var(--bkspb-tg-font-style, italic);
+    text-decoration: var(--bkspb-tg-text-decoration, none);
+    text-transform: var(--bkspb-tg-text-transform, none);
+    line-height: var(--bkspb-tg-line-height-d, normal);
+    letter-spacing: var(--bkspb-tg-letter-spacing-d, normal);
+    word-spacing: var(--bkspb-tg-word-spacing-d, normal);
+}
+
+.bksp-logos-text {
+    font-family: var(--bkspb-tg-font-family, inherit);
+    font-size: var(--bkspb-tg-font-size-d, 14px);
+    font-weight: var(--bkspb-tg-font-weight, 600);
+    font-style: var(--bkspb-tg-font-style, normal);
+    text-decoration: var(--bkspb-tg-text-decoration, none);
+    text-transform: var(--bkspb-tg-text-transform, uppercase);
+    line-height: var(--bkspb-tg-line-height-d, normal);
+    letter-spacing: var(--bkspb-tg-letter-spacing-d, 0.08em);
+    word-spacing: var(--bkspb-tg-word-spacing-d, normal);
+}
+
+/* Divider */
+.bksp-divider {
+    height: 1px;
+    background: var(--bksp-divider-c, #e5e7eb);
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.bksp-layout--spread .bksp-divider {
+    width: 1px;
+    height: 40px;
+}
+
+/* Logos strip */
+.bksp-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.bksp-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.bksp-logo img {
+    display: block;
+}
+
+/* ── Responsive typography ── */
+@media (max-width: 1024px) {
+    .bksp-rating-val {
+        font-size: var(--bkspb-rt-font-size-t, var(--bkspb-rt-font-size-d, 16px));
+        line-height: var(--bkspb-rt-line-height-t, var(--bkspb-rt-line-height-d, normal));
+        letter-spacing: var(--bkspb-rt-letter-spacing-t, var(--bkspb-rt-letter-spacing-d, normal));
+        word-spacing: var(--bkspb-rt-word-spacing-t, var(--bkspb-rt-word-spacing-d, normal));
+    }
+    .bksp-review-text,
+    .bksp-tagline,
+    .bksp-logos-text {
+        font-size: var(--bkspb-tg-font-size-t, var(--bkspb-tg-font-size-d, 14px));
+        line-height: var(--bkspb-tg-line-height-t, var(--bkspb-tg-line-height-d, normal));
+        letter-spacing: var(--bkspb-tg-letter-spacing-t, var(--bkspb-tg-letter-spacing-d, normal));
+        word-spacing: var(--bkspb-tg-word-spacing-t, var(--bkspb-tg-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bksp-rating-val {
+        font-size: var(--bkspb-rt-font-size-m, var(--bkspb-rt-font-size-t, var(--bkspb-rt-font-size-d, 16px)));
+        line-height: var(--bkspb-rt-line-height-m, var(--bkspb-rt-line-height-t, var(--bkspb-rt-line-height-d, normal)));
+        letter-spacing: var(--bkspb-rt-letter-spacing-m, var(--bkspb-rt-letter-spacing-t, var(--bkspb-rt-letter-spacing-d, normal)));
+        word-spacing: var(--bkspb-rt-word-spacing-m, var(--bkspb-rt-word-spacing-t, var(--bkspb-rt-word-spacing-d, normal)));
+    }
+    .bksp-review-text,
+    .bksp-tagline,
+    .bksp-logos-text {
+        font-size: var(--bkspb-tg-font-size-m, var(--bkspb-tg-font-size-t, var(--bkspb-tg-font-size-d, 14px)));
+        line-height: var(--bkspb-tg-line-height-m, var(--bkspb-tg-line-height-t, var(--bkspb-tg-line-height-d, normal)));
+        letter-spacing: var(--bkspb-tg-letter-spacing-m, var(--bkspb-tg-letter-spacing-t, var(--bkspb-tg-letter-spacing-d, normal)));
+        word-spacing: var(--bkspb-tg-word-spacing-m, var(--bkspb-tg-word-spacing-t, var(--bkspb-tg-word-spacing-d, normal)));
+    }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .bksp-layout--spread .bksp-inner,
+    .bksp-layout--left .bksp-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bksp-layout--spread .bksp-divider {
+        width: 100%;
+        height: 1px;
+    }
+}

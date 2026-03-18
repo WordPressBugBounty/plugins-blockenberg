@@ -1,0 +1,247 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/logo-carousel",
+    "title": "Logo Carousel",
+    "category": "bkbg-marketing",
+    "icon": "images-alt2",
+    "description": "Show client/partner logos in a responsive carousel or grid.",
+    "keywords": [
+        "logo",
+        "carousel",
+        "clients",
+        "partners",
+        "brands"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-logo-carousel-editor",
+    "editorStyle": "bkbg-logo-carousel-style",
+    "style": "bkbg-logo-carousel-style",
+    "viewScript": "bkbg-logo-carousel-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "logos": {
+            "type": "array",
+            "default": [
+                {
+                    "image": {
+                        "id": 0,
+                        "url": "",
+                        "alt": ""
+                    },
+                    "link": "",
+                    "newTab": true
+                },
+                {
+                    "image": {
+                        "id": 0,
+                        "url": "",
+                        "alt": ""
+                    },
+                    "link": "",
+                    "newTab": true
+                },
+                {
+                    "image": {
+                        "id": 0,
+                        "url": "",
+                        "alt": ""
+                    },
+                    "link": "",
+                    "newTab": true
+                },
+                {
+                    "image": {
+                        "id": 0,
+                        "url": "",
+                        "alt": ""
+                    },
+                    "link": "",
+                    "newTab": true
+                },
+                {
+                    "image": {
+                        "id": 0,
+                        "url": "",
+                        "alt": ""
+                    },
+                    "link": "",
+                    "newTab": true
+                },
+                {
+                    "image": {
+                        "id": 0,
+                        "url": "",
+                        "alt": ""
+                    },
+                    "link": "",
+                    "newTab": true
+                }
+            ]
+        },
+        "layoutStyle": {
+            "type": "string",
+            "default": "carousel"
+        },
+        "columns": {
+            "type": "number",
+            "default": 5
+        },
+        "gap": {
+            "type": "number",
+            "default": 24
+        },
+        "carouselVisible": {
+            "type": "number",
+            "default": 4
+        },
+        "carouselPeek": {
+            "type": "boolean",
+            "default": true
+        },
+        "carouselPeekAmount": {
+            "type": "string",
+            "default": "20%"
+        },
+        "carouselNav": {
+            "type": "boolean",
+            "default": true
+        },
+        "carouselNavStyle": {
+            "type": "string",
+            "default": "overlay"
+        },
+        "carouselIndicators": {
+            "type": "string",
+            "default": "none"
+        },
+        "carouselIndicatorsPosition": {
+            "type": "string",
+            "default": "below"
+        },
+        "carouselDotsStyle": {
+            "type": "string",
+            "default": "default"
+        },
+        "carouselProgressStyle": {
+            "type": "string",
+            "default": "default"
+        },
+        "carouselIndicatorSize": {
+            "type": "number",
+            "default": 8
+        },
+        "carouselIndicatorColor": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.22)"
+        },
+        "carouselIndicatorActiveColor": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.65)"
+        },
+        "carouselProgressHeight": {
+            "type": "number",
+            "default": 6
+        },
+        "carouselProgressBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.12)"
+        },
+        "carouselProgressFg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.55)"
+        },
+        "carouselFractionColor": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.65)"
+        },
+        "carouselFractionSize": {
+            "type": "number",
+            "default": 13
+        },
+        "autoplay": {
+            "type": "boolean",
+            "default": false
+        },
+        "autoplayDelay": {
+            "type": "number",
+            "default": 3000
+        },
+        "autoplayPauseOnHover": {
+            "type": "boolean",
+            "default": true
+        },
+        "infiniteScroll": {
+            "type": "boolean",
+            "default": true
+        },
+        "autoScroll": {
+            "type": "boolean",
+            "default": false
+        },
+        "autoScrollSpeed": {
+            "type": "number",
+            "default": 40
+        },
+        "autoScrollPauseOnHover": {
+            "type": "boolean",
+            "default": true
+        },
+        "logoMaxHeight": {
+            "type": "number",
+            "default": 150
+        },
+        "logoPadding": {
+            "type": "number",
+            "default": 14
+        },
+        "logoRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "logoBg": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "logoBorderColor": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.10)"
+        },
+        "logoBorderWidth": {
+            "type": "number",
+            "default": 0
+        },
+        "logoOpacity": {
+            "type": "number",
+            "default": 0.8
+        },
+        "logoHoverOpacity": {
+            "type": "number",
+            "default": 1
+        },
+        "logoGrayscale": {
+            "type": "boolean",
+            "default": true
+        },
+        "logoHoverGrayscale": {
+            "type": "boolean",
+            "default": false
+        },
+        "logoFit": {
+            "type": "string",
+            "default": "contain"
+        },
+        "logoHoverScale": {
+            "type": "number",
+            "default": 1.03
+        }
+    }
+}

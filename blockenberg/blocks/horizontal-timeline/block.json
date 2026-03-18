@@ -1,0 +1,250 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/horizontal-timeline",
+    "title": "Horizontal Timeline",
+    "category": "bkbg-blog",
+    "icon": "minus",
+    "description": "Horizontal scrolling timeline with draggable track, alternating items above/below the line, animated entry, and rich styling options.",
+    "keywords": [
+        "timeline",
+        "horizontal",
+        "history",
+        "events",
+        "milestones",
+        "scroll",
+        "draggable"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-horizontal-timeline-editor",
+    "style": "bkbg-horizontal-timeline-style",
+    "viewScript": "bkbg-horizontal-timeline-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "date": "2010",
+                    "title": "Company Founded",
+                    "description": "Started in a small garage with three employees and a big vision.",
+                    "icon": "🚀",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "imageUrl": ""
+                },
+                {
+                    "date": "2013",
+                    "title": "First Funding Round",
+                    "description": "$2M seed funding secured, allowing rapid team expansion.",
+                    "icon": "💰",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "imageUrl": ""
+                },
+                {
+                    "date": "2015",
+                    "title": "Product Launch",
+                    "description": "Our flagship product launches to overwhelming customer demand.",
+                    "icon": "🎯",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "imageUrl": ""
+                },
+                {
+                    "date": "2018",
+                    "title": "Global Expansion",
+                    "description": "Opened offices in 5 new countries across three continents.",
+                    "icon": "🌍",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "imageUrl": ""
+                },
+                {
+                    "date": "2021",
+                    "title": "Series C Funding",
+                    "description": "Raised $50M to accelerate product development and growth.",
+                    "icon": "📈",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "imageUrl": ""
+                },
+                {
+                    "date": "2024",
+                    "title": "Industry Leader",
+                    "description": "Recognized as the #1 platform in our category globally.",
+                    "icon": "🏆",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "imageUrl": ""
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "alternating"
+        },
+        "linePosition": {
+            "type": "string",
+            "default": "center"
+        },
+        "itemWidth": {
+            "type": "number",
+            "default": 220
+        },
+        "itemGap": {
+            "type": "number",
+            "default": 40
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDates": {
+            "type": "boolean",
+            "default": true
+        },
+        "showConnectorDot": {
+            "type": "boolean",
+            "default": true
+        },
+        "dotSize": {
+            "type": "number",
+            "default": 16
+        },
+        "animateOnScroll": {
+            "type": "boolean",
+            "default": true
+        },
+        "draggable": {
+            "type": "boolean",
+            "default": true
+        },
+        "showArrows": {
+            "type": "boolean",
+            "default": true
+        },
+        "centerActive": {
+            "type": "boolean",
+            "default": false
+        },
+        "lineThickness": {
+            "type": "number",
+            "default": 3
+        },
+        "containerHeight": {
+            "type": "number",
+            "default": 420
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 20
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "lineColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "dotColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "dotBorderColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "cardBorderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "dateColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "arrowBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "arrowColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 28
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "600"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "descFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "descLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "dateFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "dateTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

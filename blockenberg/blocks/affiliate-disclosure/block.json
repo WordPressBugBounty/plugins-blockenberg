@@ -1,0 +1,119 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/affiliate-disclosure",
+    "title": "Affiliate Disclosure",
+    "description": "Styled FTC-compliant affiliate link disclosure notice for articles and reviews. Distinct from Affiliate Review Box — this is the small legal notice, not a full product review.",
+    "category": "bkbg-marketing",
+    "icon": "shield",
+    "keywords": [
+        "affiliate",
+        "disclosure",
+        "ftc",
+        "disclaimer",
+        "sponsored",
+        "legal",
+        "notice"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-affiliate-disclosure-editor",
+    "style": "bkbg-affiliate-disclosure-style",
+    "viewScript": "bkbg-affiliate-disclosure-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "icon": {
+            "type": "string",
+            "default": "🔗"
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "label": {
+            "type": "string",
+            "default": "Affiliate Disclosure"
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "text": {
+            "type": "string",
+            "default": "This article contains affiliate links. If you click through and make a purchase, we may earn a commission — at no extra cost to you. We only recommend products we genuinely believe in."
+        },
+        "linkText": {
+            "type": "string",
+            "default": "Read our full affiliate policy"
+        },
+        "linkUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "showLink": {
+            "type": "boolean",
+            "default": false
+        },
+        "style": {
+            "type": "string",
+            "default": "banner"
+        },
+        "position": {
+            "type": "string",
+            "default": "top"
+        },
+        "collapsible": {
+            "type": "boolean",
+            "default": false
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#fffbeb"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#fcd34d"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#d97706"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#78350f"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#92400e"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#d97706"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#d97706"
+        },
+        "textFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "iconFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

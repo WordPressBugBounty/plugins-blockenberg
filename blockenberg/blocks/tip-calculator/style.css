@@ -1,0 +1,234 @@
+/* ======================================================
+   Blockenberg — Tip Calculator block styles
+   ====================================================== */
+
+.bkbg-tc-app {
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.bkbg-tc-loading {
+    text-align: center;
+    color: #9ca3af;
+    padding: 40px 0;
+}
+
+.bkbg-tc-card {
+    box-sizing: border-box;
+}
+
+.bkbg-tc-title {
+    margin: 0 0 8px;
+    text-align: center;
+    font-family: var(--bktpc-tt-font-family, inherit);
+    font-size: var(--bktpc-tt-font-size-d, 26px);
+    font-weight: var(--bktpc-tt-font-weight, 700);
+    font-style: var(--bktpc-tt-font-style, normal);
+    line-height: var(--bktpc-tt-line-height-d, 1.2);
+    text-decoration: var(--bktpc-tt-text-decoration, none);
+    text-transform: var(--bktpc-tt-text-transform, none);
+    letter-spacing: var(--bktpc-tt-letter-spacing-d, normal);
+    word-spacing: var(--bktpc-tt-word-spacing-d, normal);
+}
+
+/* Rule 7 */
+.bkbg-tc-card h2.bkbg-tc-title,
+.bkbg-tc-app h2.bkbg-tc-title {
+    font-family: var(--bktpc-tt-font-family, inherit);
+    font-size: var(--bktpc-tt-font-size-d, 26px);
+    font-weight: var(--bktpc-tt-font-weight, 700);
+    font-style: var(--bktpc-tt-font-style, normal);
+    line-height: var(--bktpc-tt-line-height-d, 1.2);
+    text-decoration: var(--bktpc-tt-text-decoration, none);
+    text-transform: var(--bktpc-tt-text-transform, none);
+    letter-spacing: var(--bktpc-tt-letter-spacing-d, normal);
+    word-spacing: var(--bktpc-tt-word-spacing-d, normal);
+}
+
+.bkbg-tc-subtitle {
+    margin: 0 0 28px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Input groups */
+.bkbg-tc-field {
+    margin-bottom: 20px;
+}
+
+.bkbg-tc-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.bkbg-tc-input-wrap {
+    position: relative;
+}
+
+.bkbg-tc-prefix {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.bkbg-tc-input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1.5px solid #e5e7eb;
+    font-size: 18px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.bkbg-tc-input::-webkit-outer-spin-button,
+.bkbg-tc-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.bkbg-tc-input:focus {
+    border-color: currentColor;
+    box-shadow: 0 0 0 3px rgba(108,63,181,0.12);
+}
+
+.bkbg-tc-input.with-prefix {
+    padding-left: 32px;
+}
+
+/* Quick tip buttons */
+.bkbg-tc-tips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+    align-items: center;
+}
+
+.bkbg-tc-tip-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    transition: background 0.15s, color 0.15s, transform 0.1s;
+}
+
+.bkbg-tc-tip-btn:active {
+    transform: scale(0.95);
+}
+
+.bkbg-tc-custom-tip {
+    width: 90px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1.5px solid #e5e7eb;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.bkbg-tc-custom-tip::-webkit-outer-spin-button,
+.bkbg-tc-custom-tip::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* People row */
+.bkbg-tc-people-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.bkbg-tc-count-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid currentColor;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    transition: background 0.15s, color 0.15s;
+    flex-shrink: 0;
+}
+
+.bkbg-tc-count-btn.plus {
+    color: #fff;
+}
+
+.bkbg-tc-count-num {
+    font-size: 20px;
+    font-weight: 700;
+    min-width: 28px;
+    text-align: center;
+}
+
+/* Results box */
+.bkbg-tc-results {
+    display: grid;
+    gap: 16px;
+    border: 1.5px solid transparent;
+    padding: 24px;
+}
+
+.bkbg-tc-result-item {
+    text-align: center;
+}
+
+.bkbg-tc-result-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #9ca3af;
+    margin-bottom: 4px;
+}
+
+.bkbg-tc-result-value {
+    font-weight: 800;
+}
+
+.bkbg-tc-per-person {
+    grid-column: 1 / -1;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.bkbg-tc-per-person-value {
+    font-family: var(--bktpc-rt-font-family, inherit);
+    font-size: var(--bktpc-rt-font-size-d, 44px);
+    font-weight: var(--bktpc-rt-font-weight, 800);
+    font-style: var(--bktpc-rt-font-style, normal);
+    line-height: var(--bktpc-rt-line-height-d, 1);
+    text-decoration: var(--bktpc-rt-text-decoration, none);
+    text-transform: var(--bktpc-rt-text-transform, none);
+    letter-spacing: var(--bktpc-rt-letter-spacing-d, normal);
+    word-spacing: var(--bktpc-rt-word-spacing-d, normal);
+}
+
+@media(max-width:1024px){
+    .bkbg-tc-title{font-size:var(--bktpc-tt-font-size-t,var(--bktpc-tt-font-size-d,26px));line-height:var(--bktpc-tt-line-height-t,var(--bktpc-tt-line-height-d,1.2));letter-spacing:var(--bktpc-tt-letter-spacing-t,var(--bktpc-tt-letter-spacing-d,normal));word-spacing:var(--bktpc-tt-word-spacing-t,var(--bktpc-tt-word-spacing-d,normal))}
+    .bkbg-tc-per-person-value{font-size:var(--bktpc-rt-font-size-t,var(--bktpc-rt-font-size-d,44px));line-height:var(--bktpc-rt-line-height-t,var(--bktpc-rt-line-height-d,1));letter-spacing:var(--bktpc-rt-letter-spacing-t,var(--bktpc-rt-letter-spacing-d,normal));word-spacing:var(--bktpc-rt-word-spacing-t,var(--bktpc-rt-word-spacing-d,normal))}
+}
+@media(max-width:767px){
+    .bkbg-tc-title{font-size:var(--bktpc-tt-font-size-m,var(--bktpc-tt-font-size-t,var(--bktpc-tt-font-size-d,26px)));line-height:var(--bktpc-tt-line-height-m,var(--bktpc-tt-line-height-t,var(--bktpc-tt-line-height-d,1.2)));letter-spacing:var(--bktpc-tt-letter-spacing-m,var(--bktpc-tt-letter-spacing-t,var(--bktpc-tt-letter-spacing-d,normal)));word-spacing:var(--bktpc-tt-word-spacing-m,var(--bktpc-tt-word-spacing-t,var(--bktpc-tt-word-spacing-d,normal)))}
+    .bkbg-tc-per-person-value{font-size:var(--bktpc-rt-font-size-m,var(--bktpc-rt-font-size-t,var(--bktpc-rt-font-size-d,44px)));line-height:var(--bktpc-rt-line-height-m,var(--bktpc-rt-line-height-t,var(--bktpc-rt-line-height-d,1)));letter-spacing:var(--bktpc-rt-letter-spacing-m,var(--bktpc-rt-letter-spacing-t,var(--bktpc-rt-letter-spacing-d,normal)));word-spacing:var(--bktpc-rt-word-spacing-m,var(--bktpc-rt-word-spacing-t,var(--bktpc-rt-word-spacing-d,normal)))}
+}

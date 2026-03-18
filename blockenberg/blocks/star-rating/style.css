@@ -1,0 +1,186 @@
+/* ========================================
+   Star Rating Block
+   Prefix: bkbg-sr-
+   ======================================== */
+
+/* ── CSS Custom Properties ────────────────────────────────────────────────── */
+.bkbg-sr-wrap {
+  --bkbg-sr-star-size: 28px;
+  --bkbg-sr-star-gap: 3px;
+  --bkbg-sr-label-size: 14px;
+  --bkbg-sr-label-weight: 400;
+  --bkbg-sr-label-color: #6b7280;
+  --bkbg-sr-label-lh: 1.5;
+  --bkbg-sr-label-spacing: 8px;
+  --bkbg-sr-num-size: 13px;
+  --bkbg-sr-num-weight: 600;
+  --bkbg-sr-num-color: #1e293b;
+  --bkbg-sr-num-spacing: 6px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+/* ── Alignment ────────────────────────────────────────────────────────────── */
+.bkbg-sr-wrap[data-text-align="center"] {
+  align-items: center;
+}
+
+.bkbg-sr-wrap[data-text-align="right"] {
+  align-items: flex-end;
+}
+
+/* ── Label position: above (reverse order) ────────────────────────────────── */
+.bkbg-sr-wrap[data-label-pos="above"] {
+  flex-direction: column-reverse;
+}
+
+/* ── Label position: right / left of stars ───────────────────────────────── */
+.bkbg-sr-wrap[data-label-pos="right"],
+.bkbg-sr-wrap[data-label-pos="left"] {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* default justify = flex-start (left alignment) */
+  justify-content: flex-start;
+}
+
+/* Left: push label before stars via order */
+.bkbg-sr-wrap[data-label-pos="left"] .bkbg-sr-label {
+  order: -1;
+}
+
+/* Alignment → justify-content for row modes */
+.bkbg-sr-wrap[data-label-pos="right"][data-text-align="center"],
+.bkbg-sr-wrap[data-label-pos="left"][data-text-align="center"] {
+  justify-content: center;
+}
+
+.bkbg-sr-wrap[data-label-pos="right"][data-text-align="right"],
+.bkbg-sr-wrap[data-label-pos="left"][data-text-align="right"] {
+  justify-content: flex-end;
+}
+
+/* ── Stars row ────────────────────────────────────────────────────────────── */
+.bkbg-sr-stars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: var(--bkbg-sr-star-gap);
+}
+
+/* ── Individual star ──────────────────────────────────────────────────────── */
+.bkbg-sr-star {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--bkbg-sr-star-size);
+  height: var(--bkbg-sr-star-size);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.bkbg-sr-star svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Interactive stars in editor */
+.bkbg-sr-star--interactive {
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.bkbg-sr-star--interactive:hover {
+  transform: scale(1.15);
+  opacity: 0.9;
+}
+
+/* ── Numeric score ────────────────────────────────────────────────────────── */
+.bkbg-sr-numeric {
+  font-family: var(--bksr-nm-font-family, inherit);
+  font-size: var(--bksr-nm-font-size-d, var(--bkbg-sr-num-size));
+  font-weight: var(--bksr-nm-font-weight, var(--bkbg-sr-num-weight));
+  font-style: var(--bksr-nm-font-style, normal);
+  text-decoration: var(--bksr-nm-text-decoration, none);
+  text-transform: var(--bksr-nm-text-transform, none);
+  line-height: var(--bksr-nm-line-height-d, 1);
+  letter-spacing: var(--bksr-nm-letter-spacing-d, normal);
+  word-spacing: var(--bksr-nm-word-spacing-d, normal);
+  color: var(--bkbg-sr-num-color);
+  margin-left: var(--bkbg-sr-num-spacing);
+  white-space: nowrap;
+}
+
+/* ── Label ────────────────────────────────────────────────────────────────── */
+.bkbg-sr-label {
+  font-family: var(--bksr-lb-font-family, inherit);
+  font-size: var(--bksr-lb-font-size-d, var(--bkbg-sr-label-size));
+  font-weight: var(--bksr-lb-font-weight, var(--bkbg-sr-label-weight));
+  font-style: var(--bksr-lb-font-style, normal);
+  text-decoration: var(--bksr-lb-text-decoration, none);
+  text-transform: var(--bksr-lb-text-transform, none);
+  line-height: var(--bksr-lb-line-height-d, var(--bkbg-sr-label-lh));
+  letter-spacing: var(--bksr-lb-letter-spacing-d, normal);
+  word-spacing: var(--bksr-lb-word-spacing-d, normal);
+  color: var(--bkbg-sr-label-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- Typography responsive — tablet ---- */
+@media (max-width: 1024px) {
+  .bkbg-sr-label { font-size: var(--bksr-lb-font-size-t, var(--bksr-lb-font-size-d, var(--bkbg-sr-label-size))); line-height: var(--bksr-lb-line-height-t, var(--bksr-lb-line-height-d, var(--bkbg-sr-label-lh))); letter-spacing: var(--bksr-lb-letter-spacing-t, var(--bksr-lb-letter-spacing-d, normal)); word-spacing: var(--bksr-lb-word-spacing-t, var(--bksr-lb-word-spacing-d, normal)); }
+  .bkbg-sr-numeric { font-size: var(--bksr-nm-font-size-t, var(--bksr-nm-font-size-d, var(--bkbg-sr-num-size))); line-height: var(--bksr-nm-line-height-t, var(--bksr-nm-line-height-d, 1)); letter-spacing: var(--bksr-nm-letter-spacing-t, var(--bksr-nm-letter-spacing-d, normal)); word-spacing: var(--bksr-nm-word-spacing-t, var(--bksr-nm-word-spacing-d, normal)); }
+}
+/* ---- Typography responsive — mobile ---- */
+@media (max-width: 767px) {
+  .bkbg-sr-label { font-size: var(--bksr-lb-font-size-m, var(--bksr-lb-font-size-t, var(--bksr-lb-font-size-d, var(--bkbg-sr-label-size)))); line-height: var(--bksr-lb-line-height-m, var(--bksr-lb-line-height-t, var(--bksr-lb-line-height-d, var(--bkbg-sr-label-lh)))); letter-spacing: var(--bksr-lb-letter-spacing-m, var(--bksr-lb-letter-spacing-t, var(--bksr-lb-letter-spacing-d, normal))); word-spacing: var(--bksr-lb-word-spacing-m, var(--bksr-lb-word-spacing-t, var(--bksr-lb-word-spacing-d, normal))); }
+  .bkbg-sr-numeric { font-size: var(--bksr-nm-font-size-m, var(--bksr-nm-font-size-t, var(--bksr-nm-font-size-d, var(--bkbg-sr-num-size)))); line-height: var(--bksr-nm-line-height-m, var(--bksr-nm-line-height-t, var(--bksr-nm-line-height-d, 1))); letter-spacing: var(--bksr-nm-letter-spacing-m, var(--bksr-nm-letter-spacing-t, var(--bksr-nm-letter-spacing-d, normal))); word-spacing: var(--bksr-nm-word-spacing-m, var(--bksr-nm-word-spacing-t, var(--bksr-nm-word-spacing-d, normal))); }
+}
+
+/* Spacing: label below stars */
+.bkbg-sr-wrap[data-label-pos="below"] .bkbg-sr-stars,
+.bkbg-sr-wrap:not([data-label-pos]) .bkbg-sr-stars {
+  margin-bottom: var(--bkbg-sr-label-spacing);
+}
+
+/* Spacing: label above stars (order reversed — label is below stars in DOM,
+   but visually above via flex-direction: column-reverse) */
+.bkbg-sr-wrap[data-label-pos="above"] .bkbg-sr-label {
+  margin-bottom: var(--bkbg-sr-label-spacing);
+}
+
+/* No extra spacing when label is beside stars */
+.bkbg-sr-wrap[data-label-pos="right"] .bkbg-sr-stars,
+.bkbg-sr-wrap[data-label-pos="left"] .bkbg-sr-stars {
+  margin-bottom: 0;
+}
+
+/* ── RichText editor placeholder alignment ────────────────────────────────── */
+/* Only apply width:100% for column layouts (below/above); row layouts use flex:1 */
+.editor-styles-wrapper .bkbg-sr-wrap[data-text-align="center"]:not([data-label-pos="right"]):not([data-label-pos="left"]) .bkbg-sr-label {
+  text-align: center;
+  width: 100%;
+}
+
+.editor-styles-wrapper .bkbg-sr-wrap[data-text-align="right"]:not([data-label-pos="right"]):not([data-label-pos="left"]) .bkbg-sr-label {
+  text-align: right;
+  width: 100%;
+}
+
+/* Editor: force row display so flex-direction works correctly */
+.editor-styles-wrapper .bkbg-sr-wrap[data-label-pos="right"],
+.editor-styles-wrapper .bkbg-sr-wrap[data-label-pos="left"] {
+  display: flex !important;
+}
+
+/* ── Hide label element when show-label is false ─────────────────────────── */
+.bkbg-sr-wrap[data-show-label="false"] .bkbg-sr-label {
+  display: none;
+}

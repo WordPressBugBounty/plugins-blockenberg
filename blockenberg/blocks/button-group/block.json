@@ -1,0 +1,135 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/button-group",
+    "title": "Button Group",
+    "description": "Group of styled CTA buttons with alignment, spacing, individual per-button overrides, and responsive stacking.",
+    "category": "bkbg-marketing",
+    "icon": "button",
+    "keywords": [
+        "buttons",
+        "cta",
+        "call to action",
+        "group",
+        "link"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-button-group-editor",
+    "editorStyle": "bkbg-button-group-style",
+    "style": "bkbg-button-group-style",
+    "viewScript": "bkbg-button-group-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "buttons": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Get Started",
+                    "url": "#",
+                    "target": false,
+                    "rel": "",
+                    "style": "primary",
+                    "size": "md",
+                    "icon": "none",
+                    "iconPosition": "left",
+                    "customBg": "",
+                    "customColor": "",
+                    "customBorder": ""
+                },
+                {
+                    "label": "Learn More",
+                    "url": "#",
+                    "target": false,
+                    "rel": "",
+                    "style": "outline",
+                    "size": "md",
+                    "icon": "none",
+                    "iconPosition": "left",
+                    "customBg": "",
+                    "customColor": "",
+                    "customBorder": ""
+                }
+            ]
+        },
+        "alignment": {
+            "type": "string",
+            "default": "left"
+        },
+        "direction": {
+            "type": "string",
+            "default": "row"
+        },
+        "mobileStack": {
+            "type": "boolean",
+            "default": true
+        },
+        "gap": {
+            "type": "number",
+            "default": 12
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "outlineBorderColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "outlineColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "ghostColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "btnFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "btnFontWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "btnPaddingV": {
+            "type": "number",
+            "default": 12
+        },
+        "btnPaddingH": {
+            "type": "number",
+            "default": 24
+        },
+        "btnShadow": {
+            "type": "string",
+            "default": "none"
+        },
+        "hoverEffect": {
+            "type": "string",
+            "default": "lift"
+        },
+        "fullWidthMobile": {
+            "type": "boolean",
+            "default": false
+        },
+        "typoBtn": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

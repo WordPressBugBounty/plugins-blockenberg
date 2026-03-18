@@ -1,0 +1,182 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/password-strength-meter",
+    "version": "1.0.0",
+    "title": "Password Strength Meter",
+    "category": "bkbg-dev",
+    "icon": "lock",
+    "description": "Real-time password strength checker with visual bar, strength label and requirements checklist.",
+    "keywords": [
+        "password",
+        "strength",
+        "security",
+        "checker",
+        "meter"
+    ],
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-password-strength-meter-editor",
+    "style": "bkbg-password-strength-meter-style",
+    "viewScript": "bkbg-password-strength-meter-frontend",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Password Strength Checker"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Type a password to see how secure it is"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "placeholder": {
+            "type": "string",
+            "default": "Enter a password\u2026"
+        },
+        "minLength": {
+            "type": "number",
+            "default": 8
+        },
+        "showLengthReq": {
+            "type": "boolean",
+            "default": true
+        },
+        "showUppercaseReq": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLowercaseReq": {
+            "type": "boolean",
+            "default": true
+        },
+        "showNumberReq": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSymbolReq": {
+            "type": "boolean",
+            "default": true
+        },
+        "showToggleVisibility": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelWeak": {
+            "type": "string",
+            "default": "Weak"
+        },
+        "labelFair": {
+            "type": "string",
+            "default": "Fair"
+        },
+        "labelGood": {
+            "type": "string",
+            "default": "Good"
+        },
+        "labelStrong": {
+            "type": "string",
+            "default": "Strong"
+        },
+        "colorWeak": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "colorFair": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "colorGood": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "colorStrong": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": ""
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "inputBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "barBg": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "reqMetColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "reqUnmetColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 480
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

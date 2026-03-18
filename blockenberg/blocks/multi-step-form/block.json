@@ -1,0 +1,335 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/multi-step-form",
+	"title": "Multi-Step Form",
+	"description": "A wizard-style multi-step lead capture form with step indicator, per-step fields, and success message.",
+	"category": "bkbg-marketing",
+	"icon": "editor-ol",
+	"keywords": [
+		"form",
+		"multi step",
+		"wizard",
+		"lead",
+		"signup",
+		"steps"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-multi-step-form-editor",
+	"style": "bkbg-multi-step-form-style",
+	"viewScript": "bkbg-multi-step-form-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"steps": {
+			"type": "array",
+			"default": [
+				{
+					"id": "ms001",
+					"icon": "\ud83d\udc64",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"title": "Personal Info",
+					"description": "Tell us a bit about yourself",
+					"fields": [
+						{
+							"id": "f001",
+							"type": "text",
+							"label": "Full Name",
+							"placeholder": "John Smith",
+							"required": true,
+							"options": []
+						},
+						{
+							"id": "f002",
+							"type": "email",
+							"label": "Email Address",
+							"placeholder": "you@example.com",
+							"required": true,
+							"options": []
+						}
+					]
+				},
+				{
+					"id": "ms002",
+					"icon": "\ud83d\udccb",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"title": "Your Needs",
+					"description": "Help us understand what you're looking for",
+					"fields": [
+						{
+							"id": "f003",
+							"type": "select",
+							"label": "What service are you interested in?",
+							"placeholder": "Select a service",
+							"required": true,
+							"options": [
+								"Web Design",
+								"Branding",
+								"SEO",
+								"Consulting"
+							]
+						},
+						{
+							"id": "f004",
+							"type": "textarea",
+							"label": "Tell us more",
+							"placeholder": "Describe your project\u2026",
+							"required": false,
+							"options": []
+						}
+					]
+				},
+				{
+					"id": "ms003",
+					"icon": "\u2705",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"title": "Confirmation",
+					"description": "Review and submit your request",
+					"fields": [
+						{
+							"id": "f005",
+							"type": "text",
+							"label": "Phone Number",
+							"placeholder": "+1 (555) 000-0000",
+							"required": false,
+							"options": []
+						},
+						{
+							"id": "f006",
+							"type": "checkbox",
+							"label": "I agree to the Privacy Policy and Terms of Service",
+							"placeholder": "",
+							"required": true,
+							"options": []
+						}
+					]
+				}
+			]
+		},
+		"progressStyle": {
+			"type": "string",
+			"default": "steps"
+		},
+		"showStepTitles": {
+			"type": "boolean",
+			"default": true
+		},
+		"showStepDescriptions": {
+			"type": "boolean",
+			"default": true
+		},
+		"showStepNumbers": {
+			"type": "boolean",
+			"default": true
+		},
+		"showStepIcons": {
+			"type": "boolean",
+			"default": true
+		},
+		"btnNextLabel": {
+			"type": "string",
+			"default": "Continue \u2192"
+		},
+		"btnPrevLabel": {
+			"type": "string",
+			"default": "\u2190 Back"
+		},
+		"btnSubmitLabel": {
+			"type": "string",
+			"default": "Submit Request"
+		},
+		"successTitle": {
+			"type": "string",
+			"default": "\ud83c\udf89 Thank you!"
+		},
+		"successMessage": {
+			"type": "string",
+			"default": "We've received your request and will be in touch within 24 hours."
+		},
+		"formMaxWidth": {
+			"type": "integer",
+			"default": 580
+		},
+		"cardStyle": {
+			"type": "string",
+			"default": "card"
+		},
+		"cardRadius": {
+			"type": "integer",
+			"default": 20
+		},
+		"cardPadding": {
+			"type": "integer",
+			"default": 40
+		},
+		"inputRadius": {
+			"type": "integer",
+			"default": 8
+		},
+		"inputPaddingV": {
+			"type": "integer",
+			"default": 12
+		},
+		"btnRadius": {
+			"type": "integer",
+			"default": 8
+		},
+		"stepCircleSize": {
+			"type": "integer",
+			"default": 44
+		},
+		"labelSize": {
+			"type": "integer",
+			"default": 14
+		},
+		"inputSize": {
+			"type": "integer",
+			"default": 15
+		},
+		"stepTitleSize": {
+			"type": "integer",
+			"default": 22
+		},
+		"stepDescSize": {
+			"type": "integer",
+			"default": 14
+		},
+		"stepLabelSize": {
+			"type": "integer",
+			"default": 12
+		},
+		"btnSize": {
+			"type": "integer",
+			"default": 15
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"activeStepBg": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"activeStepColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"completedStepBg": {
+			"type": "string",
+			"default": "#ede9f7"
+		},
+		"completedStepColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"pendingStepBg": {
+			"type": "string",
+			"default": "#f3f4f6"
+		},
+		"pendingStepColor": {
+			"type": "string",
+			"default": "#9ca3af"
+		},
+		"connectorColor": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"connectorActiveColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"stepTitleColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"stepDescColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"labelColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"inputBg": {
+			"type": "string",
+			"default": "#f9fafb"
+		},
+		"inputBorder": {
+			"type": "string",
+			"default": "#d1d5db"
+		},
+		"inputText": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"inputFocusBorder": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"btnBg": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"btnColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"btnSecBg": {
+			"type": "string",
+			"default": "#f3f4f6"
+		},
+		"btnSecColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"cardBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"cardBorderColor": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": ""
+		},
+		"paddingTop": {
+			"type": "integer",
+			"default": 64
+		},
+		"paddingBottom": {
+			"type": "integer",
+			"default": 64
+		},
+		"fontWeight": {
+			"type": "integer",
+			"default": 600
+		},
+		"lineHeight": {
+			"type": "number",
+			"default": 1.5
+		},
+		"stepTitleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"stepDescTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

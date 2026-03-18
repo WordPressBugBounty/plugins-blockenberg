@@ -1,0 +1,167 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/social-links",
+    "title": "Social Links",
+    "category": "bkbg-marketing",
+    "icon": "share",
+    "description": "Social media icon links with brand colors, custom styles, and multiple layout options.",
+    "keywords": [
+        "social",
+        "links",
+        "icons",
+        "facebook",
+        "instagram",
+        "twitter",
+        "youtube",
+        "linkedin",
+        "share"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-social-links-editor",
+    "editorStyle": "bkbg-social-links-style",
+    "style": "bkbg-social-links-style",
+    "viewScript": "bkbg-social-links-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "links": {
+            "type": "array",
+            "default": [
+                {
+                    "platform": "facebook",
+                    "url": "https://facebook.com/yourpage",
+                    "label": "Facebook",
+                    "enabled": true
+                },
+                {
+                    "platform": "instagram",
+                    "url": "https://instagram.com/yourprofile",
+                    "label": "Instagram",
+                    "enabled": true
+                },
+                {
+                    "platform": "twitter",
+                    "url": "https://twitter.com/yourhandle",
+                    "label": "Twitter/X",
+                    "enabled": true
+                },
+                {
+                    "platform": "youtube",
+                    "url": "https://youtube.com/@yourchannel",
+                    "label": "YouTube",
+                    "enabled": true
+                },
+                {
+                    "platform": "linkedin",
+                    "url": "https://linkedin.com/in/you",
+                    "label": "LinkedIn",
+                    "enabled": false
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "alignment": {
+            "type": "string",
+            "default": "left"
+        },
+        "iconStyle": {
+            "type": "string",
+            "default": "brand-solid"
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": false
+        },
+        "labelPosition": {
+            "type": "string",
+            "default": "right"
+        },
+        "openNewTab": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 20
+        },
+        "buttonSize": {
+            "type": "number",
+            "default": 44
+        },
+        "gap": {
+            "type": "number",
+            "default": 10
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "hoverEffect": {
+            "type": "string",
+            "default": "lift"
+        },
+        "customIconColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "customBgColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "customHoverIconColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "customHoverBgColor": {
+            "type": "string",
+            "default": "#1d4ed8"
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "labelFontWeight": {
+            "type": "string",
+            "default": "500"
+        },
+        "labelLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "labelColorHover": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "wrapperPaddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "wrapperPaddingBottom": {
+            "type": "number",
+            "default": 0
+        }
+    }
+}

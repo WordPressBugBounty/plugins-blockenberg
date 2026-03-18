@@ -1,0 +1,165 @@
+/* ===================================================
+   KPI Tiles — bkbg-kpi-*  (style.css)
+   =================================================== */
+
+.bkbg-kpi-wrap {
+    width: 100%;
+}
+
+/* ── Grid ──────────────────────────────────────────────────────────── */
+.bkbg-kpi-grid {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+}
+
+/* ── Tile card ─────────────────────────────────────────────────────── */
+.bkbg-kpi-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+    will-change: transform;
+    overflow: hidden;
+}
+
+.bkbg-kpi-tile:hover {
+    transform: translateY(-3px);
+}
+
+/* ── Top row: icon + trend ─────────────────────────────────────────── */
+.bkbg-kpi-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.bkbg-kpi-icon {
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.bkbg-kpi-icon svg { width: 1em; height: 1em; fill: currentColor; }
+.bkbg-kpi-icon .dashicons { font-size: inherit; width: 1em; height: 1em; line-height: 1; }
+.bkbg-kpi-icon .bkbg-icon-img { width: 1em; height: 1em; object-fit: contain; }
+
+/* ── Trend badge ───────────────────────────────────────────────────── */
+.bkbg-kpi-trend {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    font-family:      var(--bkbg-kpi-tr-font-family, inherit);
+    font-size:        var(--bkbg-kpi-tr-font-size-d, 12px);
+    font-weight:      var(--bkbg-kpi-tr-font-weight, 700);
+    font-style:       var(--bkbg-kpi-tr-font-style, normal);
+    text-decoration:  var(--bkbg-kpi-tr-text-decoration, none);
+    text-transform:   var(--bkbg-kpi-tr-text-transform, none);
+    line-height:      var(--bkbg-kpi-tr-line-height-d, 1);
+    letter-spacing:   var(--bkbg-kpi-tr-letter-spacing-d, normal);
+    word-spacing:     var(--bkbg-kpi-tr-word-spacing-d, normal);
+    padding: 2px 8px;
+    border-radius: 99px;
+    white-space: nowrap;
+}
+
+.bkbg-kpi-trend-up       { color: #10b981; background: rgba(16,185,129,0.1); }
+.bkbg-kpi-trend-down     { color: #ef4444; background: rgba(239,68,68,0.1);  }
+.bkbg-kpi-trend-downgood { color: #10b981; background: rgba(16,185,129,0.1); }
+.bkbg-kpi-trend-neutral  { color: #64748b; background: rgba(100,116,139,0.1); }
+
+/* ── Value ─────────────────────────────────────────────────────────── */
+.bkbg-kpi-value {
+    font-family:      var(--bkbg-kpi-v-font-family, inherit);
+    font-size:        var(--bkbg-kpi-v-font-size-d, 32px);
+    font-weight:      var(--bkbg-kpi-v-font-weight, 800);
+    font-style:       var(--bkbg-kpi-v-font-style, normal);
+    text-decoration:  var(--bkbg-kpi-v-text-decoration, none);
+    text-transform:   var(--bkbg-kpi-v-text-transform, none);
+    line-height:      var(--bkbg-kpi-v-line-height-d, 1.1);
+    letter-spacing:   var(--bkbg-kpi-v-letter-spacing-d, -0.02em);
+    word-spacing:     var(--bkbg-kpi-v-word-spacing-d, normal);
+    font-variant-numeric: tabular-nums;
+    transition: opacity 0.3s;
+}
+
+.bkbg-kpi-value.bkbg-kpi-animating {
+    opacity: 0.4;
+}
+
+/* ── Label ─────────────────────────────────────────────────────────── */
+.bkbg-kpi-label {
+    font-family:      var(--bkbg-kpi-l-font-family, inherit);
+    font-size:        var(--bkbg-kpi-l-font-size-d, 13px);
+    font-weight:      var(--bkbg-kpi-l-font-weight, 500);
+    font-style:       var(--bkbg-kpi-l-font-style, normal);
+    text-decoration:  var(--bkbg-kpi-l-text-decoration, none);
+    text-transform:   var(--bkbg-kpi-l-text-transform, uppercase);
+    line-height:      var(--bkbg-kpi-l-line-height-d, 1.3);
+    letter-spacing:   var(--bkbg-kpi-l-letter-spacing-d, 0.02em);
+    word-spacing:     var(--bkbg-kpi-l-word-spacing-d, normal);
+}
+
+/* ── Sparkline ─────────────────────────────────────────────────────── */
+.bkbg-kpi-spark {
+    margin-top: 4px;
+    border-radius: 4px;
+    align-self: flex-start;
+    max-width: 100%;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .bkbg-kpi-grid[style*="repeat(4"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 560px) {
+    .bkbg-kpi-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ── Responsive typography ────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-kpi-value {
+        font-size:      var(--bkbg-kpi-v-font-size-t, var(--bkbg-kpi-v-font-size-d, 32px));
+        line-height:    var(--bkbg-kpi-v-line-height-t, var(--bkbg-kpi-v-line-height-d, 1.1));
+        letter-spacing: var(--bkbg-kpi-v-letter-spacing-t, var(--bkbg-kpi-v-letter-spacing-d, -0.02em));
+        word-spacing:   var(--bkbg-kpi-v-word-spacing-t, var(--bkbg-kpi-v-word-spacing-d, normal));
+    }
+    .bkbg-kpi-label {
+        font-size:      var(--bkbg-kpi-l-font-size-t, var(--bkbg-kpi-l-font-size-d, 13px));
+        line-height:    var(--bkbg-kpi-l-line-height-t, var(--bkbg-kpi-l-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-kpi-l-letter-spacing-t, var(--bkbg-kpi-l-letter-spacing-d, 0.02em));
+        word-spacing:   var(--bkbg-kpi-l-word-spacing-t, var(--bkbg-kpi-l-word-spacing-d, normal));
+    }
+    .bkbg-kpi-trend {
+        font-size:      var(--bkbg-kpi-tr-font-size-t, var(--bkbg-kpi-tr-font-size-d, 12px));
+        line-height:    var(--bkbg-kpi-tr-line-height-t, var(--bkbg-kpi-tr-line-height-d, 1));
+        letter-spacing: var(--bkbg-kpi-tr-letter-spacing-t, var(--bkbg-kpi-tr-letter-spacing-d, normal));
+        word-spacing:   var(--bkbg-kpi-tr-word-spacing-t, var(--bkbg-kpi-tr-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-kpi-value {
+        font-size:      var(--bkbg-kpi-v-font-size-m, var(--bkbg-kpi-v-font-size-t, var(--bkbg-kpi-v-font-size-d, 32px)));
+        line-height:    var(--bkbg-kpi-v-line-height-m, var(--bkbg-kpi-v-line-height-t, var(--bkbg-kpi-v-line-height-d, 1.1)));
+        letter-spacing: var(--bkbg-kpi-v-letter-spacing-m, var(--bkbg-kpi-v-letter-spacing-t, var(--bkbg-kpi-v-letter-spacing-d, -0.02em)));
+        word-spacing:   var(--bkbg-kpi-v-word-spacing-m, var(--bkbg-kpi-v-word-spacing-t, var(--bkbg-kpi-v-word-spacing-d, normal)));
+    }
+    .bkbg-kpi-label {
+        font-size:      var(--bkbg-kpi-l-font-size-m, var(--bkbg-kpi-l-font-size-t, var(--bkbg-kpi-l-font-size-d, 13px)));
+        line-height:    var(--bkbg-kpi-l-line-height-m, var(--bkbg-kpi-l-line-height-t, var(--bkbg-kpi-l-line-height-d, 1.3)));
+        letter-spacing: var(--bkbg-kpi-l-letter-spacing-m, var(--bkbg-kpi-l-letter-spacing-t, var(--bkbg-kpi-l-letter-spacing-d, 0.02em)));
+        word-spacing:   var(--bkbg-kpi-l-word-spacing-m, var(--bkbg-kpi-l-word-spacing-t, var(--bkbg-kpi-l-word-spacing-d, normal)));
+    }
+    .bkbg-kpi-trend {
+        font-size:      var(--bkbg-kpi-tr-font-size-m, var(--bkbg-kpi-tr-font-size-t, var(--bkbg-kpi-tr-font-size-d, 12px)));
+        line-height:    var(--bkbg-kpi-tr-line-height-m, var(--bkbg-kpi-tr-line-height-t, var(--bkbg-kpi-tr-line-height-d, 1)));
+        letter-spacing: var(--bkbg-kpi-tr-letter-spacing-m, var(--bkbg-kpi-tr-letter-spacing-t, var(--bkbg-kpi-tr-letter-spacing-d, normal)));
+        word-spacing:   var(--bkbg-kpi-tr-word-spacing-m, var(--bkbg-kpi-tr-word-spacing-t, var(--bkbg-kpi-tr-word-spacing-d, normal)));
+    }
+}

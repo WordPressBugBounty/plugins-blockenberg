@@ -1,0 +1,191 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/currency-converter",
+    "title": "Currency Converter",
+    "category": "bkbg-calculators",
+    "icon": "money-alt",
+    "description": "Interactive currency converter supporting 30+ world currencies with instant conversion, swap button, common pairs quick-select, and customizable styling. Uses built-in indicative rates.",
+    "keywords": [
+        "currency",
+        "converter",
+        "exchange",
+        "rate",
+        "money",
+        "forex",
+        "calculator",
+        "finance"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-currency-converter-editor",
+    "style": "bkbg-currency-converter-style",
+    "viewScript": "bkbg-currency-converter-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Currency Converter"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Convert between major world currencies instantly."
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultFrom": {
+            "type": "string",
+            "default": "USD"
+        },
+        "defaultTo": {
+            "type": "string",
+            "default": "EUR"
+        },
+        "defaultAmount": {
+            "type": "number",
+            "default": 100
+        },
+        "showSwapBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "showQuickPairs": {
+            "type": "boolean",
+            "default": true
+        },
+        "quickPairs": {
+            "type": "array",
+            "default": [
+                [
+                    "USD",
+                    "EUR"
+                ],
+                [
+                    "USD",
+                    "GBP"
+                ],
+                [
+                    "USD",
+                    "JPY"
+                ],
+                [
+                    "EUR",
+                    "GBP"
+                ],
+                [
+                    "USD",
+                    "CAD"
+                ],
+                [
+                    "USD",
+                    "AUD"
+                ]
+            ]
+        },
+        "showDisclaimer": {
+            "type": "boolean",
+            "default": true
+        },
+        "disclaimer": {
+            "type": "string",
+            "default": "Rates are indicative and updated periodically. Not for financial use."
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "resultBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "resultColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "quickPairBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "quickPairColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 26
+        },
+        "resultSize": {
+            "type": "number",
+            "default": 40
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 580
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoResult": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

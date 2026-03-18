@@ -1,0 +1,195 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/icon-accordion",
+    "title": "Icon Accordion",
+    "description": "Visually rich accordion with per-item icons, badges and custom colours — great for FAQs, feature lists and onboarding flows.",
+    "category": "bkbg-content",
+    "icon": "menu",
+    "keywords": [
+        "accordion",
+        "icon",
+        "faq",
+        "toggle",
+        "expand",
+        "features"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-icon-accordion-editor",
+    "style": "bkbg-icon-accordion-style",
+    "viewScript": "bkbg-icon-accordion-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "⚡",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "iconBg": "#ede9fe",
+                    "iconColor": "#6366f1",
+                    "title": "Fast Performance",
+                    "content": "Built with speed in mind. Every component is optimised so your site loads instantly.",
+                    "badge": "Popular",
+                    "defaultOpen": true
+                },
+                {
+                    "icon": "🎨",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "iconBg": "#fce7f3",
+                    "iconColor": "#ec4899",
+                    "title": "Beautiful Design",
+                    "content": "Pixel-perfect layouts with full colour control. Match any brand palette with zero code.",
+                    "badge": "",
+                    "defaultOpen": false
+                },
+                {
+                    "icon": "🛡️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "iconBg": "#dcfce7",
+                    "iconColor": "#16a34a",
+                    "title": "Secure & Reliable",
+                    "content": "Enterprise-grade security built in. Regular audits ensure your data stays safe.",
+                    "badge": "",
+                    "defaultOpen": false
+                },
+                {
+                    "icon": "📦",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "iconBg": "#fef9c3",
+                    "iconColor": "#ca8a04",
+                    "title": "Easy Integration",
+                    "content": "Works with every major platform. One-click install and you're ready to go.",
+                    "badge": "New",
+                    "defaultOpen": false
+                }
+            ]
+        },
+        "accordionStyle": {
+            "type": "string",
+            "default": "card"
+        },
+        "iconStyle": {
+            "type": "string",
+            "default": "rounded"
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 44
+        },
+        "expandIcon": {
+            "type": "string",
+            "default": "chevron"
+        },
+        "allowMultiple": {
+            "type": "boolean",
+            "default": false
+        },
+        "animDuration": {
+            "type": "number",
+            "default": 300
+        },
+        "gap": {
+            "type": "number",
+            "default": 8
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "panelBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "panelBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "contentColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "contentFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "contentFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "contentLineHeight": {
+            "type": "number",
+            "default": 1.7
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "contentTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "expandColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        }
+    }
+}

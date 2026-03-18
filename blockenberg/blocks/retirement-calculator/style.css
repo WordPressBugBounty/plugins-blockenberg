@@ -1,0 +1,127 @@
+/* Retirement Calculator Block — bkbg-ret-* */
+
+.bkbg-ret-editor,
+.bkbg-ret-app {
+    font-family: inherit;
+    box-sizing: border-box;
+}
+.bkbg-ret-editor *,
+.bkbg-ret-app * {
+    box-sizing: border-box;
+}
+
+/* Input numbers */
+.bkbg-ret-editor input[type="number"],
+.bkbg-ret-app input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    width: 100%;
+    transition: border-color .2s, box-shadow .2s;
+}
+.bkbg-ret-editor input[type="number"]::-webkit-outer-spin-button,
+.bkbg-ret-editor input[type="number"]::-webkit-inner-spin-button,
+.bkbg-ret-app input[type="number"]::-webkit-outer-spin-button,
+.bkbg-ret-app input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.bkbg-ret-editor input[type="number"]:focus,
+.bkbg-ret-app input[type="number"]:focus {
+    outline: none;
+    border-color: #6c3fb5 !important;
+    box-shadow: 0 0 0 3px rgba(108, 63, 181, .15);
+}
+
+/* Breakdown bar */
+.bkbg-ret-bar-track {
+    height: 14px;
+    border-radius: 100px;
+    overflow: hidden;
+    display: flex;
+}
+.bkbg-ret-bar-contrib,
+.bkbg-ret-bar-growth {
+    height: 100%;
+    transition: width .4s cubic-bezier(.4,0,.2,1);
+}
+.bkbg-ret-bar-contrib { border-radius: 100px 0 0 100px; }
+.bkbg-ret-bar-growth  { border-radius: 0 100px 100px 0; }
+
+/* Stat mini cards */
+.bkbg-ret-mini-card {
+    border-radius: 12px;
+    padding: 16px 18px;
+}
+
+/* Result hero */
+.bkbg-ret-hero {
+    text-align: center;
+}
+
+/* Input grid */
+.bkbg-ret-input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+}
+
+/* Typography: Title */
+.bkbg-ret-title {
+    font-family: var(--bkrc-tt-font-family, inherit);
+    font-size: var(--bkrc-tt-font-size-d, 28px);
+    font-weight: var(--bkrc-tt-font-weight, 700);
+    font-style: var(--bkrc-tt-font-style, normal);
+    text-decoration: var(--bkrc-tt-text-decoration, none);
+    text-transform: var(--bkrc-tt-text-transform, none);
+    line-height: var(--bkrc-tt-line-height-d, 1.2);
+    letter-spacing: var(--bkrc-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkrc-tt-word-spacing-d, normal);
+}
+
+/* Typography: Body / Labels */
+.bkbg-ret-subtitle {
+    font-family: var(--bkrc-bt-font-family, inherit);
+    font-size: var(--bkrc-bt-font-size-d, 15px);
+    font-weight: var(--bkrc-bt-font-weight, normal);
+    font-style: var(--bkrc-bt-font-style, normal);
+    text-decoration: var(--bkrc-bt-text-decoration, none);
+    text-transform: var(--bkrc-bt-text-transform, none);
+    line-height: var(--bkrc-bt-line-height-d, normal);
+    letter-spacing: var(--bkrc-bt-letter-spacing-d, normal);
+    word-spacing: var(--bkrc-bt-word-spacing-d, normal);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-ret-title {
+        font-size: var(--bkrc-tt-font-size-t, var(--bkrc-tt-font-size-d, 28px));
+        line-height: var(--bkrc-tt-line-height-t, var(--bkrc-tt-line-height-d, 1.2));
+        letter-spacing: var(--bkrc-tt-letter-spacing-t, var(--bkrc-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkrc-tt-word-spacing-t, var(--bkrc-tt-word-spacing-d, normal));
+    }
+    .bkbg-ret-subtitle {
+        font-size: var(--bkrc-bt-font-size-t, var(--bkrc-bt-font-size-d, 15px));
+        line-height: var(--bkrc-bt-line-height-t, var(--bkrc-bt-line-height-d, normal));
+        letter-spacing: var(--bkrc-bt-letter-spacing-t, var(--bkrc-bt-letter-spacing-d, normal));
+        word-spacing: var(--bkrc-bt-word-spacing-t, var(--bkrc-bt-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-ret-title {
+        font-size: var(--bkrc-tt-font-size-m, var(--bkrc-tt-font-size-t, var(--bkrc-tt-font-size-d, 28px)));
+        line-height: var(--bkrc-tt-line-height-m, var(--bkrc-tt-line-height-t, var(--bkrc-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bkrc-tt-letter-spacing-m, var(--bkrc-tt-letter-spacing-t, var(--bkrc-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkrc-tt-word-spacing-m, var(--bkrc-tt-word-spacing-t, var(--bkrc-tt-word-spacing-d, normal)));
+    }
+    .bkbg-ret-subtitle {
+        font-size: var(--bkrc-bt-font-size-m, var(--bkrc-bt-font-size-t, var(--bkrc-bt-font-size-d, 15px)));
+        line-height: var(--bkrc-bt-line-height-m, var(--bkrc-bt-line-height-t, var(--bkrc-bt-line-height-d, normal)));
+        letter-spacing: var(--bkrc-bt-letter-spacing-m, var(--bkrc-bt-letter-spacing-t, var(--bkrc-bt-letter-spacing-d, normal)));
+        word-spacing: var(--bkrc-bt-word-spacing-m, var(--bkrc-bt-word-spacing-t, var(--bkrc-bt-word-spacing-d, normal)));
+    }
+}
+
+@media (max-width: 500px) {
+    .bkbg-ret-input-grid {
+        grid-template-columns: 1fr;
+    }
+}

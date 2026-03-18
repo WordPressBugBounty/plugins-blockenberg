@@ -1,0 +1,184 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/interactive-steps",
+    "title": "Interactive Steps",
+    "category": "bkbg-interactive",
+    "description": "Step-by-step wizard or process block with clickable numbered steps that reveal different content panels.",
+    "keywords": [
+        "steps",
+        "wizard",
+        "process",
+        "interactive",
+        "progress",
+        "tabs"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-interactive-steps-editor",
+    "style": "bkbg-interactive-steps-style",
+    "viewScript": "bkbg-interactive-steps-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "steps": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Discovery",
+                    "icon": "🔍",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "heading": "Understand the Problem",
+                    "body": "We start by diving deep into your business goals and challenges to define a clear scope."
+                },
+                {
+                    "title": "Design",
+                    "icon": "🎨",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "heading": "Craft the Solution",
+                    "body": "Our designers create wireframes and prototypes, iterating until the experience feels just right."
+                },
+                {
+                    "title": "Develop",
+                    "icon": "💻",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "heading": "Build with Precision",
+                    "body": "Engineers turn the designs into production-ready code with clean architecture and tests."
+                },
+                {
+                    "title": "Launch",
+                    "icon": "🚀",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "heading": "Go Live with Confidence",
+                    "body": "We deploy your product and monitor performance, ensuring a smooth launch day."
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "stepLayout": {
+            "type": "string",
+            "default": "number-icon"
+        },
+        "showConnector": {
+            "type": "boolean",
+            "default": true
+        },
+        "animateContent": {
+            "type": "boolean",
+            "default": true
+        },
+        "initialStep": {
+            "type": "number",
+            "default": 0
+        },
+        "stepSize": {
+            "type": "number",
+            "default": 52
+        },
+        "stepFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 22
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodySize": {
+            "type": "number",
+            "default": 16
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "connectorHeight": {
+            "type": "number",
+            "default": 3
+        },
+        "contentRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "contentPadding": {
+            "type": "number",
+            "default": 32
+        },
+        "activeBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "activeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inactiveBg": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "inactiveColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "doneBg": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "doneColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "connectorColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "connectorDone": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "contentBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "contentBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "bodyColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "transparent"
+        }
+    }
+}

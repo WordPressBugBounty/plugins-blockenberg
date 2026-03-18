@@ -1,0 +1,155 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/dark-mode-toggle",
+    "title": "Dark Mode Toggle",
+    "description": "A light/dark mode switcher. Adds a toggle button that persists the user's theme preference to localStorage and applies a data attribute to the root element.",
+    "category": "bkbg-effects",
+    "icon": "image-filter",
+    "textdomain": "blockenberg",
+    "keywords": [
+        "dark mode",
+        "light mode",
+        "theme",
+        "toggle",
+        "switch"
+    ],
+    "supports": {
+        "html": false,
+        "align": [
+            "left",
+            "center",
+            "right",
+            "full"
+        ]
+    },
+    "attributes": {
+        "toggleStyle": {
+            "type": "string",
+            "default": "switch"
+        },
+        "position": {
+            "type": "string",
+            "default": "inline"
+        },
+        "floatCorner": {
+            "type": "string",
+            "default": "bottom-right"
+        },
+        "floatOffsetX": {
+            "type": "number",
+            "default": 24
+        },
+        "floatOffsetY": {
+            "type": "number",
+            "default": 24
+        },
+        "lightIcon": {
+            "type": "string",
+            "default": "☀️"
+        },
+        "darkIcon": {
+            "type": "string",
+            "default": "🌙"
+        },
+        "lightLabel": {
+            "type": "string",
+            "default": "Light"
+        },
+        "darkLabel": {
+            "type": "string",
+            "default": "Dark"
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": false
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "storageKey": {
+            "type": "string",
+            "default": "bkdm-theme"
+        },
+        "dataAttribute": {
+            "type": "string",
+            "default": "data-theme"
+        },
+        "darkValue": {
+            "type": "string",
+            "default": "dark"
+        },
+        "lightValue": {
+            "type": "string",
+            "default": "light"
+        },
+        "defaultTheme": {
+            "type": "string",
+            "default": "light"
+        },
+        "respectSystemPref": {
+            "type": "boolean",
+            "default": true
+        },
+        "buttonSize": {
+            "type": "number",
+            "default": 44
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 50
+        },
+        "transitionDuration": {
+            "type": "number",
+            "default": 300
+        },
+        "lightBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "lightColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "darkBg": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "darkColor": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "switchTrackLight": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "switchTrackDark": {
+            "type": "string",
+            "default": "#4f46e5"
+        },
+        "switchThumbColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "hoverScale": {
+            "type": "boolean",
+            "default": true
+        },
+        "shadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "typoLabel": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "editorScript": "bkbg-dark-mode-toggle-editor",
+    "editorStyle": "bkbg-dark-mode-toggle-style",
+    "style": "bkbg-dark-mode-toggle-style",
+    "viewScript": "bkbg-dark-mode-toggle-frontend"
+}

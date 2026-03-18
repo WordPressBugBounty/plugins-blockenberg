@@ -1,0 +1,227 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/coming-soon",
+	"version": "1.0.0",
+	"title": "Coming Soon",
+	"category": "bkbg-marketing",
+	"icon": "clock",
+	"description": "Launch countdown page section with logo, heading, subtitle, live countdown timer, optional email capture field, social links, and background controls.",
+	"keywords": [
+		"coming soon",
+		"launch",
+		"countdown",
+		"timer",
+		"waitlist"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-coming-soon-editor",
+	"style": "bkbg-coming-soon-style",
+	"viewScript": "bkbg-coming-soon-frontend",
+	"attributes": {
+		"logoUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"logoId": {
+			"type": "number",
+			"default": 0
+		},
+		"logoAlt": {
+			"type": "string",
+			"default": "Logo"
+		},
+		"logoWidth": {
+			"type": "number",
+			"default": 160
+		},
+		"showLogo": {
+			"type": "boolean",
+			"default": false
+		},
+		"eyebrow": {
+			"type": "string",
+			"default": "Something big is coming"
+		},
+		"showEyebrow": {
+			"type": "boolean",
+			"default": true
+		},
+		"heading": {
+			"type": "string",
+			"default": "We're launching soon."
+		},
+		"subtext": {
+			"type": "string",
+			"default": "We've been building something great. Sign up to be notified the moment we go live."
+		},
+		"launchDate": {
+			"type": "string",
+			"default": ""
+		},
+		"showCountdown": {
+			"type": "boolean",
+			"default": true
+		},
+		"showEmail": {
+			"type": "boolean",
+			"default": true
+		},
+		"emailPlaceholder": {
+			"type": "string",
+			"default": "Enter your email address"
+		},
+		"emailBtnLabel": {
+			"type": "string",
+			"default": "Notify Me"
+		},
+		"emailAction": {
+			"type": "string",
+			"default": "#"
+		},
+		"showSocials": {
+			"type": "boolean",
+			"default": true
+		},
+		"socialLinks": {
+			"type": "array",
+			"default": [
+				{
+					"platform": "Twitter / X",
+					"url": "#",
+					"icon": "𝕏",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": ""
+				},
+				{
+					"platform": "Instagram",
+					"url": "#",
+					"icon": "📷",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": ""
+				},
+				{
+					"platform": "LinkedIn",
+					"url": "#",
+					"icon": "in",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": ""
+				}
+			],
+			"items": {
+				"type": "object"
+			}
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#0f172a"
+		},
+		"bgGradient": {
+			"type": "string",
+			"default": ""
+		},
+		"headingColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#94a3b8"
+		},
+		"eyebrowBg": {
+			"type": "string",
+			"default": "rgba(255,255,255,.08)"
+		},
+		"eyebrowColor": {
+			"type": "string",
+			"default": "#c4b5fd"
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#7c3aed"
+		},
+		"timerBg": {
+			"type": "string",
+			"default": "rgba(255,255,255,.07)"
+		},
+		"timerColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"inputBg": {
+			"type": "string",
+			"default": "rgba(255,255,255,.08)"
+		},
+		"inputColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"btnBg": {
+			"type": "string",
+			"default": "#7c3aed"
+		},
+		"btnColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"headingSize": {
+			"type": "number",
+			"default": 52
+		},
+		"textSize": {
+			"type": "number",
+			"default": 18
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 120
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 120
+		},
+		"maxWidth": {
+			"type": "number",
+			"default": 700
+		},
+		"eyebrowSize": {
+			"type": "number",
+			"default": 13
+		},
+		"headingFontWeight": {
+			"type": "string",
+			"default": "800"
+		},
+		"headingLineHeight": {
+			"type": "number",
+			"default": 1.15
+		},
+		"textFontWeight": {
+			"type": "string",
+			"default": "400"
+		},
+		"textLineHeight": {
+			"type": "number",
+			"default": 1.7
+		},
+		"eyebrowFontWeight": {
+			"type": "string",
+			"default": "600"
+		},
+		"typoHeading": { "type": "object", "default": {} },
+		"typoBody": { "type": "object", "default": {} },
+		"typoEyebrow": { "type": "object", "default": {} }
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	}
+}

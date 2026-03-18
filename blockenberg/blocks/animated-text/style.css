@@ -1,0 +1,173 @@
+/* ── Animated Text Block ─────────────────────────────────────────────────── */
+.bkbg-at-wrapper {
+    padding-top: var(--bkbg-at-pad-top, 0);
+    padding-bottom: var(--bkbg-at-pad-bottom, 0);
+    text-align: var(--bkbg-at-text-align, left);
+}
+
+.bkbg-at-wrapper.bkbg-at-align-center { margin-left: auto; margin-right: auto; }
+
+.bkbg-at-heading {
+    margin: 0;
+    font-family: var(--bkbg-at-heading-font-family, inherit);
+    font-size: var(--bkbg-at-heading-font-size-d, var(--bkbg-at-heading-font-size, var(--bkbg-at-font-size, 48px)));
+    font-weight: var(--bkbg-at-heading-font-weight, var(--bkbg-at-font-weight, 700));
+    font-style: var(--bkbg-at-heading-font-style, normal);
+    text-transform: var(--bkbg-at-heading-text-transform, none);
+    text-decoration: var(--bkbg-at-heading-text-decoration, none);
+    line-height: var(--bkbg-at-heading-line-height-d, var(--bkbg-at-heading-line-height, var(--bkbg-at-line-height, 1.2)));
+    letter-spacing: var(--bkbg-at-heading-letter-spacing-d, var(--bkbg-at-heading-letter-spacing, var(--bkbg-at-letter-spacing, 0)));
+    word-spacing: var(--bkbg-at-heading-word-spacing-d, var(--bkbg-at-heading-word-spacing, normal));
+    color: var(--bkbg-at-static-color, #0f172a);
+    max-width: var(--bkbg-at-max-width, none);
+}
+
+.bkbg-at-wrapper.bkbg-at-align-center .bkbg-at-heading { margin-left: auto; margin-right: auto; }
+
+/* ── Static text ─────────────────────────────────────────────────────────── */
+.bkbg-at-static { color: inherit; }
+
+/* ── Animated word wrapper ───────────────────────────────────────────────── */
+.bkbg-at-animated-word {
+    display: inline-block;
+    position: relative;
+    color: var(--bkbg-at-animated-color, #2563eb);
+    white-space: pre;
+}
+
+.bkbg-at-word-text {
+    display: inline;
+    background: var(--bkbg-at-highlight-bg, transparent);
+    padding: 0 var(--bkbg-at-highlight-pad, 0);
+    border-radius: var(--bkbg-at-highlight-radius, 0);
+}
+
+/* ── Cursor ──────────────────────────────────────────────────────────────── */
+.bkbg-at-cursor {
+    display: inline-block;
+    color: var(--bkbg-at-cursor-color, #2563eb);
+    font-weight: 100;
+    animation: bkbg-at-blink var(--bkbg-at-cursor-blink, 530ms) step-end infinite;
+    margin-left: 1px;
+}
+
+@keyframes bkbg-at-blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+/* ── Fade effect ─────────────────────────────────────────────────────────── */
+@keyframes bkbg-at-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes bkbg-at-fade-out {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+.bkbg-at-effect-fade.is-entering { animation: bkbg-at-fade-in 0.35s ease-out forwards; }
+.bkbg-at-effect-fade.is-leaving  { animation: bkbg-at-fade-out 0.35s ease-in forwards; }
+
+/* ── Slide Up effect ─────────────────────────────────────────────────────── */
+@keyframes bkbg-at-slide-up-in {
+    from { opacity: 0; transform: translateY(60%); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes bkbg-at-slide-up-out {
+    from { opacity: 1; transform: translateY(0); }
+    to   { opacity: 0; transform: translateY(-60%); }
+}
+
+.bkbg-at-effect-slide-up { overflow: hidden; vertical-align: bottom; }
+.bkbg-at-effect-slide-up .bkbg-at-word-text { display: inline-block; }
+.bkbg-at-effect-slide-up.is-entering .bkbg-at-word-text { animation: bkbg-at-slide-up-in 0.38s cubic-bezier(0.22,1,0.36,1) forwards; }
+.bkbg-at-effect-slide-up.is-leaving  .bkbg-at-word-text { animation: bkbg-at-slide-up-out 0.28s ease-in forwards; }
+
+/* ── Slide Down effect ───────────────────────────────────────────────────── */
+@keyframes bkbg-at-slide-down-in {
+    from { opacity: 0; transform: translateY(-60%); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes bkbg-at-slide-down-out {
+    from { opacity: 1; transform: translateY(0); }
+    to   { opacity: 0; transform: translateY(60%); }
+}
+
+.bkbg-at-effect-slide-down { overflow: hidden; vertical-align: bottom; }
+.bkbg-at-effect-slide-down .bkbg-at-word-text { display: inline-block; }
+.bkbg-at-effect-slide-down.is-entering .bkbg-at-word-text { animation: bkbg-at-slide-down-in 0.38s cubic-bezier(0.22,1,0.36,1) forwards; }
+.bkbg-at-effect-slide-down.is-leaving  .bkbg-at-word-text { animation: bkbg-at-slide-down-out 0.28s ease-in forwards; }
+
+/* ── Flip effect ─────────────────────────────────────────────────────────── */
+@keyframes bkbg-at-flip-in {
+    from { opacity: 0; transform: rotateX(-90deg); }
+    to   { opacity: 1; transform: rotateX(0deg); }
+}
+@keyframes bkbg-at-flip-out {
+    from { opacity: 1; transform: rotateX(0deg); }
+    to   { opacity: 0; transform: rotateX(90deg); }
+}
+
+.bkbg-at-effect-flip { perspective: 400px; vertical-align: bottom; }
+.bkbg-at-effect-flip .bkbg-at-word-text { display: inline-block; }
+.bkbg-at-effect-flip.is-entering .bkbg-at-word-text { animation: bkbg-at-flip-in 0.4s cubic-bezier(0.22,1,0.36,1) forwards; }
+.bkbg-at-effect-flip.is-leaving  .bkbg-at-word-text { animation: bkbg-at-flip-out 0.3s ease-in forwards; }
+
+/* ── Zoom effect ─────────────────────────────────────────────────────────── */
+@keyframes bkbg-at-zoom-in {
+    from { opacity: 0; transform: scale(0.6); }
+    to   { opacity: 1; transform: scale(1); }
+}
+@keyframes bkbg-at-zoom-out {
+    from { opacity: 1; transform: scale(1); }
+    to   { opacity: 0; transform: scale(1.4); }
+}
+
+.bkbg-at-effect-zoom .bkbg-at-word-text { display: inline-block; }
+.bkbg-at-effect-zoom.is-entering .bkbg-at-word-text { animation: bkbg-at-zoom-in 0.38s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+.bkbg-at-effect-zoom.is-leaving  .bkbg-at-word-text { animation: bkbg-at-zoom-out 0.25s ease-in forwards; }
+
+/* ── Blur effect ─────────────────────────────────────────────────────────── */
+@keyframes bkbg-at-blur-in {
+    from { opacity: 0; filter: blur(10px); }
+    to   { opacity: 1; filter: blur(0); }
+}
+@keyframes bkbg-at-blur-out {
+    from { opacity: 1; filter: blur(0); }
+    to   { opacity: 0; filter: blur(10px); }
+}
+
+.bkbg-at-effect-blur .bkbg-at-word-text { display: inline-block; }
+.bkbg-at-effect-blur.is-entering .bkbg-at-word-text { animation: bkbg-at-blur-in 0.4s ease-out forwards; }
+.bkbg-at-effect-blur.is-leaving  .bkbg-at-word-text { animation: bkbg-at-blur-out 0.3s ease-in forwards; }
+
+/* ── Responsive typography ────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-at-heading {
+        font-size: var(--bkbg-at-heading-font-size-t, var(--bkbg-at-heading-font-size-d, var(--bkbg-at-heading-font-size, var(--bkbg-at-font-size, 48px))));
+        line-height: var(--bkbg-at-heading-line-height-t, var(--bkbg-at-heading-line-height-d, var(--bkbg-at-heading-line-height, var(--bkbg-at-line-height, 1.2))));
+        letter-spacing: var(--bkbg-at-heading-letter-spacing-t, var(--bkbg-at-heading-letter-spacing-d, var(--bkbg-at-heading-letter-spacing, var(--bkbg-at-letter-spacing, 0))));
+        word-spacing: var(--bkbg-at-heading-word-spacing-t, var(--bkbg-at-heading-word-spacing-d, var(--bkbg-at-heading-word-spacing, normal)));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-at-heading {
+        font-size: var(--bkbg-at-heading-font-size-m, var(--bkbg-at-heading-font-size-t, var(--bkbg-at-heading-font-size-d, var(--bkbg-at-heading-font-size, var(--bkbg-at-font-size, 48px)))));
+        line-height: var(--bkbg-at-heading-line-height-m, var(--bkbg-at-heading-line-height-t, var(--bkbg-at-heading-line-height-d, var(--bkbg-at-heading-line-height, var(--bkbg-at-line-height, 1.2)))));
+        letter-spacing: var(--bkbg-at-heading-letter-spacing-m, var(--bkbg-at-heading-letter-spacing-t, var(--bkbg-at-heading-letter-spacing-d, var(--bkbg-at-heading-letter-spacing, var(--bkbg-at-letter-spacing, 0)))));
+        word-spacing: var(--bkbg-at-heading-word-spacing-m, var(--bkbg-at-heading-word-spacing-t, var(--bkbg-at-heading-word-spacing-d, var(--bkbg-at-heading-word-spacing, normal))));
+    }
+}
+
+/* ── Reduced Motion ──────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .bkbg-at-cursor   { animation: none !important; }
+    .bkbg-at-word-text { animation: none !important; }
+    .bkbg-at-effect-fade.is-leaving,
+    .bkbg-at-effect-slide-up.is-leaving .bkbg-at-word-text,
+    .bkbg-at-effect-slide-down.is-leaving .bkbg-at-word-text,
+    .bkbg-at-effect-flip.is-leaving .bkbg-at-word-text,
+    .bkbg-at-effect-zoom.is-leaving .bkbg-at-word-text,
+    .bkbg-at-effect-blur.is-leaving .bkbg-at-word-text { opacity: 0 !important; }
+}

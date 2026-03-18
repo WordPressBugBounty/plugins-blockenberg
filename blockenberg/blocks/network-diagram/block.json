@@ -1,0 +1,154 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/network-diagram",
+    "title": "Network Diagram",
+    "category": "bkbg-charts",
+    "icon": "share",
+    "description": "Node-link relationship diagram for system architecture, dependencies, or org charts.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-network-diagram-editor",
+    "style": "bkbg-network-diagram-style",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "System Architecture"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "number",
+            "default": 680
+        },
+        "svgHeight": {
+            "type": "number",
+            "default": 420
+        },
+        "nodeRadius": {
+            "type": "number",
+            "default": 28
+        },
+        "nodeStroke": {
+            "type": "number",
+            "default": 2
+        },
+        "linkWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "arrowSize": {
+            "type": "number",
+            "default": 10
+        },
+        "showLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "showArrows": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#cbd5e1"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "nodes": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "n1",
+                    "label": "Frontend",
+                    "color": "#6366f1",
+                    "x": 120,
+                    "y": 100
+                },
+                {
+                    "id": "n2",
+                    "label": "API Gateway",
+                    "color": "#10b981",
+                    "x": 340,
+                    "y": 100
+                },
+                {
+                    "id": "n3",
+                    "label": "Auth",
+                    "color": "#f59e0b",
+                    "x": 220,
+                    "y": 270
+                },
+                {
+                    "id": "n4",
+                    "label": "Database",
+                    "color": "#ef4444",
+                    "x": 460,
+                    "y": 270
+                },
+                {
+                    "id": "n5",
+                    "label": "Cache",
+                    "color": "#8b5cf6",
+                    "x": 560,
+                    "y": 130
+                },
+                {
+                    "id": "n6",
+                    "label": "CDN",
+                    "color": "#ec4899",
+                    "x": 100,
+                    "y": 270
+                }
+            ]
+        },
+        "links": {
+            "type": "array",
+            "default": [
+                {
+                    "from": "n1",
+                    "to": "n2",
+                    "label": ""
+                },
+                {
+                    "from": "n2",
+                    "to": "n3",
+                    "label": ""
+                },
+                {
+                    "from": "n2",
+                    "to": "n4",
+                    "label": ""
+                },
+                {
+                    "from": "n2",
+                    "to": "n5",
+                    "label": ""
+                },
+                {
+                    "from": "n1",
+                    "to": "n6",
+                    "label": ""
+                }
+            ]
+        }
+    }
+}

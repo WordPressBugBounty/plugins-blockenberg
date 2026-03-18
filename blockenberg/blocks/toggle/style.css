@@ -1,0 +1,205 @@
+/* =============================================
+   Toggle / Read More Block — blockenberg/toggle
+   ============================================= */
+
+.bkbg-tgl-wrap {
+    --bkbg-tgl-radius: 8px;
+    --bkbg-tgl-padding: 16px;
+    --bkbg-tgl-speed: 280ms;
+    --bkbg-tgl-title-color: #111827;
+    --bkbg-tgl-title-bg: #ffffff;
+    --bkbg-tgl-title-hover-bg: #f9fafb;
+    --bkbg-tgl-active-title-bg: #eff6ff;
+    --bkbg-tgl-active-title-color: #1d4ed8;
+    --bkbg-tgl-content-color: #374151;
+    --bkbg-tgl-content-bg: #ffffff;
+    --bkbg-tgl-icon-color: #6b7280;
+    --bkbg-tgl-icon-active-color: #2563eb;
+    --bkbg-tgl-border-color: #e5e7eb;
+    --bkbg-tgl-divider-color: #f3f4f6;
+    border: 1px solid var(--bkbg-tgl-border-color);
+    border-radius: var(--bkbg-tgl-radius);
+    overflow: hidden;
+}
+
+/* ---- Trigger button ---- */
+.bkbg-tgl-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: var(--bkbg-tgl-padding);
+    background: var(--bkbg-tgl-title-bg);
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background var(--bkbg-tgl-speed) ease, color var(--bkbg-tgl-speed) ease;
+}
+
+.bkbg-tgl-trigger:hover {
+    background: var(--bkbg-tgl-title-hover-bg);
+}
+
+.bkbg-tgl-wrap.is-open .bkbg-tgl-trigger {
+    background: var(--bkbg-tgl-active-title-bg);
+    color: var(--bkbg-tgl-active-title-color);
+}
+
+/* ---- Title ---- */
+.bkbg-tgl-title {
+    flex: 1;
+    margin: 0;
+    font-family: var(--bktgl-tt-font-family, inherit);
+    font-size: var(--bktgl-tt-font-size-d, 16px);
+    font-weight: var(--bktgl-tt-font-weight, 600);
+    font-style: var(--bktgl-tt-font-style, normal);
+    line-height: var(--bktgl-tt-line-height-d, 1.4);
+    text-decoration: var(--bktgl-tt-text-decoration, none);
+    text-transform: var(--bktgl-tt-text-transform, none);
+    letter-spacing: var(--bktgl-tt-letter-spacing-d, normal);
+    word-spacing: var(--bktgl-tt-word-spacing-d, normal);
+    color: var(--bkbg-tgl-title-color);
+}
+
+/* Rule 7 — configurable title tag h3-h6 */
+.bkbg-tgl-trigger h3.bkbg-tgl-title,
+.bkbg-tgl-trigger h4.bkbg-tgl-title,
+.bkbg-tgl-trigger h5.bkbg-tgl-title,
+.bkbg-tgl-trigger h6.bkbg-tgl-title {
+    font-family: var(--bktgl-tt-font-family, inherit);
+    font-size: var(--bktgl-tt-font-size-d, 16px);
+    font-weight: var(--bktgl-tt-font-weight, 600);
+    font-style: var(--bktgl-tt-font-style, normal);
+    line-height: var(--bktgl-tt-line-height-d, 1.4);
+    text-decoration: var(--bktgl-tt-text-decoration, none);
+    text-transform: var(--bktgl-tt-text-transform, none);
+    letter-spacing: var(--bktgl-tt-letter-spacing-d, normal);
+    word-spacing: var(--bktgl-tt-word-spacing-d, normal);
+}
+
+.bkbg-tgl-wrap.is-open .bkbg-tgl-title {
+    color: var(--bkbg-tgl-active-title-color);
+}
+
+/* ---- Icon ---- */
+.bkbg-tgl-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    color: var(--bkbg-tgl-icon-color);
+    transition: transform var(--bkbg-tgl-speed) ease, color var(--bkbg-tgl-speed) ease;
+}
+
+.bkbg-tgl-wrap.is-open .bkbg-tgl-icon {
+    color: var(--bkbg-tgl-icon-active-color);
+}
+
+/* Chevron rotation */
+[data-icon="chevron"] .bkbg-tgl-icon,
+[data-icon="arrow"] .bkbg-tgl-icon {
+    transform: rotate(0deg);
+}
+
+[data-icon="chevron"].is-open .bkbg-tgl-icon,
+[data-icon="arrow"].is-open .bkbg-tgl-icon {
+    transform: rotate(180deg);
+}
+
+/* Plus/minus */
+[data-icon="plus"] .bkbg-tgl-icon svg line:last-child {
+    transition: opacity var(--bkbg-tgl-speed) ease;
+}
+
+[data-icon="plus"].is-open .bkbg-tgl-icon svg line:last-child {
+    opacity: 0;
+}
+
+/* ---- Content panel ---- */
+.bkbg-tgl-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--bkbg-tgl-speed) ease;
+}
+
+.bkbg-tgl-wrap.is-open .bkbg-tgl-content {
+    max-height: 5000px;
+}
+
+.bkbg-tgl-content-inner {
+    padding: var(--bkbg-tgl-padding);
+    border-top: 1px solid var(--bkbg-tgl-divider-color);
+    background: var(--bkbg-tgl-content-bg);
+    font-family: var(--bktgl-ct-font-family, inherit);
+    font-size: var(--bktgl-ct-font-size-d, 15px);
+    font-weight: var(--bktgl-ct-font-weight, normal);
+    font-style: var(--bktgl-ct-font-style, normal);
+    line-height: var(--bktgl-ct-line-height-d, 1.7);
+    text-decoration: var(--bktgl-ct-text-decoration, none);
+    text-transform: var(--bktgl-ct-text-transform, none);
+    letter-spacing: var(--bktgl-ct-letter-spacing-d, normal);
+    word-spacing: var(--bktgl-ct-word-spacing-d, normal);
+    color: var(--bkbg-tgl-content-color);
+}
+
+.bkbg-tgl-body > *:last-child { margin-bottom: 0; }
+
+/* ---- Layout: boxed ---- */
+.bkbg-tgl-wrap[data-layout="boxed"] {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* ---- Layout: minimal ---- */
+.bkbg-tgl-wrap[data-layout="minimal"] {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0;
+}
+
+.bkbg-tgl-wrap[data-layout="minimal"] .bkbg-tgl-content-inner {
+    border-top: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* ---- Layout: bordered ---- */
+.bkbg-tgl-wrap[data-layout="bordered"] {
+    border-left: 4px solid var(--bkbg-tgl-border-color);
+    border-radius: 0 var(--bkbg-tgl-radius) var(--bkbg-tgl-radius) 0;
+}
+
+.bkbg-tgl-wrap[data-layout="bordered"].is-open {
+    border-left-color: var(--bkbg-tgl-icon-active-color);
+}
+
+@media(max-width:1024px){
+    .bkbg-tgl-title{font-size:var(--bktgl-tt-font-size-t,var(--bktgl-tt-font-size-d,16px));line-height:var(--bktgl-tt-line-height-t,var(--bktgl-tt-line-height-d,1.4));letter-spacing:var(--bktgl-tt-letter-spacing-t,var(--bktgl-tt-letter-spacing-d,normal));word-spacing:var(--bktgl-tt-word-spacing-t,var(--bktgl-tt-word-spacing-d,normal))}
+    .bkbg-tgl-trigger h3.bkbg-tgl-title,.bkbg-tgl-trigger h4.bkbg-tgl-title,.bkbg-tgl-trigger h5.bkbg-tgl-title,.bkbg-tgl-trigger h6.bkbg-tgl-title{font-size:var(--bktgl-tt-font-size-t,var(--bktgl-tt-font-size-d,16px));line-height:var(--bktgl-tt-line-height-t,var(--bktgl-tt-line-height-d,1.4));letter-spacing:var(--bktgl-tt-letter-spacing-t,var(--bktgl-tt-letter-spacing-d,normal));word-spacing:var(--bktgl-tt-word-spacing-t,var(--bktgl-tt-word-spacing-d,normal))}
+    .bkbg-tgl-content-inner{font-size:var(--bktgl-ct-font-size-t,var(--bktgl-ct-font-size-d,15px));line-height:var(--bktgl-ct-line-height-t,var(--bktgl-ct-line-height-d,1.7));letter-spacing:var(--bktgl-ct-letter-spacing-t,var(--bktgl-ct-letter-spacing-d,normal));word-spacing:var(--bktgl-ct-word-spacing-t,var(--bktgl-ct-word-spacing-d,normal))}
+}
+@media(max-width:767px){
+    .bkbg-tgl-title{font-size:var(--bktgl-tt-font-size-m,var(--bktgl-tt-font-size-t,var(--bktgl-tt-font-size-d,16px)));line-height:var(--bktgl-tt-line-height-m,var(--bktgl-tt-line-height-t,var(--bktgl-tt-line-height-d,1.4)));letter-spacing:var(--bktgl-tt-letter-spacing-m,var(--bktgl-tt-letter-spacing-t,var(--bktgl-tt-letter-spacing-d,normal)));word-spacing:var(--bktgl-tt-word-spacing-m,var(--bktgl-tt-word-spacing-t,var(--bktgl-tt-word-spacing-d,normal)))}
+    .bkbg-tgl-trigger h3.bkbg-tgl-title,.bkbg-tgl-trigger h4.bkbg-tgl-title,.bkbg-tgl-trigger h5.bkbg-tgl-title,.bkbg-tgl-trigger h6.bkbg-tgl-title{font-size:var(--bktgl-tt-font-size-m,var(--bktgl-tt-font-size-t,var(--bktgl-tt-font-size-d,16px)));line-height:var(--bktgl-tt-line-height-m,var(--bktgl-tt-line-height-t,var(--bktgl-tt-line-height-d,1.4)));letter-spacing:var(--bktgl-tt-letter-spacing-m,var(--bktgl-tt-letter-spacing-t,var(--bktgl-tt-letter-spacing-d,normal)));word-spacing:var(--bktgl-tt-word-spacing-m,var(--bktgl-tt-word-spacing-t,var(--bktgl-tt-word-spacing-d,normal)))}
+    .bkbg-tgl-content-inner{font-size:var(--bktgl-ct-font-size-m,var(--bktgl-ct-font-size-t,var(--bktgl-ct-font-size-d,15px)));line-height:var(--bktgl-ct-line-height-m,var(--bktgl-ct-line-height-t,var(--bktgl-ct-line-height-d,1.7)));letter-spacing:var(--bktgl-ct-letter-spacing-m,var(--bktgl-ct-letter-spacing-t,var(--bktgl-ct-letter-spacing-d,normal)));word-spacing:var(--bktgl-ct-word-spacing-m,var(--bktgl-ct-word-spacing-t,var(--bktgl-ct-word-spacing-d,normal)))}
+}
+
+/* ---- Editor ---- */
+.bkbg-tgl-editor .bkbg-tgl-content {
+    max-height: none;
+    overflow: visible;
+}
+
+.bkbg-tgl-editor .bkbg-tgl-trigger {
+    cursor: default;
+}
+
+.bkbg-tgl-editor .components-text-control__input {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    color: inherit !important;
+    cursor: text;
+}

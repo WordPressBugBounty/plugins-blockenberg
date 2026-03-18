@@ -1,0 +1,115 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/base64-encoder",
+    "version": "1.0.0",
+    "title": "Base64 Encoder / Decoder",
+    "category": "bkbg-dev",
+    "icon": "editor-code",
+    "description": "Encode plain text to Base64 or decode Base64 back to text. Supports Unicode, URL-safe Base64 and one-click copy.",
+    "keywords": [
+        "base64",
+        "encode",
+        "decode",
+        "converter",
+        "developer",
+        "tool",
+        "binary",
+        "ascii"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-base64-encoder-editor",
+    "style": "bkbg-base64-encoder-style",
+    "viewScript": "bkbg-base64-encoder-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Base64 Encoder / Decoder"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Instantly encode or decode Base64 text"
+        },
+        "defaultMode": {
+            "type": "string",
+            "default": "encode"
+        },
+        "defaultInput": {
+            "type": "string",
+            "default": ""
+        },
+        "showUrlSafe": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLineBreaks": {
+            "type": "boolean",
+            "default": true
+        },
+        "showStats": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#0ea5e9"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f0f9ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "outputBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "outputColor": {
+            "type": "string",
+            "default": "#7dd3fc"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0c4a6e"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleFontSize": {
+            "type": "integer",
+            "default": 26
+        },
+        "contentMaxWidth": {
+            "type": "integer",
+            "default": 720
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,160 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/flip-countdown",
+    "title": "Flip Countdown",
+    "category": "bkbg-effects",
+    "icon": "clock",
+    "description": "An airport-style flip-clock countdown timer with animated flip cards for days, hours, minutes and seconds.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-flip-countdown-editor",
+    "style": "bkbg-flip-countdown-style",
+    "viewScript": "bkbg-flip-countdown-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Coming Soon"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Something amazing is on its way — stay tuned!"
+        },
+        "targetDate": {
+            "type": "string",
+            "default": ""
+        },
+        "showDays": {
+            "type": "boolean",
+            "default": true
+        },
+        "showHours": {
+            "type": "boolean",
+            "default": true
+        },
+        "showMinutes": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSeconds": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSeparators": {
+            "type": "boolean",
+            "default": true
+        },
+        "endMessage": {
+            "type": "string",
+            "default": "🎉 The wait is over!"
+        },
+        "endAction": {
+            "type": "string",
+            "default": "message"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "cardGap": {
+            "type": "number",
+            "default": 16
+        },
+        "digitSize": {
+            "type": "number",
+            "default": 56
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "labelFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 30
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "800"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 15
+        },
+        "subtitleFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "subtitleLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoDigit": {
+            "type": "object",
+            "default": {}
+        },
+        "typoLabel": {
+            "type": "object",
+            "default": {}
+        },
+        "flipBg": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "flipColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "flipHingeBg": {
+            "type": "string",
+            "default": "#0f0e17"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "separatorColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        }
+    }
+}

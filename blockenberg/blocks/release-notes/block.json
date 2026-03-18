@@ -1,0 +1,227 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/release-notes",
+    "title": "Release Notes",
+    "description": "Structured software or product release notes with versioned sections: Added, Changed, Fixed, Removed, Security, and Deprecated.",
+    "category": "bkbg-blog",
+    "icon": "list-view",
+    "keywords": [
+        "release",
+        "changelog",
+        "version",
+        "notes",
+        "update",
+        "patch",
+        "semver"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-release-notes-editor",
+    "editorStyle": "bkbg-release-notes-style",
+    "style": "bkbg-release-notes-style",
+    "viewScript": "bkbg-release-notes-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "productName": {
+            "type": "string",
+            "default": "Acme App"
+        },
+        "version": {
+            "type": "string",
+            "default": "2.5.0"
+        },
+        "releaseDate": {
+            "type": "string",
+            "default": "February 24, 2026"
+        },
+        "releaseType": {
+            "type": "string",
+            "default": "minor"
+        },
+        "showMeta": {
+            "type": "boolean",
+            "default": true
+        },
+        "showReleaseType": {
+            "type": "boolean",
+            "default": true
+        },
+        "intro": {
+            "type": "string",
+            "default": "This release brings significant improvements to performance, several new developer-facing APIs, and fixes a number of reported issues. We recommend all users upgrade."
+        },
+        "showIntro": {
+            "type": "boolean",
+            "default": true
+        },
+        "sections": {
+            "type": "array",
+            "default": [
+                {
+                    "type": "added",
+                    "items": [
+                        "New REST API endpoint `/api/v2/users/search` with full-text filtering",
+                        "Dark mode support across the entire admin interface",
+                        "Webhook support for real-time event notifications"
+                    ]
+                },
+                {
+                    "type": "changed",
+                    "items": [
+                        "Improved pagination performance on large datasets (up to 4× faster)",
+                        "Updated authentication flow to use OAuth 2.1"
+                    ]
+                },
+                {
+                    "type": "fixed",
+                    "items": [
+                        "Fixed a race condition in the export pipeline that occasionally produced empty files",
+                        "Resolved incorrect timezone handling in scheduled tasks"
+                    ]
+                },
+                {
+                    "type": "security",
+                    "items": [
+                        "Patched XSS vulnerability in the comment rendering module (CVE-2025-1234)"
+                    ]
+                }
+            ]
+        },
+        "changelogUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "compareUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "showLinks": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "stacked"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 24
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 168
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "itemSpacing": {
+            "type": "number",
+            "default": 6
+        },
+        "productNameSize": {
+            "type": "number",
+            "default": 13
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "introBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "introColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "addedBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "addedColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "changedBg": {
+            "type": "string",
+            "default": "#dbeafe"
+        },
+        "changedColor": {
+            "type": "string",
+            "default": "#1e3a8a"
+        },
+        "fixedBg": {
+            "type": "string",
+            "default": "#fef9c3"
+        },
+        "fixedColor": {
+            "type": "string",
+            "default": "#713f12"
+        },
+        "removedBg": {
+            "type": "string",
+            "default": "#fee2e2"
+        },
+        "removedColor": {
+            "type": "string",
+            "default": "#991b1b"
+        },
+        "securityBg": {
+            "type": "string",
+            "default": "#f3e8ff"
+        },
+        "securityColor": {
+            "type": "string",
+            "default": "#581c87"
+        },
+        "deprecatedBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "deprecatedColor": {
+            "type": "string",
+            "default": "#475569"
+        }
+    }
+}

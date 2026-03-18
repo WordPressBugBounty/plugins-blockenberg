@@ -1,0 +1,171 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/split-panel",
+    "version": "1.0.0",
+    "title": "Split Panel",
+    "category": "bkbg-layout",
+    "description": "Two-column comparison panel for Before/After, Problem/Solution, or any paired content.",
+    "keywords": [
+        "split",
+        "compare",
+        "before after",
+        "problem solution",
+        "two column"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-split-panel-editor",
+    "style": "bkbg-split-panel-style",
+    "attributes": {
+        "showTitle": {
+            "type": "boolean",
+            "default": false
+        },
+        "title": {
+            "type": "string",
+            "default": ""
+        },
+        "leftTitle": {
+            "type": "string",
+            "default": "The Problem"
+        },
+        "leftIcon": {
+            "type": "string",
+            "default": "❌"
+        },
+        "leftIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "leftIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "leftIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "leftBody": {
+            "type": "string",
+            "default": "Teams waste hours on manual reporting, chase data across multiple tools, and miss insights until it's too late."
+        },
+        "leftItems": {
+            "type": "array",
+            "default": [
+                "No central data source",
+                "Manual spreadsheet updates",
+                "Delayed or missing insights",
+                "Error-prone copy-paste workflows"
+            ]
+        },
+        "leftBg": {
+            "type": "string",
+            "default": "#fef2f2"
+        },
+        "leftAccent": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "rightTitle": {
+            "type": "string",
+            "default": "The Solution"
+        },
+        "rightIcon": {
+            "type": "string",
+            "default": "✅"
+        },
+        "rightIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "rightIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "rightIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "rightBody": {
+            "type": "string",
+            "default": "One unified dashboard automates everything — live data, scheduled reports, and instant anomaly alerts."
+        },
+        "rightItems": {
+            "type": "array",
+            "default": [
+                "Real-time unified data view",
+                "Automated scheduled reports",
+                "Instant smart alerts",
+                "Audit trail and version history"
+            ]
+        },
+        "rightBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "rightAccent": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "showDivider": {
+            "type": "boolean",
+            "default": true
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "padding": {
+            "type": "number",
+            "default": 28
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 19
+        },
+        "titleFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 36
+        },
+        "itemFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "itemFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "itemLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "headingTypo": { "type": "object", "default": {} },
+        "titleTypo":   { "type": "object", "default": {} },
+        "bodyTypo":    { "type": "object", "default": {} },
+        "itemTypo":    { "type": "object", "default": {} }
+    }
+}

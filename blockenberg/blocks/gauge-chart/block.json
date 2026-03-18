@@ -1,0 +1,136 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/gauge-chart",
+    "version": "1.0.0",
+    "title": "Gauge Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-pie",
+    "description": "SVG semicircular gauge / speedometer that animates on scroll with configurable color zones.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-gauge-chart-editor",
+    "editorStyle": "bkbg-gauge-chart-style",
+    "style": "bkbg-gauge-chart-style",
+    "viewScript": "bkbg-gauge-chart-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "value": {
+            "type": "number",
+            "default": 72
+        },
+        "minValue": {
+            "type": "number",
+            "default": 0
+        },
+        "maxValue": {
+            "type": "number",
+            "default": 100
+        },
+        "label": {
+            "type": "string",
+            "default": "Performance Score"
+        },
+        "unit": {
+            "type": "string",
+            "default": "%"
+        },
+        "size": {
+            "type": "number",
+            "default": 260
+        },
+        "strokeWidth": {
+            "type": "number",
+            "default": 18
+        },
+        "showNeedle": {
+            "type": "boolean",
+            "default": false
+        },
+        "showValue": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTicks": {
+            "type": "boolean",
+            "default": true
+        },
+        "tickCount": {
+            "type": "number",
+            "default": 10
+        },
+        "animateDuration": {
+            "type": "number",
+            "default": 1200
+        },
+        "colorZones": {
+            "type": "array",
+            "default": [
+                {
+                    "from": 0,
+                    "to": 33,
+                    "color": "#ef4444"
+                },
+                {
+                    "from": 33,
+                    "to": 66,
+                    "color": "#f59e0b"
+                },
+                {
+                    "from": 66,
+                    "to": 100,
+                    "color": "#22c55e"
+                }
+            ]
+        },
+        "trackColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "valueFontSize": {
+            "type": "number",
+            "default": 40
+        },
+        "valueColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "typoValue": {
+            "type": "object",
+            "default": {}
+        },
+        "typoLabel": {
+            "type": "object",
+            "default": {}
+        },
+        "needleColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "align": {
+            "type": "string",
+            "default": "center"
+        }
+    }
+}

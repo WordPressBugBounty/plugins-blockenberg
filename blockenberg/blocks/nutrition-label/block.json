@@ -1,0 +1,198 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/nutrition-label",
+    "title": "Nutrition Label",
+    "category": "bkbg-blog",
+    "icon": "food",
+    "description": "Display an FDA-style Nutrition Facts panel for recipes and food products with full nutrient fields, daily value percentages, and custom styling.",
+    "keywords": [
+        "nutrition",
+        "calories",
+        "food",
+        "recipe",
+        "facts",
+        "label",
+        "macros",
+        "diet"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-nutrition-label-editor",
+    "style": "bkbg-nutrition-label-style",
+    "viewScript": "bkbg-nutrition-label-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Nutrition Facts"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "foodName": {
+            "type": "string",
+            "default": ""
+        },
+        "servingSize": {
+            "type": "string",
+            "default": "1 cup (240g)"
+        },
+        "servingsPerContainer": {
+            "type": "string",
+            "default": "2"
+        },
+        "calories": {
+            "type": "number",
+            "default": 250
+        },
+        "totalFat": {
+            "type": "number",
+            "default": 8
+        },
+        "saturatedFat": {
+            "type": "number",
+            "default": 2
+        },
+        "transFat": {
+            "type": "number",
+            "default": 0
+        },
+        "polyFat": {
+            "type": "number",
+            "default": 1.5
+        },
+        "monoFat": {
+            "type": "number",
+            "default": 3
+        },
+        "cholesterol": {
+            "type": "number",
+            "default": 10
+        },
+        "sodium": {
+            "type": "number",
+            "default": 470
+        },
+        "totalCarbs": {
+            "type": "number",
+            "default": 37
+        },
+        "dietaryFiber": {
+            "type": "number",
+            "default": 4
+        },
+        "totalSugars": {
+            "type": "number",
+            "default": 12
+        },
+        "addedSugars": {
+            "type": "number",
+            "default": 3
+        },
+        "protein": {
+            "type": "number",
+            "default": 5
+        },
+        "vitaminD": {
+            "type": "number",
+            "default": 2
+        },
+        "calcium": {
+            "type": "number",
+            "default": 260
+        },
+        "iron": {
+            "type": "number",
+            "default": 8
+        },
+        "potassium": {
+            "type": "number",
+            "default": 235
+        },
+        "showPolyMono": {
+            "type": "boolean",
+            "default": false
+        },
+        "showAddedSugars": {
+            "type": "boolean",
+            "default": true
+        },
+        "showVitamins": {
+            "type": "boolean",
+            "default": true
+        },
+        "showFootnote": {
+            "type": "boolean",
+            "default": true
+        },
+        "dvRef": {
+            "type": "string",
+            "default": "2000"
+        },
+        "labelStyle": {
+            "type": "string",
+            "default": "fda"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "calorieColor": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "dvColor": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "containerBg": {
+            "type": "string",
+            "default": ""
+        },
+        "labelWidth": {
+            "type": "number",
+            "default": 340
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 3
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 0
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 40
+        }
+    }
+}

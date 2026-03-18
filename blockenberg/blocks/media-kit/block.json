@@ -1,0 +1,242 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/media-kit",
+    "title": "Media Kit",
+    "description": "Downloadable brand and media kit with logos, colors, typography, and asset downloads.",
+    "category": "bkbg-business",
+    "icon": "images-alt2",
+    "keywords": [
+        "brand",
+        "media kit",
+        "press",
+        "logo",
+        "colors",
+        "typography",
+        "assets",
+        "download"
+    ],
+    "editorScript": "bkbg-media-kit-editor",
+    "editorStyle": "bkbg-media-kit-style",
+    "style": "bkbg-media-kit-style",
+    "viewScript": "bkbg-media-kit-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "brandName": {
+            "type": "string",
+            "default": "Acme Corp"
+        },
+        "brandTagline": {
+            "type": "string",
+            "default": "Building the future, one pixel at a time."
+        },
+        "logoVariants": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Full Logo",
+                    "url": "",
+                    "id": 0,
+                    "format": "Full",
+                    "downloadUrl": ""
+                },
+                {
+                    "label": "Dark Version",
+                    "url": "",
+                    "id": 0,
+                    "format": "Dark",
+                    "downloadUrl": ""
+                },
+                {
+                    "label": "Icon Only",
+                    "url": "",
+                    "id": 0,
+                    "format": "Icon",
+                    "downloadUrl": ""
+                }
+            ]
+        },
+        "brandColors": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Primary",
+                    "hex": "#6366f1"
+                },
+                {
+                    "name": "Secondary",
+                    "hex": "#8b5cf6"
+                },
+                {
+                    "name": "Accent",
+                    "hex": "#10b981"
+                },
+                {
+                    "name": "Dark",
+                    "hex": "#1f2937"
+                },
+                {
+                    "name": "Light",
+                    "hex": "#f9fafb"
+                }
+            ]
+        },
+        "fonts": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Inter",
+                    "role": "Heading",
+                    "previewText": "The quick brown fox jumps over the lazy dog",
+                    "googleFontUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap"
+                },
+                {
+                    "name": "Georgia",
+                    "role": "Body",
+                    "previewText": "Clean and readable body text for long-form content.",
+                    "googleFontUrl": ""
+                }
+            ]
+        },
+        "guidelinesLabel": {
+            "type": "string",
+            "default": "Download Brand Guidelines"
+        },
+        "guidelinesDownloadUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "downloadAllLabel": {
+            "type": "string",
+            "default": "Download All Assets (ZIP)"
+        },
+        "downloadAllUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "pressEmail": {
+            "type": "string",
+            "default": "press@example.com"
+        },
+        "websiteUrl": {
+            "type": "string",
+            "default": "https://example.com"
+        },
+        "showLogos": {
+            "type": "boolean",
+            "default": true
+        },
+        "showColors": {
+            "type": "boolean",
+            "default": true
+        },
+        "showFonts": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDownloads": {
+            "type": "boolean",
+            "default": true
+        },
+        "showContact": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "sections"
+        },
+        "colorsPerRow": {
+            "type": "number",
+            "default": 5
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 900
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 40
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "downloadBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "downloadColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "sectionBorderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "brandNameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "taglineTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "sectionTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "metaTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

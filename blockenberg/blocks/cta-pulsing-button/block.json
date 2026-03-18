@@ -1,0 +1,244 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/cta-pulsing-button",
+    "title": "CTA Pulsing Button",
+    "category": "bkbg-marketing",
+    "icon": "button",
+    "description": "An animated Call-to-Action button with pulsing ring/glow effects, rich typography, hover colors, icon, badge, and subtext controls.",
+    "keywords": [
+        "cta",
+        "button",
+        "pulse",
+        "pulsing",
+        "animated",
+        "call to action",
+        "ripple",
+        "glow",
+        "ring"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-cta-pulsing-button-editor",
+    "editorStyle": "bkbg-cta-pulsing-button-style",
+    "style": "bkbg-cta-pulsing-button-style",
+    "viewScript": "bkbg-cta-pulsing-button-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "buttonText": {
+            "type": "string",
+            "default": "Get Started"
+        },
+        "url": {
+            "type": "string",
+            "default": ""
+        },
+        "urlNewTab": {
+            "type": "boolean",
+            "default": false
+        },
+        "urlNoFollow": {
+            "type": "boolean",
+            "default": false
+        },
+        "alignment": {
+            "type": "string",
+            "default": "center"
+        },
+        "buttonStyle": {
+            "type": "string",
+            "default": "solid"
+        },
+        "buttonSize": {
+            "type": "string",
+            "default": "md"
+        },
+        "buttonFontSize": {
+            "type": "number",
+            "default": 17
+        },
+        "buttonFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "buttonLetterSpacing": {
+            "type": "number",
+            "default": 0.5
+        },
+        "buttonTextTransform": {
+            "type": "string",
+            "default": "none"
+        },
+        "buttonPaddingV": {
+            "type": "number",
+            "default": 16
+        },
+        "buttonPaddingH": {
+            "type": "number",
+            "default": 36
+        },
+        "buttonBorderRadius": {
+            "type": "number",
+            "default": 50
+        },
+        "buttonBg": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "buttonBgHover": {
+            "type": "string",
+            "default": "#d97706"
+        },
+        "buttonTextColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "buttonTextColorHover": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "buttonBorderColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "buttonBorderWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "gradientFrom": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "gradientTo": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "gradientAngle": {
+            "type": "number",
+            "default": 135
+        },
+        "showButtonShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "buttonShadowColor": {
+            "type": "string",
+            "default": "rgba(245,158,11,0.45)"
+        },
+        "buttonShadowH": {
+            "type": "number",
+            "default": 0
+        },
+        "buttonShadowV": {
+            "type": "number",
+            "default": 10
+        },
+        "buttonShadowBlur": {
+            "type": "number",
+            "default": 28
+        },
+        "buttonShadowSpread": {
+            "type": "number",
+            "default": 0
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconType": {
+            "type": "string",
+            "default": "arrow-right"
+        },
+        "iconPosition": {
+            "type": "string",
+            "default": "right"
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 18
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "iconMoveOnHover": {
+            "type": "boolean",
+            "default": true
+        },
+        "pulseEffect": {
+            "type": "string",
+            "default": "ring"
+        },
+        "pulseColor": {
+            "type": "string",
+            "default": "rgba(245,158,11,0.55)"
+        },
+        "pulseSpeed": {
+            "type": "number",
+            "default": 1800
+        },
+        "pulseScale": {
+            "type": "number",
+            "default": 1.45
+        },
+        "pulseRings": {
+            "type": "string",
+            "default": "single"
+        },
+        "showSubtext": {
+            "type": "boolean",
+            "default": false
+        },
+        "subtext": {
+            "type": "string",
+            "default": "No credit card required"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.5)"
+        },
+        "subtextSize": {
+            "type": "number",
+            "default": 12
+        },
+        "subtextSpacing": {
+            "type": "number",
+            "default": 10
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": false
+        },
+        "badgeText": {
+            "type": "string",
+            "default": "New"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "badgeFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "typoButton": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtext": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

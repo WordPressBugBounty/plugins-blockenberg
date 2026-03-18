@@ -1,0 +1,151 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/lollipop-chart",
+    "version": "1.0.0",
+    "title": "Lollipop Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-bar",
+    "description": "Elegant horizontal lollipop chart — thin stems with value circles at the end. A clean alternative to bar charts for rankings, scores, and comparisons.",
+    "keywords": [
+        "lollipop",
+        "chart",
+        "dot",
+        "stem",
+        "ranking",
+        "comparison",
+        "visualization"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-lollipop-chart-editor",
+    "style": "bkbg-lollipop-chart-style",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Team Performance Scores"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "number",
+            "default": 700
+        },
+        "rowHeight": {
+            "type": "number",
+            "default": 44
+        },
+        "padTop": {
+            "type": "number",
+            "default": 20
+        },
+        "padLeft": {
+            "type": "number",
+            "default": 160
+        },
+        "padRight": {
+            "type": "number",
+            "default": 56
+        },
+        "dotRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "stemThickness": {
+            "type": "number",
+            "default": 2
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "valueFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "sortDesc": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGridLines": {
+            "type": "boolean",
+            "default": true
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "stemColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Alice Chen",
+                    "value": 94,
+                    "color": "#4f46e5"
+                },
+                {
+                    "label": "Bob Martinez",
+                    "value": 88,
+                    "color": "#0891b2"
+                },
+                {
+                    "label": "Carol Nguyen",
+                    "value": 82,
+                    "color": "#059669"
+                },
+                {
+                    "label": "David Kim",
+                    "value": 79,
+                    "color": "#d97706"
+                },
+                {
+                    "label": "Emma Wilson",
+                    "value": 75,
+                    "color": "#dc2626"
+                },
+                {
+                    "label": "Frank Lee",
+                    "value": 68,
+                    "color": "#7c3aed"
+                },
+                {
+                    "label": "Grace Patel",
+                    "value": 61,
+                    "color": "#ea580c"
+                }
+            ]
+        }
+    }
+}

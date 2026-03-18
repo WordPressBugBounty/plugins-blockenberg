@@ -1,0 +1,124 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/budget-planner",
+    "version": "1.0.0",
+    "title": "Monthly Budget Planner",
+    "category": "bkbg-calculators",
+    "icon": "money-alt",
+    "description": "Interactive monthly budget planner with income and expense categories. Track spending, visualise balance and see how much is left to allocate.",
+    "keywords": [
+        "budget",
+        "planner",
+        "income",
+        "expenses",
+        "spending",
+        "finance",
+        "money",
+        "personal finance",
+        "tracker"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-budget-planner-editor",
+    "style": "bkbg-budget-planner-style",
+    "viewScript": "bkbg-budget-planner-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Monthly Budget Planner"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Plan your monthly income and expenses to stay on track"
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "showSavingsGoal": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPieBreakdown": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTips": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultIncome": {
+            "type": "number",
+            "default": 5000
+        },
+        "defaultSavings": {
+            "type": "number",
+            "default": 500
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "expenseColor": {
+            "type": "string",
+            "default": "#f43f5e"
+        },
+        "savingsColor": {
+            "type": "string",
+            "default": "#8b5cf6"
+        },
+        "surplusColor": {
+            "type": "string",
+            "default": "#0ea5e9"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleFontSize": {
+            "type": "integer",
+            "default": 26
+        },
+        "contentMaxWidth": {
+            "type": "integer",
+            "default": 740
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

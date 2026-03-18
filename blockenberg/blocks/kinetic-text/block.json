@@ -1,0 +1,96 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/kinetic-text",
+    "title": "Kinetic Text",
+    "category": "bkbg-effects",
+    "description": "Text characters that scatter outward and snap back on hover with smooth physics animation.",
+    "keywords": [
+        "kinetic",
+        "scatter",
+        "hover",
+        "physics",
+        "text",
+        "animation",
+        "characters"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-kinetic-text-editor",
+    "style": "bkbg-kinetic-text-style",
+    "viewScript": "bkbg-kinetic-text-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "text": {
+            "type": "string",
+            "default": "Hover Me!"
+        },
+        "tag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "trigger": {
+            "type": "string",
+            "default": "hover"
+        },
+        "scatterMode": {
+            "type": "string",
+            "default": "explode"
+        },
+        "scatterRadius": {
+            "type": "number",
+            "default": 120
+        },
+        "scatterDuration": {
+            "type": "number",
+            "default": 400
+        },
+        "returnDuration": {
+            "type": "number",
+            "default": 600
+        },
+        "stagger": {
+            "type": "number",
+            "default": 20
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 56
+        },
+        "fontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "letterSpacing": {
+            "type": "number",
+            "default": 0
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "hoverColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

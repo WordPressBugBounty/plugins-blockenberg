@@ -1,0 +1,142 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/separator",
+    "title": "Separator / Divider",
+    "category": "bkbg-layout",
+    "icon": "minus",
+    "description": "Decorative divider: line, wave, zigzag or dot pattern, optionally with an icon or text in the centre.",
+    "keywords": [
+        "separator",
+        "divider",
+        "hr",
+        "line",
+        "wave",
+        "zigzag",
+        "rule"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-separator-editor",
+    "editorStyle": "bkbg-separator-style",
+    "style": "bkbg-separator-style",
+    "viewScript": "bkbg-separator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "blockId": {
+            "type": "string",
+            "default": ""
+        },
+        "dividerType": {
+            "type": "string",
+            "default": "line"
+        },
+        "lineColor": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "lineThickness": {
+            "type": "number",
+            "default": 1
+        },
+        "svgHeight": {
+            "type": "number",
+            "default": 24
+        },
+        "dotSpacing": {
+            "type": "number",
+            "default": 14
+        },
+        "marginTop": {
+            "type": "number",
+            "default": 24
+        },
+        "marginBottom": {
+            "type": "number",
+            "default": 24
+        },
+        "widthPercent": {
+            "type": "number",
+            "default": 100
+        },
+        "middleType": {
+            "type": "string",
+            "default": "none"
+        },
+        "middlePosition": {
+            "type": "string",
+            "default": "center"
+        },
+        "gapAroundMiddle": {
+            "type": "number",
+            "default": 16
+        },
+        "iconName": {
+            "type": "string",
+            "default": "star"
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 20
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "iconBgColor": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "iconBgShape": {
+            "type": "string",
+            "default": "none"
+        },
+        "iconBgSize": {
+            "type": "number",
+            "default": 36
+        },
+        "middleText": {
+            "type": "string",
+            "default": "§"
+        },
+        "textSize": {
+            "type": "number",
+            "default": 14
+        },
+        "textWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "textBgColor": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "textPaddingH": {
+            "type": "number",
+            "default": 12
+        },
+        "textPaddingV": {
+            "type": "number",
+            "default": 4
+        },
+        "textRadius": {
+            "type": "number",
+            "default": 4
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,115 @@
+/* ── Text Highlight ──────────────────────────────────────────── */
+
+.bkth-wrap {
+    box-sizing: border-box;
+}
+
+/* ── title typography ── */
+.bkth-title {
+    font-family:      var(--bkth-tt-font-family, inherit);
+    font-size:        var(--bkth-tt-font-size-d, 44px);
+    line-height:      var(--bkth-tt-line-height-d, 1.25);
+    font-weight:      var(--bkth-tt-font-weight, 700);
+    font-style:       var(--bkth-tt-font-style, normal);
+    text-decoration:  var(--bkth-tt-text-decoration, none);
+    text-transform:   var(--bkth-tt-text-transform, none);
+    letter-spacing:   var(--bkth-tt-letter-spacing-d, 0px);
+    word-spacing:     var(--bkth-tt-word-spacing-d, normal);
+    margin: 0;
+}
+
+.bkth-wrap h1.bkth-title,
+.bkth-wrap h2.bkth-title,
+.bkth-wrap h3.bkth-title,
+.bkth-wrap h4.bkth-title {
+    font-family:      var(--bkth-tt-font-family, inherit);
+    font-size:        var(--bkth-tt-font-size-d, 44px);
+    line-height:      var(--bkth-tt-line-height-d, 1.25);
+    font-weight:      var(--bkth-tt-font-weight, 700);
+    font-style:       var(--bkth-tt-font-style, normal);
+    text-decoration:  var(--bkth-tt-text-decoration, none);
+    text-transform:   var(--bkth-tt-text-transform, none);
+    letter-spacing:   var(--bkth-tt-letter-spacing-d, 0px);
+    word-spacing:     var(--bkth-tt-word-spacing-d, normal);
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .bkth-wrap .bkth-title {
+        font-size:        var(--bkth-tt-font-size-t, var(--bkth-tt-font-size-d, 44px));
+        line-height:      var(--bkth-tt-line-height-t, var(--bkth-tt-line-height-d, 1.25));
+        letter-spacing:   var(--bkth-tt-letter-spacing-t, var(--bkth-tt-letter-spacing-d, 0px));
+        word-spacing:     var(--bkth-tt-word-spacing-t, var(--bkth-tt-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkth-wrap .bkth-title {
+        font-size:        var(--bkth-tt-font-size-m, var(--bkth-tt-font-size-t, var(--bkth-tt-font-size-d, 44px)));
+        line-height:      var(--bkth-tt-line-height-m, var(--bkth-tt-line-height-t, var(--bkth-tt-line-height-d, 1.25)));
+        letter-spacing:   var(--bkth-tt-letter-spacing-m, var(--bkth-tt-letter-spacing-t, var(--bkth-tt-letter-spacing-d, 0px)));
+        word-spacing:     var(--bkth-tt-word-spacing-m, var(--bkth-tt-word-spacing-t, var(--bkth-tt-word-spacing-d, normal)));
+    }
+}
+
+.bkth-hl {
+    position: relative;
+    display: inline;
+}
+
+/* ── Sweep animation (marker / box / underline) ── */
+.bkth-hl.bkth-animate {
+    transition: background-size var(--bkth-hl-dur, 600ms) ease,
+                border-color    var(--bkth-hl-dur, 600ms) ease,
+                text-shadow     var(--bkth-hl-dur, 600ms) ease;
+}
+
+/* Marker sweep: background grows from 0 → 100% width */
+.bkth-hl--marker.bkth-animate {
+    background-size: 0% 100% !important;
+    background-repeat: no-repeat;
+    background-position: left center;
+    transition: background-size var(--bkth-hl-dur, 600ms) cubic-bezier(0.25, 1, 0.5, 1);
+}
+.bkth-hl--marker.bkth-revealed {
+    background-size: 100% 100% !important;
+}
+
+/* Underline sweep: grows from 0 → 100% */
+.bkth-hl--underline.bkth-animate {
+    border-bottom-width: 0 !important;
+    transition: border-bottom-width var(--bkth-hl-dur, 600ms) ease;
+}
+.bkth-hl--underline.bkth-revealed {
+    border-bottom-width: inherit !important;
+}
+
+/* Fade */
+.bkth-hl--box.bkth-animate,
+.bkth-hl--strikethrough.bkth-animate,
+.bkth-hl--glow.bkth-animate {
+    opacity: 0;
+    transition: opacity var(--bkth-hl-dur, 600ms) ease;
+}
+.bkth-hl--box.bkth-revealed,
+.bkth-hl--strikethrough.bkth-revealed,
+.bkth-hl--glow.bkth-revealed {
+    opacity: 1;
+}
+
+/* Stagger: each mark delayed by index * --bkth-hl-delay */
+.bkth-hl[data-bkth-i] {
+    transition-delay: calc(var(--bkth-hl-delay, 80ms) * attr(data-bkth-i number, 0));
+}
+
+/* Reduced motion: show immediately */
+@media (prefers-reduced-motion: reduce) {
+    .bkth-hl.bkth-animate {
+        transition: none !important;
+    }
+    .bkth-hl--marker.bkth-animate { background-size: 100% 100% !important; }
+    .bkth-hl--underline.bkth-animate { border-bottom-width: inherit !important; }
+    .bkth-hl--box.bkth-animate,
+    .bkth-hl--strikethrough.bkth-animate,
+    .bkth-hl--glow.bkth-animate { opacity: 1; }
+}

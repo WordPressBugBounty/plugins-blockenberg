@@ -1,0 +1,288 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/vision-mission",
+    "title": "Vision & Mission",
+    "description": "Company mission, vision, and core values section with multiple layouts.",
+    "category": "bkbg-business",
+    "icon": "flag",
+    "keywords": [
+        "vision",
+        "mission",
+        "values",
+        "company",
+        "purpose",
+        "culture",
+        "about"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-vision-mission-editor",
+    "style": "bkbg-vision-mission-style",
+    "viewScript": "bkbg-vision-mission-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "Who We Are"
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "heading": {
+            "type": "string",
+            "default": "Built Around a Clear Purpose"
+        },
+        "showHeading": {
+            "type": "boolean",
+            "default": true
+        },
+        "showMission": {
+            "type": "boolean",
+            "default": true
+        },
+        "missionLabel": {
+            "type": "string",
+            "default": "Our Mission"
+        },
+        "missionText": {
+            "type": "string",
+            "default": "To empower businesses of every size with the tools, strategy, and support they need to grow with confidence."
+        },
+        "missionIcon": {
+            "type": "string",
+            "default": "🎯"
+        },
+        "missionIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "missionIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "missionIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "showVision": {
+            "type": "boolean",
+            "default": true
+        },
+        "visionLabel": {
+            "type": "string",
+            "default": "Our Vision"
+        },
+        "visionText": {
+            "type": "string",
+            "default": "A world where every entrepreneur has access to enterprise-grade growth systems — regardless of their budget or background."
+        },
+        "visionIcon": {
+            "type": "string",
+            "default": "🔭"
+        },
+        "visionIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "visionIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "visionIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "valuesLabel": {
+            "type": "string",
+            "default": "Core Values"
+        },
+        "values": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "💡",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Clarity First",
+                    "description": "We believe in clear communication and transparent processes, always."
+                },
+                {
+                    "icon": "🤝",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Client Obsessed",
+                    "description": "Every decision starts and ends with what creates real value for our clients."
+                },
+                {
+                    "icon": "🚀",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Bias for Action",
+                    "description": "We move fast, learn quickly, and course-correct without ego."
+                },
+                {
+                    "icon": "🌱",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Long-term Thinking",
+                    "description": "We build for sustainability, not just the next quarter."
+                },
+                {
+                    "icon": "📐",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Relentless Craft",
+                    "description": "We take pride in every detail — from code to copy to client calls."
+                },
+                {
+                    "icon": "♻️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Responsible Growth",
+                    "description": "We grow in ways that are good for our team, clients, and community."
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "mission-top"
+        },
+        "valuesColumns": {
+            "type": "number",
+            "default": 3
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "eyebrowBg": {
+            "type": "string",
+            "default": "#f3f0ff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "missionBg": {
+            "type": "string",
+            "default": "#f8f5ff"
+        },
+        "missionBorder": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "missionLabelColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "missionTextColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "visionBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "visionBorder": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "visionLabelColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "visionTextColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "valueCardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "valueCardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "valueTitleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "valueDescColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "valuesLabelColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 38
+        },
+        "missionTextSize": {
+            "type": "number",
+            "default": 18
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1100
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "eyebrowSize": {
+            "type": "number",
+            "default": 12
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "eyebrowTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "statementTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "valueTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "valueDescTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

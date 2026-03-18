@@ -1,0 +1,96 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/interactive-image-sheen",
+    "title": "Interactive Image Sheen",
+    "description": "An image card with a glossy light sheen that follows the mouse cursor, giving a premium holographic feel.",
+    "category": "bkbg-effects",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-interactive-image-sheen-editor",
+    "style": "bkbg-interactive-image-sheen-style",
+    "viewScript": "bkbg-interactive-image-sheen-frontend",
+    "icon": "visibility",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "imageWidth": {
+            "type": "integer",
+            "default": 480
+        },
+        "imageHeight": {
+            "type": "integer",
+            "default": 320
+        },
+        "imageRadius": {
+            "type": "integer",
+            "default": 20
+        },
+        "sheenColor": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.35)"
+        },
+        "sheenSize": {
+            "type": "integer",
+            "default": 60
+        },
+        "sheenBlur": {
+            "type": "integer",
+            "default": 40
+        },
+        "tiltStrength": {
+            "type": "integer",
+            "default": 12
+        },
+        "tiltShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "shadowColor": {
+            "type": "string",
+            "default": "rgba(99,102,241,0.4)"
+        },
+        "showCaption": {
+            "type": "boolean",
+            "default": false
+        },
+        "caption": {
+            "type": "string",
+            "default": ""
+        },
+        "captionSize": {
+            "type": "integer",
+            "default": 14
+        },
+        "captionColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "align2": {
+            "type": "string",
+            "default": "center"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "captionTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

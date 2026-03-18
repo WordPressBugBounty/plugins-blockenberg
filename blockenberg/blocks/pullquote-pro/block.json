@@ -1,0 +1,125 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/pullquote-pro",
+    "title": "Pullquote Pro",
+    "category": "bkbg-blog",
+    "icon": "format-quote",
+    "description": "Eye-catching quotation with large typography, decorative marks, author avatar, and alignment options.",
+    "keywords": [
+        "pullquote",
+        "quote",
+        "citation",
+        "blockquote",
+        "magazine",
+        "author"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-pullquote-pro-editor",
+    "editorStyle": "bkbg-pullquote-pro-style",
+    "style": "bkbg-pullquote-pro-style",
+    "viewScript": "bkbg-pullquote-pro-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "quoteText": {
+            "type": "string",
+            "default": "Design is not just what it looks like and feels like. Design is how it works."
+        },
+        "authorName": {
+            "type": "string",
+            "default": "Steve Jobs"
+        },
+        "authorRole": {
+            "type": "string",
+            "default": "Co-founder, Apple"
+        },
+        "showAvatar": {
+            "type": "boolean",
+            "default": false
+        },
+        "avatarUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "avatarId": {
+            "type": "number",
+            "default": 0
+        },
+        "avatarSize": {
+            "type": "number",
+            "default": 56
+        },
+        "quoteMarkStyle": {
+            "type": "string",
+            "default": "curved"
+        },
+        "layout": {
+            "type": "string",
+            "default": "center"
+        },
+        "showAccent": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentPosition": {
+            "type": "string",
+            "default": "left"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "accentWidth": {
+            "type": "number",
+            "default": 4
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#222222"
+        },
+        "markColor": {
+            "type": "string",
+            "default": "#d1c4e9"
+        },
+        "quoteTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "authorTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "preset": {
+            "type": "string",
+            "default": "editorial"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "paddingV": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingH": {
+            "type": "number",
+            "default": 40
+        },
+        "shadow": {
+            "type": "boolean",
+            "default": false
+        }
+    }
+}

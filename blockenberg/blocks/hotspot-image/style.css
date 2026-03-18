@@ -1,0 +1,182 @@
+/* Hotspot Image — bkhi- */
+.bkhi-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border-radius: var(--bkhi-radius, 12px);
+  overflow: hidden;
+  line-height: 0;
+}
+
+.bkhi-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--bkhi-radius, 12px);
+}
+.bkhi-placeholder {
+  height: 320px;
+  background: #2c2c2c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.bkhi-placeholder .dashicons {
+  font-size: 64px;
+  width: 64px;
+  height: 64px;
+  color: #555;
+}
+
+/* ── Pin ── */
+.bkhi-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  cursor: pointer;
+}
+
+.bkhi-dot {
+  width: var(--bkhi-size, 18px);
+  height: var(--bkhi-size, 18px);
+  background: var(--bkhi-marker, #6c3fb5);
+  border: 2px solid rgba(255,255,255,0.8);
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.2s;
+}
+.bkhi-pin:hover .bkhi-dot,
+.bkhi-pin.bkhi-active .bkhi-dot {
+  transform: scale(1.2);
+}
+
+/* Pulse ring */
+.bkhi-marker-pulse .bkhi-dot::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 2px solid var(--bkhi-marker, #6c3fb5);
+  animation: bkhiPulse 2s ease-out infinite;
+}
+@keyframes bkhiPulse {
+  0%   { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(2.2); }
+}
+
+/* Plus marker */
+.bkhi-marker-plus .bkhi-dot {
+  border-radius: 4px;
+}
+.bkhi-marker-plus .bkhi-dot::after {
+  content: '+';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+/* ── Tooltip ── */
+.bkhi-tooltip {
+  position: absolute;
+  background: var(--bkhi-tip-bg, #1e1e2e);
+  color: var(--bkhi-tip-text, #fff);
+  border-radius: 8px;
+  padding: 10px 14px;
+  min-width: 160px;
+  max-width: 240px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  line-height: 1.4;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 20;
+  white-space: normal;
+}
+
+/* Positions */
+.bkhi-tip-right .bkhi-tooltip  { left: calc(100% + 12px); top: 50%; transform: translateY(-50%) translateX(4px); }
+.bkhi-tip-left  .bkhi-tooltip  { right: calc(100% + 12px); top: 50%; transform: translateY(-50%) translateX(-4px); }
+.bkhi-tip-top   .bkhi-tooltip  { bottom: calc(100% + 12px); left: 50%; transform: translateX(-50%) translateY(-4px); }
+.bkhi-tip-bottom .bkhi-tooltip { top: calc(100% + 12px); left: 50%; transform: translateX(-50%) translateY(4px); }
+
+.bkhi-pin:hover .bkhi-tooltip,
+.bkhi-pin.bkhi-active .bkhi-tooltip,
+.bkhi-pin.bkhi-editor-open .bkhi-tooltip {
+  opacity: 1;
+}
+.bkhi-tip-right  .bkhi-tooltip { transform: translateY(-50%) translateX(0); }
+.bkhi-tip-left   .bkhi-tooltip { transform: translateY(-50%) translateX(0); }
+.bkhi-tip-top    .bkhi-tooltip { transform: translateX(-50%) translateY(0); }
+.bkhi-tip-bottom .bkhi-tooltip { transform: translateX(-50%) translateY(0); }
+
+/* ── Tooltip title typography (CSS-var driven) ── */
+.bkhi-tip-title {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--bkhi-tt-font-family, inherit);
+  font-size: var(--bkhi-tt-font-size-d, 13px);
+  font-weight: var(--bkhi-tt-font-weight, 700);
+  font-style: var(--bkhi-tt-font-style, normal);
+  text-decoration: var(--bkhi-tt-text-decoration, none);
+  text-transform: var(--bkhi-tt-text-transform, none);
+  line-height: var(--bkhi-tt-line-height-d, 1.4);
+  letter-spacing: var(--bkhi-tt-letter-spacing-d, normal);
+  word-spacing: var(--bkhi-tt-word-spacing-d, normal);
+}
+
+/* ── Tooltip content typography (CSS-var driven) ── */
+.bkhi-tip-content {
+  margin: 0;
+  opacity: 0.85;
+  font-family: var(--bkhi-ct-font-family, inherit);
+  font-size: var(--bkhi-ct-font-size-d, 12px);
+  font-weight: var(--bkhi-ct-font-weight, normal);
+  font-style: var(--bkhi-ct-font-style, normal);
+  text-decoration: var(--bkhi-ct-text-decoration, none);
+  text-transform: var(--bkhi-ct-text-transform, none);
+  line-height: var(--bkhi-ct-line-height-d, 1.45);
+  letter-spacing: var(--bkhi-ct-letter-spacing-d, normal);
+  word-spacing: var(--bkhi-ct-word-spacing-d, normal);
+}
+
+/* ── Responsive: Tablet ── */
+@media (max-width: 1024px) {
+  .bkhi-tip-title {
+    font-size: var(--bkhi-tt-font-size-t, var(--bkhi-tt-font-size-d, 13px));
+    line-height: var(--bkhi-tt-line-height-t, var(--bkhi-tt-line-height-d, 1.4));
+    letter-spacing: var(--bkhi-tt-letter-spacing-t, var(--bkhi-tt-letter-spacing-d, normal));
+    word-spacing: var(--bkhi-tt-word-spacing-t, var(--bkhi-tt-word-spacing-d, normal));
+  }
+  .bkhi-tip-content {
+    font-size: var(--bkhi-ct-font-size-t, var(--bkhi-ct-font-size-d, 12px));
+    line-height: var(--bkhi-ct-line-height-t, var(--bkhi-ct-line-height-d, 1.45));
+    letter-spacing: var(--bkhi-ct-letter-spacing-t, var(--bkhi-ct-letter-spacing-d, normal));
+    word-spacing: var(--bkhi-ct-word-spacing-t, var(--bkhi-ct-word-spacing-d, normal));
+  }
+}
+
+/* ── Responsive: Mobile ── */
+@media (max-width: 767px) {
+  .bkhi-tip-title {
+    font-size: var(--bkhi-tt-font-size-m, var(--bkhi-tt-font-size-t, var(--bkhi-tt-font-size-d, 13px)));
+    line-height: var(--bkhi-tt-line-height-m, var(--bkhi-tt-line-height-t, var(--bkhi-tt-line-height-d, 1.4)));
+    letter-spacing: var(--bkhi-tt-letter-spacing-m, var(--bkhi-tt-letter-spacing-t, var(--bkhi-tt-letter-spacing-d, normal)));
+    word-spacing: var(--bkhi-tt-word-spacing-m, var(--bkhi-tt-word-spacing-t, var(--bkhi-tt-word-spacing-d, normal)));
+  }
+  .bkhi-tip-content {
+    font-size: var(--bkhi-ct-font-size-m, var(--bkhi-ct-font-size-t, var(--bkhi-ct-font-size-d, 12px)));
+    line-height: var(--bkhi-ct-line-height-m, var(--bkhi-ct-line-height-t, var(--bkhi-ct-line-height-d, 1.45)));
+    letter-spacing: var(--bkhi-ct-letter-spacing-m, var(--bkhi-ct-letter-spacing-t, var(--bkhi-ct-letter-spacing-d, normal)));
+    word-spacing: var(--bkhi-ct-word-spacing-m, var(--bkhi-ct-word-spacing-t, var(--bkhi-ct-word-spacing-d, normal)));
+  }
+}

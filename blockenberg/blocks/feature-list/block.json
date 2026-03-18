@@ -1,0 +1,234 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/feature-list",
+    "title": "Feature List",
+    "category": "bkbg-marketing",
+    "icon": "yes-alt",
+    "description": "Rich feature checklist showing included / not-included / partial / coming-soon states per item. Ideal for pricing pages, plan comparisons, and product spec sheets.",
+    "keywords": [
+        "feature",
+        "checklist",
+        "included",
+        "plan",
+        "pricing",
+        "compare",
+        "list"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-feature-list-editor",
+    "style": "bkbg-feature-list-style",
+    "viewScript": "bkbg-feature-list-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Everything in Pro"
+        },
+        "showHeading": {
+            "type": "boolean",
+            "default": true
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Unlimited projects",
+                    "status": "included",
+                    "description": "",
+                    "badge": "",
+                    "group": ""
+                },
+                {
+                    "label": "Custom domain",
+                    "status": "included",
+                    "description": "",
+                    "badge": "Popular",
+                    "group": ""
+                },
+                {
+                    "label": "Team members",
+                    "status": "partial",
+                    "description": "Up to 5 seats",
+                    "badge": "",
+                    "group": ""
+                },
+                {
+                    "label": "Advanced analytics",
+                    "status": "not-included",
+                    "description": "",
+                    "badge": "",
+                    "group": ""
+                },
+                {
+                    "label": "AI writing assistant",
+                    "status": "coming-soon",
+                    "description": "Launching Q3 2026",
+                    "badge": "Coming soon",
+                    "group": ""
+                },
+                {
+                    "label": "Priority support",
+                    "status": "included",
+                    "description": "24 / 7 live chat",
+                    "badge": "",
+                    "group": ""
+                },
+                {
+                    "label": "White-label exports",
+                    "status": "included",
+                    "description": "",
+                    "badge": "",
+                    "group": ""
+                },
+                {
+                    "label": "API access",
+                    "status": "not-included",
+                    "description": "",
+                    "badge": "",
+                    "group": ""
+                }
+            ]
+        },
+        "listStyle": {
+            "type": "string",
+            "default": "bordered"
+        },
+        "iconSet": {
+            "type": "string",
+            "default": "color-check"
+        },
+        "showDesc": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "showNotIncluded": {
+            "type": "boolean",
+            "default": true
+        },
+        "strikeNotIncluded": {
+            "type": "boolean",
+            "default": false
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 20
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "headingFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "headingFontWeight": {
+            "type": "string",
+            "default": "800"
+        },
+        "headingLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "labelFontWeight": {
+            "type": "string",
+            "default": "500"
+        },
+        "labelLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "typoHeading": {
+            "type": "object",
+            "default": {}
+        },
+        "typoLabel": {
+            "type": "object",
+            "default": {}
+        },
+        "typoDesc": {
+            "type": "object",
+            "default": {}
+        },
+        "gap": {
+            "type": "number",
+            "default": 0
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "itemBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "stripeBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "includedColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "notIncludedColor": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "partialColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "comingSoonColor": {
+            "type": "string",
+            "default": "#8b5cf6"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        }
+    }
+}

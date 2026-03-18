@@ -1,0 +1,125 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/magnetic-button",
+    "title": "Magnetic Button",
+    "category": "bkbg-effects",
+    "icon": "migrate",
+    "description": "A button that magnetically pulls toward the cursor as it approaches, with customizable pull strength, style, and ripple effect.",
+    "keywords": [
+        "magnetic",
+        "button",
+        "hover",
+        "cursor",
+        "interactive",
+        "animation",
+        "attract"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-magnetic-button-editor",
+    "style": "bkbg-magnetic-button-style",
+    "viewScript": "bkbg-magnetic-button-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "text": {
+            "type": "string",
+            "default": "Explore Now"
+        },
+        "subtext": {
+            "type": "string",
+            "default": ""
+        },
+        "href": {
+            "type": "string",
+            "default": ""
+        },
+        "target": {
+            "type": "string",
+            "default": "_self"
+        },
+        "buttonStyle": {
+            "type": "string",
+            "default": "filled"
+        },
+        "align": {
+            "type": "string",
+            "default": "center"
+        },
+        "magnetStrength": {
+            "type": "number",
+            "default": 40
+        },
+        "magnetRadius": {
+            "type": "number",
+            "default": 120
+        },
+        "ripple": {
+            "type": "boolean",
+            "default": true
+        },
+        "showArrow": {
+            "type": "boolean",
+            "default": false
+        },
+        "paddingX": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingY": {
+            "type": "number",
+            "default": 18
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 999
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 18
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btnBorderColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "hoverBg": {
+            "type": "string",
+            "default": "#4f46e5"
+        },
+        "hoverColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "rippleColor": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.35)"
+        },
+        "shadowColor": {
+            "type": "string",
+            "default": "rgba(99,102,241,0.4)"
+        }
+    }
+}

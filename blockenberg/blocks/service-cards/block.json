@@ -1,0 +1,223 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/service-cards",
+	"title": "Service Cards",
+	"description": "Grid of service offering cards with icon, title, description, bullet highlights and a learn-more link.",
+	"category": "bkbg-business",
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-service-cards-editor",
+	"style": "bkbg-service-cards-style",
+	"viewScript": "bkbg-service-cards-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"items": {
+			"type": "array",
+			"default": [
+				{
+					"id": "s1",
+					"icon": "🎨",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"accentColor": "#6c3fb5",
+					"title": "UI/UX Design",
+					"text": "Beautiful, user-centred interfaces that convert visitors into loyal customers.",
+					"highlights": [
+						"User Research",
+						"Prototyping",
+						"Design Systems"
+					],
+					"ctaLabel": "Learn More",
+					"ctaUrl": "#"
+				},
+				{
+					"id": "s2",
+					"icon": "⚡",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"accentColor": "#0ea5e9",
+					"title": "Web Development",
+					"text": "Fast, accessible and scalable websites tailored to your exact requirements.",
+					"highlights": [
+						"React & Next.js",
+						"WordPress",
+						"Performance Audits"
+					],
+					"ctaLabel": "Learn More",
+					"ctaUrl": "#"
+				},
+				{
+					"id": "s3",
+					"icon": "📈",
+					"iconType": "custom-char",
+					"iconDashicon": "",
+					"iconImageUrl": "",
+					"accentColor": "#10b981",
+					"title": "Growth & SEO",
+					"text": "Data-driven strategies to grow organic traffic and increase qualified leads.",
+					"highlights": [
+						"Keyword Strategy",
+						"Technical SEO",
+						"Content Planning"
+					],
+					"ctaLabel": "Learn More",
+					"ctaUrl": "#"
+				}
+			]
+		},
+		"columns": {
+			"type": "number",
+			"default": 3
+		},
+		"columnsTablet": {
+			"type": "number",
+			"default": 2
+		},
+		"columnsMobile": {
+			"type": "number",
+			"default": 1
+		},
+		"gap": {
+			"type": "number",
+			"default": 28
+		},
+		"cardStyle": {
+			"type": "string",
+			"default": "card"
+		},
+		"cardPadding": {
+			"type": "number",
+			"default": 32
+		},
+		"cardRadius": {
+			"type": "number",
+			"default": 16
+		},
+		"hoverEffect": {
+			"type": "string",
+			"default": "lift"
+		},
+		"accentBarPosition": {
+			"type": "string",
+			"default": "top"
+		},
+		"accentBarHeight": {
+			"type": "number",
+			"default": 4
+		},
+		"showHighlights": {
+			"type": "boolean",
+			"default": true
+		},
+		"showCta": {
+			"type": "boolean",
+			"default": true
+		},
+		"ctaStyle": {
+			"type": "string",
+			"default": "link"
+		},
+		"ctaRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"iconSize": {
+			"type": "number",
+			"default": 40
+		},
+		"iconBgSize": {
+			"type": "number",
+			"default": 64
+		},
+		"iconShape": {
+			"type": "string",
+			"default": "rounded"
+		},
+		"titleSize": {
+			"type": "number",
+			"default": 20
+		},
+		"textSize": {
+			"type": "number",
+			"default": 15
+		},
+		"highlightSize": {
+			"type": "number",
+			"default": 13
+		},
+		"ctaSize": {
+			"type": "number",
+			"default": 14
+		},
+		"useItemAccent": {
+			"type": "boolean",
+			"default": true
+		},
+		"globalAccent": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"cardBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"cardBorderColor": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#4b5563"
+		},
+		"highlightColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"highlightIconColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": ""
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 60
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 60
+		},
+		"titleFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"textFontWeight": {
+			"type": "number",
+			"default": 400
+		},
+		"titleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"textTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

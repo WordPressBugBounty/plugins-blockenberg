@@ -1,0 +1,243 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/reading-list",
+    "title": "Reading List",
+    "category": "bkbg-blog",
+    "icon": "book",
+    "description": "Curated book or article reading list with cover image, title, author, genre, star rating, read-status badge (Reading / Read / Want to Read / Recommended), description, and optional link.",
+    "keywords": [
+        "reading",
+        "books",
+        "list",
+        "library",
+        "articles",
+        "recommendations",
+        "bookshelf"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-reading-list-editor",
+    "style": "bkbg-reading-list-style",
+    "viewScript": "bkbg-reading-list-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "My Reading List"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Books and articles I recommend."
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "books": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "b1",
+                    "title": "Atomic Habits",
+                    "author": "James Clear",
+                    "genre": "Self-Help",
+                    "year": "2018",
+                    "rating": 5,
+                    "status": "read",
+                    "description": "A practical guide to building good habits and breaking bad ones through small, incremental changes.",
+                    "coverUrl": "",
+                    "coverId": 0,
+                    "url": ""
+                },
+                {
+                    "id": "b2",
+                    "title": "The Lean Startup",
+                    "author": "Eric Ries",
+                    "genre": "Business",
+                    "year": "2011",
+                    "rating": 5,
+                    "status": "read",
+                    "description": "How today's entrepreneurs use continuous innovation to create radically successful businesses.",
+                    "coverUrl": "",
+                    "coverId": 0,
+                    "url": ""
+                },
+                {
+                    "id": "b3",
+                    "title": "Deep Work",
+                    "author": "Cal Newport",
+                    "genre": "Productivity",
+                    "year": "2016",
+                    "rating": 4,
+                    "status": "read",
+                    "description": "Rules for focused success in a distracted world. A compelling argument for doing fewer things with more intensity.",
+                    "coverUrl": "",
+                    "coverId": 0,
+                    "url": ""
+                },
+                {
+                    "id": "b4",
+                    "title": "Shape Up",
+                    "author": "Ryan Singer",
+                    "genre": "Product",
+                    "year": "2019",
+                    "rating": 4,
+                    "status": "reading",
+                    "description": "Stop running in circles and ship work that matters — Basecamp's product development methodology.",
+                    "coverUrl": "",
+                    "coverId": 0,
+                    "url": ""
+                },
+                {
+                    "id": "b5",
+                    "title": "The Pragmatic Programmer",
+                    "author": "David Thomas, Andrew Hunt",
+                    "genre": "Tech",
+                    "year": "2019",
+                    "rating": 5,
+                    "status": "want-to-read",
+                    "description": "Your journey to mastery — timeless tips for programmers at every level.",
+                    "coverUrl": "",
+                    "coverId": 0,
+                    "url": ""
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "list"
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "showCover": {
+            "type": "boolean",
+            "default": true
+        },
+        "showRating": {
+            "type": "boolean",
+            "default": true
+        },
+        "showStatus": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGenre": {
+            "type": "boolean",
+            "default": true
+        },
+        "showYear": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLink": {
+            "type": "boolean",
+            "default": true
+        },
+        "linkLabel": {
+            "type": "string",
+            "default": "View →"
+        },
+        "filterByStatus": {
+            "type": "boolean",
+            "default": false
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "bookTitleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "authorColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "genreColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "starColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bookTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "metaTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "coverHeight": {
+            "type": "number",
+            "default": 180
+        },
+        "gap": {
+            "type": "number",
+            "default": 20
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        }
+    }
+}

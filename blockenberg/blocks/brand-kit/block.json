@@ -1,0 +1,280 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/brand-kit",
+    "title": "Brand Kit",
+    "category": "bkbg-business",
+    "icon": "art",
+    "description": "Brand style guide: colour swatches, typography specimens, logo variants, and brand values — all in one block.",
+    "keywords": [
+        "brand",
+        "design",
+        "style guide",
+        "colors",
+        "typography",
+        "logo",
+        "identity"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-brand-kit-editor",
+    "style": "bkbg-brand-kit-style",
+    "viewScript": "bkbg-brand-kit-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "sectionTitle": {
+            "type": "string",
+            "default": "Brand Identity"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showColors": {
+            "type": "boolean",
+            "default": true
+        },
+        "colorsTitle": {
+            "type": "string",
+            "default": "Colour Palette"
+        },
+        "colors": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Indigo",
+                    "value": "#6366f1",
+                    "isLight": false
+                },
+                {
+                    "name": "Violet",
+                    "value": "#8b5cf6",
+                    "isLight": false
+                },
+                {
+                    "name": "Sky",
+                    "value": "#0ea5e9",
+                    "isLight": false
+                },
+                {
+                    "name": "Emerald",
+                    "value": "#10b981",
+                    "isLight": false
+                },
+                {
+                    "name": "Slate 900",
+                    "value": "#0f172a",
+                    "isLight": false
+                },
+                {
+                    "name": "Slate 50",
+                    "value": "#f8fafc",
+                    "isLight": true
+                },
+                {
+                    "name": "White",
+                    "value": "#ffffff",
+                    "isLight": true
+                }
+            ]
+        },
+        "showCopyHint": {
+            "type": "boolean",
+            "default": true
+        },
+        "swatchRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "swatchHeight": {
+            "type": "number",
+            "default": 90
+        },
+        "showColorName": {
+            "type": "boolean",
+            "default": true
+        },
+        "showColorHex": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTypography": {
+            "type": "boolean",
+            "default": true
+        },
+        "typographyTitle": {
+            "type": "string",
+            "default": "Typography"
+        },
+        "fonts": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Heading Font",
+                    "familyName": "Inter",
+                    "cssFamily": "'Inter', sans-serif",
+                    "headingText": "The quick brown fox",
+                    "bodyText": "We craft meaningful digital products that people love to use. Our work is guided by clarity, creativity, and craftsmanship.",
+                    "weights": "400, 600, 700, 800",
+                    "sourceUrl": "https://fonts.google.com/specimen/Inter"
+                },
+                {
+                    "name": "Body Font",
+                    "familyName": "DM Sans",
+                    "cssFamily": "'DM Sans', sans-serif",
+                    "headingText": "Always be shipping",
+                    "bodyText": "Good design is not about decoration — it's about communication. Every pixel should serve a purpose.",
+                    "weights": "400, 500, 600",
+                    "sourceUrl": "https://fonts.google.com/specimen/DM+Sans"
+                }
+            ]
+        },
+        "showLogos": {
+            "type": "boolean",
+            "default": true
+        },
+        "logosTitle": {
+            "type": "string",
+            "default": "Logo Usage"
+        },
+        "logos": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Primary (Light bg)",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "Logo",
+                    "bgStyle": "light",
+                    "description": "Use on white or light backgrounds."
+                },
+                {
+                    "label": "Reversed (Dark bg)",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "Logo",
+                    "bgStyle": "dark",
+                    "description": "Use on dark or coloured backgrounds."
+                },
+                {
+                    "label": "Icon / Favicon",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "Icon",
+                    "bgStyle": "transparent",
+                    "description": "Minimum size: 24 × 24 px."
+                }
+            ]
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "valuesTitle": {
+            "type": "string",
+            "default": "Brand Values"
+        },
+        "values": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "🎯",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Purpose-driven",
+                    "description": "Every decision serves a clear goal."
+                },
+                {
+                    "icon": "✨",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Craftsmanship",
+                    "description": "We obsess over quality in every detail."
+                },
+                {
+                    "icon": "🤝",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Transparency",
+                    "description": "We communicate openly and honestly."
+                },
+                {
+                    "icon": "🚀",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Momentum",
+                    "description": "We ship fast and iterate faster."
+                }
+            ]
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1000
+        },
+        "containerPadding": {
+            "type": "number",
+            "default": 48
+        },
+        "sectionGap": {
+            "type": "number",
+            "default": 56
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 28
+        },
+        "containerBg": {
+            "type": "string",
+            "default": ""
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "sectionLabelColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "sectionLabelBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "valueIconBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

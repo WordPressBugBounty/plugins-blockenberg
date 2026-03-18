@@ -1,0 +1,201 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/icon-list",
+    "title": "Icon List",
+    "description": "A rich feature list with custom icons, badges, titles, and descriptions per row. Ideal for showcasing product features, service benefits, or any structured list with visual flair.",
+    "category": "bkbg-content",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-icon-list-editor",
+    "style": "bkbg-icon-list-style",
+    "viewScript": "bkbg-icon-list-frontend",
+    "icon": "list-view",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Why Choose Us"
+        },
+        "showHeading": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtext": {
+            "type": "string",
+            "default": ""
+        },
+        "showSubtext": {
+            "type": "boolean",
+            "default": false
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "⚡",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Lightning Fast",
+                    "description": "Optimised for performance, delivering sub-second load times and a smooth user experience.",
+                    "badge": "Speed",
+                    "iconColor": ""
+                },
+                {
+                    "icon": "🔒",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Enterprise Security",
+                    "description": "End-to-end encryption and SOC 2 compliance keep your data safe at every step.",
+                    "badge": "Security",
+                    "iconColor": ""
+                },
+                {
+                    "icon": "🌐",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Global Infrastructure",
+                    "description": "Servers in 20+ regions ensure your users enjoy low latency wherever they are.",
+                    "badge": "Scale",
+                    "iconColor": ""
+                },
+                {
+                    "icon": "🛠",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "24/7 Expert Support",
+                    "description": "Our team of specialists is available around the clock to help you succeed.",
+                    "badge": "Support",
+                    "iconColor": ""
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "list"
+        },
+        "columns": {
+            "type": "number",
+            "default": 2
+        },
+        "itemStyle": {
+            "type": "string",
+            "default": "boxed"
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDesc": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDivider": {
+            "type": "boolean",
+            "default": false
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "itemBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 28
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 32
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 17
+        },
+        "descSize": {
+            "type": "number",
+            "default": 14
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "gap": {
+            "type": "number",
+            "default": 16
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 900
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 64
+        }
+    }
+}

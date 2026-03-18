@@ -1,0 +1,120 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/content-slider",
+    "title": "Content Slider",
+    "category": "bkbg-content",
+    "icon": "slides",
+    "description": "Full-slide carousel with custom backgrounds per slide (color, gradient, or image) and rich text content.",
+    "keywords": [
+        "slider",
+        "carousel",
+        "content",
+        "slide",
+        "hero",
+        "sections"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-content-slider-editor",
+    "editorStyle": "bkbg-content-slider-style",
+    "style": "bkbg-content-slider-style",
+    "viewScript": "bkbg-content-slider-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "slides": {
+            "type": "array",
+            "default": [
+                {
+                    "bgType": "color",
+                    "bgColor": "#6c3fb5",
+                    "bgGradient": "linear-gradient(135deg,#6c3fb5,#e040fb)",
+                    "bgImageUrl": "",
+                    "bgImageId": 0,
+                    "overlayOpacity": 0,
+                    "heading": "First Slide",
+                    "subtext": "Your compelling message goes here.",
+                    "btnLabel": "Get Started",
+                    "btnUrl": "#",
+                    "btnShow": true,
+                    "textColor": "#ffffff",
+                    "contentAlign": "center"
+                },
+                {
+                    "bgType": "gradient",
+                    "bgColor": "#1e0a3c",
+                    "bgGradient": "linear-gradient(135deg,#f5a623,#e54a1c)",
+                    "bgImageUrl": "",
+                    "bgImageId": 0,
+                    "overlayOpacity": 0,
+                    "heading": "Second Slide",
+                    "subtext": "Another great section for your content.",
+                    "btnLabel": "Learn More",
+                    "btnUrl": "#",
+                    "btnShow": true,
+                    "textColor": "#ffffff",
+                    "contentAlign": "center"
+                }
+            ]
+        },
+        "height": {
+            "type": "number",
+            "default": 480
+        },
+        "transition": {
+            "type": "string",
+            "default": "fade"
+        },
+        "autoplay": {
+            "type": "boolean",
+            "default": true
+        },
+        "speed": {
+            "type": "number",
+            "default": 4000
+        },
+        "showArrows": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDots": {
+            "type": "boolean",
+            "default": true
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 36
+        },
+        "subtextSize": {
+            "type": "number",
+            "default": 18
+        },
+        "btnFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "typoHeading": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtext": {
+            "type": "object",
+            "default": {}
+        },
+        "typoButton": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

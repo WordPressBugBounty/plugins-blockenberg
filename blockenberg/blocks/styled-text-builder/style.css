@@ -1,0 +1,139 @@
+/* ========================================
+   Styled Text Builder Block Styles
+   Prefix: bkbg-stb-
+   ======================================== */
+
+.bkbg-stb-paragraph {
+    font-family:     var(--bkstb-tx-font-family, inherit);
+    font-size:       var(--bkstb-tx-font-size-d, 20px);
+    line-height:     var(--bkstb-tx-line-height-d, 1.7);
+    letter-spacing:  var(--bkstb-tx-letter-spacing-d, normal);
+    word-spacing:    var(--bkstb-tx-word-spacing-d, normal);
+    font-weight:     var(--bkstb-tx-font-weight, 400);
+    font-style:      var(--bkstb-tx-font-style, normal);
+    text-decoration: var(--bkstb-tx-text-decoration, none);
+    text-transform:  var(--bkstb-tx-text-transform, none);
+    margin: 0;
+}
+
+/* Base segment */
+.bkbg-stb-seg {
+    display: inline;
+    transition: opacity 0.15s;
+}
+
+/* ── Presets ── */
+
+.bkbg-stb-preset--highlight-yellow {
+    background: #fef9c3;
+    border-radius: 3px;
+    padding: 1px 4px;
+}
+
+.bkbg-stb-preset--highlight-green {
+    background: #dcfce7;
+    border-radius: 3px;
+    padding: 1px 4px;
+}
+
+.bkbg-stb-preset--highlight-pink {
+    background: #fce7f3;
+    border-radius: 3px;
+    padding: 1px 4px;
+}
+
+.bkbg-stb-preset--highlight-blue {
+    background: #dbeafe;
+    border-radius: 3px;
+    padding: 1px 4px;
+}
+
+.bkbg-stb-preset--badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 3px 10px;
+    font-size: 85%;
+    font-weight: 600;
+    line-height: 1.4;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
+.bkbg-stb-preset--code {
+    font-family: ui-monospace, SFMono-Regular, "Cascadia Code", Consolas, "Courier New", monospace;
+    background: #f1f5f9;
+    color: #dc2626;
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 88%;
+    border: 1px solid #e2e8f0;
+}
+
+/* Gradient: CSS-only approach using a class — color set by inline style */
+.bkbg-stb-preset--gradient {
+    background: linear-gradient(135deg, var(--bkbg-stb-grad-start, #6c3fb5), var(--bkbg-stb-grad-end, #ec4899));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: 700;
+}
+
+/* When inline color is set on gradient, use it as gradient start */
+.bkbg-stb-preset--gradient[style*="color"] {
+    --bkbg-stb-grad-start: var(--bkbg-stb-inline-color, #6c3fb5);
+}
+
+/* .bkbg-stb-preset--glow — text-shadow applied via inline style in JS */
+
+.bkbg-stb-preset--underline-fancy {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+/* ── Responsive typography ─────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-stb-paragraph {
+        font-size:      var(--bkstb-tx-font-size-t, var(--bkstb-tx-font-size-d, 20px));
+        line-height:    var(--bkstb-tx-line-height-t, var(--bkstb-tx-line-height-d, 1.7));
+        letter-spacing: var(--bkstb-tx-letter-spacing-t, var(--bkstb-tx-letter-spacing-d, normal));
+        word-spacing:   var(--bkstb-tx-word-spacing-t, var(--bkstb-tx-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-stb-paragraph {
+        font-size:      var(--bkstb-tx-font-size-m, var(--bkstb-tx-font-size-t, var(--bkstb-tx-font-size-d, 20px)));
+        line-height:    var(--bkstb-tx-line-height-m, var(--bkstb-tx-line-height-t, var(--bkstb-tx-line-height-d, 1.7)));
+        letter-spacing: var(--bkstb-tx-letter-spacing-m, var(--bkstb-tx-letter-spacing-t, var(--bkstb-tx-letter-spacing-d, normal)));
+        word-spacing:   var(--bkstb-tx-word-spacing-m, var(--bkstb-tx-word-spacing-t, var(--bkstb-tx-word-spacing-d, normal)));
+    }
+}
+
+/* ── Editor styles ── */
+.bkbg-editor-wrap .bkbg-stb-seg {
+    cursor: pointer;
+    position: relative;
+}
+
+.bkbg-editor-wrap .bkbg-stb-seg:hover {
+    opacity: 0.85;
+}
+
+.bkbg-editor-wrap .bkbg-stb-is-active {
+    outline: 2px dashed #6c3fb5;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Gradient: in the editor, background-clip:text can cause issues inside iframe;
+   use a fallback border instead */
+.bkbg-editor-wrap .bkbg-stb-preset--gradient {
+    -webkit-text-fill-color: unset;
+    color: #6c3fb5;
+    background: none;
+    font-weight: 700;
+}

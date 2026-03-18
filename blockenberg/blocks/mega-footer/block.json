@@ -1,0 +1,295 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/mega-footer",
+    "title": "Mega Footer",
+    "category": "bkbg-layout",
+    "icon": "layout",
+    "description": "Full-featured site footer with logo, tagline, link columns, social links, and a bottom bar.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-mega-footer-editor",
+    "style": "bkbg-mega-footer-style",
+    "attributes": {
+        "logoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "logoId": {
+            "type": "number",
+            "default": 0
+        },
+        "logoWidth": {
+            "type": "number",
+            "default": 140
+        },
+        "tagline": {
+            "type": "string",
+            "default": "Building better software, together."
+        },
+        "showTagline": {
+            "type": "boolean",
+            "default": true
+        },
+        "columns": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "c1",
+                    "heading": "Product",
+                    "links": [
+                        {
+                            "id": "l1",
+                            "label": "Features",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l2",
+                            "label": "Pricing",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l3",
+                            "label": "Changelog",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l4",
+                            "label": "Roadmap",
+                            "url": "#"
+                        }
+                    ]
+                },
+                {
+                    "id": "c2",
+                    "heading": "Company",
+                    "links": [
+                        {
+                            "id": "l5",
+                            "label": "About",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l6",
+                            "label": "Blog",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l7",
+                            "label": "Careers",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l8",
+                            "label": "Press",
+                            "url": "#"
+                        }
+                    ]
+                },
+                {
+                    "id": "c3",
+                    "heading": "Resources",
+                    "links": [
+                        {
+                            "id": "l9",
+                            "label": "Documentation",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l10",
+                            "label": "API Reference",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l11",
+                            "label": "Community",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l12",
+                            "label": "Support",
+                            "url": "#"
+                        }
+                    ]
+                },
+                {
+                    "id": "c4",
+                    "heading": "Legal",
+                    "links": [
+                        {
+                            "id": "l13",
+                            "label": "Privacy Policy",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l14",
+                            "label": "Terms of Service",
+                            "url": "#"
+                        },
+                        {
+                            "id": "l15",
+                            "label": "Cookie Policy",
+                            "url": "#"
+                        }
+                    ]
+                }
+            ]
+        },
+        "socialLinks": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "s1",
+                    "platform": "twitter",
+                    "url": "#",
+                    "label": "Twitter"
+                },
+                {
+                    "id": "s2",
+                    "platform": "github",
+                    "url": "#",
+                    "label": "GitHub"
+                },
+                {
+                    "id": "s3",
+                    "platform": "linkedin",
+                    "url": "#",
+                    "label": "LinkedIn"
+                }
+            ]
+        },
+        "showSocial": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBottomBar": {
+            "type": "boolean",
+            "default": true
+        },
+        "copyright": {
+            "type": "string",
+            "default": "© 2024 Your Company. All rights reserved."
+        },
+        "bottomLinks": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "b1",
+                    "label": "Privacy",
+                    "url": "#"
+                },
+                {
+                    "id": "b2",
+                    "label": "Terms",
+                    "url": "#"
+                },
+                {
+                    "id": "b3",
+                    "label": "Cookies",
+                    "url": "#"
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "logo-left"
+        },
+        "columnCount": {
+            "type": "number",
+            "default": 4
+        },
+        "gap": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 32
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 13
+        },
+        "linkSize": {
+            "type": "number",
+            "default": 14
+        },
+        "taglineSize": {
+            "type": "number",
+            "default": 14
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "taglineTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "linkTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "copyrightTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "showDivider": {
+            "type": "boolean",
+            "default": true
+        },
+        "footerBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#cbd5e1"
+        },
+        "linkHoverColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "taglineColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "copyrightColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "socialIconColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "bottomBarBg": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "keywords": [
+        "footer",
+        "nav",
+        "links",
+        "social",
+        "mega"
+    ]
+}

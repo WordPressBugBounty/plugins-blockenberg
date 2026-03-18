@@ -1,0 +1,68 @@
+/* Number Box Block — bknb- prefix */
+.bknb-outer {
+  display: inline-block;
+  max-width: 100%;
+}
+.bknb-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: var(--bknb-size, 160px);
+  height: var(--bknb-size, 160px);
+  background: var(--bknb-bg, #6c3fb5);
+  border-radius: var(--bknb-radius, 16px);
+  border: var(--bknb-brd, none);
+  box-shadow: var(--bknb-shadow, none);
+  padding: 16px;
+  box-sizing: border-box;
+  transition: transform .2s, box-shadow .2s;
+}
+.bknb-box:hover { transform: translateY(-3px); }
+
+.bknb-number {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  color: var(--bknb-text, #fff);
+  font-family: var(--bknb-num-font-family, inherit);
+  font-size: var(--bknb-num-font-size-d, var(--bknb-numSz, 56px));
+  font-weight: var(--bknb-num-font-weight, 800);
+  font-style: var(--bknb-num-font-style, normal);
+  text-decoration: var(--bknb-num-text-decoration, none);
+  text-transform: var(--bknb-num-text-transform, none);
+  line-height: var(--bknb-num-line-height-d, 1);
+  letter-spacing: var(--bknb-num-letter-spacing-d, normal);
+  word-spacing: var(--bknb-num-word-spacing-d, normal);
+}
+.bknb-prefix, .bknb-suffix { font-size: .5em; font-weight: 600; }
+.bknb-value { font-size: 1em; }
+
+.bknb-label {
+  margin: 8px 0 0;
+  font-family: var(--bknb-lbl-font-family, inherit);
+  font-size: var(--bknb-lbl-font-size-d, var(--bknb-labelSz, 14px));
+  font-weight: var(--bknb-lbl-font-weight, 500);
+  font-style: var(--bknb-lbl-font-style, normal);
+  text-decoration: var(--bknb-lbl-text-decoration, none);
+  text-transform: var(--bknb-lbl-text-transform, none);
+  line-height: var(--bknb-lbl-line-height-d, 1.3);
+  letter-spacing: var(--bknb-lbl-letter-spacing-d, normal);
+  word-spacing: var(--bknb-lbl-word-spacing-d, normal);
+  color: var(--bknb-label, #fff);
+  opacity: .85;
+}
+
+/* Editor */
+.wp-block-blockenberg-number-box .bknb-value,
+.wp-block-blockenberg-number-box .bknb-label { outline: none; }
+
+@media(max-width:1024px){
+  .bknb-number{font-size:var(--bknb-num-font-size-t,var(--bknb-num-font-size-d,var(--bknb-numSz,56px)));line-height:var(--bknb-num-line-height-t,var(--bknb-num-line-height-d,1));letter-spacing:var(--bknb-num-letter-spacing-t,var(--bknb-num-letter-spacing-d,normal));word-spacing:var(--bknb-num-word-spacing-t,var(--bknb-num-word-spacing-d,normal))}
+  .bknb-label{font-size:var(--bknb-lbl-font-size-t,var(--bknb-lbl-font-size-d,var(--bknb-labelSz,14px)));line-height:var(--bknb-lbl-line-height-t,var(--bknb-lbl-line-height-d,1.3));letter-spacing:var(--bknb-lbl-letter-spacing-t,var(--bknb-lbl-letter-spacing-d,normal));word-spacing:var(--bknb-lbl-word-spacing-t,var(--bknb-lbl-word-spacing-d,normal))}
+}
+@media(max-width:767px){
+  .bknb-number{font-size:var(--bknb-num-font-size-m,var(--bknb-num-font-size-d,48px));line-height:var(--bknb-num-line-height-m,var(--bknb-num-line-height-d,1));letter-spacing:var(--bknb-num-letter-spacing-m,var(--bknb-num-letter-spacing-d,normal));word-spacing:var(--bknb-num-word-spacing-m,var(--bknb-num-word-spacing-d,normal))}
+  .bknb-label{font-size:var(--bknb-lbl-font-size-m,var(--bknb-lbl-font-size-d,12px));line-height:var(--bknb-lbl-line-height-m,var(--bknb-lbl-line-height-d,1.3));letter-spacing:var(--bknb-lbl-letter-spacing-m,var(--bknb-lbl-letter-spacing-d,normal));word-spacing:var(--bknb-lbl-word-spacing-m,var(--bknb-lbl-word-spacing-d,normal))}
+}

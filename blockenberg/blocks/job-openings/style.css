@@ -1,0 +1,260 @@
+.bkbg-job-wrap {
+    box-sizing: border-box;
+}
+
+.bkbg-job-inner {
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+/* === Section heading === */
+.bkbg-job-wrap h2.bkbg-job-heading,
+.bkbg-job-wrap .bkbg-job-heading {
+    font-family: var(--bkbg-jo-h-font-family, inherit);
+    font-size:   var(--bkbg-jo-h-font-size-d, 38px);
+    font-weight: var(--bkbg-jo-h-font-weight, 800);
+    font-style:  var(--bkbg-jo-h-font-style, normal);
+    text-decoration: var(--bkbg-jo-h-text-decoration, none);
+    text-transform:  var(--bkbg-jo-h-text-transform, none);
+    line-height: var(--bkbg-jo-h-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-jo-h-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-jo-h-word-spacing-d, normal);
+}
+
+/* === Eyebrow === */
+.bkbg-job-eyebrow {
+    font-family: var(--bkbg-jo-ew-font-family, inherit);
+    font-size: var(--bkbg-jo-ew-font-size-d, 12px);
+    font-weight: var(--bkbg-jo-ew-font-weight, 700);
+    font-style: var(--bkbg-jo-ew-font-style, normal);
+    text-decoration: var(--bkbg-jo-ew-text-decoration, none);
+    text-transform: var(--bkbg-jo-ew-text-transform, uppercase);
+    line-height: var(--bkbg-jo-ew-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-jo-ew-letter-spacing-d, 0.08em);
+    word-spacing: var(--bkbg-jo-ew-word-spacing-d, normal);
+}
+
+/* === Subtext === */
+.bkbg-job-subtext {
+    font-family: var(--bkbg-jo-st-font-family, inherit);
+    font-size: var(--bkbg-jo-st-font-size-d, 17px);
+    font-weight: var(--bkbg-jo-st-font-weight, 400);
+    font-style: var(--bkbg-jo-st-font-style, normal);
+    text-decoration: var(--bkbg-jo-st-text-decoration, none);
+    text-transform: var(--bkbg-jo-st-text-transform, none);
+    line-height: var(--bkbg-jo-st-line-height-d, 1.6);
+    letter-spacing: var(--bkbg-jo-st-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-jo-st-word-spacing-d, normal);
+}
+
+/* === Filter tabs === */
+.bkbg-job-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.bkbg-job-filter-btn {
+    border: none;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.bkbg-job-filter-btn:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+/* === Job list === */
+.bkbg-job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bkbg-job-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* === Job card === */
+.bkbg-job-card {
+    border-radius: 12px;
+    padding: 24px 28px;
+    border: 1px solid;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.bkbg-job-card:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.bkbg-job-card--hidden {
+    display: none;
+}
+
+/* === Tags row === */
+.bkbg-job-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.bkbg-job-tag {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+}
+
+.bkbg-job-location {
+    font-size: 13px;
+}
+
+/* === Job title === */
+.bkbg-job-card h3.bkbg-job-title,
+.bkbg-job-card .bkbg-job-title {
+    font-family: var(--bkbg-jo-jt-font-family, inherit);
+    font-size: var(--bkbg-jo-jt-font-size-d, 19px);
+    font-weight: var(--bkbg-jo-jt-font-weight, 700);
+    font-style: var(--bkbg-jo-jt-font-style, normal);
+    text-decoration: var(--bkbg-jo-jt-text-decoration, none);
+    text-transform: var(--bkbg-jo-jt-text-transform, none);
+    line-height: var(--bkbg-jo-jt-line-height-d, 1.3);
+    letter-spacing: var(--bkbg-jo-jt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-jo-jt-word-spacing-d, normal);
+    margin: 0 0 8px;
+}
+
+/* === Description === */
+.bkbg-job-desc {
+    font-family: var(--bkbg-jo-jd-font-family, inherit);
+    font-size: var(--bkbg-jo-jd-font-size-d, 14px);
+    font-weight: var(--bkbg-jo-jd-font-weight, 400);
+    font-style: var(--bkbg-jo-jd-font-style, normal);
+    text-decoration: var(--bkbg-jo-jd-text-decoration, none);
+    text-transform: var(--bkbg-jo-jd-text-transform, none);
+    line-height: var(--bkbg-jo-jd-line-height-d, 1.6);
+    letter-spacing: var(--bkbg-jo-jd-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-jo-jd-word-spacing-d, normal);
+    margin: 0 0 16px;
+}
+
+/* === Apply button === */
+.bkbg-job-apply {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.bkbg-job-apply:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* === Empty state === */
+.bkbg-job-none {
+    text-align: center;
+    padding: 32px;
+    display: none;
+}
+
+.bkbg-job-none--visible {
+    display: block;
+}
+
+/* === Responsive typography === */
+@media (max-width: 1024px) {
+    .bkbg-job-wrap h2.bkbg-job-heading,
+    .bkbg-job-wrap .bkbg-job-heading {
+        font-size: var(--bkbg-jo-h-font-size-t, var(--bkbg-jo-h-font-size-d, 38px));
+        line-height: var(--bkbg-jo-h-line-height-t, var(--bkbg-jo-h-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-jo-h-letter-spacing-t, var(--bkbg-jo-h-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-jo-h-word-spacing-t, var(--bkbg-jo-h-word-spacing-d, normal));
+    }
+    .bkbg-job-eyebrow {
+        font-size: var(--bkbg-jo-ew-font-size-t, var(--bkbg-jo-ew-font-size-d, 12px));
+        line-height: var(--bkbg-jo-ew-line-height-t, var(--bkbg-jo-ew-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-jo-ew-letter-spacing-t, var(--bkbg-jo-ew-letter-spacing-d, 0.08em));
+            word-spacing: var(--bkbg-jo-ew-word-spacing-t, var(--bkbg-jo-ew-word-spacing-d, normal));
+    }
+    .bkbg-job-subtext {
+        font-size: var(--bkbg-jo-st-font-size-t, var(--bkbg-jo-st-font-size-d, 17px));
+        line-height: var(--bkbg-jo-st-line-height-t, var(--bkbg-jo-st-line-height-d, 1.6));
+        letter-spacing: var(--bkbg-jo-st-letter-spacing-t, var(--bkbg-jo-st-letter-spacing-d, normal));
+            word-spacing: var(--bkbg-jo-st-word-spacing-t, var(--bkbg-jo-st-word-spacing-d, normal));
+    }
+    .bkbg-job-card h3.bkbg-job-title,
+    .bkbg-job-card .bkbg-job-title {
+        font-size: var(--bkbg-jo-jt-font-size-t, var(--bkbg-jo-jt-font-size-d, 19px));
+        line-height: var(--bkbg-jo-jt-line-height-t, var(--bkbg-jo-jt-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-jo-jt-letter-spacing-t, var(--bkbg-jo-jt-letter-spacing-d, normal));
+            word-spacing: var(--bkbg-jo-jt-word-spacing-t, var(--bkbg-jo-jt-word-spacing-d, normal));
+    }
+    .bkbg-job-desc {
+        font-size: var(--bkbg-jo-jd-font-size-t, var(--bkbg-jo-jd-font-size-d, 14px));
+        line-height: var(--bkbg-jo-jd-line-height-t, var(--bkbg-jo-jd-line-height-d, 1.6));
+        letter-spacing: var(--bkbg-jo-jd-letter-spacing-t, var(--bkbg-jo-jd-letter-spacing-d, normal));
+            word-spacing: var(--bkbg-jo-jd-word-spacing-t, var(--bkbg-jo-jd-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-job-wrap h2.bkbg-job-heading,
+    .bkbg-job-wrap .bkbg-job-heading {
+        font-size: var(--bkbg-jo-h-font-size-m, var(--bkbg-jo-h-font-size-t, var(--bkbg-jo-h-font-size-d, 38px)));
+        line-height: var(--bkbg-jo-h-line-height-m, var(--bkbg-jo-h-line-height-t, var(--bkbg-jo-h-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-jo-h-letter-spacing-m, var(--bkbg-jo-h-letter-spacing-t, var(--bkbg-jo-h-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-jo-h-word-spacing-m, var(--bkbg-jo-h-word-spacing-t, var(--bkbg-jo-h-word-spacing-d, normal)));
+    }
+    .bkbg-job-eyebrow {
+        font-size: var(--bkbg-jo-ew-font-size-m, var(--bkbg-jo-ew-font-size-t, var(--bkbg-jo-ew-font-size-d, 12px)));
+        line-height: var(--bkbg-jo-ew-line-height-m, var(--bkbg-jo-ew-line-height-t, var(--bkbg-jo-ew-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-jo-ew-letter-spacing-m, var(--bkbg-jo-ew-letter-spacing-t, var(--bkbg-jo-ew-letter-spacing-d, 0.08em)));
+            word-spacing: var(--bkbg-jo-ew-word-spacing-m, var(--bkbg-jo-ew-word-spacing-t, var(--bkbg-jo-ew-word-spacing-d, normal)));
+    }
+    .bkbg-job-subtext {
+        font-size: var(--bkbg-jo-st-font-size-m, var(--bkbg-jo-st-font-size-t, var(--bkbg-jo-st-font-size-d, 17px)));
+        line-height: var(--bkbg-jo-st-line-height-m, var(--bkbg-jo-st-line-height-t, var(--bkbg-jo-st-line-height-d, 1.6)));
+        letter-spacing: var(--bkbg-jo-st-letter-spacing-m, var(--bkbg-jo-st-letter-spacing-t, var(--bkbg-jo-st-letter-spacing-d, normal)));
+            word-spacing: var(--bkbg-jo-st-word-spacing-m, var(--bkbg-jo-st-word-spacing-t, var(--bkbg-jo-st-word-spacing-d, normal)));
+    }
+    .bkbg-job-card h3.bkbg-job-title,
+    .bkbg-job-card .bkbg-job-title {
+        font-size: var(--bkbg-jo-jt-font-size-m, var(--bkbg-jo-jt-font-size-t, var(--bkbg-jo-jt-font-size-d, 19px)));
+        line-height: var(--bkbg-jo-jt-line-height-m, var(--bkbg-jo-jt-line-height-t, var(--bkbg-jo-jt-line-height-d, 1.3)));
+        letter-spacing: var(--bkbg-jo-jt-letter-spacing-m, var(--bkbg-jo-jt-letter-spacing-t, var(--bkbg-jo-jt-letter-spacing-d, normal)));
+            word-spacing: var(--bkbg-jo-jt-word-spacing-m, var(--bkbg-jo-jt-word-spacing-t, var(--bkbg-jo-jt-word-spacing-d, normal)));
+    }
+    .bkbg-job-desc {
+        font-size: var(--bkbg-jo-jd-font-size-m, var(--bkbg-jo-jd-font-size-t, var(--bkbg-jo-jd-font-size-d, 14px)));
+        line-height: var(--bkbg-jo-jd-line-height-m, var(--bkbg-jo-jd-line-height-t, var(--bkbg-jo-jd-line-height-d, 1.6)));
+        letter-spacing: var(--bkbg-jo-jd-letter-spacing-m, var(--bkbg-jo-jd-letter-spacing-t, var(--bkbg-jo-jd-letter-spacing-d, normal)));
+            word-spacing: var(--bkbg-jo-jd-word-spacing-m, var(--bkbg-jo-jd-word-spacing-t, var(--bkbg-jo-jd-word-spacing-d, normal)));
+    }
+}
+
+/* === Responsive === */
+@media (max-width: 700px) {
+    .bkbg-job-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bkbg-job-card {
+        padding: 20px;
+    }
+}

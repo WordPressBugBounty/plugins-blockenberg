@@ -1,0 +1,147 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/scrollytelling",
+    "title": "Scrollytelling",
+    "description": "Sticky background or image that updates as the user scrolls through text chapters.",
+    "category": "bkbg-effects",
+    "icon": "align-center",
+    "keywords": [
+        "scroll",
+        "sticky",
+        "story",
+        "chapter",
+        "parallax",
+        "narrative"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-scrollytelling-editor",
+    "style": "bkbg-scrollytelling-style",
+    "viewScript": "bkbg-scrollytelling-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "chapters": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Chapter One",
+                    "eyebrow": "Introduction",
+                    "text": "The opening scene sets the stage for everything that follows.",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "overlayColor": "#000000",
+                    "overlayOpacity": 40
+                },
+                {
+                    "title": "Chapter Two",
+                    "eyebrow": "Rising Action",
+                    "text": "Conflict emerges and the narrative tension begins to build.",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "overlayColor": "#000000",
+                    "overlayOpacity": 40
+                }
+            ]
+        },
+        "defaultBgUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "defaultBgId": {
+            "type": "number",
+            "default": 0
+        },
+        "stickyHeight": {
+            "type": "string",
+            "default": "70vh"
+        },
+        "textPosition": {
+            "type": "string",
+            "default": "left"
+        },
+        "showProgress": {
+            "type": "boolean",
+            "default": true
+        },
+        "transitionStyle": {
+            "type": "string",
+            "default": "fade"
+        },
+        "panelWidth": {
+            "type": "number",
+            "default": 420
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#a5b4fc"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "textBg": {
+            "type": "string",
+            "default": ""
+        },
+        "progressColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "eyebrowFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "eyebrowFontWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "titleFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "bodyFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "eyebrowTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

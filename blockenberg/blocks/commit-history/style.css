@@ -1,0 +1,67 @@
+.bkbg-commit-history-app {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ── Typography: Message ── */
+.bkcmh-msg {
+    font-family: var(--bkcmh-msg-font-family, inherit);
+    font-size: var(--bkcmh-msg-font-size-d, 14px);
+    font-weight: var(--bkcmh-msg-font-weight, 500);
+    line-height: var(--bkcmh-msg-line-height-d, 1.7);
+    text-transform: var(--bkcmh-msg-text-transform, none);
+    font-style: var(--bkcmh-msg-font-style, normal);
+    text-decoration: var(--bkcmh-msg-text-decoration, none);
+    letter-spacing: var(--bkcmh-msg-letter-spacing-d, normal);
+    word-spacing: var(--bkcmh-msg-word-spacing-d, normal);
+}
+
+/* ── Typography: Meta ── */
+.bkcmh-meta {
+    font-family: var(--bkcmh-meta-font-family, inherit);
+    font-size: var(--bkcmh-meta-font-size-d, 13px);
+    font-weight: var(--bkcmh-meta-font-weight, inherit);
+    line-height: var(--bkcmh-meta-line-height-d, 1.4);
+    text-transform: var(--bkcmh-meta-text-transform, none);
+    font-style: var(--bkcmh-meta-font-style, normal);
+    text-decoration: var(--bkcmh-meta-text-decoration, none);
+    letter-spacing: var(--bkcmh-meta-letter-spacing-d, normal);
+    word-spacing: var(--bkcmh-meta-word-spacing-d, normal);
+}
+
+.bkcmh-hash {
+    font-family: monospace;
+    font-size: var(--bkcmh-meta-font-size-d, 12px);
+    letter-spacing: 0.06em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .bkcmh-msg {
+        font-size: var(--bkcmh-msg-font-size-t, var(--bkcmh-msg-font-size-d, 14px));
+        line-height: var(--bkcmh-msg-line-height-t, var(--bkcmh-msg-line-height-d, 1.7));
+        letter-spacing: var(--bkcmh-msg-letter-spacing-t, var(--bkcmh-msg-letter-spacing-d, normal));
+        word-spacing: var(--bkcmh-msg-word-spacing-t, var(--bkcmh-msg-word-spacing-d, normal));
+    }
+    .bkcmh-meta,
+    .bkcmh-hash {
+        font-size: var(--bkcmh-meta-font-size-t, var(--bkcmh-meta-font-size-d, 13px));
+        line-height: var(--bkcmh-meta-line-height-t, var(--bkcmh-meta-line-height-d, 1.4));
+        letter-spacing: var(--bkcmh-meta-letter-spacing-t, var(--bkcmh-meta-letter-spacing-d, normal));
+        word-spacing: var(--bkcmh-meta-word-spacing-t, var(--bkcmh-meta-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkcmh-msg {
+        font-size: var(--bkcmh-msg-font-size-m, var(--bkcmh-msg-font-size-t, var(--bkcmh-msg-font-size-d, 14px)));
+        line-height: var(--bkcmh-msg-line-height-m, var(--bkcmh-msg-line-height-t, var(--bkcmh-msg-line-height-d, 1.7)));
+        letter-spacing: var(--bkcmh-msg-letter-spacing-m, var(--bkcmh-msg-letter-spacing-t, var(--bkcmh-msg-letter-spacing-d, normal)));
+        word-spacing: var(--bkcmh-msg-word-spacing-m, var(--bkcmh-msg-word-spacing-t, var(--bkcmh-msg-word-spacing-d, normal)));
+    }
+    .bkcmh-meta,
+    .bkcmh-hash {
+        font-size: var(--bkcmh-meta-font-size-m, var(--bkcmh-meta-font-size-t, var(--bkcmh-meta-font-size-d, 13px)));
+        line-height: var(--bkcmh-meta-line-height-m, var(--bkcmh-meta-line-height-t, var(--bkcmh-meta-line-height-d, 1.4)));
+        letter-spacing: var(--bkcmh-meta-letter-spacing-m, var(--bkcmh-meta-letter-spacing-t, var(--bkcmh-meta-letter-spacing-d, normal)));
+        word-spacing: var(--bkcmh-meta-word-spacing-m, var(--bkcmh-meta-word-spacing-t, var(--bkcmh-meta-word-spacing-d, normal)));
+    }
+}

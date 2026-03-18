@@ -1,0 +1,258 @@
+/* =============================================
+   FAQ Schema Block — bkbg-faq-schema
+   ============================================= */
+
+/* ---- Defaults ---- */
+.bkbg-faq-wrap {
+    --bkbg-faq-spacing: 10px;
+    --bkbg-faq-radius: 8px;
+    --bkbg-faq-q-padding: 18px;
+    --bkbg-faq-a-padding: 16px;
+    --bkbg-faq-speed: 300ms;
+    --bkbg-faq-q-color: #111827;
+    --bkbg-faq-q-bg: #ffffff;
+    --bkbg-faq-q-hover-bg: #f9fafb;
+    --bkbg-faq-q-active-bg: #eff6ff;
+    --bkbg-faq-q-active-color: #1d4ed8;
+    --bkbg-faq-a-color: #374151;
+    --bkbg-faq-a-bg: #ffffff;
+    --bkbg-faq-icon-color: #6b7280;
+    --bkbg-faq-icon-active-color: #2563eb;
+    --bkbg-faq-border-color: #e5e7eb;
+    --bkbg-faq-divider-color: #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    gap: var(--bkbg-faq-spacing);
+}
+
+/* ---- Item ---- */
+.bkbg-faq-item {
+    border: 1px solid var(--bkbg-faq-border-color);
+    border-radius: var(--bkbg-faq-radius);
+    overflow: hidden;
+    background: var(--bkbg-faq-q-bg);
+}
+
+/* ---- Question (trigger) ---- */
+.bkbg-faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: var(--bkbg-faq-q-padding);
+    font-family: var(--bkbg-fqs-qt-font-family, inherit);
+    font-size: var(--bkbg-fqs-qt-font-size-d, 16px);
+    font-weight: var(--bkbg-fqs-qt-font-weight, 600);
+    font-style: var(--bkbg-fqs-qt-font-style, normal);
+    text-transform: var(--bkbg-fqs-qt-text-transform, none);
+    text-decoration: var(--bkbg-fqs-qt-text-decoration, none);
+    line-height: var(--bkbg-fqs-qt-line-height-d, 1.4);
+    letter-spacing: var(--bkbg-fqs-qt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fqs-qt-word-spacing-d, normal);
+    color: var(--bkbg-faq-q-color);
+    background: var(--bkbg-faq-q-bg);
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background var(--bkbg-faq-speed) ease, color var(--bkbg-faq-speed) ease;
+    position: relative;
+}
+
+.bkbg-faq-question:hover {
+    background: var(--bkbg-faq-q-hover-bg);
+}
+
+.bkbg-faq-item.is-active .bkbg-faq-question {
+    background: var(--bkbg-faq-q-active-bg);
+    color: var(--bkbg-faq-q-active-color);
+}
+
+.bkbg-faq-q-text {
+    flex: 1;
+}
+
+/* ---- Icon ---- */
+.bkbg-faq-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    color: var(--bkbg-faq-icon-color);
+    transition: transform var(--bkbg-faq-speed) ease, color var(--bkbg-faq-speed) ease;
+}
+
+.bkbg-faq-item.is-active .bkbg-faq-icon {
+    color: var(--bkbg-faq-icon-active-color);
+}
+
+/* Chevron rotation */
+[data-icon="chevron"] .bkbg-faq-item .bkbg-faq-icon,
+[data-icon="arrow"] .bkbg-faq-item .bkbg-faq-icon {
+    transform: rotate(0deg);
+}
+
+[data-icon="chevron"] .bkbg-faq-item.is-active .bkbg-faq-icon,
+[data-icon="arrow"] .bkbg-faq-item.is-active .bkbg-faq-icon {
+    transform: rotate(180deg);
+}
+
+/* Plus to minus */
+[data-icon="plus"] .bkbg-faq-item .bkbg-faq-icon svg line:last-child {
+    transition: opacity var(--bkbg-faq-speed) ease;
+}
+
+[data-icon="plus"] .bkbg-faq-item.is-active .bkbg-faq-icon svg line:last-child {
+    opacity: 0;
+}
+
+/* ---- Answer ---- */
+.bkbg-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--bkbg-faq-speed) ease;
+}
+
+.bkbg-faq-item.is-active .bkbg-faq-answer {
+    max-height: 2000px;
+}
+
+.bkbg-faq-answer-inner {
+    padding: 0 var(--bkbg-faq-a-padding) var(--bkbg-faq-a-padding);
+    border-top: 1px solid var(--bkbg-faq-divider-color);
+    background: var(--bkbg-faq-a-bg);
+    padding-top: var(--bkbg-faq-a-padding);
+}
+
+.bkbg-faq-answer-body {
+    font-family: var(--bkbg-fqs-an-font-family, inherit);
+    font-size: var(--bkbg-fqs-an-font-size-d, 15px);
+    font-weight: var(--bkbg-fqs-an-font-weight, normal);
+    font-style: var(--bkbg-fqs-an-font-style, normal);
+    text-transform: var(--bkbg-fqs-an-text-transform, none);
+    text-decoration: var(--bkbg-fqs-an-text-decoration, none);
+    line-height: var(--bkbg-fqs-an-line-height-d, 1.7);
+    letter-spacing: var(--bkbg-fqs-an-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fqs-an-word-spacing-d, normal);
+    color: var(--bkbg-faq-a-color);
+    margin: 0;
+}
+
+.bkbg-faq-answer-body > *:last-child {
+    margin-bottom: 0;
+}
+
+/* ---- Layout: boxed ---- */
+.bkbg-faq-wrap[data-layout="boxed"] .bkbg-faq-item {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+}
+
+/* ---- Layout: minimal ---- */
+.bkbg-faq-wrap[data-layout="minimal"] .bkbg-faq-item {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0;
+    border-bottom-color: var(--bkbg-faq-border-color);
+}
+
+.bkbg-faq-wrap[data-layout="minimal"] .bkbg-faq-answer-inner {
+    border-top: none;
+    padding-top: 0;
+}
+
+/* ---- Layout: bordered-left ---- */
+.bkbg-faq-wrap[data-layout="bordered-left"] .bkbg-faq-item {
+    border-left: 4px solid var(--bkbg-faq-border-color);
+    border-radius: 0 var(--bkbg-faq-radius) var(--bkbg-faq-radius) 0;
+}
+
+.bkbg-faq-wrap[data-layout="bordered-left"] .bkbg-faq-item.is-active {
+    border-left-color: var(--bkbg-faq-icon-active-color);
+}
+
+/* =============================================
+   Editor-specific styles
+   ============================================= */
+.bkbg-faq-editor .bkbg-faq-item {
+    position: relative;
+}
+
+.bkbg-faq-editor .bkbg-faq-answer {
+    max-height: none;
+    overflow: visible;
+    display: none;
+}
+
+.bkbg-faq-editor .bkbg-faq-item.is-active .bkbg-faq-answer {
+    display: block;
+}
+
+.bkbg-faq-item-actions {
+    display: flex;
+    gap: 4px;
+    padding: 4px 8px;
+    background: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    justify-content: flex-end;
+}
+
+.bkbg-faq-q-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    outline: none;
+    cursor: text;
+    min-width: 0;
+}
+
+.bkbg-faq-schema-badge {
+    font-size: 11px;
+    color: #059669;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-radius: 4px;
+    padding: 4px 10px;
+    display: inline-block;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.bkbg-faq-add-wrap {
+    margin-top: 12px;
+}
+
+.bkbg-faq-add-btn {
+    width: 100%;
+}
+
+/* ---- Responsive typography ---- */
+@media (max-width: 1024px) {
+    .bkbg-faq-question {
+        font-size: var(--bkbg-fqs-qt-font-size-t, var(--bkbg-fqs-qt-font-size-d, 16px));
+        line-height: var(--bkbg-fqs-qt-line-height-t, var(--bkbg-fqs-qt-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-fqs-qt-letter-spacing-t, var(--bkbg-fqs-qt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-fqs-qt-word-spacing-t, var(--bkbg-fqs-qt-word-spacing-d, normal));
+    }
+    .bkbg-faq-answer-body {
+        font-size: var(--bkbg-fqs-an-font-size-t, var(--bkbg-fqs-an-font-size-d, 15px));
+        line-height: var(--bkbg-fqs-an-line-height-t, var(--bkbg-fqs-an-line-height-d, 1.7));
+        letter-spacing: var(--bkbg-fqs-an-letter-spacing-t, var(--bkbg-fqs-an-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-fqs-an-word-spacing-t, var(--bkbg-fqs-an-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-faq-question {
+        font-size: var(--bkbg-fqs-qt-font-size-m, var(--bkbg-fqs-qt-font-size-t, var(--bkbg-fqs-qt-font-size-d, 16px)));
+        line-height: var(--bkbg-fqs-qt-line-height-m, var(--bkbg-fqs-qt-line-height-t, var(--bkbg-fqs-qt-line-height-d, 1.4)));
+        letter-spacing: var(--bkbg-fqs-qt-letter-spacing-m, var(--bkbg-fqs-qt-letter-spacing-t, var(--bkbg-fqs-qt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-fqs-qt-word-spacing-m, var(--bkbg-fqs-qt-word-spacing-t, var(--bkbg-fqs-qt-word-spacing-d, normal)));
+    }
+    .bkbg-faq-answer-body {
+        font-size: var(--bkbg-fqs-an-font-size-m, var(--bkbg-fqs-an-font-size-t, var(--bkbg-fqs-an-font-size-d, 15px)));
+        line-height: var(--bkbg-fqs-an-line-height-m, var(--bkbg-fqs-an-line-height-t, var(--bkbg-fqs-an-line-height-d, 1.7)));
+        letter-spacing: var(--bkbg-fqs-an-letter-spacing-m, var(--bkbg-fqs-an-letter-spacing-t, var(--bkbg-fqs-an-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-fqs-an-word-spacing-m, var(--bkbg-fqs-an-word-spacing-t, var(--bkbg-fqs-an-word-spacing-d, normal)));
+    }
+}

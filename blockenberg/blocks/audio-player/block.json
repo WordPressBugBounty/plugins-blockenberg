@@ -1,0 +1,194 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/audio-player",
+    "title": "Audio Player",
+    "category": "bkbg-media",
+    "icon": "controls-play",
+    "description": "Custom-styled audio player with cover art, track info, and branded controls. Perfect for podcasts and soundclips.",
+    "keywords": [
+        "audio",
+        "player",
+        "podcast",
+        "music",
+        "sound",
+        "track",
+        "mp3"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-audio-player-editor",
+    "editorStyle": "bkbg-audio-player-style",
+    "style": "bkbg-audio-player-style",
+    "viewScript": "bkbg-audio-player-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "audioUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "audioType": {
+            "type": "string",
+            "default": "audio/mpeg"
+        },
+        "audioTitle": {
+            "type": "string",
+            "default": "Track Title"
+        },
+        "audioArtist": {
+            "type": "string",
+            "default": "Artist Name"
+        },
+        "audioAlbum": {
+            "type": "string",
+            "default": ""
+        },
+        "coverUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "coverId": {
+            "type": "number",
+            "default": 0
+        },
+        "playerStyle": {
+            "type": "string",
+            "default": "card"
+        },
+        "showCover": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showArtist": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAlbum": {
+            "type": "boolean",
+            "default": false
+        },
+        "showTimestamp": {
+            "type": "boolean",
+            "default": true
+        },
+        "showVolume": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDownload": {
+            "type": "boolean",
+            "default": false
+        },
+        "showSpeed": {
+            "type": "boolean",
+            "default": false
+        },
+        "autoplay": {
+            "type": "boolean",
+            "default": false
+        },
+        "loop": {
+            "type": "boolean",
+            "default": false
+        },
+        "preload": {
+            "type": "string",
+            "default": "metadata"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "progressBg": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "iconBg": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "coverRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "coverSize": {
+            "type": "number",
+            "default": 80
+        },
+        "playerRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "playerPaddingV": {
+            "type": "number",
+            "default": 20
+        },
+        "playerPaddingH": {
+            "type": "number",
+            "default": 24
+        },
+        "boxShadow": {
+            "type": "string",
+            "default": "md"
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 17
+        },
+        "titleWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "artistSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "artistTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "playButtonSize": {
+            "type": "number",
+            "default": 52
+        },
+        "progressHeight": {
+            "type": "number",
+            "default": 4
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 560
+        }
+    }
+}

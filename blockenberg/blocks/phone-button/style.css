@@ -1,0 +1,177 @@
+/* ===================================================
+   Phone Button — bkbg-phb-*  (style.css)
+   =================================================== */
+
+/* ── Floating container ────────────────────────────────────────────── */
+.bkbg-phb-float {
+    position: fixed;
+    z-index: 99998;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--phb-gap, 14px);
+    pointer-events: none;
+    /* hidden by default when scrollOffset > 0; frontend.js reveals */
+}
+
+.bkbg-phb-float.bkbg-phb-visible {
+    pointer-events: auto;
+}
+
+/* Position variants */
+.bkbg-phb-float.bkbg-phb-bottom-right {
+    bottom: 24px;
+    right:  24px;
+    align-items: flex-end;
+}
+.bkbg-phb-float.bkbg-phb-bottom-left {
+    bottom: 24px;
+    left:   24px;
+    align-items: flex-start;
+}
+.bkbg-phb-float.bkbg-phb-bottom-center {
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bkbg-phb-float.bkbg-phb-top-right {
+    top:   24px;
+    right: 24px;
+    align-items: flex-end;
+}
+.bkbg-phb-float.bkbg-phb-top-left {
+    top:  24px;
+    left: 24px;
+    align-items: flex-start;
+}
+
+/* ── Inline container ──────────────────────────────────────────────── */
+.bkbg-phb-inline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--phb-gap, 14px);
+}
+
+/* ── Single button item ────────────────────────────────────────────── */
+.bkbg-phb-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    pointer-events: auto;
+}
+
+/* ── Pulse ring ────────────────────────────────────────────────────── */
+.bkbg-phb-pulse {
+    position: absolute;
+    inset: -8px;
+    border-radius: inherit;
+    animation: bkbg-phb-pulse 2s ease-out infinite;
+    pointer-events: none;
+}
+.bkbg-phb-phone .bkbg-phb-pulse  { background: var(--phb-phone-pulse, #6366f1); }
+.bkbg-phb-whatsapp .bkbg-phb-pulse { background: var(--phb-wa-pulse,    #25d366); }
+
+@keyframes bkbg-phb-pulse {
+    0%   { transform: scale(1); opacity: 0.45; }
+    70%  { transform: scale(1.7); opacity: 0; }
+    100% { transform: scale(1.7); opacity: 0; }
+}
+
+/* ── The button itself ─────────────────────────────────────────────── */
+.bkbg-phb-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    z-index: 1;
+    transition: transform 0.18s cubic-bezier(.34,1.56,.64,1),
+                box-shadow 0.18s ease;
+    will-change: transform;
+    flex-shrink: 0;
+}
+
+.bkbg-phb-btn:hover,
+.bkbg-phb-btn:focus-visible {
+    transform: scale(1.12) translateY(-2px);
+}
+
+.bkbg-phb-btn:active {
+    transform: scale(0.96);
+}
+
+/* ── Label ─────────────────────────────────────────────────────────── */
+.bkbg-phb-label {
+    white-space: nowrap;
+    padding: 3px 10px;
+    border-radius: 99px;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* ── Label typography ──────────────────────────────────────────────── */
+.bkbg-phb-label {
+    font-family: var(--bkbg-phb-lb-font-family, inherit);
+    font-size: var(--bkbg-phb-lb-font-size-d, 14px);
+    font-weight: var(--bkbg-phb-lb-font-weight, 600);
+    font-style: var(--bkbg-phb-lb-font-style, normal);
+    text-decoration: var(--bkbg-phb-lb-text-decoration, none);
+    text-transform: var(--bkbg-phb-lb-text-transform, none);
+    line-height: var(--bkbg-phb-lb-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-phb-lb-letter-spacing-d, 0.01em);
+    word-spacing: var(--bkbg-phb-lb-word-spacing-d, normal);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-phb-label {
+        font-size: var(--bkbg-phb-lb-font-size-t, var(--bkbg-phb-lb-font-size-d, 14px));
+        line-height: var(--bkbg-phb-lb-line-height-t, var(--bkbg-phb-lb-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-phb-lb-letter-spacing-t, var(--bkbg-phb-lb-letter-spacing-d, 0.01em));
+        word-spacing: var(--bkbg-phb-lb-word-spacing-t, var(--bkbg-phb-lb-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-phb-label {
+        font-size: var(--bkbg-phb-lb-font-size-m, var(--bkbg-phb-lb-font-size-t, var(--bkbg-phb-lb-font-size-d, 14px)));
+        line-height: var(--bkbg-phb-lb-line-height-m, var(--bkbg-phb-lb-line-height-t, var(--bkbg-phb-lb-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-phb-lb-letter-spacing-m, var(--bkbg-phb-lb-letter-spacing-t, var(--bkbg-phb-lb-letter-spacing-d, 0.01em)));
+        word-spacing: var(--bkbg-phb-lb-word-spacing-m, var(--bkbg-phb-lb-word-spacing-t, var(--bkbg-phb-lb-word-spacing-d, normal)));
+    }
+}
+
+/* ── Floating label floats beside the button ───────────────────────── */
+.bkbg-phb-float .bkbg-phb-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+.bkbg-phb-float.bkbg-phb-bottom-right .bkbg-phb-item,
+.bkbg-phb-float.bkbg-phb-top-right    .bkbg-phb-item {
+    flex-direction: row-reverse; /* label on left, button on right */
+}
+
+/* ── Editor preview wrapper (no real behaviour) ────────────────────── */
+.bkbg-phb-editor-wrap {
+    padding: 8px;
+}
+.bkbg-phb-preview a {
+    pointer-events: none;
+}
+
+/* ── Reduced motion ────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .bkbg-phb-pulse { animation: none; opacity: 0; }
+    .bkbg-phb-btn   { transition: none; }
+}
+
+/* ── Print ─────────────────────────────────────────────────────────── */
+@media print {
+    .bkbg-phb-float { display: none !important; }
+}

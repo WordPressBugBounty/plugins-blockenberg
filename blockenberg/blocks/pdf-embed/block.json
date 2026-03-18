@@ -1,0 +1,101 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/pdf-embed",
+    "title": "PDF Embed",
+    "description": "Embed a PDF document in an iframe with optional download button and toolbar controls.",
+    "category": "bkbg-media",
+    "icon": "media-document",
+    "keywords": [
+        "pdf",
+        "embed",
+        "document",
+        "file",
+        "viewer",
+        "iframe"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-pdf-embed-editor",
+    "editorStyle": "bkbg-pdf-embed-style",
+    "style": "bkbg-pdf-embed-style",
+    "viewScript": "bkbg-pdf-embed-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "pdfUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "pdfId": {
+            "type": "number",
+            "default": 0
+        },
+        "pdfTitle": {
+            "type": "string",
+            "default": "PDF Document"
+        },
+        "height": {
+            "type": "number",
+            "default": 600
+        },
+        "width": {
+            "type": "number",
+            "default": 100
+        },
+        "showDownload": {
+            "type": "boolean",
+            "default": true
+        },
+        "downloadLabel": {
+            "type": "string",
+            "default": "Download PDF"
+        },
+        "showToolbar": {
+            "type": "boolean",
+            "default": true
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 1
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "downloadBtnBg": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "downloadBtnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "fallbackMessage": {
+            "type": "string",
+            "default": "Your browser does not support inline PDF preview."
+        },
+        "showFallbackLink": {
+            "type": "boolean",
+            "default": true
+        },
+        "downloadTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

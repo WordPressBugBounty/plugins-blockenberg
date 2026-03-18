@@ -1,0 +1,172 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/reaction-bar",
+    "version": "1.0.0",
+    "title": "Reaction Bar",
+    "category": "bkbg-interactive",
+    "icon": "heart",
+    "description": "Display emoji reaction counters (GitHub / Notion / Slack style) to show community sentiment on any content.",
+    "keywords": [
+        "reaction",
+        "emoji",
+        "like",
+        "vote",
+        "poll",
+        "sentiment",
+        "github",
+        "feedback",
+        "upvote"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-reaction-bar-editor",
+    "editorStyle": "bkbg-reaction-bar-style",
+    "style": "bkbg-reaction-bar-style",
+    "viewScript": "bkbg-reaction-bar-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Was this helpful?"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "buttons"
+        },
+        "showCount": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "totalLabel": {
+            "type": "string",
+            "default": "reactions"
+        },
+        "showTotal": {
+            "type": "boolean",
+            "default": true
+        },
+        "animate": {
+            "type": "boolean",
+            "default": true
+        },
+        "reactions": {
+            "type": "array",
+            "default": [
+                {
+                    "emoji": "\ud83d\udc4d",
+                    "label": "Helpful",
+                    "count": 47
+                },
+                {
+                    "emoji": "\u2764\ufe0f",
+                    "label": "Love it",
+                    "count": 31
+                },
+                {
+                    "emoji": "\ud83c\udf89",
+                    "label": "Celebrate",
+                    "count": 18
+                },
+                {
+                    "emoji": "\ud83d\udca1",
+                    "label": "Insightful",
+                    "count": 22
+                },
+                {
+                    "emoji": "\ud83e\udd14",
+                    "label": "Thoughtful",
+                    "count": 9
+                },
+                {
+                    "emoji": "\ud83d\ude80",
+                    "label": "Ship it",
+                    "count": 14
+                }
+            ]
+        },
+        "emojiSize": {
+            "type": "number",
+            "default": 22
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "itemRadius": {
+            "type": "number",
+            "default": 100
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "itemBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "itemBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "itemHoverBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "countColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "totalColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "activeItemBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "activeItemBorder": {
+            "type": "string",
+            "default": "#bfdbfe"
+        },
+        "activeCountColor": {
+            "type": "string",
+            "default": "#1d4ed8"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "countTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,114 @@
+/* Masonry Grid — bkmg- */
+.bkmg-wrap {
+  width: 100%;
+  box-sizing: border-box;
+}
+.bkmg-grid {
+  display: block; /* CSS columns masonry */
+  /* Use CSS vars from the wrapper so saved inline styles can't break layout */
+  column-count: var(--bkmg-cols, 3) !important;
+  column-gap: var(--bkmg-gap, 16px) !important;
+  column-width: auto !important;
+}
+.bkmg-item {
+  break-inside: avoid;
+  position: relative;
+  overflow: hidden;
+}
+.bkmg-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.bkmg-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.bkmg-caption {
+  font-family:      var(--bkmg-cp-font-family, inherit);
+  font-size:        var(--bkmg-cp-font-size-d, 14px);
+  font-weight:      var(--bkmg-cp-font-weight, 700);
+  font-style:       var(--bkmg-cp-font-style, normal);
+  text-decoration:  var(--bkmg-cp-text-decoration, none);
+  text-transform:   var(--bkmg-cp-text-transform, none);
+  line-height:      var(--bkmg-cp-line-height-d, 1.4);
+  letter-spacing:   var(--bkmg-cp-letter-spacing-d, normal);
+  word-spacing:     var(--bkmg-cp-word-spacing-d, normal);
+}
+/* Hover Effects */
+.bkmg-effect-zoom .bkmg-item:hover img,
+.bkmg-effect-zoom .bkmg-link:hover img {
+  transform: scale(1.06);
+}
+.bkmg-effect-zoom .bkmg-item:hover .bkmg-overlay,
+.bkmg-effect-zoom .bkmg-link:hover .bkmg-overlay {
+  opacity: 1;
+}
+.bkmg-effect-fade .bkmg-item:hover img,
+.bkmg-effect-fade .bkmg-link:hover img {
+  filter: brightness(0.85);
+}
+.bkmg-effect-fade .bkmg-item:hover .bkmg-overlay,
+.bkmg-effect-fade .bkmg-link:hover .bkmg-overlay {
+  opacity: 1;
+}
+.bkmg-effect-lift .bkmg-item,
+.bkmg-effect-lift .bkmg-link {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.bkmg-effect-lift .bkmg-item:hover,
+.bkmg-effect-lift .bkmg-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+.bkmg-effect-lift .bkmg-item:hover .bkmg-overlay,
+.bkmg-effect-lift .bkmg-link:hover .bkmg-overlay {
+  opacity: 1;
+}
+.bkmg-link {
+  display: block;
+  text-decoration: none;
+}
+/* Lightbox */
+.bkmg-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0,0,0,0.93);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bkmg-lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 16px 64px rgba(0,0,0,0.6);
+}
+.bkmg-lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  color: #fff;
+  font-size: 40px;
+  line-height: 1;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  opacity: 0.8;
+}
+.bkmg-lightbox-close:hover { opacity: 1; }
+
+@media (max-width: 1024px) {
+  .bkmg-caption { font-size: var(--bkmg-cp-font-size-t, 14px); line-height: var(--bkmg-cp-line-height-t, 1.4); letter-spacing: var(--bkmg-cp-letter-spacing-t, normal); word-spacing: var(--bkmg-cp-word-spacing-t, normal); }
+}
+@media (max-width: 767px) {
+  .bkmg-caption { font-size: var(--bkmg-cp-font-size-m, 14px); line-height: var(--bkmg-cp-line-height-m, 1.4); letter-spacing: var(--bkmg-cp-letter-spacing-m, normal); word-spacing: var(--bkmg-cp-word-spacing-m, normal); }
+}
+
+@media (max-width: 480px) {
+  .bkmg-grid {
+    columns: 1 !important;
+  }
+}

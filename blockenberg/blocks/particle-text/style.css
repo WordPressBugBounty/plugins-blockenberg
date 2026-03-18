@@ -1,0 +1,61 @@
+/* === Particle Text === */
+
+.bkbg-pt-section {
+    background: var(--bkbg-pt-bg, #0a0a0f);
+    padding: var(--bkbg-pt-pt, 80px) clamp(20px, 5vw, 60px) var(--bkbg-pt-pb, 80px);
+    text-align: center;
+    overflow: hidden;
+}
+
+.bkbg-pt-canvas-wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bkbg-pt-canvas {
+    display: block;
+    max-width: 100%;
+}
+
+.bkbg-pt-subtext {
+    font-family: var(--bkbg-pt-st-font-family, inherit);
+    font-size: var(--bkbg-pt-st-font-size-d, var(--bkbg-pt-sub-size, 18px));
+    font-weight: var(--bkbg-pt-st-font-weight, 400);
+    font-style: var(--bkbg-pt-st-font-style, normal);
+    text-decoration: var(--bkbg-pt-st-text-decoration, none);
+    text-transform: var(--bkbg-pt-st-text-transform, none);
+    line-height: var(--bkbg-pt-st-line-height-d, 1.6);
+    letter-spacing: var(--bkbg-pt-st-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-pt-st-word-spacing-d, normal);
+    color: var(--bkbg-pt-sub-color, #94a3b8);
+    margin: 20px 0 0;
+    opacity: 0;
+    transition: opacity 0.6s ease 0.5s, transform 0.6s ease 0.5s;
+    transform: translateY(12px);
+}
+
+.bkbg-pt-subtext.bkbg-pt-visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (max-width: 1024px) {
+    .bkbg-pt-subtext {
+        font-size: var(--bkbg-pt-st-font-size-t, var(--bkbg-pt-st-font-size-d, var(--bkbg-pt-sub-size, 16px)));
+        line-height: var(--bkbg-pt-st-line-height-t, var(--bkbg-pt-st-line-height-d, 1.6));
+        letter-spacing: var(--bkbg-pt-st-letter-spacing-t, var(--bkbg-pt-st-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-pt-st-word-spacing-t, var(--bkbg-pt-st-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-pt-subtext {
+        font-size: var(--bkbg-pt-st-font-size-m, var(--bkbg-pt-st-font-size-t, var(--bkbg-pt-st-font-size-d, var(--bkbg-pt-sub-size, 15px))));
+        line-height: var(--bkbg-pt-st-line-height-m, var(--bkbg-pt-st-line-height-t, var(--bkbg-pt-st-line-height-d, 1.6)));
+        letter-spacing: var(--bkbg-pt-st-letter-spacing-m, var(--bkbg-pt-st-letter-spacing-t, var(--bkbg-pt-st-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-pt-st-word-spacing-m, var(--bkbg-pt-st-word-spacing-t, var(--bkbg-pt-st-word-spacing-d, normal)));
+    }
+}

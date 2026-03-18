@@ -1,0 +1,111 @@
+/* Roadmap Block — bkrm- prefix */
+.bkrm-wrap {
+  overflow-x: auto;
+  padding-bottom: 12px;
+}
+.bkrm-track {
+  display: flex;
+  align-items: center;
+  gap: var(--bkrm-gap, 24px);
+  min-width: max-content;
+  padding: 16px 4px;
+}
+
+.bkrm-card {
+  width: var(--bkrm-cW, 200px);
+  flex-shrink: 0;
+  background: var(--bkrm-cBg, #fff);
+  border: 2px solid var(--bkrm-cBrd, #e5e7eb);
+  border-radius: var(--bkrm-cR, 10px);
+  padding: 16px;
+  transition: transform .2s, box-shadow .2s;
+}
+.bkrm-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,.1); }
+
+/* Left-side accent by status */
+.bkrm-status-done     { border-left: 4px solid var(--bkrm-done, #22c55e); }
+.bkrm-status-progress { border-left: 4px solid var(--bkrm-prog, #f59e0b); }
+.bkrm-status-planned  { border-left: 4px solid var(--bkrm-plan, #94a3b8); }
+
+.bkrm-label-tag {
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .06em;
+  color: #6b7280; margin-bottom: 6px;
+}
+.bkrm-title {
+    margin: 0 0 6px;
+    font-family:      var(--bkrm-tt-font-family, inherit);
+    font-size:        var(--bkrm-tt-font-size-d, 15px);
+    font-weight:      var(--bkrm-tt-font-weight, 600);
+    font-style:       var(--bkrm-tt-font-style, normal);
+    text-decoration:  var(--bkrm-tt-text-decoration, none);
+    text-transform:   var(--bkrm-tt-text-transform, none);
+    line-height:      var(--bkrm-tt-line-height-d, 1.4);
+    letter-spacing:   var(--bkrm-tt-letter-spacing-d, normal);
+    word-spacing:     var(--bkrm-tt-word-spacing-d, normal);
+}
+.bkrm-card h4.bkrm-title {
+    font-family:      var(--bkrm-tt-font-family, inherit);
+    font-size:        var(--bkrm-tt-font-size-d, 15px);
+    font-weight:      var(--bkrm-tt-font-weight, 600);
+    font-style:       var(--bkrm-tt-font-style, normal);
+    text-decoration:  var(--bkrm-tt-text-decoration, none);
+    text-transform:   var(--bkrm-tt-text-transform, none);
+    line-height:      var(--bkrm-tt-line-height-d, 1.4);
+    letter-spacing:   var(--bkrm-tt-letter-spacing-d, normal);
+    word-spacing:     var(--bkrm-tt-word-spacing-d, normal);
+}
+.bkrm-desc {
+    margin: 0 0 10px;
+    color: #6b7280;
+    font-family:      var(--bkrm-dt-font-family, inherit);
+    font-size:        var(--bkrm-dt-font-size-d, 13px);
+    font-weight:      var(--bkrm-dt-font-weight, 400);
+    font-style:       var(--bkrm-dt-font-style, normal);
+    text-decoration:  var(--bkrm-dt-text-decoration, none);
+    text-transform:   var(--bkrm-dt-text-transform, none);
+    line-height:      var(--bkrm-dt-line-height-d, 1.5);
+    letter-spacing:   var(--bkrm-dt-letter-spacing-d, normal);
+    word-spacing:     var(--bkrm-dt-word-spacing-d, normal);
+}
+.bkrm-badge {
+  display: inline-block; padding: 2px 10px;
+  border-radius: 20px; font-size: .78em; font-weight: 600;
+}
+.bkrm-badge-done     { background: var(--bkrm-done, #22c55e); color: #fff; }
+.bkrm-badge-progress { background: var(--bkrm-prog, #f59e0b); color: #fff; }
+.bkrm-badge-planned  { background: var(--bkrm-plan, #94a3b8); color: #fff; }
+
+.bkrm-arrow {
+  color: var(--bkrm-conn, #d1d5db);
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+    .bkrm-card h4.bkrm-title {
+        font-size:       var(--bkrm-tt-font-size-t, var(--bkrm-tt-font-size-d, 15px));
+        line-height:     var(--bkrm-tt-line-height-t, var(--bkrm-tt-line-height-d, 1.4));
+        letter-spacing:  var(--bkrm-tt-letter-spacing-t, var(--bkrm-tt-letter-spacing-d, normal));
+        word-spacing:    var(--bkrm-tt-word-spacing-t, var(--bkrm-tt-word-spacing-d, normal));
+    }
+    .bkrm-desc {
+        font-size:       var(--bkrm-dt-font-size-t, var(--bkrm-dt-font-size-d, 13px));
+        line-height:     var(--bkrm-dt-line-height-t, var(--bkrm-dt-line-height-d, 1.5));
+        letter-spacing:  var(--bkrm-dt-letter-spacing-t, var(--bkrm-dt-letter-spacing-d, normal));
+        word-spacing:    var(--bkrm-dt-word-spacing-t, var(--bkrm-dt-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkrm-card h4.bkrm-title {
+        font-size:       var(--bkrm-tt-font-size-m, var(--bkrm-tt-font-size-t, var(--bkrm-tt-font-size-d, 15px)));
+        line-height:     var(--bkrm-tt-line-height-m, var(--bkrm-tt-line-height-t, var(--bkrm-tt-line-height-d, 1.4)));
+        letter-spacing:  var(--bkrm-tt-letter-spacing-m, var(--bkrm-tt-letter-spacing-t, var(--bkrm-tt-letter-spacing-d, normal)));
+        word-spacing:    var(--bkrm-tt-word-spacing-m, var(--bkrm-tt-word-spacing-t, var(--bkrm-tt-word-spacing-d, normal)));
+    }
+    .bkrm-desc {
+        font-size:       var(--bkrm-dt-font-size-m, var(--bkrm-dt-font-size-t, var(--bkrm-dt-font-size-d, 13px)));
+        line-height:     var(--bkrm-dt-line-height-m, var(--bkrm-dt-line-height-t, var(--bkrm-dt-line-height-d, 1.5)));
+        letter-spacing:  var(--bkrm-dt-letter-spacing-m, var(--bkrm-dt-letter-spacing-t, var(--bkrm-dt-letter-spacing-d, normal)));
+        word-spacing:    var(--bkrm-dt-word-spacing-m, var(--bkrm-dt-word-spacing-t, var(--bkrm-dt-word-spacing-d, normal)));
+    }
+}

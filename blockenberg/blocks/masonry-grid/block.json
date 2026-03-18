@@ -1,0 +1,120 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/masonry-grid",
+    "title": "Masonry Grid",
+    "category": "bkbg-layout",
+    "icon": "cover-image",
+    "description": "Responsive masonry layout for images with hover effects.",
+    "keywords": [
+        "masonry",
+        "grid",
+        "gallery",
+        "columns",
+        "layout"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-masonry-grid-editor",
+    "editorStyle": "bkbg-masonry-grid-style",
+    "style": "bkbg-masonry-grid-style",
+    "viewScript": "bkbg-masonry-grid-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "gap": {
+            "type": "number",
+            "default": 16
+        },
+        "imageRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "hoverEffect": {
+            "type": "string",
+            "default": "zoom"
+        },
+        "showCaption": {
+            "type": "boolean",
+            "default": true
+        },
+        "showOverlay": {
+            "type": "boolean",
+            "default": true
+        },
+        "overlayColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "overlayOpacity": {
+            "type": "number",
+            "default": 70
+        },
+        "captionColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "captionTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "lightbox": {
+            "type": "boolean",
+            "default": false
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "id": 0,
+                    "url": "",
+                    "alt": "Project One",
+                    "caption": "Project One",
+                    "link": ""
+                },
+                {
+                    "id": 0,
+                    "url": "",
+                    "alt": "Project Two",
+                    "caption": "Project Two",
+                    "link": ""
+                },
+                {
+                    "id": 0,
+                    "url": "",
+                    "alt": "Project Three",
+                    "caption": "Project Three",
+                    "link": ""
+                },
+                {
+                    "id": 0,
+                    "url": "",
+                    "alt": "Project Four",
+                    "caption": "Project Four",
+                    "link": ""
+                },
+                {
+                    "id": 0,
+                    "url": "",
+                    "alt": "Project Five",
+                    "caption": "Project Five",
+                    "link": ""
+                }
+            ]
+        }
+    }
+}

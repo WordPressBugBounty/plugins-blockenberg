@@ -1,0 +1,96 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/scroll-to-top",
+    "title": "Scroll To Top",
+    "category": "bkbg-layout",
+    "icon": "arrow-up-alt2",
+    "description": "Fixed scroll-to-top button that appears after scrolling down the page.",
+    "keywords": [
+        "scroll",
+        "top",
+        "button",
+        "fixed",
+        "floating"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-scroll-to-top-editor",
+    "editorStyle": "bkbg-scroll-to-top-style",
+    "style": "bkbg-scroll-to-top-style",
+    "viewScript": "bkbg-scroll-to-top-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true
+    },
+    "attributes": {
+        "position": {
+            "type": "string",
+            "default": "bottom-right"
+        },
+        "offsetX": {
+            "type": "number",
+            "default": 24
+        },
+        "offsetY": {
+            "type": "number",
+            "default": 24
+        },
+        "scrollTrigger": {
+            "type": "number",
+            "default": 400
+        },
+        "icon": {
+            "type": "string",
+            "default": "arrow-up-alt2"
+        },
+        "label": {
+            "type": "string",
+            "default": ""
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": false
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 50
+        },
+        "btnSize": {
+            "type": "number",
+            "default": 48
+        },
+        "pulsing": {
+            "type": "boolean",
+            "default": false
+        },
+        "smooth": {
+            "type": "boolean",
+            "default": true
+        },
+        "shadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "zIndex": {
+            "type": "number",
+            "default": 9990
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "labelFontWeight": {
+            "type": "number",
+            "default": 700
+        }
+    }
+}

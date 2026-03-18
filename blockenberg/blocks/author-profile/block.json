@@ -1,0 +1,188 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/author-profile",
+    "version": "1.0.0",
+    "title": "Author Profile",
+    "category": "bkbg-business",
+    "description": "Extended author bio card with avatar, name, role, bio, stats, and social links.",
+    "keywords": [
+        "author",
+        "bio",
+        "profile",
+        "team",
+        "social",
+        "about"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-author-profile-editor",
+    "style": "bkbg-author-profile-style",
+    "attributes": {
+        "name": {
+            "type": "string",
+            "default": "Dr. Sarah Chen"
+        },
+        "role": {
+            "type": "string",
+            "default": "AI Research Lead & Author"
+        },
+        "bio": {
+            "type": "string",
+            "default": "Sarah is a leading researcher in applied machine learning with 12+ years of experience building AI products at scale. She has published over 40 papers and speaks at NeurIPS, ICLR, and beyond."
+        },
+        "avatarUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "avatarInitials": {
+            "type": "string",
+            "default": "SC"
+        },
+        "avatarColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "avatarSize": {
+            "type": "number",
+            "default": 80
+        },
+        "showAvatar": {
+            "type": "boolean",
+            "default": true
+        },
+        "showRole": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBio": {
+            "type": "boolean",
+            "default": true
+        },
+        "showStats": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSocial": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "stats": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Articles",
+                    "value": "142"
+                },
+                {
+                    "label": "Followers",
+                    "value": "8.4K"
+                },
+                {
+                    "label": "Avg. Read",
+                    "value": "6 min"
+                }
+            ]
+        },
+        "socialLinks": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "🐦",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "Twitter",
+                    "url": ""
+                },
+                {
+                    "icon": "💼",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "LinkedIn",
+                    "url": ""
+                },
+                {
+                    "icon": "✍️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "Substack",
+                    "url": ""
+                }
+            ]
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "roleColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "statValueColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "statLabelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "padding": {
+            "type": "number",
+            "default": 28
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "nameFontSize": {
+            "type": "number",
+            "default": 20
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "roleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bioTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "statValueTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "statLabelTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

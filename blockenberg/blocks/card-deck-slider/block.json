@@ -1,0 +1,208 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/card-deck-slider",
+    "title": "Card Deck Slider",
+    "category": "bkbg-effects",
+    "description": "A 3D card deck slider where cards arc/fan out behind the front card and animate through the sequence.",
+    "keywords": [
+        "cards",
+        "deck",
+        "slider",
+        "3d",
+        "fan",
+        "carousel"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-card-deck-slider-editor",
+    "style": "bkbg-card-deck-slider-style",
+    "viewScript": "bkbg-card-deck-slider-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "cards": {
+            "type": "array",
+            "default": [
+                {
+                    "imageUrl": "",
+                    "imageAlt": "",
+                    "tag": "Design",
+                    "title": "Creative Solutions",
+                    "description": "We craft beautiful digital experiences that inspire and engage your audience.",
+                    "linkUrl": "",
+                    "linkLabel": "Learn More"
+                },
+                {
+                    "imageUrl": "",
+                    "imageAlt": "",
+                    "tag": "Strategy",
+                    "title": "Smart Thinking",
+                    "description": "Data-driven strategies that translate complex challenges into clear opportunities.",
+                    "linkUrl": "",
+                    "linkLabel": "Learn More"
+                },
+                {
+                    "imageUrl": "",
+                    "imageAlt": "",
+                    "tag": "Technology",
+                    "title": "Modern Platforms",
+                    "description": "Cutting-edge technology built for performance, scale and long-term success.",
+                    "linkUrl": "",
+                    "linkLabel": "Learn More"
+                },
+                {
+                    "imageUrl": "",
+                    "imageAlt": "",
+                    "tag": "Growth",
+                    "title": "Measurable Results",
+                    "description": "Every project is measured against clear goals so you always know your ROI.",
+                    "linkUrl": "",
+                    "linkLabel": "Learn More"
+                }
+            ]
+        },
+        "deckStyle": {
+            "type": "string",
+            "default": "fan"
+        },
+        "cardWidth": {
+            "type": "number",
+            "default": 360
+        },
+        "cardHeight": {
+            "type": "number",
+            "default": 480
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 20
+        },
+        "stackCount": {
+            "type": "number",
+            "default": 3
+        },
+        "stackAngle": {
+            "type": "number",
+            "default": 8
+        },
+        "stackOffset": {
+            "type": "number",
+            "default": 18
+        },
+        "stackScale": {
+            "type": "number",
+            "default": 0.06
+        },
+        "transitionDuration": {
+            "type": "number",
+            "default": 500
+        },
+        "autoPlay": {
+            "type": "boolean",
+            "default": false
+        },
+        "autoInterval": {
+            "type": "number",
+            "default": 3500
+        },
+        "showDots": {
+            "type": "boolean",
+            "default": true
+        },
+        "showArrows": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTag": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLink": {
+            "type": "boolean",
+            "default": true
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 24
+        },
+        "descSize": {
+            "type": "number",
+            "default": 15
+        },
+        "tagSize": {
+            "type": "number",
+            "default": 11
+        },
+        "imageFit": {
+            "type": "string",
+            "default": "cover"
+        },
+        "overlayStrength": {
+            "type": "number",
+            "default": 50
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "tagBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "tagColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#818cf8"
+        },
+        "dotColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "arrowBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "arrowColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoDesc": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

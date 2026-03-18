@@ -1,0 +1,134 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/message-thread",
+    "title": "Message Thread",
+    "category": "bkbg-content",
+    "icon": "format-chat",
+    "description": "Styled message conversation thread with chat bubbles, avatars, timestamps, and sender labels.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-message-thread-editor",
+    "style": "bkbg-message-thread-style",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": ""
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": false
+        },
+        "showTimestamps": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAvatars": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSenderNames": {
+            "type": "boolean",
+            "default": true
+        },
+        "bubbleRadius": {
+            "type": "number",
+            "default": 18
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 680
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "selfBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "selfText": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "otherBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "otherText": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "tsColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "messages": {
+            "type": "array",
+            "default": [
+                {
+                    "sender": "Alice",
+                    "side": "other",
+                    "text": "Hey! Did you get a chance to review the new design mockups?",
+                    "time": "10:02 AM",
+                    "avatar": "A",
+                    "avatarColor": "#10b981"
+                },
+                {
+                    "sender": "You",
+                    "side": "self",
+                    "text": "Just finished! I love the new dashboard layout. The analytics page looks amazing.",
+                    "time": "10:04 AM",
+                    "avatar": "Y",
+                    "avatarColor": "#6366f1"
+                },
+                {
+                    "sender": "Alice",
+                    "side": "other",
+                    "text": "Glad you liked it 🎉 Do you think we should go with the dark or light theme as default?",
+                    "time": "10:05 AM",
+                    "avatar": "A",
+                    "avatarColor": "#10b981"
+                },
+                {
+                    "sender": "You",
+                    "side": "self",
+                    "text": "I'd lean towards light as default, but offer a toggle for dark mode. More accessible that way.",
+                    "time": "10:07 AM",
+                    "avatar": "Y",
+                    "avatarColor": "#6366f1"
+                },
+                {
+                    "sender": "Alice",
+                    "side": "other",
+                    "text": "Perfect. I'll update the prototype and share it with the team by EOD.",
+                    "time": "10:08 AM",
+                    "avatar": "A",
+                    "avatarColor": "#10b981"
+                }
+            ]
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 16
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "metaTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,215 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/book-review",
+    "title": "Book Review",
+    "category": "bkbg-blog",
+    "icon": "book",
+    "description": "Rich book review block with cover image, star rating, details grid, pros & cons, and Schema.org Book + Review structured data for SEO.",
+    "keywords": [
+        "book",
+        "review",
+        "rating",
+        "schema",
+        "literature",
+        "read"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-book-review-editor",
+    "style": "bkbg-book-review-style",
+    "viewScript": "bkbg-book-review-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "bookTitle": {
+            "type": "string",
+            "default": "The Great Gatsby"
+        },
+        "bookAuthor": {
+            "type": "string",
+            "default": "F. Scott Fitzgerald"
+        },
+        "genre": {
+            "type": "string",
+            "default": "Classic Fiction"
+        },
+        "publisher": {
+            "type": "string",
+            "default": "Scribner"
+        },
+        "publishYear": {
+            "type": "string",
+            "default": "1925"
+        },
+        "pages": {
+            "type": "string",
+            "default": "180"
+        },
+        "isbn": {
+            "type": "string",
+            "default": ""
+        },
+        "coverUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "coverAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "rating": {
+            "type": "number",
+            "default": 4
+        },
+        "maxRating": {
+            "type": "number",
+            "default": 5
+        },
+        "ratingLabel": {
+            "type": "string",
+            "default": "Our Rating"
+        },
+        "summary": {
+            "type": "string",
+            "default": "A tale of wealth, love, and the American Dream set in the roaring twenties. Fitzgerald's prose is lyrical and deeply evocative, painting a picture of a society obsessed with status and illusion."
+        },
+        "pros": {
+            "type": "array",
+            "default": [
+                "Beautiful, poetic prose",
+                "Complex, memorable characters",
+                "Rich thematic depth"
+            ]
+        },
+        "cons": {
+            "type": "array",
+            "default": [
+                "Short and may feel rushed",
+                "Some readers find Gatsby unsympathetic"
+            ]
+        },
+        "showDetails": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPros": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCons": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSchema": {
+            "type": "boolean",
+            "default": true
+        },
+        "btnText": {
+            "type": "string",
+            "default": "Buy on Amazon"
+        },
+        "btnUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "btnTarget": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "authorColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "bodyColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "starColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "prosColor": {
+            "type": "string",
+            "default": "#15803d"
+        },
+        "consColor": {
+            "type": "string",
+            "default": "#b91c1c"
+        },
+        "detailLabelClr": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 24
+        },
+        "bodySize": {
+            "type": "number",
+            "default": 15
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "coverWidth": {
+            "type": "number",
+            "default": 160
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 860
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

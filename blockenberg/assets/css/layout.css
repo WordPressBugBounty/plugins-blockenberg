@@ -1,0 +1,208 @@
+/* ========================================
+   Blockenberg Layout System
+   Shared CSS Variables and Utilities
+   ======================================== */
+
+:root {
+    /* ========================================
+       Spacing Scale (Token System)
+       ======================================== */
+    --bkbg-space-none: 0;
+    --bkbg-space-xs: 8px;
+    --bkbg-space-s: 16px;
+    --bkbg-space-m: 24px;
+    --bkbg-space-l: 32px;
+    --bkbg-space-xl: 48px;
+    --bkbg-space-2xl: 64px;
+    
+    /* ========================================
+       Breakpoints
+       ======================================== */
+    --bkbg-breakpoint-mobile: 767px;
+    --bkbg-breakpoint-tablet: 1024px;
+    --bkbg-breakpoint-desktop: 1025px;
+    
+    /* ========================================
+       Layout Max Widths
+       ======================================== */
+    --bkbg-max-width-narrow: 720px;
+    --bkbg-max-width-default: 1024px;
+    --bkbg-max-width-wide: 1200px;
+    --bkbg-max-width-full: 1440px;
+    
+    /* ========================================
+       Colors - Backgrounds
+       ======================================== */
+    --bkbg-bg-transparent: transparent;
+    --bkbg-bg-light: #f8fafc;
+    --bkbg-bg-dark: #1e293b;
+    --bkbg-bg-accent: #3b82f6;
+    --bkbg-bg-muted: #f1f5f9;
+    
+    /* ========================================
+       Colors - Text
+       ======================================== */
+    --bkbg-text-primary: #0f172a;
+    --bkbg-text-secondary: #475569;
+    --bkbg-text-muted: #64748b;
+    --bkbg-text-light: #ffffff;
+    
+    /* ========================================
+       Colors - UI
+       ======================================== */
+    --bkbg-ui-primary: #3b82f6;
+    --bkbg-ui-primary-hover: #2563eb;
+    --bkbg-ui-border: #e2e8f0;
+    --bkbg-ui-border-hover: #cbd5e1;
+    
+    /* ========================================
+       Animation
+       ======================================== */
+    --bkbg-transition-fast: 0.15s ease;
+    --bkbg-transition-normal: 0.25s ease;
+    --bkbg-transition-slow: 0.35s ease;
+    
+    /* ========================================
+       Shadows
+       ======================================== */
+    --bkbg-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --bkbg-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --bkbg-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    
+    /* ========================================
+       Border Radius
+       ======================================== */
+    --bkbg-radius-sm: 2px;
+    --bkbg-radius-md: 4px;
+    --bkbg-radius-lg: 8px;
+    --bkbg-radius-xl: 12px;
+}
+
+/* ========================================
+   Layout Container Reset
+   ======================================== */
+
+.bkbg-section,
+.bkbg-row,
+.bkbg-column {
+    box-sizing: border-box;
+}
+
+.bkbg-section *,
+.bkbg-row *,
+.bkbg-column * {
+    box-sizing: border-box;
+}
+
+/* ========================================
+   Gap Calculation Helper for Flex Layout
+   When using gap with percentage widths,
+   we need to account for the gap in width calc
+   ======================================== */
+
+/* Gap values for calculation */
+.bkbg-row--gap-none {
+    --bkbg-current-gap: 0px;
+}
+
+.bkbg-row--gap-xs {
+    --bkbg-current-gap: var(--bkbg-space-xs);
+}
+
+.bkbg-row--gap-s {
+    --bkbg-current-gap: var(--bkbg-space-s);
+}
+
+.bkbg-row--gap-m {
+    --bkbg-current-gap: var(--bkbg-space-m);
+}
+
+.bkbg-row--gap-l {
+    --bkbg-current-gap: var(--bkbg-space-l);
+}
+
+.bkbg-row--gap-xl {
+    --bkbg-current-gap: var(--bkbg-space-xl);
+}
+
+/* ========================================
+   Accessibility
+   ======================================== */
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .bkbg-section,
+    .bkbg-row,
+    .bkbg-column,
+    .bkbg-section *,
+    .bkbg-row *,
+    .bkbg-column * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* Focus visible styles */
+.bkbg-section:focus-visible,
+.bkbg-row:focus-visible,
+.bkbg-column:focus-visible {
+    outline: 2px solid var(--bkbg-ui-primary);
+    outline-offset: 2px;
+}
+
+/* ========================================
+   Print Styles
+   ======================================== */
+
+@media print {
+    .bkbg-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    .bkbg-row {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    .bkbg-column {
+        break-inside: avoid;
+    }
+    
+    /* Force single column on print */
+    .bkbg-row__inner {
+        flex-direction: column !important;
+    }
+    
+    .bkbg-column {
+        flex-basis: 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* ========================================
+   Dark Mode Support (Optional)
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+    .bkbg-section--bg-light {
+        --bkbg-section-bg-light: #1e293b;
+    }
+    
+    .bkbg-section--bg-dark {
+        --bkbg-section-bg-dark: #0f172a;
+    }
+}
+
+/* ========================================
+   High Contrast Mode Support
+   ======================================== */
+
+@media (forced-colors: active) {
+    .bkbg-section,
+    .bkbg-row,
+    .bkbg-column {
+        border: 1px solid CanvasText;
+    }
+}

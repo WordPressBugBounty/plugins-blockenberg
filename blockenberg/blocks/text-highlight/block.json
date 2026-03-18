@@ -1,0 +1,130 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/text-highlight",
+    "version": "1.0.0",
+    "title": "Text Highlight",
+    "category": "bkbg-content",
+    "icon": "editor-underline",
+    "description": "Animate a color marker / highlighter sweep behind specific words or phrases when they scroll into view.",
+    "keywords": [
+        "highlight",
+        "marker",
+        "underline",
+        "text",
+        "animate",
+        "scroll",
+        "emphasis",
+        "mark"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-text-highlight-editor",
+    "editorStyle": "bkbg-text-highlight-style",
+    "style": "bkbg-text-highlight-style",
+    "viewScript": "bkbg-text-highlight-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "text": {
+            "type": "string",
+            "default": "We help brands grow faster with smarter marketing."
+        },
+        "highlights": {
+            "type": "string",
+            "default": "grow faster, smarter marketing"
+        },
+        "tag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "highlightStyle": {
+            "type": "string",
+            "default": "marker"
+        },
+        "highlightColor": {
+            "type": "string",
+            "default": "#fde68a"
+        },
+        "highlightOpacity": {
+            "type": "number",
+            "default": 100
+        },
+        "highlightRadius": {
+            "type": "number",
+            "default": 4
+        },
+        "highlightPadX": {
+            "type": "number",
+            "default": 6
+        },
+        "highlightPadY": {
+            "type": "number",
+            "default": 2
+        },
+        "lineThickness": {
+            "type": "number",
+            "default": 8
+        },
+        "linePosition": {
+            "type": "string",
+            "default": "bottom"
+        },
+        "animateOnScroll": {
+            "type": "boolean",
+            "default": true
+        },
+        "animationStyle": {
+            "type": "string",
+            "default": "sweep"
+        },
+        "animationDuration": {
+            "type": "number",
+            "default": 600
+        },
+        "animationDelay": {
+            "type": "number",
+            "default": 80
+        },
+        "threshold": {
+            "type": "number",
+            "default": 0.2
+        },
+        "repeat": {
+            "type": "boolean",
+            "default": false
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 48
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 48
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 800
+        }
+    }
+}

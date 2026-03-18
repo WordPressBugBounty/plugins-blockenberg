@@ -1,0 +1,112 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/sudoku",
+	"title": "Sudoku",
+	"category": "bkbg-interactive",
+	"icon": "grid-view",
+	"description": "Interactive Sudoku puzzle with difficulty levels, hints, mistake tracking, and timer. Full WYSIWYG preview in editor.",
+	"keywords": [
+		"sudoku",
+		"puzzle",
+		"game",
+		"number",
+		"logic",
+		"brain"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-sudoku-editor",
+	"style": "bkbg-sudoku-style",
+	"viewScript": "bkbg-sudoku-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Sudoku"
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Fill the grid so every row, column and 3\u00d73 box contains the digits 1\u20139"
+		},
+		"defaultDifficulty": {
+			"type": "string",
+			"default": "medium"
+		},
+		"showTimer": {
+			"type": "boolean",
+			"default": true
+		},
+		"showMistakes": {
+			"type": "boolean",
+			"default": true
+		},
+		"highlightRelated": {
+			"type": "boolean",
+			"default": true
+		},
+		"highlightSameNumber": {
+			"type": "boolean",
+			"default": true
+		},
+		"maxMistakes": {
+			"type": "number",
+			"default": 3
+		},
+		"hintsAllowed": {
+			"type": "number",
+			"default": 3
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#6366f1"
+		},
+		"givenColor": {
+			"type": "string",
+			"default": "#1e1b4b"
+		},
+		"enteredColor": {
+			"type": "string",
+			"default": "#6366f1"
+		},
+		"errorColor": {
+			"type": "string",
+			"default": "#ef4444"
+		},
+		"highlightBg": {
+			"type": "string",
+			"default": "#e0e7ff"
+		},
+		"selectedBg": {
+			"type": "string",
+			"default": "#c7d2fe"
+		},
+		"gridBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"sectionBg": {
+			"type": "string",
+			"default": "#f5f3ff"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#1e1b4b"
+		},
+		"titleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"subtitleTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

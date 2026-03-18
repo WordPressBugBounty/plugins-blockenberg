@@ -1,0 +1,182 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/dumbbell-chart",
+    "version": "1.0.0",
+    "title": "Dumbbell Chart",
+    "category": "bkbg-charts",
+    "icon": "minus",
+    "description": "Horizontal dumbbell (connected dot) chart comparing two values per category — ideal for before/after, target vs actual, or two-group comparisons.",
+    "keywords": [
+        "dumbbell",
+        "chart",
+        "before after",
+        "comparison",
+        "range",
+        "dot plot",
+        "connected dot"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-dumbbell-chart-editor",
+    "style": "bkbg-dumbbell-chart-style",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Performance: Before vs After"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelA": {
+            "type": "string",
+            "default": "Before"
+        },
+        "labelB": {
+            "type": "string",
+            "default": "After"
+        },
+        "colorA": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "colorB": {
+            "type": "string",
+            "default": "#4f46e5"
+        },
+        "connectorColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "svgWidth": {
+            "type": "number",
+            "default": 700
+        },
+        "rowHeight": {
+            "type": "number",
+            "default": 48
+        },
+        "padTop": {
+            "type": "number",
+            "default": 36
+        },
+        "padLeft": {
+            "type": "number",
+            "default": 160
+        },
+        "padRight": {
+            "type": "number",
+            "default": 50
+        },
+        "dotRadius": {
+            "type": "number",
+            "default": 11
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "valueFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "legendFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 20
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "labelFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "valueFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "legendFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGridLines": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Conversion Rate",
+                    "a": 2.4,
+                    "b": 5.1
+                },
+                {
+                    "label": "Page Speed",
+                    "a": 3.8,
+                    "b": 7.2
+                },
+                {
+                    "label": "User Retention",
+                    "a": 41,
+                    "b": 68
+                },
+                {
+                    "label": "NPS Score",
+                    "a": 28,
+                    "b": 54
+                },
+                {
+                    "label": "Avg Session (s)",
+                    "a": 88,
+                    "b": 142
+                },
+                {
+                    "label": "Click-through %",
+                    "a": 1.9,
+                    "b": 4.6
+                }
+            ]
+        }
+    }
+}

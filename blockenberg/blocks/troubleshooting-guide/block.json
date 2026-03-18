@@ -1,0 +1,216 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/troubleshooting-guide",
+    "title": "Troubleshooting Guide",
+    "category": "bkbg-blog",
+    "icon": "sos",
+    "description": "Structured problem/cause/solution guide with severity levels, search, and multiple layout options.",
+    "keywords": [
+        "troubleshooting",
+        "problem",
+        "solution",
+        "fix",
+        "issue",
+        "debug",
+        "support",
+        "faq",
+        "guide",
+        "help"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-troubleshooting-guide-editor",
+    "editorStyle": "bkbg-troubleshooting-guide-style",
+    "style": "bkbg-troubleshooting-guide-style",
+    "viewScript": "bkbg-troubleshooting-guide-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "blockTitle": {
+            "type": "string",
+            "default": "Troubleshooting Guide"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "blockSubtitle": {
+            "type": "string",
+            "default": "Find solutions to common issues below."
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "issues": {
+            "type": "array",
+            "default": [
+                {
+                    "problem": "Application won't start",
+                    "cause": "Missing runtime dependency or corrupted install files",
+                    "solution": "Run the repair tool from the installer, or uninstall completely and reinstall from the official download page.",
+                    "severity": "high"
+                },
+                {
+                    "problem": "Slow performance after update",
+                    "cause": "Cached data conflicts with new version",
+                    "solution": "Clear the application cache under Settings › Advanced › Clear Cache, then restart the application.",
+                    "severity": "medium"
+                },
+                {
+                    "problem": "Login page keeps refreshing",
+                    "cause": "Browser cookies are blocked or corrupted",
+                    "solution": "Allow cookies for this site in your browser settings, clear existing cookies, and try again in an incognito window.",
+                    "severity": "medium"
+                },
+                {
+                    "problem": "Images not loading",
+                    "cause": "CDN outage or broken media library path",
+                    "solution": "Check your CDN status page. If paths are broken, navigate to Tools › Regenerate Thumbnails to rebuild image metadata.",
+                    "severity": "low"
+                },
+                {
+                    "problem": "Database connection error",
+                    "cause": "Incorrect database credentials or server is down",
+                    "solution": "Verify your database host, username, password and database name in wp-config.php. Contact hosting support if credentials are correct.",
+                    "severity": "critical"
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "cards"
+        },
+        "style": {
+            "type": "string",
+            "default": "bordered"
+        },
+        "showCause": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSeverity": {
+            "type": "boolean",
+            "default": true
+        },
+        "showNumbers": {
+            "type": "boolean",
+            "default": true
+        },
+        "enableSearch": {
+            "type": "boolean",
+            "default": true
+        },
+        "searchPlaceholder": {
+            "type": "string",
+            "default": "Search issues…"
+        },
+        "collapsible": {
+            "type": "boolean",
+            "default": false
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "gap": {
+            "type": "number",
+            "default": 14
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "problemTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "problemColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "causeColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "solutionColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "solutionBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "solutionBorderColor": {
+            "type": "string",
+            "default": "#86efac"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "criticalBg": {
+            "type": "string",
+            "default": "#fee2e2"
+        },
+        "criticalColor": {
+            "type": "string",
+            "default": "#991b1b"
+        },
+        "highBg": {
+            "type": "string",
+            "default": "#ffedd5"
+        },
+        "highColor": {
+            "type": "string",
+            "default": "#9a3412"
+        },
+        "mediumBg": {
+            "type": "string",
+            "default": "#fef9c3"
+        },
+        "mediumColor": {
+            "type": "string",
+            "default": "#854d0e"
+        },
+        "lowBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "lowColor": {
+            "type": "string",
+            "default": "#166534"
+        }
+    }
+}

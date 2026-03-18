@@ -1,0 +1,173 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/parallax-depth-cards",
+    "title": "Parallax Depth Cards",
+    "category": "bkbg-effects",
+    "description": "Cards with layered 3D depth parallax on mouse move \u2014 different elements float at different speeds.",
+    "keywords": [
+        "parallax",
+        "depth",
+        "3d",
+        "mouse",
+        "card",
+        "tilt",
+        "float"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-parallax-depth-cards-editor",
+    "style": "bkbg-parallax-depth-cards-style",
+    "viewScript": "bkbg-parallax-depth-cards-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "cards": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Deep Space",
+                    "subtitle": "Layer by layer",
+                    "badge": "NEW",
+                    "bgImage": "",
+                    "bgColor": "#1a1035",
+                    "icon": "\ud83c\udf0c",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "tag": "Design"
+                },
+                {
+                    "title": "Ocean Depths",
+                    "subtitle": "Feel the current",
+                    "badge": "HOT",
+                    "bgImage": "",
+                    "bgColor": "#0f2744",
+                    "icon": "\ud83c\udf0a",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "tag": "Motion"
+                },
+                {
+                    "title": "Forest Floor",
+                    "subtitle": "Layers of nature",
+                    "badge": "ECO",
+                    "bgImage": "",
+                    "bgColor": "#0d2418",
+                    "icon": "\ud83c\udf3f",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "tag": "Nature"
+                }
+            ]
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "cardWidth": {
+            "type": "number",
+            "default": 320
+        },
+        "cardHeight": {
+            "type": "number",
+            "default": 420
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 24
+        },
+        "tiltStrength": {
+            "type": "number",
+            "default": 20
+        },
+        "depthStrength": {
+            "type": "number",
+            "default": 30
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTag": {
+            "type": "boolean",
+            "default": true
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 24
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 14
+        },
+        "badgeFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 48
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.7)"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "tagBg": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.15)"
+        },
+        "tagColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "overlayColor": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.25)"
+        },
+        "glowColor": {
+            "type": "string",
+            "default": "rgba(99,102,241,0.5)"
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "subtitleFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,220 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/word-cloud",
+    "title": "Word Cloud",
+    "category": "bkbg-charts",
+    "icon": "tag",
+    "description": "A visual word cloud where each word is sized by its weight — ideal for topics, skills, tags, or concepts.",
+    "keywords": [
+        "word",
+        "cloud",
+        "tag",
+        "keyword",
+        "weight",
+        "bubble",
+        "text"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-word-cloud-editor",
+    "editorStyle": "bkbg-word-cloud-style",
+    "style": "bkbg-word-cloud-style",
+    "viewScript": "bkbg-word-cloud-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "words": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "Design",
+                    "weight": 9,
+                    "url": "",
+                    "colorOverride": ""
+                },
+                {
+                    "text": "Development",
+                    "weight": 8,
+                    "url": "",
+                    "colorOverride": ""
+                },
+                {
+                    "text": "UX",
+                    "weight": 7,
+                    "url": "",
+                    "colorOverride": ""
+                },
+                {
+                    "text": "Branding",
+                    "weight": 6,
+                    "url": "",
+                    "colorOverride": ""
+                },
+                {
+                    "text": "Strategy",
+                    "weight": 6,
+                    "url": "",
+                    "colorOverride": ""
+                },
+                {
+                    "text": "React",
+                    "weight": 5,
+                    "url": "",
+                    "colorOverride": ""
+                },
+                {
+                    "text": "WordPress",
+                    "weight": 5,
+                    "url": "",
+                    "colorOverride": ""
+                },
+                {
+                    "text": "SEO",
+                    "weight": 4,
+                    "url": "",
+                    "colorOverride": ""
+                },
+                {
+                    "text": "Marketing",
+                    "weight": 4,
+                    "url": "",
+                    "colorOverride": ""
+                },
+                {
+                    "text": "Analytics",
+                    "weight": 3,
+                    "url": "",
+                    "colorOverride": ""
+                },
+                {
+                    "text": "Content",
+                    "weight": 3,
+                    "url": "",
+                    "colorOverride": ""
+                },
+                {
+                    "text": "JavaScript",
+                    "weight": 7,
+                    "url": "",
+                    "colorOverride": ""
+                },
+                {
+                    "text": "CSS",
+                    "weight": 5,
+                    "url": "",
+                    "colorOverride": ""
+                },
+                {
+                    "text": "PHP",
+                    "weight": 4,
+                    "url": "",
+                    "colorOverride": ""
+                },
+                {
+                    "text": "Typography",
+                    "weight": 3,
+                    "url": "",
+                    "colorOverride": ""
+                },
+                {
+                    "text": "Performance",
+                    "weight": 2,
+                    "url": "",
+                    "colorOverride": ""
+                }
+            ]
+        },
+        "minFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "maxFontSize": {
+            "type": "number",
+            "default": 52
+        },
+        "colorMode": {
+            "type": "string",
+            "default": "palette"
+        },
+        "palette": {
+            "type": "string",
+            "default": "#6c3fb5,#3b82f6,#10b981,#f59e0b,#ef4444,#ec4899,#8b5cf6,#0ea5e9"
+        },
+        "singleColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "gap": {
+            "type": "number",
+            "default": 12
+        },
+        "paddingV": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingH": {
+            "type": "number",
+            "default": 24
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "hoverEffect": {
+            "type": "string",
+            "default": "scale"
+        },
+        "showWordBg": {
+            "type": "boolean",
+            "default": false
+        },
+        "wordBgOpacity": {
+            "type": "number",
+            "default": 12
+        },
+        "wordBorderRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "wordPaddingV": {
+            "type": "number",
+            "default": 4
+        },
+        "wordPaddingH": {
+            "type": "number",
+            "default": 10
+        },
+        "fontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "letterSpacing": {
+            "type": "number",
+            "default": 0
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "sortOrder": {
+            "type": "string",
+            "default": "random"
+        },
+        "shuffleSeed": {
+            "type": "number",
+            "default": 42
+        },
+        "cloudTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

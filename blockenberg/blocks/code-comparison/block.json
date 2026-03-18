@@ -1,0 +1,146 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/code-comparison",
+    "title": "Code Comparison",
+    "category": "bkbg-dev",
+    "icon": "editor-code",
+    "description": "Side-by-side code comparison block with syntax highlighting, diff markers, labeled panels, copy buttons, line numbers, and a draggable split divider.",
+    "keywords": [
+        "code",
+        "comparison",
+        "diff",
+        "before",
+        "after",
+        "syntax",
+        "highlighting",
+        "programming"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-code-comparison-editor",
+    "style": "bkbg-code-comparison-style",
+    "viewScript": "bkbg-code-comparison-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "leftCode": {
+            "type": "string",
+            "default": "function greet(name) {\n  return 'Hello, ' + name;\n}\n\n// Call the function\nconst msg = greet('World');\nconsole.log(msg);"
+        },
+        "rightCode": {
+            "type": "string",
+            "default": "const greet = (name) => {\n  return `Hello, ${name}!`;\n};\n\n// Call the function\nconst msg = greet('World');\nconsole.log(msg);"
+        },
+        "leftLabel": {
+            "type": "string",
+            "default": "Before"
+        },
+        "rightLabel": {
+            "type": "string",
+            "default": "After"
+        },
+        "leftLang": {
+            "type": "string",
+            "default": "javascript"
+        },
+        "rightLang": {
+            "type": "string",
+            "default": "javascript"
+        },
+        "diffLines": {
+            "type": "string",
+            "default": ""
+        },
+        "showDiffMarkers": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLineNumbers": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCopyButtons": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLanguageBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "draggableSplit": {
+            "type": "boolean",
+            "default": true
+        },
+        "splitRatio": {
+            "type": "number",
+            "default": 50
+        },
+        "theme": {
+            "type": "string",
+            "default": "dark"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "typoCode": {
+            "type": "object",
+            "default": {}
+        },
+        "maxHeight": {
+            "type": "number",
+            "default": 0
+        },
+        "wrapLines": {
+            "type": "boolean",
+            "default": false
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "bgLeft": {
+            "type": "string",
+            "default": "#1e1e2e"
+        },
+        "bgRight": {
+            "type": "string",
+            "default": "#1e2e1e"
+        },
+        "headerBgLeft": {
+            "type": "string",
+            "default": "#ff6b6b"
+        },
+        "headerBgRight": {
+            "type": "string",
+            "default": "#6bcb77"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "codeColor": {
+            "type": "string",
+            "default": "#cdd6f4"
+        },
+        "lineNumColor": {
+            "type": "string",
+            "default": "#6c7086"
+        },
+        "diffAddBg": {
+            "type": "string",
+            "default": "rgba(107,203,119,0.15)"
+        },
+        "diffRemBg": {
+            "type": "string",
+            "default": "rgba(255,107,107,0.15)"
+        }
+    }
+}

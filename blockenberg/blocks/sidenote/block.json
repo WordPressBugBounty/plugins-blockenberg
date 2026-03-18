@@ -1,0 +1,127 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/sidenote",
+	"title": "Sidenote",
+	"description": "Floated editorial annotation or margin note — pull text aside left or right with full styling.",
+	"category": "bkbg-blog",
+	"icon": "editor-insertmore",
+	"keywords": [
+		"sidenote",
+		"annotation",
+		"aside",
+		"margin",
+		"note",
+		"editorial",
+		"pull"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-sidenote-editor",
+	"style": "bkbg-sidenote-style",
+	"viewScript": "bkbg-sidenote-frontend",
+	"supports": {
+		"html": false,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"text": {
+			"type": "string",
+			"default": ""
+		},
+		"label": {
+			"type": "string",
+			"default": "Note"
+		},
+		"showLabel": {
+			"type": "boolean",
+			"default": true
+		},
+		"icon": {
+			"type": "string",
+			"default": "📝"
+		},
+		"iconType": {
+			"type": "string",
+			"default": "custom-char"
+		},
+		"iconDashicon": {
+			"type": "string",
+			"default": "edit"
+		},
+		"iconImageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"showIcon": {
+			"type": "boolean",
+			"default": true
+		},
+		"position": {
+			"type": "string",
+			"default": "right"
+		},
+		"style": {
+			"type": "string",
+			"default": "bordered"
+		},
+		"width": {
+			"type": "number",
+			"default": 260
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#fffbeb"
+		},
+		"borderColor": {
+			"type": "string",
+			"default": "#fbbf24"
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#d97706"
+		},
+		"labelColor": {
+			"type": "string",
+			"default": "#92400e"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#78350f"
+		},
+		"iconColor": {
+			"type": "string",
+			"default": "#d97706"
+		},
+		"fontSize": {
+			"type": "number",
+			"default": 13
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 6
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 0
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 0
+		},
+		"fontWeight": {
+			"type": "number",
+			"default": 600
+		},
+		"labelTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"textTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

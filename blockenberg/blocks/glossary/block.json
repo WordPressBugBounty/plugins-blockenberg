@@ -1,0 +1,239 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/glossary",
+	"title": "Glossary",
+	"category": "bkbg-blog",
+	"icon": "book-alt",
+	"description": "A\u2013Z alphabetical glossary / dictionary with a clickable alphabet navigation bar, terms grouped by first letter, and expandable or always-visible definitions.",
+	"keywords": [
+		"glossary",
+		"dictionary",
+		"terms",
+		"definitions",
+		"a-z",
+		"faq",
+		"reference",
+		"index"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-glossary-editor",
+	"style": "bkbg-glossary-style",
+	"viewScript": "bkbg-glossary-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Glossary"
+		},
+		"showTitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "A reference guide to key terms and definitions."
+		},
+		"showSubtitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"terms": {
+			"type": "array",
+			"default": [
+				{
+					"id": "t1",
+					"term": "API",
+					"definition": "Application Programming Interface \u2014 a set of rules that allows different software programs to communicate with each other."
+				},
+				{
+					"id": "t2",
+					"term": "Algorithm",
+					"definition": "A step-by-step procedure or formula for solving a problem or accomplishing a task."
+				},
+				{
+					"id": "t3",
+					"term": "Bandwidth",
+					"definition": "The maximum rate of data transfer across a given path, typically measured in bits per second."
+				},
+				{
+					"id": "t4",
+					"term": "Cache",
+					"definition": "A hardware or software component that stores data so that future requests for that data can be served faster."
+				},
+				{
+					"id": "t5",
+					"term": "DNS",
+					"definition": "Domain Name System \u2014 the system that translates human-readable domain names into IP addresses."
+				},
+				{
+					"id": "t6",
+					"term": "Encryption",
+					"definition": "The process of encoding data so that only authorised parties can access it."
+				},
+				{
+					"id": "t7",
+					"term": "Framework",
+					"definition": "A reusable set of libraries or tools that provides a foundation for software development."
+				},
+				{
+					"id": "t8",
+					"term": "Latency",
+					"definition": "The delay before a transfer of data begins following an instruction for its transfer."
+				},
+				{
+					"id": "t9",
+					"term": "Open Source",
+					"definition": "Software whose source code is available for anyone to view, modify, and distribute."
+				},
+				{
+					"id": "t10",
+					"term": "Protocol",
+					"definition": "A set of rules governing the format of data sent over a network."
+				},
+				{
+					"id": "t11",
+					"term": "Scalability",
+					"definition": "The ability of a system to handle increased load by adding resources."
+				},
+				{
+					"id": "t12",
+					"term": "Uptime",
+					"definition": "The percentage of time that a server or service is operational and available to users."
+				}
+			]
+		},
+		"showAlphaNav": {
+			"type": "boolean",
+			"default": true
+		},
+		"expandable": {
+			"type": "boolean",
+			"default": false
+		},
+		"showSearch": {
+			"type": "boolean",
+			"default": true
+		},
+		"groupByLetter": {
+			"type": "boolean",
+			"default": true
+		},
+		"showLetterHead": {
+			"type": "boolean",
+			"default": true
+		},
+		"columns": {
+			"type": "number",
+			"default": 1
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#1e1b4b"
+		},
+		"subtitleColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"termColor": {
+			"type": "string",
+			"default": "#1e1b4b"
+		},
+		"defColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"letterHeadColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"letterHeadBg": {
+			"type": "string",
+			"default": "#f5f3ff"
+		},
+		"navBg": {
+			"type": "string",
+			"default": "#f3f4f6"
+		},
+		"navActiveColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"searchBorder": {
+			"type": "string",
+			"default": "#d1d5db"
+		},
+		"itemBorder": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": ""
+		},
+		"titleSize": {
+			"type": "number",
+			"default": 32
+		},
+		"termSize": {
+			"type": "number",
+			"default": 16
+		},
+		"defSize": {
+			"type": "number",
+			"default": 14
+		},
+		"cardRadius": {
+			"type": "number",
+			"default": 10
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 60
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 60
+		},
+		"titleFontWeight": {
+			"type": "string",
+			"default": "700"
+		},
+		"termFontWeight": {
+			"type": "string",
+			"default": "700"
+		},
+		"defLineHeight": {
+			"type": "number",
+			"default": 1.6
+		},
+		"typoTitle": {
+			"type": "object",
+			"default": {}
+		},
+		"typoTerm": {
+			"type": "object",
+			"default": {}
+		},
+		"typoDef": {
+			"type": "object",
+			"default": {}
+		},
+		"typoLetterHead": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

@@ -1,0 +1,164 @@
+/* Gradient Text Animator Block — bkbg-gta-* */
+
+.bkbg-gta-app {
+    display: block;
+}
+
+/* ── Text element typography ── */
+.bkbg-gta-el {
+    font-family: var(--bkbg-gta-tt-font-family, inherit);
+    font-size: var(--bkbg-gta-tt-font-size-d, 56px);
+    font-weight: var(--bkbg-gta-tt-font-weight, 800);
+    font-style: var(--bkbg-gta-tt-font-style, normal);
+    text-decoration: var(--bkbg-gta-tt-text-decoration, none);
+    text-transform: var(--bkbg-gta-tt-text-transform, none);
+    line-height: var(--bkbg-gta-tt-line-height-d, 1.15);
+    letter-spacing: var(--bkbg-gta-tt-letter-spacing-d, -1px);
+    word-spacing: var(--bkbg-gta-tt-word-spacing-d, normal);
+}
+
+/* Heading specificity (0,2,0) beats editor theme heading rules */
+.bkbg-gta-app h1.bkbg-gta-el,
+.bkbg-gta-app h2.bkbg-gta-el,
+.bkbg-gta-app h3.bkbg-gta-el,
+.bkbg-gta-app h4.bkbg-gta-el,
+.bkbg-gta-app h5.bkbg-gta-el,
+.bkbg-gta-app h6.bkbg-gta-el {
+    font-family: var(--bkbg-gta-tt-font-family, inherit);
+    font-size: var(--bkbg-gta-tt-font-size-d, 56px);
+    font-weight: var(--bkbg-gta-tt-font-weight, 800);
+    font-style: var(--bkbg-gta-tt-font-style, normal);
+    text-decoration: var(--bkbg-gta-tt-text-decoration, none);
+    text-transform: var(--bkbg-gta-tt-text-transform, none);
+    line-height: var(--bkbg-gta-tt-line-height-d, 1.15);
+    letter-spacing: var(--bkbg-gta-tt-letter-spacing-d, -1px);
+    word-spacing: var(--bkbg-gta-tt-word-spacing-d, normal);
+    margin: 0;
+}
+
+.bkbg-gta-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 300% 300%;
+    display: inline-block;
+    width: 100%;
+}
+
+/* ── Shift — gradient slides across ── */
+.bkbg-gta-anim-shift {
+    animation: bkbg-gta-shift linear infinite;
+}
+
+@keyframes bkbg-gta-shift {
+    0%   { background-position: 0%   50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0%   50%; }
+}
+
+/* ── Pulse — gradient softly breathes ── */
+.bkbg-gta-anim-pulse {
+    animation: bkbg-gta-pulse ease-in-out infinite alternate;
+}
+
+@keyframes bkbg-gta-pulse {
+    0%   { background-position: 0%   50%; filter: brightness(1); }
+    100% { background-position: 100% 50%; filter: brightness(1.3); }
+}
+
+/* ── Rainbow — full hue cycle ── */
+.bkbg-gta-anim-rainbow {
+    animation: bkbg-gta-rainbow linear infinite;
+}
+
+@keyframes bkbg-gta-rainbow {
+    0%   { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* ── Reveal — spotlight sweep ── */
+.bkbg-gta-anim-reveal {
+    animation: bkbg-gta-reveal linear infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes bkbg-gta-reveal {
+    0%   { background-position: -100% 50%; }
+    100% { background-position:  200% 50%; }
+}
+
+/* ── Wave — best done in frontend.js with spans, fallback: gradient scroll ── */
+.bkbg-gta-anim-wave {
+    animation: bkbg-gta-wave ease-in-out infinite;
+    background-size: 300% 300%;
+}
+
+@keyframes bkbg-gta-wave {
+    0%,100% { background-position: 0%  50%; }
+    25%      { background-position: 50% 0%;  }
+    50%      { background-position: 100% 50%; }
+    75%      { background-position: 50% 100%; }
+}
+
+/* ── Wave per-character spans (built by frontend.js) ── */
+.bkbg-gta-char {
+    display: inline;
+    background: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: bkbg-gta-char-wave ease-in-out infinite;
+}
+
+@keyframes bkbg-gta-char-wave {
+    0%,100% { transform: translateY(0); }
+    50%      { transform: translateY(-0.25em); }
+}
+
+/* ── Glitch — RGB displacement ── */
+.bkbg-gta-anim-glitch {
+    position: relative;
+    animation: bkbg-gta-glitch-base linear infinite;
+}
+
+@keyframes bkbg-gta-glitch-base {
+    0%,90%,100% { filter: none; }
+    91%          { filter: blur(1px) drop-shadow(2px 0 #f00); }
+    93%          { filter: blur(1px) drop-shadow(-2px 0 #0ff); }
+    95%          { filter: none; }
+    96%          { filter: drop-shadow(2px 0 #f0f); }
+    98%          { filter: none; }
+}
+
+/* ── Pause/reverse on hover ── */
+.bkbg-gta-pause-hover:hover .bkbg-gta-text,
+.bkbg-gta-pause-hover:hover .bkbg-gta-char {
+    animation-play-state: paused;
+}
+
+.bkbg-gta-reverse-hover:hover .bkbg-gta-text,
+.bkbg-gta-reverse-hover:hover .bkbg-gta-char {
+    animation-direction: reverse;
+}
+
+/* Typography responsive – tablet */
+@media (max-width: 1024px) {
+    .bkbg-gta-app .bkbg-gta-el {
+        font-size: var(--bkbg-gta-tt-font-size-t, var(--bkbg-gta-tt-font-size-d, 56px));
+        line-height: var(--bkbg-gta-tt-line-height-t, var(--bkbg-gta-tt-line-height-d, 1.15));
+        letter-spacing: var(--bkbg-gta-tt-letter-spacing-t, var(--bkbg-gta-tt-letter-spacing-d, -1px));
+        word-spacing: var(--bkbg-gta-tt-word-spacing-t, var(--bkbg-gta-tt-word-spacing-d, normal));
+    }
+}
+
+/* Typography responsive – mobile */
+@media (max-width: 767px) {
+    .bkbg-gta-app .bkbg-gta-el {
+        font-size: var(--bkbg-gta-tt-font-size-m, var(--bkbg-gta-tt-font-size-t, var(--bkbg-gta-tt-font-size-d, 56px)));
+        line-height: var(--bkbg-gta-tt-line-height-m, var(--bkbg-gta-tt-line-height-t, var(--bkbg-gta-tt-line-height-d, 1.15)));
+        letter-spacing: var(--bkbg-gta-tt-letter-spacing-m, var(--bkbg-gta-tt-letter-spacing-t, var(--bkbg-gta-tt-letter-spacing-d, -1px)));
+        word-spacing: var(--bkbg-gta-tt-word-spacing-m, var(--bkbg-gta-tt-word-spacing-t, var(--bkbg-gta-tt-word-spacing-d, normal)));
+    }
+}

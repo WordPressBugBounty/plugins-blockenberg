@@ -1,0 +1,182 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/content-flip-box",
+    "title": "Content Flip Box",
+    "category": "bkbg-effects",
+    "icon": "image-rotate",
+    "description": "A responsive grid of cards that flip on hover or click to reveal a styled back face — perfect for services, features, team, and more.",
+    "keywords": [
+        "flip",
+        "card",
+        "hover",
+        "service",
+        "feature",
+        "interactive",
+        "3d",
+        "grid",
+        "reveal"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-content-flip-box-editor",
+    "editorStyle": "bkbg-content-flip-box-style",
+    "style": "bkbg-content-flip-box-style",
+    "viewScript": "bkbg-content-flip-box-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "c1",
+                    "frontIcon": "💡",
+                    "frontIconType": "custom-char",
+                    "frontIconDashicon": "",
+                    "frontIconImageUrl": "",
+                    "frontTitle": "Creative Ideas",
+                    "frontText": "We bring fresh perspectives to every challenge.",
+                    "frontBg": "#6c3fb5",
+                    "frontColor": "#ffffff",
+                    "backIcon": "✨",
+                    "backIconType": "custom-char",
+                    "backIconDashicon": "",
+                    "backIconImageUrl": "",
+                    "backTitle": "How We Work",
+                    "backText": "Our collaborative approach ensures ideas become reality through rigorous design thinking and rapid iteration.",
+                    "backBg": "#4f2d8a",
+                    "backColor": "#ffffff",
+                    "backBtnText": "Learn More",
+                    "backBtnUrl": "#",
+                    "backBtnBg": "#ffffff",
+                    "backBtnColor": "#4f2d8a"
+                },
+                {
+                    "id": "c2",
+                    "frontIcon": "🚀",
+                    "frontIconType": "custom-char",
+                    "frontIconDashicon": "",
+                    "frontIconImageUrl": "",
+                    "frontTitle": "Fast Delivery",
+                    "frontText": "Ship products that matter, on time and on budget.",
+                    "frontBg": "#2563eb",
+                    "frontColor": "#ffffff",
+                    "backIcon": "⚡",
+                    "backIconType": "custom-char",
+                    "backIconDashicon": "",
+                    "backIconImageUrl": "",
+                    "backTitle": "Our Process",
+                    "backText": "Agile sprints, continuous feedback loops and transparent milestones keep projects moving forward.",
+                    "backBg": "#1d4ed8",
+                    "backColor": "#ffffff",
+                    "backBtnText": "Our Work",
+                    "backBtnUrl": "#",
+                    "backBtnBg": "#ffffff",
+                    "backBtnColor": "#1d4ed8"
+                },
+                {
+                    "id": "c3",
+                    "frontIcon": "🎯",
+                    "frontIconType": "custom-char",
+                    "frontIconDashicon": "",
+                    "frontIconImageUrl": "",
+                    "frontTitle": "Precise Results",
+                    "frontText": "Data-driven decisions that hit your goals every time.",
+                    "frontBg": "#0f766e",
+                    "frontColor": "#ffffff",
+                    "backIcon": "📊",
+                    "backIconType": "custom-char",
+                    "backIconDashicon": "",
+                    "backIconImageUrl": "",
+                    "backTitle": "Measurable Impact",
+                    "backText": "Every project is tracked with clear KPIs so you always know the return on your investment.",
+                    "backBg": "#0d5e56",
+                    "backColor": "#ffffff",
+                    "backBtnText": "See Case Studies",
+                    "backBtnUrl": "#",
+                    "backBtnBg": "#ffffff",
+                    "backBtnColor": "#0d5e56"
+                }
+            ]
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "gap": {
+            "type": "number",
+            "default": 24
+        },
+        "cardHeight": {
+            "type": "number",
+            "default": 280
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "flipDirection": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "flipTrigger": {
+            "type": "string",
+            "default": "hover"
+        },
+        "flipSpeed": {
+            "type": "number",
+            "default": 600
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 48
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 20
+        },
+        "textSize": {
+            "type": "number",
+            "default": 14
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 50
+        },
+        "btnPadding": {
+            "type": "number",
+            "default": 12
+        },
+        "btnFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "showFrontText": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBackBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoText": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

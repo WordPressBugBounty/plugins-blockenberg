@@ -1,0 +1,223 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/changelog",
+    "title": "Changelog",
+    "category": "bkbg-blog",
+    "icon": "list-view",
+    "description": "Versioned release-notes block with colour-coded categories (New, Improved, Fixed, Deprecated). Perfect for SaaS product pages.",
+    "keywords": [
+        "changelog",
+        "release",
+        "version",
+        "history",
+        "updates",
+        "notes",
+        "saas",
+        "product"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-changelog-editor",
+    "editorStyle": "bkbg-changelog-style",
+    "style": "bkbg-changelog-style",
+    "viewScript": "bkbg-changelog-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "entries": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "e1",
+                    "version": "2.4.0",
+                    "date": "Feb 2026",
+                    "badge": "Latest",
+                    "items": [
+                        {
+                            "id": "i1",
+                            "category": "new",
+                            "text": "Bento Grid block with 3 layout presets and per-cell image support"
+                        },
+                        {
+                            "id": "i2",
+                            "category": "new",
+                            "text": "Media & Text Rows block — alternating image-text sections"
+                        },
+                        {
+                            "id": "i3",
+                            "category": "improved",
+                            "text": "Stats Counter now supports prefix and per-item colour overrides"
+                        }
+                    ]
+                },
+                {
+                    "id": "e2",
+                    "version": "2.3.0",
+                    "date": "Jan 2026",
+                    "badge": "",
+                    "items": [
+                        {
+                            "id": "i4",
+                            "category": "new",
+                            "text": "Kanban Board block with drag-and-drop preview"
+                        },
+                        {
+                            "id": "i5",
+                            "category": "fixed",
+                            "text": "Logo Carousel no longer flickers on Safari 17"
+                        },
+                        {
+                            "id": "i6",
+                            "category": "improved",
+                            "text": "Hero Section gains gradient overlay controls"
+                        }
+                    ]
+                },
+                {
+                    "id": "e3",
+                    "version": "2.2.0",
+                    "date": "Dec 2025",
+                    "badge": "",
+                    "items": [
+                        {
+                            "id": "i7",
+                            "category": "deprecated",
+                            "text": "Legacy \\\"simple-cta\\\" shortcode — use Call to Action block instead"
+                        },
+                        {
+                            "id": "i8",
+                            "category": "fixed",
+                            "text": "Reading Progress bar z-index conflict with sticky headers"
+                        }
+                    ]
+                }
+            ]
+        },
+        "sectionTitle": {
+            "type": "string",
+            "default": "What's new"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "timeline"
+        },
+        "showDate": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 760
+        },
+        "connectorColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "versionBadgeBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "versionBadgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 36
+        },
+        "versionSize": {
+            "type": "number",
+            "default": 20
+        },
+        "itemSize": {
+            "type": "number",
+            "default": 15
+        },
+        "dateSize": {
+            "type": "number",
+            "default": 13
+        },
+        "versionColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "dateColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "itemColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "newColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "improvedColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "fixedColor": {
+            "type": "string",
+            "default": "#8b5cf6"
+        },
+        "deprecatedColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "removedColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 48
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 48
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "800"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "versionFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "itemFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "itemLineHeight": {
+            "type": "number",
+            "default": 1.6
+        },
+        "typoTitle": { "type": "object", "default": {} },
+        "typoVersion": { "type": "object", "default": {} },
+        "typoItem": { "type": "object", "default": {} },
+        "typoDate": { "type": "object", "default": {} },
+        "typoBadge": { "type": "object", "default": {} }
+    }
+}

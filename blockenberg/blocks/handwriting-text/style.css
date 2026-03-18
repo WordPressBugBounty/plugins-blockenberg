@@ -1,0 +1,73 @@
+/* === Handwriting Text === */
+.bkbg-hw-app {
+    display: block;
+    width: 100%;
+    overflow: visible;
+}
+
+.bkbg-hw-wrap {
+    display: block;
+    overflow: visible;
+}
+
+.bkbg-hw-wrap svg {
+    display: block;
+    overflow: visible;
+}
+
+/* The stroke-reveal text */
+.bkbg-hw-text {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    font-family: var(--bkbg-hw-tt-font-family, 'Dancing Script', cursive);
+    font-size: var(--bkbg-hw-tt-font-size-d, 72px);
+    font-weight: var(--bkbg-hw-tt-font-weight, 700);
+    font-style: var(--bkbg-hw-tt-font-style, normal);
+    letter-spacing: var(--bkbg-hw-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-hw-tt-word-spacing-d, normal);
+}
+
+/* After animation: transition to fill */
+.bkbg-hw-text.bkbg-hw-filled {
+    transition-property: fill;
+    transition-timing-function: ease-in-out;
+}
+
+/* Underline path */
+.bkbg-hw-underline {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Reduced motion: show text immediately */
+@media (prefers-reduced-motion: reduce) {
+    .bkbg-hw-text {
+        stroke-dashoffset: 0 !important;
+        fill: currentColor !important;
+        transition: none !important;
+    }
+    .bkbg-hw-underline {
+        stroke-dashoffset: 0 !important;
+        transition: none !important;
+    }
+}
+
+/* Typography responsive – tablet */
+@media (max-width: 1024px) {
+    .bkbg-hw-text {
+        font-size: var(--bkbg-hw-tt-font-size-t, var(--bkbg-hw-tt-font-size-d, 72px));
+        letter-spacing: var(--bkbg-hw-tt-letter-spacing-t, var(--bkbg-hw-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-hw-tt-word-spacing-t, var(--bkbg-hw-tt-word-spacing-d, normal));
+    }
+}
+
+/* Typography responsive – mobile */
+@media (max-width: 767px) {
+    .bkbg-hw-text {
+        font-size: var(--bkbg-hw-tt-font-size-m, var(--bkbg-hw-tt-font-size-t, var(--bkbg-hw-tt-font-size-d, 72px)));
+        letter-spacing: var(--bkbg-hw-tt-letter-spacing-m, var(--bkbg-hw-tt-letter-spacing-t, var(--bkbg-hw-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-hw-tt-word-spacing-m, var(--bkbg-hw-tt-word-spacing-t, var(--bkbg-hw-tt-word-spacing-d, normal)));
+    }
+}

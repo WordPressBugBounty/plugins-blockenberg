@@ -1,0 +1,171 @@
+/* ======================================================
+   Blockenberg — Loan Calculator block styles
+   ====================================================== */
+
+/* title – h2, specificity (0,2,0) to beat editor theme */
+.wp-block-blockenberg-loan-calculator h2.bkbg-lc-title {
+    font-family: var(--bkbg-lcalc-tt-font-family, inherit);
+    font-weight: var(--bkbg-lcalc-tt-font-weight, 700);
+    font-size: var(--bkbg-lcalc-tt-font-size-d, 28px);
+    line-height: var(--bkbg-lcalc-tt-line-height-d, var(--bkbg-lcalc-tt-line-height, 1.2));
+    font-style: var(--bkbg-lcalc-tt-font-style, normal);
+    text-transform: var(--bkbg-lcalc-tt-text-transform, none);
+    text-decoration: var(--bkbg-lcalc-tt-text-decoration, none);
+    letter-spacing: var(--bkbg-lcalc-tt-letter-spacing-d, var(--bkbg-lcalc-tt-letter-spacing, normal));
+    word-spacing: var(--bkbg-lcalc-tt-word-spacing-d, var(--bkbg-lcalc-tt-word-spacing, normal));
+    margin: 0 0 8px;
+    text-align: center;
+}
+
+/* subtitle */
+.bkbg-lc-subtitle {
+    font-family: var(--bkbg-lcalc-st-font-family, inherit);
+    font-weight: var(--bkbg-lcalc-st-font-weight, 400);
+    font-size: var(--bkbg-lcalc-st-font-size-d, 15px);
+    line-height: var(--bkbg-lcalc-st-line-height-d, var(--bkbg-lcalc-st-line-height, 1.6));
+    font-style: var(--bkbg-lcalc-st-font-style, normal);
+    text-transform: var(--bkbg-lcalc-st-text-transform, none);
+    text-decoration: var(--bkbg-lcalc-st-text-decoration, none);
+    letter-spacing: var(--bkbg-lcalc-st-letter-spacing-d, var(--bkbg-lcalc-st-letter-spacing, normal));
+    word-spacing: var(--bkbg-lcalc-st-word-spacing-d, var(--bkbg-lcalc-st-word-spacing, normal));
+    margin: 0 0 24px;
+    text-align: center;
+}
+
+/* ── Responsive typography ─────────────────────────────── */
+@media (max-width: 1024px) {
+    .wp-block-blockenberg-loan-calculator h2.bkbg-lc-title {
+        font-size: var(--bkbg-lcalc-tt-font-size-t, var(--bkbg-lcalc-tt-font-size-d, 28px));
+        line-height: var(--bkbg-lcalc-tt-line-height-t, var(--bkbg-lcalc-tt-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-lcalc-tt-letter-spacing-t, var(--bkbg-lcalc-tt-letter-spacing-d, var(--bkbg-lcalc-tt-letter-spacing, normal)));
+            word-spacing: var(--bkbg-lcalc-tt-word-spacing-t, var(--bkbg-lcalc-tt-word-spacing-d, var(--bkbg-lcalc-tt-word-spacing, normal)));
+    }
+    .bkbg-lc-subtitle {
+        font-size: var(--bkbg-lcalc-st-font-size-t, var(--bkbg-lcalc-st-font-size-d, 15px));
+        line-height: var(--bkbg-lcalc-st-line-height-t, var(--bkbg-lcalc-st-line-height-d, 1.6));
+        letter-spacing: var(--bkbg-lcalc-st-letter-spacing-t, var(--bkbg-lcalc-st-letter-spacing-d, var(--bkbg-lcalc-st-letter-spacing, normal)));
+            word-spacing: var(--bkbg-lcalc-st-word-spacing-t, var(--bkbg-lcalc-st-word-spacing-d, var(--bkbg-lcalc-st-word-spacing, normal)));
+    }
+}
+@media (max-width: 767px) {
+    .wp-block-blockenberg-loan-calculator h2.bkbg-lc-title {
+        font-size: var(--bkbg-lcalc-tt-font-size-m, var(--bkbg-lcalc-tt-font-size-t, var(--bkbg-lcalc-tt-font-size-d, 28px)));
+        line-height: var(--bkbg-lcalc-tt-line-height-m, var(--bkbg-lcalc-tt-line-height-t, var(--bkbg-lcalc-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-lcalc-tt-letter-spacing-m, var(--bkbg-lcalc-tt-letter-spacing-t, var(--bkbg-lcalc-tt-letter-spacing-d, var(--bkbg-lcalc-tt-letter-spacing, normal))));
+            word-spacing: var(--bkbg-lcalc-tt-word-spacing-m, var(--bkbg-lcalc-tt-word-spacing-t, var(--bkbg-lcalc-tt-word-spacing-d, var(--bkbg-lcalc-tt-word-spacing, normal))));
+    }
+    .bkbg-lc-subtitle {
+        font-size: var(--bkbg-lcalc-st-font-size-m, var(--bkbg-lcalc-st-font-size-t, var(--bkbg-lcalc-st-font-size-d, 15px)));
+        line-height: var(--bkbg-lcalc-st-line-height-m, var(--bkbg-lcalc-st-line-height-t, var(--bkbg-lcalc-st-line-height-d, 1.6)));
+        letter-spacing: var(--bkbg-lcalc-st-letter-spacing-m, var(--bkbg-lcalc-st-letter-spacing-t, var(--bkbg-lcalc-st-letter-spacing-d, var(--bkbg-lcalc-st-letter-spacing, normal))));
+            word-spacing: var(--bkbg-lcalc-st-word-spacing-m, var(--bkbg-lcalc-st-word-spacing-t, var(--bkbg-lcalc-st-word-spacing-d, var(--bkbg-lcalc-st-word-spacing, normal))));
+    }
+}
+
+/* Slider group */
+.bkbg-lc-slider-group {
+    margin-bottom: 24px;
+}
+
+.bkbg-lc-slider-group:last-child {
+    margin-bottom: 0;
+}
+
+.bkbg-lc-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: #e5e7eb;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.bkbg-lc-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: currentColor;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    transition: transform 0.1s;
+}
+
+.bkbg-lc-range::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+.bkbg-lc-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: currentColor;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+/* Monthly payment display */
+.bkbg-lc-monthly {
+    line-height: 1.1;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+/* Results summary grid */
+.bkbg-lc-summary {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+/* Chart */
+.bkbg-lc-chart-wrap {
+    max-width: 280px;
+    margin: 16px auto 0;
+}
+
+/* Amortization table */
+.bkbg-lc-amort-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.bkbg-lc-amort-table th,
+.bkbg-lc-amort-table td {
+    border: 1px solid #e5e7eb;
+    padding: 5px 8px;
+    text-align: right;
+}
+
+.bkbg-lc-amort-table th {
+    background: #f9fafb;
+    font-weight: 600;
+    text-align: center;
+}
+
+.bkbg-lc-amort-table tr:nth-child(even) td {
+    background: #f9fafb;
+}
+
+/* CTA button */
+.bkbg-lc-cta {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 12px 32px;
+    transition: opacity 0.15s, transform 0.1s;
+}
+
+.bkbg-lc-cta:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}

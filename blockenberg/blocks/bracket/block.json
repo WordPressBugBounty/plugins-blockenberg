@@ -1,0 +1,178 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/bracket",
+    "title": "Tournament Bracket",
+    "description": "Visual single-elimination tournament or playoff bracket with clickable winner selection.",
+    "category": "bkbg-interactive",
+    "icon": "randomize",
+    "keywords": [
+        "bracket",
+        "tournament",
+        "playoff",
+        "competition",
+        "sports",
+        "elimination"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-bracket-editor",
+    "editorStyle": "bkbg-bracket-style",
+    "style": "bkbg-bracket-style",
+    "viewScript": "bkbg-bracket-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "bracketTitle": {
+            "type": "string",
+            "default": "Spring Championship 2026"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "bracketSize": {
+            "type": "number",
+            "default": 8
+        },
+        "teams": {
+            "type": "array",
+            "default": [
+                "Team Alpha",
+                "Team Beta",
+                "Team Gamma",
+                "Team Delta",
+                "Team Epsilon",
+                "Team Zeta",
+                "Team Eta",
+                "Team Theta"
+            ]
+        },
+        "winners": {
+            "type": "object",
+            "default": {}
+        },
+        "roundLabels": {
+            "type": "array",
+            "default": [
+                "Quarterfinals",
+                "Semifinals",
+                "Final"
+            ]
+        },
+        "winnerLabel": {
+            "type": "string",
+            "default": "🏆 Champion"
+        },
+        "showSeeds": {
+            "type": "boolean",
+            "default": true
+        },
+        "showRoundLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "matchPadding": {
+            "type": "number",
+            "default": 8
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "matchBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "matchBorderColor": {
+            "type": "string",
+            "default": "#cbd5e1"
+        },
+        "teamColor": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "winnerBg": {
+            "type": "string",
+            "default": "#fef9c3"
+        },
+        "winnerColor": {
+            "type": "string",
+            "default": "#713f12"
+        },
+        "winnerBorderColor": {
+            "type": "string",
+            "default": "#fbbf24"
+        },
+        "loserColor": {
+            "type": "string",
+            "default": "#cbd5e1"
+        },
+        "connectorColor": {
+            "type": "string",
+            "default": "#cbd5e1"
+        },
+        "roundLabelColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "championBg": {
+            "type": "string",
+            "default": "#fffbeb"
+        },
+        "championBorderColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "championColor": {
+            "type": "string",
+            "default": "#92400e"
+        },
+        "bracketTitleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "teamFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "roundLabelFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoTeam": {
+            "type": "object",
+            "default": {}
+        },
+        "typoLabel": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

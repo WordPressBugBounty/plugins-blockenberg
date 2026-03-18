@@ -1,0 +1,150 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/footnotes",
+    "title": "Footnotes",
+    "description": "Academic-style footnotes with numbered inline markers and a full reference list.",
+    "category": "bkbg-blog",
+    "icon": "editor-ol",
+    "keywords": [
+        "footnotes",
+        "references",
+        "citations",
+        "academic",
+        "notes",
+        "endnotes"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-footnotes-editor",
+    "editorStyle": "bkbg-footnotes-style",
+    "style": "bkbg-footnotes-style",
+    "viewScript": "bkbg-footnotes-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "notes": {
+            "type": "array",
+            "default": [
+                {
+                    "id": 1,
+                    "text": "This is the first footnote. It contains supporting information or a citation."
+                },
+                {
+                    "id": 2,
+                    "text": "According to Smith et al. (2023), this approach yields significantly better results."
+                },
+                {
+                    "id": 3,
+                    "text": "See also: Johnson, R. (2022). Advanced Techniques in Web Publishing. Oxford Press."
+                }
+            ]
+        },
+        "title": {
+            "type": "string",
+            "default": "Notes"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "markerStyle": {
+            "type": "string",
+            "default": "number"
+        },
+        "markerSup": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTooltip": {
+            "type": "boolean",
+            "default": true
+        },
+        "listStyle": {
+            "type": "string",
+            "default": "default"
+        },
+        "dividerEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.6
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 16
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "600"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoNote": {
+            "type": "object",
+            "default": {}
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "markerColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "markerBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "tooltipBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "tooltipColor": {
+            "type": "string",
+            "default": "#f1f5f9"
+        }
+    }
+}

@@ -1,0 +1,120 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/vertical-scroll-image",
+    "title": "Vertical Scroll Image",
+    "description": "Display a tall or wide image in a fixed-height container. Hover to scroll through the full image vertically or horizontally. Perfect for showcasing app screenshots, infographics, or long designs.",
+    "category": "bkbg-effects",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-vertical-scroll-image-editor",
+    "style": "bkbg-vertical-scroll-image-style",
+    "viewScript": "bkbg-vertical-scroll-image-frontend",
+    "icon": "format-image",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "caption": {
+            "type": "string",
+            "default": ""
+        },
+        "showCaption": {
+            "type": "boolean",
+            "default": false
+        },
+        "label": {
+            "type": "string",
+            "default": "Scroll to explore"
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "scrollDirection": {
+            "type": "string",
+            "default": "vertical"
+        },
+        "scrollTrigger": {
+            "type": "string",
+            "default": "hover"
+        },
+        "scrollDuration": {
+            "type": "number",
+            "default": 4
+        },
+        "containerHeight": {
+            "type": "number",
+            "default": 420
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 800
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "shadowSize": {
+            "type": "string",
+            "default": "md"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "captionColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.55)"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 48
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 48
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 12
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "captionTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

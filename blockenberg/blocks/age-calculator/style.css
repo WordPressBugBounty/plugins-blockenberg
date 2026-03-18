@@ -1,0 +1,224 @@
+/* ── Age Calculator Block ─────────────────────────────────────────────── */
+.bkbg-age-app {
+    font-family: inherit;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.bkbg-age-loading {
+    text-align: center;
+    color: #9ca3af;
+    padding: 40px 0;
+    margin: 0;
+}
+
+.bkbg-age-card {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+}
+
+/* ── Date input ───────────────────────────────────────────────────────── */
+.bkbg-age-date-field {
+    margin-bottom: 28px;
+}
+
+.bkbg-age-date-label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.bkbg-age-date-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.15s;
+}
+
+.bkbg-age-date-input:focus {
+    border-color: #6c3fb5;
+}
+
+/* ── Age cards grid ───────────────────────────────────────────────────── */
+.bkbg-age-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.bkbg-age-card-item {
+    text-align: center;
+    padding: 20px 12px;
+}
+
+.bkbg-age-num {
+    font-family: var(--bkbg-age-num-font-family, inherit);
+    font-size: var(--bkbg-age-num-font-size-d, var(--bkbg-age-num-font-size, var(--bkbg-age-num-sz, 52px)));
+    font-weight: var(--bkbg-age-num-font-weight, 800);
+    font-style: var(--bkbg-age-num-font-style, normal);
+    text-transform: var(--bkbg-age-num-text-transform, none);
+    text-decoration: var(--bkbg-age-num-text-decoration, none);
+    line-height: var(--bkbg-age-num-line-height-d, var(--bkbg-age-num-line-height, 1));
+    letter-spacing: var(--bkbg-age-num-letter-spacing-d, var(--bkbg-age-num-letter-spacing, normal));
+    word-spacing: var(--bkbg-age-num-word-spacing-d, var(--bkbg-age-num-word-spacing, normal));
+}
+
+.bkbg-age-title {
+    font-family: var(--bkbg-age-title-font-family, inherit);
+    font-size: var(--bkbg-age-title-font-size-d, var(--bkbg-age-title-font-size, var(--bkbg-age-title-sz, 28px)));
+    font-weight: var(--bkbg-age-title-font-weight, 800);
+    font-style: var(--bkbg-age-title-font-style, normal);
+    text-transform: var(--bkbg-age-title-text-transform, none);
+    text-decoration: var(--bkbg-age-title-text-decoration, none);
+    line-height: var(--bkbg-age-title-line-height-d, var(--bkbg-age-title-line-height, normal));
+    letter-spacing: var(--bkbg-age-title-letter-spacing-d, var(--bkbg-age-title-letter-spacing, normal));
+    word-spacing: var(--bkbg-age-title-word-spacing-d, var(--bkbg-age-title-word-spacing, normal));
+}
+
+.bkbg-age-card-label {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-top: 6px;
+    font-weight: 600;
+}
+
+/* ── Birthday countdown ───────────────────────────────────────────────── */
+.bkbg-age-birthday {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+}
+
+.bkbg-age-birthday-emoji {
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.bkbg-age-birthday-main {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.bkbg-age-birthday-sub {
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+/* ── Quick stats row ──────────────────────────────────────────────────── */
+.bkbg-age-meta {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.bkbg-age-meta.two-col {
+    grid-template-columns: 1fr 1fr;
+}
+
+.bkbg-age-meta-item {
+    border-radius: 10px;
+    padding: 14px 16px;
+}
+
+.bkbg-age-meta-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.bkbg-age-meta-value {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* ── Life stats ───────────────────────────────────────────────────────── */
+.bkbg-age-stats {
+    border-radius: 10px;
+    padding: 16px 20px;
+}
+
+.bkbg-age-stats-heading {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+}
+
+.bkbg-age-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.bkbg-age-stat-label {
+    font-size: 11px;
+    margin-bottom: 2px;
+}
+
+.bkbg-age-stat-value {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* ── Empty state ──────────────────────────────────────────────────────── */
+.bkbg-age-empty {
+    text-align: center;
+    color: #9ca3af;
+    padding: 32px 0;
+    font-size: 15px;
+}
+
+/* ── Responsive typography ─────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-age-title {
+        font-size: var(--bkbg-age-title-font-size-t, var(--bkbg-age-title-font-size-d, var(--bkbg-age-title-font-size, var(--bkbg-age-title-sz, 28px))));
+        line-height: var(--bkbg-age-title-line-height-t, var(--bkbg-age-title-line-height-d, var(--bkbg-age-title-line-height, normal)));
+        letter-spacing: var(--bkbg-age-title-letter-spacing-t, var(--bkbg-age-title-letter-spacing-d, var(--bkbg-age-title-letter-spacing, normal)));
+        word-spacing: var(--bkbg-age-title-word-spacing-t, var(--bkbg-age-title-word-spacing-d, var(--bkbg-age-title-word-spacing, normal)));
+    }
+    .bkbg-age-num {
+        font-size: var(--bkbg-age-num-font-size-t, var(--bkbg-age-num-font-size-d, var(--bkbg-age-num-font-size, var(--bkbg-age-num-sz, 52px))));
+        line-height: var(--bkbg-age-num-line-height-t, var(--bkbg-age-num-line-height-d, var(--bkbg-age-num-line-height, 1)));
+        letter-spacing: var(--bkbg-age-num-letter-spacing-t, var(--bkbg-age-num-letter-spacing-d, var(--bkbg-age-num-letter-spacing, normal)));
+        word-spacing: var(--bkbg-age-num-word-spacing-t, var(--bkbg-age-num-word-spacing-d, var(--bkbg-age-num-word-spacing, normal)));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-age-title {
+        font-size: var(--bkbg-age-title-font-size-m, var(--bkbg-age-title-font-size-t, var(--bkbg-age-title-font-size-d, var(--bkbg-age-title-font-size, var(--bkbg-age-title-sz, 28px)))));
+        line-height: var(--bkbg-age-title-line-height-m, var(--bkbg-age-title-line-height-t, var(--bkbg-age-title-line-height-d, var(--bkbg-age-title-line-height, normal))));
+        letter-spacing: var(--bkbg-age-title-letter-spacing-m, var(--bkbg-age-title-letter-spacing-t, var(--bkbg-age-title-letter-spacing-d, var(--bkbg-age-title-letter-spacing, normal))));
+        word-spacing: var(--bkbg-age-title-word-spacing-m, var(--bkbg-age-title-word-spacing-t, var(--bkbg-age-title-word-spacing-d, var(--bkbg-age-title-word-spacing, normal))));
+    }
+    .bkbg-age-num {
+        font-size: var(--bkbg-age-num-font-size-m, var(--bkbg-age-num-font-size-t, var(--bkbg-age-num-font-size-d, var(--bkbg-age-num-font-size, var(--bkbg-age-num-sz, 36px)))));
+        line-height: var(--bkbg-age-num-line-height-m, var(--bkbg-age-num-line-height-t, var(--bkbg-age-num-line-height-d, var(--bkbg-age-num-line-height, 1))));
+        letter-spacing: var(--bkbg-age-num-letter-spacing-m, var(--bkbg-age-num-letter-spacing-t, var(--bkbg-age-num-letter-spacing-d, var(--bkbg-age-num-letter-spacing, normal))));
+        word-spacing: var(--bkbg-age-num-word-spacing-m, var(--bkbg-age-num-word-spacing-t, var(--bkbg-age-num-word-spacing-d, var(--bkbg-age-num-word-spacing, normal))));
+    }
+}
+
+/* ── Mobile ───────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+    .bkbg-age-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .bkbg-age-stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

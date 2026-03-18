@@ -1,0 +1,268 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/awards",
+    "title": "Awards & Certifications",
+    "category": "bkbg-business",
+    "icon": "awards",
+    "description": "Showcase awards, certifications, badges, and achievements in a polished grid or timeline layout.",
+    "keywords": [
+        "awards",
+        "certifications",
+        "badges",
+        "achievements",
+        "honors",
+        "recognition",
+        "credentials"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-awards-editor",
+    "style": "bkbg-awards-style",
+    "viewScript": "bkbg-awards-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Awards & Recognition"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Milestones that mark our journey"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "awards": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "aw1",
+                    "title": "Best SaaS Product",
+                    "issuer": "TechCrunch Disrupt",
+                    "year": "2024",
+                    "description": "Recognized as the most innovative SaaS product of the year.",
+                    "icon": "🏆",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "color": "#f59e0b",
+                    "url": ""
+                },
+                {
+                    "id": "aw2",
+                    "title": "ISO 27001 Certified",
+                    "issuer": "BSI Group",
+                    "year": "2024",
+                    "description": "Achieved international standard for information security.",
+                    "icon": "🛡️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "color": "#3b82f6",
+                    "url": ""
+                },
+                {
+                    "id": "aw3",
+                    "title": "Top Workplace 2024",
+                    "issuer": "Great Place to Work",
+                    "year": "2024",
+                    "description": "Ranked among the best employers for talent and culture.",
+                    "icon": "⭐",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "color": "#10b981",
+                    "url": ""
+                },
+                {
+                    "id": "aw4",
+                    "title": "G2 Leader Badge",
+                    "issuer": "G2 Crowd",
+                    "year": "2023",
+                    "description": "Consistently rated Leader in the analytics category.",
+                    "icon": "🥇",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "color": "#ec4899",
+                    "url": ""
+                },
+                {
+                    "id": "aw5",
+                    "title": "Fast Company 50",
+                    "issuer": "Fast Company",
+                    "year": "2023",
+                    "description": "Named one of the 50 Most Innovative Companies.",
+                    "icon": "🚀",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "color": "#8b5cf6",
+                    "url": ""
+                },
+                {
+                    "id": "aw6",
+                    "title": "SOC 2 Type II",
+                    "issuer": "AICPA",
+                    "year": "2023",
+                    "description": "Verified security, availability, and confidentiality controls.",
+                    "icon": "🔒",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "color": "#6c3fb5",
+                    "url": ""
+                }
+            ]
+        },
+        "showYear": {
+            "type": "boolean",
+            "default": true
+        },
+        "showIssuer": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 40
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "sectionTitleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "awardTitleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "issuerColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "yearColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "iconBgRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "gap": {
+            "type": "number",
+            "default": 24
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 32
+        },
+        "awardTitleSize": {
+            "type": "number",
+            "default": 18
+        },
+        "issuerSize": {
+            "type": "number",
+            "default": 13
+        },
+        "descSize": {
+            "type": "number",
+            "default": 14
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 64
+        },
+        "sectionTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "awardTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "issuerTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

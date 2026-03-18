@@ -1,0 +1,255 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/study-notes",
+    "title": "Study Notes",
+    "category": "bkbg-blog",
+    "icon": "edit-page",
+    "description": "Cornell-style structured study notes with cue column, notes column, summary, and key terms.",
+    "keywords": [
+        "study",
+        "notes",
+        "cornell",
+        "lecture",
+        "academic",
+        "learning",
+        "class",
+        "education",
+        "summary"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-study-notes-editor",
+    "editorStyle": "bkbg-study-notes-style",
+    "style": "bkbg-study-notes-style",
+    "viewScript": "bkbg-study-notes-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "subject": {
+            "type": "string",
+            "default": "Biology 101"
+        },
+        "topic": {
+            "type": "string",
+            "default": "Cell Division & Mitosis"
+        },
+        "source": {
+            "type": "string",
+            "default": "Prof. Johnson — Lecture 12"
+        },
+        "noteDate": {
+            "type": "string",
+            "default": "February 24, 2026"
+        },
+        "showSubject": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSource": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDate": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "cornell"
+        },
+        "cueWidth": {
+            "type": "number",
+            "default": 30
+        },
+        "notes": {
+            "type": "array",
+            "default": [
+                {
+                    "cue": "What is mitosis?",
+                    "content": "Mitosis is the process of cell division where one cell divides into two genetically identical daughter cells. It occurs in somatic (body) cells and is used for growth, repair, and asexual reproduction."
+                },
+                {
+                    "cue": "Phases of mitosis",
+                    "content": "PMAT — Prophase: chromosomes condense, spindle forms. Metaphase: chromosomes align at cell equator. Anaphase: sister chromatids pulled to opposite poles. Telophase: nuclear envelopes reform, chromosomes decondense."
+                },
+                {
+                    "cue": "Cytokinesis",
+                    "content": "Division of the cytoplasm following mitosis. In animal cells: cleavage furrow. In plant cells: cell plate forms from Golgi vesicles. Results in two complete daughter cells."
+                },
+                {
+                    "cue": "Cell cycle checkpoints",
+                    "content": "G1 checkpoint: checks for DNA damage, sufficient nutrients, and cell size. G2 checkpoint: verifies DNA replication is complete. Spindle assembly checkpoint (M): ensures all chromosomes are attached to spindle fibers."
+                }
+            ]
+        },
+        "summary": {
+            "type": "string",
+            "default": "Mitosis is a four-phase process (PMAT) producing two genetically identical cells. The cell cycle is tightly regulated by checkpoints at G1, G2, and the spindle assembly checkpoint to ensure proper division and prevent mutations."
+        },
+        "showSummary": {
+            "type": "boolean",
+            "default": true
+        },
+        "summaryLabel": {
+            "type": "string",
+            "default": "Summary"
+        },
+        "keyTerms": {
+            "type": "array",
+            "default": [
+                {
+                    "term": "Centromere",
+                    "definition": "Region of chromosome where sister chromatids are joined; kinetochore attaches here."
+                },
+                {
+                    "term": "Spindle fibers",
+                    "definition": "Microtubule structures that pull chromosomes to opposite poles during anaphase."
+                },
+                {
+                    "term": "Cytokinesis",
+                    "definition": "Physical division of the cytoplasm following nuclear division."
+                }
+            ]
+        },
+        "showKeyTerms": {
+            "type": "boolean",
+            "default": true
+        },
+        "keyTermsLabel": {
+            "type": "string",
+            "default": "Key Terms"
+        },
+        "tags": {
+            "type": "array",
+            "default": [
+                "mitosis",
+                "cell cycle",
+                "PMAT",
+                "checkpoints"
+            ]
+        },
+        "showTags": {
+            "type": "boolean",
+            "default": true
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 20
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 170
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#1e3a5f"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cueBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "cueColor": {
+            "type": "string",
+            "default": "#1e40af"
+        },
+        "cueBorderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "notesBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "notesColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "rowBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "summaryBg": {
+            "type": "string",
+            "default": "#fefce8"
+        },
+        "summaryColor": {
+            "type": "string",
+            "default": "#1c1917"
+        },
+        "summaryBorderColor": {
+            "type": "string",
+            "default": "#fde68a"
+        },
+        "keyTermsBg": {
+            "type": "string",
+            "default": "#f0f9ff"
+        },
+        "keyTermsColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "keyTermsBorderColor": {
+            "type": "string",
+            "default": "#bae6fd"
+        },
+        "termColor": {
+            "type": "string",
+            "default": "#0369a1"
+        },
+        "tagBg": {
+            "type": "string",
+            "default": "#e0e7ff"
+        },
+        "tagColor": {
+            "type": "string",
+            "default": "#3730a3"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "summarySize": {
+            "type": "number",
+            "default": 12
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

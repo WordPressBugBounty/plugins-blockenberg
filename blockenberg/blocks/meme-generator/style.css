@@ -1,0 +1,155 @@
+.bkbg-mme-app {
+    box-sizing: border-box;
+    padding: 24px 20px;
+    font-family: system-ui, sans-serif;
+}
+
+.bkbg-mme-app h3.bkbg-mme-title {
+    font-family: var(--bkbg-mme-tt-font-family, inherit);
+    font-weight: var(--bkbg-mme-tt-font-weight, 700);
+    font-style: var(--bkbg-mme-tt-font-style, normal);
+    text-decoration: var(--bkbg-mme-tt-text-decoration, none);
+    text-transform: var(--bkbg-mme-tt-text-transform, none);
+    font-size: var(--bkbg-mme-tt-font-size-d, 24px);
+    line-height: var(--bkbg-mme-tt-line-height-d, 1.3);
+    letter-spacing: var(--bkbg-mme-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-mme-tt-word-spacing-d, normal);
+    text-align: center;
+    margin: 0 0 4px;
+}
+
+.bkbg-mme-subtitle {
+    font-family: var(--bkbg-mme-st-font-family, inherit);
+    font-weight: var(--bkbg-mme-st-font-weight, 400);
+    font-style: var(--bkbg-mme-st-font-style, normal);
+    text-decoration: var(--bkbg-mme-st-text-decoration, none);
+    text-transform: var(--bkbg-mme-st-text-transform, none);
+    font-size: var(--bkbg-mme-st-font-size-d, 14px);
+    line-height: var(--bkbg-mme-st-line-height-d, 1.3);
+    letter-spacing: var(--bkbg-mme-st-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-mme-st-word-spacing-d, normal);
+    text-align: center;
+    margin: 0 0 16px;
+    opacity: 0.65;
+}
+
+/* ---- Canvas wrap ---- */
+
+.bkbg-mme-canvas-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.bkbg-mme-canvas {
+    display: block;
+    border-radius: 8px;
+    max-width: 100%;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+
+/* ---- Inputs ---- */
+
+.bkbg-mme-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.bkbg-mme-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bkbg-mme-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    min-width: 90px;
+    opacity: 0.7;
+}
+
+.bkbg-mme-input {
+    flex: 1;
+    min-width: 160px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+}
+
+.bkbg-mme-input:focus {
+    border-color: var(--bkbg-mme-accent, #6366f1);
+}
+
+/* ---- Buttons ---- */
+
+.bkbg-mme-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.bkbg-mme-dl-btn,
+.bkbg-mme-copy-btn,
+.bkbg-mme-reset-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 9px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter 0.15s, transform 0.1s;
+}
+
+.bkbg-mme-dl-btn:hover,
+.bkbg-mme-copy-btn:hover,
+.bkbg-mme-reset-btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-mme-app h3.bkbg-mme-title {
+        font-size: var(--bkbg-mme-tt-font-size-t, 22px);
+        line-height: var(--bkbg-mme-tt-line-height-t, 1.3);
+        letter-spacing: var(--bkbg-mme-tt-letter-spacing-t, normal);
+        word-spacing: var(--bkbg-mme-tt-word-spacing-t, normal);
+    }
+    .bkbg-mme-subtitle {
+        font-size: var(--bkbg-mme-st-font-size-t, 13px);
+        line-height: var(--bkbg-mme-st-line-height-t, 1.3);
+        letter-spacing: var(--bkbg-mme-st-letter-spacing-t, normal);
+        word-spacing: var(--bkbg-mme-st-word-spacing-t, normal);
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-mme-app h3.bkbg-mme-title {
+        font-size: var(--bkbg-mme-tt-font-size-m, 20px);
+        line-height: var(--bkbg-mme-tt-line-height-m, 1.2);
+        letter-spacing: var(--bkbg-mme-tt-letter-spacing-m, normal);
+        word-spacing: var(--bkbg-mme-tt-word-spacing-m, normal);
+    }
+    .bkbg-mme-subtitle {
+        font-size: var(--bkbg-mme-st-font-size-m, 12px);
+        line-height: var(--bkbg-mme-st-line-height-m, 1.3);
+        letter-spacing: var(--bkbg-mme-st-letter-spacing-m, normal);
+        word-spacing: var(--bkbg-mme-st-word-spacing-m, normal);
+    }
+}
+
+@media (max-width: 480px) {
+    .bkbg-mme-app { padding: 16px 10px; }
+    .bkbg-mme-label { min-width: 70px; }
+}

@@ -1,0 +1,140 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/interactive-poll",
+    "title": "Interactive Poll",
+    "description": "Clickable voting poll with animated results stored per visitor.",
+    "category": "bkbg-interactive",
+    "icon": "chart-bar",
+    "keywords": [
+        "poll",
+        "vote",
+        "survey",
+        "quiz"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-interactive-poll-editor",
+    "editorStyle": "bkbg-interactive-poll-style",
+    "style": "bkbg-interactive-poll-style",
+    "viewScript": "bkbg-interactive-poll-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "instanceId": {
+            "type": "string",
+            "default": ""
+        },
+        "question": {
+            "type": "string",
+            "default": "What is your favourite option?"
+        },
+        "options": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "Option A",
+                    "votes": 0
+                },
+                {
+                    "text": "Option B",
+                    "votes": 0
+                },
+                {
+                    "text": "Option C",
+                    "votes": 0
+                }
+            ],
+            "items": {
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "type": "string"
+                    },
+                    "votes": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "allowRevote": {
+            "type": "boolean",
+            "default": true
+        },
+        "showResultsBefore": {
+            "type": "boolean",
+            "default": false
+        },
+        "totalVotesLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "barColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "barBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "buttonBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "buttonColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "buttonHoverBg": {
+            "type": "string",
+            "default": "#5830a0"
+        },
+        "borderRadius": {
+            "type": "integer",
+            "default": 10
+        },
+        "animateBars": {
+            "type": "boolean",
+            "default": true
+        },
+        "questionSize": {
+            "type": "integer",
+            "default": 22
+        },
+        "questionTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "questionColor": {
+            "type": "string",
+            "default": ""
+        },
+        "resultTextColor": {
+            "type": "string",
+            "default": ""
+        },
+        "wrapBg": {
+            "type": "string",
+            "default": ""
+        },
+        "wrapBorder": {
+            "type": "string",
+            "default": ""
+        },
+        "wrapPadding": {
+            "type": "integer",
+            "default": 32
+        },
+        "maxWidth": {
+            "type": "integer",
+            "default": 560
+        },
+        "align": {
+            "type": "string",
+            "default": ""
+        }
+    }
+}

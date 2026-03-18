@@ -1,0 +1,198 @@
+/* ===================================================
+   Interactive Steps — bkbg-is-*  (style.css)
+   =================================================== */
+
+.bkbg-is-wrap { width: 100%; }
+
+.bkbg-is-root {
+    display: flex;
+    width: 100%;
+}
+
+/* ── Horizontal layout ─────────────────────────────────────────────── */
+.bkbg-is-horiz {
+    flex-direction: column;
+}
+
+.bkbg-is-horiz .bkbg-is-nav {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+/* ── Vertical layout ───────────────────────────────────────────────── */
+.bkbg-is-vert {
+    flex-direction: row;
+    gap: 32px;
+}
+
+.bkbg-is-vert .bkbg-is-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+/* ── Nav ───────────────────────────────────────────────────────────── */
+.bkbg-is-nav {
+    display: flex;
+}
+
+/* ── Step item wrapper ─────────────────────────────────────────────── */
+.bkbg-is-step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.bkbg-is-vert .bkbg-is-step-item {
+    flex-direction: row;
+    align-items: center;
+}
+
+/* ── Connector ─────────────────────────────────────────────────────── */
+.bkbg-is-connector {
+    transition: background 0.4s ease;
+}
+
+/* ── Bubble ────────────────────────────────────────────────────────── */
+.bkbg-is-bubble {
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.3s ease, transform 0.2s, box-shadow 0.2s;
+}
+
+.bkbg-is-bubble:hover:not(.bkbg-is-active) {
+    filter: brightness(0.92);
+}
+
+.bkbg-is-bubble svg { width: 1em; height: 1em; fill: currentColor; }
+.bkbg-is-bubble .dashicons { font-size: inherit; width: 1em; height: 1em; line-height: 1; }
+.bkbg-is-bubble .bkbg-icon-img { width: 1em; height: 1em; object-fit: contain; }
+
+.bkbg-is-bubble.bkbg-is-active {
+    transform: scale(1.12);
+}
+
+/* ── Step label ────────────────────────────────────────────────────── */
+.bkbg-is-label {
+    font-weight: 500;
+    white-space: nowrap;
+    text-align: center;
+    transition: color 0.3s, font-weight 0.2s;
+}
+
+/* ── Content panel ─────────────────────────────────────────────────── */
+.bkbg-is-panel {
+    flex: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.bkbg-is-panel.bkbg-is-transitioning {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.bkbg-is-heading {
+    margin: 0 0 12px;
+    font-family: var(--bkbg-is-h-font-family, inherit);
+    font-size:   var(--bkbg-is-h-font-size-d, 22px);
+    font-weight: var(--bkbg-is-h-font-weight, 700);
+    font-style:  var(--bkbg-is-h-font-style, normal);
+    text-decoration: var(--bkbg-is-h-text-decoration, none);
+    text-transform:  var(--bkbg-is-h-text-transform, none);
+    line-height: var(--bkbg-is-h-line-height-d, 1.25);
+    letter-spacing: var(--bkbg-is-h-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-is-h-word-spacing-d, normal);
+}
+
+.bkbg-is-body {
+    margin: 0;
+    white-space: pre-line;
+    font-family: var(--bkbg-is-bd-font-family, inherit);
+    font-size:   var(--bkbg-is-bd-font-size-d, 16px);
+    font-weight: var(--bkbg-is-bd-font-weight, 400);
+    font-style:  var(--bkbg-is-bd-font-style, normal);
+    text-decoration: var(--bkbg-is-bd-text-decoration, none);
+    text-transform:  var(--bkbg-is-bd-text-transform, none);
+    line-height: var(--bkbg-is-bd-line-height-d, 1.7);
+    letter-spacing: var(--bkbg-is-bd-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-is-bd-word-spacing-d, normal);
+}
+
+.bkbg-is-nav-btns {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.bkbg-is-btn-prev,
+.bkbg-is-btn-next {
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    transition: opacity 0.2s, transform 0.15s;
+}
+
+.bkbg-is-btn-prev:hover,
+.bkbg-is-btn-next:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}
+
+/* ── Reduced motion ────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .bkbg-is-bubble,
+    .bkbg-is-panel,
+    .bkbg-is-connector { transition: none !important; }
+}
+/* ── Responsive typography ──────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-is-heading {
+        font-size: var(--bkbg-is-h-font-size-t, var(--bkbg-is-h-font-size-d, 22px));
+        line-height: var(--bkbg-is-h-line-height-t, var(--bkbg-is-h-line-height-d, 1.25));
+        letter-spacing: var(--bkbg-is-h-letter-spacing-t, var(--bkbg-is-h-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-is-h-word-spacing-t, var(--bkbg-is-h-word-spacing-d, normal));
+    }
+    .bkbg-is-body {
+        font-size: var(--bkbg-is-bd-font-size-t, var(--bkbg-is-bd-font-size-d, 16px));
+        line-height: var(--bkbg-is-bd-line-height-t, var(--bkbg-is-bd-line-height-d, 1.7));
+        letter-spacing: var(--bkbg-is-bd-letter-spacing-t, var(--bkbg-is-bd-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-is-bd-word-spacing-t, var(--bkbg-is-bd-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-is-heading {
+        font-size: var(--bkbg-is-h-font-size-m, var(--bkbg-is-h-font-size-t, var(--bkbg-is-h-font-size-d, 22px)));
+        line-height: var(--bkbg-is-h-line-height-m, var(--bkbg-is-h-line-height-t, var(--bkbg-is-h-line-height-d, 1.25)));
+        letter-spacing: var(--bkbg-is-h-letter-spacing-m, var(--bkbg-is-h-letter-spacing-t, var(--bkbg-is-h-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-is-h-word-spacing-m, var(--bkbg-is-h-word-spacing-t, var(--bkbg-is-h-word-spacing-d, normal)));
+    }
+    .bkbg-is-body {
+        font-size: var(--bkbg-is-bd-font-size-m, var(--bkbg-is-bd-font-size-t, var(--bkbg-is-bd-font-size-d, 16px)));
+        line-height: var(--bkbg-is-bd-line-height-m, var(--bkbg-is-bd-line-height-t, var(--bkbg-is-bd-line-height-d, 1.7)));
+        letter-spacing: var(--bkbg-is-bd-letter-spacing-m, var(--bkbg-is-bd-letter-spacing-t, var(--bkbg-is-bd-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-is-bd-word-spacing-m, var(--bkbg-is-bd-word-spacing-t, var(--bkbg-is-bd-word-spacing-d, normal)));
+    }
+}
+/* ── Responsive ────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+    .bkbg-is-vert {
+        flex-direction: column !important;
+    }
+    .bkbg-is-vert .bkbg-is-nav {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+    .bkbg-is-label { font-size: 11px !important; }
+}

@@ -1,0 +1,118 @@
+.bkbg-cti-wrap {
+    display:       flex;
+    gap:           var(--bkbg-cti-gap, 20px);
+}
+.bkbg-cti-layout--stacked { flex-direction: column; }
+.bkbg-cti-layout--inline  { flex-wrap: wrap; flex-direction: row; align-items: flex-start; }
+.bkbg-cti-layout--grid    {
+    display: grid;
+    grid-template-columns: repeat(var(--bkbg-cti-cols, 2), 1fr);
+}
+
+.bkbg-cti-item {
+    display:     flex;
+    align-items: center;
+    gap:         12px;
+}
+
+/* Icon box */
+.bkbg-cti-icon--box {
+    background:   var(--bkbg-cti-icon-bg, #eff6ff);
+    color:        var(--bkbg-cti-icon-c,  #2563eb);
+    width:        var(--bkbg-cti-box-sz,  40px);
+    height:       var(--bkbg-cti-box-sz,  40px);
+    border-radius:var(--bkbg-cti-box-r,   8px);
+    display:      flex;
+    align-items:  center;
+    justify-content:center;
+    flex-shrink:  0;
+}
+.bkbg-cti-icon--box svg { width: var(--bkbg-cti-icon-sz, 18px); height: var(--bkbg-cti-icon-sz, 18px); }
+
+.bkbg-cti-icon--outline {
+    background:   transparent;
+    border:       2px solid var(--bkbg-cti-icon-c, #2563eb);
+}
+
+/* Plain icon */
+.bkbg-cti-icon--plain {
+    color:     var(--bkbg-cti-icon-c, #2563eb);
+    flex-shrink: 0;
+}
+.bkbg-cti-icon--plain svg { width: var(--bkbg-cti-icon-sz, 18px); height: var(--bkbg-cti-icon-sz, 18px); }
+
+/* Text */
+.bkbg-cti-body {
+    display:        flex;
+    flex-direction: column;
+    gap:            2px;
+}
+.bkbg-cti-label {
+    display:        block;
+    font-family:    var(--bkcti-label-font-family, inherit);
+    font-size:      var(--bkcti-label-font-size-d, var(--bkcti-label-font-size, var(--bkbg-cti-ls, 12px)));
+    font-weight:    var(--bkcti-label-font-weight, var(--bkbg-cti-lw, 600));
+    font-style:     var(--bkcti-label-font-style, normal);
+    text-transform: var(--bkcti-label-text-transform, uppercase);
+    text-decoration: var(--bkcti-label-text-decoration, none);
+    line-height:    var(--bkcti-label-line-height-d, var(--bkcti-label-line-height, 1.4));
+    letter-spacing: var(--bkcti-label-letter-spacing-d, var(--bkcti-label-letter-spacing, 0.05em));
+    word-spacing:   var(--bkcti-label-word-spacing-d, var(--bkcti-label-word-spacing, normal));
+    color:          var(--bkbg-cti-label-c, #6b7280);
+}
+.bkbg-cti-value {
+    display:     block;
+    font-family: var(--bkcti-value-font-family, inherit);
+    font-size:   var(--bkcti-value-font-size-d, var(--bkcti-value-font-size, var(--bkbg-cti-vs, 15px)));
+    font-weight: var(--bkcti-value-font-weight, var(--bkbg-cti-vw, 400));
+    font-style:  var(--bkcti-value-font-style, normal);
+    text-transform: var(--bkcti-value-text-transform, none);
+    text-decoration: var(--bkcti-value-text-decoration, none);
+    line-height: var(--bkcti-value-line-height-d, var(--bkcti-value-line-height, 1.4));
+    letter-spacing: var(--bkcti-value-letter-spacing-d, var(--bkcti-value-letter-spacing, normal));
+    word-spacing: var(--bkcti-value-word-spacing-d, var(--bkcti-value-word-spacing, normal));
+    color:       var(--bkbg-cti-value-c, #111827);
+}
+.bkbg-cti-link {
+    font-family:    var(--bkcti-value-font-family, inherit);
+    font-size:      var(--bkcti-value-font-size-d, var(--bkcti-value-font-size, var(--bkbg-cti-vs, 15px)));
+    font-weight:    var(--bkcti-value-font-weight, var(--bkbg-cti-vw, 400));
+    font-style:     var(--bkcti-value-font-style, normal);
+    text-transform: var(--bkcti-value-text-transform, none);
+    line-height:    var(--bkcti-value-line-height-d, var(--bkcti-value-line-height, 1.4));
+    letter-spacing: var(--bkcti-value-letter-spacing-d, var(--bkcti-value-letter-spacing, normal));
+    word-spacing:   var(--bkcti-value-word-spacing-d, var(--bkcti-value-word-spacing, normal));
+    color:          var(--bkbg-cti-link-c, #2563eb);
+    text-decoration: var(--bkcti-value-text-decoration, none);
+}
+.bkbg-cti-link:hover { text-decoration: underline; }
+
+/* ── Responsive Typography ── */
+@media (max-width: 1024px) {
+    .bkbg-cti-label {
+        font-size: var(--bkcti-label-font-size-t, var(--bkcti-label-font-size-d, var(--bkcti-label-font-size, var(--bkbg-cti-ls, 12px))));
+        line-height: var(--bkcti-label-line-height-t, var(--bkcti-label-line-height-d, var(--bkcti-label-line-height, 1.4)));
+        letter-spacing: var(--bkcti-label-letter-spacing-t, var(--bkcti-label-letter-spacing-d, var(--bkcti-label-letter-spacing, 0.05em)));
+        word-spacing: var(--bkcti-label-word-spacing-t, var(--bkcti-label-word-spacing-d, var(--bkcti-label-word-spacing, normal)));
+    }
+    .bkbg-cti-value, .bkbg-cti-link {
+        font-size: var(--bkcti-value-font-size-t, var(--bkcti-value-font-size-d, var(--bkcti-value-font-size, var(--bkbg-cti-vs, 15px))));
+        line-height: var(--bkcti-value-line-height-t, var(--bkcti-value-line-height-d, var(--bkcti-value-line-height, 1.4)));
+        letter-spacing: var(--bkcti-value-letter-spacing-t, var(--bkcti-value-letter-spacing-d, var(--bkcti-value-letter-spacing, normal)));
+        word-spacing: var(--bkcti-value-word-spacing-t, var(--bkcti-value-word-spacing-d, var(--bkcti-value-word-spacing, normal)));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-cti-label {
+        font-size: var(--bkcti-label-font-size-m, var(--bkcti-label-font-size-t, var(--bkcti-label-font-size-d, var(--bkcti-label-font-size, var(--bkbg-cti-ls, 12px)))));
+        line-height: var(--bkcti-label-line-height-m, var(--bkcti-label-line-height-t, var(--bkcti-label-line-height-d, var(--bkcti-label-line-height, 1.4))));
+        letter-spacing: var(--bkcti-label-letter-spacing-m, var(--bkcti-label-letter-spacing-t, var(--bkcti-label-letter-spacing-d, var(--bkcti-label-letter-spacing, 0.05em))));
+        word-spacing: var(--bkcti-label-word-spacing-m, var(--bkcti-label-word-spacing-t, var(--bkcti-label-word-spacing-d, var(--bkcti-label-word-spacing, normal))));
+    }
+    .bkbg-cti-value, .bkbg-cti-link {
+        font-size: var(--bkcti-value-font-size-m, var(--bkcti-value-font-size-t, var(--bkcti-value-font-size-d, var(--bkcti-value-font-size, var(--bkbg-cti-vs, 15px)))));
+        line-height: var(--bkcti-value-line-height-m, var(--bkcti-value-line-height-t, var(--bkcti-value-line-height-d, var(--bkcti-value-line-height, 1.4))));
+        letter-spacing: var(--bkcti-value-letter-spacing-m, var(--bkcti-value-letter-spacing-t, var(--bkcti-value-letter-spacing-d, var(--bkcti-value-letter-spacing, normal))));
+        word-spacing: var(--bkcti-value-word-spacing-m, var(--bkcti-value-word-spacing-t, var(--bkcti-value-word-spacing-d, var(--bkcti-value-word-spacing, normal))));
+    }
+}

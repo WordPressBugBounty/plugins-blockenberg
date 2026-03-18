@@ -1,0 +1,291 @@
+/* Drawing Canvas Block — bkbg-drw-* */
+
+/* ---- Section wrapper ---- */
+.bkbg-drw-app {
+    padding: 28px 20px 24px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+/* ---- Titles ---- */
+.bkbg-drw-editor-wrap .bkbg-drw-title,
+.bkbg-drw-app .bkbg-drw-title {
+    margin: 0 0 4px;
+    text-align: center;
+    font-family: var(--bkbg-drw-ttl-font-family, inherit);
+    font-weight: var(--bkbg-drw-ttl-font-weight, 800);
+    font-size: var(--bkbg-drw-ttl-font-size-d, var(--bkbg-drw-ttl-fs, 26px));
+    line-height: var(--bkbg-drw-ttl-line-height-d, 1.25);
+    letter-spacing: var(--bkbg-drw-ttl-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-drw-ttl-word-spacing-d, normal);
+    text-transform: var(--bkbg-drw-ttl-text-transform, none);
+    font-style: var(--bkbg-drw-ttl-font-style, normal);
+    text-decoration: var(--bkbg-drw-ttl-text-decoration, none);
+}
+
+.bkbg-drw-editor-wrap .bkbg-drw-subtitle,
+.bkbg-drw-app .bkbg-drw-subtitle {
+    margin: 0 0 20px;
+    text-align: center;
+    opacity: 0.65;
+    font-family: var(--bkbg-drw-sub-font-family, inherit);
+    font-weight: var(--bkbg-drw-sub-font-weight, 400);
+    font-size: var(--bkbg-drw-sub-font-size-d, var(--bkbg-drw-sub-fs, 14px));
+    line-height: var(--bkbg-drw-sub-line-height-d, 1.5);
+    letter-spacing: var(--bkbg-drw-sub-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-drw-sub-word-spacing-d, normal);
+    text-transform: var(--bkbg-drw-sub-text-transform, none);
+    font-style: var(--bkbg-drw-sub-font-style, normal);
+    text-decoration: var(--bkbg-drw-sub-text-decoration, none);
+}
+
+/* ---- Toolbar ---- */
+.bkbg-drw-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+}
+
+.bkbg-drw-tool-btn {
+    background: #f3f4f6;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 7px;
+    padding: 6px 11px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, transform 0.1s;
+    line-height: 1;
+}
+
+.bkbg-drw-tool-btn:hover {
+    background: #e0e7ff;
+    border-color: #a5b4fc;
+}
+
+.bkbg-drw-tool-btn.bkbg-drw-active {
+    background: var(--bkbg-drw-accent, #6366f1);
+    border-color: var(--bkbg-drw-accent, #6366f1);
+    color: #fff;
+    font-weight: 700;
+}
+
+.bkbg-drw-tool-btn:active {
+    transform: scale(0.95);
+}
+
+/* ---- Toolbar spacer ---- */
+.bkbg-drw-toolbar-sep {
+    width: 1px;
+    height: 28px;
+    background: #e5e7eb;
+    margin: 0 2px;
+}
+
+/* ---- Palette ---- */
+.bkbg-drw-palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+}
+
+.bkbg-drw-swatch {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.bkbg-drw-swatch:hover {
+    transform: scale(1.2);
+}
+
+.bkbg-drw-swatch.bkbg-drw-selected {
+    border-color: var(--bkbg-drw-accent, #6366f1);
+    box-shadow: 0 0 0 2px var(--bkbg-drw-accent, #6366f1);
+    transform: scale(1.2);
+}
+
+.bkbg-drw-custom-color {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #e5e7eb;
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* ---- Stroke width ---- */
+.bkbg-drw-stroke-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.bkbg-drw-stroke-label {
+    font-size: 12px;
+    opacity: 0.6;
+    white-space: nowrap;
+}
+
+.bkbg-drw-stroke-range {
+    width: 80px;
+    accent-color: var(--bkbg-drw-accent, #6366f1);
+    cursor: pointer;
+}
+
+/* ---- Canvas wrapper ---- */
+.bkbg-drw-canvas-wrap {
+    position: relative;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    line-height: 0;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+
+/* ---- The canvas itself ---- */
+.bkbg-drw-canvas {
+    display: block;
+    max-width: 100%;
+    cursor: crosshair;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.bkbg-drw-canvas.bkbg-drw-eraser-cur {
+    cursor: cell;
+}
+
+/* ---- Bottom action bar ---- */
+.bkbg-drw-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+    align-items: center;
+}
+
+.bkbg-drw-btn {
+    background: #f3f4f6;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 7px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #374151;
+    font-weight: 500;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.bkbg-drw-btn:hover {
+    background: #e0e7ff;
+    border-color: var(--bkbg-drw-accent, #6366f1);
+    color: var(--bkbg-drw-accent, #6366f1);
+}
+
+.bkbg-drw-dl-btn {
+    background: var(--bkbg-drw-accent, #6366f1);
+    color: #fff;
+    border-color: transparent;
+    font-weight: 700;
+    margin-left: auto;
+}
+
+.bkbg-drw-dl-btn:hover {
+    opacity: 0.88;
+    border-color: transparent;
+    color: #fff;
+}
+
+.bkbg-drw-clear-btn:hover {
+    background: #fef2f2;
+    border-color: #fca5a5;
+    color: #ef4444;
+}
+
+/* ---- Cursor size indicator (optional overlay) ---- */
+.bkbg-drw-cursor-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(0,0,0,0.35);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.1s, height 0.1s;
+}
+
+/* ---- Editor preview ---- */
+.bkbg-drw-editor-wrap {
+    display: block;
+}
+
+/* ---- Responsive Typography ---- */
+@media (max-width: 1024px) {
+    .bkbg-drw-editor-wrap .bkbg-drw-title,
+    .bkbg-drw-app .bkbg-drw-title {
+        font-size: var(--bkbg-drw-ttl-font-size-t, var(--bkbg-drw-ttl-font-size-d, var(--bkbg-drw-ttl-fs, 26px)));
+        line-height: var(--bkbg-drw-ttl-line-height-t, var(--bkbg-drw-ttl-line-height-d, 1.25));
+        letter-spacing: var(--bkbg-drw-ttl-letter-spacing-t, var(--bkbg-drw-ttl-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-drw-ttl-word-spacing-t, var(--bkbg-drw-ttl-word-spacing-d, normal));
+    }
+    .bkbg-drw-editor-wrap .bkbg-drw-subtitle,
+    .bkbg-drw-app .bkbg-drw-subtitle {
+        font-size: var(--bkbg-drw-sub-font-size-t, var(--bkbg-drw-sub-font-size-d, var(--bkbg-drw-sub-fs, 14px)));
+        line-height: var(--bkbg-drw-sub-line-height-t, var(--bkbg-drw-sub-line-height-d, 1.5));
+        letter-spacing: var(--bkbg-drw-sub-letter-spacing-t, var(--bkbg-drw-sub-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-drw-sub-word-spacing-t, var(--bkbg-drw-sub-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-drw-editor-wrap .bkbg-drw-title,
+    .bkbg-drw-app .bkbg-drw-title {
+        font-size: var(--bkbg-drw-ttl-font-size-m, var(--bkbg-drw-ttl-font-size-t, var(--bkbg-drw-ttl-font-size-d, var(--bkbg-drw-ttl-fs, 26px))));
+        line-height: var(--bkbg-drw-ttl-line-height-m, var(--bkbg-drw-ttl-line-height-t, var(--bkbg-drw-ttl-line-height-d, 1.25)));
+        letter-spacing: var(--bkbg-drw-ttl-letter-spacing-m, var(--bkbg-drw-ttl-letter-spacing-t, var(--bkbg-drw-ttl-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-drw-ttl-word-spacing-m, var(--bkbg-drw-ttl-word-spacing-t, var(--bkbg-drw-ttl-word-spacing-d, normal)));
+    }
+    .bkbg-drw-editor-wrap .bkbg-drw-subtitle,
+    .bkbg-drw-app .bkbg-drw-subtitle {
+        font-size: var(--bkbg-drw-sub-font-size-m, var(--bkbg-drw-sub-font-size-t, var(--bkbg-drw-sub-font-size-d, var(--bkbg-drw-sub-fs, 14px))));
+        line-height: var(--bkbg-drw-sub-line-height-m, var(--bkbg-drw-sub-line-height-t, var(--bkbg-drw-sub-line-height-d, 1.5)));
+        letter-spacing: var(--bkbg-drw-sub-letter-spacing-m, var(--bkbg-drw-sub-letter-spacing-t, var(--bkbg-drw-sub-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-drw-sub-word-spacing-m, var(--bkbg-drw-sub-word-spacing-t, var(--bkbg-drw-sub-word-spacing-d, normal)));
+    }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+    .bkbg-drw-toolbar {
+        gap: 4px;
+        padding: 6px 8px;
+    }
+
+    .bkbg-drw-tool-btn {
+        padding: 5px 8px;
+        font-size: 13px;
+    }
+
+    .bkbg-drw-stroke-range {
+        width: 56px;
+    }
+
+    .bkbg-drw-actions {
+        gap: 6px;
+    }
+
+    .bkbg-drw-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

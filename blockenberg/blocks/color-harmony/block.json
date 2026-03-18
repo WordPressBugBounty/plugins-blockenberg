@@ -1,0 +1,98 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/color-harmony",
+    "title": "Color Harmony",
+    "category": "bkbg-dev",
+    "icon": "art",
+    "description": "Pick a base color and instantly see complementary, triadic, analogous, and other harmonic palettes. Click any swatch to copy its hex value.",
+    "keywords": [
+        "color",
+        "harmony",
+        "palette",
+        "complementary",
+        "triadic",
+        "analogous",
+        "design",
+        "wheel"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-color-harmony-editor",
+    "style": "bkbg-color-harmony-style",
+    "viewScript": "bkbg-color-harmony-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Color Harmony"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Pick a base color to explore harmonic palettes"
+        },
+        "defaultColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "defaultHarmony": {
+            "type": "string",
+            "default": "complementary"
+        },
+        "swatchSize": {
+            "type": "number",
+            "default": 80
+        },
+        "showHex": {
+            "type": "boolean",
+            "default": true
+        },
+        "showRgb": {
+            "type": "boolean",
+            "default": false
+        },
+        "showExport": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 28
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 14
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

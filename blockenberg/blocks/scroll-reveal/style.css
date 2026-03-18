@@ -1,0 +1,28 @@
+/* Scroll Reveal — style */
+.bksr-wrap {
+    box-sizing: border-box;
+}
+
+/* Hidden initial state — set by JS to avoid FOUC if JS is slow */
+.bksr-hidden {
+    visibility: hidden;
+}
+
+/* Revealed state */
+.bksr-revealed {
+    visibility: visible !important;
+}
+
+/* Reduced motion: skip animations */
+@media (prefers-reduced-motion: reduce) {
+    .bksr-wrap {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    .bksr-child-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}

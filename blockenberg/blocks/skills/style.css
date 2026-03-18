@@ -1,0 +1,142 @@
+/* ── Skills ─────────────────────────────────────────────────── */
+.bkbg-skills-wrap {
+    box-sizing: border-box;
+}
+.bkbg-skills {
+    box-sizing: border-box;
+    width: 100%;
+}
+.bkbg-skills-cat {
+    box-sizing: border-box;
+}
+.bkbg-skills-item--bar {
+    width: 100%;
+}
+.bkbg-skills-fill {
+    transition: width 0.9s ease;
+}
+.bkbg-skills-item--circle svg {
+    overflow: visible;
+}
+.bkbg-skills-arc {
+    transition: stroke-dashoffset 1.2s ease;
+}
+.bkbg-skills-tag {
+    user-select: none;
+}
+
+/* ── Title typography ───────────────────────────────────────── */
+.bkbg-skills-title {
+    font-size: var(--bksk-tt-font-size-d, 22px);
+    font-style: var(--bksk-tt-font-style);
+    text-decoration: var(--bksk-tt-text-decoration);
+    text-transform: var(--bksk-tt-text-transform);
+    line-height: var(--bksk-tt-line-height-d);
+    letter-spacing: var(--bksk-tt-letter-spacing-d);
+    word-spacing: var(--bksk-tt-word-spacing-d);
+}
+.bkbg-skills .bkbg-skills-title {
+    font-family: var(--bksk-tt-font-family, inherit);
+    font-weight: var(--bksk-tt-font-weight, 700);
+}
+
+/* ── Category label typography ──────────────────────────────── */
+.bkbg-skills-cat-label {
+    font-size: var(--bksk-ct-font-size-d, 13px);
+    font-family: var(--bksk-ct-font-family, inherit);
+    font-weight: var(--bksk-ct-font-weight, 700);
+    font-style: var(--bksk-ct-font-style);
+    text-decoration: var(--bksk-ct-text-decoration);
+    text-transform: var(--bksk-ct-text-transform, uppercase);
+    line-height: var(--bksk-ct-line-height-d);
+    letter-spacing: var(--bksk-ct-letter-spacing-d, 0.08em);
+    word-spacing: var(--bksk-ct-word-spacing-d);
+}
+
+/* ── Skill name typography ──────────────────────────────────── */
+.bkbg-skills-name,
+.bkbg-skills-tag {
+    font-size: var(--bksk-sn-font-size-d, 14px);
+    font-family: var(--bksk-sn-font-family, inherit);
+    font-weight: var(--bksk-sn-font-weight, 500);
+    font-style: var(--bksk-sn-font-style);
+    text-decoration: var(--bksk-sn-text-decoration);
+    text-transform: var(--bksk-sn-text-transform);
+    line-height: var(--bksk-sn-line-height-d);
+    letter-spacing: var(--bksk-sn-letter-spacing-d);
+    word-spacing: var(--bksk-sn-word-spacing-d);
+}
+
+/* ── Level label typography ─────────────────────────────────── */
+.bkbg-skills-level {
+    font-size: var(--bksk-lv-font-size-d, 12px);
+    font-family: var(--bksk-lv-font-family, inherit);
+    font-weight: var(--bksk-lv-font-weight);
+    font-style: var(--bksk-lv-font-style);
+    text-decoration: var(--bksk-lv-text-decoration);
+    text-transform: var(--bksk-lv-text-transform);
+    line-height: var(--bksk-lv-line-height-d);
+    letter-spacing: var(--bksk-lv-letter-spacing-d);
+    word-spacing: var(--bksk-lv-word-spacing-d);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-skills-title {
+        font-size: var(--bksk-tt-font-size-t, var(--bksk-tt-font-size-d, 22px));
+        line-height: var(--bksk-tt-line-height-t, var(--bksk-tt-line-height-d));
+        letter-spacing: var(--bksk-tt-letter-spacing-t, var(--bksk-tt-letter-spacing-d));
+        word-spacing: var(--bksk-tt-word-spacing-t, var(--bksk-tt-word-spacing-d));
+    }
+    .bkbg-skills-cat-label {
+        font-size: var(--bksk-ct-font-size-t, var(--bksk-ct-font-size-d, 13px));
+        line-height: var(--bksk-ct-line-height-t, var(--bksk-ct-line-height-d));
+        letter-spacing: var(--bksk-ct-letter-spacing-t, var(--bksk-ct-letter-spacing-d, 0.08em));
+        word-spacing: var(--bksk-ct-word-spacing-t, var(--bksk-ct-word-spacing-d));
+    }
+    .bkbg-skills-name,
+    .bkbg-skills-tag {
+        font-size: var(--bksk-sn-font-size-t, var(--bksk-sn-font-size-d, 14px));
+        line-height: var(--bksk-sn-line-height-t, var(--bksk-sn-line-height-d));
+        letter-spacing: var(--bksk-sn-letter-spacing-t, var(--bksk-sn-letter-spacing-d));
+        word-spacing: var(--bksk-sn-word-spacing-t, var(--bksk-sn-word-spacing-d));
+    }
+    .bkbg-skills-level {
+        font-size: var(--bksk-lv-font-size-t, var(--bksk-lv-font-size-d, 12px));
+        line-height: var(--bksk-lv-line-height-t, var(--bksk-lv-line-height-d));
+        letter-spacing: var(--bksk-lv-letter-spacing-t, var(--bksk-lv-letter-spacing-d));
+        word-spacing: var(--bksk-lv-word-spacing-t, var(--bksk-lv-word-spacing-d));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-skills-title {
+        font-size: var(--bksk-tt-font-size-m, var(--bksk-tt-font-size-t, var(--bksk-tt-font-size-d, 22px)));
+        line-height: var(--bksk-tt-line-height-m, var(--bksk-tt-line-height-t, var(--bksk-tt-line-height-d)));
+        letter-spacing: var(--bksk-tt-letter-spacing-m, var(--bksk-tt-letter-spacing-t, var(--bksk-tt-letter-spacing-d)));
+        word-spacing: var(--bksk-tt-word-spacing-m, var(--bksk-tt-word-spacing-t, var(--bksk-tt-word-spacing-d)));
+    }
+    .bkbg-skills-cat-label {
+        font-size: var(--bksk-ct-font-size-m, var(--bksk-ct-font-size-t, var(--bksk-ct-font-size-d, 13px)));
+        line-height: var(--bksk-ct-line-height-m, var(--bksk-ct-line-height-t, var(--bksk-ct-line-height-d)));
+        letter-spacing: var(--bksk-ct-letter-spacing-m, var(--bksk-ct-letter-spacing-t, var(--bksk-ct-letter-spacing-d, 0.08em)));
+        word-spacing: var(--bksk-ct-word-spacing-m, var(--bksk-ct-word-spacing-t, var(--bksk-ct-word-spacing-d)));
+    }
+    .bkbg-skills-name,
+    .bkbg-skills-tag {
+        font-size: var(--bksk-sn-font-size-m, var(--bksk-sn-font-size-t, var(--bksk-sn-font-size-d, 14px)));
+        line-height: var(--bksk-sn-line-height-m, var(--bksk-sn-line-height-t, var(--bksk-sn-line-height-d)));
+        letter-spacing: var(--bksk-sn-letter-spacing-m, var(--bksk-sn-letter-spacing-t, var(--bksk-sn-letter-spacing-d)));
+        word-spacing: var(--bksk-sn-word-spacing-m, var(--bksk-sn-word-spacing-t, var(--bksk-sn-word-spacing-d)));
+    }
+    .bkbg-skills-level {
+        font-size: var(--bksk-lv-font-size-m, var(--bksk-lv-font-size-t, var(--bksk-lv-font-size-d, 12px)));
+        line-height: var(--bksk-lv-line-height-m, var(--bksk-lv-line-height-t, var(--bksk-lv-line-height-d)));
+        letter-spacing: var(--bksk-lv-letter-spacing-m, var(--bksk-lv-letter-spacing-t, var(--bksk-lv-letter-spacing-d)));
+        word-spacing: var(--bksk-lv-word-spacing-m, var(--bksk-lv-word-spacing-t, var(--bksk-lv-word-spacing-d)));
+    }
+}
+
+@media (max-width: 640px) {
+    .bkbg-skills > div {
+        grid-template-columns: 1fr !important;
+    }
+}

@@ -1,0 +1,259 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/case-study",
+    "title": "Case Study",
+    "category": "bkbg-business",
+    "icon": "portfolio",
+    "description": "Client case study section with logo, challenge, solution, quantified before/after metrics and a pull quote. Perfect for agency, SaaS and consulting landing pages.",
+    "keywords": [
+        "case study",
+        "client",
+        "results",
+        "metrics",
+        "success",
+        "project",
+        "portfolio"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-case-study-editor",
+    "editorStyle": "bkbg-case-study-style",
+    "style": "bkbg-case-study-style",
+    "viewScript": "bkbg-case-study-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Case Study"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "See how we helped our client achieve extraordinary results."
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": false
+        },
+        "layout": {
+            "type": "string",
+            "default": "two-col"
+        },
+        "clientName": {
+            "type": "string",
+            "default": "Acme Corporation"
+        },
+        "clientIndustry": {
+            "type": "string",
+            "default": "SaaS / Technology"
+        },
+        "clientUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "clientLogoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "clientLogoId": {
+            "type": "number",
+            "default": 0
+        },
+        "clientTagline": {
+            "type": "string",
+            "default": "Transforming enterprise workflows since 2018"
+        },
+        "challenge": {
+            "type": "string",
+            "default": "<p>Acme was struggling with a fragmented data pipeline that caused reporting delays of up to 72 hours. Their team was spending 40% of their time on manual data reconciliation instead of strategic work.</p>"
+        },
+        "solution": {
+            "type": "string",
+            "default": "<p>We rebuilt their data infrastructure with an automated ETL pipeline and a real-time dashboard. The new system integrates 12 data sources and generates reports in under 2 minutes.</p>"
+        },
+        "metrics": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "m1",
+                    "value": "94%",
+                    "label": "Reporting time reduced",
+                    "description": "From 72 hrs to under 2 min",
+                    "color": "#10b981",
+                    "prefix": "",
+                    "suffix": ""
+                },
+                {
+                    "id": "m2",
+                    "value": "3.2×",
+                    "label": "Team productivity",
+                    "description": "Engineers refocused on core product",
+                    "color": "#6c3fb5",
+                    "prefix": "",
+                    "suffix": ""
+                },
+                {
+                    "id": "m3",
+                    "value": "$1.4M",
+                    "label": "Annual savings",
+                    "description": "Eliminated manual reconciliation cost",
+                    "color": "#f59e0b",
+                    "prefix": "",
+                    "suffix": ""
+                }
+            ]
+        },
+        "quote": {
+            "type": "string",
+            "default": "The results exceeded every expectation. Our team now has the data they need before their morning coffee."
+        },
+        "quoteAuthor": {
+            "type": "string",
+            "default": "Sarah Chen"
+        },
+        "quoteAuthorRole": {
+            "type": "string",
+            "default": "CTO, Acme Corporation"
+        },
+        "quoteAvatarUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "quoteAvatarId": {
+            "type": "number",
+            "default": 0
+        },
+        "showQuote": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Read Full Case Study"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "ctaNewTab": {
+            "type": "boolean",
+            "default": false
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "bodyColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "sectionLabelBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "sectionLabelColor": {
+            "type": "string",
+            "default": "#5b21b6"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "metricBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "metricBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "quoteBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "quoteBorder": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "quoteColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 32
+        },
+        "metricValueSize": {
+            "type": "number",
+            "default": 36
+        },
+        "metricLabelSize": {
+            "type": "number",
+            "default": 13
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "ctaRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 64
+        },
+        "typoTitle": { "type": "object", "default": {} },
+        "typoSubtitle": { "type": "object", "default": {} },
+        "typoBody": { "type": "object", "default": {} },
+        "typoQuote": { "type": "object", "default": {} },
+        "typoCta": { "type": "object", "default": {} }
+    }
+}

@@ -1,0 +1,76 @@
+.bkbg-nl-editor-wrap {
+    width: 100%;
+}
+
+.bkbg-nl-wrap {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.bkbg-nl-label {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.bkbg-nl-title {
+    font-family: var(--bkbg-nutl-tt-font-family, Arial, Helvetica, sans-serif);
+    font-size: var(--bkbg-nutl-tt-font-size-d, 34px);
+    font-weight: var(--bkbg-nutl-tt-font-weight, 900);
+    font-style: var(--bkbg-nutl-tt-font-style, normal);
+    text-decoration: var(--bkbg-nutl-tt-text-decoration, none);
+    text-transform: var(--bkbg-nutl-tt-text-transform, none);
+    line-height: var(--bkbg-nutl-tt-line-height-d, 1);
+    letter-spacing: var(--bkbg-nutl-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-nutl-tt-word-spacing-d, normal);
+}
+
+.bkbg-nl-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 0;
+    border-top: 1px solid #000;
+}
+
+.bkbg-nl-row.bkbg-nl-bold {
+    font-weight: 700;
+}
+
+.bkbg-nl-row.bkbg-nl-indent {
+    padding-left: 16px;
+}
+
+.bkbg-nl-row.bkbg-nl-indent2 {
+    padding-left: 32px;
+}
+
+.bkbg-nl-nutrient {
+    flex: 1;
+}
+
+.bkbg-nl-dv {
+    min-width: 48px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.bkbg-nl-vitamins {
+    font-size: 0.85em;
+}
+
+.bkbg-nl-footnote {
+    font-size: 0.72em;
+    line-height: 1.4;
+}
+
+/* Frontend output hidden until JS runs */
+.bkbg-nl-app > .bkbg-nl-label {
+    display: block;
+}
+
+@media(max-width:1024px){
+    .bkbg-nl-title{font-size:var(--bkbg-nutl-tt-font-size-t,var(--bkbg-nutl-tt-font-size-d,34px));line-height:var(--bkbg-nutl-tt-line-height-t,var(--bkbg-nutl-tt-line-height-d,1));letter-spacing:var(--bkbg-nutl-tt-letter-spacing-t,var(--bkbg-nutl-tt-letter-spacing-d,normal));word-spacing:var(--bkbg-nutl-tt-word-spacing-t,var(--bkbg-nutl-tt-word-spacing-d,normal))}
+}
+@media(max-width:767px){
+    .bkbg-nl-title{font-size:var(--bkbg-nutl-tt-font-size-m,var(--bkbg-nutl-tt-font-size-d,28px));line-height:var(--bkbg-nutl-tt-line-height-m,var(--bkbg-nutl-tt-line-height-d,1));letter-spacing:var(--bkbg-nutl-tt-letter-spacing-m,var(--bkbg-nutl-tt-letter-spacing-d,normal));word-spacing:var(--bkbg-nutl-tt-word-spacing-m,var(--bkbg-nutl-tt-word-spacing-d,normal))}
+}

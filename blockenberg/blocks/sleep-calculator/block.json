@@ -1,0 +1,175 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/sleep-calculator",
+	"title": "Sleep Calculator",
+	"category": "bkbg-calculators",
+	"icon": "clock",
+	"description": "Calculate optimal sleep and wake times based on 90-minute REM sleep cycles. Find when to sleep or when to wake up to feel fully rested.",
+	"keywords": [
+		"sleep",
+		"wake",
+		"REM",
+		"cycle",
+		"bedtime",
+		"alarm",
+		"rest",
+		"health",
+		"calculator"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-sleep-calculator-editor",
+	"style": "bkbg-sleep-calculator-style",
+	"viewScript": "bkbg-sleep-calculator-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Sleep Calculator"
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Wake up refreshed. Based on 90-minute sleep cycles."
+		},
+		"showTitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"showSubtitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"mode": {
+			"type": "string",
+			"default": "wake"
+		},
+		"onsetDelay": {
+			"type": "number",
+			"default": 14
+		},
+		"cyclesMin": {
+			"type": "number",
+			"default": 4
+		},
+		"cyclesMax": {
+			"type": "number",
+			"default": 6
+		},
+		"showTips": {
+			"type": "boolean",
+			"default": true
+		},
+		"useNow": {
+			"type": "boolean",
+			"default": true
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"cardBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"resultBg": {
+			"type": "string",
+			"default": "#f5f3ff"
+		},
+		"resultBorder": {
+			"type": "string",
+			"default": "#ede9fe"
+		},
+		"bestColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"goodColor": {
+			"type": "string",
+			"default": "#3b82f6"
+		},
+		"okColor": {
+			"type": "string",
+			"default": "#f59e0b"
+		},
+		"cycleTagBg": {
+			"type": "string",
+			"default": "#ede9fe"
+		},
+		"cycleTagColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"tipBg": {
+			"type": "string",
+			"default": "#fef9c3"
+		},
+		"tipColor": {
+			"type": "string",
+			"default": "#713f12"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#1e1b4b"
+		},
+		"subtitleColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"labelColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"sectionBg": {
+			"type": "string",
+			"default": ""
+		},
+		"titleSize": {
+			"type": "number",
+			"default": 28
+		},
+		"timeSize": {
+			"type": "number",
+			"default": 36
+		},
+		"cardRadius": {
+			"type": "number",
+			"default": 16
+		},
+		"inputRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"maxWidth": {
+			"type": "number",
+			"default": 580
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 60
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 60
+		},
+		"titleFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"titleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"subtitleTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

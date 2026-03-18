@@ -1,0 +1,196 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/review-showcase",
+    "title": "Review Showcase",
+    "category": "bkbg-marketing",
+    "icon": "star-filled",
+    "description": "Showcase aggregate ratings from review platforms (Google, G2, Trustpilot, etc.) with an optional featured testimonial.",
+    "keywords": [
+        "review",
+        "rating",
+        "stars",
+        "testimonial",
+        "trustpilot",
+        "g2",
+        "google",
+        "social proof",
+        "capterra"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-review-showcase-editor",
+    "editorStyle": "bkbg-review-showcase-style",
+    "style": "bkbg-review-showcase-style",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Loved by thousands of teams"
+        },
+        "showHeading": {
+            "type": "boolean",
+            "default": true
+        },
+        "overallRating": {
+            "type": "number",
+            "default": 4.9
+        },
+        "reviewCount": {
+            "type": "string",
+            "default": "2,400+"
+        },
+        "showOverall": {
+            "type": "boolean",
+            "default": true
+        },
+        "platforms": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "p1",
+                    "name": "Google",
+                    "logo": "google",
+                    "rating": 4.9,
+                    "count": "1.2k",
+                    "active": true
+                },
+                {
+                    "id": "p2",
+                    "name": "G2",
+                    "logo": "g2",
+                    "rating": 4.8,
+                    "count": "850",
+                    "active": true
+                },
+                {
+                    "id": "p3",
+                    "name": "Trustpilot",
+                    "logo": "trustpilot",
+                    "rating": 4.9,
+                    "count": "400",
+                    "active": true
+                },
+                {
+                    "id": "p4",
+                    "name": "Capterra",
+                    "logo": "capterra",
+                    "rating": 4.8,
+                    "count": "320",
+                    "active": false
+                }
+            ]
+        },
+        "showFeatured": {
+            "type": "boolean",
+            "default": true
+        },
+        "featuredQuote": {
+            "type": "string",
+            "default": "This product completely transformed how our team works. The setup was effortless and the results were immediate."
+        },
+        "featuredName": {
+            "type": "string",
+            "default": "Sarah M."
+        },
+        "featuredRole": {
+            "type": "string",
+            "default": "Product Manager at Acme Corp"
+        },
+        "featuredPlatform": {
+            "type": "string",
+            "default": "google"
+        },
+        "layout": {
+            "type": "string",
+            "default": "platforms-top"
+        },
+        "style": {
+            "type": "string",
+            "default": "clean"
+        },
+        "starSize": {
+            "type": "number",
+            "default": 20
+        },
+        "ratingSize": {
+            "type": "number",
+            "default": 48
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 28
+        },
+        "headingFontWeight": {
+            "type": "number",
+            "default": 800
+        },
+        "headingLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "quoteSize": {
+            "type": "number",
+            "default": 16
+        },
+        "quoteFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "quoteLineHeight": {
+            "type": "number",
+            "default": 1.6
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "starColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "ratingColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "quoteColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "quoteTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,179 @@
+/* ======================================================
+   Blockenberg — HowTo Schema block styles
+   ====================================================== */
+
+.bkbg-hs-wrap .bkbg-hs-title,
+.bkbg-hs-wrap h2.bkbg-hs-title {
+    font-family: var(--bkbg-hts-tt-font-family, inherit);
+    font-size: var(--bkbg-hts-tt-font-size-d, var(--bkbg-hts-tt-sz, 30px));
+    font-weight: var(--bkbg-hts-tt-font-weight, 700);
+    font-style: var(--bkbg-hts-tt-font-style, normal);
+    text-decoration: var(--bkbg-hts-tt-text-decoration, none);
+    text-transform: var(--bkbg-hts-tt-text-transform, none);
+    line-height: var(--bkbg-hts-tt-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-hts-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-hts-tt-word-spacing-d, normal);
+    margin: 0 0 12px;
+}
+
+.bkbg-hs-desc {
+    margin: 0 0 16px;
+    line-height: 1.7;
+}
+
+/* Meta bar */
+.bkbg-hs-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+/* Supplies / Tools pill strips */
+.bkbg-hs-supplies,
+.bkbg-hs-tools {
+    margin-bottom: 24px;
+}
+
+/* Steps list */
+.bkbg-hs-steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bkbg-hs-step {
+    display: flex;
+    gap: 20px;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    align-items: flex-start;
+    transition: box-shadow 0.2s;
+}
+
+.bkbg-hs-step:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* Step number circle */
+.bkbg-hs-step-num {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+/* Step content */
+.bkbg-hs-step-content {
+    flex: 1;
+}
+
+.bkbg-hs-step-content .bkbg-hs-step-name,
+.bkbg-hs-step-content h3.bkbg-hs-step-name {
+    font-family: var(--bkbg-hts-sn-font-family, inherit);
+    font-size: var(--bkbg-hts-sn-font-size-d, var(--bkbg-hts-sn-sz, 17px));
+    font-weight: var(--bkbg-hts-sn-font-weight, 700);
+    font-style: var(--bkbg-hts-sn-font-style, normal);
+    text-decoration: var(--bkbg-hts-sn-text-decoration, none);
+    text-transform: var(--bkbg-hts-sn-text-transform, none);
+    line-height: var(--bkbg-hts-sn-line-height-d, 1.3);
+    letter-spacing: var(--bkbg-hts-sn-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-hts-sn-word-spacing-d, normal);
+    margin: 0 0 6px;
+}
+
+.bkbg-hs-step-content .bkbg-hs-step-text {
+    font-family: var(--bkbg-hts-st-font-family, inherit);
+    font-size: var(--bkbg-hts-st-font-size-d, var(--bkbg-hts-st-sz, 14px));
+    font-weight: var(--bkbg-hts-st-font-weight, 400);
+    font-style: var(--bkbg-hts-st-font-style, normal);
+    text-decoration: var(--bkbg-hts-st-text-decoration, none);
+    text-transform: var(--bkbg-hts-st-text-transform, none);
+    line-height: var(--bkbg-hts-st-line-height-d, 1.7);
+    letter-spacing: var(--bkbg-hts-st-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-hts-st-word-spacing-d, normal);
+    margin: 0;
+}
+
+.bkbg-hs-step-content img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 8px;
+    margin-top: 12px;
+    display: block;
+}
+
+/* Responsive typography */
+@media (max-width:1024px) {
+    .bkbg-hs-wrap .bkbg-hs-title,
+    .bkbg-hs-wrap h2.bkbg-hs-title {
+        font-size: var(--bkbg-hts-tt-font-size-t, var(--bkbg-hts-tt-font-size-d, var(--bkbg-hts-tt-sz, 30px)));
+        line-height: var(--bkbg-hts-tt-line-height-t, var(--bkbg-hts-tt-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-hts-tt-letter-spacing-t, var(--bkbg-hts-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-hts-tt-word-spacing-t, var(--bkbg-hts-tt-word-spacing-d, normal));
+    }
+    .bkbg-hs-step-content .bkbg-hs-step-name,
+    .bkbg-hs-step-content h3.bkbg-hs-step-name {
+        font-size: var(--bkbg-hts-sn-font-size-t, var(--bkbg-hts-sn-font-size-d, var(--bkbg-hts-sn-sz, 17px)));
+        line-height: var(--bkbg-hts-sn-line-height-t, var(--bkbg-hts-sn-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-hts-sn-letter-spacing-t, var(--bkbg-hts-sn-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-hts-sn-word-spacing-t, var(--bkbg-hts-sn-word-spacing-d, normal));
+    }
+    .bkbg-hs-step-content .bkbg-hs-step-text {
+        font-size: var(--bkbg-hts-st-font-size-t, var(--bkbg-hts-st-font-size-d, var(--bkbg-hts-st-sz, 14px)));
+        line-height: var(--bkbg-hts-st-line-height-t, var(--bkbg-hts-st-line-height-d, 1.7));
+        letter-spacing: var(--bkbg-hts-st-letter-spacing-t, var(--bkbg-hts-st-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-hts-st-word-spacing-t, var(--bkbg-hts-st-word-spacing-d, normal));
+    }
+}
+@media (max-width:767px) {
+    .bkbg-hs-wrap .bkbg-hs-title,
+    .bkbg-hs-wrap h2.bkbg-hs-title {
+        font-size: var(--bkbg-hts-tt-font-size-m, var(--bkbg-hts-tt-font-size-t, var(--bkbg-hts-tt-font-size-d, var(--bkbg-hts-tt-sz, 30px))));
+        line-height: var(--bkbg-hts-tt-line-height-m, var(--bkbg-hts-tt-line-height-t, var(--bkbg-hts-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-hts-tt-letter-spacing-m, var(--bkbg-hts-tt-letter-spacing-t, var(--bkbg-hts-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-hts-tt-word-spacing-m, var(--bkbg-hts-tt-word-spacing-t, var(--bkbg-hts-tt-word-spacing-d, normal)));
+    }
+    .bkbg-hs-step-content .bkbg-hs-step-name,
+    .bkbg-hs-step-content h3.bkbg-hs-step-name {
+        font-size: var(--bkbg-hts-sn-font-size-m, var(--bkbg-hts-sn-font-size-t, var(--bkbg-hts-sn-font-size-d, var(--bkbg-hts-sn-sz, 17px))));
+        line-height: var(--bkbg-hts-sn-line-height-m, var(--bkbg-hts-sn-line-height-t, var(--bkbg-hts-sn-line-height-d, 1.3)));
+        letter-spacing: var(--bkbg-hts-sn-letter-spacing-m, var(--bkbg-hts-sn-letter-spacing-t, var(--bkbg-hts-sn-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-hts-sn-word-spacing-m, var(--bkbg-hts-sn-word-spacing-t, var(--bkbg-hts-sn-word-spacing-d, normal)));
+    }
+    .bkbg-hs-step-content .bkbg-hs-step-text {
+        font-size: var(--bkbg-hts-st-font-size-m, var(--bkbg-hts-st-font-size-t, var(--bkbg-hts-st-font-size-d, var(--bkbg-hts-st-sz, 14px))));
+        line-height: var(--bkbg-hts-st-line-height-m, var(--bkbg-hts-st-line-height-t, var(--bkbg-hts-st-line-height-d, 1.7)));
+        letter-spacing: var(--bkbg-hts-st-letter-spacing-m, var(--bkbg-hts-st-letter-spacing-t, var(--bkbg-hts-st-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-hts-st-word-spacing-m, var(--bkbg-hts-st-word-spacing-t, var(--bkbg-hts-st-word-spacing-d, normal)));
+    }
+}
+
+/* Entrance animation — handled by frontend.js observer */
+@media (prefers-reduced-motion: no-preference) {
+    .bkbg-hs-step[data-animate] {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.4s, transform 0.4s;
+    }
+
+    .bkbg-hs-step[data-animate="in"] {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .bkbg-hs-step {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

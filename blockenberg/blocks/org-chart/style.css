@@ -1,0 +1,204 @@
+.bkbg-oc-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: auto;
+}
+.bkbg-oc-wrapper h2.bkbg-oc-title,
+.bkbg-oc-wrapper .bkbg-oc-title {
+    font-family: var(--bkbg-oc-tt-font-family, inherit);
+    font-size: var(--bkbg-oc-tt-font-size-d, var(--bkbg-oc-title-sz, 28px));
+    font-weight: var(--bkbg-oc-tt-font-weight, 900);
+    font-style: var(--bkbg-oc-tt-font-style, normal);
+    text-decoration: var(--bkbg-oc-tt-text-decoration, none);
+    text-transform: var(--bkbg-oc-tt-text-transform, none);
+    line-height: var(--bkbg-oc-tt-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-oc-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-oc-tt-word-spacing-d, normal);
+    text-align: center;
+    color: var(--bkbg-oc-title-color, #111827);
+    margin: 0 0 32px;
+}
+.bkbg-oc-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: max-content;
+    margin: 0 auto;
+    padding-bottom: 16px;
+}
+.bkbg-oc-node-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.bkbg-oc-conn-v-up {
+    width: var(--bkbg-oc-conn-w, 2px);
+    min-height: 24px;
+    background: var(--bkbg-oc-connector, #d1d5db);
+    margin: 0 auto;
+}
+.bkbg-oc-conn-v-down {
+    width: var(--bkbg-oc-conn-w, 2px);
+    height: 24px;
+    background: var(--bkbg-oc-connector, #d1d5db);
+    margin: 0 auto;
+}
+.bkbg-oc-conn-h {
+    height: var(--bkbg-oc-conn-w, 2px);
+    background: var(--bkbg-oc-connector, #d1d5db);
+    margin: 0 auto;
+    width: calc(100% - 40px);
+}
+.bkbg-oc-children-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: flex-start;
+}
+.bkbg-oc-card {
+    background: var(--bkbg-oc-card-bg, #fff);
+    border: 1.5px solid var(--bkbg-oc-card-border, #e5e7eb);
+    border-radius: var(--bkbg-oc-node-r, 12px);
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 120px;
+    max-width: 160px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    transition: box-shadow 0.2s, transform 0.2s;
+    cursor: default;
+    text-align: center;
+}
+.bkbg-oc-card:hover {
+    box-shadow: 0 6px 20px rgba(108, 63, 181, 0.12);
+    transform: translateY(-2px);
+}
+.bkbg-oc-avatar {
+    width: var(--bkbg-oc-avatar-size, 56px);
+    height: var(--bkbg-oc-avatar-size, 56px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    font-weight: 800;
+    color: #fff;
+}
+.bkbg-oc-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.bkbg-oc-avatar-initial {
+    font-size: calc(var(--bkbg-oc-avatar-size, 56px) * 0.4);
+    font-weight: 800;
+    color: #fff;
+}
+.bkbg-oc-name {
+    margin: 0;
+    font-family: var(--bkbg-oc-nm-font-family, inherit);
+    font-size: var(--bkbg-oc-nm-font-size-d, var(--bkbg-oc-name-sz, 14px));
+    font-weight: var(--bkbg-oc-nm-font-weight, 700);
+    font-style: var(--bkbg-oc-nm-font-style, normal);
+    text-decoration: var(--bkbg-oc-nm-text-decoration, none);
+    text-transform: var(--bkbg-oc-nm-text-transform, none);
+    line-height: var(--bkbg-oc-nm-line-height-d, 1.3);
+    letter-spacing: var(--bkbg-oc-nm-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-oc-nm-word-spacing-d, normal);
+    color: var(--bkbg-oc-name-color, #111827);
+}
+.bkbg-oc-role {
+    margin: 0;
+    font-family: var(--bkbg-oc-rl-font-family, inherit);
+    font-size: var(--bkbg-oc-rl-font-size-d, var(--bkbg-oc-role-sz, 12px));
+    font-weight: var(--bkbg-oc-rl-font-weight, 400);
+    font-style: var(--bkbg-oc-rl-font-style, normal);
+    text-decoration: var(--bkbg-oc-rl-text-decoration, none);
+    text-transform: var(--bkbg-oc-rl-text-transform, none);
+    line-height: var(--bkbg-oc-rl-line-height-d, 1.3);
+    letter-spacing: var(--bkbg-oc-rl-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-oc-rl-word-spacing-d, normal);
+    color: var(--bkbg-oc-role-color, #6b7280);
+}
+.bkbg-oc-dept {
+    margin: 0;
+    font-family: var(--bkbg-oc-rl-font-family, inherit);
+    font-size: calc(var(--bkbg-oc-rl-font-size-d, var(--bkbg-oc-role-sz, 12px)) - 1px);
+    color: var(--bkbg-oc-dept-color, #9ca3af);
+    font-style: italic;
+}
+/* Collapse */
+.bkbg-oc-node-wrap.is-collapsed > .bkbg-oc-conn-v-down,
+.bkbg-oc-node-wrap.is-collapsed > .bkbg-oc-conn-h,
+.bkbg-oc-node-wrap.is-collapsed > .bkbg-oc-children-row {
+    display: none;
+}
+/* Responsive typography */
+@media (max-width: 1024px) {
+    .bkbg-oc-wrapper h2.bkbg-oc-title,
+    .bkbg-oc-wrapper .bkbg-oc-title {
+        font-size: var(--bkbg-oc-tt-font-size-t, var(--bkbg-oc-tt-font-size-d, 24px));
+        line-height: var(--bkbg-oc-tt-line-height-t, var(--bkbg-oc-tt-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-oc-tt-letter-spacing-t, var(--bkbg-oc-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-oc-tt-word-spacing-t, var(--bkbg-oc-tt-word-spacing-d, normal));
+    }
+    .bkbg-oc-name {
+        font-size: var(--bkbg-oc-nm-font-size-t, var(--bkbg-oc-nm-font-size-d, 14px));
+        line-height: var(--bkbg-oc-nm-line-height-t, var(--bkbg-oc-nm-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-oc-nm-letter-spacing-t, var(--bkbg-oc-nm-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-oc-nm-word-spacing-t, var(--bkbg-oc-nm-word-spacing-d, normal));
+    }
+    .bkbg-oc-role {
+        font-size: var(--bkbg-oc-rl-font-size-t, var(--bkbg-oc-rl-font-size-d, 12px));
+        line-height: var(--bkbg-oc-rl-line-height-t, var(--bkbg-oc-rl-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-oc-rl-letter-spacing-t, var(--bkbg-oc-rl-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-oc-rl-word-spacing-t, var(--bkbg-oc-rl-word-spacing-d, normal));
+    }
+    .bkbg-oc-dept {
+        font-size: calc(var(--bkbg-oc-rl-font-size-t, var(--bkbg-oc-rl-font-size-d, 12px)) - 1px);
+            line-height: var(--bkbg-oc-rl-line-height-t, var(--bkbg-oc-rl-line-height-d, 1.3));
+            letter-spacing: var(--bkbg-oc-rl-letter-spacing-t, var(--bkbg-oc-rl-letter-spacing-d, normal));
+            word-spacing: var(--bkbg-oc-rl-word-spacing-t, var(--bkbg-oc-rl-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-oc-wrapper h2.bkbg-oc-title,
+    .bkbg-oc-wrapper .bkbg-oc-title {
+        font-size: var(--bkbg-oc-tt-font-size-m, 20px);
+        line-height: var(--bkbg-oc-tt-line-height-m, var(--bkbg-oc-tt-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-oc-tt-letter-spacing-m, var(--bkbg-oc-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-oc-tt-word-spacing-m, var(--bkbg-oc-tt-word-spacing-d, normal));
+    }
+    .bkbg-oc-name {
+        font-size: var(--bkbg-oc-nm-font-size-m, 13px);
+        line-height: var(--bkbg-oc-nm-line-height-m, var(--bkbg-oc-nm-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-oc-nm-letter-spacing-m, var(--bkbg-oc-nm-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-oc-nm-word-spacing-m, var(--bkbg-oc-nm-word-spacing-d, normal));
+    }
+    .bkbg-oc-role {
+        font-size: var(--bkbg-oc-rl-font-size-m, 11px);
+        line-height: var(--bkbg-oc-rl-line-height-m, var(--bkbg-oc-rl-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-oc-rl-letter-spacing-m, var(--bkbg-oc-rl-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-oc-rl-word-spacing-m, var(--bkbg-oc-rl-word-spacing-d, normal));
+    }
+    .bkbg-oc-dept {
+        font-size: calc(var(--bkbg-oc-rl-font-size-m, 11px) - 1px);
+            line-height: var(--bkbg-oc-rl-line-height-m, var(--bkbg-oc-rl-line-height-t, var(--bkbg-oc-rl-line-height-d, 1.3)));
+            letter-spacing: var(--bkbg-oc-rl-letter-spacing-m, var(--bkbg-oc-rl-letter-spacing-t, var(--bkbg-oc-rl-letter-spacing-d, normal)));
+            word-spacing: var(--bkbg-oc-rl-word-spacing-m, var(--bkbg-oc-rl-word-spacing-t, var(--bkbg-oc-rl-word-spacing-d, normal)));
+    }
+}
+/* Fade-in animation */
+.bkbg-oc-card {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.2s;
+}
+.bkbg-oc-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

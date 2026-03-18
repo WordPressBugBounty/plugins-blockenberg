@@ -1,0 +1,125 @@
+/* =====================================================
+   Blockenberg — liquid-glass-cards  (bkbg-lgc-*)
+   ===================================================== */
+
+/* ── App wrapper ── */
+.bkbg-lgc-app {
+    padding: 40px 32px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* ── Cards grid ── */
+.bkbg-lgc-grid {
+    display: grid;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .bkbg-lgc-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .bkbg-lgc-grid[style*="repeat(4"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .bkbg-lgc-grid[style*="repeat(3"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* ── Individual glass card ── */
+.bkbg-lgc-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    backdrop-filter: blur(var(--bkbg-lgc-blur, 20px));
+    -webkit-backdrop-filter: blur(var(--bkbg-lgc-blur, 20px));
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform;
+}
+
+.bkbg-lgc-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ── Icon bubble ── */
+.bkbg-lgc-icon {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.bkbg-lgc-icon svg { width: 1em; height: 1em; fill: currentColor; }
+.bkbg-lgc-icon .dashicons { font-size: inherit; width: 1em; height: 1em; line-height: 1; }
+.bkbg-lgc-icon .bkbg-icon-img { width: 1em; height: 1em; object-fit: contain; }
+
+/* ── Title ── */
+.bkbg-lgc-title {
+    margin: 0 !important;
+    font-family: var(--bkbg-lgc-tt-font-family, inherit);
+    font-weight: var(--bkbg-lgc-tt-font-weight, 700);
+    font-style: var(--bkbg-lgc-tt-font-style, normal);
+    text-decoration: var(--bkbg-lgc-tt-text-decoration, none);
+    text-transform: var(--bkbg-lgc-tt-text-transform, none);
+    font-size: var(--bkbg-lgc-tt-font-size-d, 20px);
+    line-height: var(--bkbg-lgc-tt-line-height-d, var(--bkbg-lgc-tt-line-height, 1.3));
+    letter-spacing: var(--bkbg-lgc-tt-letter-spacing-d, var(--bkbg-lgc-tt-letter-spacing, 0px));
+    word-spacing: var(--bkbg-lgc-tt-word-spacing-d, var(--bkbg-lgc-tt-word-spacing, 0px));
+}
+
+.bkbg-lgc-app h3.bkbg-lgc-title {
+    font-family: var(--bkbg-lgc-tt-font-family, inherit);
+    font-weight: var(--bkbg-lgc-tt-font-weight, 700);
+    font-style: var(--bkbg-lgc-tt-font-style, normal);
+    text-decoration: var(--bkbg-lgc-tt-text-decoration, none);
+    text-transform: var(--bkbg-lgc-tt-text-transform, none);
+    font-size: var(--bkbg-lgc-tt-font-size-d, 20px);
+    line-height: var(--bkbg-lgc-tt-line-height-d, var(--bkbg-lgc-tt-line-height, 1.3));
+    letter-spacing: var(--bkbg-lgc-tt-letter-spacing-d, var(--bkbg-lgc-tt-letter-spacing, 0px));
+    word-spacing: var(--bkbg-lgc-tt-word-spacing-d, var(--bkbg-lgc-tt-word-spacing, 0px));
+}
+
+/* ── Description ── */
+.bkbg-lgc-desc {
+    margin: 0 !important;
+    font-family: var(--bkbg-lgc-d-font-family, inherit);
+    font-weight: var(--bkbg-lgc-d-font-weight, 400);
+    font-style: var(--bkbg-lgc-d-font-style, normal);
+    text-decoration: var(--bkbg-lgc-d-text-decoration, none);
+    text-transform: var(--bkbg-lgc-d-text-transform, none);
+    font-size: var(--bkbg-lgc-d-font-size-d, 15px);
+    line-height: var(--bkbg-lgc-d-line-height-d, var(--bkbg-lgc-d-line-height, 1.6));
+    letter-spacing: var(--bkbg-lgc-d-letter-spacing-d, var(--bkbg-lgc-d-letter-spacing, 0px));
+    word-spacing: var(--bkbg-lgc-d-word-spacing-d, var(--bkbg-lgc-d-word-spacing, 0px));
+    flex: 1;
+}
+
+/* ── Link ── */
+.bkbg-lgc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: auto;
+    transition: opacity 0.2s, gap 0.2s;
+}
+.bkbg-lgc-link:hover {
+    opacity: 0.75;
+    gap: 8px;
+}
+
+/* Typography – responsive */
+@media (max-width: 1024px) {
+    .bkbg-lgc-app h3.bkbg-lgc-title, .bkbg-lgc-app .bkbg-lgc-title { font-size: var(--bkbg-lgc-tt-font-size-t, var(--bkbg-lgc-tt-font-size-d, 20px)); line-height: var(--bkbg-lgc-tt-line-height-t, var(--bkbg-lgc-tt-line-height-d, 1.3));letter-spacing:var(--bkbg-lgc-tt-letter-spacing-t, var(--bkbg-lgc-tt-letter-spacing-d, var(--bkbg-lgc-tt-letter-spacing, 0px)));word-spacing:var(--bkbg-lgc-tt-word-spacing-t, var(--bkbg-lgc-tt-word-spacing-d, var(--bkbg-lgc-tt-word-spacing, 0px)))}
+    .bkbg-lgc-app .bkbg-lgc-desc { font-size: var(--bkbg-lgc-d-font-size-t, var(--bkbg-lgc-d-font-size-d, 15px)); line-height: var(--bkbg-lgc-d-line-height-t, var(--bkbg-lgc-d-line-height-d, 1.6));letter-spacing:var(--bkbg-lgc-d-letter-spacing-t, var(--bkbg-lgc-d-letter-spacing-d, var(--bkbg-lgc-d-letter-spacing, 0px)));word-spacing:var(--bkbg-lgc-d-word-spacing-t, var(--bkbg-lgc-d-word-spacing-d, var(--bkbg-lgc-d-word-spacing, 0px)))}
+}
+@media (max-width: 767px) {
+    .bkbg-lgc-app h3.bkbg-lgc-title, .bkbg-lgc-app .bkbg-lgc-title { font-size: var(--bkbg-lgc-tt-font-size-m, var(--bkbg-lgc-tt-font-size-t, var(--bkbg-lgc-tt-font-size-d, 20px))); line-height: var(--bkbg-lgc-tt-line-height-m, var(--bkbg-lgc-tt-line-height-t, var(--bkbg-lgc-tt-line-height-d, 1.3)));letter-spacing:var(--bkbg-lgc-tt-letter-spacing-m, var(--bkbg-lgc-tt-letter-spacing-t, var(--bkbg-lgc-tt-letter-spacing-d, var(--bkbg-lgc-tt-letter-spacing, 0px))));word-spacing:var(--bkbg-lgc-tt-word-spacing-m, var(--bkbg-lgc-tt-word-spacing-t, var(--bkbg-lgc-tt-word-spacing-d, var(--bkbg-lgc-tt-word-spacing, 0px))))}
+    .bkbg-lgc-app .bkbg-lgc-desc { font-size: var(--bkbg-lgc-d-font-size-m, var(--bkbg-lgc-d-font-size-t, var(--bkbg-lgc-d-font-size-d, 15px))); line-height: var(--bkbg-lgc-d-line-height-m, var(--bkbg-lgc-d-line-height-t, var(--bkbg-lgc-d-line-height-d, 1.6)));letter-spacing:var(--bkbg-lgc-d-letter-spacing-m, var(--bkbg-lgc-d-letter-spacing-t, var(--bkbg-lgc-d-letter-spacing-d, var(--bkbg-lgc-d-letter-spacing, 0px))));word-spacing:var(--bkbg-lgc-d-word-spacing-m, var(--bkbg-lgc-d-word-spacing-t, var(--bkbg-lgc-d-word-spacing-d, var(--bkbg-lgc-d-word-spacing, 0px))))}
+}

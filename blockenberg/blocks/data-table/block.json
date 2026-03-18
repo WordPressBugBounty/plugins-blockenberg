@@ -1,0 +1,221 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/data-table",
+    "title": "Data Table",
+    "category": "bkbg-charts",
+    "icon": "editor-table",
+    "description": "Interactive data table with sorting, search, pagination and export.",
+    "keywords": [
+        "table",
+        "data",
+        "grid",
+        "spreadsheet",
+        "csv",
+        "excel",
+        "sort",
+        "filter"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-data-table-editor",
+    "editorStyle": "bkbg-data-table-style",
+    "style": "bkbg-data-table-style",
+    "viewScript": "bkbg-data-table-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "columns": {
+            "type": "number",
+            "default": 4
+        },
+        "headers": {
+            "type": "array",
+            "default": [
+                "Name",
+                "Category",
+                "Price",
+                "Status"
+            ]
+        },
+        "rows": {
+            "type": "array",
+            "default": [
+                [
+                    "Product A",
+                    "Electronics",
+                    "$299",
+                    "In Stock"
+                ],
+                [
+                    "Product B",
+                    "Clothing",
+                    "$49",
+                    "Low Stock"
+                ],
+                [
+                    "Product C",
+                    "Home & Garden",
+                    "$149",
+                    "In Stock"
+                ],
+                [
+                    "Product D",
+                    "Electronics",
+                    "$599",
+                    "Out of Stock"
+                ]
+            ]
+        },
+        "caption": {
+            "type": "string",
+            "default": ""
+        },
+        "captionPosition": {
+            "type": "string",
+            "default": "bottom"
+        },
+        "searchEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "searchPlaceholder": {
+            "type": "string",
+            "default": "Search..."
+        },
+        "sortingEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "paginationEnabled": {
+            "type": "boolean",
+            "default": false
+        },
+        "itemsPerPage": {
+            "type": "number",
+            "default": 10
+        },
+        "stickyHeader": {
+            "type": "boolean",
+            "default": false
+        },
+        "stickyFirstColumn": {
+            "type": "boolean",
+            "default": false
+        },
+        "zebraStriping": {
+            "type": "boolean",
+            "default": true
+        },
+        "rowHoverHighlight": {
+            "type": "boolean",
+            "default": true
+        },
+        "responsiveMode": {
+            "type": "string",
+            "default": "scroll"
+        },
+        "exportEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "exportCsvText": {
+            "type": "string",
+            "default": "Export CSV"
+        },
+        "tableStyle": {
+            "type": "string",
+            "default": "default"
+        },
+        "tableAlign": {
+            "type": "string",
+            "default": "left"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "headerBorderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "cellBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cellBgAlt": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "cellColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "cellBorderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "hoverBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "headerFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "headerFontWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "cellFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "cellFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "typoHeader": {
+            "type": "object",
+            "default": {}
+        },
+        "typoCell": {
+            "type": "object",
+            "default": {}
+        },
+        "cellPadding": {
+            "type": "number",
+            "default": 12
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 1
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "columnWidths": {
+            "type": "array",
+            "default": []
+        },
+        "columnAligns": {
+            "type": "array",
+            "default": []
+        }
+    }
+}

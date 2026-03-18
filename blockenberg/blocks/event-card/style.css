@@ -1,0 +1,171 @@
+/* Event Card — bkec- */
+.bkec-wrap {
+  width: 100%;
+  box-sizing: border-box;
+}
+.bkec-card {
+  display: flex;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.bkec-date-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.bkec-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.bkec-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.15s;
+}
+.bkec-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+/* Typography — event name (h3, needs 0,2,0 specificity) */
+.bkec-wrap .bkec-event-name {
+  font-family: var(--bkec-nm-font-family, inherit);
+  font-size: var(--bkec-nm-font-size-d, 22px);
+  font-weight: var(--bkec-nm-font-weight, 800);
+  font-style: var(--bkec-nm-font-style, normal);
+  text-transform: var(--bkec-nm-text-transform, none);
+  text-decoration: var(--bkec-nm-text-decoration, none);
+  line-height: var(--bkec-nm-line-height-d, 1.2);
+  letter-spacing: var(--bkec-nm-letter-spacing-d, normal);
+  word-spacing: var(--bkec-nm-word-spacing-d, normal);
+}
+
+/* Typography — description */
+.bkec-desc {
+  font-family: var(--bkec-dc-font-family, inherit);
+  font-size: var(--bkec-dc-font-size-d, 14px);
+  font-weight: var(--bkec-dc-font-weight, 400);
+  font-style: var(--bkec-dc-font-style, normal);
+  text-transform: var(--bkec-dc-text-transform, none);
+  text-decoration: var(--bkec-dc-text-decoration, none);
+  line-height: var(--bkec-dc-line-height-d, 1.6);
+  letter-spacing: var(--bkec-dc-letter-spacing-d, normal);
+  word-spacing: var(--bkec-dc-word-spacing-d, normal);
+}
+
+/* Typography — badges (event type + custom) */
+.bkec-type-badge,
+.bkec-badge {
+  font-family: var(--bkec-ba-font-family, inherit);
+  font-size: var(--bkec-ba-font-size-d, 11px);
+  font-weight: var(--bkec-ba-font-weight, 700);
+  font-style: var(--bkec-ba-font-style, normal);
+  text-transform: var(--bkec-ba-text-transform, none);
+  text-decoration: var(--bkec-ba-text-decoration, none);
+  line-height: var(--bkec-ba-line-height-d, 1.4);
+  letter-spacing: var(--bkec-ba-letter-spacing-d, normal);
+  word-spacing: var(--bkec-ba-word-spacing-d, normal);
+}
+
+/* Typography — meta / info rows */
+.bkec-info-row {
+  font-family: var(--bkec-mt-font-family, inherit);
+  font-size: var(--bkec-mt-font-size-d, 14px);
+  font-weight: var(--bkec-mt-font-weight, 400);
+  font-style: var(--bkec-mt-font-style, normal);
+  text-transform: var(--bkec-mt-text-transform, none);
+  text-decoration: var(--bkec-mt-text-decoration, none);
+  line-height: var(--bkec-mt-line-height-d, 1.4);
+  letter-spacing: var(--bkec-mt-letter-spacing-d, normal);
+  word-spacing: var(--bkec-mt-word-spacing-d, normal);
+}
+
+/* Typography — button */
+.bkec-btn {
+  font-family: var(--bkec-bt-font-family, inherit);
+  font-size: var(--bkec-bt-font-size-d, 14px);
+  font-weight: var(--bkec-bt-font-weight, 700);
+  font-style: var(--bkec-bt-font-style, normal);
+  text-transform: var(--bkec-bt-text-transform, none);
+  text-decoration: none;
+  line-height: var(--bkec-bt-line-height-d, 1.4);
+  letter-spacing: var(--bkec-bt-letter-spacing-d, normal);
+  word-spacing: var(--bkec-bt-word-spacing-d, normal);
+}
+
+/* Responsive typography */
+@media (max-width: 1024px) {
+  .bkec-wrap .bkec-event-name {
+    font-size: var(--bkec-nm-font-size-t, var(--bkec-nm-font-size-d, 22px));
+    line-height: var(--bkec-nm-line-height-t, var(--bkec-nm-line-height-d, 1.2));
+    letter-spacing: var(--bkec-nm-letter-spacing-t, var(--bkec-nm-letter-spacing-d, normal));
+    word-spacing: var(--bkec-nm-word-spacing-t, var(--bkec-nm-word-spacing-d, normal));
+  }
+  .bkec-desc {
+    font-size: var(--bkec-dc-font-size-t, var(--bkec-dc-font-size-d, 14px));
+    line-height: var(--bkec-dc-line-height-t, var(--bkec-dc-line-height-d, 1.6));
+    letter-spacing: var(--bkec-dc-letter-spacing-t, var(--bkec-dc-letter-spacing-d, normal));
+    word-spacing: var(--bkec-dc-word-spacing-t, var(--bkec-dc-word-spacing-d, normal));
+  }
+  .bkec-type-badge, .bkec-badge {
+    font-size: var(--bkec-ba-font-size-t, var(--bkec-ba-font-size-d, 11px));
+    line-height: var(--bkec-ba-line-height-t, var(--bkec-ba-line-height-d, 1.4));
+    letter-spacing: var(--bkec-ba-letter-spacing-t, var(--bkec-ba-letter-spacing-d, normal));
+    word-spacing: var(--bkec-ba-word-spacing-t, var(--bkec-ba-word-spacing-d, normal));
+  }
+  .bkec-info-row {
+    font-size: var(--bkec-mt-font-size-t, var(--bkec-mt-font-size-d, 14px));
+    line-height: var(--bkec-mt-line-height-t, var(--bkec-mt-line-height-d, 1.4));
+    letter-spacing: var(--bkec-mt-letter-spacing-t, var(--bkec-mt-letter-spacing-d, normal));
+    word-spacing: var(--bkec-mt-word-spacing-t, var(--bkec-mt-word-spacing-d, normal));
+  }
+  .bkec-btn {
+    font-size: var(--bkec-bt-font-size-t, var(--bkec-bt-font-size-d, 14px));
+    line-height: var(--bkec-bt-line-height-t, var(--bkec-bt-line-height-d, 1.4));
+    letter-spacing: var(--bkec-bt-letter-spacing-t, var(--bkec-bt-letter-spacing-d, normal));
+    word-spacing: var(--bkec-bt-word-spacing-t, var(--bkec-bt-word-spacing-d, normal));
+  }
+}
+@media (max-width: 767px) {
+  .bkec-wrap .bkec-event-name {
+    font-size: var(--bkec-nm-font-size-m, var(--bkec-nm-font-size-t, var(--bkec-nm-font-size-d, 22px)));
+    line-height: var(--bkec-nm-line-height-m, var(--bkec-nm-line-height-t, var(--bkec-nm-line-height-d, 1.2)));
+    letter-spacing: var(--bkec-nm-letter-spacing-m, var(--bkec-nm-letter-spacing-t, var(--bkec-nm-letter-spacing-d, normal)));
+    word-spacing: var(--bkec-nm-word-spacing-m, var(--bkec-nm-word-spacing-t, var(--bkec-nm-word-spacing-d, normal)));
+  }
+  .bkec-desc {
+    font-size: var(--bkec-dc-font-size-m, var(--bkec-dc-font-size-t, var(--bkec-dc-font-size-d, 14px)));
+    line-height: var(--bkec-dc-line-height-m, var(--bkec-dc-line-height-t, var(--bkec-dc-line-height-d, 1.6)));
+    letter-spacing: var(--bkec-dc-letter-spacing-m, var(--bkec-dc-letter-spacing-t, var(--bkec-dc-letter-spacing-d, normal)));
+    word-spacing: var(--bkec-dc-word-spacing-m, var(--bkec-dc-word-spacing-t, var(--bkec-dc-word-spacing-d, normal)));
+  }
+  .bkec-type-badge, .bkec-badge {
+    font-size: var(--bkec-ba-font-size-m, var(--bkec-ba-font-size-t, var(--bkec-ba-font-size-d, 11px)));
+    line-height: var(--bkec-ba-line-height-m, var(--bkec-ba-line-height-t, var(--bkec-ba-line-height-d, 1.4)));
+    letter-spacing: var(--bkec-ba-letter-spacing-m, var(--bkec-ba-letter-spacing-t, var(--bkec-ba-letter-spacing-d, normal)));
+    word-spacing: var(--bkec-ba-word-spacing-m, var(--bkec-ba-word-spacing-t, var(--bkec-ba-word-spacing-d, normal)));
+  }
+  .bkec-info-row {
+    font-size: var(--bkec-mt-font-size-m, var(--bkec-mt-font-size-t, var(--bkec-mt-font-size-d, 14px)));
+    line-height: var(--bkec-mt-line-height-m, var(--bkec-mt-line-height-t, var(--bkec-mt-line-height-d, 1.4)));
+    letter-spacing: var(--bkec-mt-letter-spacing-m, var(--bkec-mt-letter-spacing-t, var(--bkec-mt-letter-spacing-d, normal)));
+    word-spacing: var(--bkec-mt-word-spacing-m, var(--bkec-mt-word-spacing-t, var(--bkec-mt-word-spacing-d, normal)));
+  }
+  .bkec-btn {
+    font-size: var(--bkec-bt-font-size-m, var(--bkec-bt-font-size-t, var(--bkec-bt-font-size-d, 14px)));
+    line-height: var(--bkec-bt-line-height-m, var(--bkec-bt-line-height-t, var(--bkec-bt-line-height-d, 1.4)));
+    letter-spacing: var(--bkec-bt-letter-spacing-m, var(--bkec-bt-letter-spacing-t, var(--bkec-bt-letter-spacing-d, normal)));
+    word-spacing: var(--bkec-bt-word-spacing-m, var(--bkec-bt-word-spacing-t, var(--bkec-bt-word-spacing-d, normal)));
+  }
+}
+
+@media (max-width: 640px) {
+  .bkec-card { flex-direction: column !important; }
+  .bkec-date-box { min-width: auto !important; padding: 16px !important; flex-direction: row; gap: 12px; }
+}

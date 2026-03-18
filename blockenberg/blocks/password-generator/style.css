@@ -1,0 +1,260 @@
+/* ======================================================
+   Blockenberg — Password Generator block styles
+   ====================================================== */
+
+.bkbg-pg-app {
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.bkbg-pg-loading {
+    text-align: center;
+    color: #9ca3af;
+    padding: 40px 0;
+}
+
+.bkbg-pg-card {
+    box-sizing: border-box;
+}
+
+.bkbg-pg-card h2.bkbg-pg-title,
+.bkbg-pg-card .bkbg-pg-title {
+    font-family: var(--bkbg-pg-tt-font-family, inherit);
+    font-size: var(--bkbg-pg-tt-font-size-d, 26px);
+    font-weight: var(--bkbg-pg-tt-font-weight, 700);
+    font-style: var(--bkbg-pg-tt-font-style, normal);
+    text-decoration: var(--bkbg-pg-tt-text-decoration, none);
+    text-transform: var(--bkbg-pg-tt-text-transform, none);
+    line-height: var(--bkbg-pg-tt-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-pg-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-pg-tt-word-spacing-d, normal);
+    margin: 0 0 8px;
+    text-align: center;
+}
+
+.bkbg-pg-subtitle {
+    margin: 0 0 28px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Password display box */
+.bkbg-pg-display {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1.5px solid transparent;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.bkbg-pg-password {
+    flex: 1;
+    font-family: var(--bkbg-pg-pw-font-family, 'Courier New', Courier, monospace);
+    font-size: var(--bkbg-pg-pw-font-size-d, 20px);
+    font-weight: var(--bkbg-pg-pw-font-weight, 400);
+    font-style: var(--bkbg-pg-pw-font-style, normal);
+    text-transform: var(--bkbg-pg-pw-text-transform, none);
+    line-height: var(--bkbg-pg-pw-line-height-d, 1.4);
+    overflow-x: auto;
+    letter-spacing: var(--bkbg-pg-pw-letter-spacing-d, 0.05em);
+    word-spacing: var(--bkbg-pg-pw-word-spacing-d, normal);
+    user-select: all;
+    transition: filter 0.2s;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+.bkbg-pg-password.blurred {
+    filter: blur(6px);
+    user-select: none;
+}
+
+.bkbg-pg-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px;
+    flex-shrink: 0;
+    transition: opacity 0.2s, transform 0.15s;
+    line-height: 1;
+}
+
+.bkbg-pg-icon-btn:hover {
+    opacity: 0.75;
+    transform: scale(1.1);
+}
+
+.bkbg-pg-icon-btn.refresh {
+    font-size: 20px;
+}
+
+/* Strength bar */
+.bkbg-pg-strength {
+    margin-bottom: 20px;
+}
+
+.bkbg-pg-strength-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.bkbg-pg-strength-track {
+    height: 6px;
+    border-radius: 99px;
+    background: #e5e7eb;
+    overflow: hidden;
+}
+
+.bkbg-pg-strength-fill {
+    height: 100%;
+    border-radius: 99px;
+    transition: width 0.4s ease, background 0.3s;
+}
+
+/* Length slider */
+.bkbg-pg-length {
+    margin-bottom: 20px;
+}
+
+.bkbg-pg-length-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.bkbg-pg-length-num {
+    font-weight: 700;
+}
+
+.bkbg-pg-range {
+    width: 100%;
+    cursor: pointer;
+    height: 6px;
+    border-radius: 3px;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #e5e7eb;
+}
+
+.bkbg-pg-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: currentColor;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    transition: transform 0.1s;
+}
+
+.bkbg-pg-range::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+.bkbg-pg-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: currentColor;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+/* Checkboxes */
+.bkbg-pg-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 400px) {
+    .bkbg-pg-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+.bkbg-pg-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+    color: inherit;
+}
+
+.bkbg-pg-option.full-width {
+    grid-column: 1 / -1;
+}
+
+.bkbg-pg-option input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Action buttons */
+.bkbg-pg-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.bkbg-pg-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    transition: filter 0.15s, background 0.2s;
+}
+
+.bkbg-pg-btn:hover {
+    filter: brightness(0.92);
+}
+
+.bkbg-pg-btn.copy.success {
+    filter: none;
+}
+
+@media (max-width: 1024px) {
+    .bkbg-pg-card h2.bkbg-pg-title, .bkbg-pg-card .bkbg-pg-title {
+        font-size: var(--bkbg-pg-tt-font-size-t, var(--bkbg-pg-tt-font-size-d, 24px));
+        line-height: var(--bkbg-pg-tt-line-height-t, var(--bkbg-pg-tt-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-pg-tt-letter-spacing-t, var(--bkbg-pg-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-pg-tt-word-spacing-t, var(--bkbg-pg-tt-word-spacing-d, normal));
+    }
+    .bkbg-pg-password {
+        font-size: var(--bkbg-pg-pw-font-size-t, var(--bkbg-pg-pw-font-size-d, 18px));
+        line-height: var(--bkbg-pg-pw-line-height-t, var(--bkbg-pg-pw-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-pg-pw-letter-spacing-t, var(--bkbg-pg-pw-letter-spacing-d, 0.05em));
+        word-spacing: var(--bkbg-pg-pw-word-spacing-t, var(--bkbg-pg-pw-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-pg-card h2.bkbg-pg-title, .bkbg-pg-card .bkbg-pg-title {
+        font-size: var(--bkbg-pg-tt-font-size-m, var(--bkbg-pg-tt-font-size-t, var(--bkbg-pg-tt-font-size-d, 22px)));
+        line-height: var(--bkbg-pg-tt-line-height-m, var(--bkbg-pg-tt-line-height-t, var(--bkbg-pg-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-pg-tt-letter-spacing-m, var(--bkbg-pg-tt-letter-spacing-t, var(--bkbg-pg-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-pg-tt-word-spacing-m, var(--bkbg-pg-tt-word-spacing-t, var(--bkbg-pg-tt-word-spacing-d, normal)));
+    }
+    .bkbg-pg-password {
+        font-size: var(--bkbg-pg-pw-font-size-m, var(--bkbg-pg-pw-font-size-t, var(--bkbg-pg-pw-font-size-d, 16px)));
+        line-height: var(--bkbg-pg-pw-line-height-m, var(--bkbg-pg-pw-line-height-t, var(--bkbg-pg-pw-line-height-d, 1.4)));
+        letter-spacing: var(--bkbg-pg-pw-letter-spacing-m, var(--bkbg-pg-pw-letter-spacing-t, var(--bkbg-pg-pw-letter-spacing-d, 0.05em)));
+        word-spacing: var(--bkbg-pg-pw-word-spacing-m, var(--bkbg-pg-pw-word-spacing-t, var(--bkbg-pg-pw-word-spacing-d, normal)));
+    }
+}

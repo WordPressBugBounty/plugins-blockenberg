@@ -1,0 +1,85 @@
+/* ===================================================
+   Kinetic Text — bkbg-kt-*  (style.css)
+   =================================================== */
+
+.bkbg-kt-wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ── Text container ────────────────────────────────────────────────── */
+.bkbg-kt-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: inherit;
+    align-items: baseline;
+    cursor: default;
+    user-select: none;
+    font-family:      var(--bkbg-kt-tx-font-family, inherit);
+    font-size:        var(--bkbg-kt-tx-font-size-d, 56px);
+    font-weight:      var(--bkbg-kt-tx-font-weight, 700);
+    font-style:       var(--bkbg-kt-tx-font-style, normal);
+    text-decoration:  var(--bkbg-kt-tx-text-decoration, none);
+    text-transform:   var(--bkbg-kt-tx-text-transform, none);
+    line-height:      var(--bkbg-kt-tx-line-height-d, 1.15);
+    letter-spacing:   var(--bkbg-kt-tx-letter-spacing-d, 0px);
+    word-spacing:     var(--bkbg-kt-tx-word-spacing-d, normal);
+    margin: 0;
+}
+
+/* Heading specificity override for h1-h6 tags */
+.bkbg-kt-wrap h1.bkbg-kt-text,
+.bkbg-kt-wrap h2.bkbg-kt-text,
+.bkbg-kt-wrap h3.bkbg-kt-text,
+.bkbg-kt-wrap h4.bkbg-kt-text,
+.bkbg-kt-wrap h5.bkbg-kt-text,
+.bkbg-kt-wrap h6.bkbg-kt-text {
+    font-family:      var(--bkbg-kt-tx-font-family, inherit);
+    font-size:        var(--bkbg-kt-tx-font-size-d, 56px);
+    font-weight:      var(--bkbg-kt-tx-font-weight, 700);
+    font-style:       var(--bkbg-kt-tx-font-style, normal);
+    text-decoration:  var(--bkbg-kt-tx-text-decoration, none);
+    text-transform:   var(--bkbg-kt-tx-text-transform, none);
+    line-height:      var(--bkbg-kt-tx-line-height-d, 1.15);
+    letter-spacing:   var(--bkbg-kt-tx-letter-spacing-d, 0px);
+    word-spacing:     var(--bkbg-kt-tx-word-spacing-d, normal);
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .bkbg-kt-wrap .bkbg-kt-text {
+        font-size:        var(--bkbg-kt-tx-font-size-t, var(--bkbg-kt-tx-font-size-d, 56px));
+        line-height:      var(--bkbg-kt-tx-line-height-t, var(--bkbg-kt-tx-line-height-d, 1.15));
+        letter-spacing:   var(--bkbg-kt-tx-letter-spacing-t, var(--bkbg-kt-tx-letter-spacing-d, 0px));
+        word-spacing:     var(--bkbg-kt-tx-word-spacing-t, var(--bkbg-kt-tx-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-kt-wrap .bkbg-kt-text {
+        font-size:        var(--bkbg-kt-tx-font-size-m, var(--bkbg-kt-tx-font-size-t, var(--bkbg-kt-tx-font-size-d, 56px)));
+        line-height:      var(--bkbg-kt-tx-line-height-m, var(--bkbg-kt-tx-line-height-t, var(--bkbg-kt-tx-line-height-d, 1.15)));
+        letter-spacing:   var(--bkbg-kt-tx-letter-spacing-m, var(--bkbg-kt-tx-letter-spacing-t, var(--bkbg-kt-tx-letter-spacing-d, 0px)));
+        word-spacing:     var(--bkbg-kt-tx-word-spacing-m, var(--bkbg-kt-tx-word-spacing-t, var(--bkbg-kt-tx-word-spacing-d, normal)));
+    }
+}
+
+/* ── Each character span ───────────────────────────────────────────── */
+.bkbg-kt-char {
+    display: inline-block;
+    position: relative;
+    will-change: transform, opacity, color;
+    transition-property: transform, opacity, color;
+    transition-timing-function: cubic-bezier(.34, 1.56, .64, 1);
+}
+
+.bkbg-kt-char.bkbg-kt-scattered {
+    transition-timing-function: cubic-bezier(.55, 0, 1, .45);
+}
+
+/* ── Reduced motion ────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .bkbg-kt-char {
+        transition: none !important;
+        animation: none !important;
+    }
+}

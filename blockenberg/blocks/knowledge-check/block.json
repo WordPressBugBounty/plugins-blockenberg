@@ -1,0 +1,228 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/knowledge-check",
+    "title": "Knowledge Check",
+    "description": "Quick quiz question with instant reveal — great for educational content, articles, and explainers.",
+    "category": "bkbg-interactive",
+    "icon": "editor-help",
+    "keywords": [
+        "quiz",
+        "question",
+        "knowledge",
+        "check",
+        "answer",
+        "learn",
+        "test",
+        "multiple choice"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-knowledge-check-editor",
+    "editorStyle": "bkbg-knowledge-check-style",
+    "style": "bkbg-knowledge-check-style",
+    "viewScript": "bkbg-knowledge-check-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "questionType": {
+            "type": "string",
+            "default": "multiple"
+        },
+        "question": {
+            "type": "string",
+            "default": "Which HTTP status code means \"Not Found\"?"
+        },
+        "options": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "200 OK",
+                    "correct": false
+                },
+                {
+                    "text": "301 Moved Permanently",
+                    "correct": false
+                },
+                {
+                    "text": "404 Not Found",
+                    "correct": true
+                },
+                {
+                    "text": "500 Internal Server Error",
+                    "correct": false
+                }
+            ]
+        },
+        "explanation": {
+            "type": "string",
+            "default": "The 404 status code is returned by the server when the requested resource cannot be found. It's one of the most recognizable HTTP error codes."
+        },
+        "showExplanation": {
+            "type": "boolean",
+            "default": true
+        },
+        "revealLabel": {
+            "type": "string",
+            "default": "Reveal Answer"
+        },
+        "correctLabel": {
+            "type": "string",
+            "default": "✓ Correct!"
+        },
+        "incorrectLabel": {
+            "type": "string",
+            "default": "✗ Incorrect"
+        },
+        "allowRetry": {
+            "type": "boolean",
+            "default": true
+        },
+        "retryLabel": {
+            "type": "string",
+            "default": "Try Again"
+        },
+        "shuffleOptions": {
+            "type": "boolean",
+            "default": false
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "icon": {
+            "type": "string",
+            "default": "💡"
+        },
+        "difficulty": {
+            "type": "string",
+            "default": ""
+        },
+        "topic": {
+            "type": "string",
+            "default": ""
+        },
+        "style": {
+            "type": "string",
+            "default": "card"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "questionColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "optionBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "optionColor": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "optionBorderColor": {
+            "type": "string",
+            "default": "#cbd5e1"
+        },
+        "correctBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "correctColor": {
+            "type": "string",
+            "default": "#15803d"
+        },
+        "incorrectBg": {
+            "type": "string",
+            "default": "#fee2e2"
+        },
+        "incorrectColor": {
+            "type": "string",
+            "default": "#b91c1c"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "explanationBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "explanationColor": {
+            "type": "string",
+            "default": "#1e40af"
+        },
+        "revealBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "revealColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "questionFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "questionFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "questionLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "optionFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "optionFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "optionLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "resultFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "resultFontWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "resultLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "questionTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "optionTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "resultTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

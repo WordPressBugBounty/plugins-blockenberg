@@ -1,0 +1,181 @@
+/* ================================================================
+   Footnotes — bkbg-fn-*
+   ================================================================ */
+
+.bkbg-fn-block {
+    padding: 20px 24px;
+    box-sizing: border-box;
+    font-family: var(--bkbg-fn-nt-font-family, inherit);
+    font-size: var(--bkbg-fn-nt-font-size-d, 14px);
+    font-weight: var(--bkbg-fn-nt-font-weight, 400);
+    font-style: var(--bkbg-fn-nt-font-style, normal);
+    text-decoration: var(--bkbg-fn-nt-text-decoration, none);
+    text-transform: var(--bkbg-fn-nt-text-transform, none);
+    line-height: var(--bkbg-fn-nt-line-height-d, 1.6);
+    letter-spacing: var(--bkbg-fn-nt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fn-nt-word-spacing-d, normal);
+}
+
+/* ── Divider ─────────────────────────────────────────────────── */
+.bkbg-fn-divider {
+    border: none;
+    border-top: 1px solid;
+    margin: 0 0 16px;
+    width: 60px;
+}
+
+/* ── Title ───────────────────────────────────────────────────── */
+.bkbg-fn-block .bkbg-fn-title {
+    margin-bottom: 12px;
+    font-family: var(--bkbg-fn-tt-font-family, inherit);
+    font-size: var(--bkbg-fn-tt-font-size-d, 16px);
+    font-weight: var(--bkbg-fn-tt-font-weight, 600);
+    font-style: var(--bkbg-fn-tt-font-style, normal);
+    text-decoration: var(--bkbg-fn-tt-text-decoration, none);
+    text-transform: var(--bkbg-fn-tt-text-transform, uppercase);
+    line-height: var(--bkbg-fn-tt-line-height-d, 1.4);
+    letter-spacing: var(--bkbg-fn-tt-letter-spacing-d, 0.03em);
+    word-spacing: var(--bkbg-fn-tt-word-spacing-d, normal);
+}
+
+/* ── List ────────────────────────────────────────────────────── */
+.bkbg-fn-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bkbg-fn-item {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+/* Card style */
+.bkbg-fn-list-card .bkbg-fn-item {
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+/* Compact style */
+.bkbg-fn-list-compact .bkbg-fn-item {
+    gap: 6px;
+    font-size: 0.9em;
+}
+
+/* ── Marker ──────────────────────────────────────────────────── */
+.bkbg-fn-marker {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 20px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    padding: 0 4px;
+}
+
+/* ── Inline marker (used via JS injection into text) ──────────── */
+.bkbg-fn-ref {
+    cursor: pointer;
+    position: relative;
+    font-size: 0.75em;
+    vertical-align: super;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 1;
+    padding: 1px 3px;
+    border-radius: 3px;
+    transition: opacity .15s;
+}
+
+.bkbg-fn-ref:hover {
+    opacity: .75;
+}
+
+/* ── Tooltip ──────────────────────────────────────────────────── */
+.bkbg-fn-tooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 220px;
+    max-width: 320px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.55;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .18s;
+    z-index: 999;
+    white-space: normal;
+    text-align: left;
+    box-shadow: 0 4px 16px rgba(0,0,0,.18);
+}
+
+.bkbg-fn-ref:hover .bkbg-fn-tooltip,
+.bkbg-fn-ref:focus .bkbg-fn-tooltip {
+    opacity: 1;
+}
+
+/* Tooltip tail */
+.bkbg-fn-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: inherit;
+}
+
+/* Typography responsive */
+@media (max-width: 1024px) {
+    .bkbg-fn-block { font-size: var(--bkbg-fn-nt-font-size-t, var(--bkbg-fn-nt-font-size-d, 14px)); line-height: var(--bkbg-fn-nt-line-height-t, var(--bkbg-fn-nt-line-height-d, 1.6)); letter-spacing: var(--bkbg-fn-nt-letter-spacing-t, var(--bkbg-fn-nt-letter-spacing-d, normal)); word-spacing: var(--bkbg-fn-nt-word-spacing-t, var(--bkbg-fn-nt-word-spacing-d, normal)); }
+    .bkbg-fn-block .bkbg-fn-title { font-size: var(--bkbg-fn-tt-font-size-t, var(--bkbg-fn-tt-font-size-d, 16px)); line-height: var(--bkbg-fn-tt-line-height-t, var(--bkbg-fn-tt-line-height-d, 1.4)); letter-spacing: var(--bkbg-fn-tt-letter-spacing-t, var(--bkbg-fn-tt-letter-spacing-d, 0.03em)); word-spacing: var(--bkbg-fn-tt-word-spacing-t, var(--bkbg-fn-tt-word-spacing-d, normal)); }
+}
+@media (max-width: 767px) {
+    .bkbg-fn-block { font-size: var(--bkbg-fn-nt-font-size-m, var(--bkbg-fn-nt-font-size-t, var(--bkbg-fn-nt-font-size-d, 14px))); line-height: var(--bkbg-fn-nt-line-height-m, var(--bkbg-fn-nt-line-height-t, var(--bkbg-fn-nt-line-height-d, 1.6))); letter-spacing: var(--bkbg-fn-nt-letter-spacing-m, var(--bkbg-fn-nt-letter-spacing-t, var(--bkbg-fn-nt-letter-spacing-d, normal))); word-spacing: var(--bkbg-fn-nt-word-spacing-m, var(--bkbg-fn-nt-word-spacing-t, var(--bkbg-fn-nt-word-spacing-d, normal))); }
+    .bkbg-fn-block .bkbg-fn-title { font-size: var(--bkbg-fn-tt-font-size-m, var(--bkbg-fn-tt-font-size-t, var(--bkbg-fn-tt-font-size-d, 16px))); line-height: var(--bkbg-fn-tt-line-height-m, var(--bkbg-fn-tt-line-height-t, var(--bkbg-fn-tt-line-height-d, 1.4))); letter-spacing: var(--bkbg-fn-tt-letter-spacing-m, var(--bkbg-fn-tt-letter-spacing-t, var(--bkbg-fn-tt-letter-spacing-d, 0.03em))); word-spacing: var(--bkbg-fn-tt-word-spacing-m, var(--bkbg-fn-tt-word-spacing-t, var(--bkbg-fn-tt-word-spacing-d, normal))); }
+}
+
+/* Editor accordion */
+.bkbg-fn-nota-editor {
+    margin-bottom: 6px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.bkbg-fn-nota-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    cursor: pointer;
+    background: #f8fafc;
+    border-left: 3px solid;
+    font-size: 12px;
+    gap: 8px;
+    user-select: none;
+}
+
+.bkbg-fn-nota-header:hover { background: #f1f5f9; }
+
+.bkbg-fn-nota-fields {
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #fff;
+}

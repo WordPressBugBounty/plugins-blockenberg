@@ -1,0 +1,186 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/api-reference",
+    "title": "API Reference",
+    "category": "bkbg-dev",
+    "icon": "rest-api",
+    "description": "Display API endpoint documentation with method badge, parameters table, and request/response code examples.",
+    "keywords": [
+        "api",
+        "rest",
+        "endpoint",
+        "documentation",
+        "developer",
+        "code",
+        "http",
+        "request",
+        "response",
+        "curl"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-api-reference-editor",
+    "editorStyle": "bkbg-api-reference-style",
+    "style": "bkbg-api-reference-style",
+    "viewScript": "bkbg-api-reference-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "method": {
+            "type": "string",
+            "default": "GET"
+        },
+        "endpoint": {
+            "type": "string",
+            "default": "/api/v1/users/{id}"
+        },
+        "baseUrl": {
+            "type": "string",
+            "default": "https://api.example.com"
+        },
+        "title": {
+            "type": "string",
+            "default": "Get User"
+        },
+        "description": {
+            "type": "string",
+            "default": "Retrieve a single user by their unique ID."
+        },
+        "authType": {
+            "type": "string",
+            "default": "bearer"
+        },
+        "params": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "id",
+                    "type": "integer",
+                    "required": true,
+                    "location": "path",
+                    "description": "The unique user ID",
+                    "example": "42"
+                },
+                {
+                    "name": "include",
+                    "type": "string",
+                    "required": false,
+                    "location": "query",
+                    "description": "Comma-separated fields to include",
+                    "example": "name,email,avatar"
+                },
+                {
+                    "name": "Authorization",
+                    "type": "string",
+                    "required": true,
+                    "location": "header",
+                    "description": "Bearer token for authentication",
+                    "example": "Bearer eyJhbGci..."
+                }
+            ]
+        },
+        "requestExample": {
+            "type": "string",
+            "default": "curl -X GET \"https://api.example.com/api/v1/users/42\" \\\n  -H \"Authorization: Bearer YOUR_TOKEN\" \\\n  -H \"Content-Type: application/json\""
+        },
+        "responseExample": {
+            "type": "string",
+            "default": "{\n  \"id\": 42,\n  \"name\": \"Jane Doe\",\n  \"email\": \"jane@example.com\",\n  \"avatar\": \"https://cdn.example.com/avatars/42.jpg\",\n  \"created_at\": \"2025-01-15T10:30:00Z\",\n  \"status\": \"active\"\n}"
+        },
+        "requestLang": {
+            "type": "string",
+            "default": "curl"
+        },
+        "responseLang": {
+            "type": "string",
+            "default": "json"
+        },
+        "showCopyButton": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBaseUrl": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAuth": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultTab": {
+            "type": "string",
+            "default": "params"
+        },
+        "codeTheme": {
+            "type": "string",
+            "default": "dark"
+        },
+        "getBg": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "postBg": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "putBg": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "patchBg": {
+            "type": "string",
+            "default": "#8b5cf6"
+        },
+        "deleteBg": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#1e1e2e"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "tableBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "tableAltBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "endpointBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "endpointColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

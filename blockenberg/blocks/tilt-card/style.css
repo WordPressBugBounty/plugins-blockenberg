@@ -1,0 +1,108 @@
+/* Tilt Card — bktc2- */
+.bktc2-outer {
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px;
+}
+.bktc2-card {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
+  cursor: default;
+  box-sizing: border-box;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.bktc2-img {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.bktc2-body {
+  box-sizing: border-box;
+}
+.bktc2-heading {
+  font-family:      var(--bktc2-ht-font-family, inherit);
+  font-size:        var(--bktc2-ht-font-size-d, 20px);
+  line-height:      var(--bktc2-ht-line-height-d, 1.2);
+  font-weight:      var(--bktc2-ht-font-weight, 800);
+  font-style:       var(--bktc2-ht-font-style, normal);
+  text-decoration:  var(--bktc2-ht-text-decoration, none);
+  text-transform:   var(--bktc2-ht-text-transform, none);
+  letter-spacing:   var(--bktc2-ht-letter-spacing-d, normal);
+  word-spacing:     var(--bktc2-ht-word-spacing-d, normal);
+  margin: 0 0 10px;
+}
+.bktc2-card h3.bktc2-heading {
+  font-family:      var(--bktc2-ht-font-family, inherit);
+  font-size:        var(--bktc2-ht-font-size-d, 20px);
+  line-height:      var(--bktc2-ht-line-height-d, 1.2);
+  font-weight:      var(--bktc2-ht-font-weight, 800);
+  font-style:       var(--bktc2-ht-font-style, normal);
+  text-decoration:  var(--bktc2-ht-text-decoration, none);
+  text-transform:   var(--bktc2-ht-text-transform, none);
+  letter-spacing:   var(--bktc2-ht-letter-spacing-d, normal);
+  word-spacing:     var(--bktc2-ht-word-spacing-d, normal);
+  margin: 0 0 10px;
+}
+.bktc2-text {
+  font-family:      var(--bktc2-bt-font-family, inherit);
+  font-size:        var(--bktc2-bt-font-size-d, 14px);
+  line-height:      var(--bktc2-bt-line-height-d, 1.6);
+  font-weight:      var(--bktc2-bt-font-weight, normal);
+  font-style:       var(--bktc2-bt-font-style, normal);
+  text-decoration:  var(--bktc2-bt-text-decoration, none);
+  text-transform:   var(--bktc2-bt-text-transform, none);
+  letter-spacing:   var(--bktc2-bt-letter-spacing-d, normal);
+  word-spacing:     var(--bktc2-bt-word-spacing-d, normal);
+  margin: 0 0 16px;
+}
+.bktc2-link {
+  display: inline-block;
+  font-family:      var(--bktc2-bt-font-family, inherit);
+  font-size:        var(--bktc2-bt-font-size-d, 14px);
+  font-weight:      var(--bktc2-bt-font-weight, 700);
+  text-decoration:  var(--bktc2-bt-text-decoration, none);
+  transition: opacity 0.2s;
+}
+.bktc2-link:hover { opacity: 0.75; }
+
+@media (max-width: 1024px) {
+  .bktc2-card .bktc2-heading {
+    font-size:        var(--bktc2-ht-font-size-t, var(--bktc2-ht-font-size-d, 20px));
+    line-height:      var(--bktc2-ht-line-height-t, var(--bktc2-ht-line-height-d, 1.2));
+    letter-spacing:   var(--bktc2-ht-letter-spacing-t, var(--bktc2-ht-letter-spacing-d, normal));
+    word-spacing:     var(--bktc2-ht-word-spacing-t, var(--bktc2-ht-word-spacing-d, normal));
+  }
+  .bktc2-card .bktc2-text,
+  .bktc2-card .bktc2-link {
+    font-size:        var(--bktc2-bt-font-size-t, var(--bktc2-bt-font-size-d, 14px));
+    line-height:      var(--bktc2-bt-line-height-t, var(--bktc2-bt-line-height-d, 1.6));
+    letter-spacing:   var(--bktc2-bt-letter-spacing-t, var(--bktc2-bt-letter-spacing-d, normal));
+    word-spacing:     var(--bktc2-bt-word-spacing-t, var(--bktc2-bt-word-spacing-d, normal));
+  }
+}
+
+@media (max-width: 767px) {
+  .bktc2-card .bktc2-heading {
+    font-size:        var(--bktc2-ht-font-size-m, var(--bktc2-ht-font-size-t, var(--bktc2-ht-font-size-d, 20px)));
+    line-height:      var(--bktc2-ht-line-height-m, var(--bktc2-ht-line-height-t, var(--bktc2-ht-line-height-d, 1.2)));
+    letter-spacing:   var(--bktc2-ht-letter-spacing-m, var(--bktc2-ht-letter-spacing-t, var(--bktc2-ht-letter-spacing-d, normal)));
+    word-spacing:     var(--bktc2-ht-word-spacing-m, var(--bktc2-ht-word-spacing-t, var(--bktc2-ht-word-spacing-d, normal)));
+  }
+  .bktc2-card .bktc2-text,
+  .bktc2-card .bktc2-link {
+    font-size:        var(--bktc2-bt-font-size-m, var(--bktc2-bt-font-size-t, var(--bktc2-bt-font-size-d, 14px)));
+    line-height:      var(--bktc2-bt-line-height-m, var(--bktc2-bt-line-height-t, var(--bktc2-bt-line-height-d, 1.6)));
+    letter-spacing:   var(--bktc2-bt-letter-spacing-m, var(--bktc2-bt-letter-spacing-t, var(--bktc2-bt-letter-spacing-d, normal)));
+    word-spacing:     var(--bktc2-bt-word-spacing-m, var(--bktc2-bt-word-spacing-t, var(--bktc2-bt-word-spacing-d, normal)));
+  }
+}
+.bktc2-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, transparent 60%);
+  transition: opacity 0.15s;
+  border-radius: inherit;
+}

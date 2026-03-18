@@ -1,0 +1,228 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/resource-hub",
+    "version": "1.0.0",
+    "title": "Resource Hub",
+    "category": "bkbg-business",
+    "icon": "book-alt",
+    "description": "Organized resource library with category filter pills, resource cards (guide, video, template, tool), and optional featured resource. For content marketing and lead gen pages.",
+    "keywords": [
+        "resource",
+        "library",
+        "hub",
+        "guide",
+        "template",
+        "download",
+        "content",
+        "filter"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-resource-hub-editor",
+    "style": "bkbg-resource-hub-style",
+    "viewScript": "bkbg-resource-hub-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "Free Resources"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Level Up Your Skills"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Guides, templates, and tools to help you grow faster — all completely free."
+        },
+        "resources": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "The Ultimate SEO Checklist",
+                    "description": "A comprehensive 50-point SEO audit checklist for 2024.",
+                    "category": "Guides",
+                    "type": "guide",
+                    "imageUrl": "",
+                    "url": "#",
+                    "featured": true
+                },
+                {
+                    "title": "Email Marketing Templates",
+                    "description": "10 proven email sequences for onboarding, sales, and retention.",
+                    "category": "Templates",
+                    "type": "template",
+                    "imageUrl": "",
+                    "url": "#",
+                    "featured": false
+                },
+                {
+                    "title": "Content Calendar Generator",
+                    "description": "Free tool to plan 3 months of content in under 10 minutes.",
+                    "category": "Tools",
+                    "type": "tool",
+                    "imageUrl": "",
+                    "url": "#",
+                    "featured": false
+                },
+                {
+                    "title": "Pricing Strategy Masterclass",
+                    "description": "60-minute video breaking down SaaS pricing psychology.",
+                    "category": "Videos",
+                    "type": "video",
+                    "imageUrl": "",
+                    "url": "#",
+                    "featured": false
+                },
+                {
+                    "title": "Brand Voice Workbook",
+                    "description": "Define your brand personality with this guided PDF workbook.",
+                    "category": "Guides",
+                    "type": "guide",
+                    "imageUrl": "",
+                    "url": "#",
+                    "featured": false
+                },
+                {
+                    "title": "Analytics Dashboard Template",
+                    "description": "Google Sheets template pre-built with charts and KPIs.",
+                    "category": "Templates",
+                    "type": "template",
+                    "imageUrl": "",
+                    "url": "#",
+                    "featured": false
+                }
+            ]
+        },
+        "showFilter": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "showType": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Download Free"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "filterBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "filterColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "filterActiveBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "filterActiveColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1200
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "headingFontSize": {
+            "type": "number",
+            "default": 34
+        },
+        "headingFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "headingLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "subtextFontSize": {
+            "type": "number",
+            "default": 17
+        },
+        "subtextFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "subtextLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

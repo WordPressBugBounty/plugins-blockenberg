@@ -1,0 +1,145 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/recipe-card",
+    "title": "Recipe Card",
+    "category": "bkbg-blog",
+    "icon": "carrot",
+    "description": "Full-featured recipe card with ingredients, steps, nutrition facts, ratings, and Recipe JSON-LD structured data.",
+    "keywords": [
+        "recipe",
+        "food",
+        "cooking",
+        "ingredients",
+        "steps",
+        "schema"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-recipe-card-editor",
+    "editorStyle": "bkbg-recipe-card-style",
+    "style": "bkbg-recipe-card-style",
+    "viewScript": "bkbg-recipe-card-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true
+    },
+    "attributes": {
+        "recipeName": {
+            "type": "string",
+            "default": "Classic Pancakes"
+        },
+        "description": {
+            "type": "string",
+            "default": "Fluffy, golden pancakes the whole family will love. Ready in 30 minutes."
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "prepTime": {
+            "type": "string",
+            "default": "10 min"
+        },
+        "cookTime": {
+            "type": "string",
+            "default": "20 min"
+        },
+        "totalTime": {
+            "type": "string",
+            "default": "30 min"
+        },
+        "servings": {
+            "type": "string",
+            "default": "4 servings"
+        },
+        "difficulty": {
+            "type": "string",
+            "default": "Easy"
+        },
+        "cuisine": {
+            "type": "string",
+            "default": "American"
+        },
+        "category": {
+            "type": "string",
+            "default": "Breakfast"
+        },
+        "ingredients": {
+            "type": "string",
+            "default": "1 cup all-purpose flour\n1 tbsp sugar\n1 tsp baking powder\n½ tsp baking soda\n¼ tsp salt\n1 cup buttermilk\n1 egg\n2 tbsp melted butter"
+        },
+        "instructions": {
+            "type": "string",
+            "default": "Mix dry ingredients in a large bowl.\nWhisk wet ingredients separately.\nCombine wet and dry ingredients until just mixed.\nHeat a skillet over medium heat and grease lightly.\nPour ¼ cup batter per pancake and cook until bubbles form.\nFlip and cook 1-2 more minutes until golden."
+        },
+        "calories": {
+            "type": "string",
+            "default": "285"
+        },
+        "protein": {
+            "type": "string",
+            "default": "8g"
+        },
+        "carbs": {
+            "type": "string",
+            "default": "42g"
+        },
+        "fat": {
+            "type": "string",
+            "default": "9g"
+        },
+        "showNutrition": {
+            "type": "boolean",
+            "default": true
+        },
+        "showRating": {
+            "type": "boolean",
+            "default": true
+        },
+        "rating": {
+            "type": "number",
+            "default": 5
+        },
+        "ratingCount": {
+            "type": "string",
+            "default": "24"
+        },
+        "notes": {
+            "type": "string",
+            "default": ""
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "cardShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "schemaEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

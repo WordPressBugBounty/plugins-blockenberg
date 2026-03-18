@@ -1,0 +1,164 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/unit-converter",
+    "title": "Unit Converter",
+    "category": "bkbg-calculators",
+    "icon": "editor-expand",
+    "description": "Interactive unit conversion tool supporting length, weight, temperature, volume, area, and speed. Users can switch categories, enter a value, and instantly see the converted result.",
+    "keywords": [
+        "unit",
+        "converter",
+        "length",
+        "weight",
+        "temperature",
+        "volume",
+        "area",
+        "speed",
+        "metric",
+        "imperial",
+        "calculator"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-unit-converter-editor",
+    "style": "bkbg-unit-converter-style",
+    "viewScript": "bkbg-unit-converter-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Unit Converter"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Instantly convert between metric and imperial units."
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultCategory": {
+            "type": "string",
+            "default": "length"
+        },
+        "showCategoryTabs": {
+            "type": "boolean",
+            "default": true
+        },
+        "enabledCategories": {
+            "type": "array",
+            "default": [
+                "length",
+                "weight",
+                "temperature",
+                "volume",
+                "area",
+                "speed"
+            ]
+        },
+        "showSwapButton": {
+            "type": "boolean",
+            "default": true
+        },
+        "showFormula": {
+            "type": "boolean",
+            "default": false
+        },
+        "decimalPlaces": {
+            "type": "number",
+            "default": 4
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "tabActiveBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "tabActiveColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "tabInactiveBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "tabInactiveColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "resultBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "resultColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "resultSize": {
+            "type": "number",
+            "default": 40
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 640
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        }
+    }
+}

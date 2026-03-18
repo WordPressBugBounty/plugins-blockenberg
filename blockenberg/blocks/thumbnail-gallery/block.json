@@ -1,0 +1,206 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/thumbnail-gallery",
+    "title": "Thumbnail Gallery",
+    "description": "Large main image with a scrollable thumbnail strip navigation.",
+    "category": "bkbg-media",
+    "icon": "format-gallery",
+    "keywords": [
+        "gallery",
+        "thumbnail",
+        "images",
+        "carousel",
+        "lightbox"
+    ],
+    "editorScript": "bkbg-thumbnail-gallery-editor",
+    "editorStyle": "bkbg-thumbnail-gallery-style",
+    "style": "bkbg-thumbnail-gallery-style",
+    "viewScript": "bkbg-thumbnail-gallery-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "images": {
+            "type": "array",
+            "default": [
+                {
+                    "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
+                    "id": 0,
+                    "alt": "Mountain landscape",
+                    "caption": "Majestic mountain peaks at sunrise",
+                    "title": "Mountains"
+                },
+                {
+                    "url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80",
+                    "id": 0,
+                    "alt": "Forest path",
+                    "caption": "Misty forest trail in the morning",
+                    "title": "Forest"
+                },
+                {
+                    "url": "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=1200&q=80",
+                    "id": 0,
+                    "alt": "Ocean view",
+                    "caption": "Crystal clear waters of the coast",
+                    "title": "Ocean"
+                },
+                {
+                    "url": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=1200&q=80",
+                    "id": 0,
+                    "alt": "Wildflowers",
+                    "caption": "Vibrant wildflower meadow in bloom",
+                    "title": "Wildflowers"
+                },
+                {
+                    "url": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&q=80",
+                    "id": 0,
+                    "alt": "Desert dunes",
+                    "caption": "Golden sand dunes at dusk",
+                    "title": "Desert"
+                },
+                {
+                    "url": "https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=1200&q=80",
+                    "id": 0,
+                    "alt": "River valley",
+                    "caption": "Serene river winding through the valley",
+                    "title": "River"
+                }
+            ]
+        },
+        "thumbPosition": {
+            "type": "string",
+            "default": "bottom"
+        },
+        "thumbSize": {
+            "type": "number",
+            "default": 72
+        },
+        "thumbGap": {
+            "type": "number",
+            "default": 8
+        },
+        "thumbBorderRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "mainAspect": {
+            "type": "string",
+            "default": "16/9"
+        },
+        "mainBorderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "mainObjectFit": {
+            "type": "string",
+            "default": "cover"
+        },
+        "showCaptions": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCounter": {
+            "type": "boolean",
+            "default": true
+        },
+        "showZoom": {
+            "type": "boolean",
+            "default": true
+        },
+        "showArrows": {
+            "type": "boolean",
+            "default": true
+        },
+        "animationType": {
+            "type": "string",
+            "default": "fade"
+        },
+        "autoPlay": {
+            "type": "boolean",
+            "default": false
+        },
+        "autoPlayDelay": {
+            "type": "number",
+            "default": 4000
+        },
+        "thumbActiveBorderWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 900
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "mainBg": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "captionBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.6)"
+        },
+        "captionColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "counterBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.55)"
+        },
+        "counterColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "thumbActiveBorder": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "thumbBg": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "arrowBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.45)"
+        },
+        "arrowColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "zoomIconColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "zoomIconBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.45)"
+        },
+        "captionTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "counterTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

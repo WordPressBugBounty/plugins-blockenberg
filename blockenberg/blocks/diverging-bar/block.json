@@ -1,0 +1,145 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/diverging-bar",
+    "title": "Diverging Bar Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-bar",
+    "description": "Horizontal bars extending left (negative) and right (positive) from a shared centre baseline — ideal for survey data, sentiment, and profit/loss comparisons.",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Survey Results: Agreement Scale"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGridLines": {
+            "type": "boolean",
+            "default": true
+        },
+        "showZeroLine": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "integer",
+            "default": 700
+        },
+        "rowHeight": {
+            "type": "integer",
+            "default": 44
+        },
+        "padTop": {
+            "type": "integer",
+            "default": 30
+        },
+        "padLeft": {
+            "type": "integer",
+            "default": 160
+        },
+        "padRight": {
+            "type": "integer",
+            "default": 30
+        },
+        "barHeight": {
+            "type": "integer",
+            "default": 24
+        },
+        "labelFontSize": {
+            "type": "integer",
+            "default": 13
+        },
+        "labelFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "valueFontSize": {
+            "type": "integer",
+            "default": 11
+        },
+        "valueFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "titleFontSize": {
+            "type": "integer",
+            "default": 18
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "posColor": {
+            "type": "string",
+            "default": "#4f46e5"
+        },
+        "negColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Strongly Agree",
+                    "positive": 42,
+                    "negative": 8
+                },
+                {
+                    "label": "Agree",
+                    "positive": 31,
+                    "negative": 12
+                },
+                {
+                    "label": "Neutral",
+                    "positive": 15,
+                    "negative": 15
+                },
+                {
+                    "label": "Disagree",
+                    "positive": 8,
+                    "negative": 28
+                },
+                {
+                    "label": "Strongly Disagree",
+                    "positive": 4,
+                    "negative": 36
+                }
+            ]
+        }
+    },
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "editorScript": "bkbg-diverging-bar-editor",
+    "style": "bkbg-diverging-bar-style"
+}

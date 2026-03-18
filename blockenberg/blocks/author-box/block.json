@@ -1,0 +1,172 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/author-box",
+    "title": "Author Box",
+    "description": "Display a blog author profile card with avatar, name, bio, role and social media links.",
+    "category": "bkbg-business",
+    "icon": "admin-users",
+    "keywords": [
+        "author",
+        "bio",
+        "profile",
+        "card",
+        "writer",
+        "about"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-author-box-editor",
+    "editorStyle": "bkbg-author-box-style",
+    "style": "bkbg-author-box-style",
+    "viewScript": "bkbg-author-box-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "name": {
+            "type": "string",
+            "default": "Jane Smith"
+        },
+        "role": {
+            "type": "string",
+            "default": "Content Writer"
+        },
+        "bio": {
+            "type": "string",
+            "default": "Jane writes about technology, design, and the future of the web. She has 10+ years of experience crafting compelling stories for top-tier publications."
+        },
+        "avatarUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "avatarId": {
+            "type": "number",
+            "default": 0
+        },
+        "avatarSize": {
+            "type": "number",
+            "default": 88
+        },
+        "avatarShape": {
+            "type": "string",
+            "default": "circle"
+        },
+        "layout": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "showRole": {
+            "type": "boolean",
+            "default": true
+        },
+        "links": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "l1",
+                    "platform": "twitter",
+                    "url": "",
+                    "label": "Twitter"
+                },
+                {
+                    "id": "l2",
+                    "platform": "linkedin",
+                    "url": "",
+                    "label": "LinkedIn"
+                },
+                {
+                    "id": "l3",
+                    "platform": "website",
+                    "url": "",
+                    "label": "Website"
+                }
+            ]
+        },
+        "showLinks": {
+            "type": "boolean",
+            "default": true
+        },
+        "padding": {
+            "type": "number",
+            "default": 28
+        },
+        "gap": {
+            "type": "number",
+            "default": 24
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "showBorder": {
+            "type": "boolean",
+            "default": true
+        },
+        "nameSize": {
+            "type": "number",
+            "default": 20
+        },
+        "nameWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "roleSize": {
+            "type": "number",
+            "default": 14
+        },
+        "roleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "bioSize": {
+            "type": "number",
+            "default": 15
+        },
+        "bioColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "bioLineHeight": {
+            "type": "string",
+            "default": "1.7"
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "roleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bioTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "linkHoverColor": {
+            "type": "string",
+            "default": "#1d4ed8"
+        }
+    }
+}

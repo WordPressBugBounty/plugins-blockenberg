@@ -1,0 +1,113 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/text-path",
+    "title": "Text Path",
+    "category": "bkbg-effects",
+    "description": "Render text along a curved SVG path — arc, wave, circle or S-curve.",
+    "keywords": [
+        "text",
+        "path",
+        "svg",
+        "curve",
+        "arc",
+        "wave",
+        "circle",
+        "typography"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-text-path-editor",
+    "style": "bkbg-text-path-style",
+    "viewScript": "bkbg-text-path-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "text": {
+            "type": "string",
+            "default": "Your Curved Text Goes Here • Beautiful Typography •"
+        },
+        "pathType": {
+            "type": "string",
+            "default": "arc"
+        },
+        "svgWidth": {
+            "type": "number",
+            "default": 800
+        },
+        "svgHeight": {
+            "type": "number",
+            "default": 200
+        },
+        "arcRadius": {
+            "type": "number",
+            "default": 300
+        },
+        "arcDirection": {
+            "type": "string",
+            "default": "top"
+        },
+        "waveAmplitude": {
+            "type": "number",
+            "default": 40
+        },
+        "waveFrequency": {
+            "type": "number",
+            "default": 2
+        },
+        "startOffset": {
+            "type": "number",
+            "default": 10
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "textAnchor": {
+            "type": "string",
+            "default": "start"
+        },
+        "showPath": {
+            "type": "boolean",
+            "default": false
+        },
+        "pathStrokeColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "pathStrokeWidth": {
+            "type": "number",
+            "default": 1
+        },
+        "animate": {
+            "type": "boolean",
+            "default": false
+        },
+        "animateDuration": {
+            "type": "number",
+            "default": 12
+        },
+        "repeatCount": {
+            "type": "string",
+            "default": "indefinite"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "align2": {
+            "type": "string",
+            "default": "center"
+        }
+    }
+}

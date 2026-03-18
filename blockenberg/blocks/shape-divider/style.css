@@ -1,0 +1,20 @@
+/* ── Shape Divider ──────────────────────────────────────────────────────── */
+.bksvd-wrap {
+    line-height: 0;
+    overflow: hidden;
+}
+
+.bksvd-svg {
+    display: block;
+}
+
+@keyframes bksvdWave {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(-25%); }
+    100% { transform: translateX(0); }
+}
+
+.bksvd-animate {
+    animation: bksvdWave var(--bksvd-speed, 8s) ease-in-out infinite;
+    width: 200% !important;
+}

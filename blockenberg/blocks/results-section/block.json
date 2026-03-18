@@ -1,0 +1,251 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/results-section",
+    "title": "Results Section",
+    "description": "Showcase client results and transformations with before/after metrics, case summaries, and attribution.",
+    "category": "bkbg-marketing",
+    "icon": "chart-bar",
+    "keywords": [
+        "results",
+        "metrics",
+        "case study",
+        "transformation",
+        "stats",
+        "growth"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-results-section-editor",
+    "style": "bkbg-results-section-style",
+    "viewScript": "bkbg-results-section-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "Real Results"
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "heading": {
+            "type": "string",
+            "default": "What Our Clients Achieve"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "We measure success by our clients' outcomes. Here's what they accomplished."
+        },
+        "showSubtext": {
+            "type": "boolean",
+            "default": true
+        },
+        "metrics": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Revenue Growth",
+                    "before": "$120K",
+                    "after": "$480K",
+                    "change": "+300%",
+                    "description": "Annual revenue in 12 months",
+                    "direction": "up"
+                },
+                {
+                    "label": "Lead Generation",
+                    "before": "42",
+                    "after": "380",
+                    "change": "+804%",
+                    "description": "Qualified leads per month",
+                    "direction": "up"
+                },
+                {
+                    "label": "Time to Close",
+                    "before": "28 days",
+                    "after": "9 days",
+                    "change": "-68%",
+                    "description": "Average sales cycle",
+                    "direction": "down"
+                }
+            ]
+        },
+        "showCaseStudy": {
+            "type": "boolean",
+            "default": true
+        },
+        "caseStudyName": {
+            "type": "string",
+            "default": "Mountain View Capital"
+        },
+        "caseStudySummary": {
+            "type": "string",
+            "default": "After implementing our system, Mountain View Capital transformed their sales process from a slow, manual funnel into a predictable revenue engine."
+        },
+        "clientLogoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "clientLogoId": {
+            "type": "number",
+            "default": 0
+        },
+        "clientLogoAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "clientAvatarUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "clientAvatarId": {
+            "type": "number",
+            "default": 0
+        },
+        "clientName": {
+            "type": "string",
+            "default": "James Hartwell, CEO"
+        },
+        "showCtaRow": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "See the Full Case Study"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "layout": {
+            "type": "string",
+            "default": "metrics-top"
+        },
+        "metricStyle": {
+            "type": "string",
+            "default": "cards"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "eyebrowBg": {
+            "type": "string",
+            "default": "#f3f0ff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "metricCardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "metricCardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "metricAfterColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "metricBeforeColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "metricLabelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "changeUpColor": {
+            "type": "string",
+            "default": "#15803d"
+        },
+        "changeUpBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "changeDownColor": {
+            "type": "string",
+            "default": "#b45309"
+        },
+        "changeDownBg": {
+            "type": "string",
+            "default": "#fffbeb"
+        },
+        "caseBg": {
+            "type": "string",
+            "default": "#f8f5ff"
+        },
+        "caseNameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "caseSummaryColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 38
+        },
+        "metricAfterSize": {
+            "type": "number",
+            "default": 36
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1100
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "eyebrowSize": {
+            "type": "number",
+            "default": 12
+        },
+        "caseNameSize": {
+            "type": "number",
+            "default": 18
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

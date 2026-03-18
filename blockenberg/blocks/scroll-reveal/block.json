@@ -1,0 +1,91 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/scroll-reveal",
+    "title": "Scroll Reveal",
+    "category": "bkbg-effects",
+    "icon": "visibility",
+    "description": "Wrap any blocks in a scroll-triggered reveal animation. Children animate into view when they enter the viewport.",
+    "keywords": [
+        "scroll",
+        "reveal",
+        "animate",
+        "animation",
+        "fade",
+        "slide",
+        "entrance",
+        "aos",
+        "intersection"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-scroll-reveal-editor",
+    "style": "bkbg-scroll-reveal-style",
+    "viewScript": "bkbg-scroll-reveal-frontend",
+    "attributes": {
+        "animation": {
+            "type": "string",
+            "default": "fade-up"
+        },
+        "duration": {
+            "type": "number",
+            "default": 600
+        },
+        "delay": {
+            "type": "number",
+            "default": 0
+        },
+        "easing": {
+            "type": "string",
+            "default": "ease"
+        },
+        "distance": {
+            "type": "number",
+            "default": 32
+        },
+        "threshold": {
+            "type": "number",
+            "default": 15
+        },
+        "once": {
+            "type": "boolean",
+            "default": true
+        },
+        "stagger": {
+            "type": "boolean",
+            "default": false
+        },
+        "staggerDelay": {
+            "type": "number",
+            "default": 100
+        },
+        "scale": {
+            "type": "number",
+            "default": 95
+        },
+        "rotate": {
+            "type": "number",
+            "default": 0
+        },
+        "opacity": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ],
+        "anchor": true,
+        "className": true
+    }
+}

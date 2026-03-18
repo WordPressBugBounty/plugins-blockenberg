@@ -1,0 +1,145 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/tilt-card",
+    "title": "Tilt Card",
+    "category": "bkbg-effects",
+    "icon": "screenoptions",
+    "description": "Card with 3D perspective tilt effect on mouse hover. Rich content with image, heading, text, icon, and link.",
+    "keywords": [
+        "tilt",
+        "3d",
+        "hover",
+        "card",
+        "perspective",
+        "interactive"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-tilt-card-editor",
+    "editorStyle": "bkbg-tilt-card-style",
+    "style": "bkbg-tilt-card-style",
+    "viewScript": "bkbg-tilt-card-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true
+    },
+    "attributes": {
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "icon": {
+            "type": "string",
+            "default": "star-filled"
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": false
+        },
+        "heading": {
+            "type": "string",
+            "default": "Stunning Tilt Effect"
+        },
+        "text": {
+            "type": "string",
+            "default": "This card rotates in 3D as you move your mouse over it, creating a premium interactive feel."
+        },
+        "linkLabel": {
+            "type": "string",
+            "default": "Learn more →"
+        },
+        "linkUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showLink": {
+            "type": "boolean",
+            "default": true
+        },
+        "tiltMax": {
+            "type": "number",
+            "default": 15
+        },
+        "tiltScale": {
+            "type": "number",
+            "default": 105
+        },
+        "glareEffect": {
+            "type": "boolean",
+            "default": true
+        },
+        "glareOpacity": {
+            "type": "number",
+            "default": 30
+        },
+        "perspective": {
+            "type": "number",
+            "default": 800
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 20
+        },
+        "cardShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "cardWidth": {
+            "type": "number",
+            "default": 340
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 28
+        },
+        "imgHeight": {
+            "type": "number",
+            "default": 180
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 40
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        }
+    }
+}

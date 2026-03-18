@@ -1,0 +1,130 @@
+/* Comparison Table — bkct- */
+.bkct-wrap {
+  border-radius: var(--bkct-radius, 12px);
+  overflow: hidden;
+  box-shadow: 0 4px 28px rgba(0,0,0,0.08);
+}
+
+.bkct-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bkct-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+  font-size: 14px;
+}
+
+/* ── Header ── */
+.bkct-table thead th {
+  background: var(--bkct-header-bg, #6c3fb5);
+  color: var(--bkct-header-text, #fff);
+  padding: 18px 20px;
+  text-align: center;
+  font-family: var(--bkct-th-font-family, inherit);
+  font-size: var(--bkct-th-font-size-d, 15px);
+  font-weight: var(--bkct-th-font-weight, 700);
+  line-height: var(--bkct-th-line-height-d, 1.4);
+  text-transform: var(--bkct-th-text-transform, none);
+  font-style: var(--bkct-th-font-style, normal);
+  text-decoration: var(--bkct-th-text-decoration, none);
+  letter-spacing: var(--bkct-th-letter-spacing-d, normal);
+  word-spacing: var(--bkct-th-word-spacing-d, normal);
+  position: relative;
+}
+.bkct-table thead th.bkct-feature-col { text-align: left; }
+
+.bkct-sticky { position: sticky; top: 0; z-index: 10; }
+
+.bkct-plan-name { font-weight: 800; font-size: 17px; margin-bottom: 2px; }
+.bkct-plan-sub  { font-size: 13px; opacity: 0.85; font-weight: 400; }
+
+/* ── Rows ── */
+.bkct-row td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  vertical-align: middle;
+  font-family: var(--bkct-td-font-family, inherit);
+  font-size: var(--bkct-td-font-size-d, 14px);
+  font-weight: var(--bkct-td-font-weight, 400);
+  line-height: var(--bkct-td-line-height-d, 1.5);
+  text-transform: var(--bkct-td-text-transform, none);
+  font-style: var(--bkct-td-font-style, normal);
+  text-decoration: var(--bkct-td-text-decoration, none);
+  letter-spacing: var(--bkct-td-letter-spacing-d, normal);
+  word-spacing: var(--bkct-td-word-spacing-d, normal);
+}
+.bkct-label { text-align: left; font-weight: 600; color: #333; }
+.bkct-feature-col { min-width: 160px; }
+.bkct-plan-col { min-width: 130px; }
+
+/* Zebra */
+.bkct-zebra .bkct-row:nth-child(even) td { background: #fafafa; }
+
+/* ── Highlight ── */
+.bkct-highlight {
+  background: var(--bkct-hl-bg, #f3eeff) !important;
+  border-left: 2px solid var(--bkct-hl-border, #6c3fb5);
+  border-right: 2px solid var(--bkct-hl-border, #6c3fb5);
+}
+thead .bkct-highlight {
+  background: var(--bkct-header-bg, #6c3fb5) !important;
+  color: var(--bkct-header-text, #fff) !important;
+  border-top: 2px solid var(--bkct-hl-border, #6c3fb5);
+}
+
+/* ── Cell values ── */
+.bkct-check {
+  color: var(--bkct-check, #22c55e);
+  font-size: 20px;
+  font-weight: 700;
+  display: inline-block;
+}
+.bkct-cross {
+  color: var(--bkct-cross, #ef4444);
+  font-size: 18px;
+  font-weight: 700;
+  display: inline-block;
+}
+.bkct-text {
+  color: #555;
+  font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  .bkct-table thead th {
+    font-size: var(--bkct-th-font-size-t, var(--bkct-th-font-size-d, 15px));
+    line-height: var(--bkct-th-line-height-t, var(--bkct-th-line-height-d, 1.4));
+    letter-spacing: var(--bkct-th-letter-spacing-t, var(--bkct-th-letter-spacing-d, normal));
+    word-spacing: var(--bkct-th-word-spacing-t, var(--bkct-th-word-spacing-d, normal));
+  }
+  .bkct-row td {
+    font-size: var(--bkct-td-font-size-t, var(--bkct-td-font-size-d, 14px));
+    line-height: var(--bkct-td-line-height-t, var(--bkct-td-line-height-d, 1.5));
+    letter-spacing: var(--bkct-td-letter-spacing-t, var(--bkct-td-letter-spacing-d, normal));
+    word-spacing: var(--bkct-td-word-spacing-t, var(--bkct-td-word-spacing-d, normal));
+  }
+}
+
+@media (max-width: 767px) {
+  .bkct-table thead th {
+    font-size: var(--bkct-th-font-size-m, var(--bkct-th-font-size-t, var(--bkct-th-font-size-d, 15px)));
+    line-height: var(--bkct-th-line-height-m, var(--bkct-th-line-height-t, var(--bkct-th-line-height-d, 1.4)));
+    letter-spacing: var(--bkct-th-letter-spacing-m, var(--bkct-th-letter-spacing-t, var(--bkct-th-letter-spacing-d, normal)));
+    word-spacing: var(--bkct-th-word-spacing-m, var(--bkct-th-word-spacing-t, var(--bkct-th-word-spacing-d, normal)));
+  }
+  .bkct-row td {
+    font-size: var(--bkct-td-font-size-m, var(--bkct-td-font-size-t, var(--bkct-td-font-size-d, 14px)));
+    line-height: var(--bkct-td-line-height-m, var(--bkct-td-line-height-t, var(--bkct-td-line-height-d, 1.5)));
+    letter-spacing: var(--bkct-td-letter-spacing-m, var(--bkct-td-letter-spacing-t, var(--bkct-td-letter-spacing-d, normal)));
+    word-spacing: var(--bkct-td-word-spacing-m, var(--bkct-td-word-spacing-t, var(--bkct-td-word-spacing-d, normal)));
+  }
+}
+
+@media (max-width: 600px) {
+  .bkct-table { font-size: 13px; }
+  .bkct-row td, .bkct-table thead th { padding: 12px 12px; }
+}

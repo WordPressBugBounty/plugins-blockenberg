@@ -1,0 +1,154 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/timeline",
+    "title": "Timeline",
+    "category": "bkbg-business",
+    "icon": "backup",
+    "description": "Display events, milestones, or steps in a beautiful timeline layout.",
+    "keywords": [
+        "timeline",
+        "history",
+        "events",
+        "milestones",
+        "steps",
+        "process",
+        "roadmap"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-timeline-editor",
+    "editorStyle": "bkbg-timeline-style",
+    "style": "bkbg-timeline-style",
+    "viewScript": "bkbg-timeline-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "date": "2024",
+                    "title": "Getting Started",
+                    "content": "The beginning of an amazing journey. Everything starts with a single step.",
+                    "icon": "flag"
+                },
+                {
+                    "date": "2025",
+                    "title": "Major Milestone",
+                    "content": "Achieved significant progress and reached important goals along the way.",
+                    "icon": "star-filled"
+                },
+                {
+                    "date": "2026",
+                    "title": "Current Progress",
+                    "content": "Continuing to grow and evolve with new opportunities ahead.",
+                    "icon": "awards"
+                }
+            ]
+        },
+        "layoutStyle": {
+            "type": "string",
+            "default": "vertical"
+        },
+        "alternating": {
+            "type": "boolean",
+            "default": true
+        },
+        "showConnector": {
+            "type": "boolean",
+            "default": true
+        },
+        "connectorStyle": {
+            "type": "string",
+            "default": "solid"
+        },
+        "markerStyle": {
+            "type": "string",
+            "default": "icon"
+        },
+        "animateOnScroll": {
+            "type": "boolean",
+            "default": true
+        },
+        "animationType": {
+            "type": "string",
+            "default": "fade-up"
+        },
+        "lineColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "lineWidth": {
+            "type": "number",
+            "default": 3
+        },
+        "markerBg": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "markerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "markerSize": {
+            "type": "number",
+            "default": 44
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "cardBorderWidth": {
+            "type": "number",
+            "default": 1
+        },
+        "cardBorderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "cardShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 24
+        },
+        "dateColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "dateTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "contentColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "contentTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "itemSpacing": {
+            "type": "number",
+            "default": 40
+        }
+    }
+}

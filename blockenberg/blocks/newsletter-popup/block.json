@@ -1,0 +1,177 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/newsletter-popup",
+    "title": "Newsletter Popup",
+    "category": "bkbg-marketing",
+    "description": "Email capture popup that triggers on scroll, time delay, or exit intent. Cookie-based dismissal, image support, and success state.",
+    "keywords": [
+        "newsletter",
+        "popup",
+        "email",
+        "subscribe",
+        "lead capture",
+        "modal",
+        "exit intent"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-newsletter-popup-editor",
+    "editorStyle": "bkbg-newsletter-popup-style",
+    "style": "bkbg-newsletter-popup-style",
+    "viewScript": "bkbg-newsletter-popup-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Don't miss out! 🎁"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Join 10,000+ readers. Get the best content delivered to your inbox every week."
+        },
+        "emailPlaceholder": {
+            "type": "string",
+            "default": "Enter your email address"
+        },
+        "buttonLabel": {
+            "type": "string",
+            "default": "Subscribe Now"
+        },
+        "successMessage": {
+            "type": "string",
+            "default": "🎉 You're in! Check your inbox for a welcome email."
+        },
+        "successSubtext": {
+            "type": "string",
+            "default": "You can unsubscribe at any time."
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imagePosition": {
+            "type": "string",
+            "default": "none"
+        },
+        "triggerType": {
+            "type": "string",
+            "default": "delay"
+        },
+        "delaySeconds": {
+            "type": "number",
+            "default": 5
+        },
+        "scrollPercent": {
+            "type": "number",
+            "default": 40
+        },
+        "exitIntent": {
+            "type": "boolean",
+            "default": false
+        },
+        "cookieName": {
+            "type": "string",
+            "default": "bkbg-nlpop"
+        },
+        "cookieDays": {
+            "type": "number",
+            "default": 7
+        },
+        "showClose": {
+            "type": "boolean",
+            "default": true
+        },
+        "overlayClickClose": {
+            "type": "boolean",
+            "default": true
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 520
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "padding": {
+            "type": "number",
+            "default": 40
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 26
+        },
+        "textSize": {
+            "type": "number",
+            "default": 15
+        },
+        "ctaSize": {
+            "type": "number",
+            "default": 15
+        },
+        "overlayOpacity": {
+            "type": "number",
+            "default": 60
+        },
+        "overlayBg": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "popupBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "inputBorder": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "inputColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "buttonBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "buttonColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "closeBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "closeColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,129 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/meeting-cost-calculator",
+    "version": "1.0.0",
+    "title": "Meeting Cost Calculator",
+    "category": "bkbg-calculators",
+    "icon": "groups",
+    "description": "Calculate the real cost of meetings based on number of attendees, hourly rates, and duration. Includes recurring cost projections.",
+    "keywords": [
+        "meeting",
+        "cost",
+        "productivity",
+        "salary",
+        "time",
+        "business"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-meeting-cost-calculator-editor",
+    "style": "bkbg-meeting-cost-calculator-style",
+    "viewScript": "bkbg-meeting-cost-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Meeting Cost Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Discover the true cost of your meetings in real time"
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "defaultAttendees": {
+            "type": "integer",
+            "default": 5
+        },
+        "defaultHourlyRate": {
+            "type": "number",
+            "default": 75
+        },
+        "defaultHours": {
+            "type": "integer",
+            "default": 1
+        },
+        "defaultMinutes": {
+            "type": "integer",
+            "default": 0
+        },
+        "defaultFrequency": {
+            "type": "string",
+            "default": "weekly"
+        },
+        "showRecurring": {
+            "type": "boolean",
+            "default": true
+        },
+        "showEquivalents": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTimer": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#f43f5e"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#fff1f2"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#ffe4e6"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "recurringColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "titleFontSize": {
+            "type": "integer",
+            "default": 26
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "contentMaxWidth": {
+            "type": "integer",
+            "default": 680
+        }
+    }
+}

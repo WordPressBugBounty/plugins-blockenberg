@@ -1,0 +1,117 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/contrast-checker",
+    "version": "1.0.0",
+    "title": "Contrast Checker",
+    "category": "bkbg-dev",
+    "icon": "visibility",
+    "description": "WCAG color contrast accessibility checker. Test foreground/background color combinations against AA and AAA standards.",
+    "keywords": [
+        "contrast",
+        "accessibility",
+        "wcag",
+        "color",
+        "a11y",
+        "design"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-contrast-checker-editor",
+    "style": "bkbg-contrast-checker-style",
+    "viewScript": "bkbg-contrast-checker-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Color Contrast Checker"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Test accessibility compliance with WCAG 2.1 standards"
+        },
+        "defaultFg": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "defaultBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "previewText": {
+            "type": "string",
+            "default": "The quick brown fox jumps over the lazy dog"
+        },
+        "showPreview": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSuggestions": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "passColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "failColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleFontSize": {
+            "type": "integer",
+            "default": 26
+        },
+        "subtitleFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "sampleFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "contentMaxWidth": {
+            "type": "integer",
+            "default": 680
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

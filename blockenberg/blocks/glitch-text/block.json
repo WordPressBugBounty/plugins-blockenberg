@@ -1,0 +1,169 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/glitch-text",
+    "title": "Glitch Text",
+    "category": "bkbg-effects",
+    "icon": "text",
+    "description": "Eye-catching glitch animation text with chromatic aberration, noise, scanlines, and digital distortion effects.",
+    "keywords": [
+        "glitch",
+        "text",
+        "animation",
+        "chromatic",
+        "distortion",
+        "cyberpunk",
+        "effect",
+        "noise",
+        "digital"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-glitch-text-editor",
+    "style": "bkbg-glitch-text-style",
+    "viewScript": "bkbg-glitch-text-frontend",
+    "attributes": {
+        "text": {
+            "type": "string",
+            "default": "GLITCH"
+        },
+        "tag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "glitchType": {
+            "type": "string",
+            "default": "chromatic"
+        },
+        "trigger": {
+            "type": "string",
+            "default": "always"
+        },
+        "speed": {
+            "type": "string",
+            "default": "medium"
+        },
+        "customDuration": {
+            "type": "number",
+            "default": 800
+        },
+        "intensity": {
+            "type": "number",
+            "default": 6
+        },
+        "colorRed": {
+            "type": "string",
+            "default": "#ff0040"
+        },
+        "colorBlue": {
+            "type": "string",
+            "default": "#00e5ff"
+        },
+        "colorGreen": {
+            "type": "string",
+            "default": "#39ff14"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#0d0d0d"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 64
+        },
+        "fontSizeMobile": {
+            "type": "number",
+            "default": 36
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "900"
+        },
+        "letterSpacing": {
+            "type": "number",
+            "default": 4
+        },
+        "textTransform": {
+            "type": "string",
+            "default": "uppercase"
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "paddingV": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingH": {
+            "type": "number",
+            "default": 24
+        },
+        "showScanlines": {
+            "type": "boolean",
+            "default": false
+        },
+        "scanlineOpacity": {
+            "type": "number",
+            "default": 20
+        },
+        "showSubtext": {
+            "type": "boolean",
+            "default": false
+        },
+        "subtext": {
+            "type": "string",
+            "default": "System Error 404"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#888888"
+        },
+        "subtextSize": {
+            "type": "number",
+            "default": 14
+        },
+        "subtextSpacing": {
+            "type": "number",
+            "default": 16
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 0
+        },
+        "noiseCharset": {
+            "type": "string",
+            "default": "!<>-_\\/[]{}—=+*^?#"
+        },
+        "glitchIntervalMs": {
+            "type": "number",
+            "default": 4000
+        },
+        "glitchBurstDuration": {
+            "type": "number",
+            "default": 600
+        },
+        "showCursorBlink": {
+            "type": "boolean",
+            "default": false
+        },
+        "typoText": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtext": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

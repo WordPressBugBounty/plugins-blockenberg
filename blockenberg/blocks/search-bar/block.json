@@ -1,0 +1,93 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/search-bar",
+    "title": "Search Bar",
+    "category": "bkbg-content",
+    "icon": "search",
+    "description": "Styled search field and button for site search with live AJAX suggestions option.",
+    "keywords": [
+        "search",
+        "find",
+        "bar",
+        "field",
+        "input",
+        "query"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-search-bar-editor",
+    "editorStyle": "bkbg-search-bar-style",
+    "style": "bkbg-search-bar-style",
+    "viewScript": "bkbg-search-bar-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "placeholder": {
+            "type": "string",
+            "default": "Search…"
+        },
+        "btnLabel": {
+            "type": "string",
+            "default": "Search"
+        },
+        "showBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "btnIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "alignment": {
+            "type": "string",
+            "default": "center"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 560
+        },
+        "fieldBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "fieldBorder": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "fieldText": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "btnText": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "fieldHeight": {
+            "type": "number",
+            "default": 48
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "liveSearch": {
+            "type": "boolean",
+            "default": false
+        }
+    }
+}

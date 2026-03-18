@@ -1,0 +1,172 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/dot-plot",
+    "title": "Dot Plot",
+    "category": "bkbg-charts",
+    "icon": "chart-area",
+    "description": "Strip / scatter dot plot showing individual data points for each series along a shared axis — ideal for comparing distributions.",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Response Times by Team (ms)"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "integer",
+            "default": 700
+        },
+        "svgHeight": {
+            "type": "integer",
+            "default": 320
+        },
+        "padTop": {
+            "type": "integer",
+            "default": 36
+        },
+        "padLeft": {
+            "type": "integer",
+            "default": 130
+        },
+        "padRight": {
+            "type": "integer",
+            "default": 30
+        },
+        "padBottom": {
+            "type": "integer",
+            "default": 46
+        },
+        "dotRadius": {
+            "type": "integer",
+            "default": 7
+        },
+        "dotOpacity": {
+            "type": "integer",
+            "default": 75
+        },
+        "jitter": {
+            "type": "integer",
+            "default": 12
+        },
+        "showGridLines": {
+            "type": "boolean",
+            "default": true
+        },
+        "showMeanLine": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelFontSize": {
+            "type": "integer",
+            "default": 13
+        },
+        "labelFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "axisFontSize": {
+            "type": "integer",
+            "default": 11
+        },
+        "axisFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "titleFontSize": {
+            "type": "integer",
+            "default": 18
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "series": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Team Alpha",
+                    "color": "#6366f1",
+                    "points": [
+                        120,
+                        145,
+                        98,
+                        210,
+                        133,
+                        158,
+                        175,
+                        102,
+                        190,
+                        141
+                    ]
+                },
+                {
+                    "label": "Team Beta",
+                    "color": "#10b981",
+                    "points": [
+                        230,
+                        195,
+                        260,
+                        212,
+                        248,
+                        189,
+                        275,
+                        221,
+                        204,
+                        237
+                    ]
+                },
+                {
+                    "label": "Team Gamma",
+                    "color": "#f59e0b",
+                    "points": [
+                        85,
+                        92,
+                        78,
+                        105,
+                        88,
+                        71,
+                        99,
+                        83,
+                        115,
+                        76
+                    ]
+                }
+            ]
+        }
+    },
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "editorScript": "bkbg-dot-plot-editor",
+    "style": "bkbg-dot-plot-style"
+}

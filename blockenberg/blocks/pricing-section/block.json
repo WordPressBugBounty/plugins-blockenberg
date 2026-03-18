@@ -1,0 +1,389 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/pricing-section",
+    "title": "Pricing Section",
+    "category": "bkbg-marketing",
+    "icon": "money-alt",
+    "description": "All-in-one multi-tier pricing section with monthly/yearly toggle, feature rows, popular badge, and per-plan CTAs.",
+    "keywords": [
+        "pricing",
+        "plans",
+        "subscription",
+        "table",
+        "tiers"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-pricing-section-editor",
+    "style": "bkbg-pricing-section-style",
+    "viewScript": "bkbg-pricing-section-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "plans": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Starter",
+                    "eyebrow": "For individuals",
+                    "price": "9",
+                    "priceYearly": "7",
+                    "period": "/month",
+                    "yearlyPeriod": "/month, billed yearly",
+                    "description": "Everything you need to get started.",
+                    "isPopular": false,
+                    "popularLabel": "Most Popular",
+                    "ctaLabel": "Get started",
+                    "ctaUrl": "#",
+                    "ctaStyle": "outline",
+                    "accentColor": "#6366f1",
+                    "features": [
+                        {
+                            "text": "5 projects",
+                            "included": true
+                        },
+                        {
+                            "text": "10 GB storage",
+                            "included": true
+                        },
+                        {
+                            "text": "Basic analytics",
+                            "included": true
+                        },
+                        {
+                            "text": "Email support",
+                            "included": true
+                        },
+                        {
+                            "text": "API access",
+                            "included": false
+                        },
+                        {
+                            "text": "Custom domain",
+                            "included": false
+                        }
+                    ]
+                },
+                {
+                    "name": "Pro",
+                    "eyebrow": "For growing teams",
+                    "price": "29",
+                    "priceYearly": "22",
+                    "period": "/month",
+                    "yearlyPeriod": "/month, billed yearly",
+                    "description": "Advanced tools for professionals.",
+                    "isPopular": true,
+                    "popularLabel": "Most Popular",
+                    "ctaLabel": "Start free trial",
+                    "ctaUrl": "#",
+                    "ctaStyle": "filled",
+                    "accentColor": "#6366f1",
+                    "features": [
+                        {
+                            "text": "50 projects",
+                            "included": true
+                        },
+                        {
+                            "text": "100 GB storage",
+                            "included": true
+                        },
+                        {
+                            "text": "Advanced analytics",
+                            "included": true
+                        },
+                        {
+                            "text": "Priority support",
+                            "included": true
+                        },
+                        {
+                            "text": "API access",
+                            "included": true
+                        },
+                        {
+                            "text": "Custom domain",
+                            "included": false
+                        }
+                    ]
+                },
+                {
+                    "name": "Business",
+                    "eyebrow": "For large organisations",
+                    "price": "79",
+                    "priceYearly": "59",
+                    "period": "/month",
+                    "yearlyPeriod": "/month, billed yearly",
+                    "description": "Enterprise-grade power at scale.",
+                    "isPopular": false,
+                    "popularLabel": "Most Popular",
+                    "ctaLabel": "Contact sales",
+                    "ctaUrl": "#",
+                    "ctaStyle": "outline",
+                    "accentColor": "#6366f1",
+                    "features": [
+                        {
+                            "text": "Unlimited projects",
+                            "included": true
+                        },
+                        {
+                            "text": "1 TB storage",
+                            "included": true
+                        },
+                        {
+                            "text": "Advanced analytics",
+                            "included": true
+                        },
+                        {
+                            "text": "24/7 dedicated support",
+                            "included": true
+                        },
+                        {
+                            "text": "API access",
+                            "included": true
+                        },
+                        {
+                            "text": "Custom domain",
+                            "included": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "showToggle": {
+            "type": "boolean",
+            "default": true
+        },
+        "toggleLabelMonthly": {
+            "type": "string",
+            "default": "Monthly"
+        },
+        "toggleLabelYearly": {
+            "type": "string",
+            "default": "Yearly"
+        },
+        "savingsBadge": {
+            "type": "string",
+            "default": "Save 25%"
+        },
+        "showSavingsBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultYearly": {
+            "type": "boolean",
+            "default": false
+        },
+        "sectionHeading": {
+            "type": "string",
+            "default": "Simple, transparent pricing"
+        },
+        "showSectionHeading": {
+            "type": "boolean",
+            "default": true
+        },
+        "sectionSubtext": {
+            "type": "string",
+            "default": "No hidden fees. Cancel anytime."
+        },
+        "showSectionSubtext": {
+            "type": "boolean",
+            "default": true
+        },
+        "headingTag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "gap": {
+            "type": "number",
+            "default": 24
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1100
+        },
+        "containerPadding": {
+            "type": "number",
+            "default": 48
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 32
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "elevated"
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "showFeatures": {
+            "type": "boolean",
+            "default": true
+        },
+        "includedIcon": {
+            "type": "string",
+            "default": "\u2713"
+        },
+        "includedIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "includedIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "includedIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "notIncludedIcon": {
+            "type": "string",
+            "default": "\u2717"
+        },
+        "notIncludedIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "notIncludedIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "notIncludedIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "currencySymbol": {
+            "type": "string",
+            "default": "$"
+        },
+        "containerBg": {
+            "type": "string",
+            "default": ""
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "popularBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "priceColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "periodColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "featureColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "featureMissingColor": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "includedIconColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "popularNameColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "popularPriceColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "popularBadgeBg": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.2)"
+        },
+        "popularBadgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "toggleBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "toggleActiveBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "toggleActiveColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "toggleInactiveColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "savingsBadgeBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "savingsBadgeColor": {
+            "type": "string",
+            "default": "#166534"
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "priceTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "featureTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

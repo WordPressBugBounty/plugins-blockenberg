@@ -1,0 +1,164 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/contact-form",
+    "title": "Contact Form",
+    "category": "bkbg-business",
+    "icon": "email-alt",
+    "description": "A fully styled contact form that sends emails via your WordPress site — no plugin required.",
+    "keywords": [
+        "contact",
+        "form",
+        "email",
+        "message"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-contact-form-editor",
+    "style": "bkbg-contact-form-style",
+    "viewScript": "bkbg-contact-form-frontend",
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "showName": {
+            "type": "boolean",
+            "default": true
+        },
+        "showEmail": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPhone": {
+            "type": "boolean",
+            "default": false
+        },
+        "showMessage": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGdpr": {
+            "type": "boolean",
+            "default": false
+        },
+        "labelName": {
+            "type": "string",
+            "default": "Your Name"
+        },
+        "labelEmail": {
+            "type": "string",
+            "default": "Email Address"
+        },
+        "labelPhone": {
+            "type": "string",
+            "default": "Phone Number"
+        },
+        "labelMessage": {
+            "type": "string",
+            "default": "Your Message"
+        },
+        "labelGdpr": {
+            "type": "string",
+            "default": "I agree to the privacy policy"
+        },
+        "placeholderName": {
+            "type": "string",
+            "default": "John Doe"
+        },
+        "placeholderEmail": {
+            "type": "string",
+            "default": "hello@example.com"
+        },
+        "placeholderPhone": {
+            "type": "string",
+            "default": "+1 (555) 000-0000"
+        },
+        "placeholderMessage": {
+            "type": "string",
+            "default": "Write your message here…"
+        },
+        "submitLabel": {
+            "type": "string",
+            "default": "Send Message"
+        },
+        "successMessage": {
+            "type": "string",
+            "default": "Thank you! Your message has been sent."
+        },
+        "errorMessage": {
+            "type": "string",
+            "default": "Something went wrong. Please try again."
+        },
+        "recipientEmail": {
+            "type": "string",
+            "default": ""
+        },
+        "emailSubject": {
+            "type": "string",
+            "default": "New message from your website"
+        },
+        "btnStyle": {
+            "type": "string",
+            "default": "primary"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "fieldBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "fieldBorderColor": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "fieldFocusColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "fieldRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "fieldPadding": {
+            "type": "number",
+            "default": 12
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 14
+        },
+        "fieldSize": {
+            "type": "number",
+            "default": 15
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 660
+        },
+        "typoLabel": {
+            "type": "object",
+            "default": {}
+        },
+        "typoButton": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

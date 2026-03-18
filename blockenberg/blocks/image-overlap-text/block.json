@@ -1,0 +1,175 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/image-overlap-text",
+    "version": "1.0.0",
+    "title": "Image Overlap Text",
+    "category": "bkbg-media",
+    "icon": "format-image",
+    "description": "Creative editorial layout where a large image bleeds into an adjacent text column with decorative accents.",
+    "keywords": [
+        "image",
+        "overlap",
+        "editorial",
+        "hero",
+        "text",
+        "split"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-image-overlap-text-editor",
+    "style": "bkbg-image-overlap-text-style",
+    "viewScript": "bkbg-image-overlap-text-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "integer",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "overlapSide": {
+            "type": "string",
+            "default": "left"
+        },
+        "eyebrow": {
+            "type": "string",
+            "default": "Featured"
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "heading": {
+            "type": "string",
+            "default": "A headline that commands attention"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Supporting text that gives context and encourages the reader to keep going."
+        },
+        "bodyText": {
+            "type": "string",
+            "default": ""
+        },
+        "ctaEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Learn more →"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaIsExternal": {
+            "type": "boolean",
+            "default": false
+        },
+        "decorative": {
+            "type": "string",
+            "default": "dots"
+        },
+        "imageRadius": {
+            "type": "integer",
+            "default": 0
+        },
+        "overlapAmount": {
+            "type": "integer",
+            "default": 48
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "panelBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "bodyColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "dotColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headingSize": {
+            "type": "integer",
+            "default": 36
+        },
+        "subtextSize": {
+            "type": "integer",
+            "default": 18
+        },
+        "bodySize": {
+            "type": "integer",
+            "default": 16
+        },
+        "eyebrowTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "maxWidth": {
+            "type": "integer",
+            "default": 1100
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 64
+        }
+    }
+}

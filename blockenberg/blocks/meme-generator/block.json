@@ -1,0 +1,117 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/meme-generator",
+    "title": "Meme Generator",
+    "category": "bkbg-interactive",
+    "icon": "format-image",
+    "description": "Interactive meme maker. Visitors type top and bottom text over any image and download the result as a PNG.",
+    "keywords": [
+        "meme",
+        "generator",
+        "image",
+        "text",
+        "funny",
+        "caption",
+        "maker"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-meme-generator-editor",
+    "style": "bkbg-meme-generator-style",
+    "viewScript": "bkbg-meme-generator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Meme Generator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Add your own text and download!"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 24
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 14
+        },
+        "defaultTopText": {
+            "type": "string",
+            "default": "TOP TEXT"
+        },
+        "defaultBottomText": {
+            "type": "string",
+            "default": "BOTTOM TEXT"
+        },
+        "defaultImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "memeFont": {
+            "type": "string",
+            "default": "Impact"
+        },
+        "memeFontSize": {
+            "type": "number",
+            "default": 52
+        },
+        "memeTextColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "memeStrokeColor": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "memeStrokeWidth": {
+            "type": "number",
+            "default": 3
+        },
+        "canvasWidth": {
+            "type": "number",
+            "default": 560
+        },
+        "canvasHeight": {
+            "type": "number",
+            "default": 420
+        },
+        "canvasBg": {
+            "type": "string",
+            "default": "#cccccc"
+        },
+        "showDownload": {
+            "type": "boolean",
+            "default": true
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

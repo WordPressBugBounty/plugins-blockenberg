@@ -1,0 +1,155 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/neon-text",
+	"title": "Neon Text",
+	"category": "bkbg-effects",
+	"icon": "text",
+	"description": "Glowing neon tube text effect with animated flicker, multi-color glow layers, animated background scanlines, and multiple neon color presets.",
+	"keywords": [
+		"neon",
+		"glow",
+		"text",
+		"cyberpunk",
+		"retro",
+		"sign",
+		"light",
+		"plasma",
+		"effect"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-neon-text-editor",
+	"style": "bkbg-neon-text-style",
+	"viewScript": "bkbg-neon-text-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"text": {
+			"type": "string",
+			"default": "NEON SIGN"
+		},
+		"subText": {
+			"type": "string",
+			"default": ""
+		},
+		"showSubText": {
+			"type": "boolean",
+			"default": false
+		},
+		"tag": {
+			"type": "string",
+			"default": "h2"
+		},
+		"preset": {
+			"type": "string",
+			"default": "electric-blue"
+		},
+		"tubeColor": {
+			"type": "string",
+			"default": "#00d4ff"
+		},
+		"glowColor": {
+			"type": "string",
+			"default": "#00d4ff"
+		},
+		"secondGlow": {
+			"type": "string",
+			"default": "#0055ff"
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#0a0a12"
+		},
+		"fontSize": {
+			"type": "number",
+			"default": 72
+		},
+		"fontWeight": {
+			"type": "string",
+			"default": "700"
+		},
+		"letterSpacing": {
+			"type": "number",
+			"default": 8
+		},
+		"textAlign": {
+			"type": "string",
+			"default": "center"
+		},
+		"textTransform": {
+			"type": "string",
+			"default": "uppercase"
+		},
+		"glowIntensity": {
+			"type": "number",
+			"default": 3
+		},
+		"glowSpread": {
+			"type": "number",
+			"default": 40
+		},
+		"flickerMode": {
+			"type": "string",
+			"default": "soft"
+		},
+		"flickerLetter": {
+			"type": "number",
+			"default": -1
+		},
+		"showScanlines": {
+			"type": "boolean",
+			"default": true
+		},
+		"showGlowFloor": {
+			"type": "boolean",
+			"default": true
+		},
+		"showBorderSign": {
+			"type": "boolean",
+			"default": false
+		},
+		"borderSignColor": {
+			"type": "string",
+			"default": "#ff0080"
+		},
+		"paddingV": {
+			"type": "number",
+			"default": 64
+		},
+		"paddingH": {
+			"type": "number",
+			"default": 48
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 16
+		},
+		"fontFamily": {
+			"type": "string",
+			"default": "inherit"
+		},
+		"lineHeight": {
+			"type": "number",
+			"default": 1.3
+		},
+		"subTextFontSize": {
+			"type": "number",
+			"default": 16
+		},
+		"headingTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"subtitleTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

@@ -1,0 +1,298 @@
+.bkbg-tutorial-card-app { display: none; }
+
+.bkbg-tc-block {
+    overflow: hidden;
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+.bkbg-tc-header {
+    padding: 20px 24px;
+}
+
+.bkbg-tc-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.bkbg-tc-difficulty {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.bkbg-tc-meta-item {
+    font-size: 12px;
+    opacity: .8;
+}
+
+.bkbg-tc-title {
+    margin: 0 0 6px;
+    font-family:      var(--bktc-tt-font-family, inherit);
+    font-size:        var(--bktc-tt-font-size-d, 22px);
+    font-weight:      var(--bktc-tt-font-weight, 700);
+    line-height:      var(--bktc-tt-line-height-d, 1.25);
+    letter-spacing:   var(--bktc-tt-letter-spacing-d, normal);
+    word-spacing:     var(--bktc-tt-word-spacing-d, normal);
+    text-transform:   var(--bktc-tt-text-transform, none);
+    font-style:       var(--bktc-tt-font-style, normal);
+    text-decoration:  var(--bktc-tt-text-decoration, none);
+}
+/* Rule 7: heading specificity */
+.bkbg-tc-header h2.bkbg-tc-title {
+    font-family:      var(--bktc-tt-font-family, inherit);
+    font-size:        var(--bktc-tt-font-size-d, 22px);
+    font-weight:      var(--bktc-tt-font-weight, 700);
+    line-height:      var(--bktc-tt-line-height-d, 1.25);
+    letter-spacing:   var(--bktc-tt-letter-spacing-d, normal);
+    word-spacing:     var(--bktc-tt-word-spacing-d, normal);
+    text-transform:   var(--bktc-tt-text-transform, none);
+    font-style:       var(--bktc-tt-font-style, normal);
+    text-decoration:  var(--bktc-tt-text-decoration, none);
+}
+
+.bkbg-tc-subtitle {
+    margin: 0;
+    opacity: .8;
+    font-family:      var(--bktc-bt-font-family, inherit);
+    font-size:        var(--bktc-bt-font-size-d, 14px);
+    font-weight:      var(--bktc-bt-font-weight, normal);
+    line-height:      var(--bktc-bt-line-height-d, 1.68);
+    letter-spacing:   var(--bktc-bt-letter-spacing-d, normal);
+    word-spacing:     var(--bktc-bt-word-spacing-d, normal);
+    text-transform:   var(--bktc-bt-text-transform, none);
+    font-style:       var(--bktc-bt-font-style, normal);
+    text-decoration:  var(--bktc-bt-text-decoration, none);
+}
+
+/* ── Progress bar ───────────────────────────────────────────── */
+.bkbg-tc-progress-wrap {
+    margin-top: 14px;
+}
+
+.bkbg-tc-progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    margin-bottom: 4px;
+    opacity: .8;
+}
+
+.bkbg-tc-progress-track {
+    border-radius: 100px;
+    height: 6px;
+}
+
+.bkbg-tc-progress-fill {
+    border-radius: 100px;
+    height: 100%;
+    transition: width .3s;
+}
+
+/* ── Body ───────────────────────────────────────────────────── */
+.bkbg-tc-body {
+    padding: 20px 24px;
+}
+
+/* ── Section heading ────────────────────────────────────────── */
+.bkbg-tc-section-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.bkbg-tc-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+}
+
+.bkbg-tc-section-rule {
+    flex: 1;
+    height: 1px;
+}
+
+/* ── Outcomes ───────────────────────────────────────────────── */
+.bkbg-tc-outcomes {
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.bkbg-tc-outcome {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    margin-bottom: 6px;
+}
+
+.bkbg-tc-outcome-icon {
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* ── Prerequisites & Materials (two-col) ────────────────────── */
+.bkbg-tc-meta-cols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.bkbg-tc-col {
+    flex: 1 1 200px;
+}
+
+.bkbg-tc-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bkbg-tc-list-item {
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+/* ── Steps ──────────────────────────────────────────────────── */
+.bkbg-tc-steps { margin: 0; padding: 0; list-style: none; }
+
+.bkbg-tc-step {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+}
+
+.bkbg-tc-step:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none !important;
+}
+
+.bkbg-tc-step-num {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.bkbg-tc-step-body { flex: 1; }
+
+.bkbg-tc-step-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.bkbg-tc-step-title {
+    font-weight: 700;
+    color: #0f172a;
+    font-family:      var(--bktc-bt-font-family, inherit);
+    font-size:        var(--bktc-bt-font-size-d, 14px);
+    line-height:      var(--bktc-bt-line-height-d, 1.68);
+}
+
+.bkbg-tc-step-duration {
+    font-size: 11px;
+    color: #6b7280;
+    white-space: nowrap;
+}
+
+.bkbg-tc-step-content {
+    margin: 0 0 8px;
+    font-family:      var(--bktc-bt-font-family, inherit);
+    font-size:        var(--bktc-bt-font-size-d, 14px);
+    line-height:      var(--bktc-bt-line-height-d, 1.68);
+}
+
+.bkbg-tc-body-text,
+.bkbg-tc-list-item {
+    font-family:      var(--bktc-bt-font-family, inherit);
+    font-size:        var(--bktc-bt-font-size-d, 14px);
+    line-height:      var(--bktc-bt-line-height-d, 1.68);
+}
+
+.bkbg-tc-tip {
+    border-radius: 0 6px 6px 0;
+    padding: 7px 10px;
+    border-left-width: 3px;
+    border-left-style: solid;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 580px) {
+    .bkbg-tc-header,
+    .bkbg-tc-body {
+        padding: 16px 16px;
+    }
+    .bkbg-tc-meta-cols {
+        flex-direction: column;
+    }
+}
+
+/* Typography responsive — tablet */
+@media (max-width: 1024px) {
+    .bkbg-tc-title,
+    .bkbg-tc-header h2.bkbg-tc-title {
+        font-size:        var(--bktc-tt-font-size-t, var(--bktc-tt-font-size-d, 22px));
+        line-height:      var(--bktc-tt-line-height-t, var(--bktc-tt-line-height-d, 1.25));
+        letter-spacing:   var(--bktc-tt-letter-spacing-t, var(--bktc-tt-letter-spacing-d, normal));
+        word-spacing:     var(--bktc-tt-word-spacing-t, var(--bktc-tt-word-spacing-d, normal));
+    }
+    .bkbg-tc-subtitle,
+    .bkbg-tc-body-text,
+    .bkbg-tc-list-item,
+    .bkbg-tc-step-title,
+    .bkbg-tc-step-content,
+    .bkbg-tc-tip {
+        font-size:        var(--bktc-bt-font-size-t, var(--bktc-bt-font-size-d, 14px));
+        line-height:      var(--bktc-bt-line-height-t, var(--bktc-bt-line-height-d, 1.68));
+        letter-spacing:   var(--bktc-bt-letter-spacing-t, var(--bktc-bt-letter-spacing-d, normal));
+        word-spacing:     var(--bktc-bt-word-spacing-t, var(--bktc-bt-word-spacing-d, normal));
+    }
+}
+/* Typography responsive — mobile */
+@media (max-width: 767px) {
+    .bkbg-tc-title,
+    .bkbg-tc-header h2.bkbg-tc-title {
+        font-size:        var(--bktc-tt-font-size-m, var(--bktc-tt-font-size-t, var(--bktc-tt-font-size-d, 22px)));
+        line-height:      var(--bktc-tt-line-height-m, var(--bktc-tt-line-height-t, var(--bktc-tt-line-height-d, 1.25)));
+        letter-spacing:   var(--bktc-tt-letter-spacing-m, var(--bktc-tt-letter-spacing-t, var(--bktc-tt-letter-spacing-d, normal)));
+        word-spacing:     var(--bktc-tt-word-spacing-m, var(--bktc-tt-word-spacing-t, var(--bktc-tt-word-spacing-d, normal)));
+    }
+    .bkbg-tc-subtitle,
+    .bkbg-tc-body-text,
+    .bkbg-tc-list-item,
+    .bkbg-tc-step-title,
+    .bkbg-tc-step-content,
+    .bkbg-tc-tip {
+        font-size:        var(--bktc-bt-font-size-m, var(--bktc-bt-font-size-t, var(--bktc-bt-font-size-d, 14px)));
+        line-height:      var(--bktc-bt-line-height-m, var(--bktc-bt-line-height-t, var(--bktc-bt-line-height-d, 1.68)));
+        letter-spacing:   var(--bktc-bt-letter-spacing-m, var(--bktc-bt-letter-spacing-t, var(--bktc-bt-letter-spacing-d, normal)));
+        word-spacing:     var(--bktc-bt-word-spacing-m, var(--bktc-bt-word-spacing-t, var(--bktc-bt-word-spacing-d, normal)));
+    }
+}

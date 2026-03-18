@@ -1,0 +1,163 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/before-after",
+    "title": "Before/After Slider",
+    "category": "bkbg-media",
+    "icon": "image-flip-horizontal",
+    "description": "Compare two images with a draggable slider handle.",
+    "keywords": [
+        "before after",
+        "comparison",
+        "slider",
+        "images",
+        "split"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-before-after-editor",
+    "editorStyle": "bkbg-before-after-style",
+    "style": "bkbg-before-after-style",
+    "viewScript": "bkbg-before-after-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "beforeImage": {
+            "type": "object",
+            "default": {
+                "id": 0,
+                "url": "",
+                "alt": ""
+            }
+        },
+        "afterImage": {
+            "type": "object",
+            "default": {
+                "id": 0,
+                "url": "",
+                "alt": ""
+            }
+        },
+        "startPosition": {
+            "type": "number",
+            "default": 50
+        },
+        "orientation": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "showLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "beforeLabel": {
+            "type": "string",
+            "default": "Before"
+        },
+        "afterLabel": {
+            "type": "string",
+            "default": "After"
+        },
+        "labelPosition": {
+            "type": "string",
+            "default": "top"
+        },
+        "labelBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.55)"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 13
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "handleStyle": {
+            "type": "string",
+            "default": "circle"
+        },
+        "handleSize": {
+            "type": "number",
+            "default": 44
+        },
+        "handleIcon": {
+            "type": "object",
+            "default": {
+                "type": "dashicon",
+                "value": "leftright"
+            }
+        },
+        "handleIconSize": {
+            "type": "number",
+            "default": 18
+        },
+        "handleBg": {
+            "type": "string",
+            "default": "#007cba"
+        },
+        "handleColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "lineColor": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.95)"
+        },
+        "lineWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "handleHoverAnim": {
+            "type": "boolean",
+            "default": false
+        },
+        "handleHoverAnimType": {
+            "type": "string",
+            "default": "pulse"
+        },
+        "handleHoverAnimDuration": {
+            "type": "number",
+            "default": 650
+        },
+        "handleHoverScale": {
+            "type": "boolean",
+            "default": true
+        },
+        "handleHoverScaleAmount": {
+            "type": "number",
+            "default": 1.08
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "shadow": {
+            "type": "boolean",
+            "default": false
+        },
+        "aspect": {
+            "type": "string",
+            "default": "auto"
+        },
+        "minHeight": {
+            "type": "number",
+            "default": 260
+        }
+    }
+}

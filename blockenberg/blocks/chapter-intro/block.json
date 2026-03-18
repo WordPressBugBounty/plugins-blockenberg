@@ -1,0 +1,144 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/chapter-intro",
+    "title": "Chapter Intro",
+    "description": "A decorative chapter opener with large chapter number, label, heading, and intro paragraph.",
+    "category": "bkbg-content",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-chapter-intro-editor",
+    "style": "bkbg-chapter-intro-style",
+    "viewScript": "bkbg-chapter-intro-frontend",
+    "icon": "book-alt",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "chapterNumber": {
+            "type": "string",
+            "default": "01"
+        },
+        "chapterLabel": {
+            "type": "string",
+            "default": "Chapter"
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "heading": {
+            "type": "string",
+            "default": "Introduction"
+        },
+        "introText": {
+            "type": "string",
+            "default": "Begin your journey here. This section sets the stage for everything that follows, providing context, background, and the key ideas you need to understand."
+        },
+        "showDivider": {
+            "type": "boolean",
+            "default": true
+        },
+        "dividerStyle": {
+            "type": "string",
+            "default": "line"
+        },
+        "layout": {
+            "type": "string",
+            "default": "centered"
+        },
+        "numberStyle": {
+            "type": "string",
+            "default": "display"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "numberColor": {
+            "type": "string",
+            "default": "#f0eeff"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "numberSize": {
+            "type": "number",
+            "default": 160
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 40
+        },
+        "textSize": {
+            "type": "number",
+            "default": 18
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 13
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 760
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "headingFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "headingLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "textFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "textLineHeight": {
+            "type": "number",
+            "default": 1.7
+        },
+        "typoHeading": {
+            "type": "object",
+            "default": {}
+        },
+        "typoText": {
+            "type": "object",
+            "default": {}
+        },
+        "typoLabel": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

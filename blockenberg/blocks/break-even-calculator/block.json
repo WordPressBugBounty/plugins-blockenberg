@@ -1,0 +1,174 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/break-even-calculator",
+    "version": "1.0.0",
+    "title": "Break-Even Calculator",
+    "category": "bkbg-calculators",
+    "icon": "chart-bar",
+    "description": "Calculate break-even point, profit zone, and contribution margin for business analysis.",
+    "keywords": [
+        "break even",
+        "breakeven",
+        "profit",
+        "business",
+        "calculator",
+        "fixed costs",
+        "variable costs"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-break-even-calculator-editor",
+    "style": "bkbg-break-even-calculator-style",
+    "viewScript": "bkbg-break-even-calculator-frontend",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Break-Even Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Find the exact point where revenue covers all costs"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "defaultFixedCosts": {
+            "type": "number",
+            "default": 10000
+        },
+        "defaultPricePerUnit": {
+            "type": "number",
+            "default": 50
+        },
+        "defaultVarCostUnit": {
+            "type": "number",
+            "default": 20
+        },
+        "defaultUnitsToSell": {
+            "type": "number",
+            "default": 500
+        },
+        "showContribution": {
+            "type": "boolean",
+            "default": true
+        },
+        "showProfitZone": {
+            "type": "boolean",
+            "default": true
+        },
+        "showMarginRatio": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": ""
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "resultColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "profitColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "lossColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "barBg": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "statBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "statBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "inputBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "resultSize": {
+            "type": "number",
+            "default": 46
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 580
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

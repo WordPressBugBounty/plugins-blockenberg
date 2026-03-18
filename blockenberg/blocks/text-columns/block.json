@@ -1,0 +1,128 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/text-columns",
+    "title": "Text Columns",
+    "category": "bkbg-layout",
+    "icon": "columns",
+    "description": "Magazine-style multi-column text layout with drop cap, column rule / divider, pull quote spanning all columns and per-column WYSIWYG editing.",
+    "keywords": [
+        "columns",
+        "text",
+        "magazine",
+        "editorial",
+        "multi-column",
+        "dropcap",
+        "newspaper"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-text-columns-editor",
+    "style": "bkbg-text-columns-style",
+    "viewScript": "bkbg-text-columns-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "columnCount": {
+            "type": "number",
+            "default": 2
+        },
+        "columns": {
+            "type": "array",
+            "default": [
+                {
+                    "content": "<p>The first chapter begins here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p><p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>"
+                },
+                {
+                    "content": "<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p><p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione sequi nesciunt.</p>"
+                }
+            ]
+        },
+        "dropCap": {
+            "type": "boolean",
+            "default": false
+        },
+        "dropCapSize": {
+            "type": "number",
+            "default": 3
+        },
+        "dropCapColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "showRule": {
+            "type": "boolean",
+            "default": true
+        },
+        "ruleStyle": {
+            "type": "string",
+            "default": "solid"
+        },
+        "ruleWidth": {
+            "type": "number",
+            "default": 1
+        },
+        "columnGap": {
+            "type": "number",
+            "default": 40
+        },
+        "pullQuote": {
+            "type": "string",
+            "default": ""
+        },
+        "showPullQuote": {
+            "type": "boolean",
+            "default": false
+        },
+        "pullQuotePos": {
+            "type": "string",
+            "default": "between"
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "pullQuoteTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "left"
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "ruleColor": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "pullQuoteBorder": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "pullQuoteColor": {
+            "type": "string",
+            "default": "#111827"
+        }
+    }
+}

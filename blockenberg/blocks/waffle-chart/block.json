@@ -1,0 +1,121 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/waffle-chart",
+    "version": "1.0.0",
+    "title": "Waffle Chart",
+    "category": "bkbg-charts",
+    "icon": "grid-view",
+    "description": "Proportional 10×10 grid where each cell represents 1%. An intuitive and visually engaging alternative to pie charts for showing progress and part-to-whole relationships.",
+    "keywords": [
+        "waffle",
+        "chart",
+        "grid",
+        "proportion",
+        "percent",
+        "unit chart",
+        "progress"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-waffle-chart-editor",
+    "style": "bkbg-waffle-chart-style",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Budget Allocation"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "cellSize": {
+            "type": "number",
+            "default": 28
+        },
+        "cellGap": {
+            "type": "number",
+            "default": 3
+        },
+        "cellRadius": {
+            "type": "number",
+            "default": 4
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPercent": {
+            "type": "boolean",
+            "default": true
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": false
+        },
+        "legendFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "legendTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "emptyColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "segments": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Engineering",
+                    "value": 38,
+                    "color": "#4f46e5"
+                },
+                {
+                    "label": "Marketing",
+                    "value": 22,
+                    "color": "#0891b2"
+                },
+                {
+                    "label": "Operations",
+                    "value": 18,
+                    "color": "#059669"
+                },
+                {
+                    "label": "Sales",
+                    "value": 12,
+                    "color": "#d97706"
+                },
+                {
+                    "label": "HR & Admin",
+                    "value": 10,
+                    "color": "#dc2626"
+                }
+            ]
+        }
+    }
+}

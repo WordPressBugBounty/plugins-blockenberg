@@ -1,0 +1,133 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/image-reveal",
+    "title": "Image Reveal",
+    "description": "Image with a curtain reveal effect triggered on hover or scroll, with overlay label and caption.",
+    "category": "bkbg-effects",
+    "icon": "visibility",
+    "keywords": [
+        "image",
+        "reveal",
+        "curtain",
+        "animation",
+        "hover",
+        "scroll"
+    ],
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "trigger": {
+            "type": "string",
+            "default": "scroll"
+        },
+        "direction": {
+            "type": "string",
+            "default": "left"
+        },
+        "revealStyle": {
+            "type": "string",
+            "default": "sweep"
+        },
+        "aspectRatio": {
+            "type": "string",
+            "default": "16-9"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "showOverlayLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "overlayLabel": {
+            "type": "string",
+            "default": "Hover to reveal"
+        },
+        "revealedLabel": {
+            "type": "string",
+            "default": ""
+        },
+        "showRevealedLabel": {
+            "type": "boolean",
+            "default": false
+        },
+        "caption": {
+            "type": "string",
+            "default": ""
+        },
+        "showCaption": {
+            "type": "boolean",
+            "default": false
+        },
+        "overlayOpacity": {
+            "type": "number",
+            "default": 75
+        },
+        "animationDuration": {
+            "type": "number",
+            "default": 600
+        },
+        "revealOnce": {
+            "type": "boolean",
+            "default": true
+        },
+        "scrollThreshold": {
+            "type": "number",
+            "default": 30
+        },
+        "overlayBg": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "overlayTextColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "captionColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 18
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 0
+        },
+        "captionSize": {
+            "type": "number",
+            "default": 13
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "captionTypo": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "editorScript": "bkbg-image-reveal-editor",
+    "style": "bkbg-image-reveal-style",
+    "viewScript": "bkbg-image-reveal-frontend"
+}

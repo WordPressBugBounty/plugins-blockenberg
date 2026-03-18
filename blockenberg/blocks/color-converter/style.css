@@ -1,0 +1,132 @@
+.bkbg-clr-app *,
+.bkbg-clr-editor * {
+    box-sizing: border-box;
+}
+
+.bkbg-clr-wrap {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.bkbg-clr-card {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+    margin: 0 auto;
+}
+
+.bkbg-clr-swatch {
+    transition: background .12s;
+}
+
+.bkbg-clr-section {
+    margin-bottom: 18px;
+}
+
+.bkbg-clr-section-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin-bottom: 5px;
+}
+
+.bkbg-clr-rgb-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.bkbg-clr-channel-label {
+    font-size: 11px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.bkbg-clr-input {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1.5px solid #e5e7eb;
+    font-size: 15px;
+    font-family: monospace;
+    outline: none;
+    transition: border-color .15s;
+}
+.bkbg-clr-input:focus {
+    border-color: inherit;
+}
+
+.bkbg-clr-copy-btn {
+    margin-top: 6px;
+    padding: 4px 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: opacity .15s;
+}
+.bkbg-clr-copy-btn:hover {
+    opacity: .8;
+}
+
+.bkbg-clr-copy-btn.copied {
+    opacity: .7;
+}
+
+/* ── Typography — CSS-var driven ── */
+.bkbg-ccv-title,
+.bkbg-clr-app .bkbg-ccv-title {
+    font-size: var(--bkbg-ccv-tt-font-size-d, 28px);
+    line-height: var(--bkbg-ccv-tt-line-height-d, 1.2);
+    font-family: var(--bkbg-ccv-tt-font-family, inherit);
+    font-weight: var(--bkbg-ccv-tt-font-weight, 700);
+    font-style: var(--bkbg-ccv-tt-font-style, normal);
+    text-transform: var(--bkbg-ccv-tt-text-transform, none);
+    text-decoration: var(--bkbg-ccv-tt-text-decoration, none);
+    letter-spacing: var(--bkbg-ccv-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-ccv-tt-word-spacing-d, normal);
+}
+
+.bkbg-ccv-subtitle,
+.bkbg-clr-app .bkbg-ccv-subtitle {
+    font-size: var(--bkbg-ccv-st-font-size-d, 15px);
+    line-height: var(--bkbg-ccv-st-line-height-d, 1.5);
+    font-family: var(--bkbg-ccv-st-font-family, inherit);
+    font-weight: var(--bkbg-ccv-st-font-weight, 400);
+    font-style: var(--bkbg-ccv-st-font-style, normal);
+    text-transform: var(--bkbg-ccv-st-text-transform, none);
+    text-decoration: var(--bkbg-ccv-st-text-decoration, none);
+    letter-spacing: var(--bkbg-ccv-st-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-ccv-st-word-spacing-d, normal);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-ccv-title, .bkbg-clr-app .bkbg-ccv-title {
+        font-size: var(--bkbg-ccv-tt-font-size-t, var(--bkbg-ccv-tt-font-size-d, 28px));
+        line-height: var(--bkbg-ccv-tt-line-height-t, var(--bkbg-ccv-tt-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-ccv-tt-letter-spacing-t, var(--bkbg-ccv-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-ccv-tt-word-spacing-t, var(--bkbg-ccv-tt-word-spacing-d, normal));
+    }
+    .bkbg-ccv-subtitle, .bkbg-clr-app .bkbg-ccv-subtitle {
+        font-size: var(--bkbg-ccv-st-font-size-t, var(--bkbg-ccv-st-font-size-d, 15px));
+        line-height: var(--bkbg-ccv-st-line-height-t, var(--bkbg-ccv-st-line-height-d, 1.5));
+        letter-spacing: var(--bkbg-ccv-st-letter-spacing-t, var(--bkbg-ccv-st-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-ccv-st-word-spacing-t, var(--bkbg-ccv-st-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-ccv-title, .bkbg-clr-app .bkbg-ccv-title {
+        font-size: var(--bkbg-ccv-tt-font-size-m, var(--bkbg-ccv-tt-font-size-t, var(--bkbg-ccv-tt-font-size-d, 28px)));
+        line-height: var(--bkbg-ccv-tt-line-height-m, var(--bkbg-ccv-tt-line-height-t, var(--bkbg-ccv-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-ccv-tt-letter-spacing-m, var(--bkbg-ccv-tt-letter-spacing-t, var(--bkbg-ccv-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-ccv-tt-word-spacing-m, var(--bkbg-ccv-tt-word-spacing-t, var(--bkbg-ccv-tt-word-spacing-d, normal)));
+    }
+    .bkbg-ccv-subtitle, .bkbg-clr-app .bkbg-ccv-subtitle {
+        font-size: var(--bkbg-ccv-st-font-size-m, var(--bkbg-ccv-st-font-size-t, var(--bkbg-ccv-st-font-size-d, 15px)));
+        line-height: var(--bkbg-ccv-st-line-height-m, var(--bkbg-ccv-st-line-height-t, var(--bkbg-ccv-st-line-height-d, 1.5)));
+        letter-spacing: var(--bkbg-ccv-st-letter-spacing-m, var(--bkbg-ccv-st-letter-spacing-t, var(--bkbg-ccv-st-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-ccv-st-word-spacing-m, var(--bkbg-ccv-st-word-spacing-t, var(--bkbg-ccv-st-word-spacing-d, normal)));
+    }
+}

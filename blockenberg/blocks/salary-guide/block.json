@@ -1,0 +1,244 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/salary-guide",
+    "version": "1.0.0",
+    "title": "Salary Guide",
+    "category": "bkbg-blog",
+    "icon": "chart-bar",
+    "description": "Display salary ranges by role and level with visual min/max bars and median markers.",
+    "keywords": [
+        "salary",
+        "compensation",
+        "pay",
+        "guide",
+        "range",
+        "job",
+        "career"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-salary-guide-editor",
+    "editorStyle": "bkbg-salary-guide-style",
+    "style": "bkbg-salary-guide-style",
+    "viewScript": "bkbg-salary-guide-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "guideTitle": {
+            "type": "string",
+            "default": "Software Engineering Salary Guide"
+        },
+        "description": {
+            "type": "string",
+            "default": "Compensation ranges based on real market data. Figures represent base salary."
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "period": {
+            "type": "string",
+            "default": "year"
+        },
+        "location": {
+            "type": "string",
+            "default": "San Francisco, CA"
+        },
+        "showLocation": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBars": {
+            "type": "boolean",
+            "default": true
+        },
+        "showMedian": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLevel": {
+            "type": "boolean",
+            "default": true
+        },
+        "groupByCategory": {
+            "type": "boolean",
+            "default": false
+        },
+        "roles": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Frontend Engineer",
+                    "level": "Junior",
+                    "min": 85000,
+                    "median": 105000,
+                    "max": 130000,
+                    "category": "Engineering"
+                },
+                {
+                    "title": "Frontend Engineer",
+                    "level": "Mid",
+                    "min": 115000,
+                    "median": 140000,
+                    "max": 170000,
+                    "category": "Engineering"
+                },
+                {
+                    "title": "Frontend Engineer",
+                    "level": "Senior",
+                    "min": 155000,
+                    "median": 185000,
+                    "max": 225000,
+                    "category": "Engineering"
+                },
+                {
+                    "title": "Backend Engineer",
+                    "level": "Junior",
+                    "min": 90000,
+                    "median": 110000,
+                    "max": 135000,
+                    "category": "Engineering"
+                },
+                {
+                    "title": "Backend Engineer",
+                    "level": "Senior",
+                    "min": 160000,
+                    "median": 195000,
+                    "max": 240000,
+                    "category": "Engineering"
+                },
+                {
+                    "title": "Engineering Manager",
+                    "level": "Lead",
+                    "min": 190000,
+                    "median": 225000,
+                    "max": 275000,
+                    "category": "Engineering"
+                },
+                {
+                    "title": "Product Designer",
+                    "level": "Mid",
+                    "min": 105000,
+                    "median": 130000,
+                    "max": 160000,
+                    "category": "Design"
+                },
+                {
+                    "title": "Lead Designer",
+                    "level": "Lead",
+                    "min": 150000,
+                    "median": 175000,
+                    "max": 210000,
+                    "category": "Design"
+                },
+                {
+                    "title": "Data Scientist",
+                    "level": "Senior",
+                    "min": 155000,
+                    "median": 185000,
+                    "max": 230000,
+                    "category": "Data"
+                },
+                {
+                    "title": "Staff Engineer",
+                    "level": "Principal",
+                    "min": 230000,
+                    "median": 270000,
+                    "max": 340000,
+                    "category": "Engineering"
+                }
+            ]
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 24
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 160
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "barHeight": {
+            "type": "number",
+            "default": 10
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "roleTitleColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "levelBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "levelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "rangeLabelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "barTrackColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "barFillColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "medianColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "categoryHeadColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "categoryHeadBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,153 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/row",
+    "title": "Row",
+    "category": "bkbg-layout",
+    "icon": "columns",
+    "description": "A row container for columns with drag-resize support.",
+    "keywords": [
+        "row",
+        "columns",
+        "grid",
+        "layout",
+        "flex"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-row-editor",
+    "editorStyle": "bkbg-row-style",
+    "style": "bkbg-row-style",
+    "parent": [
+        "blockenberg/section"
+    ],
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true
+    },
+    "attributes": {
+        "gap": {
+            "type": "string",
+            "default": "m"
+        },
+        "vAlign": {
+            "type": "string",
+            "default": "top"
+        },
+        "responsiveMode": {
+            "type": "string",
+            "default": "desktop"
+        },
+        "stackOnMobile": {
+            "type": "boolean",
+            "default": true
+        },
+        "minColumnPct": {
+            "type": "number",
+            "default": 10
+        },
+        "columnsCount": {
+            "type": "number",
+            "default": 1
+        },
+        "paddingTop": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTopUnit": {
+            "type": "string",
+            "default": "px"
+        },
+        "paddingTopCustomUnit": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingRight": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingRightUnit": {
+            "type": "string",
+            "default": "px"
+        },
+        "paddingRightCustomUnit": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingBottom": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingBottomUnit": {
+            "type": "string",
+            "default": "px"
+        },
+        "paddingBottomCustomUnit": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingLeft": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingLeftUnit": {
+            "type": "string",
+            "default": "px"
+        },
+        "paddingLeftCustomUnit": {
+            "type": "string",
+            "default": ""
+        },
+        "marginTop": {
+            "type": "string",
+            "default": ""
+        },
+        "marginTopUnit": {
+            "type": "string",
+            "default": "px"
+        },
+        "marginTopCustomUnit": {
+            "type": "string",
+            "default": ""
+        },
+        "marginRight": {
+            "type": "string",
+            "default": ""
+        },
+        "marginRightUnit": {
+            "type": "string",
+            "default": "px"
+        },
+        "marginRightCustomUnit": {
+            "type": "string",
+            "default": ""
+        },
+        "marginBottom": {
+            "type": "string",
+            "default": ""
+        },
+        "marginBottomUnit": {
+            "type": "string",
+            "default": "px"
+        },
+        "marginBottomCustomUnit": {
+            "type": "string",
+            "default": ""
+        },
+        "marginLeft": {
+            "type": "string",
+            "default": ""
+        },
+        "marginLeftUnit": {
+            "type": "string",
+            "default": "px"
+        },
+        "marginLeftCustomUnit": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "allowedBlocks": [
+        "blockenberg/column"
+    ]
+}

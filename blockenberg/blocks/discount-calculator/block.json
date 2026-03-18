@@ -1,0 +1,178 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/discount-calculator",
+    "title": "Discount Calculator",
+    "category": "bkbg-calculators",
+    "icon": "tag",
+    "description": "Calculate sale prices from discount percentages, find original prices from sale prices, or determine what discount percentage was applied. Three versatile calculation modes.",
+    "keywords": [
+        "discount",
+        "sale",
+        "price",
+        "coupon",
+        "percentage",
+        "calculator",
+        "savings",
+        "deal"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-discount-calculator-editor",
+    "style": "bkbg-discount-calculator-style",
+    "viewScript": "bkbg-discount-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Discount Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Find sale prices, original prices, or what discount was applied."
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "mode": {
+            "type": "string",
+            "default": "sale_price"
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "currencyPos": {
+            "type": "string",
+            "default": "before"
+        },
+        "defaultOriginal": {
+            "type": "number",
+            "default": 200
+        },
+        "defaultDiscount": {
+            "type": "number",
+            "default": 25
+        },
+        "defaultSale": {
+            "type": "number",
+            "default": 150
+        },
+        "showSavingsBar": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "resultBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "salePriceColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "origPriceColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "savingsColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "barBg": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "barFill": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "salePriceSize": {
+            "type": "number",
+            "default": 56
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 520
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

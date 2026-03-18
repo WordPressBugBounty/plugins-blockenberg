@@ -1,0 +1,279 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/sprint-retrospective",
+    "title": "Sprint Retrospective",
+    "description": "Agile sprint retro: velocity, mood, what went well, improvements, and action items with owners.",
+    "category": "bkbg-blog",
+    "icon": "update",
+    "keywords": [
+        "sprint",
+        "retrospective",
+        "retro",
+        "agile",
+        "scrum"
+    ],
+    "editorScript": "bkbg-sprint-retrospective-editor",
+    "editorStyle": "bkbg-sprint-retrospective-style",
+    "style": "bkbg-sprint-retrospective-style",
+    "viewScript": "bkbg-sprint-retrospective-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "sprintNumber": {
+            "type": "string",
+            "default": "Sprint 42"
+        },
+        "sprintGoal": {
+            "type": "string",
+            "default": "Ship checkout redesign + integrate Payment API v2"
+        },
+        "startDate": {
+            "type": "string",
+            "default": "Jan 27, 2026"
+        },
+        "endDate": {
+            "type": "string",
+            "default": "Feb 7, 2026"
+        },
+        "velocityPlanned": {
+            "type": "number",
+            "default": 40
+        },
+        "velocityActual": {
+            "type": "number",
+            "default": 34
+        },
+        "showVelocity": {
+            "type": "boolean",
+            "default": true
+        },
+        "mood": {
+            "type": "string",
+            "default": "good"
+        },
+        "showMood": {
+            "type": "boolean",
+            "default": true
+        },
+        "teamMembers": {
+            "type": "array",
+            "default": [
+                "Priya K.",
+                "James L.",
+                "Sofia M.",
+                "Tariq A.",
+                "Nina B."
+            ]
+        },
+        "showTeam": {
+            "type": "boolean",
+            "default": true
+        },
+        "wentWell": {
+            "type": "array",
+            "default": [
+                "Shipped the full checkout redesign on schedule with zero regression bugs in prod",
+                "Daily async standups were focused and concise — team praised the new format",
+                "Collaboration with design was smooth; Figma → code handoff had no blockers this sprint",
+                "On-call rotation worked well; incidents resolved within SLA targets"
+            ]
+        },
+        "wentWellLabel": {
+            "type": "string",
+            "default": "✅ Went Well"
+        },
+        "toImprove": {
+            "type": "array",
+            "default": [
+                "Payment API v2 integration was scoped too loosely — 3 of 5 tasks spilled over",
+                "Two stories lacked acceptance criteria at sprint start, causing mid-sprint rework",
+                "Test coverage for the new payment flow was below our 80% target at 67%"
+            ]
+        },
+        "toImproveLabel": {
+            "type": "string",
+            "default": "🔧 To Improve"
+        },
+        "actionItems": {
+            "type": "array",
+            "default": [
+                {
+                    "task": "Add AC template to Jira story template; enforce before sprint planning",
+                    "owner": "Priya K.",
+                    "priority": "high"
+                },
+                {
+                    "task": "Break Payment API v2 remaining work into smaller, independently testable stories",
+                    "owner": "James L.",
+                    "priority": "high"
+                },
+                {
+                    "task": "Write missing payment flow tests to reach 80% coverage by next sprint",
+                    "owner": "Sofia M.",
+                    "priority": "medium"
+                },
+                {
+                    "task": "Document the API integration edge cases in Confluence for future reference",
+                    "owner": "Tariq A.",
+                    "priority": "low"
+                }
+            ]
+        },
+        "actionItemsLabel": {
+            "type": "string",
+            "default": "⚡ Action Items"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 168
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "velocityFillColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "velocityBgColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "velocityTextColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "wellBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "wellBorder": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "wellColor": {
+            "type": "string",
+            "default": "#166534"
+        },
+        "wellHeadBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "improveBg": {
+            "type": "string",
+            "default": "#fffbeb"
+        },
+        "improveBorder": {
+            "type": "string",
+            "default": "#d97706"
+        },
+        "improveColor": {
+            "type": "string",
+            "default": "#78350f"
+        },
+        "improveHeadBg": {
+            "type": "string",
+            "default": "#fef3c7"
+        },
+        "actionBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "actionBorder": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "actionColor": {
+            "type": "string",
+            "default": "#4c1d95"
+        },
+        "actionHeadBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "highBg": {
+            "type": "string",
+            "default": "#fee2e2"
+        },
+        "highColor": {
+            "type": "string",
+            "default": "#991b1b"
+        },
+        "medBg": {
+            "type": "string",
+            "default": "#fef3c7"
+        },
+        "medColor": {
+            "type": "string",
+            "default": "#78350f"
+        },
+        "lowBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "lowColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "teamBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "teamColor": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

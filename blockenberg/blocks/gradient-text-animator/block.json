@@ -1,0 +1,153 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/gradient-text-animator",
+    "version": "1.0.0",
+    "title": "Gradient Text Animator",
+    "category": "bkbg-effects",
+    "icon": "editor-textcolor",
+    "description": "Animated gradient-filled text with multiple animation modes — shift, pulse, wave, rainbow, and reveal.",
+    "keywords": [
+        "gradient",
+        "text",
+        "animation",
+        "heading",
+        "rainbow",
+        "wave"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-gradient-text-animator-editor",
+    "style": "bkbg-gradient-text-animator-style",
+    "viewScript": "bkbg-gradient-text-animator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "text": {
+            "type": "string",
+            "default": "Animated Gradient Text"
+        },
+        "tag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "fontSize": {
+            "type": "integer",
+            "default": 56
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "800"
+        },
+        "letterSpacing": {
+            "type": "number",
+            "default": -1
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.15
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "fontFamily": {
+            "type": "string",
+            "default": "inherit"
+        },
+        "animationType": {
+            "type": "string",
+            "default": "shift"
+        },
+        "animationSpeed": {
+            "type": "number",
+            "default": 4
+        },
+        "direction": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "color1": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "color2": {
+            "type": "string",
+            "default": "#ec4899"
+        },
+        "color3": {
+            "type": "string",
+            "default": "#8b5cf6"
+        },
+        "color4": {
+            "type": "string",
+            "default": "#06b6d4"
+        },
+        "stopCount": {
+            "type": "integer",
+            "default": 4
+        },
+        "glowEffect": {
+            "type": "boolean",
+            "default": false
+        },
+        "glowBlur": {
+            "type": "integer",
+            "default": 20
+        },
+        "glowOpacity": {
+            "type": "number",
+            "default": 0.6
+        },
+        "showBg": {
+            "type": "boolean",
+            "default": false
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "paddingV": {
+            "type": "integer",
+            "default": 24
+        },
+        "paddingH": {
+            "type": "integer",
+            "default": 24
+        },
+        "borderRadius": {
+            "type": "integer",
+            "default": 0
+        },
+        "strokeEffect": {
+            "type": "boolean",
+            "default": false
+        },
+        "strokeWidth": {
+            "type": "integer",
+            "default": 2
+        },
+        "strokeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "pauseOnHover": {
+            "type": "boolean",
+            "default": false
+        },
+        "reverseOnHover": {
+            "type": "boolean",
+            "default": false
+        },
+        "typoText": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,122 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/expense-tracker",
+    "title": "Expense Tracker",
+    "category": "bkbg-interactive",
+    "icon": "chart-bar",
+    "description": "Track and visualize expenses by category with charts, totals, and budget management.",
+    "keywords": [
+        "expense",
+        "budget",
+        "finance",
+        "tracker",
+        "money",
+        "spending"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-expense-tracker-editor",
+    "style": "bkbg-expense-tracker-style",
+    "viewScript": "bkbg-expense-tracker-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Expense Tracker"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Track your spending by category"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showChart": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBudget": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultBudget": {
+            "type": "number",
+            "default": 1000
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "dangerColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#064e3b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#d1fae5"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 26
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "subtitleFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "subtitleFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 720
+        },
+        "typoTitle": { "type": "object", "default": {} },
+        "typoSubtitle": { "type": "object", "default": {} }
+    }
+}

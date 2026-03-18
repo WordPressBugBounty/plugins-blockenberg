@@ -1,0 +1,65 @@
+/* === Icon Cloud === */
+
+.bkbg-ic-wrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--bkbg-ic-radius, 0px);
+    background: var(--bkbg-ic-bg, transparent);
+    user-select: none;
+}
+
+.bkbg-ic-stage {
+    position: relative;
+    width: 100%;
+    height: var(--bkbg-ic-height, 500px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bkbg-ic-item {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: center center;
+    white-space: nowrap;
+    cursor: default;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    border: 1px solid var(--bkbg-ic-item-border, #7c3aed44);
+    background: var(--bkbg-ic-item-bg, #1e1b4b);
+    font-family: var(--bkbg-ic-it-font-family, inherit);
+    font-weight: var(--bkbg-ic-it-font-weight, var(--bkbg-ic-fw, 600));
+    font-size: var(--bkbg-ic-it-font-size-d, var(--bkbg-ic-fs, 14px));
+    font-style: var(--bkbg-ic-it-font-style, normal);
+    text-decoration: var(--bkbg-ic-it-text-decoration, none);
+    text-transform: var(--bkbg-ic-it-text-transform, none);
+    line-height: var(--bkbg-ic-it-line-height-d, 1);
+    letter-spacing: var(--bkbg-ic-it-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-ic-it-word-spacing-d, normal);
+    border-radius: var(--bkbg-ic-br, 6px);
+    padding: var(--bkbg-ic-pv, 6px) var(--bkbg-ic-ph, 12px);
+}
+
+.bkbg-ic-item:hover {
+    background: var(--bkbg-ic-hover-bg, #7c3aed) !important;
+    color: var(--bkbg-ic-hover-color, #fff) !important;
+    box-shadow: 0 0 16px var(--bkbg-ic-hover-bg, #7c3aed)88;
+    z-index: 9999 !important;
+}
+
+@media (max-width: 1024px) {
+    .bkbg-ic-item {
+        font-size: var(--bkbg-ic-it-font-size-t, var(--bkbg-ic-it-font-size-d, var(--bkbg-ic-fs, 14px)));
+        line-height: var(--bkbg-ic-it-line-height-t, var(--bkbg-ic-it-line-height-d, 1));
+        letter-spacing: var(--bkbg-ic-it-letter-spacing-t, var(--bkbg-ic-it-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-ic-it-word-spacing-t, var(--bkbg-ic-it-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-ic-item {
+        font-size: var(--bkbg-ic-it-font-size-m, var(--bkbg-ic-it-font-size-t, var(--bkbg-ic-it-font-size-d, var(--bkbg-ic-fs, 14px))));
+        line-height: var(--bkbg-ic-it-line-height-m, var(--bkbg-ic-it-line-height-t, var(--bkbg-ic-it-line-height-d, 1)));
+        letter-spacing: var(--bkbg-ic-it-letter-spacing-m, var(--bkbg-ic-it-letter-spacing-t, var(--bkbg-ic-it-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-ic-it-word-spacing-m, var(--bkbg-ic-it-word-spacing-t, var(--bkbg-ic-it-word-spacing-d, normal)));
+    }
+}

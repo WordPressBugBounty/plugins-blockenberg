@@ -1,0 +1,284 @@
+/* ============================================================
+   Flip Card — style.css
+   Blockenberg plugin
+   ============================================================ */
+
+/* ── Scene wrapper (alignment) ──────────────────────────── */
+.bkbg-fc-scene {
+    display: flex;
+    width: 100%;
+}
+
+/* ── Outer: perspective container ───────────────────────── */
+.bkbg-fc-outer {
+    width:  var(--bkbg-fc-w,  280px);
+    height: var(--bkbg-fc-h,  320px);
+    perspective: 1000px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Click-trigger: no special cursor difference needed */
+/* .bkbg-fc-outer:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 3px;
+} */
+
+/* ── Inner: the actual flipping element ─────────────────── */
+.bkbg-fc-inner {
+    width:  100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform var(--bkbg-fc-speed, 500ms) ease;
+    border-radius: var(--bkbg-fc-radius, 16px);
+    box-shadow: var(--bkbg-fc-shadow, 0 4px 6px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.06));
+}
+
+/* ── Hover trigger ──────────────────────────────────────── */
+.bkbg-fc-outer[data-flip-trigger="hover"]:hover .bkbg-fc-inner,
+.bkbg-fc-outer[data-flip-trigger="hover"]:focus .bkbg-fc-inner {
+    transform: rotateY(180deg);
+}
+
+.bkbg-fc-outer[data-flip-dir="vertical"][data-flip-trigger="hover"]:hover .bkbg-fc-inner,
+.bkbg-fc-outer[data-flip-dir="vertical"][data-flip-trigger="hover"]:focus .bkbg-fc-inner {
+    transform: rotateX(180deg);
+}
+
+/* ── Click trigger (JS adds data-flipped) ───────────────── */
+.bkbg-fc-outer[data-flip-trigger="click"][data-flipped="true"] .bkbg-fc-inner {
+    transform: rotateY(180deg);
+}
+
+.bkbg-fc-outer[data-flip-dir="vertical"][data-flip-trigger="click"][data-flipped="true"] .bkbg-fc-inner {
+    transform: rotateX(180deg);
+}
+
+/* ── Both faces ─────────────────────────────────────────── */
+.bkbg-fc-face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: var(--bkbg-fc-radius, 16px);
+}
+
+/* ── Front face ─────────────────────────────────────────── */
+.bkbg-fc-front {
+    background: #ffffff;
+    /* rotation = 0° already faces viewer */
+}
+
+/* ── Back face ──────────────────────────────────────────── */
+.bkbg-fc-back {
+    background: #3b82f6;
+    transform: rotateY(180deg);
+}
+
+.bkbg-fc-outer[data-flip-dir="vertical"] .bkbg-fc-back {
+    transform: rotateX(180deg);
+}
+
+/* ── Icon wrapper ───────────────────────────────────────── */
+.bkbg-fc-icon-wrap {
+    flex-shrink: 0;
+}
+
+.bkbg-fc-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--bkbg-fc-icon-size, 48px);
+    height: var(--bkbg-fc-icon-size, 48px);
+    color: var(--bkbg-fc-icon-color, currentColor);
+    flex-shrink: 0;
+}
+
+.bkbg-fc-icon svg {
+    display: block;
+    width: var(--bkbg-fc-icon-size, 48px);
+    height: var(--bkbg-fc-icon-size, 48px);
+    fill: currentColor;
+}
+
+.bkbg-fc-icon .dashicons {
+    font-size: var(--bkbg-fc-icon-size, 48px);
+    width: var(--bkbg-fc-icon-size, 48px);
+    height: var(--bkbg-fc-icon-size, 48px);
+    color: inherit;
+}
+
+.bkbg-fc-char {
+    font-size: var(--bkbg-fc-icon-size, 48px);
+    line-height: 1;
+    display: block;
+    color: inherit;
+}
+
+/* ── Front title ────────────────────────────────────────── */
+.bkbg-fc-outer .bkbg-fc-front-title {
+    font-family: var(--bkbg-flipc-ft-font-family, inherit);
+    font-size: var(--bkbg-flipc-ft-font-size-d, 20px);
+    font-weight: var(--bkbg-flipc-ft-font-weight, 700);
+    line-height: var(--bkbg-flipc-ft-line-height-d, 1.3);
+    text-transform: var(--bkbg-flipc-ft-text-transform, none);
+    font-style: var(--bkbg-flipc-ft-font-style, normal);
+    text-decoration: var(--bkbg-flipc-ft-text-decoration, none);
+    letter-spacing: var(--bkbg-flipc-ft-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-flipc-ft-word-spacing-d, normal);
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Subtitle / tag line ────────────────────────────────── */
+.bkbg-fc-outer .bkbg-fc-sub {
+    font-family: var(--bkbg-flipc-fs-font-family, inherit);
+    font-size: var(--bkbg-flipc-fs-font-size-d, 13px);
+    font-weight: var(--bkbg-flipc-fs-font-weight, 400);
+    line-height: var(--bkbg-flipc-fs-line-height-d, 1.4);
+    text-transform: var(--bkbg-flipc-fs-text-transform, none);
+    font-style: var(--bkbg-flipc-fs-font-style, normal);
+    text-decoration: var(--bkbg-flipc-fs-text-decoration, none);
+    letter-spacing: var(--bkbg-flipc-fs-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-flipc-fs-word-spacing-d, normal);
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Flip hint ──────────────────────────────────────────── */
+.bkbg-fc-hint {
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Back title ─────────────────────────────────────────── */
+.bkbg-fc-outer .bkbg-fc-back-title {
+    font-family: var(--bkbg-flipc-bt-font-family, inherit);
+    font-size: var(--bkbg-flipc-bt-font-size-d, 20px);
+    font-weight: var(--bkbg-flipc-bt-font-weight, 700);
+    line-height: var(--bkbg-flipc-bt-line-height-d, 1.3);
+    text-transform: var(--bkbg-flipc-bt-text-transform, none);
+    font-style: var(--bkbg-flipc-bt-font-style, normal);
+    text-decoration: var(--bkbg-flipc-bt-text-decoration, none);
+    letter-spacing: var(--bkbg-flipc-bt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-flipc-bt-word-spacing-d, normal);
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Back body text ─────────────────────────────────────── */
+.bkbg-fc-outer .bkbg-fc-back-text {
+    font-family: var(--bkbg-flipc-bx-font-family, inherit);
+    font-size: var(--bkbg-flipc-bx-font-size-d, 14px);
+    font-weight: var(--bkbg-flipc-bx-font-weight, 400);
+    line-height: var(--bkbg-flipc-bx-line-height-d, 1.65);
+    text-transform: var(--bkbg-flipc-bx-text-transform, none);
+    font-style: var(--bkbg-flipc-bx-font-style, normal);
+    text-decoration: var(--bkbg-flipc-bx-text-decoration, none);
+    letter-spacing: var(--bkbg-flipc-bx-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-flipc-bx-word-spacing-d, normal);
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Button ─────────────────────────────────────────────── */
+.bkbg-fc-btn {
+    display: inline-block;
+    font-family: var(--bkbg-flipc-bn-font-family, inherit);
+    font-size: var(--bkbg-flipc-bn-font-size-d, 14px);
+    font-weight: var(--bkbg-flipc-bn-font-weight, 600);
+    line-height: var(--bkbg-flipc-bn-line-height-d, 1.2);
+    text-transform: var(--bkbg-flipc-bn-text-transform, none);
+    font-style: var(--bkbg-flipc-bn-font-style, normal);
+    text-decoration: var(--bkbg-flipc-bn-text-decoration, none);
+    letter-spacing: var(--bkbg-flipc-bn-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-flipc-bn-word-spacing-d, normal);
+    white-space: nowrap;
+    transition: opacity .15s ease, transform .15s ease;
+    cursor: pointer;
+}
+
+.bkbg-fc-btn:hover {
+    opacity: .85;
+    transform: translateY(-1px);
+}
+
+/* ── Typography responsive ──────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-fc-outer .bkbg-fc-front-title {
+        font-size: var(--bkbg-flipc-ft-font-size-t, var(--bkbg-flipc-ft-font-size-d, 20px));
+        line-height: var(--bkbg-flipc-ft-line-height-t, var(--bkbg-flipc-ft-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-flipc-ft-letter-spacing-t, var(--bkbg-flipc-ft-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-flipc-ft-word-spacing-t, var(--bkbg-flipc-ft-word-spacing-d, normal));
+    }
+    .bkbg-fc-outer .bkbg-fc-sub {
+        font-size: var(--bkbg-flipc-fs-font-size-t, var(--bkbg-flipc-fs-font-size-d, 13px));
+        line-height: var(--bkbg-flipc-fs-line-height-t, var(--bkbg-flipc-fs-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-flipc-fs-letter-spacing-t, var(--bkbg-flipc-fs-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-flipc-fs-word-spacing-t, var(--bkbg-flipc-fs-word-spacing-d, normal));
+    }
+    .bkbg-fc-outer .bkbg-fc-back-title {
+        font-size: var(--bkbg-flipc-bt-font-size-t, var(--bkbg-flipc-bt-font-size-d, 20px));
+        line-height: var(--bkbg-flipc-bt-line-height-t, var(--bkbg-flipc-bt-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-flipc-bt-letter-spacing-t, var(--bkbg-flipc-bt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-flipc-bt-word-spacing-t, var(--bkbg-flipc-bt-word-spacing-d, normal));
+    }
+    .bkbg-fc-outer .bkbg-fc-back-text {
+        font-size: var(--bkbg-flipc-bx-font-size-t, var(--bkbg-flipc-bx-font-size-d, 14px));
+        line-height: var(--bkbg-flipc-bx-line-height-t, var(--bkbg-flipc-bx-line-height-d, 1.65));
+        letter-spacing: var(--bkbg-flipc-bx-letter-spacing-t, var(--bkbg-flipc-bx-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-flipc-bx-word-spacing-t, var(--bkbg-flipc-bx-word-spacing-d, normal));
+    }
+    .bkbg-fc-btn {
+        font-size: var(--bkbg-flipc-bn-font-size-t, var(--bkbg-flipc-bn-font-size-d, 14px));
+        line-height: var(--bkbg-flipc-bn-line-height-t, var(--bkbg-flipc-bn-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-flipc-bn-letter-spacing-t, var(--bkbg-flipc-bn-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-flipc-bn-word-spacing-t, var(--bkbg-flipc-bn-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-fc-outer .bkbg-fc-front-title {
+        font-size: var(--bkbg-flipc-ft-font-size-m, var(--bkbg-flipc-ft-font-size-t, var(--bkbg-flipc-ft-font-size-d, 20px)));
+        line-height: var(--bkbg-flipc-ft-line-height-m, var(--bkbg-flipc-ft-line-height-t, var(--bkbg-flipc-ft-line-height-d, 1.3)));
+        letter-spacing: var(--bkbg-flipc-ft-letter-spacing-m, var(--bkbg-flipc-ft-letter-spacing-t, var(--bkbg-flipc-ft-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-flipc-ft-word-spacing-m, var(--bkbg-flipc-ft-word-spacing-t, var(--bkbg-flipc-ft-word-spacing-d, normal)));
+    }
+    .bkbg-fc-outer .bkbg-fc-sub {
+        font-size: var(--bkbg-flipc-fs-font-size-m, var(--bkbg-flipc-fs-font-size-t, var(--bkbg-flipc-fs-font-size-d, 13px)));
+        line-height: var(--bkbg-flipc-fs-line-height-m, var(--bkbg-flipc-fs-line-height-t, var(--bkbg-flipc-fs-line-height-d, 1.4)));
+        letter-spacing: var(--bkbg-flipc-fs-letter-spacing-m, var(--bkbg-flipc-fs-letter-spacing-t, var(--bkbg-flipc-fs-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-flipc-fs-word-spacing-m, var(--bkbg-flipc-fs-word-spacing-t, var(--bkbg-flipc-fs-word-spacing-d, normal)));
+    }
+    .bkbg-fc-outer .bkbg-fc-back-title {
+        font-size: var(--bkbg-flipc-bt-font-size-m, var(--bkbg-flipc-bt-font-size-t, var(--bkbg-flipc-bt-font-size-d, 20px)));
+        line-height: var(--bkbg-flipc-bt-line-height-m, var(--bkbg-flipc-bt-line-height-t, var(--bkbg-flipc-bt-line-height-d, 1.3)));
+        letter-spacing: var(--bkbg-flipc-bt-letter-spacing-m, var(--bkbg-flipc-bt-letter-spacing-t, var(--bkbg-flipc-bt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-flipc-bt-word-spacing-m, var(--bkbg-flipc-bt-word-spacing-t, var(--bkbg-flipc-bt-word-spacing-d, normal)));
+    }
+    .bkbg-fc-outer .bkbg-fc-back-text {
+        font-size: var(--bkbg-flipc-bx-font-size-m, var(--bkbg-flipc-bx-font-size-t, var(--bkbg-flipc-bx-font-size-d, 14px)));
+        line-height: var(--bkbg-flipc-bx-line-height-m, var(--bkbg-flipc-bx-line-height-t, var(--bkbg-flipc-bx-line-height-d, 1.65)));
+        letter-spacing: var(--bkbg-flipc-bx-letter-spacing-m, var(--bkbg-flipc-bx-letter-spacing-t, var(--bkbg-flipc-bx-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-flipc-bx-word-spacing-m, var(--bkbg-flipc-bx-word-spacing-t, var(--bkbg-flipc-bx-word-spacing-d, normal)));
+    }
+    .bkbg-fc-btn {
+        font-size: var(--bkbg-flipc-bn-font-size-m, var(--bkbg-flipc-bn-font-size-t, var(--bkbg-flipc-bn-font-size-d, 14px)));
+        line-height: var(--bkbg-flipc-bn-line-height-m, var(--bkbg-flipc-bn-line-height-t, var(--bkbg-flipc-bn-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-flipc-bn-letter-spacing-m, var(--bkbg-flipc-bn-letter-spacing-t, var(--bkbg-flipc-bn-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-flipc-bn-word-spacing-m, var(--bkbg-flipc-bn-word-spacing-t, var(--bkbg-flipc-bn-word-spacing-d, normal)));
+    }
+}
+
+/* ── Reduced motion ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .bkbg-fc-inner {
+        transition: none;
+    }
+}

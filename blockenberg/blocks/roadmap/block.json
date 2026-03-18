@@ -1,0 +1,130 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/roadmap",
+    "title": "Roadmap",
+    "category": "bkbg-business",
+    "icon": "arrow-right-alt",
+    "description": "Horizontal future roadmap with quarter/milestone cards, status tags and connector arrows.",
+    "keywords": [
+        "roadmap",
+        "timeline",
+        "milestone",
+        "quarter",
+        "plan",
+        "process"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-roadmap-editor",
+    "editorStyle": "bkbg-roadmap-style",
+    "style": "bkbg-roadmap-style",
+    "viewScript": "bkbg-roadmap-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Q1 2024",
+                    "title": "Foundation",
+                    "desc": "Core architecture and planning.",
+                    "status": "done"
+                },
+                {
+                    "label": "Q2 2024",
+                    "title": "Beta Launch",
+                    "desc": "Public beta with early adopters.",
+                    "status": "progress"
+                },
+                {
+                    "label": "Q3 2024",
+                    "title": "v1.0 Release",
+                    "desc": "Full product launch.",
+                    "status": "planned"
+                },
+                {
+                    "label": "Q4 2024",
+                    "title": "Scale",
+                    "desc": "Growth and partnership expansion.",
+                    "status": "planned"
+                }
+            ]
+        },
+        "cardWidth": {
+            "type": "number",
+            "default": 200
+        },
+        "cardGap": {
+            "type": "number",
+            "default": 24
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "doneColor": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "progressColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "plannedColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "connectorColor": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "titleFontWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "descFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "descFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "descLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

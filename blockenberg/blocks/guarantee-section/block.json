@@ -1,0 +1,177 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/guarantee-section",
+    "version": "1.0.0",
+    "title": "Guarantee Section",
+    "category": "bkbg-marketing",
+    "icon": "shield",
+    "description": "Money-back / risk-reversal section with badge seal, heading, description, bullet-point guarantee terms, optional CTA, and full color controls.",
+    "keywords": [
+        "guarantee",
+        "money back",
+        "refund",
+        "risk",
+        "trust",
+        "badge"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-guarantee-section-editor",
+    "style": "bkbg-guarantee-section-style",
+    "viewScript": "bkbg-guarantee-section-frontend",
+    "attributes": {
+        "sealIcon": {
+            "type": "string",
+            "default": "🛡️"
+        },
+        "sealIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "sealIconDashicon": {
+            "type": "string",
+            "default": "shield"
+        },
+        "sealIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "sealLabel": {
+            "type": "string",
+            "default": "30-Day"
+        },
+        "sealSub": {
+            "type": "string",
+            "default": "Money-Back\nGuarantee"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Try it completely risk-free."
+        },
+        "subtext": {
+            "type": "string",
+            "default": "We stands firmly behind our product. If you're not completely satisfied within 30 days, we'll refund every penny — no questions asked."
+        },
+        "bullets": {
+            "type": "array",
+            "default": [
+                "Full refund within 30 days, no questions asked",
+                "No lock-in contracts — cancel any time",
+                "Keep all your data and exports",
+                "Dedicated support for the full trial period"
+            ],
+            "items": {
+                "type": "string"
+            }
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Start Your Free Trial"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "layout": {
+            "type": "string",
+            "default": "split"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "sealBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "sealColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "bulletColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 36
+        },
+        "textSize": {
+            "type": "number",
+            "default": 17
+        },
+        "headingFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "headingLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "textFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "textLineHeight": {
+            "type": "number",
+            "default": 1.7
+        },
+        "typoHeading": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        },
+        "sealSize": {
+            "type": "number",
+            "default": 200
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1100
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

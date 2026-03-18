@@ -1,0 +1,194 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/link-list",
+    "version": "1.0.0",
+    "title": "Link List",
+    "category": "bkbg-content",
+    "description": "An organized, styled list of links with icons, titles, descriptions, and optional badges.",
+    "keywords": [
+        "links",
+        "list",
+        "resources",
+        "navigation",
+        "directory",
+        "hub"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-link-list-editor",
+    "style": "bkbg-link-list-style",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Useful Resources"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Handpicked links for developers and designers"
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "columns": {
+            "type": "number",
+            "default": 1
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "gap": {
+            "type": "number",
+            "default": 8
+        },
+        "itemRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "itemPadding": {
+            "type": "number",
+            "default": 14
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 15
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 22
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "links": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "📘",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "MDN Web Docs",
+                    "desc": "Comprehensive documentation for HTML, CSS, and JavaScript.",
+                    "url": "https://developer.mozilla.org",
+                    "badge": "Free",
+                    "accentColor": "#6366f1"
+                },
+                {
+                    "icon": "⚛️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "React Documentation",
+                    "desc": "Learn the fundamentals of building UIs with React.",
+                    "url": "https://react.dev",
+                    "badge": "Official",
+                    "accentColor": "#06b6d4"
+                },
+                {
+                    "icon": "🎨",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Tailwind CSS",
+                    "desc": "Utility-first CSS framework for rapid UI development.",
+                    "url": "https://tailwindcss.com",
+                    "badge": "v4",
+                    "accentColor": "#10b981"
+                },
+                {
+                    "icon": "🛠️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Vite",
+                    "desc": "Next generation frontend tooling — fast and opinionated.",
+                    "url": "https://vitejs.dev",
+                    "badge": "Tool",
+                    "accentColor": "#f59e0b"
+                },
+                {
+                    "icon": "🐙",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "GitHub",
+                    "desc": "Host, review, and collaborate on code with millions.",
+                    "url": "https://github.com",
+                    "badge": "Free",
+                    "accentColor": "#111827"
+                }
+            ]
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "linkTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

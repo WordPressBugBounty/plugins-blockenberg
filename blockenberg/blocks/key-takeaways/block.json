@@ -1,0 +1,150 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/key-takeaways",
+    "title": "Key Takeaways",
+    "category": "bkbg-blog",
+    "icon": "editor-ul",
+    "description": "A styled summary box for articles and blog posts highlighting the most important points. Supports custom heading, icon, bullet style, and rich color options.",
+    "keywords": [
+        "key takeaways",
+        "summary",
+        "highlights",
+        "checklist",
+        "tips",
+        "bullets",
+        "article",
+        "blog"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-key-takeaways-editor",
+    "style": "bkbg-key-takeaways-style",
+    "viewScript": "bkbg-key-takeaways-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Key Takeaways"
+        },
+        "showHeading": {
+            "type": "boolean",
+            "default": true
+        },
+        "headingIcon": {
+            "type": "string",
+            "default": "✦"
+        },
+        "headingIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "headingIconDashicon": {
+            "type": "string",
+            "default": "star-filled"
+        },
+        "headingIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "showHeadingIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                "The first and most important point goes here.",
+                "A second key insight or action item for the reader.",
+                "A third takeaway reinforcing the article's main message."
+            ]
+        },
+        "bulletStyle": {
+            "type": "string",
+            "default": "check"
+        },
+        "customBullet": {
+            "type": "string",
+            "default": "→"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "itemColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "bulletColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "iconBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderPosition": {
+            "type": "string",
+            "default": "left"
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 4
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "itemTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "paddingV": {
+            "type": "number",
+            "default": 28
+        },
+        "paddingH": {
+            "type": "number",
+            "default": 28
+        },
+        "itemGap": {
+            "type": "number",
+            "default": 14
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 760
+        },
+        "showDivider": {
+            "type": "boolean",
+            "default": true
+        }
+    }
+}

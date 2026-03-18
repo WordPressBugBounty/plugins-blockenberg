@@ -1,0 +1,92 @@
+/* Step Progress Block — bksp- prefix */
+.bksp-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 0;
+  padding: 12px 0;
+}
+
+.bksp-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.bksp-circle {
+  width: var(--bksp-cSize, 36px);
+  height: var(--bksp-cSize, 36px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: .9em;
+  transition: background .3s, border-color .3s;
+}
+
+.bksp-done .bksp-circle {
+  background: var(--bksp-done, #22c55e);
+  color: #fff;
+}
+.bksp-active .bksp-circle {
+  background: var(--bksp-active, #6c3fb5);
+  color: #fff;
+  box-shadow: 0 0 0 4px rgba(108,63,181,.2);
+}
+.bksp-pending .bksp-circle {
+  background: var(--bksp-pending, #e5e7eb);
+  color: #6b7280;
+}
+
+.bksp-label {
+  font-family: var(--bksp-lb-font-family, inherit);
+  font-size: var(--bksp-lb-font-size-d, var(--bksp-lSz, 13px));
+  font-weight: var(--bksp-lb-font-weight, 400);
+  font-style: var(--bksp-lb-font-style, normal);
+  text-decoration: var(--bksp-lb-text-decoration, none);
+  text-transform: var(--bksp-lb-text-transform, none);
+  line-height: var(--bksp-lb-line-height-d, 1.4);
+  letter-spacing: var(--bksp-lb-letter-spacing-d, normal);
+  word-spacing: var(--bksp-lb-word-spacing-d, normal);
+  color: #374151;
+  white-space: nowrap;
+  text-align: center;
+}
+.bksp-done   .bksp-label { color: var(--bksp-done, #22c55e); }
+.bksp-active .bksp-label { color: var(--bksp-active, #6c3fb5); font-weight: 600; }
+
+/* Connector line */
+.bksp-connector {
+  flex: 1;
+  min-width: 24px;
+  height: var(--bksp-barH, 4px);
+  background: var(--bksp-pending, #e5e7eb);
+  margin-bottom: calc( var(--bksp-lSz, 13px) + 6px );
+  transition: background .3s;
+}
+.bksp-connector.bksp-conn-done {
+  background: var(--bksp-done, #22c55e);
+}
+
+/* ── Responsive Typography ── */
+@media (max-width: 1024px) {
+  .bksp-label {
+    font-size: var(--bksp-lb-font-size-t, var(--bksp-lb-font-size-d, var(--bksp-lSz, 13px)));
+    line-height: var(--bksp-lb-line-height-t, var(--bksp-lb-line-height-d, 1.4));
+    letter-spacing: var(--bksp-lb-letter-spacing-t, var(--bksp-lb-letter-spacing-d, normal));
+    word-spacing: var(--bksp-lb-word-spacing-t, var(--bksp-lb-word-spacing-d, normal));
+  }
+}
+@media (max-width: 767px) {
+  .bksp-wrap { overflow-x: scroll; }
+  .bksp-label {
+    font-size: var(--bksp-lb-font-size-m, var(--bksp-lb-font-size-t, var(--bksp-lb-font-size-d, var(--bksp-lSz, 11px))));
+    line-height: var(--bksp-lb-line-height-m, var(--bksp-lb-line-height-t, var(--bksp-lb-line-height-d, 1.4)));
+    letter-spacing: var(--bksp-lb-letter-spacing-m, var(--bksp-lb-letter-spacing-t, var(--bksp-lb-letter-spacing-d, normal)));
+    word-spacing: var(--bksp-lb-word-spacing-m, var(--bksp-lb-word-spacing-t, var(--bksp-lb-word-spacing-d, normal)));
+  }
+}

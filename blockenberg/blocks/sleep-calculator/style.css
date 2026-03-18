@@ -1,0 +1,113 @@
+/* Sleep Calculator Block — bkbg-sleep-* */
+
+.bkbg-sleep-editor,
+.bkbg-sleep-app {
+    font-family: inherit;
+    box-sizing: border-box;
+}
+.bkbg-sleep-editor *,
+.bkbg-sleep-app * {
+    box-sizing: border-box;
+}
+
+/* Mode buttons */
+.bkbg-sleep-mode-btn {
+    transition: background .15s, color .15s, border-color .15s;
+    cursor: pointer;
+    line-height: 1.3;
+    font-family: inherit;
+}
+.bkbg-sleep-mode-btn:hover {
+    opacity: .88;
+}
+
+/* Time selects */
+.bkbg-sleep-time-row select {
+    padding: 10px 14px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color .2s;
+}
+.bkbg-sleep-time-row select:focus {
+    outline: none;
+    border-color: #6c3fb5;
+    box-shadow: 0 0 0 3px rgba(108, 63, 181, .15);
+}
+
+/* Result rows */
+.bkbg-sleep-result-row {
+    transition: box-shadow .18s, transform .18s;
+}
+.bkbg-sleep-result-row:hover {
+    box-shadow: 0 4px 16px rgba(108, 63, 181, .13);
+    transform: translateY(-1px);
+}
+
+/* Tip box */
+.bkbg-sleep-tip {
+    line-height: 1.6;
+}
+
+/* Title typography */
+.bkbg-sleep-title {
+    font-size: var(--bkslp-tt-font-size-d, 28px);
+    font-family: var(--bkslp-tt-font-family, inherit);
+    font-weight: var(--bkslp-tt-font-weight, 700);
+    font-style: var(--bkslp-tt-font-style);
+    text-decoration: var(--bkslp-tt-text-decoration);
+    text-transform: var(--bkslp-tt-text-transform);
+    line-height: var(--bkslp-tt-line-height-d, 1.2);
+    letter-spacing: var(--bkslp-tt-letter-spacing-d);
+    word-spacing: var(--bkslp-tt-word-spacing-d);
+}
+
+/* Subtitle typography */
+.bkbg-sleep-subtitle {
+    font-size: var(--bkslp-st-font-size-d, 15px);
+    font-family: var(--bkslp-st-font-family, inherit);
+    font-weight: var(--bkslp-st-font-weight);
+    font-style: var(--bkslp-st-font-style);
+    text-decoration: var(--bkslp-st-text-decoration);
+    text-transform: var(--bkslp-st-text-transform);
+    line-height: var(--bkslp-st-line-height-d);
+    letter-spacing: var(--bkslp-st-letter-spacing-d);
+    word-spacing: var(--bkslp-st-word-spacing-d);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-sleep-title {
+        font-size: var(--bkslp-tt-font-size-t, var(--bkslp-tt-font-size-d, 28px));
+        line-height: var(--bkslp-tt-line-height-t, var(--bkslp-tt-line-height-d, 1.2));
+        letter-spacing: var(--bkslp-tt-letter-spacing-t, var(--bkslp-tt-letter-spacing-d));
+        word-spacing: var(--bkslp-tt-word-spacing-t, var(--bkslp-tt-word-spacing-d));
+    }
+    .bkbg-sleep-subtitle {
+        font-size: var(--bkslp-st-font-size-t, var(--bkslp-st-font-size-d, 15px));
+        line-height: var(--bkslp-st-line-height-t, var(--bkslp-st-line-height-d));
+        letter-spacing: var(--bkslp-st-letter-spacing-t, var(--bkslp-st-letter-spacing-d));
+        word-spacing: var(--bkslp-st-word-spacing-t, var(--bkslp-st-word-spacing-d));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-sleep-title {
+        font-size: var(--bkslp-tt-font-size-m, var(--bkslp-tt-font-size-t, var(--bkslp-tt-font-size-d, 28px)));
+        line-height: var(--bkslp-tt-line-height-m, var(--bkslp-tt-line-height-t, var(--bkslp-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bkslp-tt-letter-spacing-m, var(--bkslp-tt-letter-spacing-t, var(--bkslp-tt-letter-spacing-d)));
+        word-spacing: var(--bkslp-tt-word-spacing-m, var(--bkslp-tt-word-spacing-t, var(--bkslp-tt-word-spacing-d)));
+    }
+    .bkbg-sleep-subtitle {
+        font-size: var(--bkslp-st-font-size-m, var(--bkslp-st-font-size-t, var(--bkslp-st-font-size-d, 15px)));
+        line-height: var(--bkslp-st-line-height-m, var(--bkslp-st-line-height-t, var(--bkslp-st-line-height-d)));
+        letter-spacing: var(--bkslp-st-letter-spacing-m, var(--bkslp-st-letter-spacing-t, var(--bkslp-st-letter-spacing-d)));
+        word-spacing: var(--bkslp-st-word-spacing-m, var(--bkslp-st-word-spacing-t, var(--bkslp-st-word-spacing-d)));
+    }
+}
+
+/* App outer section */
+.bkbg-sleep-app > .bkbg-sleep-section {
+    width: 100%;
+}

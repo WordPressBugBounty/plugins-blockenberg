@@ -1,0 +1,223 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/content-lock",
+    "title": "Content Lock",
+    "description": "Gate content behind an email opt-in, password, or click-reveal. Perfect for lead generation, member content, and spoilers.",
+    "category": "bkbg-marketing",
+    "icon": "lock",
+    "keywords": [
+        "lock",
+        "gate",
+        "paywall",
+        "email",
+        "password",
+        "reveal",
+        "spoiler",
+        "content protection"
+    ],
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "lockType": {
+            "type": "string",
+            "default": "email"
+        },
+        "lockedContent": {
+            "type": "string",
+            "default": "<p>This is your protected content. Add anything here — text, images, resources, download links, or exclusive information.</p><p>Visitors must unlock this content to read it.</p>"
+        },
+        "lockStyle": {
+            "type": "string",
+            "default": "blur"
+        },
+        "blurAmount": {
+            "type": "number",
+            "default": 6
+        },
+        "teaserLines": {
+            "type": "number",
+            "default": 3
+        },
+        "icon": {
+            "type": "string",
+            "default": "🔒"
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "eyebrow": {
+            "type": "string",
+            "default": "Members Only"
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "heading": {
+            "type": "string",
+            "default": "Unlock this content"
+        },
+        "subText": {
+            "type": "string",
+            "default": "Enter your email to get instant access to this exclusive content."
+        },
+        "emailPlaceholder": {
+            "type": "string",
+            "default": "Enter your email address"
+        },
+        "submitLabel": {
+            "type": "string",
+            "default": "Unlock Now"
+        },
+        "privacyNote": {
+            "type": "string",
+            "default": "We respect your privacy. No spam, ever."
+        },
+        "showPrivacy": {
+            "type": "boolean",
+            "default": true
+        },
+        "successHeading": {
+            "type": "string",
+            "default": "You're in! 🎉"
+        },
+        "successText": {
+            "type": "string",
+            "default": "Enjoy your exclusive content below."
+        },
+        "rememberUnlock": {
+            "type": "boolean",
+            "default": true
+        },
+        "storageKey": {
+            "type": "string",
+            "default": ""
+        },
+        "password": {
+            "type": "string",
+            "default": ""
+        },
+        "passwordPlaceholder": {
+            "type": "string",
+            "default": "Enter password"
+        },
+        "passwordSubmitLabel": {
+            "type": "string",
+            "default": "Unlock"
+        },
+        "passwordErrorMsg": {
+            "type": "string",
+            "default": "Incorrect password. Please try again."
+        },
+        "clickButtonLabel": {
+            "type": "string",
+            "default": "Reveal Content"
+        },
+        "clickButtonIcon": {
+            "type": "string",
+            "default": "👁"
+        },
+        "webhookUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "padding": {
+            "type": "number",
+            "default": 40
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 560
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "overlayBg": {
+            "type": "string",
+            "default": ""
+        },
+        "gateBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "inputBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "inputFocusBorder": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "inputColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "privacyColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 22
+        },
+        "eyebrowSize": {
+            "type": "number",
+            "default": 11
+        },
+        "subTextSize": {
+            "type": "number",
+            "default": 14
+        },
+        "submitLabelSize": {
+            "type": "number",
+            "default": 15
+        },
+        "typoHeading": {
+            "type": "object",
+            "default": {}
+        },
+        "typoButton": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "editorScript": "bkbg-content-lock-editor",
+    "style": "bkbg-content-lock-style",
+    "viewScript": "bkbg-content-lock-frontend"
+}

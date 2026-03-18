@@ -1,0 +1,130 @@
+.bkbg-vsi-wrap {
+    box-sizing: border-box;
+}
+
+.bkbg-vsi-inner {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.bkbg-vsi-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.bkbg-vsi-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: translateY(0) translateX(0);
+    will-change: transform;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Horizontal variant */
+.bkbg-vsi-container.bkbg-vsi--horizontal .bkbg-vsi-img {
+    width: auto;
+    height: 100%;
+    min-width: 100%;
+}
+
+/* Label hint */
+.bkbg-vsi-label {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-family: var(--bkvsi-lb-ff, inherit);
+    font-size: var(--bkvsi-lb-fsd, 12px);
+    line-height: var(--bkvsi-lb-lhd, normal);
+    letter-spacing: var(--bkvsi-lb-lsd, normal);
+    word-spacing: var(--bkvsi-lb-wsd, normal);
+    font-weight: var(--bkvsi-lb-fw, normal);
+    font-style: var(--bkvsi-lb-fst, normal);
+    text-decoration: var(--bkvsi-lb-td, none);
+    text-transform: var(--bkvsi-lb-tt, none);
+    white-space: nowrap;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.bkbg-vsi-container:hover .bkbg-vsi-label {
+    opacity: 0;
+}
+
+/* Caption */
+.bkbg-vsi-caption {
+    text-align: center;
+    font-family: var(--bkvsi-cp-ff, inherit);
+    font-size: var(--bkvsi-cp-fsd, 13px);
+    line-height: var(--bkvsi-cp-lhd, 1.5);
+    letter-spacing: var(--bkvsi-cp-lsd, normal);
+    word-spacing: var(--bkvsi-cp-wsd, normal);
+    font-weight: var(--bkvsi-cp-fw, normal);
+    font-style: var(--bkvsi-cp-fst, italic);
+    text-decoration: var(--bkvsi-cp-td, none);
+    text-transform: var(--bkvsi-cp-tt, none);
+    margin: 10px 0 0;
+}
+
+/* Auto-loop animation */
+@keyframes bkbg-vsi-auto-v {
+    0%, 10%   { transform: translateY(0); }
+    45%, 55%  { transform: translateY(var(--bkbg-vsi-end)); }
+    90%, 100% { transform: translateY(0); }
+}
+
+@keyframes bkbg-vsi-auto-h {
+    0%, 10%   { transform: translateX(0); }
+    45%, 55%  { transform: translateX(var(--bkbg-vsi-end)); }
+    90%, 100% { transform: translateX(0); }
+}
+
+.bkbg-vsi-img.bkbg-vsi--auto-v {
+    animation: bkbg-vsi-auto-v var(--bkbg-vsi-dur) ease-in-out infinite;
+}
+
+.bkbg-vsi-img.bkbg-vsi--auto-h {
+    animation: bkbg-vsi-auto-h var(--bkbg-vsi-dur) ease-in-out infinite;
+}
+
+@media (max-width: 1024px) {
+    .bkbg-vsi-label {
+        font-size: var(--bkvsi-lb-fst1, var(--bkvsi-lb-fsd, 12px));
+        line-height: var(--bkvsi-lb-lht, var(--bkvsi-lb-lhd, normal));
+        letter-spacing: var(--bkvsi-lb-lst, var(--bkvsi-lb-lsd, normal));
+        word-spacing: var(--bkvsi-lb-wst, var(--bkvsi-lb-wsd, normal));
+    }
+    .bkbg-vsi-caption {
+        font-size: var(--bkvsi-cp-fst1, var(--bkvsi-cp-fsd, 13px));
+        line-height: var(--bkvsi-cp-lht, var(--bkvsi-cp-lhd, 1.5));
+        letter-spacing: var(--bkvsi-cp-lst, var(--bkvsi-cp-lsd, normal));
+        word-spacing: var(--bkvsi-cp-wst, var(--bkvsi-cp-wsd, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-vsi-label {
+        font-size: var(--bkvsi-lb-fsm, var(--bkvsi-lb-fst1, var(--bkvsi-lb-fsd, 12px)));
+        line-height: var(--bkvsi-lb-lhm, var(--bkvsi-lb-lht, var(--bkvsi-lb-lhd, normal)));
+        letter-spacing: var(--bkvsi-lb-lsm, var(--bkvsi-lb-lst, var(--bkvsi-lb-lsd, normal)));
+        word-spacing: var(--bkvsi-lb-wsm, var(--bkvsi-lb-wst, var(--bkvsi-lb-wsd, normal)));
+    }
+    .bkbg-vsi-caption {
+        font-size: var(--bkvsi-cp-fsm, var(--bkvsi-cp-fst1, var(--bkvsi-cp-fsd, 13px)));
+        line-height: var(--bkvsi-cp-lhm, var(--bkvsi-cp-lht, var(--bkvsi-cp-lhd, 1.5)));
+        letter-spacing: var(--bkvsi-cp-lsm, var(--bkvsi-cp-lst, var(--bkvsi-cp-lsd, normal)));
+        word-spacing: var(--bkvsi-cp-wsm, var(--bkvsi-cp-wst, var(--bkvsi-cp-wsd, normal)));
+    }
+}
+
+/* Editor */
+.bkbg-vsi-editor {
+    display: block;
+}

@@ -1,0 +1,288 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/feature-split",
+    "title": "Feature Split",
+    "description": "Elegant two-column section — rich content (badge, headline, body, feature list, CTAs) paired with an image. The essential landing page block.",
+    "icon": "columns",
+    "category": "bkbg-marketing",
+    "keywords": [
+        "feature",
+        "split",
+        "image",
+        "cta",
+        "two column",
+        "hero",
+        "section"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-feature-split-editor",
+    "style": "bkbg-feature-split-style",
+    "viewScript": "bkbg-feature-split-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "imagePosition": {
+            "type": "string",
+            "default": "right"
+        },
+        "imageWidth": {
+            "type": "number",
+            "default": 50
+        },
+        "imageRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "imageShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "imageOverlap": {
+            "type": "boolean",
+            "default": false
+        },
+        "eyebrow": {
+            "type": "string",
+            "default": "Why choose us"
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "headline": {
+            "type": "string",
+            "default": "Everything you need, in one place."
+        },
+        "body": {
+            "type": "string",
+            "default": "Stop juggling a dozen tools. Our platform brings your entire workflow under one roof — so your team stays focused, aligned, and moving fast."
+        },
+        "showBody": {
+            "type": "boolean",
+            "default": true
+        },
+        "features": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "f1",
+                    "icon": "✅",
+                    "text": "Set up in under 5 minutes — no code needed",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "id": "f2",
+                    "icon": "✅",
+                    "text": "Connects with 200+ tools you already use",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "id": "f3",
+                    "icon": "✅",
+                    "text": "SOC 2 Type II certified and GDPR compliant",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "id": "f4",
+                    "icon": "✅",
+                    "text": "World-class support, 24 hours a day",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                }
+            ]
+        },
+        "showFeatures": {
+            "type": "boolean",
+            "default": true
+        },
+        "primaryBtnLabel": {
+            "type": "string",
+            "default": "Get started free"
+        },
+        "primaryBtnUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "primaryBtnTarget": {
+            "type": "boolean",
+            "default": false
+        },
+        "showPrimaryBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "secondaryBtnLabel": {
+            "type": "string",
+            "default": "See demo →"
+        },
+        "secondaryBtnUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showSecondaryBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "style": {
+            "type": "string",
+            "default": "clean"
+        },
+        "gap": {
+            "type": "number",
+            "default": 64
+        },
+        "verticalAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 64
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 540
+        },
+        "eyebrowSize": {
+            "type": "number",
+            "default": 12
+        },
+        "eyebrowWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "eyebrowLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "headlineSize": {
+            "type": "number",
+            "default": 36
+        },
+        "headlineWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "headlineLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "bodySize": {
+            "type": "number",
+            "default": 17
+        },
+        "bodyWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "bodyLineHeight": {
+            "type": "number",
+            "default": 1.7
+        },
+        "featureSize": {
+            "type": "number",
+            "default": 15
+        },
+        "featureWeight": {
+            "type": "string",
+            "default": "500"
+        },
+        "featureLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "typoEyebrow": {
+            "type": "object",
+            "default": {}
+        },
+        "typoHeadline": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        },
+        "typoFeature": {
+            "type": "object",
+            "default": {}
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 50
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "contentBg": {
+            "type": "string",
+            "default": ""
+        },
+        "eyebrowBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "headlineColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "bodyColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "featureColor": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "primaryBtnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "primaryBtnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "secBtnColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        }
+    }
+}

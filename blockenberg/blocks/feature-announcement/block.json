@@ -1,0 +1,274 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/feature-announcement",
+    "title": "Feature Announcement",
+    "category": "bkbg-marketing",
+    "icon": "megaphone",
+    "description": "Announce new product features, improvements, or updates with version badge, highlights list, and CTA.",
+    "keywords": [
+        "feature",
+        "announcement",
+        "update",
+        "release",
+        "new",
+        "product",
+        "changelog",
+        "launch",
+        "beta"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-feature-announcement-editor",
+    "editorStyle": "bkbg-feature-announcement-style",
+    "style": "bkbg-feature-announcement-style",
+    "viewScript": "bkbg-feature-announcement-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "featureName": {
+            "type": "string",
+            "default": "Smart AI Suggestions"
+        },
+        "version": {
+            "type": "string",
+            "default": "v3.2"
+        },
+        "showVersion": {
+            "type": "boolean",
+            "default": true
+        },
+        "releaseDate": {
+            "type": "string",
+            "default": "February 24, 2026"
+        },
+        "showDate": {
+            "type": "boolean",
+            "default": true
+        },
+        "category": {
+            "type": "string",
+            "default": "new-feature"
+        },
+        "status": {
+            "type": "string",
+            "default": "available"
+        },
+        "featureIcon": {
+            "type": "string",
+            "default": "✨"
+        },
+        "featureIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "featureIconDashicon": {
+            "type": "string",
+            "default": "lightbulb"
+        },
+        "featureIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "tagline": {
+            "type": "string",
+            "default": "Write faster, smarter, and better — right inside the editor."
+        },
+        "description": {
+            "type": "string",
+            "default": "Smart AI Suggestions analyzes your content in real-time and offers context-aware writing recommendations, auto-completions, and tone adjustments — all without leaving your workflow. Powered by our in-house language model fine-tuned on your industry."
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "highlights": {
+            "type": "array",
+            "default": [
+                "Real-time suggestions as you type — no manual trigger needed",
+                "Adapts to your brand voice and writing style over time",
+                "Works in all content areas: posts, pages, and custom fields",
+                "Privacy-first: your content never leaves your server",
+                "Available in 12 languages with automatic detection"
+            ]
+        },
+        "showHighlights": {
+            "type": "boolean",
+            "default": true
+        },
+        "highlightsLabel": {
+            "type": "string",
+            "default": "What's new"
+        },
+        "availablePlans": {
+            "type": "array",
+            "default": [
+                "Pro",
+                "Business",
+                "Enterprise"
+            ]
+        },
+        "showPlans": {
+            "type": "boolean",
+            "default": true
+        },
+        "plansLabel": {
+            "type": "string",
+            "default": "Available on"
+        },
+        "ctaText": {
+            "type": "string",
+            "default": "Try It Now"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaSecondaryText": {
+            "type": "string",
+            "default": "Read the Docs"
+        },
+        "ctaSecondaryUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showSecondaryCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "card"
+        },
+        "accentPosition": {
+            "type": "string",
+            "default": "top"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "featureNameSize": {
+            "type": "number",
+            "default": 26
+        },
+        "taglineSize": {
+            "type": "number",
+            "default": 16
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 170
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "accentStripe": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "featureNameColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "taglineColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "versionBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "versionColor": {
+            "type": "string",
+            "default": "#5b21b6"
+        },
+        "categoryBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "categoryColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "statusBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "statusColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "highlightIconColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "planBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "planColor": {
+            "type": "string",
+            "default": "#5b21b6"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "ctaSecondaryColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "ctaSize": {
+            "type": "number",
+            "default": 12
+        },
+        "typoName": {
+            "type": "object",
+            "default": {}
+        },
+        "typoTagline": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

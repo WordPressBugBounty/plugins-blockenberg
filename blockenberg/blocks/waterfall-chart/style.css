@@ -1,0 +1,100 @@
+/* ── Waterfall Chart ── bkbg-wfc-* ── */
+
+.bkbg-wfc-editor-wrap {
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.bkbg-wfc-wrap {
+    font-family: system-ui, -apple-system, sans-serif;
+    box-sizing: border-box;
+}
+
+.bkbg-wfc-title {
+    margin: 0 0 16px;
+    font-family: var(--bkwfc-tt-ff, inherit);
+    font-size: var(--bkwfc-tt-fsd, 20px);
+    line-height: var(--bkwfc-tt-lhd, 1.25);
+    letter-spacing: var(--bkwfc-tt-lsd, normal);
+    word-spacing: var(--bkwfc-tt-wsd, normal);
+    font-weight: var(--bkwfc-tt-fw, 700);
+    font-style: var(--bkwfc-tt-fst, normal);
+    text-decoration: var(--bkwfc-tt-td, none);
+    text-transform: var(--bkwfc-tt-tt, none);
+}
+
+.bkbg-wfc-canvas-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.bkbg-wfc-canvas-wrap canvas {
+    display: block;
+    max-width: 100%;
+}
+
+.bkbg-wfc-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin-top: 14px;
+}
+
+.bkbg-wfc-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+}
+
+.bkbg-wfc-legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.bkbg-wfc-tooltip {
+    position: absolute;
+    background: #1f2937;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    pointer-events: none;
+    z-index: 10;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.15s;
+    opacity: 0;
+}
+
+.bkbg-wfc-tooltip.is-visible {
+    opacity: 1;
+}
+
+.bkbg-wfc-tooltip-label {
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.bkbg-wfc-tooltip-value {
+    opacity: 0.85;
+}
+
+/* ── Responsive typography ───────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-wfc-title {
+        font-size: var(--bkwfc-tt-fst1, var(--bkwfc-tt-fsd, 20px));
+        line-height: var(--bkwfc-tt-lht, var(--bkwfc-tt-lhd, 1.25));
+        letter-spacing: var(--bkwfc-tt-lst, var(--bkwfc-tt-lsd, normal));
+        word-spacing: var(--bkwfc-tt-wst, var(--bkwfc-tt-wsd, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-wfc-title {
+        font-size: var(--bkwfc-tt-fsm, var(--bkwfc-tt-fst1, var(--bkwfc-tt-fsd, 20px)));
+        line-height: var(--bkwfc-tt-lhm, var(--bkwfc-tt-lht, var(--bkwfc-tt-lhd, 1.25)));
+        letter-spacing: var(--bkwfc-tt-lsm, var(--bkwfc-tt-lst, var(--bkwfc-tt-lsd, normal)));
+        word-spacing: var(--bkwfc-tt-wsm, var(--bkwfc-tt-wst, var(--bkwfc-tt-wsd, normal)));
+    }
+}

@@ -1,0 +1,231 @@
+/* ── stock-ticker block ─────────────────────────────────────────── */
+
+.bkbg-st-wrap {
+    font-family: var(--bkstk-tx-font-family, inherit);
+    font-size: var(--bkstk-tx-font-size-d, 14px);
+    line-height: var(--bkstk-tx-line-height-d, var(--bkstk-tx-lh, 1.4));
+    letter-spacing: var(--bkstk-tx-letter-spacing-d, normal);
+    word-spacing: var(--bkstk-tx-word-spacing-d, normal);
+    font-weight: var(--bkstk-tx-font-weight, var(--bkstk-tx-fw, 600));
+    font-style: var(--bkstk-tx-font-style, normal);
+    text-decoration: var(--bkstk-tx-text-decoration, none);
+    text-transform: var(--bkstk-tx-text-transform, none);
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Responsive – typography */
+@media (max-width: 1024px) {
+    .bkbg-st-wrap {
+        font-size: var(--bkstk-tx-font-size-t, var(--bkstk-tx-font-size-d, 14px));
+        line-height: var(--bkstk-tx-line-height-t, var(--bkstk-tx-line-height-d, var(--bkstk-tx-lh, 1.4)));
+        letter-spacing: var(--bkstk-tx-letter-spacing-t, var(--bkstk-tx-letter-spacing-d, normal));
+        word-spacing: var(--bkstk-tx-word-spacing-t, var(--bkstk-tx-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-st-wrap {
+        font-size: var(--bkstk-tx-font-size-m, var(--bkstk-tx-font-size-t, var(--bkstk-tx-font-size-d, 14px)));
+        line-height: var(--bkstk-tx-line-height-m, var(--bkstk-tx-line-height-t, var(--bkstk-tx-line-height-d, var(--bkstk-tx-lh, 1.4))));
+        letter-spacing: var(--bkstk-tx-letter-spacing-m, var(--bkstk-tx-letter-spacing-t, var(--bkstk-tx-letter-spacing-d, normal)));
+        word-spacing: var(--bkstk-tx-word-spacing-m, var(--bkstk-tx-word-spacing-t, var(--bkstk-tx-word-spacing-d, normal)));
+    }
+}
+
+/* ── Ticker strip ─────────────────────────────────────────────── */
+.bkbg-st-ticker-outer {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.bkbg-st-live-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 14px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    flex-shrink: 0;
+    white-space: nowrap;
+    height: 100%;
+    align-self: stretch;
+}
+
+.bkbg-st-live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: bkbg-st-blink 1.2s ease-in-out infinite;
+}
+
+@keyframes bkbg-st-blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.2; }
+}
+
+.bkbg-st-ticker-track {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    white-space: nowrap;
+    animation: bkbg-st-scroll linear infinite;
+}
+
+.bkbg-st-ticker-track.bkbg-st-paused {
+    animation-play-state: paused;
+}
+
+@keyframes bkbg-st-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.bkbg-st-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 28px;
+}
+
+.bkbg-st-icon {
+    flex-shrink: 0;
+}
+
+.bkbg-st-img-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.bkbg-st-symbol {
+    font-weight: 700;
+}
+
+/* .bkbg-st-price, .bkbg-st-change-up, .bkbg-st-change-down — colors set via inline style */
+
+.bkbg-st-sep {
+    opacity: 0.2;
+    margin-left: 4px;
+}
+
+/* ── Cards layout ─────────────────────────────────────────────── */
+.bkbg-st-cards {
+    display: grid;
+    gap: 12px;
+}
+
+.bkbg-st-card {
+    border-radius: inherit;
+    padding: 16px;
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.bkbg-st-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.bkbg-st-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.bkbg-st-card-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.bkbg-st-card-name {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.bkbg-st-card-sym {
+    font-size: 11px;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+
+.bkbg-st-card-price {
+    font-weight: 700;
+}
+
+.bkbg-st-card-change {
+    margin-top: 4px;
+    font-size: 13px;
+}
+
+.bkbg-st-card-meta {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+    font-size: 11px;
+    opacity: 0.6;
+}
+
+/* ── Table layout ─────────────────────────────────────────────── */
+.bkbg-st-table-wrap {
+    overflow-x: auto;
+    border-radius: inherit;
+}
+
+.bkbg-st-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: inherit;
+}
+
+.bkbg-st-table th,
+.bkbg-st-table td {
+    padding: 10px 14px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.bkbg-st-table th:first-child,
+.bkbg-st-table td:first-child {
+    text-align: left;
+}
+
+.bkbg-st-table tbody tr:hover {
+    background: rgba(255,255,255,0.04);
+}
+
+/* ── Status / loading ─────────────────────────────────────────── */
+.bkbg-st-loading {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.5;
+    font-size: 13px;
+    animation: bkbg-st-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes bkbg-st-pulse {
+    0%, 100% { opacity: 0.5; }
+    50%       { opacity: 1; }
+}
+
+.bkbg-st-error {
+    color: #f87171;
+    text-align: center;
+    padding: 16px;
+    font-size: 13px;
+}
+
+.bkbg-st-footer {
+    font-size: 10px;
+    text-align: right;
+    opacity: 0.35;
+    padding: 4px 8px;
+    letter-spacing: 0.04em;
+}

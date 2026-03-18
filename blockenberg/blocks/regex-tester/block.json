@@ -1,0 +1,125 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/regex-tester",
+    "version": "1.0.0",
+    "title": "Regex Tester",
+    "category": "bkbg-dev",
+    "icon": "search",
+    "description": "Live regular expression tester with match highlighting, capture groups, and flag controls.",
+    "keywords": [
+        "regex",
+        "regexp",
+        "regular expression",
+        "pattern",
+        "developer",
+        "tool"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-regex-tester-editor",
+    "style": "bkbg-regex-tester-style",
+    "viewScript": "bkbg-regex-tester-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Regex Tester"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Test regular expressions with live match highlighting"
+        },
+        "defaultPattern": {
+            "type": "string",
+            "default": "\\b\\w+@\\w+\\.\\w+\\b"
+        },
+        "defaultFlags": {
+            "type": "string",
+            "default": "gi"
+        },
+        "defaultTestStr": {
+            "type": "string",
+            "default": "Contact us at hello@example.com or support@company.org\nVisit our site at https://example.com for more info."
+        },
+        "showGroups": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCheatsheet": {
+            "type": "boolean",
+            "default": false
+        },
+        "editorHeight": {
+            "type": "integer",
+            "default": 160
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "matchBg": {
+            "type": "string",
+            "default": "#fef3c7"
+        },
+        "matchBorder": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "groupColors": {
+            "type": "string",
+            "default": "#bfdbfe,#bbf7d0,#fecaca,#e9d5ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "editorBg": {
+            "type": "string",
+            "default": "#1e1e2e"
+        },
+        "editorText": {
+            "type": "string",
+            "default": "#cdd6f4"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "errorColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "contentMaxWidth": {
+            "type": "integer",
+            "default": 780
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "editorTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

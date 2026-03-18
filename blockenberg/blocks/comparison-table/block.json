@@ -1,0 +1,150 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/comparison-table",
+    "title": "Comparison Table",
+    "category": "bkbg-charts",
+    "icon": "list-view",
+    "description": "Feature matrix comparing multiple plans with check/cross marks, text values, and a highlighted popular column.",
+    "keywords": [
+        "comparison",
+        "table",
+        "features",
+        "pricing",
+        "matrix",
+        "plans"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-comparison-table-editor",
+    "editorStyle": "bkbg-comparison-table-style",
+    "style": "bkbg-comparison-table-style",
+    "viewScript": "bkbg-comparison-table-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "plans": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Starter",
+                    "subtitle": "$9/mo",
+                    "highlighted": false
+                },
+                {
+                    "name": "Pro",
+                    "subtitle": "$29/mo",
+                    "highlighted": true
+                },
+                {
+                    "name": "Enterprise",
+                    "subtitle": "$99/mo",
+                    "highlighted": false
+                }
+            ]
+        },
+        "features": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Users",
+                    "values": [
+                        "1",
+                        "10",
+                        "Unlimited"
+                    ]
+                },
+                {
+                    "label": "Storage",
+                    "values": [
+                        "5 GB",
+                        "50 GB",
+                        "1 TB"
+                    ]
+                },
+                {
+                    "label": "API Access",
+                    "values": [
+                        "false",
+                        "true",
+                        "true"
+                    ]
+                },
+                {
+                    "label": "Priority Support",
+                    "values": [
+                        "false",
+                        "false",
+                        "true"
+                    ]
+                },
+                {
+                    "label": "Custom Domain",
+                    "values": [
+                        "false",
+                        "true",
+                        "true"
+                    ]
+                }
+            ]
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "headerText": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "highlightBg": {
+            "type": "string",
+            "default": "#f3eeff"
+        },
+        "highlightBorder": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "checkColor": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "crossColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "zebraStripe": {
+            "type": "boolean",
+            "default": true
+        },
+        "stickyHeader": {
+            "type": "boolean",
+            "default": false
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "headerFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "cellFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "typoHeader": {
+            "type": "object",
+            "default": {}
+        },
+        "typoCell": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

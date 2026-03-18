@@ -1,0 +1,324 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/split-form",
+    "title": "Split Form",
+    "category": "bkbg-marketing",
+    "icon": "email-alt",
+    "description": "Side-by-side lead generation section — content (heading, text, feature bullets) on one side and a fully configured email / sign-up form on the other.",
+    "keywords": [
+        "form",
+        "lead",
+        "split",
+        "email",
+        "newsletter",
+        "signup",
+        "contact",
+        "section"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-split-form-editor",
+    "style": "bkbg-split-form-style",
+    "viewScript": "bkbg-split-form-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "contentSide": {
+            "type": "string",
+            "default": "left"
+        },
+        "splitRatio": {
+            "type": "string",
+            "default": "50-50"
+        },
+        "icon": {
+            "type": "string",
+            "default": "✉️"
+        },
+        "iconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "iconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "iconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "eyebrow": {
+            "type": "string",
+            "default": "Stay in the loop"
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "heading": {
+            "type": "string",
+            "default": "Get weekly insights straight to your inbox"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Join 12,000+ marketers who receive our curated digest of the best content on growth, strategy, and product every Friday."
+        },
+        "bullets": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "No spam, ever. Unsubscribe anytime."
+                },
+                {
+                    "text": "Curated by real humans, not algorithms."
+                },
+                {
+                    "text": "Free resources in every issue."
+                }
+            ]
+        },
+        "showBullets": {
+            "type": "boolean",
+            "default": true
+        },
+        "bulletIcon": {
+            "type": "string",
+            "default": "✓"
+        },
+        "bulletIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "bulletIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "bulletIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "useImage": {
+            "type": "boolean",
+            "default": false
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "imageOverlay": {
+            "type": "boolean",
+            "default": true
+        },
+        "formTitle": {
+            "type": "string",
+            "default": "Subscribe for free"
+        },
+        "showFormTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "formSubtext": {
+            "type": "string",
+            "default": ""
+        },
+        "showName": {
+            "type": "boolean",
+            "default": true
+        },
+        "namePlaceholder": {
+            "type": "string",
+            "default": "Your name"
+        },
+        "emailPlaceholder": {
+            "type": "string",
+            "default": "Your email address"
+        },
+        "showPhone": {
+            "type": "boolean",
+            "default": false
+        },
+        "phonePlaceholder": {
+            "type": "string",
+            "default": "Phone (optional)"
+        },
+        "submitLabel": {
+            "type": "string",
+            "default": "Subscribe now →"
+        },
+        "formAction": {
+            "type": "string",
+            "default": "#"
+        },
+        "formMethod": {
+            "type": "string",
+            "default": "post"
+        },
+        "privacyNote": {
+            "type": "string",
+            "default": "We respect your privacy. Unsubscribe anytime."
+        },
+        "showPrivacy": {
+            "type": "boolean",
+            "default": true
+        },
+        "successMsg": {
+            "type": "string",
+            "default": "🎉 You're in! Check your inbox."
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "contentBg": {
+            "type": "string",
+            "default": ""
+        },
+        "formBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#a5b4fc"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#c7d2fe"
+        },
+        "bulletColor": {
+            "type": "string",
+            "default": "#c7d2fe"
+        },
+        "bulletIconColor": {
+            "type": "string",
+            "default": "#818cf8"
+        },
+        "formHeadingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "formSubtextColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "inputBorder": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "inputFocusBorder": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "inputColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "privacyColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "eyebrowFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "eyebrowFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "headingFontSize": {
+            "type": "number",
+            "default": 34
+        },
+        "headingFontWeight": {
+            "type": "number",
+            "default": 800
+        },
+        "subtextFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "formTitleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "formTitleFontWeight": {
+            "type": "number",
+            "default": 800
+        },
+        "eyebrowTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "formTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bulletTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,147 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/content-warning",
+    "version": "1.0.0",
+    "title": "Content Warning",
+    "category": "bkbg-content",
+    "description": "Editorial content advisory or sensitivity notice, optionally collapsible.",
+    "keywords": [
+        "warning",
+        "content warning",
+        "cw",
+        "trigger",
+        "spoiler",
+        "advisory",
+        "sensitive"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-content-warning-editor",
+    "style": "bkbg-content-warning-style",
+    "viewScript": "bkbg-content-warning-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "warningType": {
+            "type": "string",
+            "default": "sensitive"
+        },
+        "icon": {
+            "type": "string",
+            "default": "⚠️"
+        },
+        "iconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "iconDashicon": {
+            "type": "string",
+            "default": "warning"
+        },
+        "iconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "label": {
+            "type": "string",
+            "default": "Content Warning"
+        },
+        "topics": {
+            "type": "string",
+            "default": ""
+        },
+        "message": {
+            "type": "string",
+            "default": ""
+        },
+        "showMessage": {
+            "type": "boolean",
+            "default": true
+        },
+        "collapsible": {
+            "type": "boolean",
+            "default": false
+        },
+        "buttonLabel": {
+            "type": "string",
+            "default": "I understand — show content"
+        },
+        "style": {
+            "type": "string",
+            "default": "box"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#fef2f2"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#fca5a5"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#7f1d1d"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#450a0a"
+        },
+        "topicBg": {
+            "type": "string",
+            "default": "#fee2e2"
+        },
+        "topicColor": {
+            "type": "string",
+            "default": "#991b1b"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderRadius": {
+            "type": "integer",
+            "default": 8
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 0
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "messageFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "typoLabel": {
+            "type": "object",
+            "default": {}
+        },
+        "typoMessage": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

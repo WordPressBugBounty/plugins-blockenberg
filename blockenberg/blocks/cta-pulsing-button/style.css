@@ -1,0 +1,367 @@
+/* =========================================================
+   CTA Pulsing Button — bkbg-pb-*
+   ========================================================= */
+
+/* ── Custom property defaults (overridden inline per block) */
+.bkbg-pb-pulse-wrap {
+    --bkbg-pb-pulse-color: rgba(245, 158, 11, 0.55);
+    --bkbg-pb-pulse-speed: 1800ms;
+    --bkbg-pb-pulse-scale: 1.45;
+}
+
+/* ── Outer & alignment ──────────────────────────────────── */
+.bkbg-pb-outer {
+    display: block;
+    box-sizing: border-box;
+}
+
+.bkbg-pb-align-wrap {
+    display: block;
+}
+
+/* ── Pulse wrapper — positions pseudo-elements ──────────── */
+.bkbg-pb-pulse-wrap {
+    display:  inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+/* ── Shared pseudo-element base ─────────────────────────── */
+.bkbg-pb-pulse-wrap::before,
+.bkbg-pb-pulse-wrap::after {
+    content:       '';
+    position:      absolute;
+    inset:         0;
+    border-radius: var(--bkbg-pb-border-radius, 50px);
+    pointer-events: none;
+    z-index:       0;
+}
+
+/* ─── Effect: ring ───────────────────────────────────────────── */
+.bkbg-pb-pulse--ring::before {
+    border:          2px solid var(--bkbg-pb-pulse-color);
+    animation:       bkbg-pb-ring var(--bkbg-pb-pulse-speed) ease-out infinite;
+}
+
+.bkbg-pb-pulse--ring.bkbg-pb-pulse--double-rings::after {
+    border:          2px solid var(--bkbg-pb-pulse-color);
+    animation:       bkbg-pb-ring var(--bkbg-pb-pulse-speed) ease-out infinite;
+    animation-delay: calc(var(--bkbg-pb-pulse-speed) * -0.5);
+}
+
+@keyframes bkbg-pb-ring {
+    0%   { transform: scale(1.02); opacity: 0.85; }
+    100% { transform: scale(var(--bkbg-pb-pulse-scale)); opacity: 0; }
+}
+
+/* ─── Effect: double-ring ─────────────────────────────────────── */
+.bkbg-pb-pulse--double-ring::before {
+    border:          2px solid var(--bkbg-pb-pulse-color);
+    animation:       bkbg-pb-double-ring var(--bkbg-pb-pulse-speed) ease-out infinite;
+}
+
+.bkbg-pb-pulse--double-ring::after {
+    border:          2px solid var(--bkbg-pb-pulse-color);
+    animation:       bkbg-pb-double-ring var(--bkbg-pb-pulse-speed) ease-out infinite;
+    animation-delay: calc(var(--bkbg-pb-pulse-speed) * -0.4);
+}
+
+@keyframes bkbg-pb-double-ring {
+    0%   { transform: scale(1.02); opacity: 0.75; }
+    100% { transform: scale(1.75); opacity: 0; }
+}
+
+/* ─── Effect: glow ───────────────────────────────────────────── */
+.bkbg-pb-pulse--glow .bkbg-pb-btn {
+    animation: bkbg-pb-glow var(--bkbg-pb-pulse-speed) cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes bkbg-pb-glow {
+    0%, 100% {
+        box-shadow:
+            0 0  0   0   var(--bkbg-pb-pulse-color),
+            0 0  0   0   var(--bkbg-pb-pulse-color),
+            0 0  0   0   var(--bkbg-pb-pulse-color);
+    }
+    50% {
+        box-shadow:
+            0 0  7px  2px var(--bkbg-pb-pulse-color),
+            0 0 20px  7px var(--bkbg-pb-pulse-color),
+            0 0 44px 16px var(--bkbg-pb-pulse-color);
+    }
+}
+
+/* ─── Effect: wave ───────────────────────────────────────────── */
+.bkbg-pb-pulse--wave::before {
+    background:      var(--bkbg-pb-pulse-color);
+    animation:       bkbg-pb-wave var(--bkbg-pb-pulse-speed) ease-out infinite;
+}
+
+.bkbg-pb-pulse--wave::after {
+    background:      var(--bkbg-pb-pulse-color);
+    animation:       bkbg-pb-wave var(--bkbg-pb-pulse-speed) ease-out infinite;
+    animation-delay: calc(var(--bkbg-pb-pulse-speed) * -0.5);
+}
+
+@keyframes bkbg-pb-wave {
+    0%   { transform: scale(1.01); opacity: 0.5; }
+    100% { transform: scale(1.65); opacity: 0; }
+}
+
+/* ─── Effect: ripple ──────────────────────────────────────────── */
+.bkbg-pb-pulse--ripple::before {
+    border:          2px solid var(--bkbg-pb-pulse-color);
+    animation:       bkbg-pb-ripple var(--bkbg-pb-pulse-speed) ease-out infinite;
+}
+
+.bkbg-pb-pulse--ripple::after {
+    border:          2px solid var(--bkbg-pb-pulse-color);
+    animation:       bkbg-pb-ripple var(--bkbg-pb-pulse-speed) ease-out infinite;
+    animation-delay: calc(var(--bkbg-pb-pulse-speed) * -0.33);
+}
+
+.bkbg-pb-pulse--ripple .bkbg-pb-btn {
+    animation:       bkbg-pb-ripple-shadow var(--bkbg-pb-pulse-speed) ease-out infinite;
+    animation-delay: calc(var(--bkbg-pb-pulse-speed) * -0.66);
+}
+
+@keyframes bkbg-pb-ripple {
+    0%   { transform: scale(1.02); opacity: 0.7; }
+    100% { transform: scale(var(--bkbg-pb-pulse-scale)); opacity: 0; }
+}
+
+@keyframes bkbg-pb-ripple-shadow {
+    0%   { box-shadow: 0 0 0  2px var(--bkbg-pb-pulse-color); }
+    100% { box-shadow: 0 0 0 20px transparent; }
+}
+
+/* ─── Effect: breath ──────────────────────────────────────────── */
+.bkbg-pb-pulse--breath .bkbg-pb-btn {
+    animation: bkbg-pb-breath var(--bkbg-pb-pulse-speed) cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+.bkbg-pb-pulse--breath::before {
+    background: var(--bkbg-pb-pulse-color);
+    filter:     blur(12px);
+    animation:  bkbg-pb-breath-aura var(--bkbg-pb-pulse-speed) cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+@keyframes bkbg-pb-breath {
+    0%, 100% { transform: scale(1);    }
+    50%      { transform: scale(1.06); }
+}
+
+@keyframes bkbg-pb-breath-aura {
+    0%, 100% { transform: scale(0.92); opacity: 0.1;  }
+    50%      { transform: scale(1.18); opacity: 0.42; }
+}
+
+/* ─── Effect: neon ────────────────────────────────────────────── */
+.bkbg-pb-pulse--neon .bkbg-pb-btn {
+    animation: bkbg-pb-neon var(--bkbg-pb-pulse-speed) linear infinite;
+}
+
+@keyframes bkbg-pb-neon {
+    0%   { box-shadow: 0 0  4px 1px var(--bkbg-pb-pulse-color), 0 0 16px 4px var(--bkbg-pb-pulse-color), 0 0 38px 8px var(--bkbg-pb-pulse-color); }
+    6%   { box-shadow: 0 0  1px 0   var(--bkbg-pb-pulse-color), 0 0  4px 1px var(--bkbg-pb-pulse-color); }
+    10%  { box-shadow: 0 0  4px 1px var(--bkbg-pb-pulse-color), 0 0 16px 4px var(--bkbg-pb-pulse-color), 0 0 38px 8px var(--bkbg-pb-pulse-color); }
+    18%  { box-shadow: 0 0  1px 0   var(--bkbg-pb-pulse-color), 0 0  3px 1px var(--bkbg-pb-pulse-color); }
+    22%  { box-shadow: 0 0  3px 1px var(--bkbg-pb-pulse-color), 0 0 10px 2px var(--bkbg-pb-pulse-color); }
+    48%  { box-shadow: 0 0  4px 1px var(--bkbg-pb-pulse-color), 0 0 16px 4px var(--bkbg-pb-pulse-color), 0 0 38px 8px var(--bkbg-pb-pulse-color); }
+    50%  { box-shadow: 0 0  2px 0   var(--bkbg-pb-pulse-color), 0 0  6px 2px var(--bkbg-pb-pulse-color); }
+    54%  { box-shadow: 0 0  4px 1px var(--bkbg-pb-pulse-color), 0 0 16px 4px var(--bkbg-pb-pulse-color); }
+    100% { box-shadow: 0 0  4px 1px var(--bkbg-pb-pulse-color), 0 0 16px 4px var(--bkbg-pb-pulse-color), 0 0 38px 8px var(--bkbg-pb-pulse-color); }
+}
+
+/* ─── Effect: heartbeat ────────────────────────────────────────── */
+.bkbg-pb-pulse--heartbeat .bkbg-pb-btn {
+    animation: bkbg-pb-heartbeat var(--bkbg-pb-pulse-speed) linear infinite;
+}
+
+.bkbg-pb-pulse--heartbeat::before {
+    background: var(--bkbg-pb-pulse-color);
+    animation:  bkbg-pb-heartbeat-aura var(--bkbg-pb-pulse-speed) linear infinite;
+}
+
+@keyframes bkbg-pb-heartbeat {
+    0%   { transform: scale(1);    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+    12%  { transform: scale(1.13); animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+    24%  { transform: scale(1);    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+    36%  { transform: scale(1.08); animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+    50%  { transform: scale(1);    animation-timing-function: linear; }
+    100% { transform: scale(1); }
+}
+
+@keyframes bkbg-pb-heartbeat-aura {
+    0%   { transform: scale(1.02); opacity: 0.38; animation-timing-function: ease-out; }
+    12%  { transform: scale(1.28); opacity: 0;    animation-timing-function: linear; }
+    24%  { transform: scale(1.02); opacity: 0.25; animation-timing-function: ease-out; }
+    36%  { transform: scale(1.2);  opacity: 0;    animation-timing-function: linear; }
+    52%  { transform: scale(1.02); opacity: 0; }
+    100% { transform: scale(1.02); opacity: 0; }
+}
+
+/* ─── Effect: float ────────────────────────────────────────────── */
+.bkbg-pb-pulse--float .bkbg-pb-btn {
+    animation: bkbg-pb-float var(--bkbg-pb-pulse-speed) cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+.bkbg-pb-pulse--float::before {
+    inset:         auto;
+    bottom:        -14px;
+    left:          12%;
+    right:         12%;
+    height:        10px;
+    border-radius: 50%;
+    background:    var(--bkbg-pb-pulse-color);
+    filter:        blur(9px);
+    animation:     bkbg-pb-float-shadow var(--bkbg-pb-pulse-speed) cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+.bkbg-pb-pulse--float::after {
+    display: none;
+}
+
+@keyframes bkbg-pb-float {
+    0%, 100% { transform: translateY(0);    }
+    50%      { transform: translateY(-9px); }
+}
+
+@keyframes bkbg-pb-float-shadow {
+    0%, 100% { transform: scaleX(1);   opacity: 0.48; }
+    50%      { transform: scaleX(0.8); opacity: 0.16; }
+}
+
+/* ── The Button / Link ───────────────────────────────────── */
+.bkbg-pb-btn {
+    position:        relative;
+    display:         inline-flex;
+    align-items:     center;
+    justify-content: center;
+    cursor:          pointer;
+    font-family:     var(--bkbg-pb-btn-font-family, inherit);
+    font-size:       var(--bkbg-pb-btn-font-size-d, var(--bkbg-pb-btn-fs, 17px));
+    font-weight:     var(--bkbg-pb-btn-font-weight, var(--bkbg-pb-btn-fw, 700));
+    font-style:      var(--bkbg-pb-btn-font-style, normal);
+    text-transform:  var(--bkbg-pb-btn-text-transform, var(--bkbg-pb-btn-tt, none));
+    text-decoration: var(--bkbg-pb-btn-text-decoration, none);
+    letter-spacing:  var(--bkbg-pb-btn-letter-spacing-d, var(--bkbg-pb-btn-ls, 0.5px));
+    line-height:     var(--bkbg-pb-btn-line-height-d, 1.2);
+    word-spacing:    var(--bkbg-pb-btn-word-spacing-d, normal);
+    white-space:     nowrap;
+    user-select:     none;
+    -webkit-user-select: none;
+    outline:         none;
+    overflow:        visible;
+    z-index:         1;
+    transition:      all 0.22s cubic-bezier(.4, 0, .2, 1);
+}
+
+.bkbg-pb-btn:focus-visible {
+    outline:        3px solid #005fcc;
+    outline-offset: 3px;
+}
+
+/* Hover brightness lift (when no explicit hover bg provided) */
+.bkbg-pb-btn:hover {
+    filter:    brightness(1.08);
+    transform: translateY(-2px);
+}
+
+.bkbg-pb-btn:active {
+    transform: translateY(0);
+    filter:    brightness(0.95);
+}
+
+/* ── Icon ────────────────────────────────────────────────── */
+.bkbg-pb-icon {
+    display:    block;
+    flex-shrink: 0;
+    transition: transform 0.22s cubic-bezier(.4, 0, .2, 1);
+}
+
+/* Icon nudge on hover ─ right-side icon moves right */
+.bkbg-pb-icon-hover:hover .bkbg-pb-icon:last-of-type {
+    transform: translateX(4px);
+}
+
+/* Icon nudge on hover ─ left-side icon moves left */
+.bkbg-pb-icon-hover:hover .bkbg-pb-icon:first-of-type {
+    transform: translateX(-4px);
+}
+
+/* ── Label span ──────────────────────────────────────────── */
+.bkbg-pb-label {
+    display:        inline;
+    pointer-events: none;
+}
+
+/* ── Badge ────────────────────────────────────────────────── */
+.bkbg-pb-badge {
+    /* position / colors / size set via inline styles */
+    pointer-events: none;
+    font-family:    inherit;
+}
+
+/* ── Subtext ──────────────────────────────────────────────── */
+.bkbg-pb-subtext {
+    display:         block;
+    font-family:     var(--bkbg-pb-sub-font-family, inherit);
+    font-size:       var(--bkbg-pb-sub-font-size-d, var(--bkbg-pb-sub-fs, 12px));
+    font-weight:     var(--bkbg-pb-sub-font-weight, normal);
+    font-style:      var(--bkbg-pb-sub-font-style, normal);
+    text-transform:  var(--bkbg-pb-sub-text-transform, none);
+    text-decoration: var(--bkbg-pb-sub-text-decoration, none);
+    letter-spacing:  var(--bkbg-pb-sub-letter-spacing-d, normal);
+    line-height:     var(--bkbg-pb-sub-line-height-d, 1.5);
+    word-spacing:    var(--bkbg-pb-sub-word-spacing-d, normal);
+    /* color / margin via inline styles */
+}
+
+/* ── Typography responsive — tablet ── */
+@media (max-width: 1024px) {
+    .bkbg-pb-btn { font-size: var(--bkbg-pb-btn-font-size-t, var(--bkbg-pb-btn-font-size-d, var(--bkbg-pb-btn-fs, 17px))); letter-spacing: var(--bkbg-pb-btn-letter-spacing-t, var(--bkbg-pb-btn-letter-spacing-d, var(--bkbg-pb-btn-ls, 0.5px))); line-height: var(--bkbg-pb-btn-line-height-t, var(--bkbg-pb-btn-line-height-d, 1.2)); word-spacing: var(--bkbg-pb-btn-word-spacing-t, var(--bkbg-pb-btn-word-spacing-d, normal)); }
+    .bkbg-pb-subtext { font-size: var(--bkbg-pb-sub-font-size-t, var(--bkbg-pb-sub-font-size-d, var(--bkbg-pb-sub-fs, 12px))); letter-spacing: var(--bkbg-pb-sub-letter-spacing-t, var(--bkbg-pb-sub-letter-spacing-d, normal)); line-height: var(--bkbg-pb-sub-line-height-t, var(--bkbg-pb-sub-line-height-d, 1.5)); word-spacing: var(--bkbg-pb-sub-word-spacing-t, var(--bkbg-pb-sub-word-spacing-d, normal)); }
+}
+
+/* ── Typography responsive — mobile ── */
+@media (max-width: 767px) {
+    .bkbg-pb-btn { font-size: var(--bkbg-pb-btn-font-size-m, var(--bkbg-pb-btn-font-size-t, var(--bkbg-pb-btn-font-size-d, var(--bkbg-pb-btn-fs, 17px)))); letter-spacing: var(--bkbg-pb-btn-letter-spacing-m, var(--bkbg-pb-btn-letter-spacing-t, var(--bkbg-pb-btn-letter-spacing-d, var(--bkbg-pb-btn-ls, 0.5px)))); line-height: var(--bkbg-pb-btn-line-height-m, var(--bkbg-pb-btn-line-height-t, var(--bkbg-pb-btn-line-height-d, 1.2))); word-spacing: var(--bkbg-pb-btn-word-spacing-m, var(--bkbg-pb-btn-word-spacing-t, var(--bkbg-pb-btn-word-spacing-d, normal))); }
+    .bkbg-pb-subtext { font-size: var(--bkbg-pb-sub-font-size-m, var(--bkbg-pb-sub-font-size-t, var(--bkbg-pb-sub-font-size-d, var(--bkbg-pb-sub-fs, 12px)))); letter-spacing: var(--bkbg-pb-sub-letter-spacing-m, var(--bkbg-pb-sub-letter-spacing-t, var(--bkbg-pb-sub-letter-spacing-d, normal))); line-height: var(--bkbg-pb-sub-line-height-m, var(--bkbg-pb-sub-line-height-t, var(--bkbg-pb-sub-line-height-d, 1.5))); word-spacing: var(--bkbg-pb-sub-word-spacing-m, var(--bkbg-pb-sub-word-spacing-t, var(--bkbg-pb-sub-word-spacing-d, normal))); }
+}
+
+/* ── Reduced motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .bkbg-pb-pulse-wrap::before,
+    .bkbg-pb-pulse-wrap::after,
+    .bkbg-pb-pulse--glow      .bkbg-pb-btn,
+    .bkbg-pb-pulse--neon      .bkbg-pb-btn,
+    .bkbg-pb-pulse--breath    .bkbg-pb-btn,
+    .bkbg-pb-pulse--heartbeat .bkbg-pb-btn,
+    .bkbg-pb-pulse--float     .bkbg-pb-btn,
+    .bkbg-pb-pulse--ripple    .bkbg-pb-btn {
+        animation: none !important;
+    }
+}
+
+.bkbg-pb-pulse-wrap.bkbg-pb-reduced-motion::before,
+.bkbg-pb-pulse-wrap.bkbg-pb-reduced-motion::after,
+.bkbg-pb-pulse-wrap.bkbg-pb-reduced-motion .bkbg-pb-btn {
+    animation-play-state: paused !important;
+}
+
+/* =========================================================
+   Editor overrides
+   ========================================================= */
+
+/* Keep RichText inside the button accessible */
+.editor-styles-wrapper .bkbg-pb-btn {
+    pointer-events: auto;
+    cursor:         text;
+}
+
+/* Pause pulse animation in editor for performance */
+.editor-styles-wrapper .bkbg-pb-pulse-wrap::before,
+.editor-styles-wrapper .bkbg-pb-pulse-wrap::after {
+    animation-play-state: running; /* leave running so authors see the effect */
+}

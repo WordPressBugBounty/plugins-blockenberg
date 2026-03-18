@@ -1,0 +1,124 @@
+.bkbg-sr-wrap {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.bkbg-sr-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    transition: background 0.05s linear;
+}
+
+.bkbg-sr-inner {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 24px;
+}
+
+.bkbg-sr-eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-family: var(--bksr-ey-font-family, inherit);
+    font-size: var(--bksr-ey-font-size-d, var(--bksr-ey-sz, 13px));
+    font-weight: var(--bksr-ey-font-weight, 700);
+    font-style: var(--bksr-ey-font-style, normal);
+    text-decoration: var(--bksr-ey-text-decoration, none);
+    text-transform: var(--bksr-ey-text-transform, uppercase);
+    line-height: var(--bksr-ey-line-height-d, 1.4);
+    letter-spacing: var(--bksr-ey-letter-spacing-d, 0.12em);
+    word-spacing: var(--bksr-ey-word-spacing-d, normal);
+}
+
+.bkbg-sr-heading {
+    margin: 0 0 20px;
+    font-family: var(--bksr-hd-font-family, inherit);
+    font-size: var(--bksr-hd-font-size-d, var(--bksr-hd-sz, 48px));
+    font-weight: var(--bksr-hd-font-weight, var(--bksr-hd-w, 700));
+    font-style: var(--bksr-hd-font-style, normal);
+    text-decoration: var(--bksr-hd-text-decoration, none);
+    text-transform: var(--bksr-hd-text-transform, none);
+    line-height: var(--bksr-hd-line-height-d, var(--bksr-hd-lh, 1.2));
+    letter-spacing: var(--bksr-hd-letter-spacing-d, normal);
+    word-spacing: var(--bksr-hd-word-spacing-d, normal);
+}
+
+/* Rule 7: h2 heading specificity >= 0,2,0 */
+.bkbg-sr-inner h2.bkbg-sr-heading {
+    font-family: var(--bksr-hd-font-family, inherit);
+    font-size: var(--bksr-hd-font-size-d, var(--bksr-hd-sz, 48px));
+    font-weight: var(--bksr-hd-font-weight, var(--bksr-hd-w, 700));
+    font-style: var(--bksr-hd-font-style, normal);
+    text-decoration: var(--bksr-hd-text-decoration, none);
+    text-transform: var(--bksr-hd-text-transform, none);
+    line-height: var(--bksr-hd-line-height-d, var(--bksr-hd-lh, 1.2));
+    letter-spacing: var(--bksr-hd-letter-spacing-d, normal);
+    word-spacing: var(--bksr-hd-word-spacing-d, normal);
+    margin: 0 0 20px;
+}
+
+.bkbg-sr-text {
+    margin: 0 0 32px;
+    font-family: var(--bksr-tx-font-family, inherit);
+    font-size: var(--bksr-tx-font-size-d, var(--bksr-tx-sz, 18px));
+    font-weight: var(--bksr-tx-font-weight, 400);
+    font-style: var(--bksr-tx-font-style, normal);
+    text-decoration: var(--bksr-tx-text-decoration, none);
+    text-transform: var(--bksr-tx-text-transform, none);
+    line-height: var(--bksr-tx-line-height-d, var(--bksr-tx-lh, 1.6));
+    letter-spacing: var(--bksr-tx-letter-spacing-d, normal);
+    word-spacing: var(--bksr-tx-word-spacing-d, normal);
+}
+
+.bkbg-sr-btn {
+    display: inline-block;
+    border-radius: 8px;
+    padding: 14px 32px;
+    transition: opacity 0.2s, transform 0.2s;
+    font-family: var(--bksr-ct-font-family, inherit);
+    font-size: var(--bksr-ct-font-size-d, 16px);
+    font-weight: var(--bksr-ct-font-weight, 700);
+    font-style: var(--bksr-ct-font-style, normal);
+    text-decoration: var(--bksr-ct-text-decoration, none);
+    text-transform: var(--bksr-ct-text-transform, none);
+    line-height: var(--bksr-ct-line-height-d, 1.4);
+    letter-spacing: var(--bksr-ct-letter-spacing-d, normal);
+    word-spacing: var(--bksr-ct-word-spacing-d, normal);
+}
+
+.bkbg-sr-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Editor helper */
+.bkbg-sr-editor {
+    display: block;
+}
+
+/* Scan animation for auto mode */
+@keyframes bkbg-sr-scan {
+    0%   { --bkbg-sr-x: 0%; }
+    50%  { --bkbg-sr-x: 100%; }
+    100% { --bkbg-sr-x: 0%; }
+}
+
+/* ---- Typography responsive — tablet ---- */
+@media (max-width: 1024px) {
+    .bkbg-sr-eyebrow { font-size: var(--bksr-ey-font-size-t, var(--bksr-ey-font-size-d, var(--bksr-ey-sz, 13px))); line-height: var(--bksr-ey-line-height-t, var(--bksr-ey-line-height-d, 1.4)); letter-spacing: var(--bksr-ey-letter-spacing-t, var(--bksr-ey-letter-spacing-d, 0.12em)); word-spacing: var(--bksr-ey-word-spacing-t, var(--bksr-ey-word-spacing-d, normal)); }
+    .bkbg-sr-inner .bkbg-sr-heading { font-size: var(--bksr-hd-font-size-t, var(--bksr-hd-font-size-d, var(--bksr-hd-sz, 48px))); line-height: var(--bksr-hd-line-height-t, var(--bksr-hd-line-height-d, var(--bksr-hd-lh, 1.2))); letter-spacing: var(--bksr-hd-letter-spacing-t, var(--bksr-hd-letter-spacing-d, normal)); word-spacing: var(--bksr-hd-word-spacing-t, var(--bksr-hd-word-spacing-d, normal)); }
+    .bkbg-sr-text { font-size: var(--bksr-tx-font-size-t, var(--bksr-tx-font-size-d, var(--bksr-tx-sz, 18px))); line-height: var(--bksr-tx-line-height-t, var(--bksr-tx-line-height-d, var(--bksr-tx-lh, 1.6))); letter-spacing: var(--bksr-tx-letter-spacing-t, var(--bksr-tx-letter-spacing-d, normal)); word-spacing: var(--bksr-tx-word-spacing-t, var(--bksr-tx-word-spacing-d, normal)); }
+    .bkbg-sr-btn { font-size: var(--bksr-ct-font-size-t, var(--bksr-ct-font-size-d, 16px)); line-height: var(--bksr-ct-line-height-t, var(--bksr-ct-line-height-d, 1.4)); letter-spacing: var(--bksr-ct-letter-spacing-t, var(--bksr-ct-letter-spacing-d, normal)); word-spacing: var(--bksr-ct-word-spacing-t, var(--bksr-ct-word-spacing-d, normal)); }
+}
+
+/* ---- Typography responsive — mobile ---- */
+@media (max-width: 767px) {
+    .bkbg-sr-eyebrow { font-size: var(--bksr-ey-font-size-m, var(--bksr-ey-font-size-t, var(--bksr-ey-font-size-d, var(--bksr-ey-sz, 13px)))); line-height: var(--bksr-ey-line-height-m, var(--bksr-ey-line-height-t, var(--bksr-ey-line-height-d, 1.4))); letter-spacing: var(--bksr-ey-letter-spacing-m, var(--bksr-ey-letter-spacing-t, var(--bksr-ey-letter-spacing-d, 0.12em))); word-spacing: var(--bksr-ey-word-spacing-m, var(--bksr-ey-word-spacing-t, var(--bksr-ey-word-spacing-d, normal))); }
+    .bkbg-sr-inner .bkbg-sr-heading { font-size: var(--bksr-hd-font-size-m, var(--bksr-hd-font-size-t, var(--bksr-hd-font-size-d, var(--bksr-hd-sz, 48px)))); line-height: var(--bksr-hd-line-height-m, var(--bksr-hd-line-height-t, var(--bksr-hd-line-height-d, var(--bksr-hd-lh, 1.2)))); letter-spacing: var(--bksr-hd-letter-spacing-m, var(--bksr-hd-letter-spacing-t, var(--bksr-hd-letter-spacing-d, normal))); word-spacing: var(--bksr-hd-word-spacing-m, var(--bksr-hd-word-spacing-t, var(--bksr-hd-word-spacing-d, normal))); }
+    .bkbg-sr-text { font-size: var(--bksr-tx-font-size-m, var(--bksr-tx-font-size-t, var(--bksr-tx-font-size-d, var(--bksr-tx-sz, 18px)))); line-height: var(--bksr-tx-line-height-m, var(--bksr-tx-line-height-t, var(--bksr-tx-line-height-d, var(--bksr-tx-lh, 1.6)))); letter-spacing: var(--bksr-tx-letter-spacing-m, var(--bksr-tx-letter-spacing-t, var(--bksr-tx-letter-spacing-d, normal))); word-spacing: var(--bksr-tx-word-spacing-m, var(--bksr-tx-word-spacing-t, var(--bksr-tx-word-spacing-d, normal))); }
+    .bkbg-sr-btn { font-size: var(--bksr-ct-font-size-m, var(--bksr-ct-font-size-t, var(--bksr-ct-font-size-d, 16px))); line-height: var(--bksr-ct-line-height-m, var(--bksr-ct-line-height-t, var(--bksr-ct-line-height-d, 1.4))); letter-spacing: var(--bksr-ct-letter-spacing-m, var(--bksr-ct-letter-spacing-t, var(--bksr-ct-letter-spacing-d, normal))); word-spacing: var(--bksr-ct-word-spacing-m, var(--bksr-ct-word-spacing-t, var(--bksr-ct-word-spacing-d, normal))); }
+}

@@ -1,0 +1,241 @@
+/* Flip Countdown Block — bkbg-fc-* */
+
+.bkbg-fc-app {
+    padding: 40px 20px;
+    text-align: center;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.bkbg-fc-app .bkbg-fc-title {
+    margin: 0 0 8px;
+    font-family: var(--bkbg-fcd-tt-font-family, inherit);
+    font-size: var(--bkbg-fcd-tt-font-size-d, 30px);
+    font-weight: var(--bkbg-fcd-tt-font-weight, 800);
+    font-style: var(--bkbg-fcd-tt-font-style, normal);
+    text-decoration: var(--bkbg-fcd-tt-text-decoration, none);
+    text-transform: var(--bkbg-fcd-tt-text-transform, none);
+    line-height: var(--bkbg-fcd-tt-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-fcd-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fcd-tt-word-spacing-d, normal);
+}
+
+.bkbg-fc-app .bkbg-fc-subtitle {
+    margin: 0 0 32px;
+    opacity: 0.65;
+    font-family: var(--bkbg-fcd-ts-font-family, inherit);
+    font-size: var(--bkbg-fcd-ts-font-size-d, 15px);
+    font-weight: var(--bkbg-fcd-ts-font-weight, 400);
+    font-style: var(--bkbg-fcd-ts-font-style, normal);
+    text-decoration: var(--bkbg-fcd-ts-text-decoration, none);
+    text-transform: var(--bkbg-fcd-ts-text-transform, none);
+    line-height: var(--bkbg-fcd-ts-line-height-d, 1.5);
+    letter-spacing: var(--bkbg-fcd-ts-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fcd-ts-word-spacing-d, normal);
+}
+
+/* ---- Row of units ---- */
+.bkbg-fc-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* ---- Unit (e.g. "Days") ---- */
+.bkbg-fc-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ---- Pair of digit cards ---- */
+.bkbg-fc-pair {
+    display: flex;
+    gap: 4px;
+}
+
+/* ---- Individual flip card ---- */
+.bkbg-fc-card {
+    position: relative;
+    width: 1ch;
+    min-width: 52px;
+    height: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 1px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    user-select: none;
+}
+.bkbg-fc-app .bkbg-fc-card {
+    font-family: var(--bkbg-fcd-td-font-family, inherit);
+    font-size: var(--bkbg-fcd-td-font-size-d, 56px);
+}
+
+/* ---- Upper half ---- */
+.bkbg-fc-upper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 2px;
+    transform-origin: bottom center;
+    backface-visibility: hidden;
+    line-height: 1;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -2px;
+}
+
+/* ---- Lower half ---- */
+.bkbg-fc-lower {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 2px;
+    transform-origin: top center;
+    line-height: 1;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -2px;
+}
+
+/* ---- Hinge line (the dividing line in the middle) ---- */
+.bkbg-fc-hinge {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+/* ---- Flip animation upper (sweeps old number away) ---- */
+.bkbg-fc-flap-upper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 2px;
+    transform-origin: bottom center;
+    backface-visibility: hidden;
+    line-height: 1;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -2px;
+    z-index: 10;
+    animation: bkbg-fc-flip-upper 0.25s ease-in forwards;
+}
+
+@keyframes bkbg-fc-flip-upper {
+    from { transform: rotateX(0deg); }
+    to   { transform: rotateX(-90deg); }
+}
+
+/* ---- Flip animation lower (sweeps new number in) ---- */
+.bkbg-fc-flap-lower {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 2px;
+    transform-origin: top center;
+    line-height: 1;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -2px;
+    z-index: 10;
+    transform: rotateX(90deg);
+    animation: bkbg-fc-flip-lower 0.25s ease-out 0.25s forwards;
+}
+
+@keyframes bkbg-fc-flip-lower {
+    from { transform: rotateX(90deg); }
+    to   { transform: rotateX(0deg); }
+}
+
+/* ---- Separator colon ---- */
+.bkbg-fc-app .bkbg-fc-sep {
+    font-size: var(--bkbg-fcd-td-font-size-d, 56px);
+    font-weight: 900;
+    line-height: 1;
+    align-self: center;
+    margin-bottom: 22px;
+    opacity: 0.8;
+}
+
+/* ---- Label ---- */
+.bkbg-fc-app .bkbg-fc-label {
+    font-family: var(--bkbg-fcd-tl-font-family, inherit);
+    font-size: var(--bkbg-fcd-tl-font-size-d, 12px);
+    font-weight: var(--bkbg-fcd-tl-font-weight, 600);
+    font-style: var(--bkbg-fcd-tl-font-style, normal);
+    text-decoration: var(--bkbg-fcd-tl-text-decoration, none);
+    text-transform: var(--bkbg-fcd-tl-text-transform, uppercase);
+    line-height: var(--bkbg-fcd-tl-line-height-d, 1);
+    letter-spacing: var(--bkbg-fcd-tl-letter-spacing-d, 1.5px);
+    word-spacing: var(--bkbg-fcd-tl-word-spacing-d, normal);
+}
+
+/* ---- End message ---- */
+.bkbg-fc-end {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 24px;
+    animation: bkbg-fc-pop-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes bkbg-fc-pop-in {
+    from { transform: scale(0.6); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+/* ---- Editor wrapper ---- */
+.bkbg-fc-editor-wrap { display: block; }
+
+/* ---- Typography responsive ---- */
+@media (max-width: 1024px) {
+    .bkbg-fc-app .bkbg-fc-title { font-size: var(--bkbg-fcd-tt-font-size-t, var(--bkbg-fcd-tt-font-size-d, 30px)); line-height: var(--bkbg-fcd-tt-line-height-t, var(--bkbg-fcd-tt-line-height-d, 1.2)); letter-spacing: var(--bkbg-fcd-tt-letter-spacing-t, var(--bkbg-fcd-tt-letter-spacing-d, normal)); word-spacing: var(--bkbg-fcd-tt-word-spacing-t, var(--bkbg-fcd-tt-word-spacing-d, normal)); }
+    .bkbg-fc-app .bkbg-fc-subtitle { font-size: var(--bkbg-fcd-ts-font-size-t, var(--bkbg-fcd-ts-font-size-d, 15px)); line-height: var(--bkbg-fcd-ts-line-height-t, var(--bkbg-fcd-ts-line-height-d, 1.5)); letter-spacing: var(--bkbg-fcd-ts-letter-spacing-t, var(--bkbg-fcd-ts-letter-spacing-d, normal)); word-spacing: var(--bkbg-fcd-ts-word-spacing-t, var(--bkbg-fcd-ts-word-spacing-d, normal)); }
+    .bkbg-fc-app .bkbg-fc-card { font-size: var(--bkbg-fcd-td-font-size-t, var(--bkbg-fcd-td-font-size-d, 56px)); }
+    .bkbg-fc-app .bkbg-fc-sep { font-size: var(--bkbg-fcd-td-font-size-t, var(--bkbg-fcd-td-font-size-d, 56px)); }
+    .bkbg-fc-app .bkbg-fc-label { font-size: var(--bkbg-fcd-tl-font-size-t, var(--bkbg-fcd-tl-font-size-d, 12px)); line-height: var(--bkbg-fcd-tl-line-height-t, var(--bkbg-fcd-tl-line-height-d, 1)); letter-spacing: var(--bkbg-fcd-tl-letter-spacing-t, var(--bkbg-fcd-tl-letter-spacing-d, 1.5px)); word-spacing: var(--bkbg-fcd-tl-word-spacing-t, var(--bkbg-fcd-tl-word-spacing-d, normal)); }
+}
+@media (max-width: 767px) {
+    .bkbg-fc-app .bkbg-fc-title { font-size: var(--bkbg-fcd-tt-font-size-m, var(--bkbg-fcd-tt-font-size-t, var(--bkbg-fcd-tt-font-size-d, 30px))); line-height: var(--bkbg-fcd-tt-line-height-m, var(--bkbg-fcd-tt-line-height-t, var(--bkbg-fcd-tt-line-height-d, 1.2))); letter-spacing: var(--bkbg-fcd-tt-letter-spacing-m, var(--bkbg-fcd-tt-letter-spacing-t, var(--bkbg-fcd-tt-letter-spacing-d, normal))); word-spacing: var(--bkbg-fcd-tt-word-spacing-m, var(--bkbg-fcd-tt-word-spacing-t, var(--bkbg-fcd-tt-word-spacing-d, normal))); }
+    .bkbg-fc-app .bkbg-fc-subtitle { font-size: var(--bkbg-fcd-ts-font-size-m, var(--bkbg-fcd-ts-font-size-t, var(--bkbg-fcd-ts-font-size-d, 15px))); line-height: var(--bkbg-fcd-ts-line-height-m, var(--bkbg-fcd-ts-line-height-t, var(--bkbg-fcd-ts-line-height-d, 1.5))); letter-spacing: var(--bkbg-fcd-ts-letter-spacing-m, var(--bkbg-fcd-ts-letter-spacing-t, var(--bkbg-fcd-ts-letter-spacing-d, normal))); word-spacing: var(--bkbg-fcd-ts-word-spacing-m, var(--bkbg-fcd-ts-word-spacing-t, var(--bkbg-fcd-ts-word-spacing-d, normal))); }
+    .bkbg-fc-app .bkbg-fc-card { font-size: var(--bkbg-fcd-td-font-size-m, var(--bkbg-fcd-td-font-size-t, var(--bkbg-fcd-td-font-size-d, 56px))); }
+    .bkbg-fc-app .bkbg-fc-sep { font-size: var(--bkbg-fcd-td-font-size-m, var(--bkbg-fcd-td-font-size-t, var(--bkbg-fcd-td-font-size-d, 56px))); }
+    .bkbg-fc-app .bkbg-fc-label { font-size: var(--bkbg-fcd-tl-font-size-m, var(--bkbg-fcd-tl-font-size-t, var(--bkbg-fcd-tl-font-size-d, 12px))); line-height: var(--bkbg-fcd-tl-line-height-m, var(--bkbg-fcd-tl-line-height-t, var(--bkbg-fcd-tl-line-height-d, 1))); letter-spacing: var(--bkbg-fcd-tl-letter-spacing-m, var(--bkbg-fcd-tl-letter-spacing-t, var(--bkbg-fcd-tl-letter-spacing-d, 1.5px))); word-spacing: var(--bkbg-fcd-tl-word-spacing-m, var(--bkbg-fcd-tl-word-spacing-t, var(--bkbg-fcd-tl-word-spacing-d, normal))); }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 500px) {
+    .bkbg-fc-card { min-width: 38px; }
+    .bkbg-fc-row { gap: 8px; }
+}

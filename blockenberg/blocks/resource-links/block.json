@@ -1,0 +1,204 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/resource-links",
+    "version": "1.0.0",
+    "title": "Resource Links",
+    "category": "bkbg-content",
+    "icon": "list-view",
+    "description": "Curated resource / link list with section heading, items (icon, title, description, URL, type tag), list or grid layout, and full color/style controls.",
+    "keywords": [
+        "resources",
+        "links",
+        "list",
+        "reading list",
+        "downloads"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-resource-links-editor",
+    "style": "bkbg-resource-links-style",
+    "viewScript": "bkbg-resource-links-frontend",
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Useful Resources"
+        },
+        "showHeading": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Everything you need to get started."
+        },
+        "showSubtext": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "list"
+        },
+        "columns": {
+            "type": "number",
+            "default": 2
+        },
+        "openNewTab": {
+            "type": "boolean",
+            "default": true
+        },
+        "showArrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "📄",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Getting Started Guide",
+                    "description": "Everything you need to set up your workspace in minutes.",
+                    "url": "#",
+                    "tag": "Guide"
+                },
+                {
+                    "icon": "🎥",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Video Tutorial Series",
+                    "description": "Step-by-step walkthroughs for all major features.",
+                    "url": "#",
+                    "tag": "Video"
+                },
+                {
+                    "icon": "📦",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Starter Template Pack",
+                    "description": "Ready-to-use templates for common use cases.",
+                    "url": "#",
+                    "tag": "Template"
+                },
+                {
+                    "icon": "💬",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Community Forum",
+                    "description": "Get help from thousands of users and our team.",
+                    "url": "#",
+                    "tag": "Community"
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "tagBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "tagColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "arrowColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "hoverBg": {
+            "type": "string",
+            "default": "#f3f0ff"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 32
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 17
+        },
+        "descSize": {
+            "type": "number",
+            "default": 14
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 28
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 64
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 900
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

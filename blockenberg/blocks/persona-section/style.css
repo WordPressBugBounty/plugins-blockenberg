@@ -1,0 +1,135 @@
+/* Persona Section block */
+.bkbg-per-app { display: block; }
+
+.bkbg-per-inner { max-width: 1200px; margin: 0 auto; }
+
+.bkbg-per-header { text-align: center; margin-bottom: 48px; }
+.bkbg-per-eyebrow {
+    font-family: var(--bkbg-per-eyebrow-ff, inherit);
+    font-size: var(--bkbg-per-eyebrow-fs, 13px);
+    font-weight: var(--bkbg-per-eyebrow-fw, 700);
+    font-style: var(--bkbg-per-eyebrow-fst, normal);
+    text-decoration: var(--bkbg-per-eyebrow-td, none);
+    text-transform: var(--bkbg-per-eyebrow-tt, uppercase);
+    letter-spacing: var(--bkbg-per-eyebrow-ls, 0.08em);
+    line-height: var(--bkbg-per-eyebrow-lh, 1.4);
+    margin: 0 0 12px; display: block;
+}
+.bkbg-per-heading {
+    font-family: var(--bkbg-per-heading-ff, inherit);
+    font-size: var(--bkbg-per-heading-fs, 36px);
+    font-weight: var(--bkbg-per-heading-fw, 800);
+    font-style: var(--bkbg-per-heading-fst, normal);
+    text-decoration: var(--bkbg-per-heading-td, none);
+    text-transform: var(--bkbg-per-heading-tt, none);
+    letter-spacing: var(--bkbg-per-heading-ls, normal);
+    line-height: var(--bkbg-per-heading-lh, 1.2);
+    margin: 0 0 16px;
+}
+.bkbg-per-sub {
+    font-family: var(--bkbg-per-subtext-ff, inherit);
+    font-size: var(--bkbg-per-subtext-fs, 18px);
+    font-weight: var(--bkbg-per-subtext-fw, 400);
+    font-style: var(--bkbg-per-subtext-fst, normal);
+    text-decoration: var(--bkbg-per-subtext-td, none);
+    text-transform: var(--bkbg-per-subtext-tt, none);
+    letter-spacing: var(--bkbg-per-subtext-ls, normal);
+    line-height: var(--bkbg-per-subtext-lh, 1.6);
+    margin: 0 auto; max-width: 640px;
+}
+
+.bkbg-per-grid {
+    display: grid; gap: 24px;
+}
+
+.bkbg-per-card { border-width: 1px; border-style: solid; padding: 28px; }
+
+.bkbg-per-icon {
+    width: 56px; height: 56px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px; margin-bottom: 16px;
+}
+.bkbg-per-icon svg { width: 1em; height: 1em; fill: currentColor; }
+.bkbg-per-icon .dashicons { font-size: inherit; width: 1em; height: 1em; line-height: 1; }
+.bkbg-per-icon .bkbg-icon-img { width: 1em; height: 1em; object-fit: contain; }
+.bkbg-per-role {
+    margin: 0 0 8px;
+    font-family: var(--bkbg-per-role-ff, inherit);
+    font-size: var(--bkbg-per-role-fs, 18px);
+    font-weight: var(--bkbg-per-role-fw, 700);
+    font-style: var(--bkbg-per-role-fst, normal);
+    text-decoration: var(--bkbg-per-role-td, none);
+    text-transform: var(--bkbg-per-role-tt, none);
+    letter-spacing: var(--bkbg-per-role-ls, normal);
+    line-height: var(--bkbg-per-role-lh, 1.3);
+}
+.bkbg-per-desc {
+    margin: 0 0 20px;
+    font-family: var(--bkbg-per-desc-ff, inherit);
+    font-size: var(--bkbg-per-desc-fs, 14px);
+    font-weight: var(--bkbg-per-desc-fw, 400);
+    font-style: var(--bkbg-per-desc-fst, normal);
+    text-decoration: var(--bkbg-per-desc-td, none);
+    text-transform: var(--bkbg-per-desc-tt, none);
+    letter-spacing: var(--bkbg-per-desc-ls, normal);
+    line-height: var(--bkbg-per-desc-lh, 1.65);
+}
+
+.bkbg-per-list-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.05em; margin: 0 0 8px; display: block;
+}
+.bkbg-per-list { list-style: none; padding: 0; margin: 0 0 16px; }
+.bkbg-per-list li {
+    display: flex; align-items: flex-start; gap: 8px;
+    margin-bottom: 6px;
+    font-family: var(--bkbg-per-item-ff, inherit);
+    font-size: var(--bkbg-per-item-fs, 13px);
+    font-weight: var(--bkbg-per-item-fw, 400);
+    font-style: var(--bkbg-per-item-fst, normal);
+    text-decoration: var(--bkbg-per-item-td, none);
+    text-transform: var(--bkbg-per-item-tt, none);
+    letter-spacing: var(--bkbg-per-item-ls, normal);
+    line-height: var(--bkbg-per-item-lh, 1.5);
+}
+.bkbg-per-list-icon { flex-shrink: 0; font-style: normal; }
+
+/* Heading specificity */
+.bkbg-per-app h2.bkbg-per-heading,
+.bkbg-per-app .bkbg-per-heading {
+    font-size: var(--bkbg-per-heading-fs, 36px);
+    font-weight: var(--bkbg-per-heading-fw, 800);
+}
+.bkbg-per-card h3.bkbg-per-role,
+.bkbg-per-card .bkbg-per-role {
+    font-size: var(--bkbg-per-role-fs, 18px);
+    font-weight: var(--bkbg-per-role-fw, 700);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-per-eyebrow { font-size: var(--bkbg-per-eyebrow-fs-tab, var(--bkbg-per-eyebrow-fs, 13px)); }
+    .bkbg-per-heading { font-size: var(--bkbg-per-heading-fs-tab, var(--bkbg-per-heading-fs, 36px)); }
+    .bkbg-per-app h2.bkbg-per-heading,
+    .bkbg-per-app .bkbg-per-heading { font-size: var(--bkbg-per-heading-fs-tab, var(--bkbg-per-heading-fs, 36px)); }
+    .bkbg-per-sub { font-size: var(--bkbg-per-subtext-fs-tab, var(--bkbg-per-subtext-fs, 18px)); }
+    .bkbg-per-role { font-size: var(--bkbg-per-role-fs-tab, var(--bkbg-per-role-fs, 18px)); }
+    .bkbg-per-card h3.bkbg-per-role,
+    .bkbg-per-card .bkbg-per-role { font-size: var(--bkbg-per-role-fs-tab, var(--bkbg-per-role-fs, 18px)); }
+    .bkbg-per-desc { font-size: var(--bkbg-per-desc-fs-tab, var(--bkbg-per-desc-fs, 14px)); }
+    .bkbg-per-list li { font-size: var(--bkbg-per-item-fs-tab, var(--bkbg-per-item-fs, 13px)); }
+}
+@media (max-width: 767px) {
+    .bkbg-per-eyebrow { font-size: var(--bkbg-per-eyebrow-fs-mob, var(--bkbg-per-eyebrow-fs-tab, var(--bkbg-per-eyebrow-fs, 13px))); }
+    .bkbg-per-heading { font-size: var(--bkbg-per-heading-fs-mob, var(--bkbg-per-heading-fs-tab, var(--bkbg-per-heading-fs, 36px))); }
+    .bkbg-per-app h2.bkbg-per-heading,
+    .bkbg-per-app .bkbg-per-heading { font-size: var(--bkbg-per-heading-fs-mob, var(--bkbg-per-heading-fs-tab, var(--bkbg-per-heading-fs, 36px))); }
+    .bkbg-per-sub { font-size: var(--bkbg-per-subtext-fs-mob, var(--bkbg-per-subtext-fs-tab, var(--bkbg-per-subtext-fs, 18px))); }
+    .bkbg-per-role { font-size: var(--bkbg-per-role-fs-mob, var(--bkbg-per-role-fs-tab, var(--bkbg-per-role-fs, 18px))); }
+    .bkbg-per-card h3.bkbg-per-role,
+    .bkbg-per-card .bkbg-per-role { font-size: var(--bkbg-per-role-fs-mob, var(--bkbg-per-role-fs-tab, var(--bkbg-per-role-fs, 18px))); }
+    .bkbg-per-desc { font-size: var(--bkbg-per-desc-fs-mob, var(--bkbg-per-desc-fs-tab, var(--bkbg-per-desc-fs, 14px))); }
+    .bkbg-per-list li { font-size: var(--bkbg-per-item-fs-mob, var(--bkbg-per-item-fs-tab, var(--bkbg-per-item-fs, 13px))); }
+}
+@media (max-width: 640px) {
+    .bkbg-per-grid { grid-template-columns: 1fr !important; }
+}

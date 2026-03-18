@@ -1,0 +1,113 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/uuid-generator",
+    "title": "UUID Generator",
+    "category": "bkbg-dev",
+    "icon": "admin-network",
+    "description": "Generate universally unique identifiers (UUID v4 and v1-style). Batch generate, copy individual or all, toggle formatting options, and view generation history.",
+    "keywords": [
+        "uuid",
+        "guid",
+        "unique",
+        "identifier",
+        "random",
+        "developer",
+        "tool"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-uuid-generator-editor",
+    "style": "bkbg-uuid-generator-style",
+    "viewScript": "bkbg-uuid-generator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "UUID Generator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Generate unique identifiers instantly"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultVersion": {
+            "type": "string",
+            "default": "v4"
+        },
+        "defaultCount": {
+            "type": "number",
+            "default": 5
+        },
+        "showUppercase": {
+            "type": "boolean",
+            "default": false
+        },
+        "showNoBraces": {
+            "type": "boolean",
+            "default": true
+        },
+        "showHistory": {
+            "type": "boolean",
+            "default": false
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#0ea5e9"
+        },
+        "uuidBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "uuidColor": {
+            "type": "string",
+            "default": "#7dd3fc"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f0f9ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0c4a6e"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 680
+        }
+    }
+}

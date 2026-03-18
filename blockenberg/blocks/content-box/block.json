@@ -1,0 +1,154 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/content-box",
+    "version": "1.0.0",
+    "title": "Content Box",
+    "category": "bkbg-content",
+    "icon": "layout",
+    "description": "Styled content container with optional icon/emoji, badge label, title, rich body text, style variants (info/warning/success/tip/quote), border, background, and rounded corners.",
+    "keywords": [
+        "content",
+        "box",
+        "callout",
+        "note",
+        "info",
+        "warning",
+        "tip"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-content-box-editor",
+    "style": "bkbg-content-box-style",
+    "viewScript": "bkbg-content-box-frontend",
+    "attributes": {
+        "variant": {
+            "type": "string",
+            "default": "info"
+        },
+        "icon": {
+            "type": "string",
+            "default": "ℹ️"
+        },
+        "iconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "iconDashicon": {
+            "type": "string",
+            "default": "info"
+        },
+        "iconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "badge": {
+            "type": "string",
+            "default": "Note"
+        },
+        "title": {
+            "type": "string",
+            "default": "Important information"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "body": {
+            "type": "string",
+            "default": "This is a highlighted content box. Use it to draw attention to key information, tips, warnings, or quotes."
+        },
+        "iconLayout": {
+            "type": "string",
+            "default": "left"
+        },
+        "borderPosition": {
+            "type": "string",
+            "default": "left"
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 4
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "paddingV": {
+            "type": "number",
+            "default": 20
+        },
+        "paddingH": {
+            "type": "number",
+            "default": 24
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "borderColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "textColor": {
+            "type": "string",
+            "default": ""
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": ""
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": ""
+        },
+        "iconColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 18
+        },
+        "bodySize": {
+            "type": "number",
+            "default": 16
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 28
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 0
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

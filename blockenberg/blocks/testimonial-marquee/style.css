@@ -1,0 +1,187 @@
+@keyframes bkbg-tm-scroll-left {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+@keyframes bkbg-tm-scroll-right {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
+}
+
+.bkbg-tm-outer {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.bkbg-tm-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.bkbg-tm-viewport.fade-edges {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
+}
+
+.bkbg-tm-track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+}
+
+.bkbg-tm-track.dir-left {
+    animation: bkbg-tm-scroll-left linear infinite;
+}
+
+.bkbg-tm-track.dir-right {
+    animation: bkbg-tm-scroll-right linear infinite;
+}
+
+.bkbg-tm-outer.paused .bkbg-tm-track {
+    animation-play-state: paused;
+}
+
+.bkbg-tm-row {
+    overflow: hidden;
+    width: 100%;
+}
+
+.bkbg-tm-row + .bkbg-tm-row {
+    margin-top: 0;
+}
+
+.bkbg-tm-card {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.bkbg-tm-quote-bg {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    font-size: 56px;
+    line-height: 1;
+    font-family: Georgia, serif;
+    pointer-events: none;
+    user-select: none;
+    opacity: 1;
+}
+
+.bkbg-tm-stars {
+    display: flex;
+    gap: 2px;
+    flex-shrink: 0;
+}
+
+.bkbg-tm-quote {
+    flex-grow: 1;
+    margin: 0;
+    font-family: var(--bkmq-qt-font-family, inherit);
+    font-size: var(--bkmq-qt-font-size-d, 15px);
+    line-height: var(--bkmq-qt-line-height-d, 1.65);
+    font-weight: var(--bkmq-qt-font-weight, 400);
+    font-style: var(--bkmq-qt-font-style, normal);
+    text-decoration: var(--bkmq-qt-text-decoration, none);
+    text-transform: var(--bkmq-qt-text-transform, none);
+    letter-spacing: var(--bkmq-qt-letter-spacing-d, normal);
+    word-spacing: var(--bkmq-qt-word-spacing-d, normal);
+}
+
+.bkbg-tm-author-row {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.bkbg-tm-avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.bkbg-tm-avatar-fallback {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+    color: #fff;
+}
+
+.bkbg-tm-author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.bkbg-tm-author-name {
+    font-family: var(--bkmq-nm-font-family, inherit);
+    font-size: var(--bkmq-nm-font-size-d, 13px);
+    line-height: var(--bkmq-nm-line-height-d, 1.3);
+    font-weight: var(--bkmq-nm-font-weight, 700);
+    font-style: var(--bkmq-nm-font-style, normal);
+    text-decoration: var(--bkmq-nm-text-decoration, none);
+    text-transform: var(--bkmq-nm-text-transform, none);
+    letter-spacing: var(--bkmq-nm-letter-spacing-d, normal);
+    word-spacing: var(--bkmq-nm-word-spacing-d, normal);
+}
+
+.bkbg-tm-author-meta {
+    font-family: var(--bkmq-rl-font-family, inherit);
+    font-size: var(--bkmq-rl-font-size-d, 12px);
+    line-height: var(--bkmq-rl-line-height-d, 1.4);
+    font-weight: var(--bkmq-rl-font-weight, 400);
+    font-style: var(--bkmq-rl-font-style, normal);
+    text-decoration: var(--bkmq-rl-text-decoration, none);
+    text-transform: var(--bkmq-rl-text-transform, none);
+    letter-spacing: var(--bkmq-rl-letter-spacing-d, normal);
+    word-spacing: var(--bkmq-rl-word-spacing-d, normal);
+}
+
+/* Responsive typography */
+@media (max-width: 1024px) {
+    .bkbg-tm-quote {
+        font-size: var(--bkmq-qt-font-size-t, var(--bkmq-qt-font-size-d, 15px));
+        line-height: var(--bkmq-qt-line-height-t, var(--bkmq-qt-line-height-d, 1.65));
+        letter-spacing: var(--bkmq-qt-letter-spacing-t, var(--bkmq-qt-letter-spacing-d, normal));
+        word-spacing: var(--bkmq-qt-word-spacing-t, var(--bkmq-qt-word-spacing-d, normal));
+    }
+    .bkbg-tm-author-name {
+        font-size: var(--bkmq-nm-font-size-t, var(--bkmq-nm-font-size-d, 13px));
+        line-height: var(--bkmq-nm-line-height-t, var(--bkmq-nm-line-height-d, 1.3));
+        letter-spacing: var(--bkmq-nm-letter-spacing-t, var(--bkmq-nm-letter-spacing-d, normal));
+        word-spacing: var(--bkmq-nm-word-spacing-t, var(--bkmq-nm-word-spacing-d, normal));
+    }
+    .bkbg-tm-author-meta {
+        font-size: var(--bkmq-rl-font-size-t, var(--bkmq-rl-font-size-d, 12px));
+        line-height: var(--bkmq-rl-line-height-t, var(--bkmq-rl-line-height-d, 1.4));
+        letter-spacing: var(--bkmq-rl-letter-spacing-t, var(--bkmq-rl-letter-spacing-d, normal));
+        word-spacing: var(--bkmq-rl-word-spacing-t, var(--bkmq-rl-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-tm-quote {
+        font-size: var(--bkmq-qt-font-size-m, var(--bkmq-qt-font-size-t, var(--bkmq-qt-font-size-d, 15px)));
+        line-height: var(--bkmq-qt-line-height-m, var(--bkmq-qt-line-height-t, var(--bkmq-qt-line-height-d, 1.65)));
+        letter-spacing: var(--bkmq-qt-letter-spacing-m, var(--bkmq-qt-letter-spacing-t, var(--bkmq-qt-letter-spacing-d, normal)));
+        word-spacing: var(--bkmq-qt-word-spacing-m, var(--bkmq-qt-word-spacing-t, var(--bkmq-qt-word-spacing-d, normal)));
+    }
+    .bkbg-tm-author-name {
+        font-size: var(--bkmq-nm-font-size-m, var(--bkmq-nm-font-size-t, var(--bkmq-nm-font-size-d, 13px)));
+        line-height: var(--bkmq-nm-line-height-m, var(--bkmq-nm-line-height-t, var(--bkmq-nm-line-height-d, 1.3)));
+        letter-spacing: var(--bkmq-nm-letter-spacing-m, var(--bkmq-nm-letter-spacing-t, var(--bkmq-nm-letter-spacing-d, normal)));
+        word-spacing: var(--bkmq-nm-word-spacing-m, var(--bkmq-nm-word-spacing-t, var(--bkmq-nm-word-spacing-d, normal)));
+    }
+    .bkbg-tm-author-meta {
+        font-size: var(--bkmq-rl-font-size-m, var(--bkmq-rl-font-size-t, var(--bkmq-rl-font-size-d, 12px)));
+        line-height: var(--bkmq-rl-line-height-m, var(--bkmq-rl-line-height-t, var(--bkmq-rl-line-height-d, 1.4)));
+        letter-spacing: var(--bkmq-rl-letter-spacing-m, var(--bkmq-rl-letter-spacing-t, var(--bkmq-rl-letter-spacing-d, normal)));
+        word-spacing: var(--bkmq-rl-word-spacing-m, var(--bkmq-rl-word-spacing-t, var(--bkmq-rl-word-spacing-d, normal)));
+    }
+}

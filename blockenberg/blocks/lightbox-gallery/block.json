@@ -1,0 +1,81 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/lightbox-gallery",
+    "title": "Lightbox Gallery",
+    "category": "bkbg-media",
+    "icon": "format-gallery",
+    "description": "Image grid where clicking a thumbnail opens a full-screen lightbox with prev/next navigation.",
+    "keywords": [
+        "gallery",
+        "lightbox",
+        "image",
+        "grid",
+        "photos",
+        "zoom"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-lightbox-gallery-editor",
+    "editorStyle": "bkbg-lightbox-gallery-style",
+    "style": "bkbg-lightbox-gallery-style",
+    "viewScript": "bkbg-lightbox-gallery-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "images": {
+            "type": "array",
+            "default": []
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "gap": {
+            "type": "number",
+            "default": 12
+        },
+        "imageRatio": {
+            "type": "string",
+            "default": "1/1"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "showCaptions": {
+            "type": "boolean",
+            "default": false
+        },
+        "overlayBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.92)"
+        },
+        "hoverEffect": {
+            "type": "string",
+            "default": "zoom"
+        },
+        "captionFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "captionFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "captionLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "captionTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

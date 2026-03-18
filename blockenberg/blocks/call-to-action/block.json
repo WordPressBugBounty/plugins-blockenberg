@@ -1,0 +1,294 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/call-to-action",
+    "title": "Call to Action",
+    "category": "bkbg-marketing",
+    "icon": "megaphone",
+    "description": "Headline + sub-headline + 1-2 buttons with optional color/gradient background. Perfect inside Row/Column blocks.",
+    "keywords": [
+        "cta",
+        "call",
+        "action",
+        "button",
+        "hero",
+        "banner",
+        "promo"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-call-to-action-editor",
+    "editorStyle": "bkbg-call-to-action-style",
+    "style": "bkbg-call-to-action-style",
+    "viewScript": "bkbg-call-to-action-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "headline": {
+            "type": "string",
+            "default": "Ready to Get Started?"
+        },
+        "subheadline": {
+            "type": "string",
+            "default": "Join thousands of users who are already transforming their workflow."
+        },
+        "titleTag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "btnLayout": {
+            "type": "string",
+            "default": "row"
+        },
+        "headlineSize": {
+            "type": "number",
+            "default": 36
+        },
+        "headlineWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "headlineColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "headlineLH": {
+            "type": "number",
+            "default": 1.2
+        },
+        "headlineSpacing": {
+            "type": "number",
+            "default": 12
+        },
+        "subSize": {
+            "type": "number",
+            "default": 18
+        },
+        "subWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "subLH": {
+            "type": "number",
+            "default": 1.6
+        },
+        "subSpacing": {
+            "type": "number",
+            "default": 32
+        },
+        "bgType": {
+            "type": "string",
+            "default": "color"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f0f9ff"
+        },
+        "bgGradientFrom": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "bgGradientTo": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "bgGradientAngle": {
+            "type": "number",
+            "default": 135
+        },
+        "bgImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "bgImageSize": {
+            "type": "string",
+            "default": "cover"
+        },
+        "bgImagePosition": {
+            "type": "string",
+            "default": "center center"
+        },
+        "bgOverlay": {
+            "type": "boolean",
+            "default": false
+        },
+        "bgOverlayColor": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.45)"
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingRight": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingLeft": {
+            "type": "number",
+            "default": 40
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 20
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 680
+        },
+        "gap": {
+            "type": "number",
+            "default": 8
+        },
+        "btn1Text": {
+            "type": "string",
+            "default": "Get Started"
+        },
+        "btn1Url": {
+            "type": "string",
+            "default": ""
+        },
+        "btn1Target": {
+            "type": "string",
+            "default": "_self"
+        },
+        "btn1Style": {
+            "type": "string",
+            "default": "solid"
+        },
+        "btn1Size": {
+            "type": "number",
+            "default": 16
+        },
+        "btn1Weight": {
+            "type": "number",
+            "default": 600
+        },
+        "btn1Radius": {
+            "type": "number",
+            "default": 8
+        },
+        "btn1PaddingV": {
+            "type": "number",
+            "default": 14
+        },
+        "btn1PaddingH": {
+            "type": "number",
+            "default": 32
+        },
+        "btn1Bg": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "btn1Color": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btn1BgHover": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "btn1ColorHover": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btn1BorderColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "btn1BorderWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "btn2Enabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "btn2Text": {
+            "type": "string",
+            "default": "Learn More"
+        },
+        "btn2Url": {
+            "type": "string",
+            "default": ""
+        },
+        "btn2Target": {
+            "type": "string",
+            "default": "_self"
+        },
+        "btn2Style": {
+            "type": "string",
+            "default": "outline"
+        },
+        "btn2Size": {
+            "type": "number",
+            "default": 16
+        },
+        "btn2Weight": {
+            "type": "number",
+            "default": 600
+        },
+        "btn2Radius": {
+            "type": "number",
+            "default": 8
+        },
+        "btn2PaddingV": {
+            "type": "number",
+            "default": 14
+        },
+        "btn2PaddingH": {
+            "type": "number",
+            "default": 32
+        },
+        "btn2Bg": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "btn2Color": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "btn2BgHover": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "btn2ColorHover": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btn2BorderColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "btn2BorderWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "typoHeadline": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSub": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

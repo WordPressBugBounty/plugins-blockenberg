@@ -1,0 +1,162 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/floating-stats",
+    "version": "1.0.0",
+    "title": "Floating Stats",
+    "category": "bkbg-effects",
+    "icon": "superhero",
+    "description": "A hero image composition with floating achievement/statistic cards positioned around it. Common SaaS and agency pattern for showing credibility at a glance.",
+    "keywords": [
+        "floating",
+        "stats",
+        "hero",
+        "image",
+        "cards",
+        "counter",
+        "achievements",
+        "badges",
+        "social proof"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-floating-stats-editor",
+    "editorStyle": "bkbg-floating-stats-style",
+    "style": "bkbg-floating-stats-style",
+    "viewScript": "bkbg-floating-stats-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "imageAspectRatio": {
+            "type": "string",
+            "default": "4:5"
+        },
+        "imageRadius": {
+            "type": "number",
+            "default": 20
+        },
+        "imageShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "wrapMaxWidth": {
+            "type": "number",
+            "default": 540
+        },
+        "cards": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "s1",
+                    "value": "10,000+",
+                    "label": "Happy users",
+                    "icon": "star",
+                    "position": "top-left",
+                    "bgColor": "#ffffff",
+                    "textColor": "#111827",
+                    "valueColor": "#6c3fb5"
+                },
+                {
+                    "id": "s2",
+                    "value": "99.9%",
+                    "label": "Uptime SLA",
+                    "icon": "bolt",
+                    "position": "middle-right",
+                    "bgColor": "#ffffff",
+                    "textColor": "#111827",
+                    "valueColor": "#059669"
+                },
+                {
+                    "id": "s3",
+                    "value": "4.9 ★",
+                    "label": "App Store rating",
+                    "icon": "heart",
+                    "position": "bottom-left",
+                    "bgColor": "#ffffff",
+                    "textColor": "#111827",
+                    "valueColor": "#f59e0b"
+                }
+            ]
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "shadow"
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 16
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "valueSize": {
+            "type": "number",
+            "default": 24
+        },
+        "valueFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 12
+        },
+        "typoValue": {
+            "type": "object",
+            "default": {}
+        },
+        "typoLabel": {
+            "type": "object",
+            "default": {}
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 22
+        },
+        "countUpAnimation": {
+            "type": "boolean",
+            "default": true
+        },
+        "globalCardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "globalCardColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 48
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 48
+        }
+    }
+}

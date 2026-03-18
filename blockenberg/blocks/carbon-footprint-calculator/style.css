@@ -1,0 +1,280 @@
+.bkbg-cfc-app {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Card */
+.bkbg-cfc-card {
+    margin: 0 auto;
+    padding: 40px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+}
+
+/* Title & subtitle */
+.bkbg-cfc-title {
+    font-family: var(--bkbg-cfc-tt-font-family, inherit);
+    font-size: var(--bkbg-cfc-tt-font-size-d, 28px);
+    font-weight: var(--bkbg-cfc-tt-font-weight, 800);
+    line-height: var(--bkbg-cfc-tt-line-height-d, 1.2);
+    text-transform: var(--bkbg-cfc-tt-text-transform, none);
+    font-style: var(--bkbg-cfc-tt-font-style, normal);
+    text-decoration: var(--bkbg-cfc-tt-text-decoration, none);
+    letter-spacing: var(--bkbg-cfc-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-cfc-tt-word-spacing-d, normal);
+    text-align: center;
+    margin-bottom: 6px;
+}
+.bkbg-cfc-subtitle {
+    font-family: var(--bkbg-cfc-ts-font-family, inherit);
+    font-size: var(--bkbg-cfc-ts-font-size-d, 15px);
+    font-weight: var(--bkbg-cfc-ts-font-weight, inherit);
+    line-height: var(--bkbg-cfc-ts-line-height-d, 1.5);
+    text-transform: var(--bkbg-cfc-ts-text-transform, none);
+    font-style: var(--bkbg-cfc-ts-font-style, normal);
+    text-decoration: var(--bkbg-cfc-ts-text-decoration, none);
+    letter-spacing: var(--bkbg-cfc-ts-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-cfc-ts-word-spacing-d, normal);
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 32px;
+}
+
+/* Category grid */
+.bkbg-cfc-cat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+@media (max-width: 600px) {
+    .bkbg-cfc-cat-grid { grid-template-columns: 1fr; }
+}
+
+/* Category panel */
+.bkbg-cfc-panel {
+    border-radius: 12px;
+    padding: 20px;
+}
+.bkbg-cfc-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+.bkbg-cfc-panel-icon { font-size: 24px; }
+.bkbg-cfc-panel-title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Label */
+.bkbg-cfc-lbl {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Input */
+.bkbg-cfc-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    background: #ffffff;
+    color: #111827;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    transition: border-color 0.15s;
+}
+.bkbg-cfc-input:focus { border-color: #6b7280; }
+
+/* Select */
+.bkbg-cfc-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    background: #fff;
+    color: #111827;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Calculate button */
+.bkbg-cfc-calc-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 28px;
+    transition: opacity 0.2s, transform 0.1s;
+}
+.bkbg-cfc-calc-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+.bkbg-cfc-calc-btn:active { transform: translateY(0); }
+
+/* Result box */
+.bkbg-cfc-result {
+    border-radius: 16px;
+    padding: 28px 24px 20px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.bkbg-cfc-result-label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+}
+.bkbg-cfc-result-val {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+.bkbg-cfc-result-sub { font-size: 13px; opacity: 0.72; }
+.bkbg-cfc-result-badge {
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 99px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #fff;
+}
+
+/* Breakdown bars */
+.bkbg-cfc-breakdown { margin-bottom: 24px; }
+.bkbg-cfc-breakdown-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #374151;
+}
+.bkbg-cfc-cat-bar-row { margin-bottom: 12px; }
+.bkbg-cfc-cat-bar-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.bkbg-cfc-cat-bar-track {
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 99px;
+    overflow: hidden;
+}
+.bkbg-cfc-cat-bar-fill {
+    height: 100%;
+    border-radius: 99px;
+    transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Comparison card */
+.bkbg-cfc-comparison {
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+    background: #f9fafb;
+    border: 1.5px solid #e5e7eb;
+}
+.bkbg-cfc-comparison-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 12px;
+}
+.bkbg-cfc-cmp-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+.bkbg-cfc-cmp-row:last-child { margin-bottom: 0; }
+.bkbg-cfc-cmp-val { font-weight: 700; }
+
+/* Tips */
+.bkbg-cfc-tips { border-radius: 12px; padding: 20px; }
+.bkbg-cfc-tips-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.bkbg-cfc-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #374151;
+}
+.bkbg-cfc-tip-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+/* Unit toggle */
+.bkbg-cfc-unit-toggle {
+    display: flex;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1.5px solid #e5e7eb;
+}
+.bkbg-cfc-unit-btn {
+    flex: 1;
+    padding: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+    color: #6b7280;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* ── Responsive Typography ──────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-cfc-title {
+        font-size: var(--bkbg-cfc-tt-font-size-t, var(--bkbg-cfc-tt-font-size-d, 28px));
+        line-height: var(--bkbg-cfc-tt-line-height-t, var(--bkbg-cfc-tt-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-cfc-tt-letter-spacing-t, var(--bkbg-cfc-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-cfc-tt-word-spacing-t, var(--bkbg-cfc-tt-word-spacing-d, normal));
+    }
+    .bkbg-cfc-subtitle {
+        font-size: var(--bkbg-cfc-ts-font-size-t, var(--bkbg-cfc-ts-font-size-d, 15px));
+        line-height: var(--bkbg-cfc-ts-line-height-t, var(--bkbg-cfc-ts-line-height-d, 1.5));
+        letter-spacing: var(--bkbg-cfc-ts-letter-spacing-t, var(--bkbg-cfc-ts-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-cfc-ts-word-spacing-t, var(--bkbg-cfc-ts-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-cfc-title {
+        font-size: var(--bkbg-cfc-tt-font-size-m, var(--bkbg-cfc-tt-font-size-t, var(--bkbg-cfc-tt-font-size-d, 28px)));
+        line-height: var(--bkbg-cfc-tt-line-height-m, var(--bkbg-cfc-tt-line-height-t, var(--bkbg-cfc-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-cfc-tt-letter-spacing-m, var(--bkbg-cfc-tt-letter-spacing-t, var(--bkbg-cfc-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-cfc-tt-word-spacing-m, var(--bkbg-cfc-tt-word-spacing-t, var(--bkbg-cfc-tt-word-spacing-d, normal)));
+    }
+    .bkbg-cfc-subtitle {
+        font-size: var(--bkbg-cfc-ts-font-size-m, var(--bkbg-cfc-ts-font-size-t, var(--bkbg-cfc-ts-font-size-d, 15px)));
+        line-height: var(--bkbg-cfc-ts-line-height-m, var(--bkbg-cfc-ts-line-height-t, var(--bkbg-cfc-ts-line-height-d, 1.5)));
+        letter-spacing: var(--bkbg-cfc-ts-letter-spacing-m, var(--bkbg-cfc-ts-letter-spacing-t, var(--bkbg-cfc-ts-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-cfc-ts-word-spacing-m, var(--bkbg-cfc-ts-word-spacing-t, var(--bkbg-cfc-ts-word-spacing-d, normal)));
+    }
+}

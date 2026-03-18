@@ -1,0 +1,235 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/social-proof-section",
+	"title": "Social Proof Section",
+	"category": "bkbg-marketing",
+	"icon": "star-filled",
+	"description": "Complete social proof landing section combining client logos, stats, and a featured testimonial quote — all in one configurable block.",
+	"keywords": [
+		"social proof",
+		"trust",
+		"logos",
+		"stats",
+		"testimonial",
+		"clients"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-social-proof-section-editor",
+	"style": "bkbg-social-proof-section-style",
+	"viewScript": "bkbg-social-proof-section-frontend",
+	"attributes": {
+		"eyebrow": {
+			"type": "string",
+			"default": "Trusted by teams worldwide"
+		},
+		"showEyebrow": {
+			"type": "boolean",
+			"default": true
+		},
+		"heading": {
+			"type": "string",
+			"default": "Join 10,000+ companies who trust us"
+		},
+		"showHeading": {
+			"type": "boolean",
+			"default": false
+		},
+		"subtext": {
+			"type": "string",
+			"default": ""
+		},
+		"showSubtext": {
+			"type": "boolean",
+			"default": false
+		},
+		"logos": {
+			"type": "array",
+			"default": []
+		},
+		"showLogos": {
+			"type": "boolean",
+			"default": true
+		},
+		"logoFilter": {
+			"type": "string",
+			"default": "grayscale-hover"
+		},
+		"logoHeight": {
+			"type": "number",
+			"default": 36
+		},
+		"stats": {
+			"type": "array",
+			"default": [
+				{
+					"value": "10,000+",
+					"label": "Happy customers"
+				},
+				{
+					"value": "99.9%",
+					"label": "Uptime"
+				},
+				{
+					"value": "4.9★",
+					"label": "Average rating"
+				},
+				{
+					"value": "24/7",
+					"label": "Support"
+				}
+			]
+		},
+		"showStats": {
+			"type": "boolean",
+			"default": true
+		},
+		"quote": {
+			"type": "string",
+			"default": "This product completely changed how our team works. The ROI was evident within the first month."
+		},
+		"quoteAuthor": {
+			"type": "string",
+			"default": "Sarah Chen"
+		},
+		"quoteRole": {
+			"type": "string",
+			"default": "Head of Operations, Acme Corp"
+		},
+		"quoteAvatarUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"quoteAvatarId": {
+			"type": "number",
+			"default": 0
+		},
+		"showQuote": {
+			"type": "boolean",
+			"default": true
+		},
+		"layout": {
+			"type": "string",
+			"default": "standard"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#f9fafb"
+		},
+		"eyebrowColor": {
+			"type": "string",
+			"default": "#7c3aed"
+		},
+		"headingColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"subtextColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"statValueColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"statLabelColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"quoteColor": {
+			"type": "string",
+			"default": "#1f2937"
+		},
+		"authorColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"roleColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"dividerColor": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#7c3aed"
+		},
+		"quoteBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"statDivider": {
+			"type": "boolean",
+			"default": true
+		},
+		"eyebrowSize": {
+			"type": "number",
+			"default": 13
+		},
+		"headingSize": {
+			"type": "number",
+			"default": 32
+		},
+		"statValueSize": {
+			"type": "number",
+			"default": 32
+		},
+		"statLabelSize": {
+			"type": "number",
+			"default": 14
+		},
+		"quoteSize": {
+			"type": "number",
+			"default": 18
+		},
+		"maxWidth": {
+			"type": "number",
+			"default": 1000
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 64
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 64
+		},
+		"headingFontWeight": {
+			"type": "number",
+			"default": 800
+		},
+		"statValueFontWeight": {
+			"type": "number",
+			"default": 800
+		},
+		"eyebrowTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"headingTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"statValueTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"statLabelTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"quoteTypo": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [
+			"wide",
+			"full"
+		]
+	}
+}

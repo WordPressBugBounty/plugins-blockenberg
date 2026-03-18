@@ -1,0 +1,242 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/numbered-list",
+    "title": "Numbered List",
+    "category": "bkbg-content",
+    "icon": "editor-ol",
+    "description": "Visual numbered or icon section — each item has a styled badge, heading, description, optional image and optional link. Ideal for steps, benefits, and 'why choose us' sections.",
+    "keywords": [
+        "numbered",
+        "steps",
+        "benefits",
+        "list",
+        "icon",
+        "process",
+        "why choose"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-numbered-list-editor",
+    "style": "bkbg-numbered-list-style",
+    "viewScript": "bkbg-numbered-list-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Why Choose Us"
+        },
+        "showHeading": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtext": {
+            "type": "string",
+            "default": ""
+        },
+        "showSubtext": {
+            "type": "boolean",
+            "default": false
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "customBadge": "",
+                    "icon": "",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "heading": "Lightning fast",
+                    "content": "Built for speed from the ground up. Page loads in under 200 ms so visitors never wait.",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "link": "",
+                    "accentColor": "#6366f1"
+                },
+                {
+                    "customBadge": "",
+                    "icon": "",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "heading": "Secure by default",
+                    "content": "End-to-end encryption and SOC 2 compliance keeps your data safe at every layer.",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "link": "",
+                    "accentColor": "#10b981"
+                },
+                {
+                    "customBadge": "",
+                    "icon": "",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "heading": "Scales with you",
+                    "content": "From side project to enterprise: infrastructure that grows without changing a line of code.",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "link": "",
+                    "accentColor": "#f59e0b"
+                },
+                {
+                    "customBadge": "",
+                    "icon": "",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "heading": "World-class support",
+                    "content": "Real humans, real answers — 24/7 live chat with an average first response of 3 minutes.",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "link": "",
+                    "accentColor": "#ec4899"
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "list"
+        },
+        "badgeType": {
+            "type": "string",
+            "default": "number"
+        },
+        "badgeShape": {
+            "type": "string",
+            "default": "circle"
+        },
+        "badgeSize": {
+            "type": "number",
+            "default": 44
+        },
+        "badgeFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "showConnector": {
+            "type": "boolean",
+            "default": true
+        },
+        "connectorStyle": {
+            "type": "string",
+            "default": "dashed"
+        },
+        "showImage": {
+            "type": "boolean",
+            "default": false
+        },
+        "imageSize": {
+            "type": "number",
+            "default": 180
+        },
+        "imageRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "imagePosition": {
+            "type": "string",
+            "default": "right"
+        },
+        "columns": {
+            "type": "number",
+            "default": 1
+        },
+        "gap": {
+            "type": "number",
+            "default": 40
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 20
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "fontWeight": {
+            "type": "integer",
+            "default": 600
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "sectionHeadingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "itemHeadingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "align": {
+            "type": "string",
+            "default": "left"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "connectorColor": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "sectionHeadingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#6b7280"
+        }
+    }
+}

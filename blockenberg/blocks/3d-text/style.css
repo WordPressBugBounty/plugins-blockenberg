@@ -1,0 +1,119 @@
+/* ── 3D Text ─────────────────────────────────────────────────── */
+.bkbg-3dt-app { font-family: inherit; }
+
+.bkbg-3dt-wrap {
+    overflow: hidden;
+    position: relative;
+}
+
+/* idle animations */
+.bkbg-3dt-text.bkbg-3dt-anim-float {
+    animation: bkbg-3dt-float 3s ease-in-out infinite;
+}
+.bkbg-3dt-text.bkbg-3dt-anim-pulse {
+    animation: bkbg-3dt-pulse 2s ease-in-out infinite;
+}
+.bkbg-3dt-text.bkbg-3dt-anim-shimmer {
+    animation: bkbg-3dt-shimmer 2.5s linear infinite;
+}
+
+@keyframes bkbg-3dt-float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-8px); }
+}
+@keyframes bkbg-3dt-pulse {
+    0%, 100% { filter: brightness(1); }
+    50%       { filter: brightness(1.3); }
+}
+@keyframes bkbg-3dt-shimmer {
+    0%   { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* hover effects */
+.bkbg-3dt-wrap.bkbg-3dt-hover-tilt {
+    perspective: 600px;
+    transform-style: preserve-3d;
+}
+/* hover-tilt and hover-press effects are handled by frontend.js */
+
+.bkbg-3dt-wrap.bkbg-3dt-hover-lift:hover .bkbg-3dt-text {
+    transform: translateY(-6px);
+    transition: transform 0.2s ease;
+}
+
+/* reflection */
+.bkbg-3dt-reflection {
+    transform: scaleY(-1);
+    opacity: 0.18;
+    margin-top: 4px;
+    pointer-events: none;
+    display: block;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent 70%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent 70%);
+}
+
+/* transition on text */
+.bkbg-3dt-text {
+    transition: transform 0.15s ease, text-shadow 0.15s ease;
+    will-change: transform;
+    font-family:      var(--bk3dt-tx-font-family, inherit);
+    font-size:        var(--bk3dt-tx-font-size-d, 72px);
+    font-weight:      var(--bk3dt-tx-font-weight, 900);
+    line-height:      var(--bk3dt-tx-line-height-d, 1.10);
+    text-transform:   var(--bk3dt-tx-text-transform, uppercase);
+    font-style:       var(--bk3dt-tx-font-style, normal);
+    text-decoration:  var(--bk3dt-tx-text-decoration, none);
+    letter-spacing:   var(--bk3dt-tx-letter-spacing-d, 4px);
+    word-spacing:     var(--bk3dt-tx-word-spacing-d);
+}
+
+/* heading specificity (0,2,0) for user-selectable h1-h6 tags */
+.bkbg-3dt-wrap h1.bkbg-3dt-text,
+.bkbg-3dt-wrap h2.bkbg-3dt-text,
+.bkbg-3dt-wrap h3.bkbg-3dt-text,
+.bkbg-3dt-wrap h4.bkbg-3dt-text,
+.bkbg-3dt-wrap h5.bkbg-3dt-text,
+.bkbg-3dt-wrap h6.bkbg-3dt-text {
+    font-family:      var(--bk3dt-tx-font-family, inherit);
+    font-size:        var(--bk3dt-tx-font-size-d, 72px);
+    font-weight:      var(--bk3dt-tx-font-weight, 900);
+    line-height:      var(--bk3dt-tx-line-height-d, 1.10);
+    text-transform:   var(--bk3dt-tx-text-transform, uppercase);
+    font-style:       var(--bk3dt-tx-font-style, normal);
+    text-decoration:  var(--bk3dt-tx-text-decoration, none);
+    letter-spacing:   var(--bk3dt-tx-letter-spacing-d, 4px);
+    word-spacing:     var(--bk3dt-tx-word-spacing-d);
+}
+
+/* ---- Typography responsive: Tablet ---- */
+@media (max-width: 1024px) {
+    .bkbg-3dt-text,
+    .bkbg-3dt-wrap h1.bkbg-3dt-text,
+    .bkbg-3dt-wrap h2.bkbg-3dt-text,
+    .bkbg-3dt-wrap h3.bkbg-3dt-text,
+    .bkbg-3dt-wrap h4.bkbg-3dt-text,
+    .bkbg-3dt-wrap h5.bkbg-3dt-text,
+    .bkbg-3dt-wrap h6.bkbg-3dt-text {
+        font-size:       var(--bk3dt-tx-font-size-t, var(--bk3dt-tx-font-size-d, 72px));
+        line-height:     var(--bk3dt-tx-line-height-t, var(--bk3dt-tx-line-height-d, 1.10));
+        letter-spacing:  var(--bk3dt-tx-letter-spacing-t, var(--bk3dt-tx-letter-spacing-d, 4px));
+        word-spacing:    var(--bk3dt-tx-word-spacing-t, var(--bk3dt-tx-word-spacing-d));
+    }
+}
+
+/* ---- Typography responsive: Mobile ---- */
+@media (max-width: 767px) {
+    .bkbg-3dt-text,
+    .bkbg-3dt-wrap h1.bkbg-3dt-text,
+    .bkbg-3dt-wrap h2.bkbg-3dt-text,
+    .bkbg-3dt-wrap h3.bkbg-3dt-text,
+    .bkbg-3dt-wrap h4.bkbg-3dt-text,
+    .bkbg-3dt-wrap h5.bkbg-3dt-text,
+    .bkbg-3dt-wrap h6.bkbg-3dt-text {
+        font-size:       var(--bk3dt-tx-font-size-m, var(--bk3dt-tx-font-size-t, var(--bk3dt-tx-font-size-d, 72px)));
+        line-height:     var(--bk3dt-tx-line-height-m, var(--bk3dt-tx-line-height-t, var(--bk3dt-tx-line-height-d, 1.10)));
+        letter-spacing:  var(--bk3dt-tx-letter-spacing-m, var(--bk3dt-tx-letter-spacing-t, var(--bk3dt-tx-letter-spacing-d, 4px)));
+        word-spacing:    var(--bk3dt-tx-word-spacing-m, var(--bk3dt-tx-word-spacing-t, var(--bk3dt-tx-word-spacing-d)));
+    }
+}

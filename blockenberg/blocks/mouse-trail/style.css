@@ -1,0 +1,57 @@
+/* ── mouse-trail block ─────────────────────────────────────────── */
+
+.bkbg-mt-section {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.bkbg-mt-label {
+    color: rgba(255,255,255,0.8);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.04em;
+    pointer-events: none;
+    user-select: none;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+/* ── Canvas overlay (global or scoped) ─────────────────────────── */
+.bkbg-mt-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.bkbg-mt-canvas-scoped {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* ── Custom cursor dot ─────────────────────────────────────────── */
+.bkbg-mt-cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    transition: transform 0.08s;
+    background: #fff;
+}

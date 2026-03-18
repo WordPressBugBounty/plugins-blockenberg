@@ -1,0 +1,132 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/off-canvas",
+    "title": "Off-Canvas Drawer",
+    "category": "bkbg-layout",
+    "icon": "slides",
+    "description": "Slide-out side panel (drawer) triggered by a button.",
+    "keywords": [
+        "drawer",
+        "sidebar",
+        "offcanvas",
+        "modal",
+        "panel"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-off-canvas-editor",
+    "editorStyle": "bkbg-off-canvas-style",
+    "style": "bkbg-off-canvas-style",
+    "viewScript": "bkbg-off-canvas-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true
+    },
+    "attributes": {
+        "triggerLabel": {
+            "type": "string",
+            "default": "Open Menu"
+        },
+        "triggerIcon": {
+            "type": "string",
+            "default": "menu"
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "drawerTitle": {
+            "type": "string",
+            "default": "Drawer Title"
+        },
+        "showDrawerTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "content": {
+            "type": "string",
+            "default": "Your content goes here. Add links, text, images or any HTML."
+        },
+        "position": {
+            "type": "string",
+            "default": "right"
+        },
+        "width": {
+            "type": "number",
+            "default": 320
+        },
+        "overlayEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "closeOnOverlay": {
+            "type": "boolean",
+            "default": true
+        },
+        "closeOnEscape": {
+            "type": "boolean",
+            "default": true
+        },
+        "animationSpeed": {
+            "type": "number",
+            "default": 300
+        },
+        "triggerBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "triggerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "triggerRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "triggerPadding": {
+            "type": "number",
+            "default": 12
+        },
+        "drawerBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "drawerBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "contentColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "overlayColor": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "overlayOpacity": {
+            "type": "number",
+            "default": 40
+        },
+        "closeIconColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "triggerTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "contentTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

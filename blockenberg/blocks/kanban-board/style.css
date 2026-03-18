@@ -1,0 +1,151 @@
+/* ── Kanban Board ────────────────────────────────────────────── */
+
+.bkk-wrap {
+    box-sizing: border-box;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.bkk-board {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+@media (max-width: 640px) {
+    .bkk-board {
+        flex-wrap: wrap;
+    }
+}
+
+.bkk-column {
+    flex-shrink: 0;
+}
+
+.bkk-col-header {
+    margin-bottom: 12px;
+}
+
+.bkk-col-title {
+    font-family: var(--bkk-ct-font-family, inherit);
+    font-size: var(--bkk-ct-font-size-d, 14px);
+    font-weight: var(--bkk-ct-font-weight, 700);
+    font-style: var(--bkk-ct-font-style, normal);
+    text-decoration: var(--bkk-ct-text-decoration, none);
+    text-transform: var(--bkk-ct-text-transform, uppercase);
+    line-height: var(--bkk-ct-line-height-d, 1.4);
+    letter-spacing: var(--bkk-ct-letter-spacing-d, 0.05em);
+    word-spacing: var(--bkk-ct-word-spacing-d, normal);
+}
+
+.bkk-card-title {
+    font-family: var(--bkk-cdt-font-family, inherit);
+    font-size: var(--bkk-cdt-font-size-d, 14px);
+    font-weight: var(--bkk-cdt-font-weight, 600);
+    font-style: var(--bkk-cdt-font-style, normal);
+    text-decoration: var(--bkk-cdt-text-decoration, none);
+    text-transform: var(--bkk-cdt-text-transform, none);
+    line-height: var(--bkk-cdt-line-height-d, 1.4);
+    letter-spacing: var(--bkk-cdt-letter-spacing-d, normal);
+    word-spacing: var(--bkk-cdt-word-spacing-d, normal);
+}
+
+.bkk-card-desc {
+    font-family: var(--bkk-cdd-font-family, inherit);
+    font-size: var(--bkk-cdd-font-size-d, 12px);
+    font-weight: var(--bkk-cdd-font-weight, 400);
+    font-style: var(--bkk-cdd-font-style, normal);
+    text-decoration: var(--bkk-cdd-text-decoration, none);
+    text-transform: var(--bkk-cdd-text-transform, none);
+    line-height: var(--bkk-cdd-line-height-d, 1.5);
+    letter-spacing: var(--bkk-cdd-letter-spacing-d, normal);
+    word-spacing: var(--bkk-cdd-word-spacing-d, normal);
+}
+
+@media (max-width: 1024px) {
+    .bkk-col-title {
+        font-size: var(--bkk-ct-font-size-t, var(--bkk-ct-font-size-d, 14px));
+        line-height: var(--bkk-ct-line-height-t, var(--bkk-ct-line-height-d, 1.4));
+        letter-spacing: var(--bkk-ct-letter-spacing-t, var(--bkk-ct-letter-spacing-d, 0.05em));
+        word-spacing: var(--bkk-ct-word-spacing-t, var(--bkk-ct-word-spacing-d, normal));
+    }
+    .bkk-card-title {
+        font-size: var(--bkk-cdt-font-size-t, var(--bkk-cdt-font-size-d, 14px));
+        line-height: var(--bkk-cdt-line-height-t, var(--bkk-cdt-line-height-d, 1.4));
+        letter-spacing: var(--bkk-cdt-letter-spacing-t, var(--bkk-cdt-letter-spacing-d, normal));
+        word-spacing: var(--bkk-cdt-word-spacing-t, var(--bkk-cdt-word-spacing-d, normal));
+    }
+    .bkk-card-desc {
+        font-size: var(--bkk-cdd-font-size-t, var(--bkk-cdd-font-size-d, 12px));
+        line-height: var(--bkk-cdd-line-height-t, var(--bkk-cdd-line-height-d, 1.5));
+        letter-spacing: var(--bkk-cdd-letter-spacing-t, var(--bkk-cdd-letter-spacing-d, normal));
+        word-spacing: var(--bkk-cdd-word-spacing-t, var(--bkk-cdd-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkk-col-title {
+        font-size: var(--bkk-ct-font-size-m, var(--bkk-ct-font-size-t, var(--bkk-ct-font-size-d, 14px)));
+        line-height: var(--bkk-ct-line-height-m, var(--bkk-ct-line-height-t, var(--bkk-ct-line-height-d, 1.4)));
+        letter-spacing: var(--bkk-ct-letter-spacing-m, var(--bkk-ct-letter-spacing-t, var(--bkk-ct-letter-spacing-d, 0.05em)));
+        word-spacing: var(--bkk-ct-word-spacing-m, var(--bkk-ct-word-spacing-t, var(--bkk-ct-word-spacing-d, normal)));
+    }
+    .bkk-card-title {
+        font-size: var(--bkk-cdt-font-size-m, var(--bkk-cdt-font-size-t, var(--bkk-cdt-font-size-d, 14px)));
+        line-height: var(--bkk-cdt-line-height-m, var(--bkk-cdt-line-height-t, var(--bkk-cdt-line-height-d, 1.4)));
+        letter-spacing: var(--bkk-cdt-letter-spacing-m, var(--bkk-cdt-letter-spacing-t, var(--bkk-cdt-letter-spacing-d, normal)));
+        word-spacing: var(--bkk-cdt-word-spacing-m, var(--bkk-cdt-word-spacing-t, var(--bkk-cdt-word-spacing-d, normal)));
+    }
+    .bkk-card-desc {
+        font-size: var(--bkk-cdd-font-size-m, var(--bkk-cdd-font-size-t, var(--bkk-cdd-font-size-d, 12px)));
+        line-height: var(--bkk-cdd-line-height-m, var(--bkk-cdd-line-height-t, var(--bkk-cdd-line-height-d, 1.5)));
+        letter-spacing: var(--bkk-cdd-letter-spacing-m, var(--bkk-cdd-letter-spacing-t, var(--bkk-cdd-letter-spacing-d, normal)));
+        word-spacing: var(--bkk-cdd-word-spacing-m, var(--bkk-cdd-word-spacing-t, var(--bkk-cdd-word-spacing-d, normal)));
+    }
+}
+
+.bkk-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.bkk-card {
+    cursor: default;
+    word-break: break-word;
+}
+
+.bkk-card-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    min-height: 18px;
+}
+
+.bkk-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 2px 8px;
+    white-space: nowrap;
+}
+
+.bkk-priority {
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.bkk-count {
+    display: inline-block;
+    font-size: 11px;
+    background: #e5e7eb;
+    border-radius: 999px;
+    padding: 1px 7px;
+    color: #6b7280;
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+}

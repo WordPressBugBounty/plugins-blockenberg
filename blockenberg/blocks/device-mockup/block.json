@@ -1,0 +1,135 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/device-mockup",
+    "title": "Device Mockup",
+    "description": "Display a screenshot or image inside a realistic device frame — phone, tablet, laptop, or browser window.",
+    "category": "bkbg-media",
+    "icon": "tablet",
+    "textdomain": "blockenberg",
+    "keywords": [
+        "device",
+        "mockup",
+        "phone",
+        "laptop",
+        "tablet",
+        "browser",
+        "screenshot",
+        "preview"
+    ],
+    "supports": {
+        "html": false,
+        "align": [
+            "left",
+            "center",
+            "right",
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "deviceType": {
+            "type": "string",
+            "default": "phone"
+        },
+        "frameColor": {
+            "type": "string",
+            "default": "silver"
+        },
+        "frameColorCustom": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 380
+        },
+        "scale": {
+            "type": "number",
+            "default": 100
+        },
+        "tiltX": {
+            "type": "number",
+            "default": 0
+        },
+        "tiltY": {
+            "type": "number",
+            "default": 0
+        },
+        "shadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "shadowIntensity": {
+            "type": "number",
+            "default": 30
+        },
+        "showReflection": {
+            "type": "boolean",
+            "default": false
+        },
+        "showBrowserChrome": {
+            "type": "boolean",
+            "default": true
+        },
+        "browserUrl": {
+            "type": "string",
+            "default": "https://example.com"
+        },
+        "showNotch": {
+            "type": "boolean",
+            "default": true
+        },
+        "showHomeIndicator": {
+            "type": "boolean",
+            "default": true
+        },
+        "showKeyboard": {
+            "type": "boolean",
+            "default": false
+        },
+        "frameStroke": {
+            "type": "number",
+            "default": 12
+        },
+        "screenRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "outerRadius": {
+            "type": "number",
+            "default": 40
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": ""
+        },
+        "hoverLift": {
+            "type": "boolean",
+            "default": true
+        },
+        "animateOnScroll": {
+            "type": "boolean",
+            "default": false
+        },
+        "urlBarFontSize": {
+            "type": "number",
+            "default": 11
+        }
+    },
+    "editorScript": "bkbg-device-mockup-editor",
+    "editorStyle": "bkbg-device-mockup-style",
+    "style": "bkbg-device-mockup-style",
+    "viewScript": "bkbg-device-mockup-frontend"
+}

@@ -1,0 +1,110 @@
+/* =====================================================
+   Payment Methods – bkbg-pmth-*
+   ===================================================== */
+
+.bkbg-pmth-wrap {
+    box-sizing: border-box;
+}
+
+.bkbg-pmth-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Row of icons */
+.bkbg-pmth-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.bkbg-pmth-icons.is-center { justify-content: center; }
+.bkbg-pmth-icons.is-left   { justify-content: flex-start; }
+.bkbg-pmth-icons.is-right  { justify-content: flex-end; }
+
+/* Single icon slot */
+.bkbg-pmth-icon-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.bkbg-pmth-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    transition: transform 0.15s, box-shadow 0.15s;
+    text-decoration: none;
+}
+
+.bkbg-pmth-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.bkbg-pmth-icon-text {
+    line-height: 1.1;
+    text-align: center;
+    white-space: pre;
+}
+
+.bkbg-pmth-label {
+    font-size: 10px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Security badges row */
+.bkbg-pmth-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.bkbg-pmth-badges.is-center { justify-content: center; }
+.bkbg-pmth-badges.is-left   { justify-content: flex-start; }
+.bkbg-pmth-badges.is-right  { justify-content: flex-end; }
+
+.bkbg-pmth-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+}
+
+.bkbg-pmth-badge-icon {
+    flex-shrink: 0;
+}
+
+/* Typography – CSS-var driven */
+.bkbg-pmth-badge {
+    font-family: var(--bkbg-pmth-badge-ff, inherit);
+    font-size: var(--bkbg-pmth-badge-fs, 12px);
+    font-weight: var(--bkbg-pmth-badge-fw, 500);
+    font-style: var(--bkbg-pmth-badge-fst, normal);
+    text-decoration: var(--bkbg-pmth-badge-td, none);
+    text-transform: var(--bkbg-pmth-badge-tt, none);
+    letter-spacing: var(--bkbg-pmth-badge-ls, normal);
+    line-height: var(--bkbg-pmth-badge-lh, 1.4);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-pmth-badge { font-size: var(--bkbg-pmth-badge-fs-tab, var(--bkbg-pmth-badge-fs, 12px)); }
+}
+@media (max-width: 767px) {
+    .bkbg-pmth-badge { font-size: var(--bkbg-pmth-badge-fs-mob, var(--bkbg-pmth-badge-fs-tab, var(--bkbg-pmth-badge-fs, 12px))); }
+}
+
+/* inline / side-by-side mode */
+.bkbg-pmth-inner.is-inline {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}

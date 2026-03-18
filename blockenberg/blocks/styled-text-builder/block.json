@@ -1,0 +1,176 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/styled-text-builder",
+	"title": "Styled Text Builder",
+	"category": "bkbg-content",
+	"icon": "editor-textcolor",
+	"description": "Build a paragraph from mixed inline text segments \u2014 combine highlights, badges, code spans, gradient text, and bold or colored fragments in a single richly-styled sentence.",
+	"keywords": [
+		"text",
+		"styled",
+		"highlight",
+		"badge",
+		"gradient",
+		"inline",
+		"mixed",
+		"markup",
+		"advanced text",
+		"typography"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-styled-text-builder-editor",
+	"editorStyle": "bkbg-styled-text-builder-style",
+	"style": "bkbg-styled-text-builder-style",
+	"viewScript": "bkbg-styled-text-builder-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"segments": {
+			"type": "array",
+			"default": [
+				{
+					"id": "s1",
+					"text": "Build beautiful ",
+					"preset": "none",
+					"bold": false,
+					"italic": false,
+					"underline": false,
+					"color": "",
+					"bgColor": "",
+					"customSize": 0,
+					"borderRadius": 0,
+					"px": 0,
+					"py": 0
+				},
+				{
+					"id": "s2",
+					"text": "highlighted content",
+					"preset": "highlight-yellow",
+					"bold": false,
+					"italic": false,
+					"underline": false,
+					"color": "",
+					"bgColor": "",
+					"customSize": 0,
+					"borderRadius": 4,
+					"px": 4,
+					"py": 2
+				},
+				{
+					"id": "s3",
+					"text": " with mixed ",
+					"preset": "none",
+					"bold": false,
+					"italic": false,
+					"underline": false,
+					"color": "",
+					"bgColor": "",
+					"customSize": 0,
+					"borderRadius": 0,
+					"px": 0,
+					"py": 0
+				},
+				{
+					"id": "s4",
+					"text": "styles",
+					"preset": "gradient",
+					"bold": true,
+					"italic": false,
+					"underline": false,
+					"color": "#6c3fb5",
+					"bgColor": "",
+					"customSize": 0,
+					"borderRadius": 0,
+					"px": 0,
+					"py": 0
+				},
+				{
+					"id": "s5",
+					"text": " and ",
+					"preset": "none",
+					"bold": false,
+					"italic": false,
+					"underline": false,
+					"color": "",
+					"bgColor": "",
+					"customSize": 0,
+					"borderRadius": 0,
+					"px": 0,
+					"py": 0
+				},
+				{
+					"id": "s6",
+					"text": "badges",
+					"preset": "badge",
+					"bold": false,
+					"italic": false,
+					"underline": false,
+					"color": "#ffffff",
+					"bgColor": "#2563eb",
+					"customSize": 0,
+					"borderRadius": 50,
+					"px": 10,
+					"py": 3
+				},
+				{
+					"id": "s7",
+					"text": " in one paragraph.",
+					"preset": "none",
+					"bold": false,
+					"italic": false,
+					"underline": false,
+					"color": "",
+					"bgColor": "",
+					"customSize": 0,
+					"borderRadius": 0,
+					"px": 0,
+					"py": 0
+				}
+			]
+		},
+		"fontSize": {
+			"type": "number",
+			"default": 20
+		},
+		"lineHeight": {
+			"type": "number",
+			"default": 170
+		},
+		"textAlign": {
+			"type": "string",
+			"default": "left"
+		},
+		"maxWidth": {
+			"type": "number",
+			"default": 0
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#1e293b"
+		},
+		"containerPadding": {
+			"type": "number",
+			"default": 0
+		},
+		"containerRadius": {
+			"type": "number",
+			"default": 0
+		},
+		"fontWeight": {
+			"type": "string",
+			"default": "400"
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

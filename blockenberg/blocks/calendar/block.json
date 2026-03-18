@@ -1,0 +1,205 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/calendar",
+    "title": "Events Calendar",
+    "category": "bkbg-interactive",
+    "icon": "calendar-alt",
+    "description": "Monthly events calendar grid with clickable events, color-coded categories, and an optional event list.",
+    "keywords": [
+        "calendar",
+        "events",
+        "schedule",
+        "monthly",
+        "agenda",
+        "dates"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-calendar-editor",
+    "style": "bkbg-calendar-style",
+    "viewScript": "bkbg-calendar-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Upcoming Events"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "events": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "ev1",
+                    "title": "Team Kickoff",
+                    "date": "2026-02-05",
+                    "endDate": "",
+                    "color": "#6c3fb5",
+                    "url": "",
+                    "allDay": true,
+                    "category": "Internal"
+                },
+                {
+                    "id": "ev2",
+                    "title": "Product Launch",
+                    "date": "2026-02-12",
+                    "endDate": "",
+                    "color": "#ec4899",
+                    "url": "",
+                    "allDay": true,
+                    "category": "Marketing"
+                },
+                {
+                    "id": "ev3",
+                    "title": "Design Review",
+                    "date": "2026-02-12",
+                    "endDate": "",
+                    "color": "#f59e0b",
+                    "url": "",
+                    "allDay": false,
+                    "category": "Design"
+                },
+                {
+                    "id": "ev4",
+                    "title": "Q1 Planning",
+                    "date": "2026-02-18",
+                    "endDate": "",
+                    "color": "#10b981",
+                    "url": "",
+                    "allDay": true,
+                    "category": "Planning"
+                },
+                {
+                    "id": "ev5",
+                    "title": "Customer Workshop",
+                    "date": "2026-02-24",
+                    "endDate": "",
+                    "color": "#3b82f6",
+                    "url": "",
+                    "allDay": false,
+                    "category": "Sales"
+                },
+                {
+                    "id": "ev6",
+                    "title": "Sprint Retrospective",
+                    "date": "2026-02-26",
+                    "endDate": "",
+                    "color": "#8b5cf6",
+                    "url": "",
+                    "allDay": true,
+                    "category": "Internal"
+                }
+            ]
+        },
+        "showEventList": {
+            "type": "boolean",
+            "default": true
+        },
+        "highlightToday": {
+            "type": "boolean",
+            "default": true
+        },
+        "firstDayMonday": {
+            "type": "boolean",
+            "default": true
+        },
+        "showYear": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gridBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "dayBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "dayHoverBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "todayBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "todayColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "otherMonthColor": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "dayNameColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "listTitleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "listDateColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 24
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

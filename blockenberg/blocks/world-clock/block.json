@@ -1,0 +1,199 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/world-clock",
+    "title": "World Clock",
+    "category": "bkbg-interactive",
+    "icon": "clock",
+    "description": "Display live clocks for multiple timezones with analog or digital style. Perfect for global audiences, remote teams, and travel blogs.",
+    "keywords": [
+        "clock",
+        "timezone",
+        "world",
+        "time",
+        "international",
+        "live",
+        "analog",
+        "digital"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-world-clock-editor",
+    "style": "bkbg-world-clock-style",
+    "viewScript": "bkbg-world-clock-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "World Clocks"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Current time across different time zones"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "clockStyle": {
+            "type": "string",
+            "default": "digital"
+        },
+        "timeFormat": {
+            "type": "string",
+            "default": "12h"
+        },
+        "showDate": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSeconds": {
+            "type": "boolean",
+            "default": true
+        },
+        "showOffset": {
+            "type": "boolean",
+            "default": false
+        },
+        "zones": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "New York",
+                    "tz": "America/New_York"
+                },
+                {
+                    "label": "London",
+                    "tz": "Europe/London"
+                },
+                {
+                    "label": "Tokyo",
+                    "tz": "Asia/Tokyo"
+                },
+                {
+                    "label": "Dubai",
+                    "tz": "Asia/Dubai"
+                }
+            ]
+        },
+        "columns": {
+            "type": "number",
+            "default": 4
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "timeColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "dateColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "clockFace": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "handHour": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "handMin": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "handSec": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "timeSize": {
+            "type": "number",
+            "default": 32
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 14
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 24
+        },
+        "analogSize": {
+            "type": "number",
+            "default": 120
+        },
+        "gap": {
+            "type": "number",
+            "default": 16
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 960
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "timeTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

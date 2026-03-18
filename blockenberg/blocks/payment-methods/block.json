@@ -1,0 +1,197 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/payment-methods",
+    "title": "Payment Methods",
+    "description": "Display accepted payment brand logos and security trust badges with built-in SVG icons.",
+    "category": "bkbg-marketing",
+    "icon": "money-alt",
+    "keywords": [
+        "payment",
+        "checkout",
+        "trust",
+        "visa",
+        "mastercard",
+        "paypal",
+        "security",
+        "badges"
+    ],
+    "editorScript": "bkbg-payment-methods-editor",
+    "editorStyle": "bkbg-payment-methods-style",
+    "style": "bkbg-payment-methods-style",
+    "viewScript": "bkbg-payment-methods-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "methods": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "visa",
+                    "enabled": true
+                },
+                {
+                    "id": "mastercard",
+                    "enabled": true
+                },
+                {
+                    "id": "amex",
+                    "enabled": true
+                },
+                {
+                    "id": "paypal",
+                    "enabled": true
+                },
+                {
+                    "id": "applepay",
+                    "enabled": true
+                },
+                {
+                    "id": "googlepay",
+                    "enabled": true
+                },
+                {
+                    "id": "discover",
+                    "enabled": false
+                },
+                {
+                    "id": "stripe",
+                    "enabled": false
+                },
+                {
+                    "id": "klarna",
+                    "enabled": false
+                },
+                {
+                    "id": "afterpay",
+                    "enabled": false
+                },
+                {
+                    "id": "amazonpay",
+                    "enabled": false
+                },
+                {
+                    "id": "venmo",
+                    "enabled": false
+                },
+                {
+                    "id": "maestro",
+                    "enabled": false
+                },
+                {
+                    "id": "bitcoin",
+                    "enabled": false
+                },
+                {
+                    "id": "shoppay",
+                    "enabled": false
+                }
+            ]
+        },
+        "securityBadges": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "ssl",
+                    "label": "SSL Secured",
+                    "enabled": true
+                },
+                {
+                    "id": "pci",
+                    "label": "PCI Compliant",
+                    "enabled": true
+                },
+                {
+                    "id": "256bit",
+                    "label": "256-bit Encryption",
+                    "enabled": false
+                },
+                {
+                    "id": "shield",
+                    "label": "Buyer Protection",
+                    "enabled": false
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "row"
+        },
+        "align": {
+            "type": "string",
+            "default": "center"
+        },
+        "showLabels": {
+            "type": "boolean",
+            "default": false
+        },
+        "showSecurityBadges": {
+            "type": "boolean",
+            "default": true
+        },
+        "badgePosition": {
+            "type": "string",
+            "default": "below"
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 44
+        },
+        "iconRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "iconGap": {
+            "type": "number",
+            "default": 10
+        },
+
+        "maxWidth": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "iconBg": {
+            "type": "string",
+            "default": ""
+        },
+        "iconBorder": {
+            "type": "string",
+            "default": ""
+        },
+        "labelColor": {
+            "type": "string",
+            "default": ""
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": ""
+        },
+        "badgeIconColor": {
+            "type": "string",
+            "default": ""
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "badgeTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

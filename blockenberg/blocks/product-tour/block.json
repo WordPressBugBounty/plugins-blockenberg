@@ -1,0 +1,181 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/product-tour",
+    "version": "1.0.0",
+    "title": "Product Tour",
+    "category": "bkbg-marketing",
+    "icon": "slides",
+    "description": "An interactive product walkthrough with numbered steps, descriptions and screenshots. Tabs-style navigation — perfect for onboarding flows and feature showcases.",
+    "keywords": [
+        "product tour",
+        "walkthrough",
+        "tabs",
+        "steps",
+        "features",
+        "demo",
+        "tour"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-product-tour-editor",
+    "style": "bkbg-product-tour-style",
+    "viewScript": "bkbg-product-tour-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "steps": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "t1",
+                    "icon": "🎯",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Set up your workspace",
+                    "description": "Create your account and configure your workspace in minutes. Import your existing data or start fresh — it's your choice.",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "accentColor": "#6c3fb5"
+                },
+                {
+                    "id": "t2",
+                    "icon": "⚙️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Configure your settings",
+                    "description": "Fine-tune every aspect to match your workflow. Set up team roles, integrations and automations without writing a single line of code.",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "accentColor": "#0ea5e9"
+                },
+                {
+                    "id": "t3",
+                    "icon": "🚀",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Launch and grow",
+                    "description": "Go live with confidence. Monitor performance in real-time, iterate quickly and scale effortlessly as your team and business grow.",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "accentColor": "#10b981"
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "tabs-left"
+        },
+        "sectionTitle": {
+            "type": "string",
+            "default": "How it works"
+        },
+        "sectionSubtitle": {
+            "type": "string",
+            "default": "Everything you need, step by step."
+        },
+        "showHeader": {
+            "type": "boolean",
+            "default": true
+        },
+        "headerAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "eyebrow": {
+            "type": "string",
+            "default": "Product Tour"
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "imageRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "imageShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "tabStyle": {
+            "type": "string",
+            "default": "numbered"
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 72
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 72
+        },
+        "headerGap": {
+            "type": "number",
+            "default": 56
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "tabActiveBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "tabActiveBorder": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "numberBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "numberColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "eyebrowBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "sectionTitleColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "sectionSubColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "sectionTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "sectionSubTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "stepTitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

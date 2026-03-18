@@ -1,0 +1,183 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/notification-feed",
+    "version": "1.0.0",
+    "title": "Notification Feed",
+    "category": "bkbg-blog",
+    "icon": "bell",
+    "description": "Styled activity or notification feed with icon badges, titles, descriptions, timestamps, and read/unread states. Great for changelogs, activity logs, and social feeds.",
+    "keywords": [
+        "notification",
+        "feed",
+        "activity",
+        "log",
+        "alert",
+        "inbox",
+        "timeline"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-notification-feed-editor",
+    "style": "bkbg-notification-feed-style",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Recent Activity"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "card"
+        },
+        "showTimestamp": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDividers": {
+            "type": "boolean",
+            "default": true
+        },
+        "markUnreadBold": {
+            "type": "boolean",
+            "default": true
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 600
+        },
+        "itemPad": {
+            "type": "number",
+            "default": 16
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 42
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "bodyFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "timeFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "fontWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "bodyFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "bodyColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "timeColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "unreadDotColor": {
+            "type": "string",
+            "default": "#4f46e5"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "notifications": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "🚀",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "iconBg": "#ede9fe",
+                    "title": "New release deployed",
+                    "body": "Version 2.4.0 is now live with performance improvements.",
+                    "time": "2 min ago",
+                    "unread": true
+                },
+                {
+                    "icon": "💬",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "iconBg": "#dbeafe",
+                    "title": "New comment on your post",
+                    "body": "Alex left a comment: \"Great write-up, really helpful!\"",
+                    "time": "14 min ago",
+                    "unread": true
+                },
+                {
+                    "icon": "✅",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "iconBg": "#dcfce7",
+                    "title": "Task completed",
+                    "body": "\"Redesign dashboard\" was marked as done by Maria.",
+                    "time": "1 hr ago",
+                    "unread": false
+                },
+                {
+                    "icon": "⚠️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "iconBg": "#fef9c3",
+                    "title": "Storage limit approaching",
+                    "body": "You have used 82% of your 5 GB storage quota.",
+                    "time": "3 hrs ago",
+                    "unread": false
+                },
+                {
+                    "icon": "👤",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "iconBg": "#fce7f3",
+                    "title": "New team member joined",
+                    "body": "Sam Patel has been added to the Engineering workspace.",
+                    "time": "Yesterday",
+                    "unread": false
+                }
+            ]
+        }
+    }
+}

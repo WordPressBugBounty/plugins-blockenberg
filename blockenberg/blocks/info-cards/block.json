@@ -1,0 +1,168 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/info-cards",
+    "version": "1.0.0",
+    "title": "Info Cards",
+    "category": "bkbg-content",
+    "icon": "editor-table",
+    "description": "Flexible feature/info card grid with emoji or image icons, title, description, optional CTA and accent colors. Multiple card styles.",
+    "keywords": [
+        "features",
+        "info",
+        "cards",
+        "icons",
+        "benefits",
+        "grid"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-info-cards-editor",
+    "style": "bkbg-info-cards-style",
+    "viewScript": "bkbg-info-cards-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "i1",
+                    "icon": "⚡",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Lightning Fast",
+                    "description": "Optimised for speed from the ground up — your sites load in milliseconds, keeping users engaged.",
+                    "ctaLabel": "",
+                    "ctaUrl": "#",
+                    "accentColor": "#6c3fb5"
+                },
+                {
+                    "id": "i2",
+                    "icon": "🔒",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Secure by Default",
+                    "description": "Enterprise-grade security baked in. Your data and your users' data is always protected.",
+                    "ctaLabel": "",
+                    "ctaUrl": "#",
+                    "accentColor": "#0ea5e9"
+                },
+                {
+                    "id": "i3",
+                    "icon": "🎨",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Fully Customisable",
+                    "description": "Every colour, font, layout and spacing option is under your control — no code required.",
+                    "ctaLabel": "",
+                    "ctaUrl": "#",
+                    "accentColor": "#10b981"
+                },
+                {
+                    "id": "i4",
+                    "icon": "📈",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Built to Scale",
+                    "description": "Whether you have 10 or 10 million users, the platform grows effortlessly with your business.",
+                    "ctaLabel": "",
+                    "ctaUrl": "#",
+                    "accentColor": "#f59e0b"
+                }
+            ]
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "icon-top"
+        },
+        "iconStyle": {
+            "type": "string",
+            "default": "circle-bg"
+        },
+        "columns": {
+            "type": "number",
+            "default": 4
+        },
+        "gap": {
+            "type": "number",
+            "default": 24
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 28
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 32
+        },
+        "iconBgSize": {
+            "type": "number",
+            "default": 64
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "left"
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": false
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 18
+        },
+        "descSize": {
+            "type": "number",
+            "default": 14
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

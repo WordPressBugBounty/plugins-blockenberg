@@ -1,0 +1,86 @@
+.bkbg-mind-map-wrap {
+    box-sizing: border-box;
+}
+
+.bkbg-mind-map-svg {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.bkbg-mind-map-svg svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ── Typography (CSS-var driven) ── */
+
+.bkbg-mmap-central {
+    font-family: var(--bkbg-mmap-ct-font-family, inherit);
+    font-size: var(--bkbg-mmap-ct-font-size-d, 15px);
+    font-weight: var(--bkbg-mmap-ct-font-weight, 600);
+    line-height: var(--bkbg-mmap-ct-line-height-d, var(--bkbg-mmap-ct-line-height, 1.3));
+    font-style: var(--bkbg-mmap-ct-font-style, normal);
+    text-decoration: var(--bkbg-mmap-ct-text-decoration, none);
+    text-transform: var(--bkbg-mmap-ct-text-transform, none);
+    letter-spacing: var(--bkbg-mmap-ct-letter-spacing-d, var(--bkbg-mmap-ct-letter-spacing, normal));
+}
+
+.bkbg-mmap-branch {
+    font-family: var(--bkbg-mmap-br-font-family, inherit);
+    font-size: var(--bkbg-mmap-br-font-size-d, 13px);
+    font-weight: var(--bkbg-mmap-br-font-weight, 600);
+    line-height: var(--bkbg-mmap-br-line-height-d, var(--bkbg-mmap-br-line-height, 1.3));
+    font-style: var(--bkbg-mmap-br-font-style, normal);
+    text-decoration: var(--bkbg-mmap-br-text-decoration, none);
+    text-transform: var(--bkbg-mmap-br-text-transform, none);
+    letter-spacing: var(--bkbg-mmap-br-letter-spacing-d, var(--bkbg-mmap-br-letter-spacing, normal));
+}
+
+.bkbg-mmap-item {
+    font-family: var(--bkbg-mmap-it-font-family, inherit);
+    font-size: var(--bkbg-mmap-it-font-size-d, 12px);
+    font-weight: var(--bkbg-mmap-it-font-weight, 400);
+    line-height: var(--bkbg-mmap-it-line-height-d, var(--bkbg-mmap-it-line-height, 1.3));
+    font-style: var(--bkbg-mmap-it-font-style, normal);
+    text-decoration: var(--bkbg-mmap-it-text-decoration, none);
+    text-transform: var(--bkbg-mmap-it-text-transform, none);
+    letter-spacing: var(--bkbg-mmap-it-letter-spacing-d, var(--bkbg-mmap-it-letter-spacing, normal));
+}
+
+@media (max-width: 1024px) {
+    .bkbg-mmap-central {
+        font-size: var(--bkbg-mmap-ct-font-size-t, var(--bkbg-mmap-ct-font-size-d, 15px));
+        line-height: var(--bkbg-mmap-ct-line-height-t, var(--bkbg-mmap-ct-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-mmap-ct-letter-spacing-t, var(--bkbg-mmap-ct-letter-spacing-d, var(--bkbg-mmap-ct-letter-spacing, normal)));
+    }
+    .bkbg-mmap-branch {
+        font-size: var(--bkbg-mmap-br-font-size-t, var(--bkbg-mmap-br-font-size-d, 13px));
+        line-height: var(--bkbg-mmap-br-line-height-t, var(--bkbg-mmap-br-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-mmap-br-letter-spacing-t, var(--bkbg-mmap-br-letter-spacing-d, var(--bkbg-mmap-br-letter-spacing, normal)));
+    }
+    .bkbg-mmap-item {
+        font-size: var(--bkbg-mmap-it-font-size-t, var(--bkbg-mmap-it-font-size-d, 12px));
+        line-height: var(--bkbg-mmap-it-line-height-t, var(--bkbg-mmap-it-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-mmap-it-letter-spacing-t, var(--bkbg-mmap-it-letter-spacing-d, var(--bkbg-mmap-it-letter-spacing, normal)));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-mmap-central {
+        font-size: var(--bkbg-mmap-ct-font-size-m, var(--bkbg-mmap-ct-font-size-t, var(--bkbg-mmap-ct-font-size-d, 14px)));
+        line-height: var(--bkbg-mmap-ct-line-height-m, var(--bkbg-mmap-ct-line-height-t, var(--bkbg-mmap-ct-line-height-d, 1.3)));
+        letter-spacing: var(--bkbg-mmap-ct-letter-spacing-m, var(--bkbg-mmap-ct-letter-spacing-t, var(--bkbg-mmap-ct-letter-spacing-d, var(--bkbg-mmap-ct-letter-spacing, normal))));
+    }
+    .bkbg-mmap-branch {
+        font-size: var(--bkbg-mmap-br-font-size-m, var(--bkbg-mmap-br-font-size-t, var(--bkbg-mmap-br-font-size-d, 12px)));
+        line-height: var(--bkbg-mmap-br-line-height-m, var(--bkbg-mmap-br-line-height-t, var(--bkbg-mmap-br-line-height-d, 1.3)));
+        letter-spacing: var(--bkbg-mmap-br-letter-spacing-m, var(--bkbg-mmap-br-letter-spacing-t, var(--bkbg-mmap-br-letter-spacing-d, var(--bkbg-mmap-br-letter-spacing, normal))));
+    }
+    .bkbg-mmap-item {
+        font-size: var(--bkbg-mmap-it-font-size-m, var(--bkbg-mmap-it-font-size-t, var(--bkbg-mmap-it-font-size-d, 11px)));
+        line-height: var(--bkbg-mmap-it-line-height-m, var(--bkbg-mmap-it-line-height-t, var(--bkbg-mmap-it-line-height-d, 1.3)));
+        letter-spacing: var(--bkbg-mmap-it-letter-spacing-m, var(--bkbg-mmap-it-letter-spacing-t, var(--bkbg-mmap-it-letter-spacing-d, var(--bkbg-mmap-it-letter-spacing, normal))));
+    }
+}

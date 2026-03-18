@@ -1,0 +1,199 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/funnel-chart",
+    "title": "Funnel Chart",
+    "category": "bkbg-charts",
+    "icon": "filter",
+    "description": "Marketing and conversion funnel chart. Show stages with counts, percentages, and drop-off rates. Supports both vertical and horizontal layouts.",
+    "keywords": [
+        "funnel",
+        "conversion",
+        "marketing",
+        "pipeline",
+        "stages",
+        "sales"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-funnel-chart-editor",
+    "style": "bkbg-funnel-chart-style",
+    "viewScript": "bkbg-funnel-chart-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Conversion Funnel"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": ""
+        },
+        "stages": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "s1",
+                    "label": "Website Visitors",
+                    "value": 10000,
+                    "icon": "👁️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "color": "#6c3fb5"
+                },
+                {
+                    "id": "s2",
+                    "label": "Sign Ups",
+                    "value": 3200,
+                    "icon": "✍️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "color": "#8b5cf6"
+                },
+                {
+                    "id": "s3",
+                    "label": "Free Trial",
+                    "value": 1400,
+                    "icon": "🎁",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "color": "#a78bfa"
+                },
+                {
+                    "id": "s4",
+                    "label": "Paid Customers",
+                    "value": 520,
+                    "icon": "💳",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "color": "#c4b5fd"
+                },
+                {
+                    "id": "s5",
+                    "label": "Loyal Advocates",
+                    "value": 180,
+                    "icon": "⭐",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "color": "#ddd6fe"
+                }
+            ]
+        },
+        "orientation": {
+            "type": "string",
+            "default": "vertical"
+        },
+        "style": {
+            "type": "string",
+            "default": "trapezoid"
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPercent": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDropOff": {
+            "type": "boolean",
+            "default": true
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        },
+        "valueFormat": {
+            "type": "string",
+            "default": "number"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 600
+        },
+        "stageHeight": {
+            "type": "number",
+            "default": 64
+        },
+        "stageGap": {
+            "type": "number",
+            "default": 4
+        },
+        "labelSize": {
+            "type": "string",
+            "default": "15"
+        },
+        "valueSize": {
+            "type": "string",
+            "default": "14"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 22
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoLabel": {
+            "type": "object",
+            "default": {}
+        },
+        "typoValue": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "dropOffColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        }
+    }
+}

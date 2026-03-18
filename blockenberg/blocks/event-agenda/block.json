@@ -1,0 +1,387 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/event-agenda",
+    "title": "Event Agenda",
+    "description": "A conference or event schedule showing day tabs, time slots, session titles, speaker info, rooms, and session types.",
+    "category": "bkbg-business",
+    "icon": "calendar-alt",
+    "keywords": [
+        "agenda",
+        "schedule",
+        "event",
+        "conference",
+        "sessions",
+        "speakers",
+        "timeline"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-event-agenda-editor",
+    "style": "bkbg-event-agenda-style",
+    "viewScript": "bkbg-event-agenda-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "days": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "day001",
+                    "label": "Day 1 — March 10",
+                    "sessions": [
+                        {
+                            "id": "s001",
+                            "time": "9:00 AM",
+                            "duration": "30 min",
+                            "type": "keynote",
+                            "title": "Opening Keynote: The Future of Design",
+                            "speaker": "Sarah Mitchell",
+                            "role": "CEO",
+                            "company": "DesignLab",
+                            "avatarUrl": "",
+                            "avatarId": 0,
+                            "room": "Main Hall",
+                            "tags": [
+                                "Design",
+                                "Innovation"
+                            ]
+                        },
+                        {
+                            "id": "s002",
+                            "time": "9:45 AM",
+                            "duration": "45 min",
+                            "type": "talk",
+                            "title": "Building Scalable Design Systems",
+                            "speaker": "James O'Brien",
+                            "role": "Lead Designer",
+                            "company": "Figma",
+                            "avatarUrl": "",
+                            "avatarId": 0,
+                            "room": "Hall A",
+                            "tags": [
+                                "Design Systems"
+                            ]
+                        },
+                        {
+                            "id": "s003",
+                            "time": "10:30 AM",
+                            "duration": "15 min",
+                            "type": "break",
+                            "title": "Coffee Break & Networking",
+                            "speaker": "",
+                            "role": "",
+                            "company": "",
+                            "avatarUrl": "",
+                            "avatarId": 0,
+                            "room": "Foyer",
+                            "tags": []
+                        },
+                        {
+                            "id": "s004",
+                            "time": "10:45 AM",
+                            "duration": "60 min",
+                            "type": "workshop",
+                            "title": "Hands-On: Prototyping with AI Tools",
+                            "speaker": "Elena Rodriguez",
+                            "role": "Product Designer",
+                            "company": "Adobe",
+                            "avatarUrl": "",
+                            "avatarId": 0,
+                            "room": "Workshop B",
+                            "tags": [
+                                "AI",
+                                "Tools",
+                                "Hands-on"
+                            ]
+                        },
+                        {
+                            "id": "s005",
+                            "time": "12:00 PM",
+                            "duration": "60 min",
+                            "type": "break",
+                            "title": "Lunch Break",
+                            "speaker": "",
+                            "role": "",
+                            "company": "",
+                            "avatarUrl": "",
+                            "avatarId": 0,
+                            "room": "Restaurant",
+                            "tags": []
+                        },
+                        {
+                            "id": "s006",
+                            "time": "1:00 PM",
+                            "duration": "45 min",
+                            "type": "talk",
+                            "title": "Motion Design: Principles & Best Practices",
+                            "speaker": "David Chen",
+                            "role": "Motion Lead",
+                            "company": "Stripe",
+                            "avatarUrl": "",
+                            "avatarId": 0,
+                            "room": "Hall A",
+                            "tags": [
+                                "Motion",
+                                "Animation"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "day002",
+                    "label": "Day 2 — March 11",
+                    "sessions": [
+                        {
+                            "id": "s007",
+                            "time": "9:30 AM",
+                            "duration": "45 min",
+                            "type": "keynote",
+                            "title": "Design Ethics in the Age of AI",
+                            "speaker": "Priya Sharma",
+                            "role": "Design Director",
+                            "company": "Google",
+                            "avatarUrl": "",
+                            "avatarId": 0,
+                            "room": "Main Hall",
+                            "tags": [
+                                "AI",
+                                "Ethics"
+                            ]
+                        },
+                        {
+                            "id": "s008",
+                            "time": "10:15 AM",
+                            "duration": "45 min",
+                            "type": "talk",
+                            "title": "User Research That Actually Drives Decisions",
+                            "speaker": "Tom Wilson",
+                            "role": "UX Researcher",
+                            "company": "Meta",
+                            "avatarUrl": "",
+                            "avatarId": 0,
+                            "room": "Hall A",
+                            "tags": [
+                                "UX Research"
+                            ]
+                        },
+                        {
+                            "id": "s009",
+                            "time": "11:00 AM",
+                            "duration": "15 min",
+                            "type": "break",
+                            "title": "Coffee Break",
+                            "speaker": "",
+                            "role": "",
+                            "company": "",
+                            "avatarUrl": "",
+                            "avatarId": 0,
+                            "room": "Foyer",
+                            "tags": []
+                        },
+                        {
+                            "id": "s010",
+                            "time": "11:15 AM",
+                            "duration": "90 min",
+                            "type": "workshop",
+                            "title": "Portfolio Critique & Mentorship Roundtable",
+                            "speaker": "Various Mentors",
+                            "role": "",
+                            "company": "",
+                            "avatarUrl": "",
+                            "avatarId": 0,
+                            "room": "Workshop B",
+                            "tags": [
+                                "Portfolio",
+                                "Mentorship"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "showDayTabs": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSpeakerAvatar": {
+            "type": "boolean",
+            "default": true
+        },
+        "showRoom": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDuration": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTags": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSpeakerRole": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSpeakerCompany": {
+            "type": "boolean",
+            "default": true
+        },
+        "sessionStyle": {
+            "type": "string",
+            "default": "card"
+        },
+        "timeFormat": {
+            "type": "string",
+            "default": "12h"
+        },
+        "timelineBar": {
+            "type": "boolean",
+            "default": true
+        },
+        "tabStyle": {
+            "type": "string",
+            "default": "pill"
+        },
+        "sessionTypes": {
+            "type": "array",
+            "default": [
+                {
+                    "type": "keynote",
+                    "label": "Keynote",
+                    "color": "#6c3fb5"
+                },
+                {
+                    "type": "talk",
+                    "label": "Talk",
+                    "color": "#0ea5e9"
+                },
+                {
+                    "type": "workshop",
+                    "label": "Workshop",
+                    "color": "#10b981"
+                },
+                {
+                    "type": "break",
+                    "label": "Break",
+                    "color": "#9ca3af"
+                }
+            ]
+        },
+        "cardRadius": {
+            "type": "integer",
+            "default": 12
+        },
+        "cardPadding": {
+            "type": "integer",
+            "default": 20
+        },
+        "avatarSize": {
+            "type": "integer",
+            "default": 44
+        },
+        "tagRadius": {
+            "type": "integer",
+            "default": 4
+        },
+        "timeLabelSize": {
+            "type": "integer",
+            "default": 13
+        },
+        "sessionTitleSize": {
+            "type": "integer",
+            "default": 16
+        },
+        "speakerNameSize": {
+            "type": "integer",
+            "default": 13
+        },
+        "metaSize": {
+            "type": "integer",
+            "default": 12
+        },
+        "tagSize": {
+            "type": "integer",
+            "default": 11
+        },
+        "tabSize": {
+            "type": "integer",
+            "default": 14
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "activeTabBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "activeTabColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inactiveTabBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "inactiveTabColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "sessionTitleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "speakerNameColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "timeColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "breakCardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "timelineBarColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 64
+        },
+        "typoSessionTitle": { "type": "object", "default": {} },
+        "typoSpeaker": { "type": "object", "default": {} },
+        "typoMeta": { "type": "object", "default": {} },
+        "typoTab": { "type": "object", "default": {} }
+    }
+}

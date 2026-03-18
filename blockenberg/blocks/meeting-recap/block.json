@@ -1,0 +1,320 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/meeting-recap",
+    "title": "Meeting Recap",
+    "category": "bkbg-blog",
+    "icon": "groups",
+    "description": "Structured meeting notes with attendees, agenda, decisions, action items, and next steps.",
+    "keywords": [
+        "meeting",
+        "recap",
+        "minutes",
+        "notes",
+        "agenda",
+        "action",
+        "decisions",
+        "team"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-meeting-recap-editor",
+    "editorStyle": "bkbg-meeting-recap-style",
+    "style": "bkbg-meeting-recap-style",
+    "viewScript": "bkbg-meeting-recap-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "meetingTitle": {
+            "type": "string",
+            "default": "Q1 Product Roadmap Review"
+        },
+        "meetingDate": {
+            "type": "string",
+            "default": "February 24, 2026"
+        },
+        "meetingTime": {
+            "type": "string",
+            "default": "10:00 AM – 11:30 AM"
+        },
+        "location": {
+            "type": "string",
+            "default": "Zoom · Conference Room B"
+        },
+        "facilitator": {
+            "type": "string",
+            "default": "Sarah Chen"
+        },
+        "showMeta": {
+            "type": "boolean",
+            "default": true
+        },
+        "attendees": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Sarah Chen",
+                    "role": "Product Manager",
+                    "present": true
+                },
+                {
+                    "name": "Alex Rivera",
+                    "role": "Engineering Lead",
+                    "present": true
+                },
+                {
+                    "name": "Jordan Kim",
+                    "role": "UX Designer",
+                    "present": true
+                },
+                {
+                    "name": "Sam Patel",
+                    "role": "Marketing Manager",
+                    "present": true
+                },
+                {
+                    "name": "Morgan Blake",
+                    "role": "QA Engineer",
+                    "present": false
+                }
+            ]
+        },
+        "showAttendees": {
+            "type": "boolean",
+            "default": true
+        },
+        "attendeesLabel": {
+            "type": "string",
+            "default": "Attendees"
+        },
+        "agendaItems": {
+            "type": "array",
+            "default": [
+                {
+                    "item": "Review Q4 metrics and key learnings",
+                    "duration": "15 min"
+                },
+                {
+                    "item": "Present Q1 roadmap proposals and priorities",
+                    "duration": "30 min"
+                },
+                {
+                    "item": "Discuss resource allocation and team capacity",
+                    "duration": "20 min"
+                },
+                {
+                    "item": "Open discussion and Q&A",
+                    "duration": "15 min"
+                }
+            ]
+        },
+        "showAgenda": {
+            "type": "boolean",
+            "default": true
+        },
+        "agendaLabel": {
+            "type": "string",
+            "default": "Agenda"
+        },
+        "decisions": {
+            "type": "array",
+            "default": [
+                "Ship the new onboarding flow in March — Alex's team takes ownership.",
+                "Deprioritize the API v3 migration until Q2 due to resource constraints.",
+                "Launch A/B test for pricing page in the first week of March.",
+                "Conduct bi-weekly syncs instead of weekly to reduce meeting overhead."
+            ]
+        },
+        "showDecisions": {
+            "type": "boolean",
+            "default": true
+        },
+        "decisionsLabel": {
+            "type": "string",
+            "default": "Decisions Made"
+        },
+        "actionItems": {
+            "type": "array",
+            "default": [
+                {
+                    "task": "Finalize onboarding copy and hand off to dev",
+                    "owner": "Jordan K.",
+                    "due": "Mar 1",
+                    "status": "open"
+                },
+                {
+                    "task": "Set up A/B test in LaunchDarkly",
+                    "owner": "Sam P.",
+                    "due": "Feb 28",
+                    "status": "in-progress"
+                },
+                {
+                    "task": "Update Q1 roadmap doc in Notion",
+                    "owner": "Sarah C.",
+                    "due": "Feb 26",
+                    "status": "done"
+                },
+                {
+                    "task": "Schedule capacity planning session with leads",
+                    "owner": "Alex R.",
+                    "due": "Mar 3",
+                    "status": "open"
+                }
+            ]
+        },
+        "showActionItems": {
+            "type": "boolean",
+            "default": true
+        },
+        "actionItemsLabel": {
+            "type": "string",
+            "default": "Action Items"
+        },
+        "nextMeetingDate": {
+            "type": "string",
+            "default": "March 10, 2026 · 10:00 AM"
+        },
+        "showNextMeeting": {
+            "type": "boolean",
+            "default": true
+        },
+        "nextMeetingLabel": {
+            "type": "string",
+            "default": "Next Meeting"
+        },
+        "notes": {
+            "type": "string",
+            "default": "Slides from this meeting will be shared in #product-team Slack channel. Recording is available in Loom (link to be shared by EOD)."
+        },
+        "showNotes": {
+            "type": "boolean",
+            "default": true
+        },
+        "notesLabel": {
+            "type": "string",
+            "default": "Additional Notes"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 165
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "nextMeetingLabelSize": {
+            "type": "number",
+            "default": 13
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "sectionLabelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "sectionLabelColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "sectionBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "attendeePresentBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "attendeePresentColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "attendeeAbsentBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "attendeeAbsentColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "decisionIconColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "taskOpenBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "taskOpenColor": {
+            "type": "string",
+            "default": "#1d4ed8"
+        },
+        "taskInProgressBg": {
+            "type": "string",
+            "default": "#fef9c3"
+        },
+        "taskInProgressColor": {
+            "type": "string",
+            "default": "#854d0e"
+        },
+        "taskDoneBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "taskDoneColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "nextMeetingBg": {
+            "type": "string",
+            "default": "#f0f9ff"
+        },
+        "nextMeetingColor": {
+            "type": "string",
+            "default": "#0369a1"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        }
+    }
+}

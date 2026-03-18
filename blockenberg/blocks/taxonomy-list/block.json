@@ -1,0 +1,179 @@
+{
+  "apiVersion": 3,
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "blockenberg/taxonomy-list",
+  "title": "Taxonomy List",
+  "category": "bkbg-blog",
+  "icon": "tag",
+  "description": "Display categories, tags or custom taxonomy as a styled list, grid, chips or cards \u2014 with icons, counts and links.",
+  "keywords": [
+    "taxonomy",
+    "category",
+    "tag",
+    "list",
+    "filter",
+    "navigation",
+    "menu",
+    "terms",
+    "archive"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-taxonomy-list-editor",
+  "editorStyle": "bkbg-taxonomy-list-style",
+  "style": "bkbg-taxonomy-list-style",
+  "viewScript": "bkbg-taxonomy-list-frontend",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "id": "t1",
+          "name": "Design",
+          "url": "#",
+          "icon": "\ud83c\udfa8",
+          "iconType": "custom-char",
+          "iconDashicon": "",
+          "iconImageUrl": "",
+          "count": 12
+        },
+        {
+          "id": "t2",
+          "name": "Development",
+          "url": "#",
+          "icon": "\ud83d\udcbb",
+          "iconType": "custom-char",
+          "iconDashicon": "",
+          "iconImageUrl": "",
+          "count": 8
+        },
+        {
+          "id": "t3",
+          "name": "Marketing",
+          "url": "#",
+          "icon": "\ud83d\udce2",
+          "iconType": "custom-char",
+          "iconDashicon": "",
+          "iconImageUrl": "",
+          "count": 5
+        },
+        {
+          "id": "t4",
+          "name": "Business",
+          "url": "#",
+          "icon": "\ud83d\udcbc",
+          "iconType": "custom-char",
+          "iconDashicon": "",
+          "iconImageUrl": "",
+          "count": 3
+        },
+        {
+          "id": "t5",
+          "name": "Lifestyle",
+          "url": "#",
+          "icon": "\ud83c\udf3f",
+          "iconType": "custom-char",
+          "iconDashicon": "",
+          "iconImageUrl": "",
+          "count": 7
+        }
+      ]
+    },
+    "layout": {
+      "type": "string",
+      "default": "list"
+    },
+    "columns": {
+      "type": "number",
+      "default": 2
+    },
+    "showCount": {
+      "type": "boolean",
+      "default": true
+    },
+    "showIcon": {
+      "type": "boolean",
+      "default": true
+    },
+    "showChevron": {
+      "type": "boolean",
+      "default": true
+    },
+    "countPosition": {
+      "type": "string",
+      "default": "badge"
+    },
+    "linkItems": {
+      "type": "boolean",
+      "default": true
+    },
+    "linkTarget": {
+      "type": "string",
+      "default": "_self"
+    },
+    "itemTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 8
+    },
+    "gap": {
+      "type": "number",
+      "default": 8
+    },
+    "padding": {
+      "type": "number",
+      "default": 14
+    },
+    "maxWidth": {
+      "type": "number",
+      "default": 0
+    },
+    "itemBg": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "itemBgHover": {
+      "type": "string",
+      "default": "#f1f5f9"
+    },
+    "itemColor": {
+      "type": "string",
+      "default": "#1e293b"
+    },
+    "itemColorHover": {
+      "type": "string",
+      "default": "#2563eb"
+    },
+    "countBg": {
+      "type": "string",
+      "default": "#e2e8f0"
+    },
+    "countColor": {
+      "type": "string",
+      "default": "#475569"
+    },
+    "iconColor": {
+      "type": "string",
+      "default": "#6b7280"
+    },
+    "borderColor": {
+      "type": "string",
+      "default": "#e2e8f0"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": "#2563eb"
+    }
+  }
+}

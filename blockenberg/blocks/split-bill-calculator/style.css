@@ -1,0 +1,226 @@
+/* Split Bill Calculator — bkbg-sbc-* */
+.bkbg-sbc-app {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.bkbg-sbc-app *,
+.bkbg-sbc-app *::before,
+.bkbg-sbc-app *::after {
+    box-sizing: border-box;
+}
+
+.bkbg-sbc-wrap {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 32px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+}
+
+.bkbg-sbc-header {
+    margin-bottom: 22px;
+}
+.bkbg-sbc-title {
+    font-family: var(--bksbc-tt-font-family, inherit);
+    font-size: var(--bksbc-tt-font-size-d, 28px);
+    font-weight: var(--bksbc-tt-font-weight, 700);
+    font-style: var(--bksbc-tt-font-style);
+    text-decoration: var(--bksbc-tt-text-decoration);
+    text-transform: var(--bksbc-tt-text-transform);
+    margin: 0 0 6px;
+    line-height: var(--bksbc-tt-line-height-d, 1.2);
+    letter-spacing: var(--bksbc-tt-letter-spacing-d);
+    word-spacing: var(--bksbc-tt-word-spacing-d);
+}
+.bkbg-sbc-subtitle {
+    font-family: var(--bksbc-st-font-family, inherit);
+    font-size: var(--bksbc-st-font-size-d, 15px);
+    font-weight: var(--bksbc-st-font-weight);
+    font-style: var(--bksbc-st-font-style);
+    text-decoration: var(--bksbc-st-text-decoration);
+    text-transform: var(--bksbc-st-text-transform);
+    margin: 0;
+    opacity: .7;
+    line-height: var(--bksbc-st-line-height-d);
+    letter-spacing: var(--bksbc-st-letter-spacing-d);
+    word-spacing: var(--bksbc-st-word-spacing-d);
+}
+
+/* Inputs */
+.bkbg-sbc-field {
+    margin-bottom: 16px;
+}
+.bkbg-sbc-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.bkbg-sbc-label span {
+    font-weight: 400;
+    font-size: 12px;
+    color: #9ca3af;
+}
+.bkbg-sbc-input {
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 16px;
+    font-family: inherit;
+    border-radius: 8px;
+    border: 1.5px solid #e5e7eb;
+    outline: none;
+    transition: border-color .15s;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.bkbg-sbc-input:focus {
+    border-color: #6c3fb5;
+    box-shadow: 0 0 0 3px rgba(108,63,181,.12);
+}
+
+/* Tip presets row */
+.bkbg-sbc-presets {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.bkbg-sbc-preset-btn {
+    flex: 1;
+    min-width: 48px;
+    padding: 8px 6px;
+    border-radius: 8px;
+    border: 2px solid #e5e7eb;
+    background: #f3f4f6;
+    color: #374151;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background .15s, border-color .15s, color .15s;
+}
+.bkbg-sbc-preset-btn:hover {
+    border-color: #6c3fb5;
+    background: #f5f3ff;
+}
+.bkbg-sbc-preset-btn.active {
+    background: #6c3fb5;
+    border-color: #6c3fb5;
+    color: #fff;
+}
+.bkbg-sbc-tip-custom {
+    width: 72px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1.5px solid #e5e7eb;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.bkbg-sbc-tip-custom:focus {
+    border-color: #6c3fb5;
+}
+
+/* Result card */
+.bkbg-sbc-result {
+    background: #6c3fb5;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+}
+.bkbg-sbc-result-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,.8);
+    margin-bottom: 6px;
+}
+.bkbg-sbc-result-amount {
+    font-family: var(--bksbc-rs-font-family, inherit);
+    font-size: var(--bksbc-rs-font-size-d, 56px);
+    font-weight: var(--bksbc-rs-font-weight, 800);
+    font-style: var(--bksbc-rs-font-style);
+    text-decoration: var(--bksbc-rs-text-decoration);
+    text-transform: var(--bksbc-rs-text-transform);
+    color: #fff;
+    line-height: var(--bksbc-rs-line-height-d, 1);
+    letter-spacing: var(--bksbc-rs-letter-spacing-d, -1px);
+    word-spacing: var(--bksbc-rs-word-spacing-d);
+}
+
+/* Breakdown */
+.bkbg-sbc-breakdown {
+    background: #f5f3ff;
+    border: 1.5px solid #ede9fe;
+    border-radius: 8px;
+    padding: 16px 20px;
+    animation: bkbg-sbc-fade-in .3s ease;
+}
+.bkbg-sbc-breakdown-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #ede9fe;
+}
+.bkbg-sbc-breakdown-row:last-child {
+    border-bottom: none;
+    font-weight: 700;
+    font-size: 15px;
+    padding-top: 10px;
+}
+.bkbg-sbc-breakdown-row strong {
+    font-weight: 600;
+}
+
+@keyframes bkbg-sbc-fade-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1024px) {
+    .bkbg-sbc-title {
+        font-size: var(--bksbc-tt-font-size-t, var(--bksbc-tt-font-size-d, 28px));
+        line-height: var(--bksbc-tt-line-height-t, var(--bksbc-tt-line-height-d, 1.2));
+        letter-spacing: var(--bksbc-tt-letter-spacing-t, var(--bksbc-tt-letter-spacing-d));
+        word-spacing: var(--bksbc-tt-word-spacing-t, var(--bksbc-tt-word-spacing-d));
+    }
+    .bkbg-sbc-subtitle {
+        font-size: var(--bksbc-st-font-size-t, var(--bksbc-st-font-size-d, 15px));
+        line-height: var(--bksbc-st-line-height-t, var(--bksbc-st-line-height-d));
+        letter-spacing: var(--bksbc-st-letter-spacing-t, var(--bksbc-st-letter-spacing-d));
+        word-spacing: var(--bksbc-st-word-spacing-t, var(--bksbc-st-word-spacing-d));
+    }
+    .bkbg-sbc-result-amount {
+        font-size: var(--bksbc-rs-font-size-t, var(--bksbc-rs-font-size-d, 56px));
+        line-height: var(--bksbc-rs-line-height-t, var(--bksbc-rs-line-height-d, 1));
+        letter-spacing: var(--bksbc-rs-letter-spacing-t, var(--bksbc-rs-letter-spacing-d, -1px));
+        word-spacing: var(--bksbc-rs-word-spacing-t, var(--bksbc-rs-word-spacing-d));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-sbc-title {
+        font-size: var(--bksbc-tt-font-size-m, var(--bksbc-tt-font-size-t, var(--bksbc-tt-font-size-d, 28px)));
+        line-height: var(--bksbc-tt-line-height-m, var(--bksbc-tt-line-height-t, var(--bksbc-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bksbc-tt-letter-spacing-m, var(--bksbc-tt-letter-spacing-t, var(--bksbc-tt-letter-spacing-d)));
+        word-spacing: var(--bksbc-tt-word-spacing-m, var(--bksbc-tt-word-spacing-t, var(--bksbc-tt-word-spacing-d)));
+    }
+    .bkbg-sbc-subtitle {
+        font-size: var(--bksbc-st-font-size-m, var(--bksbc-st-font-size-t, var(--bksbc-st-font-size-d, 15px)));
+        line-height: var(--bksbc-st-line-height-m, var(--bksbc-st-line-height-t, var(--bksbc-st-line-height-d)));
+        letter-spacing: var(--bksbc-st-letter-spacing-m, var(--bksbc-st-letter-spacing-t, var(--bksbc-st-letter-spacing-d)));
+        word-spacing: var(--bksbc-st-word-spacing-m, var(--bksbc-st-word-spacing-t, var(--bksbc-st-word-spacing-d)));
+    }
+    .bkbg-sbc-result-amount {
+        font-size: var(--bksbc-rs-font-size-m, var(--bksbc-rs-font-size-t, var(--bksbc-rs-font-size-d, 56px)));
+        line-height: var(--bksbc-rs-line-height-m, var(--bksbc-rs-line-height-t, var(--bksbc-rs-line-height-d, 1)));
+        letter-spacing: var(--bksbc-rs-letter-spacing-m, var(--bksbc-rs-letter-spacing-t, var(--bksbc-rs-letter-spacing-d, -1px)));
+        word-spacing: var(--bksbc-rs-word-spacing-m, var(--bksbc-rs-word-spacing-t, var(--bksbc-rs-word-spacing-d)));
+    }
+}

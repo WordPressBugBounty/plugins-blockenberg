@@ -1,0 +1,240 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockenberg/stats-section",
+  "title": "Stats Section",
+  "description": "A landing-page statistics section \u2014 large numbers with labels, icons, optional section heading, and multiple layout/style variants.",
+  "icon": "chart-bar",
+  "category": "bkbg-business",
+  "keywords": [
+    "stats",
+    "numbers",
+    "counter",
+    "metrics",
+    "kpi",
+    "figures",
+    "statistics"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-stats-section-editor",
+  "style": "bkbg-stats-section-style",
+  "viewScript": "bkbg-stats-section-frontend",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "stats": {
+      "type": "array",
+      "default": [
+        {
+          "id": "s1",
+          "icon": "\ud83d\ude80",
+          "iconType": "custom-char",
+          "iconDashicon": "",
+          "iconImageUrl": "",
+          "prefix": "",
+          "number": "10K+",
+          "suffix": "",
+          "label": "Happy Customers",
+          "description": "From 50 countries worldwide"
+        },
+        {
+          "id": "s2",
+          "icon": "\ud83c\udfc6",
+          "iconType": "custom-char",
+          "iconDashicon": "",
+          "iconImageUrl": "",
+          "prefix": "$",
+          "number": "2.4M",
+          "suffix": "",
+          "label": "Revenue Generated",
+          "description": "For our clients in 2024"
+        },
+        {
+          "id": "s3",
+          "icon": "\u2b50",
+          "iconType": "custom-char",
+          "iconDashicon": "",
+          "iconImageUrl": "",
+          "prefix": "",
+          "number": "98%",
+          "suffix": "",
+          "label": "Satisfaction Rate",
+          "description": "Based on 3,200+ reviews"
+        },
+        {
+          "id": "s4",
+          "icon": "\u26a1",
+          "iconType": "custom-char",
+          "iconDashicon": "",
+          "iconImageUrl": "",
+          "prefix": "",
+          "number": "4.9",
+          "suffix": "/5",
+          "label": "Average Rating",
+          "description": "Across all platforms"
+        }
+      ]
+    },
+    "sectionTitle": {
+      "type": "string",
+      "default": "Trusted by thousands of teams"
+    },
+    "sectionSubtitle": {
+      "type": "string",
+      "default": "Real results from real customers \u2014 not just promises."
+    },
+    "showSectionHeader": {
+      "type": "boolean",
+      "default": true
+    },
+    "headerAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "layout": {
+      "type": "string",
+      "default": "row"
+    },
+    "cardStyle": {
+      "type": "string",
+      "default": "plain"
+    },
+    "columns": {
+      "type": "number",
+      "default": 4
+    },
+    "gap": {
+      "type": "number",
+      "default": 40
+    },
+    "showIcons": {
+      "type": "boolean",
+      "default": true
+    },
+    "showDividers": {
+      "type": "boolean",
+      "default": true
+    },
+    "showDescription": {
+      "type": "boolean",
+      "default": true
+    },
+    "textAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "numberSize": {
+      "type": "number",
+      "default": 52
+    },
+    "labelSize": {
+      "type": "number",
+      "default": 15
+    },
+    "descSize": {
+      "type": "number",
+      "default": 13
+    },
+    "iconSize": {
+      "type": "number",
+      "default": 36
+    },
+    "fontWeight": {
+      "type": "string",
+      "default": "800"
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 16
+    },
+    "cardPadding": {
+      "type": "number",
+      "default": 32
+    },
+    "paddingTop": {
+      "type": "number",
+      "default": 64
+    },
+    "paddingBottom": {
+      "type": "number",
+      "default": 64
+    },
+    "numberColor": {
+      "type": "string",
+      "default": "#6c3fb5"
+    },
+    "labelColor": {
+      "type": "string",
+      "default": "#1e293b"
+    },
+    "descColor": {
+      "type": "string",
+      "default": "#64748b"
+    },
+    "iconColor": {
+      "type": "string",
+      "default": "#6c3fb5"
+    },
+    "dividerColor": {
+      "type": "string",
+      "default": "#e2e8f0"
+    },
+    "cardBg": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "cardBorder": {
+      "type": "string",
+      "default": "#e2e8f0"
+    },
+    "sectionBg": {
+      "type": "string",
+      "default": ""
+    },
+    "titleColor": {
+      "type": "string",
+      "default": "#0f172a"
+    },
+    "subtitleColor": {
+      "type": "string",
+      "default": "#64748b"
+    },
+    "gradientFrom": {
+      "type": "string",
+      "default": "#6c3fb5"
+    },
+    "gradientTo": {
+      "type": "string",
+      "default": "#2563eb"
+    },
+    "lineHeight": {
+      "type": "number",
+      "default": 1.4
+    },
+    "titleTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "subtitleTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "numberTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "labelTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "descTypo": {
+      "type": "object",
+      "default": {}
+    }
+  }
+}

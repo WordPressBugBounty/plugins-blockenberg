@@ -1,0 +1,154 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/slope-chart",
+    "title": "Slope Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-line",
+    "description": "A two-column slope graph showing before/after change for multiple items — lines are automatically colored by direction (up, down, or unchanged).",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Market Share: 2020 vs 2024"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelA": {
+            "type": "string",
+            "default": "2020"
+        },
+        "labelB": {
+            "type": "string",
+            "default": "2024"
+        },
+        "svgWidth": {
+            "type": "integer",
+            "default": 520
+        },
+        "svgHeight": {
+            "type": "integer",
+            "default": 420
+        },
+        "padTop": {
+            "type": "integer",
+            "default": 48
+        },
+        "padLeft": {
+            "type": "integer",
+            "default": 150
+        },
+        "padRight": {
+            "type": "integer",
+            "default": 150
+        },
+        "padBottom": {
+            "type": "integer",
+            "default": 20
+        },
+        "lineThickness": {
+            "type": "integer",
+            "default": 2
+        },
+        "dotRadius": {
+            "type": "integer",
+            "default": 6
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDiff": {
+            "type": "boolean",
+            "default": false
+        },
+        "labelFontSize": {
+            "type": "integer",
+            "default": 13
+        },
+        "labelFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "valueFontSize": {
+            "type": "integer",
+            "default": 12
+        },
+        "valueFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "posColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "negColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "neuColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Chrome",
+                    "a": 63.4,
+                    "b": 65.1
+                },
+                {
+                    "label": "Safari",
+                    "a": 19.2,
+                    "b": 18.8
+                },
+                {
+                    "label": "Firefox",
+                    "a": 8.1,
+                    "b": 4.0
+                },
+                {
+                    "label": "Edge",
+                    "a": 4.3,
+                    "b": 5.5
+                },
+                {
+                    "label": "Samsung",
+                    "a": 2.8,
+                    "b": 4.3
+                },
+                {
+                    "label": "Opera",
+                    "a": 2.2,
+                    "b": 2.3
+                }
+            ]
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "editorScript": "bkbg-slope-chart-editor",
+    "style": "bkbg-slope-chart-style"
+}

@@ -1,0 +1,416 @@
+/* ========================================
+   Business Hours Block Styles
+   Prefix: bkbg-bh-
+   ======================================== */
+
+.bkbg-bh-wrap {
+    --bkbg-bh-day-bg: #ffffff;
+    --bkbg-bh-day-color: #1e293b;
+    --bkbg-bh-time-color: #64748b;
+    --bkbg-bh-today-bg: #f0f9ff;
+    --bkbg-bh-today-color: #0369a1;
+    --bkbg-bh-open-color: #22c55e;
+    --bkbg-bh-closed-color: #ef4444;
+    --bkbg-bh-divider-color: #e2e8f0;
+    --bkbg-bh-radius: 8px;
+    --bkbg-bh-padding: 16px;
+    --bkbg-bh-gap: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bkbg-bh-day-bg);
+    border-radius: var(--bkbg-bh-radius);
+    padding: var(--bkbg-bh-padding);
+    max-width: 420px;
+}
+
+/* Title */
+.bkbg-bh-title {
+    color: var(--bkbg-bh-day-color);
+    margin-bottom: var(--bkbg-bh-gap);
+    font-family: var(--bkbg-bh-title-font-family, inherit);
+    font-weight: var(--bkbg-bh-title-font-weight, 600);
+    font-style: var(--bkbg-bh-title-font-style, normal);
+    text-transform: var(--bkbg-bh-title-text-transform, none);
+    text-decoration: var(--bkbg-bh-title-text-decoration, none);
+    font-size: var(--bkbg-bh-title-font-size-d, 20px);
+    line-height: var(--bkbg-bh-title-line-height-d, 1.3);
+    letter-spacing: var(--bkbg-bh-title-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-bh-title-word-spacing-d, normal);
+}
+
+/* Status indicator */
+.bkbg-bh-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: var(--bkbg-bh-gap);
+    background: rgba(34, 197, 94, 0.1);
+    color: var(--bkbg-bh-open-color);
+}
+
+.bkbg-bh-status.is-closed {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--bkbg-bh-closed-color);
+}
+
+.bkbg-bh-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: bkbg-bh-pulse 2s ease-in-out infinite;
+}
+
+@keyframes bkbg-bh-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+.bkbg-bh-status.is-closed .bkbg-bh-status-dot {
+    animation: none;
+}
+
+/* List */
+.bkbg-bh-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--bkbg-bh-gap);
+}
+
+/* Row */
+.bkbg-bh-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(var(--bkbg-bh-gap) * 0.75) var(--bkbg-bh-padding);
+    margin: 0 calc(var(--bkbg-bh-padding) * -1);
+    border-radius: 6px;
+    transition: background 0.15s ease;
+}
+
+.bkbg-bh-row.is-today {
+    background: var(--bkbg-bh-today-bg);
+}
+
+/* Dividers */
+[data-dividers="1"] .bkbg-bh-list {
+    gap: 0;
+}
+
+[data-dividers="1"] .bkbg-bh-row {
+    border-bottom: 1px solid var(--bkbg-bh-divider-color);
+    border-radius: 0;
+    padding-top: var(--bkbg-bh-gap);
+    padding-bottom: var(--bkbg-bh-gap);
+}
+
+[data-dividers="1"] .bkbg-bh-row:last-child {
+    border-bottom: none;
+}
+
+[data-dividers="1"] .bkbg-bh-row.is-today {
+    margin-left: calc(var(--bkbg-bh-padding) * -1);
+    margin-right: calc(var(--bkbg-bh-padding) * -1);
+    padding-left: var(--bkbg-bh-padding);
+    padding-right: var(--bkbg-bh-padding);
+    border-radius: 6px;
+}
+
+/* Day */
+.bkbg-bh-day {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bkbg-bh-day-name {
+    color: var(--bkbg-bh-day-color);
+    font-family: var(--bkbg-bh-day-font-family, inherit);
+    font-weight: var(--bkbg-bh-day-font-weight, 500);
+    font-style: var(--bkbg-bh-day-font-style, normal);
+    text-transform: var(--bkbg-bh-day-text-transform, none);
+    text-decoration: var(--bkbg-bh-day-text-decoration, none);
+    font-size: var(--bkbg-bh-day-font-size-d, 15px);
+    line-height: var(--bkbg-bh-day-line-height-d, 1.4);
+    letter-spacing: var(--bkbg-bh-day-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-bh-day-word-spacing-d, normal);
+}
+
+.bkbg-bh-row.is-today .bkbg-bh-day-name {
+    color: var(--bkbg-bh-today-color);
+}
+
+.bkbg-bh-today-badge {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: var(--bkbg-bh-today-color);
+    color: white;
+}
+
+/* Time */
+.bkbg-bh-time {
+    color: var(--bkbg-bh-time-color);
+    font-family: var(--bkbg-bh-time-font-family, inherit);
+    font-weight: var(--bkbg-bh-time-font-weight, 400);
+    font-style: var(--bkbg-bh-time-font-style, normal);
+    text-transform: var(--bkbg-bh-time-text-transform, none);
+    text-decoration: var(--bkbg-bh-time-text-decoration, none);
+    font-size: var(--bkbg-bh-time-font-size-d, 15px);
+    line-height: var(--bkbg-bh-time-line-height-d, 1.4);
+    letter-spacing: var(--bkbg-bh-time-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-bh-time-word-spacing-d, normal);
+}
+
+.bkbg-bh-row.is-today .bkbg-bh-time {
+    color: var(--bkbg-bh-today-color);
+    font-weight: 500;
+}
+
+.bkbg-bh-closed-text {
+    color: var(--bkbg-bh-closed-color);
+    font-weight: 500;
+}
+
+/* Layout: Cards */
+[data-layout="cards"] {
+    max-width: 600px;
+}
+
+[data-layout="cards"] .bkbg-bh-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--bkbg-bh-gap);
+}
+
+[data-layout="cards"] .bkbg-bh-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--bkbg-bh-padding);
+    margin: 0;
+    background: var(--bkbg-bh-day-bg);
+    border: 1px solid var(--bkbg-bh-divider-color);
+    border-radius: var(--bkbg-bh-radius);
+    gap: 8px;
+}
+
+[data-layout="cards"] .bkbg-bh-row.is-today {
+    border-color: var(--bkbg-bh-today-color);
+    background: var(--bkbg-bh-today-bg);
+}
+
+[data-layout="cards"] .bkbg-bh-day {
+    flex-direction: column;
+}
+
+[data-layout="cards"][data-dividers="1"] .bkbg-bh-row {
+    border-bottom: 1px solid var(--bkbg-bh-divider-color);
+}
+
+/* ========================================
+   Editor Styles - Click to Edit (WYSIWYG)
+   ======================================== */
+
+/* Clickable elements - look like text but have hover hint */
+.bkbg-bh-clickable {
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.15s, box-shadow 0.15s;
+}
+
+.bkbg-bh-clickable:hover {
+    background: rgba(0, 124, 186, 0.08);
+    box-shadow: 0 0 0 3px rgba(0, 124, 186, 0.08);
+}
+
+/* Active input when editing */
+.bkbg-bh-input-active {
+    background: transparent;
+    border: 1px solid #007cba;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin: -5px -9px;
+    font: inherit;
+    color: inherit;
+    outline: none;
+    width: auto;
+    box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.2);
+}
+
+/* Title input */
+input.bkbg-bh-title.bkbg-bh-input-active {
+    display: block;
+    width: calc(100% + 18px);
+    font: inherit;
+    text-transform: inherit;
+    font-style: inherit;
+    text-decoration: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    color: var(--bkbg-bh-day-color);
+    margin-bottom: calc(var(--bkbg-bh-gap) - 5px);
+}
+
+/* Day name input */
+input.bkbg-bh-day-name.bkbg-bh-input-active {
+    font: inherit;
+    text-transform: inherit;
+    font-style: inherit;
+    text-decoration: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    color: var(--bkbg-bh-day-color);
+    width: 100px;
+}
+
+/* Time editing popup */
+.bkbg-bh-time-editing {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    border: 1px solid #007cba;
+    border-radius: 6px;
+    padding: 8px 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.bkbg-bh-closed-check {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--bkbg-bh-time-color);
+}
+
+.bkbg-bh-closed-check input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    accent-color: var(--bkbg-bh-closed-color);
+}
+
+.bkbg-bh-time-inputs {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bkbg-bh-time-inputs input[type="time"] {
+    font-size: 14px;
+    padding: 4px 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.bkbg-bh-time-inputs span {
+    color: var(--bkbg-bh-time-color);
+}
+
+.bkbg-bh-done-btn {
+    background: #007cba;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bkbg-bh-done-btn:hover {
+    background: #005a87;
+}
+
+/* Time text with closed state */
+.bkbg-bh-time.is-closed {
+    color: var(--bkbg-bh-closed-color);
+    font-weight: 500;
+}
+
+/* Cards layout adjustments for editing */
+[data-layout="cards"] .bkbg-bh-time-editing {
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100% + 4px);
+    white-space: nowrap;
+}
+
+[data-layout="cards"] .bkbg-bh-row {
+    position: relative;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .bkbg-bh-wrap {
+        padding: 12px;
+    }
+    
+    .bkbg-bh-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    
+    [data-layout="cards"] .bkbg-bh-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* === Typography responsive === */
+@media (max-width: 1024px) {
+    .bkbg-bh-title {
+        font-size: var(--bkbg-bh-title-font-size-t, var(--bkbg-bh-title-font-size-d, 20px));
+        line-height: var(--bkbg-bh-title-line-height-t, var(--bkbg-bh-title-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-bh-title-letter-spacing-t, var(--bkbg-bh-title-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-bh-title-word-spacing-t, var(--bkbg-bh-title-word-spacing-d, normal));
+    }
+    .bkbg-bh-day-name {
+        font-size: var(--bkbg-bh-day-font-size-t, var(--bkbg-bh-day-font-size-d, 15px));
+        line-height: var(--bkbg-bh-day-line-height-t, var(--bkbg-bh-day-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-bh-day-letter-spacing-t, var(--bkbg-bh-day-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-bh-day-word-spacing-t, var(--bkbg-bh-day-word-spacing-d, normal));
+    }
+    .bkbg-bh-time {
+        font-size: var(--bkbg-bh-time-font-size-t, var(--bkbg-bh-time-font-size-d, 15px));
+        line-height: var(--bkbg-bh-time-line-height-t, var(--bkbg-bh-time-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-bh-time-letter-spacing-t, var(--bkbg-bh-time-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-bh-time-word-spacing-t, var(--bkbg-bh-time-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-bh-title {
+        font-size: var(--bkbg-bh-title-font-size-m, var(--bkbg-bh-title-font-size-t, var(--bkbg-bh-title-font-size-d, 20px)));
+        line-height: var(--bkbg-bh-title-line-height-m, var(--bkbg-bh-title-line-height-t, var(--bkbg-bh-title-line-height-d, 1.3)));
+        letter-spacing: var(--bkbg-bh-title-letter-spacing-m, var(--bkbg-bh-title-letter-spacing-t, var(--bkbg-bh-title-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-bh-title-word-spacing-m, var(--bkbg-bh-title-word-spacing-t, var(--bkbg-bh-title-word-spacing-d, normal)));
+    }
+    .bkbg-bh-day-name {
+        font-size: var(--bkbg-bh-day-font-size-m, var(--bkbg-bh-day-font-size-t, var(--bkbg-bh-day-font-size-d, 15px)));
+        line-height: var(--bkbg-bh-day-line-height-m, var(--bkbg-bh-day-line-height-t, var(--bkbg-bh-day-line-height-d, 1.4)));
+        letter-spacing: var(--bkbg-bh-day-letter-spacing-m, var(--bkbg-bh-day-letter-spacing-t, var(--bkbg-bh-day-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-bh-day-word-spacing-m, var(--bkbg-bh-day-word-spacing-t, var(--bkbg-bh-day-word-spacing-d, normal)));
+    }
+    .bkbg-bh-time {
+        font-size: var(--bkbg-bh-time-font-size-m, var(--bkbg-bh-time-font-size-t, var(--bkbg-bh-time-font-size-d, 15px)));
+        line-height: var(--bkbg-bh-time-line-height-m, var(--bkbg-bh-time-line-height-t, var(--bkbg-bh-time-line-height-d, 1.4)));
+        letter-spacing: var(--bkbg-bh-time-letter-spacing-m, var(--bkbg-bh-time-letter-spacing-t, var(--bkbg-bh-time-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-bh-time-word-spacing-m, var(--bkbg-bh-time-word-spacing-t, var(--bkbg-bh-time-word-spacing-d, normal)));
+    }
+}

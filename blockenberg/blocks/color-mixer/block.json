@@ -1,0 +1,116 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/color-mixer",
+    "title": "Color Mixer",
+    "category": "bkbg-dev",
+    "icon": "art",
+    "description": "Interactive color mixing tool. Pick two colors, blend them at any ratio, view the result in HEX/RGB/HSL, generate color harmonies, and copy any value instantly.",
+    "keywords": [
+        "color",
+        "mixer",
+        "blend",
+        "palette",
+        "hue",
+        "hex",
+        "rgb",
+        "hsl",
+        "gradient",
+        "design"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-color-mixer-editor",
+    "style": "bkbg-color-mixer-style",
+    "viewScript": "bkbg-color-mixer-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Color Mixer"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Blend two colors and explore harmonies"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "colorA": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "colorB": {
+            "type": "string",
+            "default": "#ec4899"
+        },
+        "defaultRatio": {
+            "type": "number",
+            "default": 50
+        },
+        "showHarmonies": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGradient": {
+            "type": "boolean",
+            "default": true
+        },
+        "showFormats": {
+            "type": "boolean",
+            "default": true
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#3730a3"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 26
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 680
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

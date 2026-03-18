@@ -1,0 +1,191 @@
+{
+  "apiVersion": 3,
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "blockenberg/tax-calculator",
+  "title": "Tax Calculator",
+  "category": "bkbg-calculators",
+  "icon": "money-alt",
+  "description": "Calculate sales tax, VAT, or estimate income tax brackets. Supports before-tax and after-tax price calculations with customizable tax rates and display options.",
+  "keywords": [
+    "tax",
+    "sales tax",
+    "vat",
+    "income tax",
+    "calculator",
+    "gst",
+    "finance",
+    "price"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-tax-calculator-editor",
+  "style": "bkbg-tax-calculator-style",
+  "viewScript": "bkbg-tax-calculator-frontend",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Tax Calculator"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Calculate sales tax, VAT, or reverse-calculate the pre-tax price."
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "showSubtitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "mode": {
+      "type": "string",
+      "default": "sales"
+    },
+    "currency": {
+      "type": "string",
+      "default": "$"
+    },
+    "currencyPos": {
+      "type": "string",
+      "default": "before"
+    },
+    "defaultAmount": {
+      "type": "number",
+      "default": 100
+    },
+    "defaultRate": {
+      "type": "number",
+      "default": 8.5
+    },
+    "taxLabel": {
+      "type": "string",
+      "default": "Sales Tax"
+    },
+    "showReverse": {
+      "type": "boolean",
+      "default": true
+    },
+    "showBreakdown": {
+      "type": "boolean",
+      "default": true
+    },
+    "showIncomeTax": {
+      "type": "boolean",
+      "default": false
+    },
+    "presetRates": {
+      "type": "array",
+      "default": [
+        {
+          "label": "NY (8.875%)",
+          "rate": 8.875
+        },
+        {
+          "label": "CA (10.25%)",
+          "rate": 10.25
+        },
+        {
+          "label": "TX (8.25%)",
+          "rate": 8.25
+        },
+        {
+          "label": "FL (7.5%)",
+          "rate": 7.5
+        }
+      ]
+    },
+    "showPresets": {
+      "type": "boolean",
+      "default": true
+    },
+    "accentColor": {
+      "type": "string",
+      "default": "#6c3fb5"
+    },
+    "cardBg": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "resultBg": {
+      "type": "string",
+      "default": "#f5f3ff"
+    },
+    "resultBorder": {
+      "type": "string",
+      "default": "#ede9fe"
+    },
+    "taxColor": {
+      "type": "string",
+      "default": "#ef4444"
+    },
+    "totalColor": {
+      "type": "string",
+      "default": "#6c3fb5"
+    },
+    "netColor": {
+      "type": "string",
+      "default": "#10b981"
+    },
+    "statCardBg": {
+      "type": "string",
+      "default": "#f9fafb"
+    },
+    "titleColor": {
+      "type": "string",
+      "default": "#1e1b4b"
+    },
+    "subtitleColor": {
+      "type": "string",
+      "default": "#6b7280"
+    },
+    "labelColor": {
+      "type": "string",
+      "default": "#374151"
+    },
+    "sectionBg": {
+      "type": "string",
+      "default": ""
+    },
+    "titleTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "resultSize": {
+      "type": "number",
+      "default": 48
+    },
+    "cardRadius": {
+      "type": "number",
+      "default": 16
+    },
+    "inputRadius": {
+      "type": "number",
+      "default": 8
+    },
+    "maxWidth": {
+      "type": "number",
+      "default": 580
+    },
+    "paddingTop": {
+      "type": "number",
+      "default": 60
+    },
+    "paddingBottom": {
+      "type": "number",
+      "default": 60
+    },
+    "resultFontWeight": {
+      "type": "string",
+      "default": "800"
+    }
+  }
+}

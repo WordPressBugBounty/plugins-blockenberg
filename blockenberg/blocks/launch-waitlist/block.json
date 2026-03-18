@@ -1,0 +1,221 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/launch-waitlist",
+    "version": "1.0.0",
+    "title": "Launch Waitlist",
+    "category": "bkbg-marketing",
+    "icon": "megaphone",
+    "description": "Product or service launch section with live countdown timer, email waitlist form, feature teasers, and social proof. For pre-launch landing pages.",
+    "keywords": [
+        "launch",
+        "waitlist",
+        "pre-launch",
+        "coming soon",
+        "signup",
+        "countdown"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-launch-waitlist-editor",
+    "style": "bkbg-launch-waitlist-style",
+    "viewScript": "bkbg-launch-waitlist-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "badge": {
+            "type": "string",
+            "default": "🚀 Coming Soon"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Something Big Is Coming"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "We're building something you're going to love. Join the waitlist to get early access and an exclusive discount."
+        },
+        "launchDate": {
+            "type": "string",
+            "default": ""
+        },
+        "showCountdown": {
+            "type": "boolean",
+            "default": true
+        },
+        "formPlaceholder": {
+            "type": "string",
+            "default": "Enter your email address"
+        },
+        "formSubmitLabel": {
+            "type": "string",
+            "default": "Join the Waitlist"
+        },
+        "formAction": {
+            "type": "string",
+            "default": ""
+        },
+        "successMessage": {
+            "type": "string",
+            "default": "🎉 You're on the list! We'll be in touch soon."
+        },
+        "benefits": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "Early access before public launch"
+                },
+                {
+                    "text": "Exclusive founding member discount"
+                },
+                {
+                    "text": "Shape the product with your feedback"
+                }
+            ]
+        },
+        "showBenefits": {
+            "type": "boolean",
+            "default": true
+        },
+        "socialProof": {
+            "type": "string",
+            "default": "Join 1,200+ people already on the list"
+        },
+        "showSocialProof": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "centered"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "rgba(99,102,241,0.2)"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#a5b4fc"
+        },
+        "countdownBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "countdownNumColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "countdownLabelColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "inputColor": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "inputBorder": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "submitBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "submitColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "benefitColor": {
+            "type": "string",
+            "default": "#cbd5e1"
+        },
+        "socialProofColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 680
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 100
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 100
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 32
+        },
+        "titleFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "subtitleFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "subtitleFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "subtitleLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "buttonFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "buttonFontWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "buttonLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "buttonTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

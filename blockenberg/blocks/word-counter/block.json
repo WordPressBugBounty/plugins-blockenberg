@@ -1,0 +1,208 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/word-counter",
+    "title": "Word Counter",
+    "category": "bkbg-dev",
+    "icon": "editor-paragraph",
+    "description": "An interactive word counter tool. Users paste or type text and instantly see word count, character count, sentence count, paragraph count, reading time, and speaking time.",
+    "keywords": [
+        "word",
+        "counter",
+        "character",
+        "text",
+        "reading",
+        "time",
+        "writing",
+        "tool",
+        "count",
+        "analyzer"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-word-counter-editor",
+    "style": "bkbg-word-counter-style",
+    "viewScript": "bkbg-word-counter-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Word Counter"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Paste or type your text below for an instant analysis."
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "placeholder": {
+            "type": "string",
+            "default": "Start typing or paste your text here…"
+        },
+        "defaultText": {
+            "type": "string",
+            "default": ""
+        },
+        "showCharNoSpaces": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSentences": {
+            "type": "boolean",
+            "default": true
+        },
+        "showParagraphs": {
+            "type": "boolean",
+            "default": true
+        },
+        "showReadingTime": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSpeakingTime": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCharLimit": {
+            "type": "boolean",
+            "default": false
+        },
+        "charLimit": {
+            "type": "number",
+            "default": 500
+        },
+        "readingWPM": {
+            "type": "number",
+            "default": 238
+        },
+        "speakingWPM": {
+            "type": "number",
+            "default": 130
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "textareaBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "textareaBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "statCardBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "statCardBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "wordCountColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "charCountColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "sentenceColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "paragraphColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "readingColor": {
+            "type": "string",
+            "default": "#8b5cf6"
+        },
+        "speakingColor": {
+            "type": "string",
+            "default": "#ec4899"
+        },
+        "limitBarFill": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "limitBarOver": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "limitBarBg": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "statValueSize": {
+            "type": "number",
+            "default": 36
+        },
+        "textareaHeight": {
+            "type": "number",
+            "default": 200
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 680
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        }
+    }
+}

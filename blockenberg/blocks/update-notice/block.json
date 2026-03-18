@@ -1,0 +1,118 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/update-notice",
+    "title": "Update Notice",
+    "description": "Editorial article update and correction notice with date, summary, and change history.",
+    "category": "bkbg-blog",
+    "icon": "clock",
+    "keywords": [
+        "update",
+        "notice",
+        "correction",
+        "revised",
+        "changelog",
+        "editorial",
+        "last updated"
+    ],
+    "editorScript": "bkbg-update-notice-editor",
+    "style": "bkbg-update-notice-style",
+    "viewScript": "bkbg-update-notice-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "type": {
+            "type": "string",
+            "default": "updated"
+        },
+        "primaryDate": {
+            "type": "string",
+            "default": ""
+        },
+        "primarySummary": {
+            "type": "string",
+            "default": ""
+        },
+        "originalPublishDate": {
+            "type": "string",
+            "default": ""
+        },
+        "showOriginalDate": {
+            "type": "boolean",
+            "default": false
+        },
+        "history": {
+            "type": "array",
+            "default": []
+        },
+        "showHistory": {
+            "type": "boolean",
+            "default": false
+        },
+        "style": {
+            "type": "string",
+            "default": "banner"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#bfdbfe"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#1e3a8a"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#1d4ed8"
+        },
+        "dateColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "historyBg": {
+            "type": "string",
+            "default": "#dbeafe"
+        },
+        "historyTextColor": {
+            "type": "string",
+            "default": "#1e40af"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "summaryTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

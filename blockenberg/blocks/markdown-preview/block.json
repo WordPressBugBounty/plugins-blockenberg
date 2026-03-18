@@ -1,0 +1,112 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/markdown-preview",
+    "title": "Markdown Preview",
+    "category": "bkbg-dev",
+    "icon": "editor-code",
+    "description": "Live Markdown editor with real-time rendered preview, toolbar shortcuts, and copy buttons.",
+    "keywords": [
+        "markdown",
+        "editor",
+        "preview",
+        "code",
+        "text",
+        "format"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-markdown-preview-editor",
+    "style": "bkbg-markdown-preview-style",
+    "viewScript": "bkbg-markdown-preview-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Markdown Editor"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultContent": {
+            "type": "string",
+            "default": "# Hello, Markdown!\n\nType your **Markdown** here and see the *live preview* on the right.\n\n## Features\n\n- Bold, italic, headings\n- Code blocks\n- Lists and links\n- Blockquotes\n\n```js\nconsole.log('Hello world');\n```\n\n> This is a blockquote.\n\n[Visit example.com](https://example.com)"
+        },
+        "showToolbar": {
+            "type": "boolean",
+            "default": true
+        },
+        "showWordCount": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCopyBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "syncScroll": {
+            "type": "boolean",
+            "default": true
+        },
+        "editorHeight": {
+            "type": "number",
+            "default": 380
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#0ea5e9"
+        },
+        "editorBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "editorColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "previewBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "previewColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "toolbarBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "toolbarColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 1100
+        }
+    }
+}

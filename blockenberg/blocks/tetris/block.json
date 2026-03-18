@@ -1,0 +1,112 @@
+{
+  "apiVersion": 3,
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "blockenberg/tetris",
+  "title": "Tetris Game",
+  "category": "bkbg-interactive",
+  "icon": "grid-view",
+  "description": "A fully playable Tetris game block. Supports keyboard and on-screen controls, levels, score, and rich style customization.",
+  "keywords": [
+    "tetris",
+    "game",
+    "puzzle",
+    "blocks",
+    "falling",
+    "arcade"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-tetris-editor",
+  "style": "bkbg-tetris-style",
+  "viewScript": "bkbg-tetris-frontend",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Tetris"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Clear lines to score points!"
+    },
+    "titleTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "subtitleTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "boardWidth": {
+      "type": "number",
+      "default": 10
+    },
+    "boardHeight": {
+      "type": "number",
+      "default": 20
+    },
+    "cellSize": {
+      "type": "number",
+      "default": 30
+    },
+    "startLevel": {
+      "type": "number",
+      "default": 1
+    },
+    "showGhost": {
+      "type": "boolean",
+      "default": true
+    },
+    "showNext": {
+      "type": "boolean",
+      "default": true
+    },
+    "showScore": {
+      "type": "boolean",
+      "default": true
+    },
+    "showLevel": {
+      "type": "boolean",
+      "default": true
+    },
+    "showLines": {
+      "type": "boolean",
+      "default": true
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#0f0e17"
+    },
+    "boardBg": {
+      "type": "string",
+      "default": "#1a1a2e"
+    },
+    "gridColor": {
+      "type": "string",
+      "default": "#16213e"
+    },
+    "ghostColor": {
+      "type": "string",
+      "default": "rgba(255,255,255,0.12)"
+    },
+    "sectionBg": {
+      "type": "string",
+      "default": "#0f0e17"
+    },
+    "titleColor": {
+      "type": "string",
+      "default": "#fffffe"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": "#ff8906"
+    }
+  }
+}

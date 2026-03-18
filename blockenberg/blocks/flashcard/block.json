@@ -1,0 +1,156 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/flashcard",
+    "title": "Flashcard",
+    "category": "bkbg-interactive",
+    "icon": "book-alt",
+    "description": "Interactive flashcard deck for studying. Click to flip cards, navigate with arrows or buttons, shuffle deck, mark cards as known, and track progress.",
+    "keywords": [
+        "flashcard",
+        "study",
+        "quiz",
+        "learning",
+        "flip",
+        "education",
+        "memory"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-flashcard-editor",
+    "style": "bkbg-flashcard-style",
+    "viewScript": "bkbg-flashcard-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Flashcard Deck"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Click a card to reveal the answer"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "cards": {
+            "type": "string",
+            "default": "[{\"id\":\"1\",\"front\":\"What is the capital of France?\",\"back\":\"Paris\",\"known\":false},{\"id\":\"2\",\"front\":\"What is 7 × 8?\",\"back\":\"56\",\"known\":false},{\"id\":\"3\",\"front\":\"Who wrote Romeo and Juliet?\",\"back\":\"William Shakespeare\",\"known\":false},{\"id\":\"4\",\"front\":\"What is H₂O?\",\"back\":\"Water\",\"known\":false},{\"id\":\"5\",\"front\":\"What year did WWII end?\",\"back\":\"1945\",\"known\":false}]"
+        },
+        "showProgress": {
+            "type": "boolean",
+            "default": true
+        },
+        "showShuffleBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "showKnownBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "showKeyboardHint": {
+            "type": "boolean",
+            "default": true
+        },
+        "cardHeight": {
+            "type": "number",
+            "default": 220
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "cardFrontBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBackBg": {
+            "type": "string",
+            "default": "#4f46e5"
+        },
+        "cardBackColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "knownColor": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#3730a3"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 26
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "subtitleFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "subtitleFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "subtitleLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "cardFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "cardFontWeight": {
+            "type": "string",
+            "default": "500"
+        },
+        "cardLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 660
+        },
+        "typoTitle": { "type": "object", "default": {} },
+        "typoSubtitle": { "type": "object", "default": {} },
+        "typoCard": { "type": "object", "default": {} }
+    }
+}

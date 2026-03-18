@@ -1,0 +1,125 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockenberg/table-of-contents",
+  "title": "Table of Contents",
+  "category": "bkbg-blog",
+  "icon": "list-view",
+  "description": "Auto-generated table of contents from headings on the page, with smooth scroll and active-link highlighting.",
+  "keywords": [
+    "toc",
+    "table of contents",
+    "navigation",
+    "headings",
+    "index"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-table-of-contents-editor",
+  "style": "bkbg-table-of-contents-style",
+  "viewScript": "bkbg-table-of-contents-frontend",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "tocTitle": {
+      "type": "string",
+      "default": "Table of Contents"
+    },
+    "includeH2": {
+      "type": "boolean",
+      "default": true
+    },
+    "includeH3": {
+      "type": "boolean",
+      "default": true
+    },
+    "includeH4": {
+      "type": "boolean",
+      "default": false
+    },
+    "includeH5": {
+      "type": "boolean",
+      "default": false
+    },
+    "includeH6": {
+      "type": "boolean",
+      "default": false
+    },
+    "listStyle": {
+      "type": "string",
+      "default": "none"
+    },
+    "collapsible": {
+      "type": "boolean",
+      "default": true
+    },
+    "defaultCollapsed": {
+      "type": "boolean",
+      "default": false
+    },
+    "smoothScroll": {
+      "type": "boolean",
+      "default": true
+    },
+    "scrollOffset": {
+      "type": "number",
+      "default": 80
+    },
+    "sticky": {
+      "type": "boolean",
+      "default": false
+    },
+    "maxHeight": {
+      "type": "number",
+      "default": 0
+    },
+    "indentNested": {
+      "type": "boolean",
+      "default": true
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#f9fafb"
+    },
+    "borderColor": {
+      "type": "string",
+      "default": "#e5e7eb"
+    },
+    "titleColor": {
+      "type": "string",
+      "default": "#111827"
+    },
+    "linkColor": {
+      "type": "string",
+      "default": "#2563eb"
+    },
+    "linkHoverColor": {
+      "type": "string",
+      "default": "#1d4ed8"
+    },
+    "activeLinkColor": {
+      "type": "string",
+      "default": "#2563eb"
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 8
+    },
+    "padding": {
+      "type": "number",
+      "default": 20
+    },
+    "maxWidth": {
+      "type": "number",
+      "default": 0
+    },
+    "titleTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "linkTypo": {
+      "type": "object",
+      "default": {}
+    }
+  }
+}

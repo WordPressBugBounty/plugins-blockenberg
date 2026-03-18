@@ -1,0 +1,146 @@
+/* ── Bio Card ─────────────────────────────────────────────── */
+.bkbg-bio-card-wrap {
+    box-sizing: border-box;
+}
+.bkbg-bio-card {
+    box-sizing: border-box;
+    transition: box-shadow 0.25s ease;
+}
+.bkbg-bio-card--shadow:hover {
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Typography zones */
+.bkbg-bio-name {
+    font-family: var(--bkbg-bio-name-font-family, inherit);
+    font-size: var(--bkbg-bio-name-font-size-d, 24px);
+    font-weight: var(--bkbg-bio-name-font-weight, 700);
+    font-style: var(--bkbg-bio-name-font-style, normal);
+    text-transform: var(--bkbg-bio-name-text-transform, none);
+    text-decoration: var(--bkbg-bio-name-text-decoration, none);
+    line-height: var(--bkbg-bio-name-line-height-d, 1.3);
+    letter-spacing: var(--bkbg-bio-name-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-bio-name-word-spacing-d, normal);
+}
+
+.bkbg-bio-role {
+    font-family: var(--bkbg-bio-role-font-family, inherit);
+    font-size: var(--bkbg-bio-role-font-size-d, 14px);
+    font-weight: var(--bkbg-bio-role-font-weight, 500);
+    font-style: var(--bkbg-bio-role-font-style, normal);
+    text-transform: var(--bkbg-bio-role-text-transform, none);
+    text-decoration: var(--bkbg-bio-role-text-decoration, none);
+    line-height: var(--bkbg-bio-role-line-height-d, 1.4);
+    letter-spacing: var(--bkbg-bio-role-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-bio-role-word-spacing-d, normal);
+}
+
+.bkbg-bio-bio {
+    font-family: var(--bkbg-bio-bio-font-family, inherit);
+    font-size: var(--bkbg-bio-bio-font-size-d, 15px);
+    font-weight: var(--bkbg-bio-bio-font-weight, normal);
+    font-style: var(--bkbg-bio-bio-font-style, normal);
+    text-transform: var(--bkbg-bio-bio-text-transform, none);
+    text-decoration: var(--bkbg-bio-bio-text-decoration, none);
+    line-height: var(--bkbg-bio-bio-line-height-d, 1.65);
+    letter-spacing: var(--bkbg-bio-bio-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-bio-bio-word-spacing-d, normal);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-bio-name {
+        font-size: var(--bkbg-bio-name-font-size-t, var(--bkbg-bio-name-font-size-d, 24px));
+        line-height: var(--bkbg-bio-name-line-height-t, var(--bkbg-bio-name-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-bio-name-letter-spacing-t, var(--bkbg-bio-name-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-bio-name-word-spacing-t, var(--bkbg-bio-name-word-spacing-d, normal));
+    }
+    .bkbg-bio-role {
+        font-size: var(--bkbg-bio-role-font-size-t, var(--bkbg-bio-role-font-size-d, 14px));
+        line-height: var(--bkbg-bio-role-line-height-t, var(--bkbg-bio-role-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-bio-role-letter-spacing-t, var(--bkbg-bio-role-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-bio-role-word-spacing-t, var(--bkbg-bio-role-word-spacing-d, normal));
+    }
+    .bkbg-bio-bio {
+        font-size: var(--bkbg-bio-bio-font-size-t, var(--bkbg-bio-bio-font-size-d, 15px));
+        line-height: var(--bkbg-bio-bio-line-height-t, var(--bkbg-bio-bio-line-height-d, 1.65));
+        letter-spacing: var(--bkbg-bio-bio-letter-spacing-t, var(--bkbg-bio-bio-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-bio-bio-word-spacing-t, var(--bkbg-bio-bio-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-bio-name {
+        font-size: var(--bkbg-bio-name-font-size-m, var(--bkbg-bio-name-font-size-t, var(--bkbg-bio-name-font-size-d, 24px)));
+        line-height: var(--bkbg-bio-name-line-height-m, var(--bkbg-bio-name-line-height-t, var(--bkbg-bio-name-line-height-d, 1.3)));
+        letter-spacing: var(--bkbg-bio-name-letter-spacing-m, var(--bkbg-bio-name-letter-spacing-t, var(--bkbg-bio-name-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-bio-name-word-spacing-m, var(--bkbg-bio-name-word-spacing-t, var(--bkbg-bio-name-word-spacing-d, normal)));
+    }
+    .bkbg-bio-role {
+        font-size: var(--bkbg-bio-role-font-size-m, var(--bkbg-bio-role-font-size-t, var(--bkbg-bio-role-font-size-d, 14px)));
+        line-height: var(--bkbg-bio-role-line-height-m, var(--bkbg-bio-role-line-height-t, var(--bkbg-bio-role-line-height-d, 1.4)));
+        letter-spacing: var(--bkbg-bio-role-letter-spacing-m, var(--bkbg-bio-role-letter-spacing-t, var(--bkbg-bio-role-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-bio-role-word-spacing-m, var(--bkbg-bio-role-word-spacing-t, var(--bkbg-bio-role-word-spacing-d, normal)));
+    }
+    .bkbg-bio-bio {
+        font-size: var(--bkbg-bio-bio-font-size-m, var(--bkbg-bio-bio-font-size-t, var(--bkbg-bio-bio-font-size-d, 15px)));
+        line-height: var(--bkbg-bio-bio-line-height-m, var(--bkbg-bio-bio-line-height-t, var(--bkbg-bio-bio-line-height-d, 1.65)));
+        letter-spacing: var(--bkbg-bio-bio-letter-spacing-m, var(--bkbg-bio-bio-letter-spacing-t, var(--bkbg-bio-bio-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-bio-bio-word-spacing-m, var(--bkbg-bio-bio-word-spacing-t, var(--bkbg-bio-bio-word-spacing-d, normal)));
+    }
+}
+
+.bkbg-bio-card img.bkbg-bio-photo {
+    display: block;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.bkbg-bio-card--card-center .bkbg-bio-photo {
+    margin-left: auto;
+    margin-right: auto;
+}
+.bkbg-bio-availability-dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin-right: 5px;
+    animation: bkbg-pulse 2s infinite;
+}
+@keyframes bkbg-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.6; transform: scale(1.2); }
+}
+.bkbg-bio-skill-chip {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 99px;
+    padding: 3px 12px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+.bkbg-bio-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+}
+.bkbg-bio-social-link:hover {
+    opacity: 0.7;
+}
+.bkbg-bio-cta {
+    display: inline-block;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+    cursor: pointer;
+}
+.bkbg-bio-cta:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+@media (max-width: 640px) {
+    .bkbg-bio-card--horizontal {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+}

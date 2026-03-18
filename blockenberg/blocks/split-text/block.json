@@ -1,0 +1,123 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/split-text",
+    "title": "Split Text",
+    "category": "bkbg-effects",
+    "icon": "editor-break",
+    "description": "Scroll-triggered per-word or per-character text reveal animation. Each word or character animates in sequentially as the block enters the viewport.",
+    "keywords": [
+        "split",
+        "text",
+        "animation",
+        "scroll",
+        "reveal",
+        "word",
+        "stagger",
+        "cinematic"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-split-text-editor",
+    "editorStyle": "bkbg-split-text-style",
+    "style": "bkbg-split-text-style",
+    "viewScript": "bkbg-split-text-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "text": {
+            "type": "string",
+            "default": "Words that reveal themselves one by one as you scroll."
+        },
+        "tag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "splitType": {
+            "type": "string",
+            "default": "words"
+        },
+        "animation": {
+            "type": "string",
+            "default": "fade-up"
+        },
+        "stagger": {
+            "type": "number",
+            "default": 80
+        },
+        "duration": {
+            "type": "number",
+            "default": 600
+        },
+        "threshold": {
+            "type": "number",
+            "default": 0.15
+        },
+        "repeat": {
+            "type": "boolean",
+            "default": false
+        },
+        "ease": {
+            "type": "string",
+            "default": "cubic-bezier(0.22,1,0.36,1)"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 48
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "800"
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "letterSpacing": {
+            "type": "number",
+            "default": 0
+        },
+        "textTransform": {
+            "type": "string",
+            "default": "none"
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "wrapBg": {
+            "type": "string",
+            "default": ""
+        },
+        "highlightWords": {
+            "type": "string",
+            "default": ""
+        },
+        "highlightColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

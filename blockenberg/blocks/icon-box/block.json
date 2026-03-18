@@ -1,0 +1,285 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/icon-box",
+    "title": "Icon Box",
+    "category": "bkbg-content",
+    "icon": "star-filled",
+    "description": "Single card with icon, title, text, and optional link button. Perfect for feature lists inside Row/Column.",
+    "keywords": [
+        "icon",
+        "box",
+        "card",
+        "feature",
+        "service",
+        "cta"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-icon-box-editor",
+    "editorStyle": "bkbg-icon-box-style",
+    "style": "bkbg-icon-box-style",
+    "viewScript": "bkbg-icon-box-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Feature Title"
+        },
+        "text": {
+            "type": "string",
+            "default": "A brief description of this feature or service. Keep it concise and focused on the benefit."
+        },
+        "titleTag": {
+            "type": "string",
+            "default": "h3"
+        },
+        "iconType": {
+            "type": "string",
+            "default": "star"
+        },
+        "iconChar": {
+            "type": "string",
+            "default": "★"
+        },
+        "iconDashicon": {
+            "type": "string",
+            "default": "star-filled"
+        },
+        "iconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 40
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "iconShape": {
+            "type": "string",
+            "default": "circle-filled"
+        },
+        "iconBgColor": {
+            "type": "string",
+            "default": "#dbeafe"
+        },
+        "iconBgSize": {
+            "type": "number",
+            "default": 80
+        },
+        "iconBgRadius": {
+            "type": "number",
+            "default": 50
+        },
+        "iconPosition": {
+            "type": "string",
+            "default": "top"
+        },
+        "iconAlignTop": {
+            "type": "boolean",
+            "default": false
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "contentGap": {
+            "type": "number",
+            "default": 20
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 20
+        },
+        "titleWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "titleSpacing": {
+            "type": "number",
+            "default": 10
+        },
+        "textSize": {
+            "type": "number",
+            "default": 15
+        },
+        "textWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "textLineHeight": {
+            "type": "number",
+            "default": 1.7
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "linkEnabled": {
+            "type": "boolean",
+            "default": false
+        },
+        "linkText": {
+            "type": "string",
+            "default": "Learn More"
+        },
+        "linkUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "linkTarget": {
+            "type": "string",
+            "default": "_self"
+        },
+        "linkStyle": {
+            "type": "string",
+            "default": "solid"
+        },
+        "linkSize": {
+            "type": "number",
+            "default": 14
+        },
+        "linkBg": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "linkBgHover": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "linkColorHover": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "linkBorderColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "linkBorderWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "linkRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "linkPaddingV": {
+            "type": "number",
+            "default": 10
+        },
+        "linkPaddingH": {
+            "type": "number",
+            "default": 22
+        },
+        "linkWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "linkSpacingTop": {
+            "type": "number",
+            "default": 16
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBgHover": {
+            "type": "string",
+            "default": ""
+        },
+        "cardPaddingTop": {
+            "type": "number",
+            "default": 36
+        },
+        "cardPaddingRight": {
+            "type": "number",
+            "default": 32
+        },
+        "cardPaddingBottom": {
+            "type": "number",
+            "default": 36
+        },
+        "cardPaddingLeft": {
+            "type": "number",
+            "default": 32
+        },
+        "cardBorderWidth": {
+            "type": "number",
+            "default": 1
+        },
+        "cardBorderStyle": {
+            "type": "string",
+            "default": "solid"
+        },
+        "cardBorderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "cardBorderRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "hoverEffect": {
+            "type": "string",
+            "default": "lift"
+        },
+        "cardShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "cardShadowH": {
+            "type": "number",
+            "default": 0
+        },
+        "cardShadowV": {
+            "type": "number",
+            "default": 4
+        },
+        "cardShadowBlur": {
+            "type": "number",
+            "default": 24
+        },
+        "cardShadowSpread": {
+            "type": "number",
+            "default": 0
+        },
+        "cardShadowColor": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.07)"
+        },
+        "cardShadowHover": {
+            "type": "string",
+            "default": "0 12px 40px 0 rgba(0,0,0,0.12)"
+        }
+    }
+}

@@ -1,0 +1,111 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/read-more",
+    "version": "1.0.0",
+    "title": "Read More",
+    "category": "bkbg-blog",
+    "icon": "editor-expand",
+    "description": "Collapses long content behind a gradient fade with an animated 'Read more / Show less' toggle button.",
+    "keywords": [
+        "read more",
+        "expand",
+        "collapse",
+        "show more",
+        "see more",
+        "truncate",
+        "content",
+        "toggle"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-read-more-editor",
+    "editorStyle": "bkbg-read-more-style",
+    "style": "bkbg-read-more-style",
+    "viewScript": "bkbg-read-more-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ],
+        "anchor": true
+    },
+    "attributes": {
+        "content": {
+            "type": "string",
+            "default": "This is the full content that will be hidden behind the read more button. Add as much text as you like here — the block will collapse it to the preview height and show a gradient fade. The user can expand the full text with a click."
+        },
+        "collapsedHeight": {
+            "type": "number",
+            "default": 180
+        },
+        "readMoreLabel": {
+            "type": "string",
+            "default": "Read more"
+        },
+        "showLessLabel": {
+            "type": "string",
+            "default": "Show less"
+        },
+        "buttonStyle": {
+            "type": "string",
+            "default": "solid"
+        },
+        "buttonAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "animateDuration": {
+            "type": "number",
+            "default": 400
+        },
+        "fadeHeight": {
+            "type": "number",
+            "default": 80
+        },
+        "fadeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "contentTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btnBorderColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        }
+    }
+}

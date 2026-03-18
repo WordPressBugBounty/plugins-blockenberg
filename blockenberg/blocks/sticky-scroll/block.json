@@ -1,0 +1,190 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockenberg/sticky-scroll",
+  "version": "1.0.0",
+  "title": "Sticky Scroll",
+  "category": "bkbg-effects",
+  "icon": "schedule",
+  "description": "Apple-style storytelling layout: one column stays pinned while the opposite column scrolls through feature panels.",
+  "keywords": [
+    "sticky",
+    "scroll",
+    "pinned",
+    "storytelling",
+    "features",
+    "showcase",
+    "two column",
+    "parallax",
+    "sectioned"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-sticky-scroll-editor",
+  "editorStyle": "bkbg-sticky-scroll-style",
+  "style": "bkbg-sticky-scroll-style",
+  "viewScript": "bkbg-sticky-scroll-frontend",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "pinnedSide": {
+      "type": "string",
+      "default": "left"
+    },
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "id": "s1",
+          "eyebrow": "Step 01",
+          "title": "Connect your tools",
+          "desc": "Integrate with 200+ apps in seconds. No code required \u2014 just click, authorize, and you're live.",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": "",
+          "accentColor": "#6c3fb5"
+        },
+        {
+          "id": "s2",
+          "eyebrow": "Step 02",
+          "title": "Build your workflow",
+          "desc": "Drag and drop triggers, conditions, and actions to create automations that match your exact process.",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": "",
+          "accentColor": "#3b82f6"
+        },
+        {
+          "id": "s3",
+          "eyebrow": "Step 03",
+          "title": "Go live and scale",
+          "desc": "Publish with one click. Monitor runs in real-time and iterate without downtime.",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": "",
+          "accentColor": "#10b981"
+        }
+      ]
+    },
+    "stickyTop": {
+      "type": "number",
+      "default": 80
+    },
+    "columnGap": {
+      "type": "number",
+      "default": 60
+    },
+    "pinnedWidth": {
+      "type": "number",
+      "default": 50
+    },
+    "imageRadius": {
+      "type": "number",
+      "default": 16
+    },
+    "imageShadow": {
+      "type": "boolean",
+      "default": true
+    },
+    "imagePlaceholderColor": {
+      "type": "string",
+      "default": "#e5e7eb"
+    },
+    "showEyebrow": {
+      "type": "boolean",
+      "default": true
+    },
+    "showAccentDot": {
+      "type": "boolean",
+      "default": true
+    },
+    "activateOnScroll": {
+      "type": "boolean",
+      "default": true
+    },
+    "panelPaddingY": {
+      "type": "number",
+      "default": 80
+    },
+    "eyebrowSize": {
+      "type": "number",
+      "default": 13
+    },
+    "titleSize": {
+      "type": "number",
+      "default": 32
+    },
+    "descSize": {
+      "type": "number",
+      "default": 17
+    },
+    "eyebrowColor": {
+      "type": "string",
+      "default": "#6c3fb5"
+    },
+    "titleColor": {
+      "type": "string",
+      "default": "#111827"
+    },
+    "descColor": {
+      "type": "string",
+      "default": "#4b5563"
+    },
+    "dotColor": {
+      "type": "string",
+      "default": "#e5e7eb"
+    },
+    "dotActiveColor": {
+      "type": "string",
+      "default": "#6c3fb5"
+    },
+    "bgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "paddingTop": {
+      "type": "number",
+      "default": 64
+    },
+    "paddingBottom": {
+      "type": "number",
+      "default": 64
+    },
+    "titleFontWeight": {
+      "type": "string",
+      "default": "700"
+    },
+    "descFontWeight": {
+      "type": "string",
+      "default": "400"
+    },
+    "eyebrowFontWeight": {
+      "type": "string",
+      "default": "600"
+    },
+    "titleLineHeight": {
+      "type": "number",
+      "default": 1.2
+    },
+    "descLineHeight": {
+      "type": "number",
+      "default": 1.6
+    },
+    "eyebrowTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "titleTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "descTypo": {
+      "type": "object",
+      "default": {}
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/link-roundup",
+    "title": "Link Roundup",
+    "description": "Curated links collection — weekly/monthly digest with categories.",
+    "category": "bkbg-blog",
+    "icon": "list-view",
+    "keywords": [
+        "links",
+        "roundup",
+        "digest",
+        "weekly",
+        "curated",
+        "reading"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-link-roundup-editor",
+    "style": "bkbg-link-roundup-style",
+    "viewScript": "bkbg-link-roundup-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "This Week's Reads"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": ""
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "publishDate": {
+            "type": "string",
+            "default": ""
+        },
+        "dateLabel": {
+            "type": "string",
+            "default": "Week of"
+        },
+        "showDate": {
+            "type": "boolean",
+            "default": true
+        },
+        "links": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Link Title",
+                    "url": "",
+                    "source": "Source Name",
+                    "excerpt": "Brief description of what this link is about and why it's worth reading.",
+                    "category": "General",
+                    "emoji": "🔗",
+                    "emojiType": "custom-char",
+                    "emojiDashicon": "",
+                    "emojiImageUrl": ""
+                }
+            ]
+        },
+        "style": {
+            "type": "string",
+            "default": "cards"
+        },
+        "groupByCategory": {
+            "type": "boolean",
+            "default": false
+        },
+        "showEmoji": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSource": {
+            "type": "boolean",
+            "default": true
+        },
+        "showExcerpt": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCategory": {
+            "type": "boolean",
+            "default": true
+        },
+        "openInNewTab": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "dateColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "sourceColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "excerptColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "catBg": {
+            "type": "string",
+            "default": "#e0f2fe"
+        },
+        "catColor": {
+            "type": "string",
+            "default": "#0369a1"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "titleFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "descriptionFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "descriptionFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "descriptionLineHeight": {
+            "type": "number",
+            "default": 1.6
+        },
+        "itemFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "itemFontWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "itemLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "itemTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

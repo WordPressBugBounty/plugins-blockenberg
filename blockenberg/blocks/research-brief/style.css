@@ -1,0 +1,205 @@
+.bkbg-rb-wrap {
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.bkbg-rb-header {
+    padding: 20px 24px;
+}
+.bkbg-rb-header-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+.bkbg-rb-type-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+}
+.bkbg-rb-year {
+    font-size: 12px;
+}
+.bkbg-rb-title {
+    margin: 0 0 10px;
+    line-height: 1.25;
+}
+.bkbg-rb-author-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.bkbg-rb-meta-item {
+    font-size: 12px;
+}
+.bkbg-rb-sample-strip {
+    padding: 10px 24px;
+    border-bottom: 1px solid;
+    font-size: 12px;
+    background: #f8fafc;
+    color: #374151;
+}
+.bkbg-rb-body {
+    padding: 18px 24px;
+    display: grid;
+    gap: 20px;
+}
+.bkbg-rb-section-head {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    padding-bottom: 5px;
+    border-bottom: 2px solid;
+    margin-bottom: 10px;
+}
+.bkbg-rb-method {
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+.bkbg-rb-finding {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 10px 12px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border-left: 3px solid;
+    margin-bottom: 8px;
+}
+.bkbg-rb-finding:last-child {
+    margin-bottom: 0;
+}
+.bkbg-rb-sig-badge {
+    flex-shrink: 0;
+    padding: 2px 8px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-top: 1px;
+}
+.bkbg-rb-finding-text {
+    margin: 0;
+}
+.bkbg-rb-limit-list {
+    margin: 0;
+    padding-left: 18px;
+}
+.bkbg-rb-limit-list li {
+    margin-bottom: 5px;
+}
+.bkbg-rb-takeaway {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 10px 12px;
+    border-left: 3px solid;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 6px;
+}
+.bkbg-rb-takeaway:last-child {
+    margin-bottom: 0;
+}
+.bkbg-rb-takeaway-check {
+    font-weight: 700;
+    flex-shrink: 0;
+}
+.bkbg-rb-source {
+    font-size: 12px;
+    padding-top: 8px;
+    border-top: 1px solid;
+}
+.bkbg-rb-source a {
+    text-decoration: none;
+}
+.bkbg-rb-source a:hover {
+    text-decoration: underline;
+}
+
+/* ── Typography vars ──────────────────────────────────────── */
+.bkbg-rb-title {
+    font-family: var(--bkrb-tt-font-family, inherit);
+    font-size: var(--bkrb-tt-font-size-d, 22px);
+    font-weight: var(--bkrb-tt-font-weight, 700);
+    font-style: var(--bkrb-tt-font-style, normal);
+    text-decoration: var(--bkrb-tt-text-decoration, none);
+    text-transform: var(--bkrb-tt-text-transform, none);
+    line-height: var(--bkrb-tt-line-height-d, 1.25);
+    letter-spacing: var(--bkrb-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkrb-tt-word-spacing-d, normal);
+}
+.bkbg-rb-wrap h2.bkbg-rb-title {
+    font-family: var(--bkrb-tt-font-family, inherit);
+    font-size: var(--bkrb-tt-font-size-d, 22px);
+    font-weight: var(--bkrb-tt-font-weight, 700);
+    font-style: var(--bkrb-tt-font-style, normal);
+    text-decoration: var(--bkrb-tt-text-decoration, none);
+    text-transform: var(--bkrb-tt-text-transform, none);
+    line-height: var(--bkrb-tt-line-height-d, 1.25);
+    letter-spacing: var(--bkrb-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkrb-tt-word-spacing-d, normal);
+}
+.bkbg-rb-method,
+.bkbg-rb-finding-text,
+.bkbg-rb-limit-list,
+.bkbg-rb-takeaway {
+    font-family: var(--bkrb-bt-font-family, inherit);
+    font-size: var(--bkrb-bt-font-size-d, 14px);
+    font-weight: var(--bkrb-bt-font-weight, 400);
+    font-style: var(--bkrb-bt-font-style, normal);
+    text-decoration: var(--bkrb-bt-text-decoration, none);
+    text-transform: var(--bkrb-bt-text-transform, none);
+    line-height: var(--bkrb-bt-line-height-d, 1.68);
+    letter-spacing: var(--bkrb-bt-letter-spacing-d, normal);
+    word-spacing: var(--bkrb-bt-word-spacing-d, normal);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-rb-wrap .bkbg-rb-title {
+        font-size: var(--bkrb-tt-font-size-t, var(--bkrb-tt-font-size-d, 22px));
+        line-height: var(--bkrb-tt-line-height-t, var(--bkrb-tt-line-height-d, 1.25));
+        letter-spacing: var(--bkrb-tt-letter-spacing-t, var(--bkrb-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkrb-tt-word-spacing-t, var(--bkrb-tt-word-spacing-d, normal));
+    }
+    .bkbg-rb-method,
+    .bkbg-rb-finding-text,
+    .bkbg-rb-limit-list,
+    .bkbg-rb-takeaway {
+        font-size: var(--bkrb-bt-font-size-t, var(--bkrb-bt-font-size-d, 14px));
+        line-height: var(--bkrb-bt-line-height-t, var(--bkrb-bt-line-height-d, 1.68));
+        letter-spacing: var(--bkrb-bt-letter-spacing-t, var(--bkrb-bt-letter-spacing-d, normal));
+        word-spacing: var(--bkrb-bt-word-spacing-t, var(--bkrb-bt-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-rb-wrap .bkbg-rb-title {
+        font-size: var(--bkrb-tt-font-size-m, var(--bkrb-tt-font-size-t, var(--bkrb-tt-font-size-d, 22px)));
+        line-height: var(--bkrb-tt-line-height-m, var(--bkrb-tt-line-height-t, var(--bkrb-tt-line-height-d, 1.25)));
+        letter-spacing: var(--bkrb-tt-letter-spacing-m, var(--bkrb-tt-letter-spacing-t, var(--bkrb-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkrb-tt-word-spacing-m, var(--bkrb-tt-word-spacing-t, var(--bkrb-tt-word-spacing-d, normal)));
+    }
+    .bkbg-rb-method,
+    .bkbg-rb-finding-text,
+    .bkbg-rb-limit-list,
+    .bkbg-rb-takeaway {
+        font-size: var(--bkrb-bt-font-size-m, var(--bkrb-bt-font-size-t, var(--bkrb-bt-font-size-d, 14px)));
+        line-height: var(--bkrb-bt-line-height-m, var(--bkrb-bt-line-height-t, var(--bkrb-bt-line-height-d, 1.68)));
+        letter-spacing: var(--bkrb-bt-letter-spacing-m, var(--bkrb-bt-letter-spacing-t, var(--bkrb-bt-letter-spacing-d, normal)));
+        word-spacing: var(--bkrb-bt-word-spacing-m, var(--bkrb-bt-word-spacing-t, var(--bkrb-bt-word-spacing-d, normal)));
+    }
+}
+
+@media (max-width: 600px) {
+    .bkbg-rb-header,
+    .bkbg-rb-body,
+    .bkbg-rb-sample-strip {
+        padding: 14px 16px;
+    }
+    .bkbg-rb-finding {
+        flex-direction: column;
+        gap: 6px;
+    }
+}

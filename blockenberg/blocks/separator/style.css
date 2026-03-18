@@ -1,0 +1,196 @@
+/* ========================================
+   Separator / Divider Block
+   Prefix: bkbg-div-
+   ======================================== */
+
+/* ── CSS Custom Properties ─────────────────────────────────────────────────── */
+.bkbg-div-wrap {
+  --bkbg-div-color:       #d1d5db;
+  --bkbg-div-thickness:   1px;
+  --bkbg-div-svgh:        24px;
+  --bkbg-div-dot-spacing: 14px;
+  --bkbg-div-gap:         16px;
+  --bkbg-div-width:       100%;
+  --bkbg-div-mt:          24px;
+  --bkbg-div-mb:          24px;
+  --bkbg-div-text-size:   14px;
+  --bkbg-div-text-weight: 400;
+  --bkbg-div-text-color:  #9ca3af;
+  --bkbg-div-text-bg:     transparent;
+  --bkbg-div-text-ph:     12px;
+  --bkbg-div-text-pv:     4px;
+  --bkbg-div-text-radius: 4px;
+}
+
+/* ── Outer margin wrapper ──────────────────────────────────────────────────── */
+.bkbg-div-outer {
+  display: block;
+}
+
+/* ── Divider row ───────────────────────────────────────────────────────────── */
+.bkbg-div-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--bkbg-div-gap);
+  width: var(--bkbg-div-width);
+  margin-inline: auto;
+}
+
+/* ── Line segment (base) ───────────────────────────────────────────────────── */
+.bkbg-div-seg {
+  display: block;
+  flex-shrink: 1;
+  /* flex: value comes from inline style */
+}
+
+/* ── Line: solid ───────────────────────────────────────────────────────────── */
+.bkbg-div-wrap[data-type="line"] .bkbg-div-seg {
+  border-top: var(--bkbg-div-thickness) solid var(--bkbg-div-color);
+  height: 0;
+}
+
+/* ── Line: dashed ──────────────────────────────────────────────────────────── */
+.bkbg-div-wrap[data-type="dashed"] .bkbg-div-seg {
+  border-top: var(--bkbg-div-thickness) dashed var(--bkbg-div-color);
+  height: 0;
+}
+
+/* ── Line: dotted ──────────────────────────────────────────────────────────── */
+.bkbg-div-wrap[data-type="dotted"] .bkbg-div-seg {
+  border-top: var(--bkbg-div-thickness) dotted var(--bkbg-div-color);
+  height: 0;
+}
+
+/* ── Line: double ──────────────────────────────────────────────────────────── */
+.bkbg-div-wrap[data-type="double"] .bkbg-div-seg {
+  border-top: var(--bkbg-div-thickness) solid var(--bkbg-div-color);
+  border-bottom: var(--bkbg-div-thickness) solid var(--bkbg-div-color);
+  height: calc(var(--bkbg-div-thickness) * 2 + 4px);
+}
+/* ── Line: triple (three lines via background-image) ───────────────────────── */
+.bkbg-div-wrap[data-type="triple"] .bkbg-div-seg {
+  border: none;
+  height: calc(var(--bkbg-div-thickness) * 3 + 8px);
+  background-image:
+    linear-gradient(var(--bkbg-div-color), var(--bkbg-div-color)),
+    linear-gradient(var(--bkbg-div-color), var(--bkbg-div-color)),
+    linear-gradient(var(--bkbg-div-color), var(--bkbg-div-color));
+  background-size: 100% var(--bkbg-div-thickness);
+  background-repeat: no-repeat;
+  background-position: 0 0, 0 50%, 0 100%;
+}
+
+/* ── Line: gradient (fades in from both ends) ────────────────────────────── */
+.bkbg-div-wrap[data-type="gradient"] .bkbg-div-seg {
+  border: none;
+  height: var(--bkbg-div-thickness);
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    var(--bkbg-div-color) 20%,
+    var(--bkbg-div-color) 80%,
+    transparent 100%
+  );
+}
+/* ── Dots: repeating radial gradient ───────────────────────────────────────── */
+.bkbg-div-wrap[data-type="dots"] .bkbg-div-seg {
+  height: var(--bkbg-div-svgh);
+  background-image: radial-gradient(
+    circle,
+    var(--bkbg-div-color) var(--bkbg-div-thickness),
+    transparent calc(var(--bkbg-div-thickness) + 1px)
+  );
+  background-size: var(--bkbg-div-dot-spacing) var(--bkbg-div-svgh);
+  background-repeat: repeat-x;
+  background-position: 0 center;
+  border: none;
+}
+
+/* ── Wave / Zigzag / Scallop / Arrows / Brush / Heartbeat: SVG segments ──────── */
+.bkbg-div-wrap[data-type="wave"] .bkbg-div-seg,
+.bkbg-div-wrap[data-type="zigzag"] .bkbg-div-seg,
+.bkbg-div-wrap[data-type="scallop"] .bkbg-div-seg,
+.bkbg-div-wrap[data-type="arrows"] .bkbg-div-seg,
+.bkbg-div-wrap[data-type="brush"] .bkbg-div-seg,
+.bkbg-div-wrap[data-type="heartbeat"] .bkbg-div-seg {
+  overflow: hidden;
+}
+
+.bkbg-div-wrap[data-type="wave"] .bkbg-div-seg svg,
+.bkbg-div-wrap[data-type="zigzag"] .bkbg-div-seg svg,
+.bkbg-div-wrap[data-type="scallop"] .bkbg-div-seg svg,
+.bkbg-div-wrap[data-type="arrows"] .bkbg-div-seg svg,
+.bkbg-div-wrap[data-type="brush"] .bkbg-div-seg svg,
+.bkbg-div-wrap[data-type="heartbeat"] .bkbg-div-seg svg {
+  display: block;
+  width: 100%;
+}
+
+/* ── Middle container ──────────────────────────────────────────────────────── */
+.bkbg-div-middle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* ── Middle: icon ──────────────────────────────────────────────────────────── */
+.bkbg-div-mid-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Middle: text ──────────────────────────────────────────────────────────── */
+.bkbg-div-mid-text {
+    font-family: var(--bkdv-tt-font-family, inherit);
+    font-size: var(--bkdv-tt-font-size-d, var(--bkbg-div-text-size, 14px));
+    font-weight: var(--bkdv-tt-font-weight, var(--bkbg-div-text-weight, 400));
+    font-style: var(--bkdv-tt-font-style, normal);
+    text-decoration: var(--bkdv-tt-text-decoration, none);
+    text-transform: var(--bkdv-tt-text-transform, none);
+    line-height: var(--bkdv-tt-line-height-d, 1.2);
+    letter-spacing: var(--bkdv-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkdv-tt-word-spacing-d, normal);
+    color: var(--bkbg-div-text-color);
+    background: var(--bkbg-div-text-bg);
+    padding: var(--bkbg-div-text-pv) var(--bkbg-div-text-ph);
+    border-radius: var(--bkbg-div-text-radius);
+    white-space: nowrap;
+
+/* ── Responsive typography — centrepiece text ──────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-div-mid-text {
+        font-size: var(--bkdv-tt-font-size-t, var(--bkdv-tt-font-size-d, var(--bkbg-div-text-size, 14px)));
+        line-height: var(--bkdv-tt-line-height-t, var(--bkdv-tt-line-height-d, 1.2));
+        letter-spacing: var(--bkdv-tt-letter-spacing-t, var(--bkdv-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkdv-tt-word-spacing-t, var(--bkdv-tt-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-div-mid-text {
+        font-size: var(--bkdv-tt-font-size-m, var(--bkdv-tt-font-size-t, var(--bkdv-tt-font-size-d, var(--bkbg-div-text-size, 14px))));
+        line-height: var(--bkdv-tt-line-height-m, var(--bkdv-tt-line-height-t, var(--bkdv-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bkdv-tt-letter-spacing-m, var(--bkdv-tt-letter-spacing-t, var(--bkdv-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkdv-tt-word-spacing-m, var(--bkdv-tt-word-spacing-t, var(--bkdv-tt-word-spacing-d, normal)));
+    }
+}
+
+/* ── "No middle" shorthand: hide right segment when flex 0 ─────────────────── */
+.bkbg-div-seg[style*="flex: 0 0 0px"] {
+  display: none;
+}
+
+/* ── Editor: make wrap display flex correctly in the block editor ───────────── */
+.editor-styles-wrapper .bkbg-div-wrap {
+  display: flex !important;
+}
+
+/* RichText span inside middle text needs inline-block for padding */
+.editor-styles-wrapper .bkbg-div-mid-text {
+  display: inline-block;
+  min-width: 4px;
+}

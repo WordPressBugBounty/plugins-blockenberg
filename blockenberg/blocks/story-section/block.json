@@ -1,0 +1,226 @@
+{
+  "apiVersion": 3,
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "blockenberg/story-section",
+  "title": "Story Section",
+  "description": "Full-width founder or brand story section with photo, pull quote, and milestones.",
+  "category": "bkbg-business",
+  "icon": "book-alt",
+  "keywords": [
+    "story",
+    "founder",
+    "about",
+    "brand",
+    "milestones",
+    "timeline"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-story-section-editor",
+  "editorStyle": "bkbg-story-section-style",
+  "style": "bkbg-story-section-style",
+  "viewScript": "bkbg-story-section-frontend",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "layout": {
+      "type": "string",
+      "default": "photo-left"
+    },
+    "headline": {
+      "type": "string",
+      "default": "Our Story"
+    },
+    "subheadline": {
+      "type": "string",
+      "default": "How it all started \u2014 and where we're headed."
+    },
+    "bodyText": {
+      "type": "string",
+      "default": "We started with a simple idea: make the web more beautiful and accessible for everyone. Over the years we've grown into a passionate team of builders, designers, and thinkers who care deeply about craft."
+    },
+    "founderName": {
+      "type": "string",
+      "default": "Alex Johnson"
+    },
+    "founderTitle": {
+      "type": "string",
+      "default": "Founder & CEO"
+    },
+    "founderPhotoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "founderPhotoId": {
+      "type": "number",
+      "default": 0
+    },
+    "showPhoto": {
+      "type": "boolean",
+      "default": true
+    },
+    "photoCaption": {
+      "type": "boolean",
+      "default": true
+    },
+    "pullQuote": {
+      "type": "string",
+      "default": "\"We didn't just build a product \u2014 we built something we're proud of.\""
+    },
+    "showPullQuote": {
+      "type": "boolean",
+      "default": true
+    },
+    "showMilestones": {
+      "type": "boolean",
+      "default": true
+    },
+    "milestones": {
+      "type": "array",
+      "default": [
+        {
+          "year": "2018",
+          "title": "Founded",
+          "description": "Started as a one-person project in a home office."
+        },
+        {
+          "year": "2020",
+          "title": "First 1,000 Users",
+          "description": "Reached our first major milestone through word of mouth."
+        },
+        {
+          "year": "2022",
+          "title": "Series A",
+          "description": "Raised funding to grow the team and expand the product."
+        },
+        {
+          "year": "2024",
+          "title": "Global Launch",
+          "description": "Expanded to 40+ countries and 100,000+ active users."
+        }
+      ]
+    },
+    "showCta": {
+      "type": "boolean",
+      "default": true
+    },
+    "ctaLabel": {
+      "type": "string",
+      "default": "Join Our Journey"
+    },
+    "ctaUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "ctaNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": "#6366f1"
+    },
+    "headlineColor": {
+      "type": "string",
+      "default": "#0f172a"
+    },
+    "subColor": {
+      "type": "string",
+      "default": "#475569"
+    },
+    "bodyColor": {
+      "type": "string",
+      "default": "#334155"
+    },
+    "quoteColor": {
+      "type": "string",
+      "default": "#1e293b"
+    },
+    "yearColor": {
+      "type": "string",
+      "default": "#6366f1"
+    },
+    "milestoneTitleColor": {
+      "type": "string",
+      "default": "#0f172a"
+    },
+    "milestoneTextColor": {
+      "type": "string",
+      "default": "#475569"
+    },
+    "ctaBg": {
+      "type": "string",
+      "default": "#6366f1"
+    },
+    "ctaColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "headlineSize": {
+      "type": "number",
+      "default": 40
+    },
+    "subSize": {
+      "type": "number",
+      "default": 18
+    },
+    "quoteSize": {
+      "type": "number",
+      "default": 22
+    },
+    "bodySize": {
+      "type": "number",
+      "default": 16
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 12
+    },
+    "photoBorderRadius": {
+      "type": "number",
+      "default": 12
+    },
+    "headlineFontWeight": {
+      "type": "string",
+      "default": "800"
+    },
+    "bodyFontWeight": {
+      "type": "string",
+      "default": "400"
+    },
+    "headlineLineHeight": {
+      "type": "number",
+      "default": 1.1
+    },
+    "bodyLineHeight": {
+      "type": "number",
+      "default": 1.7
+    },
+    "headlineTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "subheadlineTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "bodyTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "quoteTypo": {
+      "type": "object",
+      "default": {}
+    }
+  }
+}

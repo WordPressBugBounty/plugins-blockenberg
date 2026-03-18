@@ -1,0 +1,152 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/animated-text",
+    "title": "Animated Text",
+    "category": "bkbg-effects",
+    "icon": "editor-textcolor",
+    "description": "Heading with animated cycling words — typewriter, fade, slide, or flip effects. Perfect for hero sections.",
+    "keywords": [
+        "animated",
+        "typewriter",
+        "typing",
+        "word",
+        "text",
+        "headline",
+        "hero",
+        "cycle"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-animated-text-editor",
+    "editorStyle": "bkbg-animated-text-style",
+    "style": "bkbg-animated-text-style",
+    "viewScript": "bkbg-animated-text-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "beforeText": {
+            "type": "string",
+            "default": "We build"
+        },
+        "words": {
+            "type": "array",
+            "default": [
+                "websites",
+                "apps",
+                "brands",
+                "experiences"
+            ]
+        },
+        "afterText": {
+            "type": "string",
+            "default": "that matter."
+        },
+        "effect": {
+            "type": "string",
+            "default": "typewriter"
+        },
+        "typingSpeed": {
+            "type": "number",
+            "default": 80
+        },
+        "deletingSpeed": {
+            "type": "number",
+            "default": 40
+        },
+        "pauseDuration": {
+            "type": "number",
+            "default": 2000
+        },
+        "loop": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCursor": {
+            "type": "boolean",
+            "default": true
+        },
+        "cursorChar": {
+            "type": "string",
+            "default": "|"
+        },
+        "cursorBlinkSpeed": {
+            "type": "number",
+            "default": 530
+        },
+        "tag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "left"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 48
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "letterSpacing": {
+            "type": "number",
+            "default": 0
+        },
+        "staticColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "animatedColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "cursorColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "highlightBg": {
+            "type": "string",
+            "default": ""
+        },
+        "highlightPadding": {
+            "type": "number",
+            "default": 4
+        },
+        "highlightRadius": {
+            "type": "number",
+            "default": 4
+        },
+        "wordPlacement": {
+            "type": "string",
+            "default": "inline"
+        },
+        "wrapperPaddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "wrapperPaddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 0
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

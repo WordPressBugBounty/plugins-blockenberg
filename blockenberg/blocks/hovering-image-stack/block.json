@@ -1,0 +1,116 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/hovering-image-stack",
+    "title": "Hovering Image Stack",
+    "category": "bkbg-effects",
+    "description": "A stack of images arranged in a fan/cascade that spreads outward on hover revealing all images.",
+    "keywords": [
+        "images",
+        "stack",
+        "fan",
+        "hover",
+        "cascade",
+        "gallery"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-hovering-image-stack-editor",
+    "style": "bkbg-hovering-image-stack-style",
+    "viewScript": "bkbg-hovering-image-stack-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "images": {
+            "type": "array",
+            "default": [
+                {
+                    "url": "",
+                    "alt": "Image 1",
+                    "caption": ""
+                },
+                {
+                    "url": "",
+                    "alt": "Image 2",
+                    "caption": ""
+                },
+                {
+                    "url": "",
+                    "alt": "Image 3",
+                    "caption": ""
+                },
+                {
+                    "url": "",
+                    "alt": "Image 4",
+                    "caption": ""
+                }
+            ]
+        },
+        "spreadMode": {
+            "type": "string",
+            "default": "fan"
+        },
+        "spreadAngle": {
+            "type": "number",
+            "default": 15
+        },
+        "spreadDist": {
+            "type": "number",
+            "default": 60
+        },
+        "imageWidth": {
+            "type": "number",
+            "default": 200
+        },
+        "imageHeight": {
+            "type": "number",
+            "default": 280
+        },
+        "imageRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "showCaption": {
+            "type": "boolean",
+            "default": false
+        },
+        "captionSize": {
+            "type": "number",
+            "default": 13
+        },
+        "shadowStrength": {
+            "type": "number",
+            "default": 30
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 3
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "captionColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "captionBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "captionTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

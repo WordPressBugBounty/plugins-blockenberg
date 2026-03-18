@@ -1,0 +1,267 @@
+.bkbg-podcast-episode-app { display: none; }
+
+.bkbg-pe-block {
+    overflow: hidden;
+}
+
+/* ── Header ────────────────────────────────────────────────── */
+.bkbg-pe-header {
+    padding: 24px 28px 20px;
+}
+
+.bkbg-pe-show-name {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 8px;
+    opacity: .55;
+}
+
+.bkbg-pe-title {
+    margin: 0 0 12px;
+    line-height: 1.2;
+}
+
+.bkbg-pe-editor-wrap h2.bkbg-pe-title,
+.bkbg-pe-block h2.bkbg-pe-title {
+    font-family: var(--bkbg-pe-tt-font-family, inherit);
+    font-size: var(--bkbg-pe-tt-font-size-d, 22px);
+    font-weight: var(--bkbg-pe-tt-font-weight, 700);
+    font-style: var(--bkbg-pe-tt-font-style, normal);
+    text-decoration: var(--bkbg-pe-tt-text-decoration, none);
+    text-transform: var(--bkbg-pe-tt-text-transform, none);
+    line-height: var(--bkbg-pe-tt-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-pe-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-pe-tt-word-spacing-d, normal);
+}
+
+.bkbg-pe-info-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.bkbg-pe-info-item {
+    font-size: 12px;
+    opacity: .65;
+}
+
+/* ── Listen buttons ─────────────────────────────────────────── */
+.bkbg-pe-listen-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.bkbg-pe-listen-btn {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: opacity .15s;
+}
+
+.bkbg-pe-listen-btn:hover {
+    opacity: .85;
+}
+
+/* ── Body ───────────────────────────────────────────────────── */
+.bkbg-pe-body {
+    padding: 20px 28px;
+    font-family: var(--bkbg-pe-bd-font-family, inherit);
+    font-size: var(--bkbg-pe-bd-font-size-d, 14px);
+    font-weight: var(--bkbg-pe-bd-font-weight, 400);
+    font-style: var(--bkbg-pe-bd-font-style, normal);
+    text-decoration: var(--bkbg-pe-bd-text-decoration, none);
+    text-transform: var(--bkbg-pe-bd-text-transform, none);
+    line-height: var(--bkbg-pe-bd-line-height-d, 1.68);
+    letter-spacing: var(--bkbg-pe-bd-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-pe-bd-word-spacing-d, normal);
+}
+
+/* ── Section heading ─────────────────────────────────────────  */
+.bkbg-pe-section-head {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.bkbg-pe-section {
+    margin-bottom: 24px;
+}
+
+/* ── Guests ─────────────────────────────────────────────────── */
+.bkbg-pe-guests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+}
+
+.bkbg-pe-guest-card {
+    border-radius: 8px;
+    padding: 12px 14px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.bkbg-pe-guest-name {
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.bkbg-pe-guest-role {
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.bkbg-pe-guest-bio {
+    margin: 0;
+}
+
+/* ── Chapter timestamps ─────────────────────────────────────── */
+.bkbg-pe-chapters {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bkbg-pe-chapter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 0;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+}
+
+.bkbg-pe-chapter:last-child {
+    border-bottom: none !important;
+}
+
+.bkbg-pe-chapter-time {
+    font-family: ui-monospace, 'Cascadia Code', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    min-width: 52px;
+    text-align: center;
+}
+
+/* ── Resources ──────────────────────────────────────────────── */
+.bkbg-pe-resources {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bkbg-pe-resource {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+}
+
+.bkbg-pe-resource:last-child {
+    border-bottom: none !important;
+}
+
+.bkbg-pe-resource-icon {
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.bkbg-pe-resource-link {
+    font-weight: 500;
+    text-decoration: none !important;
+    transition: opacity .15s;
+}
+
+.bkbg-pe-resource-link:hover {
+    opacity: .75;
+    text-decoration: underline !important;
+}
+
+/* ── Quote / Transcript ─────────────────────────────────────── */
+.bkbg-pe-quote {
+    margin: 0;
+    padding: 14px 18px;
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    white-space: pre-line;
+}
+
+/* ── Tags ───────────────────────────────────────────────────── */
+.bkbg-pe-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.bkbg-pe-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ── Typography responsive ──────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-pe-editor-wrap .bkbg-pe-title,
+    .bkbg-pe-block .bkbg-pe-title {
+        font-size: var(--bkbg-pe-tt-font-size-t, 22px);
+        line-height: var(--bkbg-pe-tt-line-height-t, 1.2);
+        letter-spacing: var(--bkbg-pe-tt-letter-spacing-t, normal);
+        word-spacing: var(--bkbg-pe-tt-word-spacing-t, normal);
+    }
+    .bkbg-pe-body {
+        font-size: var(--bkbg-pe-bd-font-size-t, 14px);
+        line-height: var(--bkbg-pe-bd-line-height-t, 1.68);
+        letter-spacing: var(--bkbg-pe-bd-letter-spacing-t, normal);
+        word-spacing: var(--bkbg-pe-bd-word-spacing-t, normal);
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-pe-editor-wrap .bkbg-pe-title,
+    .bkbg-pe-block .bkbg-pe-title {
+        font-size: var(--bkbg-pe-tt-font-size-m, 22px);
+        line-height: var(--bkbg-pe-tt-line-height-m, 1.2);
+        letter-spacing: var(--bkbg-pe-tt-letter-spacing-m, normal);
+        word-spacing: var(--bkbg-pe-tt-word-spacing-m, normal);
+    }
+    .bkbg-pe-body {
+        font-size: var(--bkbg-pe-bd-font-size-m, 14px);
+        line-height: var(--bkbg-pe-bd-line-height-m, 1.68);
+        letter-spacing: var(--bkbg-pe-bd-letter-spacing-m, normal);
+        word-spacing: var(--bkbg-pe-bd-word-spacing-m, normal);
+    }
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 580px) {
+    .bkbg-pe-header,
+    .bkbg-pe-body {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .bkbg-pe-guests-grid {
+        grid-template-columns: 1fr;
+    }
+}

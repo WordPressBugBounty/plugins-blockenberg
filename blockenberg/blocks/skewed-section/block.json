@@ -1,0 +1,127 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/skewed-section",
+    "title": "Skewed Section",
+    "description": "A content section with diagonal/angled top and/or bottom edges created via CSS clip-path. Place any blocks inside.",
+    "category": "bkbg-layout",
+    "icon": "cover-image",
+    "textdomain": "blockenberg",
+    "keywords": [
+        "skewed",
+        "diagonal",
+        "angled",
+        "section",
+        "clip-path",
+        "slant",
+        "hero"
+    ],
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "skewTop": {
+            "type": "boolean",
+            "default": false
+        },
+        "skewBottom": {
+            "type": "boolean",
+            "default": true
+        },
+        "topAngle": {
+            "type": "number",
+            "default": 4
+        },
+        "bottomAngle": {
+            "type": "number",
+            "default": 4
+        },
+        "topDirection": {
+            "type": "string",
+            "default": "left-low"
+        },
+        "bottomDirection": {
+            "type": "string",
+            "default": "left-high"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#1e40af"
+        },
+        "useGradient": {
+            "type": "boolean",
+            "default": false
+        },
+        "gradientEnd": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "gradientAngle": {
+            "type": "number",
+            "default": 135
+        },
+        "backgroundImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "backgroundImageId": {
+            "type": "number",
+            "default": 0
+        },
+        "backgroundSize": {
+            "type": "string",
+            "default": "cover"
+        },
+        "backgroundPosition": {
+            "type": "string",
+            "default": "center center"
+        },
+        "overlayColor": {
+            "type": "string",
+            "default": "#1e40af"
+        },
+        "overlayOpacity": {
+            "type": "number",
+            "default": 0
+        },
+        "minHeight": {
+            "type": "number",
+            "default": 400
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 100
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 100
+        },
+        "paddingExtraForSkew": {
+            "type": "boolean",
+            "default": true
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 1100
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "left"
+        },
+        "clipMethod": {
+            "type": "string",
+            "default": "polygon"
+        }
+    },
+    "editorScript": "bkbg-skewed-section-editor",
+    "editorStyle": "bkbg-skewed-section-style",
+    "style": "bkbg-skewed-section-style",
+    "viewScript": "bkbg-skewed-section-frontend"
+}

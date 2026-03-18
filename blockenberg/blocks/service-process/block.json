@@ -1,0 +1,204 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/service-process",
+    "version": "1.0.0",
+    "title": "Service Process",
+    "category": "bkbg-business",
+    "icon": "chart-line",
+    "description": "Agency or service business 'How we work' section with numbered phases, deliverables, and connecting timeline.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-service-process-editor",
+    "style": "bkbg-service-process-style",
+    "viewScript": "bkbg-service-process-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "Our Process"
+        },
+        "heading": {
+            "type": "string",
+            "default": "How We Turn Your Vision Into Reality"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "A proven four-step approach that delivers exceptional results, on time and on budget."
+        },
+        "phases": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "🔍",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "name": "Discovery",
+                    "description": "We deep-dive into your business goals, audience, and competitive landscape to build a solid strategic foundation.",
+                    "deliverables": [
+                        "Stakeholder interviews",
+                        "Competitive analysis",
+                        "Project brief & scope"
+                    ]
+                },
+                {
+                    "icon": "🎨",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "name": "Strategy & Design",
+                    "description": "Our creative team crafts the UX, visual identity, and content structure — all validated with real user feedback.",
+                    "deliverables": [
+                        "Wireframes & prototypes",
+                        "Brand system",
+                        "Content architecture"
+                    ]
+                },
+                {
+                    "icon": "⚙️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "name": "Build & Test",
+                    "description": "Pixel-perfect development with full QA across devices. We iterate rapidly with weekly demos so nothing is a surprise.",
+                    "deliverables": [
+                        "Coded components",
+                        "QA reports",
+                        "Performance benchmarks"
+                    ]
+                },
+                {
+                    "icon": "🚀",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "name": "Launch & Grow",
+                    "description": "We handle the launch and stay with you — monitoring, optimising, and scaling what works with measurable KPIs.",
+                    "deliverables": [
+                        "Go-live support",
+                        "Analytics setup",
+                        "Monthly growth reports"
+                    ]
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "connectorStyle": {
+            "type": "string",
+            "default": "line"
+        },
+        "showDeliverables": {
+            "type": "boolean",
+            "default": true
+        },
+        "showNumbers": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Start Your Project"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1200
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "phaseNumBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "phaseNumColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "phaseNameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "phaseDescColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "deliverableColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "connectorColor": {
+            "type": "string",
+            "default": "#c7d2fe"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "phaseNameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "phaseDescTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

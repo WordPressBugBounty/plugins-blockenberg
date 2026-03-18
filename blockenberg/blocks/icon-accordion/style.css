@@ -1,0 +1,167 @@
+/* === Icon Accordion Block === */
+
+.bkbg-iac-app { display: none; }
+
+.bkbg-iac-section {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ---- Panel ---- */
+.bkbg-iac-panel {
+    overflow: hidden;
+    transition: box-shadow 0.25s ease;
+}
+
+/* Card style */
+.bkbg-iac-style-card .bkbg-iac-panel {
+    border: 1px solid #e5e7eb;
+}
+
+.bkbg-iac-style-card .bkbg-iac-panel.open {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Minimal style */
+.bkbg-iac-style-minimal .bkbg-iac-panel {
+    border-bottom: 1px solid #e5e7eb;
+    border-radius: 0 !important;
+    background: transparent !important;
+}
+
+/* Filled style (set in JS via inline styles) */
+
+/* ---- Header ---- */
+.bkbg-iac-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+}
+
+.bkbg-iac-header:hover { background: rgba(0, 0, 0, 0.02); }
+
+.bkbg-iac-style-filled .bkbg-iac-panel.open .bkbg-iac-header:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ---- Icon ---- */
+.bkbg-iac-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 1;
+    transition: background 0.25s, transform 0.25s;
+}
+.bkbg-iac-icon svg { width: 1em; height: 1em; fill: currentColor; }
+.bkbg-iac-icon .dashicons { font-size: inherit; width: 1em; height: 1em; line-height: 1; }
+.bkbg-iac-icon .bkbg-icon-img { width: 1em; height: 1em; object-fit: contain; }
+
+.bkbg-iac-panel.open .bkbg-iac-icon { transform: scale(1.08); }
+
+/* ---- Title row ---- */
+.bkbg-iac-title-row {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.bkbg-iac-section .bkbg-iac-title {
+    font-family: var(--bkbg-iac-tt-font-family, inherit);
+    font-size: var(--bkbg-iac-tt-font-size-d, var(--bkbg-iac-tt-sz, 15px));
+    font-weight: var(--bkbg-iac-tt-font-weight, var(--bkbg-iac-tt-w, 700));
+    font-style: var(--bkbg-iac-tt-font-style, normal);
+    text-decoration: var(--bkbg-iac-tt-text-decoration, none);
+    text-transform: var(--bkbg-iac-tt-text-transform, none);
+    line-height: var(--bkbg-iac-tt-line-height-d, var(--bkbg-iac-tt-lh, 1.3));
+    letter-spacing: var(--bkbg-iac-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-iac-tt-word-spacing-d, normal);
+}
+
+.bkbg-iac-badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ---- Expand icon ---- */
+.bkbg-iac-expand {
+    font-size: 18px;
+    transition: transform 0.3s ease, opacity 0.2s;
+    flex-shrink: 0;
+    opacity: 0.7;
+}
+
+.bkbg-iac-panel.open .bkbg-iac-expand { opacity: 1; }
+
+/* ---- Content ---- */
+.bkbg-iac-body {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.32s ease, padding 0.32s ease;
+    padding: 0;
+}
+
+.bkbg-iac-panel.open .bkbg-iac-body {
+    max-height: 1000px;
+}
+
+.bkbg-iac-section .bkbg-iac-body-inner {
+    padding: 0 18px 18px;
+    font-family: var(--bkbg-iac-ct-font-family, inherit);
+    font-size: var(--bkbg-iac-ct-font-size-d, var(--bkbg-iac-ct-sz, 14px));
+    font-weight: var(--bkbg-iac-ct-font-weight, var(--bkbg-iac-ct-w, 400));
+    font-style: var(--bkbg-iac-ct-font-style, normal);
+    text-decoration: var(--bkbg-iac-ct-text-decoration, none);
+    text-transform: var(--bkbg-iac-ct-text-transform, none);
+    line-height: var(--bkbg-iac-ct-line-height-d, var(--bkbg-iac-ct-lh, 1.75));
+    letter-spacing: var(--bkbg-iac-ct-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-iac-ct-word-spacing-d, normal);
+}
+
+.bkbg-iac-body-inner p { margin: 0; }
+
+/* Responsive typography */
+@media (max-width: 1024px) {
+    .bkbg-iac-section .bkbg-iac-title {
+        font-size: var(--bkbg-iac-tt-font-size-t, var(--bkbg-iac-tt-font-size-d, var(--bkbg-iac-tt-sz, 15px)));
+        line-height: var(--bkbg-iac-tt-line-height-t, var(--bkbg-iac-tt-line-height-d, var(--bkbg-iac-tt-lh, 1.3)));
+        letter-spacing: var(--bkbg-iac-tt-letter-spacing-t, var(--bkbg-iac-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-iac-tt-word-spacing-t, var(--bkbg-iac-tt-word-spacing-d, normal));
+    }
+    .bkbg-iac-section .bkbg-iac-body-inner {
+        font-size: var(--bkbg-iac-ct-font-size-t, var(--bkbg-iac-ct-font-size-d, var(--bkbg-iac-ct-sz, 14px)));
+        line-height: var(--bkbg-iac-ct-line-height-t, var(--bkbg-iac-ct-line-height-d, var(--bkbg-iac-ct-lh, 1.75)));
+        letter-spacing: var(--bkbg-iac-ct-letter-spacing-t, var(--bkbg-iac-ct-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-iac-ct-word-spacing-t, var(--bkbg-iac-ct-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-iac-section .bkbg-iac-title {
+        font-size: var(--bkbg-iac-tt-font-size-m, var(--bkbg-iac-tt-font-size-t, var(--bkbg-iac-tt-font-size-d, var(--bkbg-iac-tt-sz, 15px))));
+        line-height: var(--bkbg-iac-tt-line-height-m, var(--bkbg-iac-tt-line-height-t, var(--bkbg-iac-tt-line-height-d, var(--bkbg-iac-tt-lh, 1.3))));
+        letter-spacing: var(--bkbg-iac-tt-letter-spacing-m, var(--bkbg-iac-tt-letter-spacing-t, var(--bkbg-iac-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-iac-tt-word-spacing-m, var(--bkbg-iac-tt-word-spacing-t, var(--bkbg-iac-tt-word-spacing-d, normal)));
+    }
+    .bkbg-iac-section .bkbg-iac-body-inner {
+        font-size: var(--bkbg-iac-ct-font-size-m, var(--bkbg-iac-ct-font-size-t, var(--bkbg-iac-ct-font-size-d, var(--bkbg-iac-ct-sz, 14px))));
+        line-height: var(--bkbg-iac-ct-line-height-m, var(--bkbg-iac-ct-line-height-t, var(--bkbg-iac-ct-line-height-d, var(--bkbg-iac-ct-lh, 1.75))));
+        letter-spacing: var(--bkbg-iac-ct-letter-spacing-m, var(--bkbg-iac-ct-letter-spacing-t, var(--bkbg-iac-ct-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-iac-ct-word-spacing-m, var(--bkbg-iac-ct-word-spacing-t, var(--bkbg-iac-ct-word-spacing-d, normal)));
+    }
+}
+
+/* Responsive layout */
+@media (max-width: 480px) {
+    .bkbg-iac-header { padding: 12px 14px; gap: 10px; }
+    .bkbg-iac-body-inner { padding: 0 14px 14px; }
+}

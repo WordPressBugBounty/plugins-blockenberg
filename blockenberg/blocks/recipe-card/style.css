@@ -1,0 +1,81 @@
+/* Recipe Card — bkrc2- */
+.bkrc2-wrap {
+  width: 100%;
+  box-sizing: border-box;
+}
+.bkrc2-card {
+  max-width: 780px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.bkrc2-hero {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.bkrc2-body {
+  padding: 32px;
+  box-sizing: border-box;
+}
+.bkrc2-card h2.bkrc2-name {
+    font-family: var(--bkrc2-tt-font-family, inherit);
+    font-size: var(--bkrc2-tt-font-size-d, 28px);
+    font-weight: var(--bkrc2-tt-font-weight, 800);
+    font-style: var(--bkrc2-tt-font-style, normal);
+    text-decoration: var(--bkrc2-tt-text-decoration, none);
+    text-transform: var(--bkrc2-tt-text-transform, none);
+    line-height: var(--bkrc2-tt-line-height-d, 1.2);
+    letter-spacing: var(--bkrc2-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkrc2-tt-word-spacing-d, normal);
+}
+.bkrc2-desc {
+    font-family: var(--bkrc2-bt-font-family, inherit);
+    font-size: var(--bkrc2-bt-font-size-d, 15px);
+    font-weight: var(--bkrc2-bt-font-weight, 400);
+    font-style: var(--bkrc2-bt-font-style, normal);
+    text-decoration: var(--bkrc2-bt-text-decoration, none);
+    text-transform: var(--bkrc2-bt-text-transform, none);
+    line-height: var(--bkrc2-bt-line-height-d, 1.6);
+    letter-spacing: var(--bkrc2-bt-letter-spacing-d, normal);
+    word-spacing: var(--bkrc2-bt-word-spacing-d, normal);
+}
+.bkrc2-meta-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.bkrc2-meta { min-width: 80px; box-sizing: border-box; }
+.bkrc2-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+
+@media (max-width: 640px) {
+  .bkrc2-cols { grid-template-columns: 1fr; }
+  .bkrc2-body { padding: 20px; }
+  .bkrc2-meta { min-width: 70px; padding: 10px 12px; }
+}
+
+@media (max-width: 1024px) {
+    .bkrc2-card h2.bkrc2-name {
+        font-size: var(--bkrc2-tt-font-size-t, var(--bkrc2-tt-font-size-d, 28px));
+        line-height: var(--bkrc2-tt-line-height-t, var(--bkrc2-tt-line-height-d, 1.2));
+        letter-spacing: var(--bkrc2-tt-letter-spacing-t, var(--bkrc2-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkrc2-tt-word-spacing-t, var(--bkrc2-tt-word-spacing-d, normal));
+    }
+    .bkrc2-desc {
+        font-size: var(--bkrc2-bt-font-size-t, var(--bkrc2-bt-font-size-d, 15px));
+        line-height: var(--bkrc2-bt-line-height-t, var(--bkrc2-bt-line-height-d, 1.6));
+        letter-spacing: var(--bkrc2-bt-letter-spacing-t, var(--bkrc2-bt-letter-spacing-d, normal));
+        word-spacing: var(--bkrc2-bt-word-spacing-t, var(--bkrc2-bt-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkrc2-card h2.bkrc2-name {
+        font-size: var(--bkrc2-tt-font-size-m, var(--bkrc2-tt-font-size-t, var(--bkrc2-tt-font-size-d, 28px)));
+        line-height: var(--bkrc2-tt-line-height-m, var(--bkrc2-tt-line-height-t, var(--bkrc2-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bkrc2-tt-letter-spacing-m, var(--bkrc2-tt-letter-spacing-t, var(--bkrc2-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkrc2-tt-word-spacing-m, var(--bkrc2-tt-word-spacing-t, var(--bkrc2-tt-word-spacing-d, normal)));
+    }
+    .bkrc2-desc {
+        font-size: var(--bkrc2-bt-font-size-m, var(--bkrc2-bt-font-size-t, var(--bkrc2-bt-font-size-d, 15px)));
+        line-height: var(--bkrc2-bt-line-height-m, var(--bkrc2-bt-line-height-t, var(--bkrc2-bt-line-height-d, 1.6)));
+        letter-spacing: var(--bkrc2-bt-letter-spacing-m, var(--bkrc2-bt-letter-spacing-t, var(--bkrc2-bt-letter-spacing-d, normal)));
+        word-spacing: var(--bkrc2-bt-word-spacing-m, var(--bkrc2-bt-word-spacing-t, var(--bkrc2-bt-word-spacing-d, normal)));
+    }
+}

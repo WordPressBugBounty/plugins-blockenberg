@@ -1,0 +1,211 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/portfolio-grid",
+    "version": "1.0.0",
+    "title": "Portfolio Grid",
+    "category": "bkbg-business",
+    "icon": "portfolio",
+    "description": "Project showcase cards with category filter, hover overlay, tech tags and CTA links. Perfect for portfolio, case studies, and work samples.",
+    "keywords": [
+        "portfolio",
+        "projects",
+        "cases",
+        "work",
+        "filter",
+        "gallery",
+        "grid"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-portfolio-grid-editor",
+    "editorStyle": "bkbg-portfolio-grid-style",
+    "style": "bkbg-portfolio-grid-style",
+    "viewScript": "bkbg-portfolio-grid-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "pg1",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "title": "Brand Identity Design",
+                    "category": "Design",
+                    "description": "A complete visual identity system for a tech startup \u2014 logo, typography, color, and motion.",
+                    "techTags": "Figma, Illustrator",
+                    "linkUrl": "#",
+                    "linkLabel": "View project",
+                    "linkTarget": false,
+                    "featured": false
+                },
+                {
+                    "id": "pg2",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "title": "E-commerce Platform",
+                    "category": "Development",
+                    "description": "Full-stack storefront with real-time inventory and Stripe checkout integration.",
+                    "techTags": "React, Node.js, Stripe",
+                    "linkUrl": "#",
+                    "linkLabel": "View project",
+                    "linkTarget": false,
+                    "featured": false
+                },
+                {
+                    "id": "pg3",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "title": "Mobile Banking App",
+                    "category": "Design",
+                    "description": "UX/UI design for a neobank: onboarding flows, transaction history and dark mode.",
+                    "techTags": "Figma, Principle",
+                    "linkUrl": "#",
+                    "linkLabel": "View project",
+                    "linkTarget": false,
+                    "featured": true
+                },
+                {
+                    "id": "pg4",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "title": "SaaS Dashboard",
+                    "category": "Development",
+                    "description": "Analytics dashboard with real-time charts, role-based access and CSV export.",
+                    "techTags": "Vue, D3.js, Laravel",
+                    "linkUrl": "#",
+                    "linkLabel": "View project",
+                    "linkTarget": false,
+                    "featured": false
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "columns": {
+            "type": "number",
+            "default": 2
+        },
+        "columnsTablet": {
+            "type": "number",
+            "default": 2
+        },
+        "gap": {
+            "type": "number",
+            "default": 24
+        },
+        "filterEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "filterStyle": {
+            "type": "string",
+            "default": "pills"
+        },
+        "showAllLabel": {
+            "type": "string",
+            "default": "All"
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTechTags": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "hoverStyle": {
+            "type": "string",
+            "default": "overlay"
+        },
+        "imageRatio": {
+            "type": "string",
+            "default": "3/2"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "cardShadow": {
+            "type": "string",
+            "default": "md"
+        },
+        "tagSize": {
+            "type": "number",
+            "default": 11
+        },
+        "ctaSize": {
+            "type": "number",
+            "default": 14
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "tagBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "tagColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "overlayCoverBg": {
+            "type": "string",
+            "default": "rgba(17,24,39,0.82)"
+        },
+        "overlayTextColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "animate": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 40
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

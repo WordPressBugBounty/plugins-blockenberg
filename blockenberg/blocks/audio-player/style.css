@@ -1,0 +1,367 @@
+/* ===== Audio Player Block — bkbg-ap- ===== */
+
+.bkbg-ap-wrapper {
+    max-width: var(--bkbg-ap-max-width, 560px);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+/* ── Player shell (all styles) ───────────────────────────────────────────── */
+.bkbg-ap-player {
+    background: var(--bkbg-ap-bg, #ffffff);
+    border-radius: var(--bkbg-ap-radius, 14px);
+    padding: var(--bkbg-ap-pad, 20px 24px);
+    box-shadow: var(--bkbg-ap-shadow, 0 4px 20px rgba(0,0,0,0.12));
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── Top row (cover + info) ──────────────────────────────────────────────── */
+.bkbg-ap-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+/* ── Cover art ───────────────────────────────────────────────────────────── */
+.bkbg-ap-cover {
+    flex-shrink: 0;
+    width: var(--bkbg-ap-cover-size, 80px);
+    height: var(--bkbg-ap-cover-size, 80px);
+    border-radius: var(--bkbg-ap-cover-radius, 8px);
+    overflow: hidden;
+    background: #f0f4f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bkbg-ap-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.bkbg-ap-cover-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b0bec5;
+    background: linear-gradient(135deg, #e8edf3, #d1dae5);
+}
+
+/* ── Track info ──────────────────────────────────────────────────────────── */
+.bkbg-ap-info-col {
+    flex: 1;
+    min-width: 0;
+}
+
+.bkbg-ap-track-info {
+    margin-bottom: 10px;
+}
+
+.bkbg-ap-title {
+    font-family: var(--bkbg-ap-title-font-family, inherit);
+    font-size: var(--bkbg-ap-title-font-size-d, var(--bkbg-ap-title-font-size, var(--bkbg-ap-title-size, 17px)));
+    font-weight: var(--bkbg-ap-title-font-weight, var(--bkbg-ap-title-weight, 700));
+    font-style: var(--bkbg-ap-title-font-style, normal);
+    text-transform: var(--bkbg-ap-title-text-transform, none);
+    text-decoration: var(--bkbg-ap-title-text-decoration, none);
+    line-height: var(--bkbg-ap-title-line-height-d, var(--bkbg-ap-title-line-height, 1.25));
+    letter-spacing: var(--bkbg-ap-title-letter-spacing-d, var(--bkbg-ap-title-letter-spacing, normal));
+    word-spacing: var(--bkbg-ap-title-word-spacing-d, var(--bkbg-ap-title-word-spacing, normal));
+    color: var(--bkbg-ap-text-color, #111827);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 2px;
+}
+
+.bkbg-ap-artist {
+    font-family: var(--bkbg-ap-artist-font-family, inherit);
+    font-size: var(--bkbg-ap-artist-font-size-d, var(--bkbg-ap-artist-font-size, var(--bkbg-ap-artist-size, 14px)));
+    font-weight: var(--bkbg-ap-artist-font-weight, 400);
+    font-style: var(--bkbg-ap-artist-font-style, normal);
+    text-transform: var(--bkbg-ap-artist-text-transform, none);
+    text-decoration: var(--bkbg-ap-artist-text-decoration, none);
+    line-height: var(--bkbg-ap-artist-line-height-d, var(--bkbg-ap-artist-line-height, 1.3));
+    letter-spacing: var(--bkbg-ap-artist-letter-spacing-d, var(--bkbg-ap-artist-letter-spacing, normal));
+    word-spacing: var(--bkbg-ap-artist-word-spacing-d, var(--bkbg-ap-artist-word-spacing, normal));
+    color: var(--bkbg-ap-subtitle-color, #6b7280);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bkbg-ap-album {
+    font-size: 12px;
+    color: var(--bkbg-ap-subtitle-color, #6b7280);
+    opacity: 0.75;
+    letter-spacing: 0.03em;
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ── Progress bar ────────────────────────────────────────────────────────── */
+.bkbg-ap-progress-wrap {
+    width: 100%;
+}
+
+.bkbg-ap-progress-track {
+    position: relative;
+    width: 100%;
+    height: var(--bkbg-ap-progress-h, 4px);
+    background: var(--bkbg-ap-progress-bg, #e5e7eb);
+    border-radius: 999px;
+    cursor: pointer;
+    touch-action: none;
+}
+
+.bkbg-ap-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--bkbg-ap-accent, #2563eb);
+    border-radius: 999px;
+    pointer-events: none;
+    transition: width 0.1s linear;
+}
+
+.bkbg-ap-progress-thumb {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--bkbg-ap-accent, #2563eb);
+    pointer-events: none;
+    transition: transform 0.15s ease, left 0.1s linear;
+}
+
+.bkbg-ap-progress-track:hover .bkbg-ap-progress-thumb {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* seek range overlay (transparent, sits on top) */
+.bkbg-ap-seek {
+    position: absolute;
+    inset: -8px 0;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.bkbg-ap-timestamps {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--bkbg-ap-subtitle-color, #9ca3af);
+    margin-top: 5px;
+    letter-spacing: 0.02em;
+}
+
+/* ── Controls row ────────────────────────────────────────────────────────── */
+.bkbg-ap-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 4px;
+}
+
+/* ── Play button ─────────────────────────────────────────────────────────── */
+.bkbg-ap-play-btn {
+    flex-shrink: 0;
+    width: var(--bkbg-ap-btn-size, 52px);
+    height: var(--bkbg-ap-btn-size, 52px);
+    border-radius: 50%;
+    background: var(--bkbg-ap-icon-bg, var(--bkbg-ap-accent, #2563eb));
+    color: var(--bkbg-ap-icon-color, #ffffff);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.bkbg-ap-play-btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+}
+
+.bkbg-ap-play-btn:active {
+    transform: scale(0.96);
+}
+
+.bkbg-ap-play-btn svg.bkbg-ap-icon-pause { display: none; }
+.bkbg-ap-play-btn svg.bkbg-ap-icon-play  { display: block; }
+.bkbg-ap-playing .bkbg-ap-play-btn svg.bkbg-ap-icon-pause { display: block; }
+.bkbg-ap-playing .bkbg-ap-play-btn svg.bkbg-ap-icon-play  { display: none; }
+
+/* ── Volume ──────────────────────────────────────────────────────────────── */
+.bkbg-ap-volume {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+}
+
+.bkbg-ap-vol-btn {
+    background: transparent;
+    border: none;
+    color: var(--bkbg-ap-subtitle-color, #6b7280);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    transition: color 0.15s;
+}
+
+.bkbg-ap-vol-btn:hover { color: var(--bkbg-ap-accent, #2563eb); }
+
+.bkbg-ap-vol-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 72px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--bkbg-ap-progress-bg, #e5e7eb);
+    outline: none;
+    cursor: pointer;
+}
+
+.bkbg-ap-vol-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--bkbg-ap-accent, #2563eb);
+    cursor: pointer;
+}
+
+.bkbg-ap-vol-slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--bkbg-ap-accent, #2563eb);
+    border: none;
+    cursor: pointer;
+}
+
+/* ── Speed & download buttons ────────────────────────────────────────────── */
+.bkbg-ap-speed-btn,
+.bkbg-ap-download-btn {
+    background: transparent;
+    border: 1px solid currentColor;
+    color: var(--bkbg-ap-subtitle-color, #6b7280);
+    border-radius: 6px;
+    padding: 3px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.bkbg-ap-speed-btn:hover,
+.bkbg-ap-download-btn:hover {
+    color: var(--bkbg-ap-accent, #2563eb);
+    border-color: var(--bkbg-ap-accent, #2563eb);
+}
+
+/* ── Minimal style ───────────────────────────────────────────────────────── */
+.bkbg-ap-style-minimal .bkbg-ap-player {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 18px;
+}
+
+.bkbg-ap-style-minimal .bkbg-ap-play-btn {
+    width: var(--bkbg-ap-btn-size, 42px);
+    height: var(--bkbg-ap-btn-size, 42px);
+    min-width: 34px;
+    min-height: 34px;
+}
+
+.bkbg-ap-minimal-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.bkbg-ap-style-minimal .bkbg-ap-title {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bkbg-ap-style-minimal .bkbg-ap-progress-track {
+    height: 3px;
+}
+
+/* ── Compact style ───────────────────────────────────────────────────────── */
+.bkbg-ap-style-compact .bkbg-ap-top {
+    margin-bottom: 10px;
+}
+
+.bkbg-ap-style-compact .bkbg-ap-cover {
+    width: calc(var(--bkbg-ap-cover-size, 80px) * 0.75);
+    height: calc(var(--bkbg-ap-cover-size, 80px) * 0.75);
+}
+
+/* ── Responsive / Mobile ─────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-ap-title {
+        font-size: var(--bkbg-ap-title-font-size-t, var(--bkbg-ap-title-font-size-d, var(--bkbg-ap-title-font-size, var(--bkbg-ap-title-size, 17px))));
+        line-height: var(--bkbg-ap-title-line-height-t, var(--bkbg-ap-title-line-height-d, var(--bkbg-ap-title-line-height, 1.25)));
+        letter-spacing: var(--bkbg-ap-title-letter-spacing-t, var(--bkbg-ap-title-letter-spacing-d, var(--bkbg-ap-title-letter-spacing, normal)));
+        word-spacing: var(--bkbg-ap-title-word-spacing-t, var(--bkbg-ap-title-word-spacing-d, var(--bkbg-ap-title-word-spacing, normal)));
+    }
+    .bkbg-ap-artist {
+        font-size: var(--bkbg-ap-artist-font-size-t, var(--bkbg-ap-artist-font-size-d, var(--bkbg-ap-artist-font-size, var(--bkbg-ap-artist-size, 14px))));
+        line-height: var(--bkbg-ap-artist-line-height-t, var(--bkbg-ap-artist-line-height-d, var(--bkbg-ap-artist-line-height, 1.3)));
+        letter-spacing: var(--bkbg-ap-artist-letter-spacing-t, var(--bkbg-ap-artist-letter-spacing-d, var(--bkbg-ap-artist-letter-spacing, normal)));
+        word-spacing: var(--bkbg-ap-artist-word-spacing-t, var(--bkbg-ap-artist-word-spacing-d, var(--bkbg-ap-artist-word-spacing, normal)));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-ap-title {
+        font-size: var(--bkbg-ap-title-font-size-m, var(--bkbg-ap-title-font-size-t, var(--bkbg-ap-title-font-size-d, var(--bkbg-ap-title-font-size, var(--bkbg-ap-title-size, 17px)))));
+        line-height: var(--bkbg-ap-title-line-height-m, var(--bkbg-ap-title-line-height-t, var(--bkbg-ap-title-line-height-d, var(--bkbg-ap-title-line-height, 1.25))));
+        letter-spacing: var(--bkbg-ap-title-letter-spacing-m, var(--bkbg-ap-title-letter-spacing-t, var(--bkbg-ap-title-letter-spacing-d, var(--bkbg-ap-title-letter-spacing, normal))));
+        word-spacing: var(--bkbg-ap-title-word-spacing-m, var(--bkbg-ap-title-word-spacing-t, var(--bkbg-ap-title-word-spacing-d, var(--bkbg-ap-title-word-spacing, normal))));
+    }
+    .bkbg-ap-artist {
+        font-size: var(--bkbg-ap-artist-font-size-m, var(--bkbg-ap-artist-font-size-t, var(--bkbg-ap-artist-font-size-d, var(--bkbg-ap-artist-font-size, var(--bkbg-ap-artist-size, 14px)))));
+        line-height: var(--bkbg-ap-artist-line-height-m, var(--bkbg-ap-artist-line-height-t, var(--bkbg-ap-artist-line-height-d, var(--bkbg-ap-artist-line-height, 1.3))));
+        letter-spacing: var(--bkbg-ap-artist-letter-spacing-m, var(--bkbg-ap-artist-letter-spacing-t, var(--bkbg-ap-artist-letter-spacing-d, var(--bkbg-ap-artist-letter-spacing, normal))));
+        word-spacing: var(--bkbg-ap-artist-word-spacing-m, var(--bkbg-ap-artist-word-spacing-t, var(--bkbg-ap-artist-word-spacing-d, var(--bkbg-ap-artist-word-spacing, normal))));
+    }
+}
+
+@media (max-width: 480px) {
+    .bkbg-ap-vol-slider { display: none; }
+    .bkbg-ap-cover { display: none; }
+    .bkbg-ap-player { padding: 14px 16px; }
+}

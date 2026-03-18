@@ -1,0 +1,239 @@
+/* ── Savings Calculator Block ─────────────────────────────────────────── */
+.bkbg-sav-app {
+    font-family: inherit;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.bkbg-sav-loading {
+    text-align: center;
+    color: #9ca3af;
+    padding: 40px 0;
+    margin: 0;
+}
+
+.bkbg-sav-title {
+    font-family: var(--bksav-tt-font-family, inherit);
+    font-size: var(--bksav-tt-font-size-d, 26px);
+    font-weight: var(--bksav-tt-font-weight, 800);
+    font-style: var(--bksav-tt-font-style, normal);
+    text-decoration: var(--bksav-tt-text-decoration, none);
+    text-transform: var(--bksav-tt-text-transform, none);
+    line-height: var(--bksav-tt-line-height-d, 1.2);
+    letter-spacing: var(--bksav-tt-letter-spacing-d, normal);
+    word-spacing: var(--bksav-tt-word-spacing-d, normal);
+}
+.bkbg-sav-card h2.bkbg-sav-title {
+    font-family: var(--bksav-tt-font-family, inherit);
+    font-size: var(--bksav-tt-font-size-d, 26px);
+    font-weight: var(--bksav-tt-font-weight, 800);
+    font-style: var(--bksav-tt-font-style, normal);
+    text-decoration: var(--bksav-tt-text-decoration, none);
+    text-transform: var(--bksav-tt-text-transform, none);
+    line-height: var(--bksav-tt-line-height-d, 1.2);
+    letter-spacing: var(--bksav-tt-letter-spacing-d, normal);
+    word-spacing: var(--bksav-tt-word-spacing-d, normal);
+}
+
+.bkbg-sav-subtitle {
+    font-family: var(--bksav-st-font-family, inherit);
+    font-size: var(--bksav-st-font-size-d, 14px);
+    font-weight: var(--bksav-st-font-weight, normal);
+    font-style: var(--bksav-st-font-style, normal);
+    text-decoration: var(--bksav-st-text-decoration, none);
+    text-transform: var(--bksav-st-text-transform, none);
+    line-height: var(--bksav-st-line-height-d, normal);
+    letter-spacing: var(--bksav-st-letter-spacing-d, normal);
+    word-spacing: var(--bksav-st-word-spacing-d, normal);
+}
+
+.bkbg-sav-card {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+}
+
+/* ── Slider row ───────────────────────────────────────────────────────── */
+.bkbg-sav-slider-row {
+    margin-bottom: 20px;
+}
+
+.bkbg-sav-slider-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.bkbg-sav-slider-label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.bkbg-sav-slider-val {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.bkbg-sav-slider {
+    width: 100%;
+    cursor: pointer;
+    height: 4px;
+}
+
+/* ── Compounding select ───────────────────────────────────────────────── */
+.bkbg-sav-select-row {
+    margin-bottom: 28px;
+}
+
+.bkbg-sav-select-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.bkbg-sav-select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #e5e7eb;
+    font-size: 14px;
+    background: #fff;
+    outline: none;
+    font-family: inherit;
+}
+
+/* ── Result box ───────────────────────────────────────────────────────── */
+.bkbg-sav-result {
+    margin-bottom: 20px;
+}
+
+.bkbg-sav-total {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.bkbg-sav-total-label {
+    font-size: 12px;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.bkbg-sav-total-num {
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.bkbg-sav-breakdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.bkbg-sav-breakdown-item {
+    text-align: center;
+    padding: 12px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.bkbg-sav-breakdown-label {
+    font-size: 11px;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.bkbg-sav-breakdown-val {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* ── Year table ───────────────────────────────────────────────────────── */
+.bkbg-sav-table-wrap {
+    overflow-x: auto;
+}
+
+.bkbg-sav-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.bkbg-sav-table th {
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 700;
+    color: #374151;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.bkbg-sav-table th:not(:first-child),
+.bkbg-sav-table td:not(:first-child) {
+    text-align: right;
+}
+
+.bkbg-sav-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.bkbg-sav-table tr:last-child td {
+    border-bottom: none;
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .bkbg-sav-title {
+        font-size: var(--bksav-tt-font-size-t, var(--bksav-tt-font-size-d, 26px));
+        line-height: var(--bksav-tt-line-height-t, var(--bksav-tt-line-height-d, 1.2));
+        letter-spacing: var(--bksav-tt-letter-spacing-t, var(--bksav-tt-letter-spacing-d, normal));
+        word-spacing: var(--bksav-tt-word-spacing-t, var(--bksav-tt-word-spacing-d, normal));
+    }
+    .bkbg-sav-card .bkbg-sav-title {
+        font-size: var(--bksav-tt-font-size-t, var(--bksav-tt-font-size-d, 26px));
+        line-height: var(--bksav-tt-line-height-t, var(--bksav-tt-line-height-d, 1.2));
+        letter-spacing: var(--bksav-tt-letter-spacing-t, var(--bksav-tt-letter-spacing-d, normal));
+        word-spacing: var(--bksav-tt-word-spacing-t, var(--bksav-tt-word-spacing-d, normal));
+    }
+    .bkbg-sav-subtitle {
+        font-size: var(--bksav-st-font-size-t, var(--bksav-st-font-size-d, 14px));
+        line-height: var(--bksav-st-line-height-t, var(--bksav-st-line-height-d, normal));
+        letter-spacing: var(--bksav-st-letter-spacing-t, var(--bksav-st-letter-spacing-d, normal));
+        word-spacing: var(--bksav-st-word-spacing-t, var(--bksav-st-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-sav-title {
+        font-size: var(--bksav-tt-font-size-m, var(--bksav-tt-font-size-t, var(--bksav-tt-font-size-d, 26px)));
+        line-height: var(--bksav-tt-line-height-m, var(--bksav-tt-line-height-t, var(--bksav-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bksav-tt-letter-spacing-m, var(--bksav-tt-letter-spacing-t, var(--bksav-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bksav-tt-word-spacing-m, var(--bksav-tt-word-spacing-t, var(--bksav-tt-word-spacing-d, normal)));
+    }
+    .bkbg-sav-card .bkbg-sav-title {
+        font-size: var(--bksav-tt-font-size-m, var(--bksav-tt-font-size-t, var(--bksav-tt-font-size-d, 26px)));
+        line-height: var(--bksav-tt-line-height-m, var(--bksav-tt-line-height-t, var(--bksav-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bksav-tt-letter-spacing-m, var(--bksav-tt-letter-spacing-t, var(--bksav-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bksav-tt-word-spacing-m, var(--bksav-tt-word-spacing-t, var(--bksav-tt-word-spacing-d, normal)));
+    }
+    .bkbg-sav-subtitle {
+        font-size: var(--bksav-st-font-size-m, var(--bksav-st-font-size-t, var(--bksav-st-font-size-d, 14px)));
+        line-height: var(--bksav-st-line-height-m, var(--bksav-st-line-height-t, var(--bksav-st-line-height-d, normal)));
+        letter-spacing: var(--bksav-st-letter-spacing-m, var(--bksav-st-letter-spacing-t, var(--bksav-st-letter-spacing-d, normal)));
+        word-spacing: var(--bksav-st-word-spacing-m, var(--bksav-st-word-spacing-t, var(--bksav-st-word-spacing-d, normal)));
+    }
+}
+
+/* ── Mobile ───────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+    .bkbg-sav-card {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .bkbg-sav-total-num {
+        font-size: 32px !important;
+    }
+}

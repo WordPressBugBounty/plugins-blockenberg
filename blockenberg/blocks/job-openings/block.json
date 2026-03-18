@@ -1,0 +1,243 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/job-openings",
+    "title": "Job Openings",
+    "description": "Careers section with filterable job listings, department tags, location info, and apply links.",
+    "category": "bkbg-business",
+    "icon": "businessman",
+    "keywords": [
+        "jobs",
+        "careers",
+        "hiring",
+        "openings",
+        "positions",
+        "work"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-job-openings-editor",
+    "style": "bkbg-job-openings-style",
+    "viewScript": "bkbg-job-openings-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "We're Hiring"
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "heading": {
+            "type": "string",
+            "default": "Join Our Team"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "We're building something special. Come help us do it."
+        },
+        "showSubtext": {
+            "type": "boolean",
+            "default": true
+        },
+        "jobs": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Senior Product Designer",
+                    "department": "Design",
+                    "location": "Remote",
+                    "type": "Full-time",
+                    "url": "#",
+                    "description": "Lead the design of our core product experience from concept through delivery."
+                },
+                {
+                    "title": "Full-Stack Engineer",
+                    "department": "Engineering",
+                    "location": "New York, NY",
+                    "type": "Full-time",
+                    "url": "#",
+                    "description": "Build and scale the systems that power our platform for thousands of users."
+                },
+                {
+                    "title": "Head of Growth Marketing",
+                    "department": "Marketing",
+                    "location": "Remote",
+                    "type": "Full-time",
+                    "url": "#",
+                    "description": "Own the strategy and execution of all demand generation programs."
+                },
+                {
+                    "title": "Customer Success Manager",
+                    "department": "Operations",
+                    "location": "Austin, TX",
+                    "type": "Full-time",
+                    "url": "#",
+                    "description": "Partner with customers to ensure they achieve their goals using our platform."
+                }
+            ]
+        },
+        "applyLabel": {
+            "type": "string",
+            "default": "Apply Now →"
+        },
+        "openInNewTab": {
+            "type": "boolean",
+            "default": true
+        },
+        "showFilter": {
+            "type": "boolean",
+            "default": true
+        },
+        "filterBy": {
+            "type": "string",
+            "default": "department"
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "list"
+        },
+        "showNone": {
+            "type": "boolean",
+            "default": true
+        },
+        "noneText": {
+            "type": "string",
+            "default": "No openings in this category right now. Check back soon!"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "eyebrowBg": {
+            "type": "string",
+            "default": "#f3f0ff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "jobCardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "jobCardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "jobTitleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "jobDescColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "deptBg": {
+            "type": "string",
+            "default": "#f3f0ff"
+        },
+        "deptColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "typeBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "typeColor": {
+            "type": "string",
+            "default": "#15803d"
+        },
+        "locationColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "filterBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "filterColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "filterActiveBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "filterActiveColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "applyBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "applyColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 38
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "eyebrowTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "jobTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "jobDescTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1000
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "eyebrowSize": {
+            "type": "number",
+            "default": 12
+        }
+    }
+}

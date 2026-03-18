@@ -1,0 +1,227 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/product-spec",
+    "title": "Product Spec Sheet",
+    "category": "bkbg-marketing",
+    "icon": "editor-table",
+    "description": "Structured product specification sheet with grouped categories, key-value rows, and rich styling options.",
+    "keywords": [
+        "product",
+        "specs",
+        "specifications",
+        "technical",
+        "features",
+        "details",
+        "datasheet"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-product-spec-editor",
+    "editorStyle": "bkbg-product-spec-style",
+    "style": "bkbg-product-spec-style",
+    "viewScript": "bkbg-product-spec-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "productName": {
+            "type": "string",
+            "default": "Product Name"
+        },
+        "productTagline": {
+            "type": "string",
+            "default": "The complete technical specifications"
+        },
+        "showHeader": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGroupTitles": {
+            "type": "boolean",
+            "default": true
+        },
+        "groups": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "General",
+                    "specs": [
+                        {
+                            "key": "Model",
+                            "value": "Pro X 2025",
+                            "highlight": false
+                        },
+                        {
+                            "key": "Category",
+                            "value": "Flagship",
+                            "highlight": false
+                        },
+                        {
+                            "key": "Release Date",
+                            "value": "March 2025",
+                            "highlight": false
+                        },
+                        {
+                            "key": "Warranty",
+                            "value": "2 Years",
+                            "highlight": false
+                        }
+                    ]
+                },
+                {
+                    "title": "Physical",
+                    "specs": [
+                        {
+                            "key": "Dimensions",
+                            "value": "150 \u00d7 75 \u00d7 8 mm",
+                            "highlight": false
+                        },
+                        {
+                            "key": "Weight",
+                            "value": "185 g",
+                            "highlight": false
+                        },
+                        {
+                            "key": "Material",
+                            "value": "Aerospace Aluminum",
+                            "highlight": false
+                        },
+                        {
+                            "key": "Color Options",
+                            "value": "Midnight, Silver, Blue",
+                            "highlight": false
+                        }
+                    ]
+                },
+                {
+                    "title": "Performance",
+                    "specs": [
+                        {
+                            "key": "Processor",
+                            "value": "Octa-core 3.2 GHz",
+                            "highlight": true
+                        },
+                        {
+                            "key": "RAM",
+                            "value": "12 GB LPDDR5",
+                            "highlight": false
+                        },
+                        {
+                            "key": "Storage",
+                            "value": "256 GB / 512 GB",
+                            "highlight": false
+                        },
+                        {
+                            "key": "Battery",
+                            "value": "5000 mAh \u2014 2 Days",
+                            "highlight": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Connectivity",
+                    "specs": [
+                        {
+                            "key": "Wi-Fi",
+                            "value": "Wi-Fi 6E (802.11ax)",
+                            "highlight": false
+                        },
+                        {
+                            "key": "Bluetooth",
+                            "value": "5.3",
+                            "highlight": false
+                        },
+                        {
+                            "key": "Ports",
+                            "value": "USB-C 3.2 Gen 2, NFC",
+                            "highlight": false
+                        }
+                    ]
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "table"
+        },
+        "style": {
+            "type": "string",
+            "default": "striped"
+        },
+        "showHighlight": {
+            "type": "boolean",
+            "default": true
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "headerTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "groupTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "rowTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "groupTitleBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "groupTitleColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "keyColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "valueColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "stripeBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "highlightBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "highlightColor": {
+            "type": "string",
+            "default": "#1e40af"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        }
+
+    }
+}

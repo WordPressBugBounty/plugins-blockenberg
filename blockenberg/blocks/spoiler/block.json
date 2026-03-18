@@ -1,0 +1,197 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/spoiler",
+    "title": "Spoiler / Reveal",
+    "category": "bkbg-content",
+    "icon": "hidden",
+    "description": "Hide content behind a click-to-reveal button. Perfect for spoilers, quiz answers, bonus tips, or any content that should stay hidden until the reader chooses to see it.",
+    "keywords": [
+        "spoiler",
+        "reveal",
+        "hidden",
+        "collapse",
+        "answer",
+        "click",
+        "toggle"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-spoiler-editor",
+    "style": "bkbg-spoiler-style",
+    "viewScript": "bkbg-spoiler-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "label": {
+            "type": "string",
+            "default": "⚠ Spoiler Warning"
+        },
+        "subLabel": {
+            "type": "string",
+            "default": "Click to reveal"
+        },
+        "showSubLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "content": {
+            "type": "string",
+            "default": "This is the hidden spoiler content. Edit this text to add your secret reveal content."
+        },
+        "spoilerType": {
+            "type": "string",
+            "default": "warning"
+        },
+        "revealBtnText": {
+            "type": "string",
+            "default": "Reveal Spoiler"
+        },
+        "hideBtnText": {
+            "type": "string",
+            "default": "Hide Spoiler"
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconOpen": {
+            "type": "string",
+            "default": "▲"
+        },
+        "iconOpenType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "iconOpenDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "iconOpenImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "iconClosed": {
+            "type": "string",
+            "default": "▼"
+        },
+        "iconClosedType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "iconClosedDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "iconClosedImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "blurOnReveal": {
+            "type": "boolean",
+            "default": false
+        },
+        "startOpen": {
+            "type": "boolean",
+            "default": false
+        },
+        "animDuration": {
+            "type": "number",
+            "default": 300
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "labelBg": {
+            "type": "string",
+            "default": "#fffbeb"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#92400e"
+        },
+        "contentBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "contentColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btnHoverBg": {
+            "type": "string",
+            "default": "#d97706"
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 16
+        },
+        "labelFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "labelLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "contentSize": {
+            "type": "number",
+            "default": 16
+        },
+        "contentFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "contentLineHeight": {
+            "type": "number",
+            "default": 1.7
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "paddingV": {
+            "type": "number",
+            "default": 20
+        },
+        "paddingH": {
+            "type": "number",
+            "default": 24
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 720
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "contentTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,209 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/mortgage-calculator",
+	"title": "Mortgage Calculator",
+	"category": "bkbg-calculators",
+	"icon": "building",
+	"description": "Calculate monthly mortgage payments with amortization table, principal vs interest breakdown, LTV ratio, and optional PMI estimate.",
+	"keywords": [
+		"mortgage",
+		"loan",
+		"home",
+		"real estate",
+		"payment",
+		"amortization",
+		"calculator"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-mortgage-calculator-editor",
+	"style": "bkbg-mortgage-calculator-style",
+	"viewScript": "bkbg-mortgage-calculator-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Mortgage Calculator"
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Estimate your monthly payment and total cost."
+		},
+		"showTitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"showSubtitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"currency": {
+			"type": "string",
+			"default": "$"
+		},
+		"currencyPos": {
+			"type": "string",
+			"default": "before"
+		},
+		"defaultPrice": {
+			"type": "number",
+			"default": 350000
+		},
+		"defaultDown": {
+			"type": "number",
+			"default": 20
+		},
+		"downType": {
+			"type": "string",
+			"default": "percent"
+		},
+		"defaultRate": {
+			"type": "number",
+			"default": 6.5
+		},
+		"defaultTerm": {
+			"type": "number",
+			"default": 30
+		},
+		"showPMI": {
+			"type": "boolean",
+			"default": true
+		},
+		"pmiRate": {
+			"type": "number",
+			"default": 0.5
+		},
+		"showYearTable": {
+			"type": "boolean",
+			"default": true
+		},
+		"tableRows": {
+			"type": "number",
+			"default": 10
+		},
+		"showBreakdown": {
+			"type": "boolean",
+			"default": true
+		},
+		"showLTV": {
+			"type": "boolean",
+			"default": true
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"cardBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"resultBg": {
+			"type": "string",
+			"default": "#f5f3ff"
+		},
+		"resultBorder": {
+			"type": "string",
+			"default": "#ede9fe"
+		},
+		"totalColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"principalColor": {
+			"type": "string",
+			"default": "#3b82f6"
+		},
+		"interestColor": {
+			"type": "string",
+			"default": "#ef4444"
+		},
+		"pmiColor": {
+			"type": "string",
+			"default": "#f59e0b"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#1e1b4b"
+		},
+		"subtitleColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"labelColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"tableBg": {
+			"type": "string",
+			"default": "#fafafa"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": ""
+		},
+		"titleSize": {
+			"type": "number",
+			"default": 26
+		},
+		"resultSize": {
+			"type": "number",
+			"default": 52
+		},
+		"cardRadius": {
+			"type": "number",
+			"default": 16
+		},
+		"inputRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"maxWidth": {
+			"type": "number",
+			"default": 680
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 60
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 60
+		},
+		"titleFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"titleLineHeight": {
+			"type": "number",
+			"default": 1.2
+		},
+		"subtitleFontSize": {
+			"type": "number",
+			"default": 14
+		},
+		"resultLineHeight": {
+			"type": "number",
+			"default": 1.1
+		},
+		"titleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"subtitleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"resultTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

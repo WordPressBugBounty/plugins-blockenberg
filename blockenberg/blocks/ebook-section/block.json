@@ -1,0 +1,234 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/ebook-section",
+    "title": "Ebook Section",
+    "description": "Digital product and ebook showcase with 3D book cover, feature list, social proof, and CTA.",
+    "category": "bkbg-marketing",
+    "icon": "book",
+    "keywords": [
+        "ebook",
+        "book",
+        "digital product",
+        "download",
+        "lead magnet",
+        "course",
+        "template",
+        "toolkit"
+    ],
+    "editorScript": "bkbg-ebook-section-editor",
+    "style": "bkbg-ebook-section-style",
+    "viewScript": "bkbg-ebook-section-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "coverUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "coverId": {
+            "type": "number",
+            "default": 0
+        },
+        "coverAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "title": {
+            "type": "string",
+            "default": "The Complete SEO Handbook"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Everything you need to rank #1 in Google — step by step."
+        },
+        "authorName": {
+            "type": "string",
+            "default": ""
+        },
+        "format": {
+            "type": "string",
+            "default": "pdf"
+        },
+        "formatLabel": {
+            "type": "string",
+            "default": ""
+        },
+        "pageCount": {
+            "type": "string",
+            "default": "120 pages"
+        },
+        "whatInside": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "✅",
+                    "item": "7 proven keyword research frameworks",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "icon": "✅",
+                    "item": "On-page SEO checklists for every post",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "icon": "✅",
+                    "item": "Technical SEO audit template",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "icon": "✅",
+                    "item": "Link building outreach email templates",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                }
+            ]
+        },
+        "showTestimonial": {
+            "type": "boolean",
+            "default": true
+        },
+        "testimonialQuote": {
+            "type": "string",
+            "default": "This handbook cut our time-to-rank in half. Absolutely essential."
+        },
+        "testimonialName": {
+            "type": "string",
+            "default": "Sarah K., Marketing Director"
+        },
+        "testimonialTitle": {
+            "type": "string",
+            "default": ""
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Download Free →"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "price": {
+            "type": "string",
+            "default": "Free"
+        },
+        "originalPrice": {
+            "type": "string",
+            "default": ""
+        },
+        "openInNewTab": {
+            "type": "boolean",
+            "default": false
+        },
+        "layout": {
+            "type": "string",
+            "default": "split"
+        },
+        "show3D": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f0f4ff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "authorColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "formatBadgeBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "formatBadgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "itemColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "checkColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "testimonialBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "testimonialColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "quoteColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "priceColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "origPriceColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "coverShadow": {
+            "type": "string",
+            "default": "#6366f160"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "titleFontSize": { "type": "number", "default": 28 },
+        "titleFontWeight": { "type": "string", "default": "800" },
+        "titleLineHeight": { "type": "number", "default": 1.2 },
+        "subtitleFontSize": { "type": "number", "default": 15 },
+        "subtitleFontWeight": { "type": "string", "default": "400" },
+        "subtitleLineHeight": { "type": "number", "default": 1.5 },
+        "priceFontSize": { "type": "number", "default": 22 },
+        "priceFontWeight": { "type": "string", "default": "800" },
+        "ctaFontSize": { "type": "number", "default": 15 },
+        "ctaFontWeight": { "type": "string", "default": "700" },
+        "typoTitle": { "type": "object", "default": {} },
+        "typoSubtitle": { "type": "object", "default": {} },
+        "typoPrice": { "type": "object", "default": {} },
+        "typoCta": { "type": "object", "default": {} }
+    }
+}

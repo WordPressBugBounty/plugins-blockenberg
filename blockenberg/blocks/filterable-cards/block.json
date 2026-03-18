@@ -1,0 +1,192 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/filterable-cards",
+    "title": "Filterable Cards",
+    "description": "A grid of content cards filterable by category, with optional images, labels, descriptions and links.",
+    "category": "bkbg-content",
+    "icon": "grid-view",
+    "keywords": [
+        "filter",
+        "cards",
+        "grid",
+        "category",
+        "portfolio",
+        "team",
+        "faq"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-filterable-cards-editor",
+    "style": "bkbg-filterable-cards-style",
+    "viewScript": "bkbg-filterable-cards-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "cards": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Card One",
+                    "description": "A short description for this card.",
+                    "category": "Design",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "link": "",
+                    "linkLabel": "Learn More",
+                    "label": "New",
+                    "icon": "",
+                    "featured": false
+                },
+                {
+                    "title": "Card Two",
+                    "description": "Another card in the Development category.",
+                    "category": "Development",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "link": "",
+                    "linkLabel": "Learn More",
+                    "label": "",
+                    "icon": "",
+                    "featured": false
+                },
+                {
+                    "title": "Card Three",
+                    "description": "A featured card in the Design category.",
+                    "category": "Design",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "link": "",
+                    "linkLabel": "Learn More",
+                    "label": "Featured",
+                    "icon": "",
+                    "featured": true
+                }
+            ]
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "filterStyle": {
+            "type": "string",
+            "default": "buttons"
+        },
+        "allLabel": {
+            "type": "string",
+            "default": "All"
+        },
+        "showImages": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescriptions": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLinks": {
+            "type": "boolean",
+            "default": true
+        },
+        "animateFilter": {
+            "type": "boolean",
+            "default": true
+        },
+        "imageRatio": {
+            "type": "string",
+            "default": "3:2"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "gap": {
+            "type": "number",
+            "default": 24
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "filterBtnBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "filterBtnColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "filterBtnActiveBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "filterBtnActiveColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "titleFontSize": { "type": "number", "default": 16 },
+        "titleFontWeight": { "type": "string", "default": "700" },
+        "titleLineHeight": { "type": "number", "default": 1.3 },
+        "descFontSize": { "type": "number", "default": 14 },
+        "descFontWeight": { "type": "string", "default": "400" },
+        "descLineHeight": { "type": "number", "default": 1.5 },
+        "typoTitle": { "type": "object", "default": {} },
+        "typoDesc": { "type": "object", "default": {} },
+        "typoFilter": { "type": "object", "default": {} }
+    }
+}

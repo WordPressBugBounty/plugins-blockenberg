@@ -1,0 +1,272 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/integration-wall",
+    "version": "1.0.0",
+    "title": "Integration Wall",
+    "category": "bkbg-business",
+    "icon": "share",
+    "description": "Showcase software integrations and connected apps with category filter, logos, and a 'Browse All' CTA.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-integration-wall-editor",
+    "style": "bkbg-integration-wall-style",
+    "viewScript": "bkbg-integration-wall-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "Ecosystem"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Works With Your Favourite Tools"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Connect Blockenberg to 200+ apps and automate your workflow without writing a single line of code."
+        },
+        "integrations": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Slack",
+                    "category": "Communication",
+                    "logoUrl": "",
+                    "url": "#",
+                    "description": "Send real-time notifications"
+                },
+                {
+                    "name": "Zapier",
+                    "category": "Automation",
+                    "logoUrl": "",
+                    "url": "#",
+                    "description": "Connect 5,000+ apps"
+                },
+                {
+                    "name": "HubSpot",
+                    "category": "CRM",
+                    "logoUrl": "",
+                    "url": "#",
+                    "description": "Sync contacts & deals"
+                },
+                {
+                    "name": "Stripe",
+                    "category": "Payments",
+                    "logoUrl": "",
+                    "url": "#",
+                    "description": "Accept payments seamlessly"
+                },
+                {
+                    "name": "Notion",
+                    "category": "Productivity",
+                    "logoUrl": "",
+                    "url": "#",
+                    "description": "Sync docs & databases"
+                },
+                {
+                    "name": "GitHub",
+                    "category": "Development",
+                    "logoUrl": "",
+                    "url": "#",
+                    "description": "Link commits to work items"
+                },
+                {
+                    "name": "Google Analytics",
+                    "category": "Analytics",
+                    "logoUrl": "",
+                    "url": "#",
+                    "description": "Track performance"
+                },
+                {
+                    "name": "Mailchimp",
+                    "category": "Email",
+                    "logoUrl": "",
+                    "url": "#",
+                    "description": "Automate email campaigns"
+                },
+                {
+                    "name": "Salesforce",
+                    "category": "CRM",
+                    "logoUrl": "",
+                    "url": "#",
+                    "description": "Enterprise CRM sync"
+                },
+                {
+                    "name": "Figma",
+                    "category": "Design",
+                    "logoUrl": "",
+                    "url": "#",
+                    "description": "Embed design specs"
+                },
+                {
+                    "name": "Jira",
+                    "category": "Development",
+                    "logoUrl": "",
+                    "url": "#",
+                    "description": "Link issues to tasks"
+                },
+                {
+                    "name": "Intercom",
+                    "category": "Communication",
+                    "logoUrl": "",
+                    "url": "#",
+                    "description": "Trigger support messages"
+                }
+            ]
+        },
+        "showFilter": {
+            "type": "boolean",
+            "default": true
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "card"
+        },
+        "columns": {
+            "type": "number",
+            "default": 4
+        },
+        "showDesc": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Browse All Integrations →"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1200
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "logoBg": {
+            "type": "string",
+            "default": "#e0e7ff"
+        },
+        "logoColor": {
+            "type": "string",
+            "default": "#4338ca"
+        },
+        "filterBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "filterColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "filterActiveBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "filterActiveColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 24
+        },
+        "titleFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "subtitleFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "subtitleFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "subtitleLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "nameFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "nameFontWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "nameLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

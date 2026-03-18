@@ -1,0 +1,306 @@
+{
+  "apiVersion": 3,
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "blockenberg/team-members",
+  "title": "Team Members",
+  "category": "bkbg-business",
+  "icon": "groups",
+  "description": "Show your team members with photos, roles, bios, and social links.",
+  "keywords": [
+    "team",
+    "members",
+    "staff",
+    "people",
+    "profile",
+    "about"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-team-members-editor",
+  "editorStyle": "bkbg-team-members-style",
+  "style": "bkbg-team-members-style",
+  "viewScript": "bkbg-team-members-frontend",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "members": {
+      "type": "array",
+      "default": [
+        {
+          "name": "Alex Johnson",
+          "role": "Founder & CEO",
+          "bio": "Leads the vision and strategy. Loves product, design, and customer success.",
+          "image": {
+            "id": 0,
+            "url": "",
+            "alt": ""
+          },
+          "socials": [
+            {
+              "type": "linkedin",
+              "url": ""
+            },
+            {
+              "type": "twitter",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "name": "Maria Garcia",
+          "role": "Creative Director",
+          "bio": "Turns ideas into delightful visuals and consistent brand experiences.",
+          "image": {
+            "id": 0,
+            "url": "",
+            "alt": ""
+          },
+          "socials": [
+            {
+              "type": "instagram",
+              "url": ""
+            },
+            {
+              "type": "website",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "name": "Sam Lee",
+          "role": "Lead Developer",
+          "bio": "Builds fast, accessible interfaces and keeps everything running smoothly.",
+          "image": {
+            "id": 0,
+            "url": "",
+            "alt": ""
+          },
+          "socials": [
+            {
+              "type": "github",
+              "url": ""
+            },
+            {
+              "type": "email",
+              "url": ""
+            }
+          ]
+        }
+      ]
+    },
+    "layoutStyle": {
+      "type": "string",
+      "default": "cards"
+    },
+    "columns": {
+      "type": "number",
+      "default": 3
+    },
+    "gap": {
+      "type": "number",
+      "default": 24
+    },
+    "carouselNav": {
+      "type": "boolean",
+      "default": true
+    },
+    "carouselPeek": {
+      "type": "boolean",
+      "default": false
+    },
+    "carouselNavStyle": {
+      "type": "string",
+      "default": "top"
+    },
+    "carouselIndicators": {
+      "type": "string",
+      "default": "none"
+    },
+    "carouselIndicatorsPosition": {
+      "type": "string",
+      "default": "below"
+    },
+    "carouselDotsStyle": {
+      "type": "string",
+      "default": "default"
+    },
+    "carouselProgressStyle": {
+      "type": "string",
+      "default": "default"
+    },
+    "carouselIndicatorSize": {
+      "type": "number",
+      "default": 8
+    },
+    "carouselIndicatorColor": {
+      "type": "string",
+      "default": "rgba(0,0,0,0.22)"
+    },
+    "carouselIndicatorActiveColor": {
+      "type": "string",
+      "default": "rgba(0,0,0,0.65)"
+    },
+    "carouselProgressHeight": {
+      "type": "number",
+      "default": 6
+    },
+    "carouselProgressBg": {
+      "type": "string",
+      "default": "rgba(0,0,0,0.12)"
+    },
+    "carouselProgressFg": {
+      "type": "string",
+      "default": "rgba(0,0,0,0.55)"
+    },
+    "carouselFractionColor": {
+      "type": "string",
+      "default": "rgba(0,0,0,0.65)"
+    },
+    "carouselFractionSize": {
+      "type": "number",
+      "default": 13
+    },
+    "cardBg": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "cardBorderColor": {
+      "type": "string",
+      "default": "#e5e7eb"
+    },
+    "cardBorderWidth": {
+      "type": "number",
+      "default": 1
+    },
+    "cardRadius": {
+      "type": "number",
+      "default": 16
+    },
+    "cardPadding": {
+      "type": "number",
+      "default": 24
+    },
+    "cardShadow": {
+      "type": "boolean",
+      "default": true
+    },
+    "textAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "imageSize": {
+      "type": "number",
+      "default": 96
+    },
+    "imageShape": {
+      "type": "string",
+      "default": "circle"
+    },
+    "showRole": {
+      "type": "boolean",
+      "default": true
+    },
+    "showBio": {
+      "type": "boolean",
+      "default": true
+    },
+    "showSocials": {
+      "type": "boolean",
+      "default": true
+    },
+    "nameColor": {
+      "type": "string",
+      "default": "#111827"
+    },
+    "roleColor": {
+      "type": "string",
+      "default": "#3b82f6"
+    },
+    "bioColor": {
+      "type": "string",
+      "default": "#6b7280"
+    },
+    "socialColor": {
+      "type": "string",
+      "default": "#6b7280"
+    },
+    "socialHoverColor": {
+      "type": "string",
+      "default": "#111827"
+    },
+    "nameTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "roleTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "bioTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "nameSize": {
+      "type": "number",
+      "default": 18
+    },
+    "roleSize": {
+      "type": "number",
+      "default": 14
+    },
+    "bioSize": {
+      "type": "number",
+      "default": 14
+    },
+    "nameWeight": {
+      "type": "number",
+      "default": 700
+    },
+    "roleWeight": {
+      "type": "number",
+      "default": 600
+    },
+    "socialSize": {
+      "type": "number",
+      "default": 18
+    },
+    "hoverLift": {
+      "type": "boolean",
+      "default": true
+    },
+    "hoverLiftAmount": {
+      "type": "number",
+      "default": 6
+    },
+    "infiniteScroll": {
+      "type": "boolean",
+      "default": true
+    },
+    "autoScroll": {
+      "type": "boolean",
+      "default": false
+    },
+    "autoScrollSpeed": {
+      "type": "number",
+      "default": 40
+    },
+    "autoScrollPauseOnHover": {
+      "type": "boolean",
+      "default": true
+    },
+    "nameLineHeight": {
+      "type": "number",
+      "default": 1.2
+    },
+    "bioLineHeight": {
+      "type": "number",
+      "default": 1.6
+    }
+  }
+}

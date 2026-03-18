@@ -1,0 +1,183 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/notification-toast",
+    "title": "Notification Toast",
+    "category": "bkbg-effects",
+    "description": "Animated social-proof toast notifications that cycle in the corner of the screen — 'Sarah just signed up', 'Tom upgraded to Pro', etc.",
+    "keywords": [
+        "toast",
+        "notification",
+        "social proof",
+        "popup",
+        "fomo",
+        "alert"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-notification-toast-editor",
+    "editorStyle": "bkbg-notification-toast-style",
+    "style": "bkbg-notification-toast-style",
+    "viewScript": "bkbg-notification-toast-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true
+    },
+    "attributes": {
+        "notifications": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "🎉",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "name": "Sarah M.",
+                    "text": "just signed up for the Pro plan",
+                    "timeAgo": "2 min ago",
+                    "avatarBg": "#6366f1"
+                },
+                {
+                    "icon": "⭐",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "name": "Tom K.",
+                    "text": "left a 5-star review",
+                    "timeAgo": "5 min ago",
+                    "avatarBg": "#10b981"
+                },
+                {
+                    "icon": "🛒",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "name": "Priya L.",
+                    "text": "just purchased the Starter bundle",
+                    "timeAgo": "8 min ago",
+                    "avatarBg": "#f59e0b"
+                },
+                {
+                    "icon": "🚀",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "name": "David R.",
+                    "text": "upgraded their account to Business",
+                    "timeAgo": "11 min ago",
+                    "avatarBg": "#ef4444"
+                },
+                {
+                    "icon": "💬",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "name": "Mia W.",
+                    "text": "shared this page with their team",
+                    "timeAgo": "14 min ago",
+                    "avatarBg": "#8b5cf6"
+                }
+            ]
+        },
+        "position": {
+            "type": "string",
+            "default": "bottom-left"
+        },
+        "interval": {
+            "type": "number",
+            "default": 4
+        },
+        "displayDuration": {
+            "type": "number",
+            "default": 3
+        },
+        "animateType": {
+            "type": "string",
+            "default": "slide"
+        },
+        "showOnce": {
+            "type": "boolean",
+            "default": false
+        },
+        "loop": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAvatar": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTimeAgo": {
+            "type": "boolean",
+            "default": true
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "toastStyle": {
+            "type": "string",
+            "default": "shadow"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 320
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "avatarSize": {
+            "type": "number",
+            "default": 40
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 20
+        },
+        "nameSize": {
+            "type": "number",
+            "default": 13
+        },
+        "textSize": {
+            "type": "number",
+            "default": 12
+        },
+        "timeSize": {
+            "type": "number",
+            "default": 11
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "toastBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "toastBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "toastShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "timeColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        }
+    }
+}

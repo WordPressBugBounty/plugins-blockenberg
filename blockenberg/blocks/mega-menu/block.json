@@ -1,0 +1,253 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/mega-menu",
+    "title": "Mega Menu",
+    "category": "bkbg-layout",
+    "description": "Full-width mega menu navigation with column groups, icons, images, CTAs and rich hover panels.",
+    "keywords": [
+        "menu",
+        "navigation",
+        "mega",
+        "nav",
+        "dropdown",
+        "header",
+        "links"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-mega-menu-editor",
+    "style": "bkbg-mega-menu-style",
+    "viewScript": "bkbg-mega-menu-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Products",
+                    "url": "#",
+                    "hasMega": true,
+                    "columns": [
+                        {
+                            "heading": "By Category",
+                            "links": [
+                                {
+                                    "icon": "🛒",
+                                    "iconType": "custom-char",
+                                    "iconDashicon": "",
+                                    "iconImageUrl": "",
+                                    "label": "Online Store",
+                                    "desc": "Everything for your shop",
+                                    "url": "#"
+                                },
+                                {
+                                    "icon": "📦",
+                                    "iconType": "custom-char",
+                                    "iconDashicon": "",
+                                    "iconImageUrl": "",
+                                    "label": "Inventory",
+                                    "desc": "Track your stock",
+                                    "url": "#"
+                                },
+                                {
+                                    "icon": "💳",
+                                    "iconType": "custom-char",
+                                    "iconDashicon": "",
+                                    "iconImageUrl": "",
+                                    "label": "Payments",
+                                    "desc": "Secure checkout",
+                                    "url": "#"
+                                }
+                            ]
+                        },
+                        {
+                            "heading": "Featured",
+                            "links": [
+                                {
+                                    "icon": "⚡",
+                                    "iconType": "custom-char",
+                                    "iconDashicon": "",
+                                    "iconImageUrl": "",
+                                    "label": "New Arrivals",
+                                    "desc": "Just launched",
+                                    "url": "#"
+                                },
+                                {
+                                    "icon": "🏆",
+                                    "iconType": "custom-char",
+                                    "iconDashicon": "",
+                                    "iconImageUrl": "",
+                                    "label": "Best Sellers",
+                                    "desc": "Top rated items",
+                                    "url": "#"
+                                }
+                            ]
+                        }
+                    ],
+                    "featuredImageUrl": "",
+                    "featuredTitle": "Try Pro Free",
+                    "featuredDesc": "Start your 14-day free trial today.",
+                    "featuredCta": "Get Started",
+                    "featuredCtaUrl": "#",
+                    "showFeatured": true
+                },
+                {
+                    "label": "Solutions",
+                    "url": "#",
+                    "hasMega": false,
+                    "columns": [],
+                    "showFeatured": false,
+                    "featuredTitle": "",
+                    "featuredDesc": "",
+                    "featuredCta": "",
+                    "featuredCtaUrl": "",
+                    "featuredImageUrl": ""
+                },
+                {
+                    "label": "Pricing",
+                    "url": "#",
+                    "hasMega": false,
+                    "columns": [],
+                    "showFeatured": false,
+                    "featuredTitle": "",
+                    "featuredDesc": "",
+                    "featuredCta": "",
+                    "featuredCtaUrl": "",
+                    "featuredImageUrl": ""
+                },
+                {
+                    "label": "Blog",
+                    "url": "#",
+                    "hasMega": false,
+                    "columns": [],
+                    "showFeatured": false,
+                    "featuredTitle": "",
+                    "featuredDesc": "",
+                    "featuredCta": "",
+                    "featuredCtaUrl": "",
+                    "featuredImageUrl": ""
+                }
+            ]
+        },
+        "logoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "logoAlt": {
+            "type": "string",
+            "default": "Logo"
+        },
+        "logoWidth": {
+            "type": "number",
+            "default": 140
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Get Started"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaStyle": {
+            "type": "string",
+            "default": "filled"
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescriptions": {
+            "type": "boolean",
+            "default": true
+        },
+        "panelWidth": {
+            "type": "number",
+            "default": 820
+        },
+        "panelRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "menuHeight": {
+            "type": "number",
+            "default": 64
+        },
+        "sticky": {
+            "type": "boolean",
+            "default": true
+        },
+        "openOnHover": {
+            "type": "boolean",
+            "default": true
+        },
+        "menuBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "menuText": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "menuBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "panelBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "panelText": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "featuredBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "navFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "ctaFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "navTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "colHeadingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "linkTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,339 @@
+/* =====================================================
+   Blockenberg — pricing-slider  (bkbg-psl-*)
+   ===================================================== */
+
+/* ── Section wrapper ── */
+.bkbg-psl-app {
+    padding: 60px 32px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+/* ── Header ── */
+.bkbg-psl-heading {
+    margin: 0 0 12px !important;
+}
+.bkbg-psl-header .bkbg-psl-heading,
+.bkbg-psl-header h2.bkbg-psl-heading {
+    font-family: var(--bkbg-psl-hd-font-family, inherit);
+    font-size: var(--bkbg-psl-hd-font-size-d, 36px);
+    font-weight: var(--bkbg-psl-hd-font-weight, 800);
+    font-style: var(--bkbg-psl-hd-font-style, normal);
+    text-decoration: var(--bkbg-psl-hd-text-decoration, none);
+    text-transform: var(--bkbg-psl-hd-text-transform, none);
+    line-height: var(--bkbg-psl-hd-line-height-d, 1.25);
+    letter-spacing: var(--bkbg-psl-hd-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-psl-hd-word-spacing-d, normal);
+}
+.bkbg-psl-subheading {
+    margin: 0 0 36px !important;
+    color: #64748b;
+    font-family: var(--bkbg-psl-sh-font-family, inherit);
+    font-size: var(--bkbg-psl-sh-font-size-d, 18px);
+    font-weight: var(--bkbg-psl-sh-font-weight, 400);
+    font-style: var(--bkbg-psl-sh-font-style, normal);
+    text-decoration: var(--bkbg-psl-sh-text-decoration, none);
+    text-transform: var(--bkbg-psl-sh-text-transform, none);
+    line-height: var(--bkbg-psl-sh-line-height-d, 1.6);
+    letter-spacing: var(--bkbg-psl-sh-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-psl-sh-word-spacing-d, normal);
+}
+
+/* ── Billing toggle row ── */
+.bkbg-psl-billing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 36px;
+    font-size: 15px;
+    flex-wrap: wrap;
+}
+.bkbg-psl-toggle-wrap {
+    width: 48px;
+    height: 26px;
+    border-radius: 13px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+.bkbg-psl-toggle-knob {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: left 0.2s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.22);
+}
+.bkbg-psl-toggle-wrap.bkbg-psl-on .bkbg-psl-toggle-knob {
+    left: 25px;
+}
+.bkbg-psl-save-badge {
+    background: #dcfce7;
+    color: #16a34a;
+    padding: 2px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+/* ── Slider section ── */
+.bkbg-psl-slider-wrap {
+    max-width: 520px;
+    margin: 0 auto 36px;
+    padding: 0 8px;
+}
+.bkbg-psl-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.bkbg-psl-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #94a3b8;
+    transition: color 0.2s, font-weight 0.2s;
+    cursor: pointer;
+}
+.bkbg-psl-label.bkbg-psl-active {
+    font-weight: 700;
+}
+
+.bkbg-psl-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+.bkbg-psl-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--bkbg-psl-accent, #6366f1);
+    cursor: pointer;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.15s;
+}
+.bkbg-psl-range::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+.bkbg-psl-range::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--bkbg-psl-accent, #6366f1);
+    cursor: pointer;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ── Pricing card ── */
+.bkbg-psl-card {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 40px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    transition: border-color 0.3s;
+    text-align: center;
+}
+
+/* ── Tier label ── */
+.bkbg-psl-tier-name {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+}
+.bkbg-psl-tier-users {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 16px;
+}
+
+/* ── Price display ── */
+.bkbg-psl-price-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 4px;
+    margin: 16px 0 6px;
+}
+.bkbg-psl-currency {
+    font-size: 24px;
+    font-weight: 700;
+    align-self: flex-start;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+.bkbg-psl-amount {
+    font-family: var(--bkbg-psl-pr-font-family, inherit);
+    font-size: var(--bkbg-psl-pr-font-size-d, 56px);
+    font-weight: var(--bkbg-psl-pr-font-weight, 800);
+    font-style: var(--bkbg-psl-pr-font-style, normal);
+    text-decoration: var(--bkbg-psl-pr-text-decoration, none);
+    text-transform: var(--bkbg-psl-pr-text-transform, none);
+    line-height: var(--bkbg-psl-pr-line-height-d, 1);
+    letter-spacing: var(--bkbg-psl-pr-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-psl-pr-word-spacing-d, normal);
+    transition: opacity 0.2s;
+}
+.bkbg-psl-amount.bkbg-psl-updating {
+    opacity: 0;
+}
+.bkbg-psl-period {
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 6px;
+}
+
+/* ── Annual note ── */
+.bkbg-psl-annual-note {
+    font-size: 13px;
+    color: #16a34a;
+    font-weight: 600;
+    min-height: 20px;
+    margin-bottom: 16px;
+    transition: opacity 0.2s;
+}
+
+/* ── Features list ── */
+.bkbg-psl-features {
+    list-style: none;
+    margin: 0 0 28px !important;
+    padding: 0;
+    text-align: left;
+}
+.bkbg-psl-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-family: var(--bkbg-psl-ft-font-family, inherit);
+    font-size: var(--bkbg-psl-ft-font-size-d, 15px);
+    font-weight: var(--bkbg-psl-ft-font-weight, 400);
+    font-style: var(--bkbg-psl-ft-font-style, normal);
+    text-decoration: var(--bkbg-psl-ft-text-decoration, none);
+    text-transform: var(--bkbg-psl-ft-text-transform, none);
+    line-height: var(--bkbg-psl-ft-line-height-d, normal);
+    letter-spacing: var(--bkbg-psl-ft-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-psl-ft-word-spacing-d, normal);
+    transition: opacity 0.2s;
+}
+.bkbg-psl-check {
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+/* ── CTA ── */
+.bkbg-psl-cta {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-family: var(--bkbg-psl-ct-font-family, inherit);
+    font-size: var(--bkbg-psl-ct-font-size-d, 16px);
+    font-weight: var(--bkbg-psl-ct-font-weight, 700);
+    font-style: var(--bkbg-psl-ct-font-style, normal);
+    text-decoration: var(--bkbg-psl-ct-text-decoration, none);
+    text-transform: var(--bkbg-psl-ct-text-transform, none);
+    line-height: var(--bkbg-psl-ct-line-height-d, normal);
+    letter-spacing: var(--bkbg-psl-ct-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-psl-ct-word-spacing-d, normal);
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+}
+.bkbg-psl-cta:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}
+.bkbg-psl-cta:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-psl-header .bkbg-psl-heading,
+    .bkbg-psl-header h2.bkbg-psl-heading {
+        font-size: var(--bkbg-psl-hd-font-size-t, 36px);
+        line-height: var(--bkbg-psl-hd-line-height-t, 1.25);
+        letter-spacing: var(--bkbg-psl-hd-letter-spacing-t, normal);
+        word-spacing: var(--bkbg-psl-hd-word-spacing-t, normal);
+    }
+    .bkbg-psl-subheading {
+        font-size: var(--bkbg-psl-sh-font-size-t, 18px);
+        line-height: var(--bkbg-psl-sh-line-height-t, 1.6);
+        letter-spacing: var(--bkbg-psl-sh-letter-spacing-t, normal);
+        word-spacing: var(--bkbg-psl-sh-word-spacing-t, normal);
+    }
+    .bkbg-psl-amount {
+        font-size: var(--bkbg-psl-pr-font-size-t, 56px);
+        line-height: var(--bkbg-psl-pr-line-height-t, 1);
+        letter-spacing: var(--bkbg-psl-pr-letter-spacing-t, normal);
+        word-spacing: var(--bkbg-psl-pr-word-spacing-t, normal);
+    }
+    .bkbg-psl-cta {
+        font-size: var(--bkbg-psl-ct-font-size-t, 16px);
+        line-height: var(--bkbg-psl-ct-line-height-t, normal);
+        letter-spacing: var(--bkbg-psl-ct-letter-spacing-t, normal);
+        word-spacing: var(--bkbg-psl-ct-word-spacing-t, normal);
+    }
+    .bkbg-psl-features li {
+        font-size: var(--bkbg-psl-ft-font-size-t, 15px);
+        line-height: var(--bkbg-psl-ft-line-height-t, normal);
+        letter-spacing: var(--bkbg-psl-ft-letter-spacing-t, normal);
+        word-spacing: var(--bkbg-psl-ft-word-spacing-t, normal);
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-psl-header .bkbg-psl-heading,
+    .bkbg-psl-header h2.bkbg-psl-heading {
+        font-size: var(--bkbg-psl-hd-font-size-m, 36px);
+        line-height: var(--bkbg-psl-hd-line-height-m, 1.25);
+        letter-spacing: var(--bkbg-psl-hd-letter-spacing-m, normal);
+        word-spacing: var(--bkbg-psl-hd-word-spacing-m, normal);
+    }
+    .bkbg-psl-subheading {
+        font-size: var(--bkbg-psl-sh-font-size-m, 18px);
+        line-height: var(--bkbg-psl-sh-line-height-m, 1.6);
+        letter-spacing: var(--bkbg-psl-sh-letter-spacing-m, normal);
+        word-spacing: var(--bkbg-psl-sh-word-spacing-m, normal);
+    }
+    .bkbg-psl-amount {
+        font-size: var(--bkbg-psl-pr-font-size-m, 56px);
+        line-height: var(--bkbg-psl-pr-line-height-m, 1);
+        letter-spacing: var(--bkbg-psl-pr-letter-spacing-m, normal);
+        word-spacing: var(--bkbg-psl-pr-word-spacing-m, normal);
+    }
+    .bkbg-psl-cta {
+        font-size: var(--bkbg-psl-ct-font-size-m, 16px);
+        line-height: var(--bkbg-psl-ct-line-height-m, normal);
+        letter-spacing: var(--bkbg-psl-ct-letter-spacing-m, normal);
+        word-spacing: var(--bkbg-psl-ct-word-spacing-m, normal);
+    }
+    .bkbg-psl-features li {
+        font-size: var(--bkbg-psl-ft-font-size-m, 15px);
+        line-height: var(--bkbg-psl-ft-line-height-m, normal);
+        letter-spacing: var(--bkbg-psl-ft-letter-spacing-m, normal);
+        word-spacing: var(--bkbg-psl-ft-word-spacing-m, normal);
+    }
+}
+
+@media (max-width: 600px) {
+    .bkbg-psl-app {
+        padding: 40px 16px;
+    }
+    .bkbg-psl-card {
+        padding: 24px 20px;
+    }
+}

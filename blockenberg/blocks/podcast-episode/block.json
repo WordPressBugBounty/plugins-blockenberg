@@ -1,0 +1,313 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/podcast-episode",
+    "title": "Podcast Episode",
+    "description": "Complete podcast episode show notes with guests, chapter timestamps, listen links, resources, and transcript excerpt.",
+    "category": "bkbg-blog",
+    "icon": "format-audio",
+    "keywords": [
+        "podcast",
+        "episode",
+        "audio",
+        "show notes",
+        "chapters",
+        "guest",
+        "interview"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-podcast-episode-editor",
+    "editorStyle": "bkbg-podcast-episode-style",
+    "style": "bkbg-podcast-episode-style",
+    "viewScript": "bkbg-podcast-episode-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "episodeTitle": {
+            "type": "string",
+            "default": "The Future of AI-Assisted Development"
+        },
+        "episodeNumber": {
+            "type": "string",
+            "default": "147"
+        },
+        "season": {
+            "type": "string",
+            "default": "6"
+        },
+        "showNumber": {
+            "type": "boolean",
+            "default": true
+        },
+        "podcastName": {
+            "type": "string",
+            "default": "Dev Stories Podcast"
+        },
+        "showPodcastName": {
+            "type": "boolean",
+            "default": true
+        },
+        "publishDate": {
+            "type": "string",
+            "default": "February 24, 2026"
+        },
+        "duration": {
+            "type": "string",
+            "default": "58 min"
+        },
+        "showMeta": {
+            "type": "boolean",
+            "default": true
+        },
+        "description": {
+            "type": "string",
+            "default": "In this episode, we sit down with two leading AI researchers to explore how large language models are reshaping every stage of the software development lifecycle \u2014 from spec writing to deployment. We discuss real-world use cases, emerging pitfalls, and what engineers should be learning right now."
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "guests": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Dr. Aisha Nwosu",
+                    "role": "AI Research Lead, OpenDev Labs",
+                    "bio": "Dr. Nwosu's research focuses on the human-AI collaboration patterns that emerge in professional software teams."
+                },
+                {
+                    "name": "Marco Reyes",
+                    "role": "Staff Engineer, Vercel",
+                    "bio": "Marco leads Dev Experience at Vercel and has been integrating AI tools into CI/CD pipelines since 2023."
+                }
+            ]
+        },
+        "showGuests": {
+            "type": "boolean",
+            "default": true
+        },
+        "guestsLabel": {
+            "type": "string",
+            "default": "Guests"
+        },
+        "timestamps": {
+            "type": "array",
+            "default": [
+                {
+                    "time": "00:00",
+                    "title": "Introduction & episode overview"
+                },
+                {
+                    "time": "04:30",
+                    "title": "How AI is changing spec-writing"
+                },
+                {
+                    "time": "18:15",
+                    "title": "Real-world CI/CD integration stories"
+                },
+                {
+                    "time": "34:45",
+                    "title": "Pitfalls and hallucinations in production code"
+                },
+                {
+                    "time": "47:20",
+                    "title": "What to learn now \u2014 frameworks & skills"
+                },
+                {
+                    "time": "55:00",
+                    "title": "Closing thoughts & listener questions"
+                }
+            ]
+        },
+        "showTimestamps": {
+            "type": "boolean",
+            "default": true
+        },
+        "timestampsLabel": {
+            "type": "string",
+            "default": "Chapters"
+        },
+        "listenLinks": {
+            "type": "array",
+            "default": [
+                {
+                    "platform": "Spotify",
+                    "url": "#"
+                },
+                {
+                    "platform": "Apple Podcasts",
+                    "url": "#"
+                },
+                {
+                    "platform": "YouTube",
+                    "url": "#"
+                }
+            ]
+        },
+        "showListenLinks": {
+            "type": "boolean",
+            "default": true
+        },
+        "listenLinksLabel": {
+            "type": "string",
+            "default": "Listen on"
+        },
+        "resources": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "AI-Assisted Coding Benchmark Report (2026)",
+                    "url": "#",
+                    "type": "article"
+                },
+                {
+                    "title": "\"Co-Intelligence\" by Ethan Mollick",
+                    "url": "#",
+                    "type": "book"
+                },
+                {
+                    "title": "OpenDev Labs Research Blog",
+                    "url": "#",
+                    "type": "link"
+                }
+            ]
+        },
+        "showResources": {
+            "type": "boolean",
+            "default": true
+        },
+        "resourcesLabel": {
+            "type": "string",
+            "default": "Resources & Links"
+        },
+        "transcript": {
+            "type": "string",
+            "default": "\"The question isn't whether AI will change your workflow \u2014 it already has. The question is whether you'll shape that change intentionally or be shaped by it.\"\n\u2014 Dr. Aisha Nwosu"
+        },
+        "showTranscript": {
+            "type": "boolean",
+            "default": true
+        },
+        "transcriptLabel": {
+            "type": "string",
+            "default": "Highlighted Quote"
+        },
+        "tags": {
+            "type": "array",
+            "default": [
+                "AI",
+                "Developer Tools",
+                "LLMs",
+                "CI/CD",
+                "Future of Work"
+            ]
+        },
+        "showTags": {
+            "type": "boolean",
+            "default": true
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "bodyBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "bodyBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "mutedColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "sectionHeadColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "chapterTimeBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "chapterTimeColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "guestBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "guestBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "guestNameColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "guestRoleColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "resourceIconColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "tagBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "tagColor": {
+            "type": "string",
+            "default": "#1d4ed8"
+        },
+        "listenBtnBg": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "listenBtnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "transcriptBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "transcriptBorderColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

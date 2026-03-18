@@ -1,0 +1,204 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/definition-block",
+    "title": "Definition Block",
+    "description": "Dictionary-style term definition with pronunciation, part of speech, examples and synonyms.",
+    "category": "bkbg-content",
+    "icon": "book-alt",
+    "keywords": [
+        "definition",
+        "dictionary",
+        "glossary",
+        "term",
+        "word",
+        "meaning"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-definition-block-editor",
+    "style": "bkbg-definition-block-style",
+    "viewScript": "bkbg-definition-block-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "term": {
+            "type": "string",
+            "default": "Term"
+        },
+        "pronunciation": {
+            "type": "string",
+            "default": ""
+        },
+        "showPronunciation": {
+            "type": "boolean",
+            "default": true
+        },
+        "partOfSpeech": {
+            "type": "string",
+            "default": "noun"
+        },
+        "showPartOfSpeech": {
+            "type": "boolean",
+            "default": true
+        },
+        "shortDef": {
+            "type": "string",
+            "default": ""
+        },
+        "longDef": {
+            "type": "string",
+            "default": ""
+        },
+        "showLongDef": {
+            "type": "boolean",
+            "default": true
+        },
+        "examples": {
+            "type": "array",
+            "default": [
+                ""
+            ]
+        },
+        "showExamples": {
+            "type": "boolean",
+            "default": true
+        },
+        "synonyms": {
+            "type": "string",
+            "default": ""
+        },
+        "showSynonyms": {
+            "type": "boolean",
+            "default": true
+        },
+        "antonyms": {
+            "type": "string",
+            "default": ""
+        },
+        "showAntonyms": {
+            "type": "boolean",
+            "default": false
+        },
+        "etymology": {
+            "type": "string",
+            "default": ""
+        },
+        "showEtymology": {
+            "type": "boolean",
+            "default": false
+        },
+        "sourceLabel": {
+            "type": "string",
+            "default": ""
+        },
+        "sourceUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "style": {
+            "type": "string",
+            "default": "card"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "termColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "pronunciationColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "posColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "posBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "shortDefColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "longDefColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "exampleColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "synonymColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "termFontSize": {
+            "type": "number",
+            "default": 24
+        },
+        "shortDefFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "longDefFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "exampleFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "etymologyFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "tagFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "typoTerm": {
+            "type": "object",
+            "default": {}
+        },
+        "typoShortDef": {
+            "type": "object",
+            "default": {}
+        },
+        "typoLongDef": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

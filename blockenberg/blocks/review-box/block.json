@@ -1,0 +1,193 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/review-box",
+    "title": "Review Box",
+    "category": "bkbg-blog",
+    "description": "Professional review card with score, pros/cons, and Schema.org markup.",
+    "keywords": [
+        "review",
+        "rating",
+        "pros",
+        "cons",
+        "verdict",
+        "schema"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-review-box-editor",
+    "editorStyle": "bkbg-review-box-style",
+    "style": "bkbg-review-box-style",
+    "viewScript": "bkbg-review-box-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "productName": {
+            "type": "string",
+            "default": "Product Name"
+        },
+        "reviewTitle": {
+            "type": "string",
+            "default": "Our Verdict"
+        },
+        "summary": {
+            "type": "string",
+            "default": ""
+        },
+        "score": {
+            "type": "number",
+            "default": 4.5
+        },
+        "maxScore": {
+            "type": "number",
+            "default": 5
+        },
+        "scoreLabel": {
+            "type": "string",
+            "default": "Overall Score"
+        },
+        "pros": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "pro-1",
+                    "text": "Excellent build quality"
+                },
+                {
+                    "id": "pro-2",
+                    "text": "Great value for money"
+                },
+                {
+                    "id": "pro-3",
+                    "text": "Easy to use"
+                }
+            ]
+        },
+        "cons": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "con-1",
+                    "text": "Limited color options"
+                },
+                {
+                    "id": "con-2",
+                    "text": "Battery life could be better"
+                }
+            ]
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "price": {
+            "type": "string",
+            "default": ""
+        },
+        "priceLabel": {
+            "type": "string",
+            "default": "Price"
+        },
+        "buttonLabel": {
+            "type": "string",
+            "default": "Buy Now"
+        },
+        "buttonUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "buttonStyle": {
+            "type": "string",
+            "default": "primary"
+        },
+        "schemaType": {
+            "type": "string",
+            "default": "Product"
+        },
+        "schemaEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "skin": {
+            "type": "string",
+            "default": "bordered"
+        },
+        "starColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "proColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "conColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "scoreBg": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "scoreColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "scoreSize": {
+            "type": "number",
+            "default": 48
+        },
+        "summarySize": {
+            "type": "number",
+            "default": 14
+        },
+        "priceSize": {
+            "type": "number",
+            "default": 14
+        },
+        "priceLabelSize": {
+            "type": "number",
+            "default": 14
+        },
+        "scoreLabelSize": {
+            "type": "number",
+            "default": 10
+        },
+        "productNameSize": {
+            "type": "number",
+            "default": 22
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

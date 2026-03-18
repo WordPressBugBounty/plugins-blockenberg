@@ -1,0 +1,346 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/show-notes",
+    "title": "Show Notes",
+    "description": "Podcast show notes with sponsors, chapters, links, resources, and featured quotes.",
+    "category": "bkbg-blog",
+    "icon": "microphone",
+    "keywords": [
+        "podcast",
+        "show notes",
+        "episode",
+        "audio",
+        "chapters",
+        "sponsor",
+        "links"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-show-notes-editor",
+    "editorStyle": "bkbg-show-notes-style",
+    "style": "bkbg-show-notes-style",
+    "viewScript": "bkbg-show-notes-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "podcastName": {
+            "type": "string",
+            "default": "Dev Insights Podcast"
+        },
+        "episodeTitle": {
+            "type": "string",
+            "default": "Building in Public with Marie Kim"
+        },
+        "episodeNumber": {
+            "type": "string",
+            "default": "Ep. 142"
+        },
+        "season": {
+            "type": "string",
+            "default": "Season 3"
+        },
+        "showEpisodeMeta": {
+            "type": "boolean",
+            "default": true
+        },
+        "publishDate": {
+            "type": "string",
+            "default": "February 24, 2026"
+        },
+        "duration": {
+            "type": "string",
+            "default": "62 min"
+        },
+        "showMeta": {
+            "type": "boolean",
+            "default": true
+        },
+        "intro": {
+            "type": "string",
+            "default": "Marie Kim, founder of ShipFast and author of Build in Public, joins us to talk about radical transparency in building a startup — what to share, what not to, and why vulnerability is a growth engine, not a liability."
+        },
+        "showIntro": {
+            "type": "boolean",
+            "default": true
+        },
+        "sponsors": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Linear",
+                    "description": "The issue tracker built for modern product teams. Try free for 2 weeks.",
+                    "url": "https://linear.app",
+                    "code": "DEVINSIGHTS"
+                },
+                {
+                    "name": "Warp",
+                    "description": "The blazing-fast terminal built for developers. Now with AI autocomplete.",
+                    "url": "https://warp.dev",
+                    "code": ""
+                }
+            ]
+        },
+        "showSponsors": {
+            "type": "boolean",
+            "default": true
+        },
+        "sponsorsLabel": {
+            "type": "string",
+            "default": "Sponsors"
+        },
+        "chapters": {
+            "type": "array",
+            "default": [
+                {
+                    "time": "00:00",
+                    "title": "Intro & who is Marie Kim?"
+                },
+                {
+                    "time": "04:22",
+                    "title": "What building in public actually means"
+                },
+                {
+                    "time": "11:48",
+                    "title": "Sharing revenue numbers — the case for it"
+                },
+                {
+                    "time": "22:15",
+                    "title": "Handling negative feedback publicly"
+                },
+                {
+                    "time": "34:57",
+                    "title": "When NOT to build in public"
+                },
+                {
+                    "time": "47:30",
+                    "title": "Tools and where she posts"
+                },
+                {
+                    "time": "56:10",
+                    "title": "Rapid fire + what's next"
+                }
+            ]
+        },
+        "showChapters": {
+            "type": "boolean",
+            "default": true
+        },
+        "chaptersLabel": {
+            "type": "string",
+            "default": "Chapters"
+        },
+        "links": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Marie Kim on X/Twitter",
+                    "url": "https://twitter.com",
+                    "description": "@mariekim"
+                },
+                {
+                    "title": "ShipFast.io",
+                    "url": "https://shipfast.io",
+                    "description": "Marie's main product"
+                },
+                {
+                    "title": "Build in Public (book)",
+                    "url": "https://amazon.com",
+                    "description": "Available on Amazon and Gumroad"
+                },
+                {
+                    "title": "Indie Hackers interview",
+                    "url": "https://indiehackers.com",
+                    "description": "From 2024 — worth a read"
+                }
+            ]
+        },
+        "showLinks": {
+            "type": "boolean",
+            "default": true
+        },
+        "linksLabel": {
+            "type": "string",
+            "default": "Links Mentioned"
+        },
+        "resources": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "How to build in public (without oversharing)",
+                    "url": "#",
+                    "type": "article"
+                },
+                {
+                    "title": "Revenue transparency calculator (we built one!)",
+                    "url": "#",
+                    "type": "tool"
+                }
+            ]
+        },
+        "showResources": {
+            "type": "boolean",
+            "default": true
+        },
+        "resourcesLabel": {
+            "type": "string",
+            "default": "Episode Resources"
+        },
+        "quoteHighlight": {
+            "type": "string",
+            "default": "The moment you share your revenue dashboard is the moment you stop feeling like an impostor and start feeling like a founder. Vulnerability isn't weakness — it's your best marketing strategy."
+        },
+        "quoteSpeaker": {
+            "type": "string",
+            "default": "Marie Kim"
+        },
+        "showQuote": {
+            "type": "boolean",
+            "default": true
+        },
+        "tags": {
+            "type": "array",
+            "default": [
+                "building in public",
+                "indie hacking",
+                "transparency",
+                "startup",
+                "marketing"
+            ]
+        },
+        "showTags": {
+            "type": "boolean",
+            "default": true
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "titleFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 168
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "podcastNameSize": {
+            "type": "number",
+            "default": 11
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "introBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "introColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "sponsorBg": {
+            "type": "string",
+            "default": "#fffbeb"
+        },
+        "sponsorBorder": {
+            "type": "string",
+            "default": "#fbbf24"
+        },
+        "sponsorColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "chapterTimeBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "chapterTimeColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "chapterTitleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "linkDescColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "quoteBg": {
+            "type": "string",
+            "default": "#f0f9ff"
+        },
+        "quoteColor": {
+            "type": "string",
+            "default": "#0369a1"
+        },
+        "quoteBorder": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "tagBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "tagColor": {
+            "type": "string",
+            "default": "#1d4ed8"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "typoQuote": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

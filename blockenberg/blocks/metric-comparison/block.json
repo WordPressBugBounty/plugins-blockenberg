@@ -1,0 +1,150 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/metric-comparison",
+    "title": "Metric Comparison",
+    "category": "bkbg-charts",
+    "icon": "chart-bar",
+    "description": "Before/after KPI comparison cards with change arrows and color-coded indicators.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-metric-comparison-editor",
+    "style": "bkbg-metric-comparison-style",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Q3 vs Q4 Performance"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "showChange": {
+            "type": "boolean",
+            "default": true
+        },
+        "showArrows": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBar": {
+            "type": "boolean",
+            "default": true
+        },
+        "beforeLabel": {
+            "type": "string",
+            "default": "Q3"
+        },
+        "afterLabel": {
+            "type": "string",
+            "default": "Q4"
+        },
+        "posColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "negColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "neutralColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 20
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "metrics": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Revenue",
+                    "valueBefore": 128000,
+                    "valueAfter": 154000,
+                    "unit": "$",
+                    "format": "currency",
+                    "higherIsBetter": true
+                },
+                {
+                    "label": "Active Users",
+                    "valueBefore": 8400,
+                    "valueAfter": 11200,
+                    "unit": "",
+                    "format": "number",
+                    "higherIsBetter": true
+                },
+                {
+                    "label": "Churn Rate",
+                    "valueBefore": 4.2,
+                    "valueAfter": 3.1,
+                    "unit": "%",
+                    "format": "percent",
+                    "higherIsBetter": false
+                },
+                {
+                    "label": "Avg Session (min)",
+                    "valueBefore": 3.8,
+                    "valueAfter": 4.9,
+                    "unit": "",
+                    "format": "number",
+                    "higherIsBetter": true
+                },
+                {
+                    "label": "Conversion",
+                    "valueBefore": 2.1,
+                    "valueAfter": 2.8,
+                    "unit": "%",
+                    "format": "percent",
+                    "higherIsBetter": true
+                },
+                {
+                    "label": "Support Tickets",
+                    "valueBefore": 320,
+                    "valueAfter": 210,
+                    "unit": "",
+                    "format": "number",
+                    "higherIsBetter": false
+                }
+            ]
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "valueTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

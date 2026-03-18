@@ -1,0 +1,248 @@
+/* ======================================================
+   Blockenberg — BMI Calculator block styles
+   ====================================================== */
+
+.bkbg-bmi-app {
+    font-family: inherit;
+}
+
+.bkbg-bmi-title {
+    margin: 0 0 8px;
+    text-align: center;
+    font-family: var(--bkbg-bmi-title-font-family, inherit);
+    font-weight: var(--bkbg-bmi-title-font-weight, 700);
+    font-style: var(--bkbg-bmi-title-font-style, normal);
+    text-transform: var(--bkbg-bmi-title-text-transform, none);
+    text-decoration: var(--bkbg-bmi-title-text-decoration, none);
+    font-size: var(--bkbg-bmi-title-font-size-d, 28px);
+    line-height: var(--bkbg-bmi-title-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-bmi-title-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-bmi-title-word-spacing-d, normal);
+}
+
+.bkbg-bmi-subtitle {
+    margin: 0 0 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.bkbg-bmi-loading {
+    text-align: center;
+    color: #9ca3af;
+    padding: 40px 0;
+}
+
+/* Unit toggle pill */
+.bkbg-bmi-unit-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.bkbg-bmi-unit-btn {
+    padding: 6px 18px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.bkbg-bmi-unit-btn.active {
+    color: #ffffff;
+}
+
+/* Inputs grid */
+.bkbg-bmi-inputs {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.bkbg-bmi-inputs.metric {
+    grid-template-columns: 1fr 1fr;
+}
+
+.bkbg-bmi-inputs.imperial {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 480px) {
+    .bkbg-bmi-inputs.metric,
+    .bkbg-bmi-inputs.imperial {
+        grid-template-columns: 1fr;
+    }
+}
+
+.bkbg-bmi-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.bkbg-bmi-input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1.5px solid #e5e7eb;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+.bkbg-bmi-input::-webkit-outer-spin-button,
+.bkbg-bmi-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.bkbg-bmi-input:focus {
+    border-color: currentColor;
+    box-shadow: 0 0 0 3px rgba(108,63,181,0.12);
+}
+
+/* Result box */
+.bkbg-bmi-result {
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    border: 1.5px solid transparent;
+}
+
+.bkbg-bmi-number {
+    margin-bottom: 4px;
+    transition: color 0.3s;
+    font-family: var(--bkbg-bmi-number-font-family, inherit);
+    font-weight: var(--bkbg-bmi-number-font-weight, 800);
+    font-style: var(--bkbg-bmi-number-font-style, normal);
+    text-transform: var(--bkbg-bmi-number-text-transform, none);
+    text-decoration: var(--bkbg-bmi-number-text-decoration, none);
+    font-size: var(--bkbg-bmi-number-font-size-d, 52px);
+    line-height: var(--bkbg-bmi-number-line-height-d, 1);
+    letter-spacing: var(--bkbg-bmi-number-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-bmi-number-word-spacing-d, normal);
+}
+
+.bkbg-bmi-cat-label {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    transition: color 0.3s;
+}
+
+/* Gauge */
+.bkbg-bmi-gauge-wrap {
+    margin: 0 auto 16px;
+    max-width: 380px;
+}
+
+.bkbg-bmi-gauge-track {
+    position: relative;
+    height: 16px;
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.bkbg-bmi-gauge-needle {
+    position: absolute;
+    top: -2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid currentColor;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transform: translateX(-50%);
+    transition: left 0.4s ease, border-color 0.3s;
+}
+
+.bkbg-bmi-gauge-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #9ca3af;
+    margin-top: 4px;
+}
+
+/* Category legend */
+.bkbg-bmi-legend {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.bkbg-bmi-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.bkbg-bmi-legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+/* Ideal weight + interpretation */
+.bkbg-bmi-ideal {
+    margin: 12px 0 0;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.bkbg-bmi-interp {
+    margin: 8px 0 0;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+/* Disclaimer */
+.bkbg-bmi-disclaimer {
+    color: #9ca3af;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+/* === Typography responsive === */
+@media (max-width: 1024px) {
+    .bkbg-bmi-title {
+        font-size: var(--bkbg-bmi-title-font-size-t, var(--bkbg-bmi-title-font-size-d, 28px));
+        line-height: var(--bkbg-bmi-title-line-height-t, var(--bkbg-bmi-title-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-bmi-title-letter-spacing-t, var(--bkbg-bmi-title-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-bmi-title-word-spacing-t, var(--bkbg-bmi-title-word-spacing-d, normal));
+    }
+    .bkbg-bmi-number {
+        font-size: var(--bkbg-bmi-number-font-size-t, var(--bkbg-bmi-number-font-size-d, 52px));
+        line-height: var(--bkbg-bmi-number-line-height-t, var(--bkbg-bmi-number-line-height-d, 1));
+        letter-spacing: var(--bkbg-bmi-number-letter-spacing-t, var(--bkbg-bmi-number-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-bmi-number-word-spacing-t, var(--bkbg-bmi-number-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-bmi-title {
+        font-size: var(--bkbg-bmi-title-font-size-m, var(--bkbg-bmi-title-font-size-t, var(--bkbg-bmi-title-font-size-d, 28px)));
+        line-height: var(--bkbg-bmi-title-line-height-m, var(--bkbg-bmi-title-line-height-t, var(--bkbg-bmi-title-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-bmi-title-letter-spacing-m, var(--bkbg-bmi-title-letter-spacing-t, var(--bkbg-bmi-title-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-bmi-title-word-spacing-m, var(--bkbg-bmi-title-word-spacing-t, var(--bkbg-bmi-title-word-spacing-d, normal)));
+    }
+    .bkbg-bmi-number {
+        font-size: var(--bkbg-bmi-number-font-size-m, var(--bkbg-bmi-number-font-size-t, var(--bkbg-bmi-number-font-size-d, 52px)));
+        line-height: var(--bkbg-bmi-number-line-height-m, var(--bkbg-bmi-number-line-height-t, var(--bkbg-bmi-number-line-height-d, 1)));
+        letter-spacing: var(--bkbg-bmi-number-letter-spacing-m, var(--bkbg-bmi-number-letter-spacing-t, var(--bkbg-bmi-number-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-bmi-number-word-spacing-m, var(--bkbg-bmi-number-word-spacing-t, var(--bkbg-bmi-number-word-spacing-d, normal)));
+    }
+}

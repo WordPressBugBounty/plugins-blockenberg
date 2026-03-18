@@ -1,0 +1,95 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/polar-chart",
+    "title": "Polar Area Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-pie",
+    "description": "Beautiful polar area chart powered by Chart.js.",
+    "keywords": [
+        "chart",
+        "polar",
+        "data",
+        "visualization"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-polar-chart-editor",
+    "editorStyle": "bkbg-polar-chart-style",
+    "style": "bkbg-polar-chart-style",
+    "viewScript": "bkbg-polar-chart-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "chartTitle": {
+            "type": "string",
+            "default": "Polar Area Chart"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "labels": {
+            "type": "string",
+            "default": "Category A,Category B,Category C,Category D,Category E"
+        },
+        "values": {
+            "type": "string",
+            "default": "30,25,20,15,10"
+        },
+        "colors": {
+            "type": "string",
+            "default": "#6c3fb5,#ec4899,#f59e0b,#10b981,#3b82f6"
+        },
+        "fillAlpha": {
+            "type": "number",
+            "default": 75
+        },
+        "size": {
+            "type": "number",
+            "default": 400
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "legendPos": {
+            "type": "string",
+            "default": "bottom"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "legendFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "legendFontWeight": {
+            "type": "string",
+            "default": "400"
+        }
+    }
+}

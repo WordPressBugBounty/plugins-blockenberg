@@ -1,0 +1,261 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/tech-radar",
+    "version": "1.0.0",
+    "title": "Tech Radar",
+    "category": "bkbg-blog",
+    "icon": "chart-area",
+    "description": "A technology radar listing technologies by adoption ring and quadrant.",
+    "keywords": [
+        "tech",
+        "radar",
+        "technology",
+        "adopt",
+        "trial",
+        "assess",
+        "hold",
+        "stack"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-tech-radar-editor",
+    "editorStyle": "bkbg-tech-radar-style",
+    "style": "bkbg-tech-radar-style",
+    "viewScript": "bkbg-tech-radar-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "radarTitle": {
+            "type": "string",
+            "default": "Technology Radar"
+        },
+        "description": {
+            "type": "string",
+            "default": "Our current view of the technology landscape — what we're adopting, trialing, assessing, and holding."
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "groupByQuadrant": {
+            "type": "boolean",
+            "default": false
+        },
+        "showIsNew": {
+            "type": "boolean",
+            "default": true
+        },
+        "blips": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "TypeScript",
+                    "ring": "adopt",
+                    "quadrant": "Languages & Frameworks",
+                    "description": "Strongly typed JavaScript. We use it on all new projects.",
+                    "isNew": false
+                },
+                {
+                    "name": "React",
+                    "ring": "adopt",
+                    "quadrant": "Languages & Frameworks",
+                    "description": "Our primary UI library for web applications.",
+                    "isNew": false
+                },
+                {
+                    "name": "Svelte",
+                    "ring": "trial",
+                    "quadrant": "Languages & Frameworks",
+                    "description": "Lightweight compiler-based framework. Promising for smaller apps.",
+                    "isNew": true
+                },
+                {
+                    "name": "Bun",
+                    "ring": "assess",
+                    "quadrant": "Platforms",
+                    "description": "Node.js alternative with promising performance gains.",
+                    "isNew": true
+                },
+                {
+                    "name": "Deno",
+                    "ring": "assess",
+                    "quadrant": "Platforms",
+                    "description": "Emerging Node alternative. Watching ecosystem maturity.",
+                    "isNew": false
+                },
+                {
+                    "name": "Kubernetes",
+                    "ring": "adopt",
+                    "quadrant": "Platforms",
+                    "description": "Production container orchestration for all major services.",
+                    "isNew": false
+                },
+                {
+                    "name": "Vite",
+                    "ring": "adopt",
+                    "quadrant": "Tools",
+                    "description": "Fast frontend build tool. Replaced webpack on all projects.",
+                    "isNew": false
+                },
+                {
+                    "name": "Biome",
+                    "ring": "trial",
+                    "quadrant": "Tools",
+                    "description": "Unified linter and formatter replacing ESLint + Prettier.",
+                    "isNew": true
+                },
+                {
+                    "name": "Storybook",
+                    "ring": "adopt",
+                    "quadrant": "Tools",
+                    "description": "Used for component development and visual testing.",
+                    "isNew": false
+                },
+                {
+                    "name": "gRPC",
+                    "ring": "trial",
+                    "quadrant": "Techniques",
+                    "description": "High-performance RPC for internal service communication.",
+                    "isNew": false
+                },
+                {
+                    "name": "Island Architecture",
+                    "ring": "assess",
+                    "quadrant": "Techniques",
+                    "description": "Partial hydration pattern. Exploring via Astro.",
+                    "isNew": true
+                },
+                {
+                    "name": "Micro-frontends",
+                    "ring": "hold",
+                    "quadrant": "Techniques",
+                    "description": "Complexity outweighs benefits for our team size.",
+                    "isNew": false
+                }
+            ]
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 24
+        },
+        "ringLabelSize": {
+            "type": "number",
+            "default": 11
+        },
+        "blipNameSize": {
+            "type": "number",
+            "default": 14
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 160
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "blipNameColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "blipDescColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "quadrantHeadColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "newBadgeBg": {
+            "type": "string",
+            "default": "#fef9c3"
+        },
+        "newBadgeColor": {
+            "type": "string",
+            "default": "#713f12"
+        },
+        "adoptBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "adoptColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "adoptBorder": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "trialBg": {
+            "type": "string",
+            "default": "#dbeafe"
+        },
+        "trialColor": {
+            "type": "string",
+            "default": "#1e40af"
+        },
+        "trialBorder": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "assessBg": {
+            "type": "string",
+            "default": "#fef9c3"
+        },
+        "assessColor": {
+            "type": "string",
+            "default": "#713f12"
+        },
+        "assessBorder": {
+            "type": "string",
+            "default": "#d97706"
+        },
+        "holdBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "holdColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "holdBorder": {
+            "type": "string",
+            "default": "#9ca3af"
+        }
+    }
+}

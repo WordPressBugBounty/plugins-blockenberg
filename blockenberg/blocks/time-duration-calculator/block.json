@@ -1,0 +1,186 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/time-duration-calculator",
+    "title": "Time Duration Calculator",
+    "category": "bkbg-calculators",
+    "icon": "clock",
+    "description": "Add or subtract time durations in hours, minutes and seconds. Shows result broken down into multiple units.",
+    "keywords": [
+        "time",
+        "duration",
+        "hours",
+        "minutes",
+        "seconds",
+        "add",
+        "subtract",
+        "calculator"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-time-duration-calculator-editor",
+    "style": "bkbg-time-duration-calculator-style",
+    "viewScript": "bkbg-time-duration-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Time Duration Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Add or subtract time durations with ease"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultOp": {
+            "type": "string",
+            "default": "add"
+        },
+        "defaultH1": {
+            "type": "number",
+            "default": 1
+        },
+        "defaultM1": {
+            "type": "number",
+            "default": 30
+        },
+        "defaultS1": {
+            "type": "number",
+            "default": 0
+        },
+        "defaultH2": {
+            "type": "number",
+            "default": 0
+        },
+        "defaultM2": {
+            "type": "number",
+            "default": 45
+        },
+        "defaultS2": {
+            "type": "number",
+            "default": 0
+        },
+        "showSeconds": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTotalSec": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDaysBreakdown": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "resultColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "statBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "statBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "statValue": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "statLabel": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "opActiveBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "opActiveColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "opInactiveBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "opInactiveColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "inputBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "resultTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 560
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        }
+    }
+}

@@ -1,0 +1,98 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/step-progress",
+	"title": "Step Progress",
+	"category": "bkbg-content",
+	"icon": "editor-ol",
+	"description": "Horizontal wizard progress bar showing current step out of N with labels and colors.",
+	"keywords": [
+		"step",
+		"progress",
+		"wizard",
+		"steps",
+		"process",
+		"bar"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-step-progress-editor",
+	"editorStyle": "bkbg-step-progress-style",
+	"style": "bkbg-step-progress-style",
+	"viewScript": "bkbg-step-progress-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"steps": {
+			"type": "array",
+			"default": [
+				{
+					"label": "Setup"
+				},
+				{
+					"label": "Configure"
+				},
+				{
+					"label": "Review"
+				},
+				{
+					"label": "Done"
+				}
+			]
+		},
+		"currentStep": {
+			"type": "number",
+			"default": 2
+		},
+		"showNumbers": {
+			"type": "boolean",
+			"default": true
+		},
+		"barHeight": {
+			"type": "number",
+			"default": 4
+		},
+		"circleSize": {
+			"type": "number",
+			"default": 36
+		},
+		"completedColor": {
+			"type": "string",
+			"default": "#22c55e"
+		},
+		"activeColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"pendingColor": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"labelSz": {
+			"type": "number",
+			"default": 13
+		},
+		"connectorStyle": {
+			"type": "string",
+			"default": "solid"
+		},
+		"labelFontWeight": {
+			"type": "string",
+			"default": "400"
+		},
+		"labelLineHeight": {
+			"type": "number",
+			"default": 1.4
+		},
+		"labelTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

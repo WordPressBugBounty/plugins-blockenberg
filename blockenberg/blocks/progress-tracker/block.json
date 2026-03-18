@@ -1,0 +1,103 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/progress-tracker",
+    "title": "Progress Tracker",
+    "category": "bkbg-interactive",
+    "icon": "flag",
+    "description": "Multi-milestone progress tracker showing completion status on a visual timeline.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-progress-tracker-editor",
+    "style": "bkbg-progress-tracker-style",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Q1 2025 Objectives"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "number",
+            "default": 680
+        },
+        "dotRadius": {
+            "type": "number",
+            "default": 18
+        },
+        "lineWidth": {
+            "type": "number",
+            "default": 5
+        },
+        "showDates": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescriptions": {
+            "type": "boolean",
+            "default": true
+        },
+        "titleTypo": { "type": "object", "default": {} },
+        "labelTypo": { "type": "object", "default": {} },
+        "descTypo": { "type": "object", "default": {} },
+        "completedColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "activeColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "pendingColor": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "steps": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Planning",
+                    "description": "Define scope & roadmap",
+                    "date": "Jan 5",
+                    "status": "done"
+                },
+                {
+                    "label": "Design",
+                    "description": "UX mockups & prototypes",
+                    "date": "Jan 20",
+                    "status": "done"
+                },
+                {
+                    "label": "Development",
+                    "description": "Build core features",
+                    "date": "Feb 15",
+                    "status": "active"
+                },
+                {
+                    "label": "QA Testing",
+                    "description": "Bug fixes & performance",
+                    "date": "Mar 5",
+                    "status": "pending"
+                },
+                {
+                    "label": "Launch",
+                    "description": "Deploy to production",
+                    "date": "Mar 20",
+                    "status": "pending"
+                }
+            ]
+        }
+    }
+}

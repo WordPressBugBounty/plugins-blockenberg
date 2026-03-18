@@ -1,0 +1,100 @@
+.bkbg-tax-editor { width: 100%; }
+.bkbg-tax-wrap   { width: 100%; box-sizing: border-box; }
+.bkbg-tax-card   { box-sizing: border-box; }
+
+/* ── Title (h3 — Rule 7 specificity) ──────────────────────────────── */
+.bkbg-tax-editor h3.bkbg-tax-title,
+.bkbg-tax-app h3.bkbg-tax-title {
+    font-family:     var(--bktxc-tt-font-family, inherit);
+    font-size:       var(--bktxc-tt-font-size-d, 28px);
+    line-height:     var(--bktxc-tt-line-height-d, 1.2);
+    letter-spacing:  var(--bktxc-tt-letter-spacing-d);
+    word-spacing:    var(--bktxc-tt-word-spacing-d);
+    font-weight:     var(--bktxc-tt-font-weight, 700);
+    font-style:      var(--bktxc-tt-font-style);
+    text-decoration: var(--bktxc-tt-text-decoration);
+    text-transform:  var(--bktxc-tt-text-transform);
+}
+
+.bkbg-tax-mode-btn {
+    flex: 1;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    transition: background 0.15s, color 0.15s;
+}
+
+.bkbg-tax-input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.bkbg-tax-input-row label { font-size: 14px; }
+
+.bkbg-tax-input-row input {
+    width: 110px;
+    text-align: right;
+    border: 1px solid #d1d5db;
+    padding: 5px 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.bkbg-tax-preset-chip {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+
+.bkbg-tax-result-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.bkbg-tax-result-col {
+    flex: 1;
+    text-align: center;
+    min-width: 100px;
+}
+
+.bkbg-tax-result-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+}
+
+.bkbg-tax-result-val {
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+/* ── Responsive typography ──────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-tax-editor h3.bkbg-tax-title,
+    .bkbg-tax-app h3.bkbg-tax-title {
+        font-size:      var(--bktxc-tt-font-size-t, var(--bktxc-tt-font-size-d, 28px));
+        line-height:    var(--bktxc-tt-line-height-t, var(--bktxc-tt-line-height-d, 1.2));
+        letter-spacing: var(--bktxc-tt-letter-spacing-t, var(--bktxc-tt-letter-spacing-d));
+        word-spacing:   var(--bktxc-tt-word-spacing-t, var(--bktxc-tt-word-spacing-d));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-tax-editor h3.bkbg-tax-title,
+    .bkbg-tax-app h3.bkbg-tax-title {
+        font-size:      var(--bktxc-tt-font-size-m, var(--bktxc-tt-font-size-t, var(--bktxc-tt-font-size-d, 28px)));
+        line-height:    var(--bktxc-tt-line-height-m, var(--bktxc-tt-line-height-t, var(--bktxc-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bktxc-tt-letter-spacing-m, var(--bktxc-tt-letter-spacing-t, var(--bktxc-tt-letter-spacing-d)));
+        word-spacing:   var(--bktxc-tt-word-spacing-m, var(--bktxc-tt-word-spacing-t, var(--bktxc-tt-word-spacing-d)));
+    }
+}

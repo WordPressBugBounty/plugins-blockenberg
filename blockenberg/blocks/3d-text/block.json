@@ -1,0 +1,138 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/text-3d",
+    "title": "3D Text",
+    "category": "bkbg-effects",
+    "icon": "text",
+    "description": "Eye-catching 3D extruded text using CSS text-shadow layers and perspective transforms. Supports rotate-on-hover, float animation, and customizable depth, colors and typography.",
+    "keywords": [
+        "3d",
+        "text",
+        "extrude",
+        "depth",
+        "perspective",
+        "shadow",
+        "dimensional",
+        "effect"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-3d-text-editor",
+    "style": "bkbg-3d-text-style",
+    "viewScript": "bkbg-3d-text-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "text": {
+            "type": "string",
+            "default": "3D TEXT"
+        },
+        "tag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "style3d": {
+            "type": "string",
+            "default": "extrude"
+        },
+        "depth": {
+            "type": "number",
+            "default": 8
+        },
+        "angle": {
+            "type": "number",
+            "default": 45
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 72
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "900"
+        },
+        "letterSpacing": {
+            "type": "number",
+            "default": 4
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "textTransform": {
+            "type": "string",
+            "default": "uppercase"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "depthColor": {
+            "type": "string",
+            "default": "#312e81"
+        },
+        "shadowColor": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.25)"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "showBg": {
+            "type": "boolean",
+            "default": true
+        },
+        "paddingV": {
+            "type": "number",
+            "default": 48
+        },
+        "paddingH": {
+            "type": "number",
+            "default": 32
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 0
+        },
+        "animation": {
+            "type": "string",
+            "default": "none"
+        },
+        "hoverEffect": {
+            "type": "string",
+            "default": "tilt"
+        },
+        "showReflection": {
+            "type": "boolean",
+            "default": false
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 110
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "gradientText": {
+            "type": "boolean",
+            "default": false
+        },
+        "gradientFrom": {
+            "type": "string",
+            "default": "#a78bfa"
+        },
+        "gradientTo": {
+            "type": "string",
+            "default": "#60a5fa"
+        }
+    }
+}

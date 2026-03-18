@@ -1,0 +1,110 @@
+/* =====================================================
+   Rotating Image Tiles — bkbg-rit-*
+   ===================================================== */
+
+.bkbg-rit-app {
+    box-sizing: border-box;
+}
+
+.bkbg-rit-grid {
+    display: grid;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ── Tile wrapper ── */
+.bkbg-rit-tile {
+    cursor: pointer;
+    -webkit-perspective: 900px;
+    perspective: 900px;
+    flex-shrink: 0;
+}
+
+/* ── Flip inner ── */
+.bkbg-rit-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: transform 600ms cubic-bezier(.4, 0, .2, 1);
+    will-change: transform;
+}
+
+/* Flipped state — Y axis (default) */
+.bkbg-rit-axis-y .bkbg-rit-inner.bkbg-rit-flipped {
+    transform: rotateY(180deg);
+}
+
+/* Flipped state — X axis */
+.bkbg-rit-axis-x .bkbg-rit-inner.bkbg-rit-flipped {
+    transform: rotateX(180deg);
+}
+
+/* ── Face base ── */
+.bkbg-rit-front,
+.bkbg-rit-back {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Back face flip — Y */
+.bkbg-rit-axis-y .bkbg-rit-back {
+    transform: rotateY(180deg);
+}
+
+/* Back face flip — X */
+.bkbg-rit-axis-x .bkbg-rit-back {
+    transform: rotateX(180deg);
+}
+
+/* ── Label overlay ── */
+.bkbg-rit-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 12px;
+    text-align: center;
+    pointer-events: none;
+    font-family: var(--bkrit-lt-font-family, inherit);
+    font-size: var(--bkrit-lt-font-size-d, 14px);
+    font-weight: var(--bkrit-lt-font-weight, 600);
+    font-style: var(--bkrit-lt-font-style, normal);
+    text-decoration: var(--bkrit-lt-text-decoration, none);
+    text-transform: var(--bkrit-lt-text-transform, none);
+    line-height: var(--bkrit-lt-line-height-d, 1.3);
+    letter-spacing: var(--bkrit-lt-letter-spacing-d, normal);
+    word-spacing: var(--bkrit-lt-word-spacing-d, normal);
+}
+
+@media (max-width: 1024px) {
+    .bkbg-rit-label {
+        font-size: var(--bkrit-lt-font-size-t, var(--bkrit-lt-font-size-d, 14px));
+        line-height: var(--bkrit-lt-line-height-t, var(--bkrit-lt-line-height-d, 1.3));
+        letter-spacing: var(--bkrit-lt-letter-spacing-t, var(--bkrit-lt-letter-spacing-d, normal));
+        word-spacing: var(--bkrit-lt-word-spacing-t, var(--bkrit-lt-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-rit-label {
+        font-size: var(--bkrit-lt-font-size-m, var(--bkrit-lt-font-size-t, var(--bkrit-lt-font-size-d, 14px)));
+        line-height: var(--bkrit-lt-line-height-m, var(--bkrit-lt-line-height-t, var(--bkrit-lt-line-height-d, 1.3)));
+        letter-spacing: var(--bkrit-lt-letter-spacing-m, var(--bkrit-lt-letter-spacing-t, var(--bkrit-lt-letter-spacing-d, normal)));
+        word-spacing: var(--bkrit-lt-word-spacing-m, var(--bkrit-lt-word-spacing-t, var(--bkrit-lt-word-spacing-d, normal)));
+    }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+    .bkbg-rit-inner {
+        transition: none !important;
+    }
+}

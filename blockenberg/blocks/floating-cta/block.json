@@ -1,0 +1,121 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/floating-cta",
+    "title": "Floating CTA",
+    "category": "bkbg-marketing",
+    "icon": "megaphone",
+    "description": "Fixed-position floating call-to-action button that sticks during scroll. Configurable position, icon, label, and trigger delay.",
+    "keywords": [
+        "floating",
+        "fixed",
+        "cta",
+        "button",
+        "sticky",
+        "call to action"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-floating-cta-editor",
+    "editorStyle": "bkbg-floating-cta-style",
+    "style": "bkbg-floating-cta-style",
+    "viewScript": "bkbg-floating-cta-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true
+    },
+    "attributes": {
+        "label": {
+            "type": "string",
+            "default": "Get a Quote"
+        },
+        "url": {
+            "type": "string",
+            "default": "#contact"
+        },
+        "openInNew": {
+            "type": "boolean",
+            "default": false
+        },
+        "icon": {
+            "type": "string",
+            "default": "megaphone"
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "position": {
+            "type": "string",
+            "default": "bottom-right"
+        },
+        "offsetX": {
+            "type": "number",
+            "default": 24
+        },
+        "offsetY": {
+            "type": "number",
+            "default": 24
+        },
+        "scrollTrigger": {
+            "type": "number",
+            "default": 300
+        },
+        "showDismiss": {
+            "type": "boolean",
+            "default": false
+        },
+        "pulsing": {
+            "type": "boolean",
+            "default": true
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 50
+        },
+        "btnShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "fontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "typoBtn": {
+            "type": "object",
+            "default": {}
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 20
+        },
+        "paddingX": {
+            "type": "number",
+            "default": 20
+        },
+        "paddingY": {
+            "type": "number",
+            "default": 14
+        },
+        "zIndex": {
+            "type": "number",
+            "default": 9999
+        }
+    }
+}

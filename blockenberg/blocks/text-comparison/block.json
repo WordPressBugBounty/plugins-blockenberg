@@ -1,0 +1,279 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/text-comparison",
+    "title": "Text Comparison",
+    "category": "bkbg-dev",
+    "description": "Two-column narrative comparison block for Before/After, Problem/Solution, Old Way/New Way contrasts using styled bullet lists.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-text-comparison-editor",
+    "style": "bkbg-text-comparison-style",
+    "viewScript": "bkbg-text-comparison-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "leftLabel": {
+            "type": "string",
+            "default": "The Old Way"
+        },
+        "leftDescription": {
+            "type": "string",
+            "default": "How things used to work — slow, painful, and expensive."
+        },
+        "leftIcon": {
+            "type": "string",
+            "default": "😩"
+        },
+        "leftIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "leftIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "leftIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "leftItems": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "li1",
+                    "text": "Hours wasted on manual spreadsheets"
+                },
+                {
+                    "id": "li2",
+                    "text": "Costly mistakes from outdated data"
+                },
+                {
+                    "id": "li3",
+                    "text": "Siloed teams with no visibility"
+                },
+                {
+                    "id": "li4",
+                    "text": "Impossible to scale without more headcount"
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "leftItemIcon": {
+            "type": "string",
+            "default": "✗"
+        },
+        "leftItemIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "leftItemIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "leftItemIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "rightLabel": {
+            "type": "string",
+            "default": "With Our Solution"
+        },
+        "rightDescription": {
+            "type": "string",
+            "default": "A smarter way to work — fast, accurate, and built to grow with you."
+        },
+        "rightIcon": {
+            "type": "string",
+            "default": "🚀"
+        },
+        "rightIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "rightIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "rightIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "rightItems": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "ri1",
+                    "text": "Automated workflows that save hours every week"
+                },
+                {
+                    "id": "ri2",
+                    "text": "Real-time data you can trust"
+                },
+                {
+                    "id": "ri3",
+                    "text": "Full team alignment at a glance"
+                },
+                {
+                    "id": "ri4",
+                    "text": "Scales seamlessly as your business grows"
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "rightItemIcon": {
+            "type": "string",
+            "default": "✓"
+        },
+        "rightItemIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "rightItemIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "rightItemIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescriptions": {
+            "type": "boolean",
+            "default": true
+        },
+        "style": {
+            "type": "string",
+            "default": "cards"
+        },
+        "showDivider": {
+            "type": "boolean",
+            "default": true
+        },
+        "dividerStyle": {
+            "type": "string",
+            "default": "line"
+        },
+        "headerAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "maxWidth": {
+            "type": "integer",
+            "default": 960
+        },
+        "gap": {
+            "type": "integer",
+            "default": 0
+        },
+        "cardRadius": {
+            "type": "integer",
+            "default": 16
+        },
+        "cardPadding": {
+            "type": "integer",
+            "default": 32
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "itemTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "iconSize": {
+            "type": "integer",
+            "default": 32
+        },
+        "iconSize": {
+            "type": "integer",
+            "default": 32
+        },
+        "itemIconSize": {
+            "type": "integer",
+            "default": 16
+        },
+        "leftBg": {
+            "type": "string",
+            "default": "#fff5f5"
+        },
+        "rightBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "leftBorderColor": {
+            "type": "string",
+            "default": "#fecaca"
+        },
+        "rightBorderColor": {
+            "type": "string",
+            "default": "#bbf7d0"
+        },
+        "leftLabelColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "rightLabelColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "leftItemIconColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "rightItemIconColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "leftTextColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "rightTextColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "leftDescColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "rightDescColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 64
+        }
+    }
+}

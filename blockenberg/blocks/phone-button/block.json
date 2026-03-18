@@ -1,0 +1,127 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/phone-button",
+    "title": "Phone Button",
+    "category": "bkbg-marketing",
+    "description": "A floating or inline click-to-call / WhatsApp button with pulse animation.",
+    "keywords": [
+        "phone",
+        "call",
+        "whatsapp",
+        "contact",
+        "floating",
+        "button"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-phone-button-editor",
+    "style": "bkbg-phone-button-style",
+    "viewScript": "bkbg-phone-button-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "phoneNumber": {
+            "type": "string",
+            "default": "+1234567890"
+        },
+        "whatsappNumber": {
+            "type": "string",
+            "default": ""
+        },
+        "whatsappMessage": {
+            "type": "string",
+            "default": "Hello! I'd like to get in touch."
+        },
+        "mode": {
+            "type": "string",
+            "default": "both"
+        },
+        "layout": {
+            "type": "string",
+            "default": "floating"
+        },
+        "position": {
+            "type": "string",
+            "default": "bottom-right"
+        },
+        "showPulse": {
+            "type": "boolean",
+            "default": true
+        },
+        "buttonText": {
+            "type": "string",
+            "default": "Call us"
+        },
+        "showText": {
+            "type": "boolean",
+            "default": false
+        },
+        "buttonSize": {
+            "type": "number",
+            "default": 56
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 26
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 999
+        },
+        "gap": {
+            "type": "number",
+            "default": 14
+        },
+        "shadowStrength": {
+            "type": "number",
+            "default": 30
+        },
+        "scrollOffset": {
+            "type": "number",
+            "default": 0
+        },
+        "phoneBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "phoneColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "phonePulseBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "whatsappBg": {
+            "type": "string",
+            "default": "#25d366"
+        },
+        "whatsappColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "whatsappPulseBg": {
+            "type": "string",
+            "default": "#25d366"
+        },
+        "labelBg": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

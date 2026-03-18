@@ -1,0 +1,237 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/book-shelf",
+    "version": "1.0.0",
+    "title": "Book Shelf",
+    "category": "bkbg-blog",
+    "icon": "book-alt",
+    "description": "A visual reading list with a realistic bookshelf view, cards layout, or list — complete with ratings, reading status, and genre tags.",
+    "keywords": [
+        "book",
+        "reading",
+        "shelf",
+        "library",
+        "review",
+        "list",
+        "reading list",
+        "goodreads"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-book-shelf-editor",
+    "editorStyle": "bkbg-book-shelf-style",
+    "style": "bkbg-book-shelf-style",
+    "viewScript": "bkbg-book-shelf-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "shelfTitle": {
+            "type": "string",
+            "default": "My Reading List"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "shelf"
+        },
+        "showRating": {
+            "type": "boolean",
+            "default": true
+        },
+        "showStatus": {
+            "type": "boolean",
+            "default": true
+        },
+        "showYear": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGenre": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAuthor": {
+            "type": "boolean",
+            "default": true
+        },
+        "spineWidth": {
+            "type": "number",
+            "default": 46
+        },
+        "spineHeight": {
+            "type": "number",
+            "default": 190
+        },
+        "books": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "The Pragmatic Programmer",
+                    "author": "Hunt & Thomas",
+                    "coverColor": "#1d4ed8",
+                    "genre": "Engineering",
+                    "status": "read",
+                    "rating": 5,
+                    "year": 1999
+                },
+                {
+                    "title": "Thinking, Fast and Slow",
+                    "author": "Daniel Kahneman",
+                    "coverColor": "#b45309",
+                    "genre": "Psychology",
+                    "status": "read",
+                    "rating": 5,
+                    "year": 2011
+                },
+                {
+                    "title": "The Design of Everyday Things",
+                    "author": "Don Norman",
+                    "coverColor": "#7c3aed",
+                    "genre": "Design",
+                    "status": "read",
+                    "rating": 4,
+                    "year": 1988
+                },
+                {
+                    "title": "Zero to One",
+                    "author": "Peter Thiel",
+                    "coverColor": "#0f766e",
+                    "genre": "Business",
+                    "status": "read",
+                    "rating": 4,
+                    "year": 2014
+                },
+                {
+                    "title": "Deep Work",
+                    "author": "Cal Newport",
+                    "coverColor": "#b91c1c",
+                    "genre": "Productivity",
+                    "status": "reading",
+                    "rating": 4,
+                    "year": 2016
+                },
+                {
+                    "title": "The Mom Test",
+                    "author": "Rob Fitzpatrick",
+                    "coverColor": "#d97706",
+                    "genre": "Startups",
+                    "status": "reading",
+                    "rating": 5,
+                    "year": 2013
+                },
+                {
+                    "title": "Atomic Habits",
+                    "author": "James Clear",
+                    "coverColor": "#065f46",
+                    "genre": "Self-Help",
+                    "status": "want",
+                    "rating": 0,
+                    "year": 2018
+                },
+                {
+                    "title": "Shape Up",
+                    "author": "Ryan Singer",
+                    "coverColor": "#831843",
+                    "genre": "Product",
+                    "status": "want",
+                    "rating": 0,
+                    "year": 2019
+                }
+            ]
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "spineFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#1c1410"
+        },
+        "shelfColor": {
+            "type": "string",
+            "default": "#8B5E3C"
+        },
+        "shelfShadow": {
+            "type": "string",
+            "default": "#5c3d1e"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#2d1f14"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#f5deb3"
+        },
+        "spineTextColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "statusReadBg": {
+            "type": "string",
+            "default": "#166534"
+        },
+        "statusReadingBg": {
+            "type": "string",
+            "default": "#1e40af"
+        },
+        "statusWantBg": {
+            "type": "string",
+            "default": "#78350f"
+        },
+        "genreBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "genreColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "cardBorderColor": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "authorColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "ratingColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

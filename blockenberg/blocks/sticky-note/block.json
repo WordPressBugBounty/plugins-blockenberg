@@ -1,0 +1,98 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/sticky-note",
+	"title": "Sticky Note",
+	"category": "bkbg-content",
+	"icon": "sticky",
+	"description": "Colored post-it style note with optional rotation, shadow, curl corner and handwritten font.",
+	"keywords": [
+		"sticky",
+		"note",
+		"post-it",
+		"reminder",
+		"memo",
+		"tip"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-sticky-note-editor",
+	"editorStyle": "bkbg-sticky-note-style",
+	"style": "bkbg-sticky-note-style",
+	"viewScript": "bkbg-sticky-note-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": []
+	},
+	"attributes": {
+		"text": {
+			"type": "string",
+			"default": "Don't forget to check this out!"
+		},
+		"noteColor": {
+			"type": "string",
+			"default": "#fef08a"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#333333"
+		},
+		"headingText": {
+			"type": "string",
+			"default": ""
+		},
+		"preset": {
+			"type": "string",
+			"default": "yellow"
+		},
+		"rotated": {
+			"type": "boolean",
+			"default": true
+		},
+		"rotationDeg": {
+			"type": "number",
+			"default": -2
+		},
+		"handwrittenFont": {
+			"type": "boolean",
+			"default": false
+		},
+		"curlCorner": {
+			"type": "boolean",
+			"default": true
+		},
+		"shadow": {
+			"type": "boolean",
+			"default": true
+		},
+		"width": {
+			"type": "number",
+			"default": 220
+		},
+		"fontSize": {
+			"type": "number",
+			"default": 15
+		},
+		"padding": {
+			"type": "number",
+			"default": 20
+		},
+		"fontWeight": {
+			"type": "string",
+			"default": "400"
+		},
+		"lineHeight": {
+			"type": "number",
+			"default": 1.5
+		},
+		"headingTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"textTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

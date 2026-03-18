@@ -1,0 +1,220 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockenberg/sticky-header",
+  "version": "1.0.0",
+  "title": "Sticky Header",
+  "category": "bkbg-layout",
+  "icon": "menu-alt",
+  "description": "A fully-styled site header with logo (image or text), navigation links, and an optional CTA button. Sticks to the top on scroll with a shrink animation. Supports light, dark, glass, and gradient style variants.",
+  "keywords": [
+    "header",
+    "navigation",
+    "sticky",
+    "nav",
+    "menu",
+    "logo",
+    "site header"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-sticky-header-editor",
+  "style": "bkbg-sticky-header-style",
+  "viewScript": "bkbg-sticky-header-frontend",
+  "supports": {
+    "html": false,
+    "align": [
+      "full"
+    ]
+  },
+  "attributes": {
+    "logoText": {
+      "type": "string",
+      "default": "MySite"
+    },
+    "logoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "logoId": {
+      "type": "integer",
+      "default": 0
+    },
+    "logoWidth": {
+      "type": "integer",
+      "default": 140
+    },
+    "showLogo": {
+      "type": "boolean",
+      "default": true
+    },
+    "siteUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "navLinks": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Features",
+          "url": "#",
+          "openNew": false
+        },
+        {
+          "label": "Pricing",
+          "url": "#",
+          "openNew": false
+        },
+        {
+          "label": "Blog",
+          "url": "#",
+          "openNew": false
+        },
+        {
+          "label": "About",
+          "url": "#",
+          "openNew": false
+        }
+      ]
+    },
+    "showCta": {
+      "type": "boolean",
+      "default": true
+    },
+    "ctaText": {
+      "type": "string",
+      "default": "Get Started"
+    },
+    "ctaUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "ctaOpenNew": {
+      "type": "boolean",
+      "default": false
+    },
+    "showMobileMenu": {
+      "type": "boolean",
+      "default": true
+    },
+    "sticky": {
+      "type": "boolean",
+      "default": true
+    },
+    "scrollShrink": {
+      "type": "boolean",
+      "default": true
+    },
+    "style": {
+      "type": "string",
+      "default": "light"
+    },
+    "height": {
+      "type": "integer",
+      "default": 70
+    },
+    "heightShrunk": {
+      "type": "integer",
+      "default": 56
+    },
+    "maxWidth": {
+      "type": "integer",
+      "default": 1200
+    },
+    "logoSize": {
+      "type": "integer",
+      "default": 22
+    },
+    "logoWeight": {
+      "type": "integer",
+      "default": 800
+    },
+    "linkSize": {
+      "type": "integer",
+      "default": 15
+    },
+    "linkGap": {
+      "type": "integer",
+      "default": 32
+    },
+    "ctaSize": {
+      "type": "integer",
+      "default": 14
+    },
+    "ctaRadius": {
+      "type": "integer",
+      "default": 8
+    },
+    "borderBottom": {
+      "type": "boolean",
+      "default": true
+    },
+    "shadow": {
+      "type": "boolean",
+      "default": false
+    },
+    "zIndex": {
+      "type": "integer",
+      "default": 1000
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#0f172a"
+    },
+    "linkColor": {
+      "type": "string",
+      "default": "#374151"
+    },
+    "linkHoverColor": {
+      "type": "string",
+      "default": "#6c3fb5"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": "#6c3fb5"
+    },
+    "ctaBg": {
+      "type": "string",
+      "default": "#6c3fb5"
+    },
+    "ctaTextColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "borderColor": {
+      "type": "string",
+      "default": "#e2e8f0"
+    },
+    "linkWeight": {
+      "type": "string",
+      "default": "400"
+    },
+    "ctaWeight": {
+      "type": "string",
+      "default": "600"
+    },
+    "logoLineHeight": {
+      "type": "number",
+      "default": 1.0
+    },
+    "linkLineHeight": {
+      "type": "number",
+      "default": 1.0
+    },
+    "logoTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "linkTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "ctaTypo": {
+      "type": "object",
+      "default": {}
+    }
+  }
+}

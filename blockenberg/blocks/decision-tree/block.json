@@ -1,0 +1,263 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/decision-tree",
+    "version": "1.0.0",
+    "title": "Decision Tree",
+    "category": "bkbg-charts",
+    "icon": "networking",
+    "description": "Interactive step-by-step decision tree. Visitors answer yes/no (or custom) questions and follow branches to a personalised result. Fully editable node graph with breadcrumb trail and back navigation.",
+    "keywords": [
+        "decision",
+        "tree",
+        "quiz",
+        "flowchart",
+        "branching",
+        "interactive",
+        "yes no"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-decision-tree-editor",
+    "style": "bkbg-decision-tree-style",
+    "viewScript": "bkbg-decision-tree-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Find Your Perfect Stack"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Answer a few questions to find the right technology for your project"
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "rootId": {
+            "type": "string",
+            "default": "q1"
+        },
+        "nodes": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "q1",
+                    "type": "question",
+                    "text": "Do you need real-time data updates (live feeds, chat, dashboards)?",
+                    "yesId": "q2",
+                    "noId": "q3",
+                    "yesLabel": "Yes, real-time",
+                    "noLabel": "No, periodic"
+                },
+                {
+                    "id": "q2",
+                    "type": "question",
+                    "text": "Will it handle more than 10,000 concurrent users?",
+                    "yesId": "r1",
+                    "noId": "r2",
+                    "yesLabel": "Yes, large scale",
+                    "noLabel": "No, smaller"
+                },
+                {
+                    "id": "q3",
+                    "type": "question",
+                    "text": "Do you have a backend team to manage infrastructure?",
+                    "yesId": "q4",
+                    "noId": "r3",
+                    "yesLabel": "Yes, we do",
+                    "noLabel": "No, just me"
+                },
+                {
+                    "id": "q4",
+                    "type": "question",
+                    "text": "Do you need offline support or mobile app parity?",
+                    "yesId": "r4",
+                    "noId": "r5",
+                    "yesLabel": "Yes, offline too",
+                    "noLabel": "No, web only"
+                },
+                {
+                    "id": "r1",
+                    "type": "result",
+                    "text": "Go with WebSockets + a message broker (Redis / Kafka). Horizontally scalable, battle-tested for high throughput.",
+                    "resultColor": "#6c3fb5"
+                },
+                {
+                    "id": "r2",
+                    "type": "result",
+                    "text": "Server-Sent Events (SSE) is perfect — simpler than WebSockets, native browser support, great for one-way streams.",
+                    "resultColor": "#3b82f6"
+                },
+                {
+                    "id": "r3",
+                    "type": "result",
+                    "text": "A managed BaaS like Supabase or Firebase will get you moving fast without ops overhead.",
+                    "resultColor": "#10b981"
+                },
+                {
+                    "id": "r4",
+                    "type": "result",
+                    "text": "Consider a PWA with local-first sync (CRDTs / PocketBase). Works offline and syncs when reconnected.",
+                    "resultColor": "#f59e0b"
+                },
+                {
+                    "id": "r5",
+                    "type": "result",
+                    "text": "A classic REST API with polling or webhooks is simple, debuggable, and will serve you well for most use-cases.",
+                    "resultColor": "#06b6d4"
+                }
+            ]
+        },
+        "showBreadcrumb": {
+            "type": "boolean",
+            "default": true
+        },
+        "showProgress": {
+            "type": "boolean",
+            "default": true
+        },
+        "yesIcon": {
+            "type": "string",
+            "default": "✓"
+        },
+        "yesIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "yesIconDashicon": {
+            "type": "string",
+            "default": "yes"
+        },
+        "yesIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "noIcon": {
+            "type": "string",
+            "default": "✕"
+        },
+        "noIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "noIconDashicon": {
+            "type": "string",
+            "default": "no"
+        },
+        "noIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "questionColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "yesBg": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "yesText": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "noBg": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "noText": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "backBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "backText": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "breadcrumbColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "resultTextColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderRadius": {
+            "type": "integer",
+            "default": 16
+        },
+        "cardRadius": {
+            "type": "integer",
+            "default": 12
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 48
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 48
+        },
+        "titleSize": {
+            "type": "integer",
+            "default": 24
+        },
+        "subtitleFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "questionSize": {
+            "type": "integer",
+            "default": 18
+        },
+        "fontSize": {
+            "type": "integer",
+            "default": 15
+        },
+        "breadcrumbFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

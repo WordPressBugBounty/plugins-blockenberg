@@ -1,0 +1,152 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/bullet-chart",
+    "title": "Bullet Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-bar",
+    "description": "Stephen Few's bullet chart — shows actual performance against a target, with background bands for Poor / Satisfactory / Good ranges.",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "2024 KPI Dashboard"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "integer",
+            "default": 680
+        },
+        "padTop": {
+            "type": "integer",
+            "default": 16
+        },
+        "padLeft": {
+            "type": "integer",
+            "default": 160
+        },
+        "padRight": {
+            "type": "integer",
+            "default": 60
+        },
+        "rowHeight": {
+            "type": "integer",
+            "default": 52
+        },
+        "barThickness": {
+            "type": "integer",
+            "default": 16
+        },
+        "targetWidth": {
+            "type": "integer",
+            "default": 4
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGridLines": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelFontSize": {
+            "type": "integer",
+            "default": 13
+        },
+        "valueFontSize": {
+            "type": "integer",
+            "default": 10
+        },
+        "bandColorPoor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "bandColorSat": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "bandColorGood": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "targetColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "series": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Revenue ($k)",
+                    "color": "#6366f1",
+                    "actual": 270,
+                    "target": 300,
+                    "poor": 100,
+                    "sat": 200,
+                    "good": 300,
+                    "max": 350
+                },
+                {
+                    "label": "Users (k)",
+                    "color": "#10b981",
+                    "actual": 42,
+                    "target": 50,
+                    "poor": 20,
+                    "sat": 35,
+                    "good": 50,
+                    "max": 60
+                },
+                {
+                    "label": "Conversion %",
+                    "color": "#f59e0b",
+                    "actual": 3.8,
+                    "target": 5.0,
+                    "poor": 1,
+                    "sat": 3,
+                    "good": 5,
+                    "max": 7
+                },
+                {
+                    "label": "NPS Score",
+                    "color": "#ef4444",
+                    "actual": 42,
+                    "target": 60,
+                    "poor": 0,
+                    "sat": 30,
+                    "good": 60,
+                    "max": 80
+                }
+            ]
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "editorScript": "bkbg-bullet-chart-editor",
+    "style": "bkbg-bullet-chart-style"
+}

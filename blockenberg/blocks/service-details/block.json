@@ -1,0 +1,196 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/service-details",
+	"version": "1.0.0",
+	"title": "Service Details",
+	"category": "bkbg-business",
+	"icon": "awards",
+	"description": "Full in-depth service section with large side image, heading, body text, feature checklist, and dual CTAs. Layout toggles image side.",
+	"keywords": [
+		"service",
+		"details",
+		"features",
+		"checklist",
+		"alternating",
+		"section"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-service-details-editor",
+	"style": "bkbg-service-details-style",
+	"viewScript": "bkbg-service-details-frontend",
+	"supports": {
+		"html": false,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"imageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"imageId": {
+			"type": "integer",
+			"default": 0
+		},
+		"imageAlt": {
+			"type": "string",
+			"default": ""
+		},
+		"imageRadius": {
+			"type": "integer",
+			"default": 12
+		},
+		"layout": {
+			"type": "string",
+			"default": "image-left"
+		},
+		"eyebrow": {
+			"type": "string",
+			"default": "What we offer"
+		},
+		"showEyebrow": {
+			"type": "boolean",
+			"default": true
+		},
+		"heading": {
+			"type": "string",
+			"default": "Everything you need to succeed"
+		},
+		"subtext": {
+			"type": "string",
+			"default": "We combine deep expertise with modern tools to deliver results that last."
+		},
+		"bodyText": {
+			"type": "string",
+			"default": ""
+		},
+		"features": {
+			"type": "array",
+			"default": [
+				{
+					"icon": "✓",
+					"text": "End-to-end strategy and execution"
+				},
+				{
+					"icon": "✓",
+					"text": "Dedicated support team available 24/7"
+				},
+				{
+					"icon": "✓",
+					"text": "Measurable results within 30 days"
+				},
+				{
+					"icon": "✓",
+					"text": "Fully customised to your business goals"
+				}
+			]
+		},
+		"showFeatures": {
+			"type": "boolean",
+			"default": true
+		},
+		"ctaEnabled": {
+			"type": "boolean",
+			"default": true
+		},
+		"ctaLabel": {
+			"type": "string",
+			"default": "Get started →"
+		},
+		"ctaUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"cta2Enabled": {
+			"type": "boolean",
+			"default": true
+		},
+		"cta2Label": {
+			"type": "string",
+			"default": "Learn more"
+		},
+		"cta2Url": {
+			"type": "string",
+			"default": "#"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"eyebrowColor": {
+			"type": "string",
+			"default": "#7c3aed"
+		},
+		"headingColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"bodyColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"featureColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"checkBg": {
+			"type": "string",
+			"default": "#ede9fe"
+		},
+		"checkColor": {
+			"type": "string",
+			"default": "#7c3aed"
+		},
+		"ctaBg": {
+			"type": "string",
+			"default": "#7c3aed"
+		},
+		"ctaColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"cta2Color": {
+			"type": "string",
+			"default": "#7c3aed"
+		},
+		"headingSize": {
+			"type": "integer",
+			"default": 36
+		},
+		"bodySize": {
+			"type": "integer",
+			"default": 16
+		},
+		"maxWidth": {
+			"type": "integer",
+			"default": 1060
+		},
+		"paddingTop": {
+			"type": "integer",
+			"default": 64
+		},
+		"paddingBottom": {
+			"type": "integer",
+			"default": 64
+		},
+		"headingFontWeight": {
+			"type": "number",
+			"default": 800
+		},
+		"headingTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"eyebrowTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"bodyTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

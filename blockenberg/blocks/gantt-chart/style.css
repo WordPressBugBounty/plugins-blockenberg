@@ -1,0 +1,276 @@
+/* =====================================================
+   Gantt Chart – bkbg-gant-*
+   ===================================================== */
+
+.bkbg-gant-outer {
+    box-sizing: border-box;
+    font-family: var(--bkbg-gant-lb-font-family, system-ui, -apple-system, sans-serif);
+    font-size: var(--bkbg-gant-lb-font-size-d, 12px);
+    font-weight: var(--bkbg-gant-lb-font-weight, 400);
+    font-style: var(--bkbg-gant-lb-font-style, normal);
+    text-decoration: var(--bkbg-gant-lb-text-decoration, none);
+    text-transform: var(--bkbg-gant-lb-text-transform, none);
+    line-height: var(--bkbg-gant-lb-line-height-d, 1.4);
+    letter-spacing: var(--bkbg-gant-lb-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-gant-lb-word-spacing-d, normal);
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+.bkbg-gant-outer::-webkit-scrollbar {
+    height: 6px;
+}
+
+.bkbg-gant-outer::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: rgba(0,0,0,0.15);
+}
+
+/* ---- Chart layout ---- */
+.bkbg-gant-layout {
+    display: flex;
+    min-width: 600px;
+}
+
+/* ---- Label column ---- */
+.bkbg-gant-labels {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.bkbg-gant-header-cell {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px;
+    font-family: var(--bkbg-gant-hd-font-family, inherit);
+    font-size: var(--bkbg-gant-hd-font-size-d, 11px);
+    font-weight: var(--bkbg-gant-hd-font-weight, 700);
+    font-style: var(--bkbg-gant-hd-font-style, normal);
+    text-decoration: var(--bkbg-gant-hd-text-decoration, none);
+    text-transform: var(--bkbg-gant-hd-text-transform, none);
+    line-height: var(--bkbg-gant-hd-line-height-d, 1.3);
+    letter-spacing: var(--bkbg-gant-hd-letter-spacing-d, 0.03em);
+    word-spacing: var(--bkbg-gant-hd-word-spacing-d, normal);
+    box-sizing: border-box;
+}
+
+.bkbg-gant-label-cell {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.bkbg-gant-label-cell.is-phase {
+    font-family: var(--bkbg-gant-hd-font-family, inherit);
+    font-size: var(--bkbg-gant-hd-font-size-d, 11px);
+    font-weight: var(--bkbg-gant-hd-font-weight, 700);
+    font-style: var(--bkbg-gant-hd-font-style, normal);
+    text-decoration: var(--bkbg-gant-hd-text-decoration, none);
+    text-transform: var(--bkbg-gant-hd-text-transform, uppercase);
+    line-height: var(--bkbg-gant-hd-line-height-d, 1.3);
+    letter-spacing: var(--bkbg-gant-hd-letter-spacing-d, 0.05em);
+    word-spacing: var(--bkbg-gant-hd-word-spacing-d, normal);
+}
+
+.bkbg-gant-label-cell.is-task {
+    padding-left: 18px;
+}
+
+.bkbg-gant-label-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+}
+
+.bkbg-gant-assignee {
+    font-size: 10px;
+    opacity: 0.6;
+    flex-shrink: 0;
+    margin-left: 6px;
+}
+
+/* ---- Grid (chart area) ---- */
+.bkbg-gant-grid {
+    flex: 1;
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+}
+
+/* Month / week header row */
+.bkbg-gant-col-headers {
+    display: flex;
+    overflow: hidden;
+}
+
+.bkbg-gant-col-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--bkbg-gant-hd-font-family, inherit);
+    font-size: var(--bkbg-gant-hd-font-size-d, 11px);
+    font-weight: var(--bkbg-gant-hd-font-weight, 600);
+    font-style: var(--bkbg-gant-hd-font-style, normal);
+    text-decoration: var(--bkbg-gant-hd-text-decoration, none);
+    text-transform: var(--bkbg-gant-hd-text-transform, none);
+    line-height: var(--bkbg-gant-hd-line-height-d, 1.3);
+    letter-spacing: var(--bkbg-gant-hd-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-gant-hd-word-spacing-d, normal);
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 0 4px;
+}
+
+/* Task rows */
+.bkbg-gant-rows {
+    position: relative;
+}
+
+.bkbg-gant-row {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+/* Grid vertical lines */
+.bkbg-gant-col-lines {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bkbg-gant-col-line {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+/* ---- Task bar ---- */
+.bkbg-gant-bar {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+    cursor: default;
+    transition: filter 0.15s;
+}
+
+.bkbg-gant-bar:hover {
+    filter: brightness(1.1);
+}
+
+.bkbg-gant-bar-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.2);
+    pointer-events: none;
+}
+
+/* ---- Milestone ---- */
+.bkbg-gant-milestone {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%) rotate(45deg);
+    cursor: default;
+    transition: filter 0.15s;
+}
+
+.bkbg-gant-milestone:hover {
+    filter: brightness(1.15);
+}
+
+/* ---- Today indicator ---- */
+.bkbg-gant-today {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* ---- Legend ---- */
+.bkbg-gant-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 11px;
+    padding: 8px 4px 0 4px;
+    align-items: center;
+}
+
+.bkbg-gant-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bkbg-gant-legend-bar {
+    height: 8px;
+    width: 24px;
+    border-radius: 4px;
+}
+
+.bkbg-gant-legend-diamond {
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+}
+
+.bkbg-gant-legend-today {
+    width: 2px;
+    height: 14px;
+}
+
+/* Typography responsive */
+@media (max-width: 1024px) {
+    .bkbg-gant-outer {
+        font-size: var(--bkbg-gant-lb-font-size-t, var(--bkbg-gant-lb-font-size-d, 12px));
+        line-height: var(--bkbg-gant-lb-line-height-t, var(--bkbg-gant-lb-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-gant-lb-letter-spacing-t, var(--bkbg-gant-lb-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-gant-lb-word-spacing-t, var(--bkbg-gant-lb-word-spacing-d, normal));
+    }
+    .bkbg-gant-header-cell,
+    .bkbg-gant-label-cell.is-phase,
+    .bkbg-gant-col-header {
+        font-size: var(--bkbg-gant-hd-font-size-t, var(--bkbg-gant-hd-font-size-d, 11px));
+        line-height: var(--bkbg-gant-hd-line-height-t, var(--bkbg-gant-hd-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-gant-hd-letter-spacing-t, var(--bkbg-gant-hd-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-gant-hd-word-spacing-t, var(--bkbg-gant-hd-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-gant-outer {
+        font-size: var(--bkbg-gant-lb-font-size-m, var(--bkbg-gant-lb-font-size-t, var(--bkbg-gant-lb-font-size-d, 12px)));
+        line-height: var(--bkbg-gant-lb-line-height-m, var(--bkbg-gant-lb-line-height-t, var(--bkbg-gant-lb-line-height-d, 1.4)));
+        letter-spacing: var(--bkbg-gant-lb-letter-spacing-m, var(--bkbg-gant-lb-letter-spacing-t, var(--bkbg-gant-lb-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-gant-lb-word-spacing-m, var(--bkbg-gant-lb-word-spacing-t, var(--bkbg-gant-lb-word-spacing-d, normal)));
+    }
+    .bkbg-gant-header-cell,
+    .bkbg-gant-label-cell.is-phase,
+    .bkbg-gant-col-header {
+        font-size: var(--bkbg-gant-hd-font-size-m, var(--bkbg-gant-hd-font-size-t, var(--bkbg-gant-hd-font-size-d, 11px)));
+        line-height: var(--bkbg-gant-hd-line-height-m, var(--bkbg-gant-hd-line-height-t, var(--bkbg-gant-hd-line-height-d, 1.3)));
+        letter-spacing: var(--bkbg-gant-hd-letter-spacing-m, var(--bkbg-gant-hd-letter-spacing-t, var(--bkbg-gant-hd-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-gant-hd-word-spacing-m, var(--bkbg-gant-hd-word-spacing-t, var(--bkbg-gant-hd-word-spacing-d, normal)));
+    }
+}

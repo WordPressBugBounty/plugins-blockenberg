@@ -1,0 +1,152 @@
+.bkbg-terminal-wrap,
+.bkbg-terminal-mockup-wrap {
+    box-sizing: border-box;
+}
+
+.bkbg-terminal-window,
+.bkbg-terminal {
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', Menlo, Consolas, monospace;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), 0 6px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.bkbg-terminal-chrome,
+.bkbg-term-chrome {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 8px;
+    user-select: none;
+}
+
+.bkbg-terminal-dot,
+.bkbg-term-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.bkbg-terminal-dot--red    { background: #ff5f57; }
+.bkbg-terminal-dot--yellow { background: #febc2e; }
+.bkbg-terminal-dot--green  { background: #28c840; }
+
+.bkbg-terminal-title,
+.bkbg-term-title {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.5;
+    margin: 0;
+}
+
+.bkbg-terminal-body,
+.bkbg-term-body {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.bkbg-terminal-line,
+.bkbg-term-line {
+    display: block;
+    white-space: pre;
+    font-family: var(--bktm-cd-font-family, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', Menlo, Consolas, monospace);
+    font-size: var(--bktm-cd-font-size-d, 14px);
+    line-height: var(--bktm-cd-line-height-d, 1.8);
+    letter-spacing: var(--bktm-cd-letter-spacing-d, normal);
+    word-spacing: var(--bktm-cd-word-spacing-d, normal);
+    font-weight: var(--bktm-cd-font-weight, 400);
+    font-style: var(--bktm-cd-font-style, normal);
+    text-decoration: var(--bktm-cd-text-decoration, none);
+    text-transform: var(--bktm-cd-text-transform, none);
+}
+
+.bkbg-terminal-line--blank,
+.bkbg-term-line--blank {
+    display: block;
+    height: 0.6em;
+}
+
+.bkbg-terminal-number,
+.bkbg-term-lnum {
+    display: inline-block;
+    min-width: 2.5em;
+    text-align: right;
+    margin-right: 1em;
+    opacity: 0.35;
+    user-select: none;
+}
+
+.bkbg-terminal-cursor,
+.bkbg-term-cursor {
+    display: inline-block;
+    width: 0.6em;
+    height: 1em;
+    background: currentColor;
+    vertical-align: text-bottom;
+    margin-left: 1px;
+    animation: bkbg-cursor-blink 1.1s step-end infinite;
+}
+
+@keyframes bkbg-cursor-blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+/* Typewriter hidden state – JS removes this class */
+.bkbg-terminal-line.bkbg-tw-hidden,
+.bkbg-term-line.bkbg-tw-hidden {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+}
+.bkbg-terminal-line.bkbg-tw-typing,
+.bkbg-term-line.bkbg-tw-typing {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Scrollbar */
+.bkbg-terminal-body::-webkit-scrollbar,
+.bkbg-term-body::-webkit-scrollbar {
+    height: 4px;
+}
+.bkbg-terminal-body::-webkit-scrollbar-track,
+.bkbg-term-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+.bkbg-terminal-body::-webkit-scrollbar-thumb,
+.bkbg-term-body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+
+@media (max-width: 1024px) {
+    .bkbg-terminal-line,
+    .bkbg-term-line {
+        font-size: var(--bktm-cd-font-size-t, var(--bktm-cd-font-size-d, 14px));
+        line-height: var(--bktm-cd-line-height-t, var(--bktm-cd-line-height-d, 1.8));
+        letter-spacing: var(--bktm-cd-letter-spacing-t, var(--bktm-cd-letter-spacing-d, normal));
+        word-spacing: var(--bktm-cd-word-spacing-t, var(--bktm-cd-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-terminal-line,
+    .bkbg-term-line {
+        font-size: var(--bktm-cd-font-size-m, var(--bktm-cd-font-size-t, var(--bktm-cd-font-size-d, 14px)));
+        line-height: var(--bktm-cd-line-height-m, var(--bktm-cd-line-height-t, var(--bktm-cd-line-height-d, 1.8)));
+        letter-spacing: var(--bktm-cd-letter-spacing-m, var(--bktm-cd-letter-spacing-t, var(--bktm-cd-letter-spacing-d, normal)));
+        word-spacing: var(--bktm-cd-word-spacing-m, var(--bktm-cd-word-spacing-t, var(--bktm-cd-word-spacing-d, normal)));
+    }
+}
+
+@media (max-width: 640px) {
+    .bkbg-terminal-window,
+    .bkbg-terminal {
+        width: 100% !important;
+        max-width: 100%;
+        border-radius: 10px !important;
+    }
+}

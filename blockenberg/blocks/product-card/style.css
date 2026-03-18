@@ -1,0 +1,113 @@
+/* Product Card — bkprc- */
+.bkprc-card {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.bkprc-img {
+  position: relative;
+  overflow: hidden;
+}
+.bkprc-btn {
+  transition: opacity 0.2s, transform 0.15s;
+}
+.bkprc-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+@media (max-width: 640px) {
+  .bkprc-card {
+    flex-direction: column !important;
+  }
+  .bkprc-card .bkprc-img {
+    width: 100% !important;
+    height: 220px !important;
+    min-height: unset !important;
+  }
+}
+
+/* Typography — name (h3 needs heading specificity) */
+.bkprc-body h3.bkprc-name {
+    font-family: var(--bkprc-nm-font-family, inherit);
+    font-size: var(--bkprc-nm-font-size-d, 20px);
+    font-weight: var(--bkprc-nm-font-weight, 800);
+    font-style: var(--bkprc-nm-font-style, normal);
+    text-transform: var(--bkprc-nm-text-transform, none);
+    text-decoration: var(--bkprc-nm-text-decoration, none);
+    line-height: var(--bkprc-nm-line-height-d, 1.2);
+    letter-spacing: var(--bkprc-nm-letter-spacing-d, normal);
+    word-spacing: var(--bkprc-nm-word-spacing-d, normal);
+}
+
+/* Typography — price */
+.bkprc-price {
+    font-family: var(--bkprc-pr-font-family, inherit);
+    font-size: var(--bkprc-pr-font-size-d, 26px);
+    font-weight: var(--bkprc-pr-font-weight, 900);
+    font-style: var(--bkprc-pr-font-style, normal);
+    text-transform: var(--bkprc-pr-text-transform, none);
+    text-decoration: var(--bkprc-pr-text-decoration, none);
+    line-height: var(--bkprc-pr-line-height-d, 1.2);
+    letter-spacing: var(--bkprc-pr-letter-spacing-d, normal);
+    word-spacing: var(--bkprc-pr-word-spacing-d, normal);
+}
+
+/* Typography — description */
+.bkprc-desc {
+    font-family: var(--bkprc-ds-font-family, inherit);
+    font-size: var(--bkprc-ds-font-size-d, 14px);
+    font-weight: var(--bkprc-ds-font-weight, 400);
+    font-style: var(--bkprc-ds-font-style, normal);
+    text-transform: var(--bkprc-ds-text-transform, none);
+    text-decoration: var(--bkprc-ds-text-decoration, none);
+    line-height: var(--bkprc-ds-line-height-d, 1.6);
+    letter-spacing: var(--bkprc-ds-letter-spacing-d, normal);
+    word-spacing: var(--bkprc-ds-word-spacing-d, normal);
+}
+
+/* Typography — features */
+.bkprc-feature {
+    font-family: var(--bkprc-ft-font-family, inherit);
+    font-size: var(--bkprc-ft-font-size-d, 14px);
+    font-weight: var(--bkprc-ft-font-weight, 400);
+    font-style: var(--bkprc-ft-font-style, normal);
+    text-transform: var(--bkprc-ft-text-transform, none);
+    text-decoration: var(--bkprc-ft-text-decoration, none);
+    line-height: var(--bkprc-ft-line-height-d, 1.5);
+    letter-spacing: var(--bkprc-ft-letter-spacing-d, normal);
+    word-spacing: var(--bkprc-ft-word-spacing-d, normal);
+}
+
+/* Typography — buttons */
+.bkprc-btn {
+    font-family: var(--bkprc-bt-font-family, inherit);
+    font-size: var(--bkprc-bt-font-size-d, 15px);
+    font-weight: var(--bkprc-bt-font-weight, 700);
+    font-style: var(--bkprc-bt-font-style, normal);
+    text-transform: var(--bkprc-bt-text-transform, none);
+    text-decoration: var(--bkprc-bt-text-decoration, none);
+    line-height: var(--bkprc-bt-line-height-d, 1);
+    letter-spacing: var(--bkprc-bt-letter-spacing-d, normal);
+    word-spacing: var(--bkprc-bt-word-spacing-d, normal);
+}
+.bkprc-btn-secondary {
+    font-weight: var(--bkprc-bt-font-weight, 600);
+}
+
+/* Tablet */
+@media(max-width:1024px){
+    .bkprc-body h3.bkprc-name{font-size:var(--bkprc-nm-font-size-t,var(--bkprc-nm-font-size-d,20px));line-height:var(--bkprc-nm-line-height-t,var(--bkprc-nm-line-height-d,1.2));letter-spacing:var(--bkprc-nm-letter-spacing-t,var(--bkprc-nm-letter-spacing-d,normal));word-spacing:var(--bkprc-nm-word-spacing-t,var(--bkprc-nm-word-spacing-d,normal));}
+    .bkprc-price{font-size:var(--bkprc-pr-font-size-t,var(--bkprc-pr-font-size-d,26px));line-height:var(--bkprc-pr-line-height-t,var(--bkprc-pr-line-height-d,1.2));letter-spacing:var(--bkprc-pr-letter-spacing-t,var(--bkprc-pr-letter-spacing-d,normal));word-spacing:var(--bkprc-pr-word-spacing-t,var(--bkprc-pr-word-spacing-d,normal));}
+    .bkprc-desc{font-size:var(--bkprc-ds-font-size-t,var(--bkprc-ds-font-size-d,14px));line-height:var(--bkprc-ds-line-height-t,var(--bkprc-ds-line-height-d,1.6));letter-spacing:var(--bkprc-ds-letter-spacing-t,var(--bkprc-ds-letter-spacing-d,normal));word-spacing:var(--bkprc-ds-word-spacing-t,var(--bkprc-ds-word-spacing-d,normal));}
+    .bkprc-feature{font-size:var(--bkprc-ft-font-size-t,var(--bkprc-ft-font-size-d,14px));line-height:var(--bkprc-ft-line-height-t,var(--bkprc-ft-line-height-d,1.5));letter-spacing:var(--bkprc-ft-letter-spacing-t,var(--bkprc-ft-letter-spacing-d,normal));word-spacing:var(--bkprc-ft-word-spacing-t,var(--bkprc-ft-word-spacing-d,normal));}
+    .bkprc-btn{font-size:var(--bkprc-bt-font-size-t,var(--bkprc-bt-font-size-d,15px));line-height:var(--bkprc-bt-line-height-t,var(--bkprc-bt-line-height-d,1));letter-spacing:var(--bkprc-bt-letter-spacing-t,var(--bkprc-bt-letter-spacing-d,normal));word-spacing:var(--bkprc-bt-word-spacing-t,var(--bkprc-bt-word-spacing-d,normal));}
+}
+
+/* Mobile */
+@media(max-width:767px){
+    .bkprc-body h3.bkprc-name{font-size:var(--bkprc-nm-font-size-m,var(--bkprc-nm-font-size-t,var(--bkprc-nm-font-size-d,20px)));line-height:var(--bkprc-nm-line-height-m,var(--bkprc-nm-line-height-t,var(--bkprc-nm-line-height-d,1.2)));letter-spacing:var(--bkprc-nm-letter-spacing-m,var(--bkprc-nm-letter-spacing-t,var(--bkprc-nm-letter-spacing-d,normal)));word-spacing:var(--bkprc-nm-word-spacing-m,var(--bkprc-nm-word-spacing-t,var(--bkprc-nm-word-spacing-d,normal)));}
+    .bkprc-desc{font-size:var(--bkprc-ds-font-size-m,var(--bkprc-ds-font-size-t,var(--bkprc-ds-font-size-d,14px)));line-height:var(--bkprc-ds-line-height-m,var(--bkprc-ds-line-height-t,var(--bkprc-ds-line-height-d,1.6)));letter-spacing:var(--bkprc-ds-letter-spacing-m,var(--bkprc-ds-letter-spacing-t,var(--bkprc-ds-letter-spacing-d,normal)));word-spacing:var(--bkprc-ds-word-spacing-m,var(--bkprc-ds-word-spacing-t,var(--bkprc-ds-word-spacing-d,normal)));}
+    .bkprc-price{font-size:var(--bkprc-pr-font-size-m,var(--bkprc-pr-font-size-t,var(--bkprc-pr-font-size-d,26px)));line-height:var(--bkprc-pr-line-height-m,var(--bkprc-pr-line-height-t,var(--bkprc-pr-line-height-d,1.2)));letter-spacing:var(--bkprc-pr-letter-spacing-m,var(--bkprc-pr-letter-spacing-t,var(--bkprc-pr-letter-spacing-d,normal)));word-spacing:var(--bkprc-pr-word-spacing-m,var(--bkprc-pr-word-spacing-t,var(--bkprc-pr-word-spacing-d,normal)));}
+    .bkprc-feature{font-size:var(--bkprc-ft-font-size-m,var(--bkprc-ft-font-size-t,var(--bkprc-ft-font-size-d,14px)));line-height:var(--bkprc-ft-line-height-m,var(--bkprc-ft-line-height-t,var(--bkprc-ft-line-height-d,1.5)));letter-spacing:var(--bkprc-ft-letter-spacing-m,var(--bkprc-ft-letter-spacing-t,var(--bkprc-ft-letter-spacing-d,normal)));word-spacing:var(--bkprc-ft-word-spacing-m,var(--bkprc-ft-word-spacing-t,var(--bkprc-ft-word-spacing-d,normal)));}
+    .bkprc-btn{font-size:var(--bkprc-bt-font-size-m,var(--bkprc-bt-font-size-t,var(--bkprc-bt-font-size-d,15px)));line-height:var(--bkprc-bt-line-height-m,var(--bkprc-bt-line-height-t,var(--bkprc-bt-line-height-d,1)));letter-spacing:var(--bkprc-bt-letter-spacing-m,var(--bkprc-bt-letter-spacing-t,var(--bkprc-bt-letter-spacing-d,normal)));word-spacing:var(--bkprc-bt-word-spacing-m,var(--bkprc-bt-word-spacing-t,var(--bkprc-bt-word-spacing-d,normal)));}
+}

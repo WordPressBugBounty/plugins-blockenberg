@@ -1,0 +1,65 @@
+/* Floating CTA — bkfcta- */
+.bkfcta-wrap {
+  position: fixed;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translateY(12px);
+}
+.bkfcta-wrap.bkfcta-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.bkfcta-wrap.bkfcta-hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(12px) !important;
+}
+.bkfcta-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--bkbg-fcta-btn-font-family, inherit);
+  font-size: var(--bkbg-fcta-btn-font-size-d, 15px);
+  font-weight: var(--bkbg-fcta-btn-font-weight, 700);
+  font-style: var(--bkbg-fcta-btn-font-style, normal);
+  text-decoration: var(--bkbg-fcta-btn-text-decoration, none);
+  text-transform: var(--bkbg-fcta-btn-text-transform, none);
+  line-height: var(--bkbg-fcta-btn-line-height-d, 1);
+  letter-spacing: var(--bkbg-fcta-btn-letter-spacing-d, normal);
+  word-spacing: var(--bkbg-fcta-btn-word-spacing-d, normal);
+  transition: opacity 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+.bkfcta-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+    .bkfcta-btn { font-size: var(--bkbg-fcta-btn-font-size-t, var(--bkbg-fcta-btn-font-size-d, 15px)); line-height: var(--bkbg-fcta-btn-line-height-t, var(--bkbg-fcta-btn-line-height-d, 1)); letter-spacing: var(--bkbg-fcta-btn-letter-spacing-t, var(--bkbg-fcta-btn-letter-spacing-d, normal)); word-spacing: var(--bkbg-fcta-btn-word-spacing-t, var(--bkbg-fcta-btn-word-spacing-d, normal)); }
+}
+@media (max-width: 767px) {
+    .bkfcta-btn { font-size: var(--bkbg-fcta-btn-font-size-m, var(--bkbg-fcta-btn-font-size-t, var(--bkbg-fcta-btn-font-size-d, 15px))); line-height: var(--bkbg-fcta-btn-line-height-m, var(--bkbg-fcta-btn-line-height-t, var(--bkbg-fcta-btn-line-height-d, 1))); letter-spacing: var(--bkbg-fcta-btn-letter-spacing-m, var(--bkbg-fcta-btn-letter-spacing-t, var(--bkbg-fcta-btn-letter-spacing-d, normal))); word-spacing: var(--bkbg-fcta-btn-word-spacing-m, var(--bkbg-fcta-btn-word-spacing-t, var(--bkbg-fcta-btn-word-spacing-d, normal))); }
+}
+.bkfcta-ring {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.bkfcta-dismiss {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  transition: background 0.2s;
+}
+.bkfcta-dismiss:hover { background: #111 !important; }
+
+@keyframes bkfctaPulse {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  70%  { transform: scale(1.5); opacity: 0; }
+  100% { transform: scale(1.5); opacity: 0; }
+}

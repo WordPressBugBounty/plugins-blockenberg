@@ -1,0 +1,116 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/snake-game",
+	"title": "Snake Game",
+	"category": "bkbg-interactive",
+	"icon": "games",
+	"description": "Classic Snake game playable in the browser. Keyboard and on-screen touch controls, high-score tracking, multiple speed levels and color themes.",
+	"keywords": [
+		"snake",
+		"game",
+		"arcade",
+		"retro",
+		"fun",
+		"interactive"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-snake-game-editor",
+	"style": "bkbg-snake-game-style",
+	"viewScript": "bkbg-snake-game-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Snake"
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Use arrow keys or on-screen buttons to play"
+		},
+		"gridSize": {
+			"type": "number",
+			"default": 20
+		},
+		"canvasSize": {
+			"type": "number",
+			"default": 400
+		},
+		"defaultSpeed": {
+			"type": "string",
+			"default": "medium"
+		},
+		"showHighScore": {
+			"type": "boolean",
+			"default": true
+		},
+		"showControls": {
+			"type": "boolean",
+			"default": true
+		},
+		"wallsKill": {
+			"type": "boolean",
+			"default": false
+		},
+		"snakeColor": {
+			"type": "string",
+			"default": "#22c55e"
+		},
+		"snakeHeadColor": {
+			"type": "string",
+			"default": "#16a34a"
+		},
+		"foodColor": {
+			"type": "string",
+			"default": "#ef4444"
+		},
+		"gridColor": {
+			"type": "string",
+			"default": "#f3f4f6"
+		},
+		"boardBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"sectionBg": {
+			"type": "string",
+			"default": "#f0fdf4"
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#22c55e"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#14532d"
+		},
+		"fontSize": {
+			"type": "number",
+			"default": 28
+		},
+		"subtitleSize": {
+			"type": "number",
+			"default": 14
+		},
+		"titleFontWeight": {
+			"type": "number",
+			"default": 800
+		},
+		"titleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"subtitleTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

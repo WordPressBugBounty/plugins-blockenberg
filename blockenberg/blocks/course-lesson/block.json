@@ -1,0 +1,343 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/course-lesson",
+    "title": "Course Lesson",
+    "description": "A complete course lesson with objectives, content sections, resources, and navigation.",
+    "category": "bkbg-blog",
+    "icon": "welcome-learn-more",
+    "keywords": [
+        "course",
+        "lesson",
+        "module",
+        "learning",
+        "tutorial",
+        "class",
+        "education",
+        "lms"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-course-lesson-editor",
+    "editorStyle": "bkbg-course-lesson-style",
+    "style": "bkbg-course-lesson-style",
+    "viewScript": "bkbg-course-lesson-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "lessonTitle": {
+            "type": "string",
+            "default": "Building REST APIs with Node.js"
+        },
+        "moduleTitle": {
+            "type": "string",
+            "default": "Module 4: APIs & Data"
+        },
+        "showModule": {
+            "type": "boolean",
+            "default": true
+        },
+        "lessonNumber": {
+            "type": "string",
+            "default": "Lesson 3 of 8"
+        },
+        "showLessonNumber": {
+            "type": "boolean",
+            "default": true
+        },
+        "duration": {
+            "type": "string",
+            "default": "45 min"
+        },
+        "showDuration": {
+            "type": "boolean",
+            "default": true
+        },
+        "difficulty": {
+            "type": "string",
+            "default": "intermediate"
+        },
+        "showDifficulty": {
+            "type": "boolean",
+            "default": true
+        },
+        "instructor": {
+            "type": "string",
+            "default": "Alex Martinez"
+        },
+        "showInstructor": {
+            "type": "boolean",
+            "default": true
+        },
+        "prerequisites": {
+            "type": "array",
+            "default": [
+                "Basic understanding of JavaScript and Node.js",
+                "Familiarity with HTTP methods (GET, POST, PUT, DELETE)",
+                "Node.js installed on your machine"
+            ]
+        },
+        "showPrerequisites": {
+            "type": "boolean",
+            "default": true
+        },
+        "prerequisitesLabel": {
+            "type": "string",
+            "default": "Prerequisites"
+        },
+        "objectives": {
+            "type": "array",
+            "default": [
+                "Set up an Express.js server from scratch",
+                "Create CRUD endpoints with proper status codes",
+                "Validate request data using middleware",
+                "Connect to a database and handle async operations"
+            ]
+        },
+        "showObjectives": {
+            "type": "boolean",
+            "default": true
+        },
+        "objectivesLabel": {
+            "type": "string",
+            "default": "What You'll Learn"
+        },
+        "intro": {
+            "type": "string",
+            "default": "In this lesson, you'll build a fully functional REST API using Express.js. We'll cover everything from project setup and route definition to data validation and database integration — all with real-world patterns you can use immediately."
+        },
+        "showIntro": {
+            "type": "boolean",
+            "default": true
+        },
+        "sections": {
+            "type": "array",
+            "default": [
+                {
+                    "heading": "Setting Up the Project",
+                    "content": "Start by initializing a new Node.js project and installing Express. Run `npm init -y && npm install express` in your terminal. Create a file called `server.js` and require Express at the top.",
+                    "type": "text"
+                },
+                {
+                    "heading": "Defining Your First Route",
+                    "content": "Use `app.get()` to define a GET route. The callback receives a `req` (request) and `res` (response) object. Call `res.json()` to send JSON data back to the client.",
+                    "type": "text"
+                },
+                {
+                    "heading": "Pro Tip: Use nodemon During Development",
+                    "content": "Install nodemon as a dev dependency (`npm install -D nodemon`) and add a `dev` script to your package.json: `\"dev\": \"nodemon server.js\"`. This automatically restarts your server on file changes.",
+                    "type": "tip"
+                },
+                {
+                    "heading": "Handling POST Requests & Body Parsing",
+                    "content": "For POST and PUT routes, you need to parse the request body. Add `app.use(express.json())` before your routes. Access the parsed body via `req.body`.",
+                    "type": "text"
+                },
+                {
+                    "heading": "Important: Always Validate User Input",
+                    "content": "Never trust data coming from the client. Validate required fields before processing and return a 400 status code with a clear error message if validation fails.",
+                    "type": "warning"
+                }
+            ]
+        },
+        "showSections": {
+            "type": "boolean",
+            "default": true
+        },
+        "resources": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Express.js Official Docs",
+                    "url": "https://expressjs.com",
+                    "type": "article"
+                },
+                {
+                    "title": "Starter Code on GitHub",
+                    "url": "https://github.com/example",
+                    "type": "download"
+                },
+                {
+                    "title": "Video Walkthrough (22 min)",
+                    "url": "https://youtube.com/example",
+                    "type": "video"
+                },
+                {
+                    "title": "Practice Exercise: Build a Todo API",
+                    "url": "#exercise",
+                    "type": "exercise"
+                }
+            ]
+        },
+        "showResources": {
+            "type": "boolean",
+            "default": true
+        },
+        "resourcesLabel": {
+            "type": "string",
+            "default": "Resources"
+        },
+        "prevLesson": {
+            "type": "string",
+            "default": "HTTP Fundamentals & Status Codes"
+        },
+        "prevLessonUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "nextLesson": {
+            "type": "string",
+            "default": "Authentication with JWT"
+        },
+        "nextLessonUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showNav": {
+            "type": "boolean",
+            "default": true
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 26
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 170
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "moduleTitleSize": {
+            "type": "number",
+            "default": 11
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "introBg": {
+            "type": "string",
+            "default": "#f0f9ff"
+        },
+        "introColor": {
+            "type": "string",
+            "default": "#0369a1"
+        },
+        "objectiveBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "objectiveColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "objectiveDot": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "prereqBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "prereqColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "prereqDot": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "tipBg": {
+            "type": "string",
+            "default": "#fefce8"
+        },
+        "tipColor": {
+            "type": "string",
+            "default": "#713f12"
+        },
+        "tipBorder": {
+            "type": "string",
+            "default": "#fbbf24"
+        },
+        "warningBg": {
+            "type": "string",
+            "default": "#fff7ed"
+        },
+        "warningColor": {
+            "type": "string",
+            "default": "#9a3412"
+        },
+        "warningBorder": {
+            "type": "string",
+            "default": "#f97316"
+        },
+        "noteBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "noteColor": {
+            "type": "string",
+            "default": "#1e40af"
+        },
+        "noteBorder": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "resourceBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "navBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBody": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

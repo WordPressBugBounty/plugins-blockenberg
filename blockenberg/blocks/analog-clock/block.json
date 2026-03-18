@@ -1,0 +1,128 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/analog-clock",
+    "title": "Analog Clock",
+    "category": "bkbg-interactive",
+    "icon": "clock",
+    "description": "A beautiful live analog clock rendered with SVG. Fully customizable: clock style, timezone, colors, size, and optional date/time labels.",
+    "keywords": [
+        "clock",
+        "analog",
+        "time",
+        "watch",
+        "widget",
+        "timezone"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-analog-clock-editor",
+    "style": "bkbg-analog-clock-style",
+    "viewScript": "bkbg-analog-clock-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": ""
+        },
+        "subtitle": {
+            "type": "string",
+            "default": ""
+        },
+        "clockSize": {
+            "type": "number",
+            "default": 240
+        },
+        "clockStyle": {
+            "type": "string",
+            "default": "classic"
+        },
+        "timezone": {
+            "type": "string",
+            "default": "local"
+        },
+        "showNumbers": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTicks": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSecondHand": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDate": {
+            "type": "boolean",
+            "default": false
+        },
+        "showDigitalTime": {
+            "type": "boolean",
+            "default": false
+        },
+        "clockFace": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "clockBorder": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "hourHandColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "minuteHandColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "secondHandColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "tickColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "numberColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "centerDotColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

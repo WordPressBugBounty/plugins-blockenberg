@@ -1,0 +1,168 @@
+/* ── Image Accordion ────────────────────────────────────────────────────────── */
+.bkia-wrap {
+    box-sizing: border-box;
+}
+
+.bkia-container {
+    display: flex;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.bkia-panel {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.bkia-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    pointer-events: none;
+}
+
+.bkia-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    transition: background 0.5s ease;
+}
+
+.bkia-text {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+.bkia-label {
+    display: inline-block;
+    align-self: flex-start;
+    font-family: var(--bkia-lb-font-family, inherit);
+    font-size: var(--bkia-lb-font-size-d, var(--bkia-label-sz, 13px));
+    font-weight: var(--bkia-lb-font-weight, 600);
+    font-style: var(--bkia-lb-font-style, normal);
+    text-decoration: var(--bkia-lb-text-decoration, none);
+    text-transform: var(--bkia-lb-text-transform, none);
+    line-height: var(--bkia-lb-line-height-d, 1.3);
+    letter-spacing: var(--bkia-lb-letter-spacing-d, normal);
+    word-spacing: var(--bkia-lb-word-spacing-d, normal);
+}
+
+.bkia-title {
+    margin: 0 0 4px;
+    font-family: var(--bkia-tt-font-family, inherit);
+    font-size: var(--bkia-tt-font-size-d, var(--bkia-title-sz, 22px));
+    font-weight: var(--bkia-tt-font-weight, var(--bkia-title-w, 700));
+    font-style: var(--bkia-tt-font-style, normal);
+    text-decoration: var(--bkia-tt-text-decoration, none);
+    text-transform: var(--bkia-tt-text-transform, none);
+    line-height: var(--bkia-tt-line-height-d, 1.25);
+    letter-spacing: var(--bkia-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkia-tt-word-spacing-d, normal);
+}
+
+.bkia-subtitle {
+    margin: 0;
+    font-family: var(--bkia-st-font-family, inherit);
+    font-size: var(--bkia-st-font-size-d, var(--bkia-subtitle-sz, 14px));
+    font-weight: var(--bkia-st-font-weight, normal);
+    font-style: var(--bkia-st-font-style, normal);
+    text-decoration: var(--bkia-st-text-decoration, none);
+    text-transform: var(--bkia-st-text-transform, none);
+    line-height: var(--bkia-st-line-height-d, 1.4);
+    letter-spacing: var(--bkia-st-letter-spacing-d, normal);
+    word-spacing: var(--bkia-st-word-spacing-d, normal);
+}
+
+.bkia-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.bkia-panel.bkia-active .bkia-arrow {
+    transform: translateX(4px);
+}
+
+/* Vertical direction helper */
+.bkia-container[data-direction="vertical"] {
+    flex-direction: column;
+}
+
+/* ---- Responsive typography ---- */
+@media (max-width: 1024px) {
+    .bkia-label {
+        font-size: var(--bkia-lb-font-size-t, var(--bkia-lb-font-size-d, var(--bkia-label-sz, 13px)));
+        line-height: var(--bkia-lb-line-height-t, var(--bkia-lb-line-height-d, 1.3));
+        letter-spacing: var(--bkia-lb-letter-spacing-t, var(--bkia-lb-letter-spacing-d, normal));
+        word-spacing: var(--bkia-lb-word-spacing-t, var(--bkia-lb-word-spacing-d, normal));
+    }
+    .bkia-title {
+        font-size: var(--bkia-tt-font-size-t, var(--bkia-tt-font-size-d, var(--bkia-title-sz, 22px)));
+        line-height: var(--bkia-tt-line-height-t, var(--bkia-tt-line-height-d, 1.25));
+        letter-spacing: var(--bkia-tt-letter-spacing-t, var(--bkia-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkia-tt-word-spacing-t, var(--bkia-tt-word-spacing-d, normal));
+    }
+    .bkia-subtitle {
+        font-size: var(--bkia-st-font-size-t, var(--bkia-st-font-size-d, var(--bkia-subtitle-sz, 14px)));
+        line-height: var(--bkia-st-line-height-t, var(--bkia-st-line-height-d, 1.4));
+        letter-spacing: var(--bkia-st-letter-spacing-t, var(--bkia-st-letter-spacing-d, normal));
+        word-spacing: var(--bkia-st-word-spacing-t, var(--bkia-st-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkia-label {
+        font-size: var(--bkia-lb-font-size-m, var(--bkia-lb-font-size-t, var(--bkia-lb-font-size-d, var(--bkia-label-sz, 13px))));
+        line-height: var(--bkia-lb-line-height-m, var(--bkia-lb-line-height-t, var(--bkia-lb-line-height-d, 1.3)));
+        letter-spacing: var(--bkia-lb-letter-spacing-m, var(--bkia-lb-letter-spacing-t, var(--bkia-lb-letter-spacing-d, normal)));
+        word-spacing: var(--bkia-lb-word-spacing-m, var(--bkia-lb-word-spacing-t, var(--bkia-lb-word-spacing-d, normal)));
+    }
+    .bkia-title {
+        font-size: var(--bkia-tt-font-size-m, var(--bkia-tt-font-size-t, var(--bkia-tt-font-size-d, var(--bkia-title-sz, 22px))));
+        line-height: var(--bkia-tt-line-height-m, var(--bkia-tt-line-height-t, var(--bkia-tt-line-height-d, 1.25)));
+        letter-spacing: var(--bkia-tt-letter-spacing-m, var(--bkia-tt-letter-spacing-t, var(--bkia-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkia-tt-word-spacing-m, var(--bkia-tt-word-spacing-t, var(--bkia-tt-word-spacing-d, normal)));
+    }
+    .bkia-subtitle {
+        font-size: var(--bkia-st-font-size-m, var(--bkia-st-font-size-t, var(--bkia-st-font-size-d, var(--bkia-subtitle-sz, 14px))));
+        line-height: var(--bkia-st-line-height-m, var(--bkia-st-line-height-t, var(--bkia-st-line-height-d, 1.4)));
+        letter-spacing: var(--bkia-st-letter-spacing-m, var(--bkia-st-letter-spacing-t, var(--bkia-st-letter-spacing-d, normal)));
+        word-spacing: var(--bkia-st-word-spacing-m, var(--bkia-st-word-spacing-t, var(--bkia-st-word-spacing-d, normal)));
+    }
+}
+
+@media (max-width: 640px) {
+    /* Stack panels vertically on mobile for horizontal accordions */
+    .bkia-container[data-direction="horizontal"] {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+    .bkia-container[data-direction="horizontal"] .bkia-panel {
+        flex: none !important;
+        height: 200px;
+    }
+    .bkia-container[data-direction="horizontal"] .bkia-panel.bkia-active {
+        height: 320px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bkia-panel,
+    .bkia-img,
+    .bkia-overlay,
+    .bkia-text,
+    .bkia-arrow {
+        transition: none !important;
+    }
+}

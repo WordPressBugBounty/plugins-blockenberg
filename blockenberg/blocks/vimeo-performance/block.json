@@ -1,0 +1,113 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/vimeo-performance",
+    "title": "Vimeo Performance Embed",
+    "category": "bkbg-dev",
+    "icon": "video-alt3",
+    "description": "High-performance Vimeo embed with poster + lazy iframe on click.",
+    "keywords": [
+        "vimeo",
+        "video",
+        "embed",
+        "lazy",
+        "performance",
+        "poster"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-vimeo-performance-editor",
+    "editorStyle": "bkbg-vimeo-performance-style",
+    "style": "bkbg-vimeo-performance-style",
+    "viewScript": "bkbg-vimeo-performance-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "videoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "videoId": {
+            "type": "string",
+            "default": ""
+        },
+        "embedSrc": {
+            "type": "string",
+            "default": ""
+        },
+        "dnt": {
+            "type": "boolean",
+            "default": true
+        },
+        "autoplay": {
+            "type": "boolean",
+            "default": true
+        },
+        "muted": {
+            "type": "boolean",
+            "default": false
+        },
+        "loop": {
+            "type": "boolean",
+            "default": false
+        },
+        "showTitleBylinePortrait": {
+            "type": "boolean",
+            "default": false
+        },
+        "posterSource": {
+            "type": "string",
+            "default": "vimeo"
+        },
+        "posterImage": {
+            "type": "object",
+            "default": {
+                "id": 0,
+                "url": "",
+                "alt": ""
+            }
+        },
+        "aspect": {
+            "type": "string",
+            "default": "4/3"
+        },
+        "minHeight": {
+            "type": "number",
+            "default": 350
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "shadow": {
+            "type": "boolean",
+            "default": false
+        },
+        "playStyle": {
+            "type": "string",
+            "default": "youtube"
+        },
+        "playSize": {
+            "type": "number",
+            "default": 50
+        },
+        "playBg": {
+            "type": "string",
+            "default": "#01adee"
+        },
+        "playColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "playHoverScale": {
+            "type": "number",
+            "default": 1.05
+        }
+    }
+}

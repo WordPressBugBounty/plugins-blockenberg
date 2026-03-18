@@ -1,0 +1,107 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/gradient-blob",
+    "title": "Gradient Blob",
+    "description": "Full-width section with animated CSS gradient blobs as background and InnerBlocks for content.",
+    "category": "bkbg-effects",
+    "icon": "art",
+    "keywords": [
+        "blob",
+        "gradient",
+        "animated",
+        "section",
+        "background"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-gradient-blob-editor",
+    "editorStyle": "bkbg-gradient-blob-style",
+    "style": "bkbg-gradient-blob-style",
+    "viewScript": "bkbg-gradient-blob-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "color1": {
+            "type": "string",
+            "default": "#c084fc"
+        },
+        "color2": {
+            "type": "string",
+            "default": "#818cf8"
+        },
+        "color3": {
+            "type": "string",
+            "default": "#f0abfc"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#faf5ff"
+        },
+        "textColor": {
+            "type": "string",
+            "default": ""
+        },
+        "animSpeed": {
+            "type": "integer",
+            "default": 10
+        },
+        "blobSize": {
+            "type": "integer",
+            "default": 60
+        },
+        "blobOpacity": {
+            "type": "integer",
+            "default": 60
+        },
+        "blobBlur": {
+            "type": "integer",
+            "default": 80
+        },
+        "minHeight": {
+            "type": "integer",
+            "default": 500
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 80
+        },
+        "contentMaxWidth": {
+            "type": "integer",
+            "default": 720
+        },
+        "centerContent": {
+            "type": "boolean",
+            "default": true
+        },
+        "numBlobs": {
+            "type": "integer",
+            "default": 3
+        },
+        "paused": {
+            "type": "boolean",
+            "default": false
+        },
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    },
+    "editorBlock": {
+        "defaultValue": {
+            "allowedBlocks": [
+                "core/heading",
+                "core/paragraph",
+                "core/buttons",
+                "core/image"
+            ]
+        }
+    }
+}

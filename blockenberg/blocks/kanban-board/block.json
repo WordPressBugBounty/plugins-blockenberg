@@ -1,0 +1,228 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/kanban-board",
+    "version": "1.0.0",
+    "title": "Kanban Board",
+    "category": "bkbg-interactive",
+    "icon": "columns",
+    "description": "Visual Kanban-style column board with cards for displaying workflows, project status, or process stages.",
+    "keywords": [
+        "kanban",
+        "board",
+        "columns",
+        "workflow",
+        "process",
+        "status",
+        "cards",
+        "trello",
+        "pipeline"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-kanban-board-editor",
+    "editorStyle": "bkbg-kanban-board-style",
+    "style": "bkbg-kanban-board-style",
+    "viewScript": "bkbg-kanban-board-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "boardTitle": {
+            "type": "string",
+            "default": ""
+        },
+        "showBoardTitle": {
+            "type": "boolean",
+            "default": false
+        },
+        "columns": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "col-1",
+                    "title": "To Do",
+                    "color": "#6b7280",
+                    "cards": [
+                        {
+                            "id": "c1",
+                            "title": "Research user personas",
+                            "desc": "Interview 10 target customers this week.",
+                            "tag": "Research",
+                            "tagColor": "#3b82f6",
+                            "priority": "medium"
+                        },
+                        {
+                            "id": "c2",
+                            "title": "Write content brief",
+                            "desc": "Outline all pages for the new site.",
+                            "tag": "Content",
+                            "tagColor": "#8b5cf6",
+                            "priority": "low"
+                        }
+                    ]
+                },
+                {
+                    "id": "col-2",
+                    "title": "In Progress",
+                    "color": "#f59e0b",
+                    "cards": [
+                        {
+                            "id": "c3",
+                            "title": "Design landing page",
+                            "desc": "High-fidelity mockups in Figma.",
+                            "tag": "Design",
+                            "tagColor": "#f59e0b",
+                            "priority": "high"
+                        },
+                        {
+                            "id": "c4",
+                            "title": "Set up dev environment",
+                            "desc": "Configure local WP install.",
+                            "tag": "Dev",
+                            "tagColor": "#10b981",
+                            "priority": "medium"
+                        }
+                    ]
+                },
+                {
+                    "id": "col-3",
+                    "title": "In Review",
+                    "color": "#6c3fb5",
+                    "cards": [
+                        {
+                            "id": "c5",
+                            "title": "SEO audit report",
+                            "desc": "Review competitor gaps and opportunities.",
+                            "tag": "SEO",
+                            "tagColor": "#ec4899",
+                            "priority": "high"
+                        }
+                    ]
+                },
+                {
+                    "id": "col-4",
+                    "title": "Done",
+                    "color": "#10b981",
+                    "cards": [
+                        {
+                            "id": "c6",
+                            "title": "Project kickoff meeting",
+                            "desc": "Aligned team on goals and timeline.",
+                            "tag": "Planning",
+                            "tagColor": "#10b981",
+                            "priority": "low"
+                        },
+                        {
+                            "id": "c7",
+                            "title": "Brand identity review",
+                            "desc": "Logo, color palette, and typography finalized.",
+                            "tag": "Design",
+                            "tagColor": "#f59e0b",
+                            "priority": "medium"
+                        }
+                    ]
+                }
+            ]
+        },
+        "columnMinWidth": {
+            "type": "number",
+            "default": 240
+        },
+        "gap": {
+            "type": "number",
+            "default": 16
+        },
+        "columnRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 14
+        },
+        "columnPadding": {
+            "type": "number",
+            "default": 12
+        },
+        "showColorBar": {
+            "type": "boolean",
+            "default": true
+        },
+        "colorBarHeight": {
+            "type": "number",
+            "default": 4
+        },
+        "showCardCount": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPriority": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTags": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDesc": {
+            "type": "boolean",
+            "default": true
+        },
+        "columnBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "columnTitleColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "cardTitleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "cardDescColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "columnTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "cardTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "cardDescTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 32
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 32
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        }
+    }
+}

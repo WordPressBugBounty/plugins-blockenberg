@@ -1,0 +1,159 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/social-proof-popup",
+    "title": "Social Proof Popup",
+    "category": "bkbg-marketing",
+    "icon": "heart",
+    "description": "Floating FOMO notification popups that cycle through social proof entries like purchases, signups, and reviews.",
+    "keywords": [
+        "social proof",
+        "fomo",
+        "notification",
+        "popup",
+        "toast",
+        "purchase",
+        "signup",
+        "conversion"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-social-proof-popup-editor",
+    "editorStyle": "bkbg-social-proof-popup-style",
+    "style": "bkbg-social-proof-popup-style",
+    "viewScript": "bkbg-social-proof-popup-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true
+    },
+    "attributes": {
+        "entries": {
+            "type": "array",
+            "default": [
+                {
+                    "emoji": "🛍️",
+                    "name": "Sarah M.",
+                    "location": "London, UK",
+                    "action": "just purchased the Pro Plan",
+                    "timeAgo": "2 minutes ago"
+                },
+                {
+                    "emoji": "⭐",
+                    "name": "James K.",
+                    "location": "New York, US",
+                    "action": "left a 5-star review",
+                    "timeAgo": "8 minutes ago"
+                },
+                {
+                    "emoji": "🚀",
+                    "name": "Priya R.",
+                    "location": "Mumbai, India",
+                    "action": "just signed up for the free trial",
+                    "timeAgo": "12 minutes ago"
+                },
+                {
+                    "emoji": "💬",
+                    "name": "Marco L.",
+                    "location": "Milan, Italy",
+                    "action": "shared this with their team",
+                    "timeAgo": "15 minutes ago"
+                },
+                {
+                    "emoji": "🎉",
+                    "name": "Emma T.",
+                    "location": "Toronto, Canada",
+                    "action": "just upgraded to Business",
+                    "timeAgo": "23 minutes ago"
+                }
+            ]
+        },
+        "position": {
+            "type": "string",
+            "default": "bottom-left"
+        },
+        "displayTime": {
+            "type": "number",
+            "default": 4000
+        },
+        "pauseBetween": {
+            "type": "number",
+            "default": 3000
+        },
+        "animationType": {
+            "type": "string",
+            "default": "slide"
+        },
+        "showAvatar": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTime": {
+            "type": "boolean",
+            "default": true
+        },
+        "showClose": {
+            "type": "boolean",
+            "default": true
+        },
+        "loop": {
+            "type": "boolean",
+            "default": true
+        },
+        "startDelay": {
+            "type": "number",
+            "default": 2000
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "shadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 300
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "actionColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "timeColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "avatarBg": {
+            "type": "string",
+            "default": "#f0f9ff"
+        },
+        "closeBtnColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "actionTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

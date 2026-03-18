@@ -1,0 +1,145 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/google-map",
+	"title": "Google Map",
+	"category": "bkbg-business",
+	"icon": "location-alt",
+	"description": "Embed a Google Map by address with zoom, map type, caption, border, and shadow controls.",
+	"keywords": [
+		"map",
+		"google",
+		"location",
+		"address",
+		"embed",
+		"place"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-google-map-editor",
+	"editorStyle": "bkbg-google-map-style",
+	"style": "bkbg-google-map-style",
+	"viewScript": "bkbg-google-map-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"address": {
+			"type": "string",
+			"default": "New York, NY, USA"
+		},
+		"apiKey": {
+			"type": "string",
+			"default": ""
+		},
+		"zoom": {
+			"type": "number",
+			"default": 14
+		},
+		"mapType": {
+			"type": "string",
+			"default": "roadmap"
+		},
+		"allowFullscreen": {
+			"type": "boolean",
+			"default": true
+		},
+		"lazyLoad": {
+			"type": "boolean",
+			"default": true
+		},
+		"mapHeight": {
+			"type": "number",
+			"default": 450
+		},
+		"maxWidth": {
+			"type": "number",
+			"default": 0
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"showBorder": {
+			"type": "boolean",
+			"default": false
+		},
+		"borderWidth": {
+			"type": "number",
+			"default": 1
+		},
+		"borderStyle": {
+			"type": "string",
+			"default": "solid"
+		},
+		"borderColor": {
+			"type": "string",
+			"default": "#e2e8f0"
+		},
+		"showShadow": {
+			"type": "boolean",
+			"default": true
+		},
+		"shadowH": {
+			"type": "number",
+			"default": 0
+		},
+		"shadowV": {
+			"type": "number",
+			"default": 8
+		},
+		"shadowBlur": {
+			"type": "number",
+			"default": 32
+		},
+		"shadowSpread": {
+			"type": "number",
+			"default": 0
+		},
+		"shadowColor": {
+			"type": "string",
+			"default": "rgba(0,0,0,0.12)"
+		},
+		"showCaption": {
+			"type": "boolean",
+			"default": false
+		},
+		"caption": {
+			"type": "string",
+			"default": "Our location"
+		},
+		"captionSize": {
+			"type": "number",
+			"default": 14
+		},
+		"captionWeight": {
+			"type": "number",
+			"default": 400
+		},
+		"captionColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"captionAlign": {
+			"type": "string",
+			"default": "center"
+		},
+		"captionSpacing": {
+			"type": "number",
+			"default": 12
+		},
+		"captionLineHeight": {
+			"type": "number",
+			"default": 1.5
+		},
+		"typoCaption": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

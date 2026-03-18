@@ -1,0 +1,170 @@
+/* ── Sticky Scroll ───────────────────────────────────────────── */
+
+.bkss-wrap {
+    box-sizing: border-box;
+}
+
+/* Layout: two columns */
+.bkss-layout {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Pinned image column */
+.bkss-pinned {
+    flex-shrink: 0;
+    position: sticky;
+    top: var(--bkss-sticky-top, 80px);
+    width: var(--bkss-pinned-w, 50%);
+    transition: opacity 0.4s ease;
+}
+
+.bkss-image-wrap {
+    width: 100%;
+}
+
+.bkss-image-wrap img {
+    width: 100%;
+    display: block;
+}
+
+/* Scrolling column */
+.bkss-scroll-col {
+    flex: 1;
+}
+
+/* Individual panel */
+.bkss-panel {
+    opacity: 0.35;
+    transition: opacity 0.4s ease;
+}
+
+.bkss-panel.bkss-active {
+    opacity: 1;
+}
+
+/* Accent dot */
+.bkss-dot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--bkss-dot-c, #e5e7eb);
+    transition: background 0.35s ease;
+    margin-bottom: 16px;
+}
+
+.bkss-panel.bkss-active .bkss-dot {
+    background: var(--bkss-accent, var(--bkss-dot-active, #6c3fb5));
+}
+
+/* ── Eyebrow ── */
+.bkss-eyebrow {
+    font-family:      var(--bkss-eb-font-family, inherit);
+    font-size:        var(--bkss-eb-font-size-d, 13px);
+    font-weight:      var(--bkss-eb-font-weight, var(--bkss-eb-fw, 600));
+    font-style:       var(--bkss-eb-font-style, normal);
+    text-decoration:  var(--bkss-eb-text-decoration, none);
+    text-transform:   var(--bkss-eb-text-transform, uppercase);
+    line-height:      var(--bkss-eb-line-height-d, 1.4);
+    letter-spacing:   var(--bkss-eb-letter-spacing-d, 0.08em);
+    word-spacing:     var(--bkss-eb-word-spacing-d, normal);
+}
+
+/* ── Title (h3 → specificity 0,2,0) ── */
+.bkss-panel h3.bkss-title {
+    font-family:      var(--bkss-tt-font-family, inherit);
+    font-size:        var(--bkss-tt-font-size-d, 32px);
+    font-weight:      var(--bkss-tt-font-weight, var(--bkss-title-fw, 700));
+    font-style:       var(--bkss-tt-font-style, normal);
+    text-decoration:  var(--bkss-tt-text-decoration, none);
+    text-transform:   var(--bkss-tt-text-transform, none);
+    line-height:      var(--bkss-tt-line-height-d, var(--bkss-title-lh, 1.25));
+    letter-spacing:   var(--bkss-tt-letter-spacing-d, normal);
+    word-spacing:     var(--bkss-tt-word-spacing-d, normal);
+    color:            var(--bkss-title-color, #111827);
+}
+
+/* ── Description ── */
+.bkss-desc {
+    font-family:      var(--bkss-ds-font-family, inherit);
+    font-size:        var(--bkss-ds-font-size-d, 17px);
+    font-weight:      var(--bkss-ds-font-weight, var(--bkss-desc-fw, 400));
+    font-style:       var(--bkss-ds-font-style, normal);
+    text-decoration:  var(--bkss-ds-text-decoration, none);
+    text-transform:   var(--bkss-ds-text-transform, none);
+    line-height:      var(--bkss-ds-line-height-d, var(--bkss-desc-lh, 1.7));
+    letter-spacing:   var(--bkss-ds-letter-spacing-d, normal);
+    word-spacing:     var(--bkss-ds-word-spacing-d, normal);
+    color:            var(--bkss-desc-color, #4b5563);
+}
+
+/* ── Tablet ── */
+@media (max-width: 1024px) {
+    .bkss-eyebrow {
+        font-size:      var(--bkss-eb-font-size-t, var(--bkss-eb-font-size-d, 13px));
+        line-height:    var(--bkss-eb-line-height-t, var(--bkss-eb-line-height-d, 1.4));
+        letter-spacing: var(--bkss-eb-letter-spacing-t, var(--bkss-eb-letter-spacing-d, 0.08em));
+        word-spacing:   var(--bkss-eb-word-spacing-t, var(--bkss-eb-word-spacing-d, normal));
+    }
+    .bkss-panel h3.bkss-title,
+    .bkss-panel .bkss-title {
+        font-size:      var(--bkss-tt-font-size-t, var(--bkss-tt-font-size-d, 32px));
+        line-height:    var(--bkss-tt-line-height-t, var(--bkss-tt-line-height-d, var(--bkss-title-lh, 1.25)));
+        letter-spacing: var(--bkss-tt-letter-spacing-t, var(--bkss-tt-letter-spacing-d, normal));
+        word-spacing:   var(--bkss-tt-word-spacing-t, var(--bkss-tt-word-spacing-d, normal));
+    }
+    .bkss-desc {
+        font-size:      var(--bkss-ds-font-size-t, var(--bkss-ds-font-size-d, 17px));
+        line-height:    var(--bkss-ds-line-height-t, var(--bkss-ds-line-height-d, var(--bkss-desc-lh, 1.7)));
+        letter-spacing: var(--bkss-ds-letter-spacing-t, var(--bkss-ds-letter-spacing-d, normal));
+        word-spacing:   var(--bkss-ds-word-spacing-t, var(--bkss-ds-word-spacing-d, normal));
+    }
+}
+
+/* ── Mobile ── */
+@media (max-width: 767px) {
+    .bkss-eyebrow {
+        font-size:      var(--bkss-eb-font-size-m, var(--bkss-eb-font-size-t, var(--bkss-eb-font-size-d, 13px)));
+        line-height:    var(--bkss-eb-line-height-m, var(--bkss-eb-line-height-t, var(--bkss-eb-line-height-d, 1.4)));
+        letter-spacing: var(--bkss-eb-letter-spacing-m, var(--bkss-eb-letter-spacing-t, var(--bkss-eb-letter-spacing-d, 0.08em)));
+        word-spacing:   var(--bkss-eb-word-spacing-m, var(--bkss-eb-word-spacing-t, var(--bkss-eb-word-spacing-d, normal)));
+    }
+    .bkss-panel h3.bkss-title,
+    .bkss-panel .bkss-title {
+        font-size:      var(--bkss-tt-font-size-m, var(--bkss-tt-font-size-t, var(--bkss-tt-font-size-d, 32px)));
+        line-height:    var(--bkss-tt-line-height-m, var(--bkss-tt-line-height-t, var(--bkss-tt-line-height-d, var(--bkss-title-lh, 1.25))));
+        letter-spacing: var(--bkss-tt-letter-spacing-m, var(--bkss-tt-letter-spacing-t, var(--bkss-tt-letter-spacing-d, normal)));
+        word-spacing:   var(--bkss-tt-word-spacing-m, var(--bkss-tt-word-spacing-t, var(--bkss-tt-word-spacing-d, normal)));
+    }
+    .bkss-desc {
+        font-size:      var(--bkss-ds-font-size-m, var(--bkss-ds-font-size-t, var(--bkss-ds-font-size-d, 17px)));
+        line-height:    var(--bkss-ds-line-height-m, var(--bkss-ds-line-height-t, var(--bkss-ds-line-height-d, var(--bkss-desc-lh, 1.7))));
+        letter-spacing: var(--bkss-ds-letter-spacing-m, var(--bkss-ds-letter-spacing-t, var(--bkss-ds-letter-spacing-d, normal)));
+        word-spacing:   var(--bkss-ds-word-spacing-m, var(--bkss-ds-word-spacing-t, var(--bkss-ds-word-spacing-d, normal)));
+    }
+}
+
+/* Responsive: stack vertically on mobile */
+@media (max-width: 768px) {
+    .bkss-layout {
+        flex-direction: column !important;
+        gap: 40px !important;
+    }
+
+    .bkss-pinned {
+        position: relative !important;
+        top: auto !important;
+        width: 100% !important;
+    }
+
+    .bkss-panel {
+        opacity: 1 !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bkss-panel,
+    .bkss-pinned,
+    .bkss-dot { transition: none !important; }
+}

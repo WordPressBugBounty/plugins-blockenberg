@@ -1,0 +1,95 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/qr-code",
+    "title": "QR Code",
+    "category": "bkbg-dev",
+    "icon": "screenoptions",
+    "description": "Generate a QR code from any URL or text with custom colors and size.",
+    "keywords": [
+        "qr",
+        "qrcode",
+        "barcode",
+        "link",
+        "scan"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-qr-code-editor",
+    "editorStyle": "bkbg-qr-code-style",
+    "style": "bkbg-qr-code-style",
+    "viewScript": "bkbg-qr-code-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true
+    },
+    "attributes": {
+        "content": {
+            "type": "string",
+            "default": "https://example.com"
+        },
+        "size": {
+            "type": "number",
+            "default": 200
+        },
+        "fgColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "errorLevel": {
+            "type": "string",
+            "default": "M"
+        },
+        "caption": {
+            "type": "string",
+            "default": ""
+        },
+        "showCaption": {
+            "type": "boolean",
+            "default": false
+        },
+        "captionColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "captionTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "align": {
+            "type": "string",
+            "default": "center"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 20
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "borderStyle": {
+            "type": "string",
+            "default": "shadow"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "downloadable": {
+            "type": "boolean",
+            "default": true
+        },
+        "downloadLabel": {
+            "type": "string",
+            "default": "Download QR"
+        },
+    }
+}

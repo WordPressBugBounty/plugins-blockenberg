@@ -1,0 +1,214 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/family-tree",
+    "version": "1.0.0",
+    "title": "Family Tree",
+    "category": "bkbg-charts",
+    "icon": "groups",
+    "description": "Interactive genealogy family tree diagram showing multi-generation relationships with spouse connections and birth/death years.",
+    "keywords": [
+        "family tree",
+        "genealogy",
+        "ancestry",
+        "generations",
+        "pedigree"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-family-tree-editor",
+    "style": "bkbg-family-tree-style",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Family Tree"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "number",
+            "default": 860
+        },
+        "nodeW": {
+            "type": "number",
+            "default": 100
+        },
+        "levelGap": {
+            "type": "number",
+            "default": 145
+        },
+        "nodeGap": {
+            "type": "number",
+            "default": 18
+        },
+        "padY": {
+            "type": "number",
+            "default": 30
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 20
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "nameFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "nameFontWeight": {
+            "type": "string",
+            "default": "600"
+        },
+        "yearFontSize": {
+            "type": "number",
+            "default": 10
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#fafafa"
+        },
+        "lineColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "persons": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "1",
+                    "name": "Harold Green",
+                    "years": "1930–2005",
+                    "emoji": "👴",
+                    "parentId": "",
+                    "spouseId": "2",
+                    "color": "#4f46e5",
+                    "emojiType": "custom-char",
+                    "emojiDashicon": "",
+                    "emojiImageUrl": ""
+                },
+                {
+                    "id": "2",
+                    "name": "Dorothy Green",
+                    "years": "1932–2010",
+                    "emoji": "👵",
+                    "parentId": "",
+                    "spouseId": "1",
+                    "color": "#4f46e5",
+                    "emojiType": "custom-char",
+                    "emojiDashicon": "",
+                    "emojiImageUrl": ""
+                },
+                {
+                    "id": "3",
+                    "name": "James Green",
+                    "years": "1958–",
+                    "emoji": "👨",
+                    "parentId": "1",
+                    "spouseId": "4",
+                    "color": "#0891b2",
+                    "emojiType": "custom-char",
+                    "emojiDashicon": "",
+                    "emojiImageUrl": ""
+                },
+                {
+                    "id": "4",
+                    "name": "Susan Green",
+                    "years": "1960–",
+                    "emoji": "👩",
+                    "parentId": "",
+                    "spouseId": "3",
+                    "color": "#0891b2",
+                    "emojiType": "custom-char",
+                    "emojiDashicon": "",
+                    "emojiImageUrl": ""
+                },
+                {
+                    "id": "5",
+                    "name": "Emily Brown",
+                    "years": "1962–",
+                    "emoji": "👩",
+                    "parentId": "1",
+                    "spouseId": "6",
+                    "color": "#059669",
+                    "emojiType": "custom-char",
+                    "emojiDashicon": "",
+                    "emojiImageUrl": ""
+                },
+                {
+                    "id": "6",
+                    "name": "Tom Brown",
+                    "years": "1961–",
+                    "emoji": "👨",
+                    "parentId": "",
+                    "spouseId": "5",
+                    "color": "#059669",
+                    "emojiType": "custom-char",
+                    "emojiDashicon": "",
+                    "emojiImageUrl": ""
+                },
+                {
+                    "id": "7",
+                    "name": "Liam Green",
+                    "years": "1985–",
+                    "emoji": "🧑",
+                    "parentId": "3",
+                    "spouseId": "",
+                    "color": "#dc2626",
+                    "emojiType": "custom-char",
+                    "emojiDashicon": "",
+                    "emojiImageUrl": ""
+                },
+                {
+                    "id": "8",
+                    "name": "Olivia Green",
+                    "years": "1988–",
+                    "emoji": "🧒",
+                    "parentId": "3",
+                    "spouseId": "",
+                    "color": "#dc2626",
+                    "emojiType": "custom-char",
+                    "emojiDashicon": "",
+                    "emojiImageUrl": ""
+                },
+                {
+                    "id": "9",
+                    "name": "Noah Brown",
+                    "years": "1987–",
+                    "emoji": "🧑",
+                    "parentId": "5",
+                    "spouseId": "",
+                    "color": "#d97706",
+                    "emojiType": "custom-char",
+                    "emojiDashicon": "",
+                    "emojiImageUrl": ""
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,279 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/restaurant-menu",
+    "title": "Restaurant Menu",
+    "description": "A beautifully organized restaurant or café menu with category tabs, item names, descriptions, prices, and dietary badges.",
+    "category": "bkbg-business",
+    "icon": "food",
+    "keywords": [
+        "menu",
+        "restaurant",
+        "food",
+        "cafe",
+        "price",
+        "dish"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-restaurant-menu-editor",
+    "style": "bkbg-restaurant-menu-style",
+    "viewScript": "bkbg-restaurant-menu-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "categories": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "rm001",
+                    "icon": "🥗",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "name": "Starters",
+                    "items": [
+                        {
+                            "id": "ri001",
+                            "name": "Bruschetta al Pomodoro",
+                            "description": "Toasted sourdough, cherry tomatoes, fresh basil, extra virgin olive oil",
+                            "price": "9.50",
+                            "badges": [
+                                "V",
+                                "VG"
+                            ]
+                        },
+                        {
+                            "id": "ri002",
+                            "name": "Crispy Calamari",
+                            "description": "Lightly breaded squid rings, lemon aioli, fresh herbs",
+                            "price": "13.00",
+                            "badges": []
+                        },
+                        {
+                            "id": "ri003",
+                            "name": "Burrata & Prosciutto",
+                            "description": "Creamy burrata, Parma ham, heirloom tomatoes, aged balsamic",
+                            "price": "16.50",
+                            "badges": [
+                                "GF"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "rm002",
+                    "icon": "🍝",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "name": "Main Course",
+                    "items": [
+                        {
+                            "id": "ri004",
+                            "name": "Spaghetti Carbonara",
+                            "description": "Free-range egg, guanciale, Pecorino Romano, black pepper",
+                            "price": "22.00",
+                            "badges": []
+                        },
+                        {
+                            "id": "ri005",
+                            "name": "Grilled Sea Bass",
+                            "description": "Pan-seared fillet, caponata, lemon butter sauce, micro greens",
+                            "price": "28.00",
+                            "badges": [
+                                "GF",
+                                "DF"
+                            ]
+                        },
+                        {
+                            "id": "ri006",
+                            "name": "Wild Mushroom Risotto",
+                            "description": "Arborio rice, porcini, truffle oil, Grana Padano, fresh thyme",
+                            "price": "19.50",
+                            "badges": [
+                                "V",
+                                "GF"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "rm003",
+                    "icon": "🍮",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "name": "Desserts",
+                    "items": [
+                        {
+                            "id": "ri007",
+                            "name": "Tiramisu",
+                            "description": "Classic Italian dessert, Mascarpone, espresso-soaked ladyfingers, cocoa",
+                            "price": "9.00",
+                            "badges": [
+                                "V"
+                            ]
+                        },
+                        {
+                            "id": "ri008",
+                            "name": "Panna Cotta",
+                            "description": "Vanilla panna cotta, seasonal berry coulis, mint",
+                            "price": "8.50",
+                            "badges": [
+                                "V",
+                                "GF"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "tabs"
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "currencyPosition": {
+            "type": "string",
+            "default": "before"
+        },
+        "itemStyle": {
+            "type": "string",
+            "default": "list"
+        },
+        "columns": {
+            "type": "integer",
+            "default": 1
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBadges": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCategoryIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "separator": {
+            "type": "string",
+            "default": "line"
+        },
+        "badgeRadius": {
+            "type": "integer",
+            "default": 4
+        },
+        "cardRadius": {
+            "type": "integer",
+            "default": 12
+        },
+        "cardPadding": {
+            "type": "integer",
+            "default": 18
+        },
+        "categoryNameSize": {
+            "type": "integer",
+            "default": 13
+        },
+        "itemNameSize": {
+            "type": "integer",
+            "default": 16
+        },
+        "descSize": {
+            "type": "integer",
+            "default": 14
+        },
+        "priceSize": {
+            "type": "integer",
+            "default": 16
+        },
+        "badgeSize": {
+            "type": "integer",
+            "default": 11
+        },
+        "catNameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "itemNameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "priceTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "activeTabBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "activeTabColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inactiveTabBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "inactiveTabColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "itemNameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "priceColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "separatorColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 64
+        }
+    }
+}

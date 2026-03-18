@@ -1,0 +1,245 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/demo-section",
+    "version": "1.0.0",
+    "title": "Demo / Trial Section",
+    "category": "bkbg-marketing",
+    "icon": "desktop",
+    "description": "Book-a-Demo or Start-Free-Trial CTA section with trust pills, social-proof stats, and optional product screenshot.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-demo-section-editor",
+    "style": "bkbg-demo-section-style",
+    "viewScript": "bkbg-demo-section-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "badge": {
+            "type": "string",
+            "default": "✨ No credit card required"
+        },
+        "heading": {
+            "type": "string",
+            "default": "See It in Action — Request a Demo"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Get a personalised walkthrough from our team and discover how Blockenberg can transform your workflow in under 30 minutes."
+        },
+        "ctaMode": {
+            "type": "string",
+            "default": "button"
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Book a Free Demo"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaSecLabel": {
+            "type": "string",
+            "default": "Start Free Trial"
+        },
+        "ctaSecUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showCtaSec": {
+            "type": "boolean",
+            "default": true
+        },
+        "formPlaceholder": {
+            "type": "string",
+            "default": "Enter your work email"
+        },
+        "formSubmitLabel": {
+            "type": "string",
+            "default": "Request Demo"
+        },
+        "formAction": {
+            "type": "string",
+            "default": ""
+        },
+        "trustItems": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "✅",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "text": "No credit card required"
+                },
+                {
+                    "icon": "⚡",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "text": "5-minute setup"
+                },
+                {
+                    "icon": "🔒",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "text": "SOC 2 certified"
+                },
+                {
+                    "icon": "🎯",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "text": "Cancel anytime"
+                }
+            ]
+        },
+        "showTrust": {
+            "type": "boolean",
+            "default": true
+        },
+        "socialStats": {
+            "type": "array",
+            "default": [
+                {
+                    "number": "10,000+",
+                    "label": "Active teams"
+                },
+                {
+                    "number": "4.9/5",
+                    "label": "G2 rating"
+                },
+                {
+                    "number": "98%",
+                    "label": "Customer satisfaction"
+                }
+            ]
+        },
+        "showStats": {
+            "type": "boolean",
+            "default": true
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "showImage": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "centered"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1100
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 100
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 100
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "rgba(99,102,241,0.15)"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#a5b4fc"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "ctaSecBg": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "ctaSecColor": {
+            "type": "string",
+            "default": "#a5b4fc"
+        },
+        "trustColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "statNumColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "statLabelColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "imageBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "badgeFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "headingFontSize": {
+            "type": "number",
+            "default": 36
+        },
+        "subtextFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "ctaFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "statNumFontSize": {
+            "type": "number",
+            "default": 28
+        },
+        "statLabelFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "typoHeading": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtext": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

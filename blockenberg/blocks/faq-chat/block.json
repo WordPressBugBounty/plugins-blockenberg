@@ -1,0 +1,175 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/faq-chat",
+    "title": "FAQ Chat",
+    "category": "bkbg-business",
+    "description": "Chat-bubble style FAQ. Visitors click questions to reveal bot-style answers with a typing indicator — a conversational alternative to accordion FAQ.",
+    "keywords": [
+        "faq",
+        "chat",
+        "question",
+        "answer",
+        "chatbot",
+        "support",
+        "help",
+        "bubble",
+        "conversational"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-faq-chat-editor",
+    "editorStyle": "bkbg-faq-chat-style",
+    "style": "bkbg-faq-chat-style",
+    "viewScript": "bkbg-faq-chat-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide"
+        ]
+    },
+    "attributes": {
+        "faqs": {
+            "type": "array",
+            "default": [
+                {
+                    "question": "How quickly can I get started?",
+                    "answer": "You can be up and running in under 5 minutes. Just install, activate, and add your first block — no coding needed."
+                },
+                {
+                    "question": "Is there a free plan available?",
+                    "answer": "Yes! Our free plan lets you explore all core features with up to 3 projects. Upgrade anytime to unlock unlimited projects and premium blocks."
+                },
+                {
+                    "question": "Can I use this with any theme?",
+                    "answer": "Absolutely. Our blocks work with any WordPress theme that supports the block editor, including popular themes like Astra, GeneratePress, and Kadence."
+                },
+                {
+                    "question": "What kind of support do you offer?",
+                    "answer": "All plans include access to our documentation and community forum. Pro and Business plans also include priority email support with a 24-hour response time."
+                },
+                {
+                    "question": "Can I cancel my subscription anytime?",
+                    "answer": "Yes, you can cancel at any time from your account dashboard. Your access continues until the end of the current billing period."
+                }
+            ]
+        },
+        "botName": {
+            "type": "string",
+            "default": "Support Bot"
+        },
+        "botAvatar": {
+            "type": "string",
+            "default": "🤖"
+        },
+        "avatarBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "initialMessage": {
+            "type": "string",
+            "default": "Hi! 👋 I'm here to help. Click any question below to get started."
+        },
+        "showTimestamp": {
+            "type": "boolean",
+            "default": true
+        },
+        "typingDelay": {
+            "type": "number",
+            "default": 700
+        },
+        "chatStyle": {
+            "type": "string",
+            "default": "rounded"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 620
+        },
+        "maxHeight": {
+            "type": "number",
+            "default": 500
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "questionSize": {
+            "type": "number",
+            "default": 14
+        },
+        "answerSize": {
+            "type": "number",
+            "default": 14
+        },
+        "typoQuestion": {
+            "type": "object",
+            "default": {}
+        },
+        "typoAnswer": {
+            "type": "object",
+            "default": {}
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "chatBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "botBubbleBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "botBubbleColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "userBubbleBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "userBubbleColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "questionsBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "btnBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "btnActiveBg": {
+            "type": "string",
+            "default": "#e0e7ff"
+        },
+        "btnActiveColor": {
+            "type": "string",
+            "default": "#4338ca"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "timestampColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        }
+    }
+}

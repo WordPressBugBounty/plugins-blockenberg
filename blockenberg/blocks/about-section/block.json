@@ -1,0 +1,226 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/about-section",
+    "version": "1.0.0",
+    "title": "About Section",
+    "category": "bkbg-business",
+    "icon": "admin-home",
+    "description": "Ready-made About Us section with split image/video + text layout, optional company stats row, badge label, CTA buttons, and full background/color controls.",
+    "keywords": [
+        "about",
+        "company",
+        "team",
+        "story",
+        "section",
+        "split"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-about-section-editor",
+    "style": "bkbg-about-section-style",
+    "viewScript": "bkbg-about-section-frontend",
+    "attributes": {
+        "label": {
+            "type": "string",
+            "default": "About Us"
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "heading": {
+            "type": "string",
+            "default": "We build products that make a real difference."
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Founded in 2018, we've helped over 3,000 companies ship better software, faster. Our team of designers and engineers brings a unique mix of craft and strategy to every project."
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "imageLayout": {
+            "type": "string",
+            "default": "left"
+        },
+        "imageStyle": {
+            "type": "string",
+            "default": "rounded"
+        },
+        "imageShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "showStats": {
+            "type": "boolean",
+            "default": true
+        },
+        "stats": {
+            "type": "array",
+            "default": [
+                {
+                    "value": "3,000+",
+                    "label": "Clients served"
+                },
+                {
+                    "value": "98%",
+                    "label": "Satisfaction rate"
+                },
+                {
+                    "value": "12yrs",
+                    "label": "In business"
+                }
+            ]
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Meet the Team"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaStyle": {
+            "type": "string",
+            "default": "filled"
+        },
+        "showCta2": {
+            "type": "boolean",
+            "default": false
+        },
+        "cta2Label": {
+            "type": "string",
+            "default": "Our Story"
+        },
+        "cta2Url": {
+            "type": "string",
+            "default": "#"
+        },
+        "showSignature": {
+            "type": "boolean",
+            "default": false
+        },
+        "signatureName": {
+            "type": "string",
+            "default": "Alex Johnson, CEO"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "statValueColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "statLabelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "labelBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 40
+        },
+        "textSize": {
+            "type": "number",
+            "default": 17
+        },
+        "statValueSize": {
+            "type": "number",
+            "default": 36
+        },
+        "colGap": {
+            "type": "number",
+            "default": 64
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1200
+        },
+        "verticalAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 13
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "statValueTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "statLabelTypo": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

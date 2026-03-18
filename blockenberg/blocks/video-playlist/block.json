@@ -1,0 +1,181 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/video-playlist",
+    "title": "Video Playlist",
+    "description": "A video player paired with a clickable episode/chapter list — perfect for course previews, tutorial series and video podcasts.",
+    "category": "bkbg-media",
+    "icon": "playlist-video",
+    "keywords": [
+        "video",
+        "playlist",
+        "episodes",
+        "course",
+        "tutorial",
+        "youtube",
+        "vimeo"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-video-playlist-editor",
+    "style": "bkbg-video-playlist-style",
+    "viewScript": "bkbg-video-playlist-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "playlistTitle": {
+            "type": "string",
+            "default": "Watch the Series"
+        },
+        "showPlaylistTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "episodes": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Episode 1: Introduction",
+                    "description": "A quick overview of what you will learn in this series.",
+                    "videoType": "youtube",
+                    "videoId": "dQw4w9WgXcQ",
+                    "videoUrl": "",
+                    "duration": "5:32",
+                    "thumbnailUrl": "",
+                    "thumbnailId": 0,
+                    "thumbnailAlt": ""
+                },
+                {
+                    "title": "Episode 2: Getting Started",
+                    "description": "Set up your environment and run your first example.",
+                    "videoType": "youtube",
+                    "videoId": "dQw4w9WgXcQ",
+                    "videoUrl": "",
+                    "duration": "12:14",
+                    "thumbnailUrl": "",
+                    "thumbnailId": 0,
+                    "thumbnailAlt": ""
+                },
+                {
+                    "title": "Episode 3: Going Deeper",
+                    "description": "Explore advanced techniques and real-world patterns.",
+                    "videoType": "youtube",
+                    "videoId": "dQw4w9WgXcQ",
+                    "videoUrl": "",
+                    "duration": "18:07",
+                    "thumbnailUrl": "",
+                    "thumbnailId": 0,
+                    "thumbnailAlt": ""
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "side"
+        },
+        "listPosition": {
+            "type": "string",
+            "default": "right"
+        },
+        "showNumbers": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDuration": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "showThumbnails": {
+            "type": "boolean",
+            "default": true
+        },
+        "listWidth": {
+            "type": "number",
+            "default": 340
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#0f0f1a"
+        },
+        "playerBg": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "listBg": {
+            "type": "string",
+            "default": "#1a1a2e"
+        },
+        "activeBg": {
+            "type": "string",
+            "default": "#2d2b55"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#a0aec0"
+        },
+        "epTitleColor": {
+            "type": "string",
+            "default": "#f0f0f0"
+        },
+        "epMetaColor": {
+            "type": "string",
+            "default": "#718096"
+        },
+        "activeColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "playlistTitleFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "epTitleFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "epMetaFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "playlistTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "epTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "epMetaTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

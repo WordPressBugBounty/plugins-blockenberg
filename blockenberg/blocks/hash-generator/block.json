@@ -1,0 +1,149 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/hash-generator",
+    "version": "1.0.0",
+    "title": "Hash Generator",
+    "category": "bkbg-dev",
+    "icon": "lock",
+    "description": "Generate MD5, SHA-1, SHA-256 and SHA-512 cryptographic hashes from any text input. Useful for developers, security professionals and data integrity checks.",
+    "keywords": [
+        "hash",
+        "md5",
+        "sha256",
+        "sha1",
+        "sha512",
+        "crypto",
+        "checksum",
+        "generator",
+        "developer",
+        "security"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-hash-generator-editor",
+    "style": "bkbg-hash-generator-style",
+    "viewScript": "bkbg-hash-generator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Hash Generator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Generate cryptographic hashes from any text instantly"
+        },
+        "defaultAlgorithm": {
+            "type": "string",
+            "default": "SHA-256"
+        },
+        "defaultInput": {
+            "type": "string",
+            "default": ""
+        },
+        "showMD5": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSHA1": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSHA256": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSHA512": {
+            "type": "boolean",
+            "default": false
+        },
+        "showCompare": {
+            "type": "boolean",
+            "default": true
+        },
+        "autoHash": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "hashBg": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "hashColor": {
+            "type": "string",
+            "default": "#a5b4fc"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleFontSize": {
+            "type": "integer",
+            "default": 26
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "subtitleFontSize": {
+            "type": "integer",
+            "default": 14
+        },
+        "subtitleFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "subtitleLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "contentMaxWidth": {
+            "type": "integer",
+            "default": 700
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

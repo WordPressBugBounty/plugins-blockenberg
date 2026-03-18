@@ -1,0 +1,186 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/calorie-calculator",
+    "title": "Calorie Calculator",
+    "category": "bkbg-calculators",
+    "icon": "heart",
+    "description": "BMR and TDEE calorie calculator using the Mifflin-St Jeor equation. Supports metric and imperial units, activity levels, and shows macro nutrient breakdown.",
+    "keywords": [
+        "calorie",
+        "tdee",
+        "bmr",
+        "nutrition",
+        "diet",
+        "macro",
+        "fitness",
+        "health"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-calorie-calculator-editor",
+    "style": "bkbg-calorie-calculator-style",
+    "viewScript": "bkbg-calorie-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Calorie Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Calculate your daily calorie needs (TDEE) and macro breakdown."
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultUnits": {
+            "type": "string",
+            "default": "metric"
+        },
+        "defaultGender": {
+            "type": "string",
+            "default": "male"
+        },
+        "defaultAge": {
+            "type": "number",
+            "default": 30
+        },
+        "defaultWeight": {
+            "type": "number",
+            "default": 70
+        },
+        "defaultHeight": {
+            "type": "number",
+            "default": 170
+        },
+        "defaultActivity": {
+            "type": "string",
+            "default": "moderate"
+        },
+        "showMacros": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGoalCalc": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBMR": {
+            "type": "boolean",
+            "default": true
+        },
+        "proteinPct": {
+            "type": "number",
+            "default": 25
+        },
+        "carbPct": {
+            "type": "number",
+            "default": 45
+        },
+        "fatPct": {
+            "type": "number",
+            "default": 30
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "resultBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "tdeeColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "bmrColor": {
+            "type": "string",
+            "default": "#8b5cf6"
+        },
+        "proColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "carbColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "fatColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 26
+        },
+        "tdeeSize": {
+            "type": "number",
+            "default": 52
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 620
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSub": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,109 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/filter-gallery",
+    "title": "Filter Gallery",
+    "category": "bkbg-media",
+    "icon": "filter",
+    "description": "Image grid with category filter buttons. Clicking a tag shows/hides matching items with animation.",
+    "keywords": [
+        "gallery",
+        "filter",
+        "isotope",
+        "tags",
+        "grid",
+        "category"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-filter-gallery-editor",
+    "editorStyle": "bkbg-filter-gallery-style",
+    "style": "bkbg-filter-gallery-style",
+    "viewScript": "bkbg-filter-gallery-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "alt": "",
+                    "title": "Item One",
+                    "tags": "web, design"
+                },
+                {
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "alt": "",
+                    "title": "Item Two",
+                    "tags": "print, design"
+                },
+                {
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "alt": "",
+                    "title": "Item Three",
+                    "tags": "web"
+                }
+            ]
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "gap": {
+            "type": "number",
+            "default": 16
+        },
+        "imageRatio": {
+            "type": "string",
+            "default": "1/1"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "filterStyle": {
+            "type": "string",
+            "default": "pills"
+        },
+        "animation": {
+            "type": "string",
+            "default": "fade"
+        },
+        "showAllLabel": {
+            "type": "string",
+            "default": "All"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#333333"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "titleFontSize": { "type": "number", "default": 13 },
+        "titleFontWeight": { "type": "string", "default": "600" },
+        "filterFontSize": { "type": "number", "default": 14 },
+        "filterFontWeight": { "type": "string", "default": "600" },
+        "typoTitle": { "type": "object", "default": {} },
+        "typoFilter": { "type": "object", "default": {} }
+    }
+}

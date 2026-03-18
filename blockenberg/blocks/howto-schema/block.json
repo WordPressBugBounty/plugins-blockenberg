@@ -1,0 +1,272 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/howto-schema",
+    "title": "HowTo Schema",
+    "category": "bkbg-blog",
+    "icon": "list-view",
+    "description": "Step-by-step How-To guide with automatic Schema.org HowTo JSON-LD structured data for Google rich results. Includes supplies, tools, total time, cost estimate, and numbered steps with images.",
+    "keywords": [
+        "howto",
+        "how-to",
+        "schema",
+        "seo",
+        "steps",
+        "tutorial",
+        "guide",
+        "instructions",
+        "structured data"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-howto-schema-editor",
+    "style": "bkbg-howto-schema-style",
+    "viewScript": "bkbg-howto-schema-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "How to Build a WordPress Website"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "description": {
+            "type": "string",
+            "default": "A step-by-step guide to setting up and launching a professional WordPress website from scratch."
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "totalTime": {
+            "type": "string",
+            "default": "PT2H"
+        },
+        "totalTimeLabel": {
+            "type": "string",
+            "default": "2 hours"
+        },
+        "estimatedCost": {
+            "type": "string",
+            "default": "15"
+        },
+        "costCurrency": {
+            "type": "string",
+            "default": "USD"
+        },
+        "showMeta": {
+            "type": "boolean",
+            "default": true
+        },
+        "steps": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "s1",
+                    "name": "Choose a Domain Name",
+                    "text": "Pick a memorable, brand-relevant domain name. Use a domain registrar like Namecheap or GoDaddy to check availability and register it.",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "s2",
+                    "name": "Select a Web Host",
+                    "text": "Choose a WordPress-optimised hosting provider such as SiteGround, Kinsta, or WP Engine. Select a plan that suits your traffic expectations.",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "s3",
+                    "name": "Install WordPress",
+                    "text": "Most hosts provide a one-click WordPress installer. Log in to your hosting control panel and run the WordPress installation wizard.",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "s4",
+                    "name": "Choose a Theme",
+                    "text": "Navigate to Appearance → Themes in the WordPress dashboard. Browse or upload a theme that matches your brand. Activate it.",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "s5",
+                    "name": "Install Essential Plugins",
+                    "text": "Install plugins for SEO (Yoast or RankMath), caching (WP Rocket), security (Wordfence), and a contact form (WPForms).",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "s6",
+                    "name": "Create Your Core Pages",
+                    "text": "Build your Home, About, Services/Products, Blog, and Contact pages. Use the Block Editor to add content, images, and calls to action.",
+                    "imageUrl": "",
+                    "imageId": 0
+                }
+            ]
+        },
+        "supplies": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "sup1",
+                    "name": "Domain name",
+                    "imageUrl": ""
+                },
+                {
+                    "id": "sup2",
+                    "name": "Hosting plan",
+                    "imageUrl": ""
+                }
+            ]
+        },
+        "tools": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "tl1",
+                    "name": "Web browser",
+                    "imageUrl": ""
+                },
+                {
+                    "id": "tl2",
+                    "name": "Text/code editor",
+                    "imageUrl": ""
+                }
+            ]
+        },
+        "showSupplies": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTools": {
+            "type": "boolean",
+            "default": true
+        },
+        "showStepImages": {
+            "type": "boolean",
+            "default": true
+        },
+        "showStepNumbers": {
+            "type": "boolean",
+            "default": true
+        },
+        "stepLayout": {
+            "type": "string",
+            "default": "vertical"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "stepNameColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "stepTextColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "stepNumBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "stepNumColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "metaBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "metaBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "supplyBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "supplyBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "connectorColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 30
+        },
+        "stepNameSize": {
+            "type": "number",
+            "default": 17
+        },
+        "stepTextSize": {
+            "type": "number",
+            "default": 14
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "stepNumSize": {
+            "type": "number",
+            "default": 18
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "stepNameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "stepTextTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

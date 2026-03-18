@@ -1,0 +1,136 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/contact-info",
+    "title": "Contact Info",
+    "category": "bkbg-business",
+    "description": "Display business contact information with icons, labels, and optional Schema.org markup.",
+    "keywords": [
+        "contact",
+        "address",
+        "phone",
+        "email",
+        "info"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-contact-info-editor",
+    "editorStyle": "bkbg-contact-info-style",
+    "style": "bkbg-contact-info-style",
+    "viewScript": "bkbg-contact-info-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "item-1",
+                    "type": "address",
+                    "label": "Address",
+                    "value": "123 Main Street, City, State 00000",
+                    "linkEnabled": false
+                },
+                {
+                    "id": "item-2",
+                    "type": "phone",
+                    "label": "Phone",
+                    "value": "+1 (555) 000-0000",
+                    "linkEnabled": true
+                },
+                {
+                    "id": "item-3",
+                    "type": "email",
+                    "label": "Email",
+                    "value": "hello@example.com",
+                    "linkEnabled": true
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "stacked"
+        },
+        "columns": {
+            "type": "number",
+            "default": 2
+        },
+        "iconStyle": {
+            "type": "string",
+            "default": "filled"
+        },
+        "iconBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 18
+        },
+        "iconBoxSize": {
+            "type": "number",
+            "default": 40
+        },
+        "iconRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 12
+        },
+        "labelWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "valueSize": {
+            "type": "number",
+            "default": 15
+        },
+        "valueWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "valueColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "itemSpacing": {
+            "type": "number",
+            "default": 20
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "schemaEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "typoLabel": {
+            "type": "object",
+            "default": {}
+        },
+        "typoValue": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

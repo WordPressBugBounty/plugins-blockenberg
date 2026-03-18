@@ -1,0 +1,180 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/feature-tabs",
+    "title": "Feature Tabs",
+    "description": "SaaS-style screenshot tabs: clickable feature list on one side, large image preview on the other.",
+    "category": "bkbg-marketing",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-feature-tabs-editor",
+    "style": "bkbg-feature-tabs-style",
+    "viewScript": "bkbg-feature-tabs-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "tabs": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "t1",
+                    "icon": "⚡",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "Lightning Fast",
+                    "headline": "Built for Speed",
+                    "description": "Our platform is optimized from the ground up—load in milliseconds, not seconds, and keep every visitor engaged from the first byte.",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "t2",
+                    "icon": "🎨",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "Beautiful Design",
+                    "headline": "Pixel-Perfect Every Time",
+                    "description": "Craft stunning pages with our intuitive drag-and-drop interface. Every element snaps perfectly into place with beautiful defaults.",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "t3",
+                    "icon": "🔒",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "Enterprise Security",
+                    "headline": "Security You Can Trust",
+                    "description": "Bank-grade encryption, automatic backups, and 24/7 monitoring keep your data safe and your business running without interruption.",
+                    "imageUrl": "",
+                    "imageId": 0
+                }
+            ]
+        },
+        "defaultActive": {
+            "type": "number",
+            "default": 0
+        },
+        "tabsPosition": {
+            "type": "string",
+            "default": "left"
+        },
+        "imageAspect": {
+            "type": "string",
+            "default": "16/9"
+        },
+        "imageRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "imageShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "imageObjectFit": {
+            "type": "string",
+            "default": "cover"
+        },
+        "tabStyle": {
+            "type": "string",
+            "default": "card"
+        },
+        "tabsWidth": {
+            "type": "number",
+            "default": 300
+        },
+        "gap": {
+            "type": "number",
+            "default": 48
+        },
+        "animate": {
+            "type": "boolean",
+            "default": true
+        },
+        "headlineSize": {
+            "type": "number",
+            "default": 28
+        },
+        "descSize": {
+            "type": "number",
+            "default": 15
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 15
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 28
+        },
+        "typoLabel": {
+            "type": "object",
+            "default": {}
+        },
+        "typoHeadline": {
+            "type": "object",
+            "default": {}
+        },
+        "typoDesc": {
+            "type": "object",
+            "default": {}
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "activeTabBg": {
+            "type": "string",
+            "default": "#ede9f7"
+        },
+        "activeTabColor": {
+            "type": "string",
+            "default": "#4c1d95"
+        },
+        "inactiveTabBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "inactiveTabColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "tabBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headlineColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "imagePlaceholderBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 64
+        }
+    }
+}

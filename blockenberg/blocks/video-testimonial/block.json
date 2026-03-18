@@ -1,0 +1,196 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/video-testimonial",
+    "version": "1.0.0",
+    "title": "Video Testimonial",
+    "category": "bkbg-marketing",
+    "icon": "video-alt3",
+    "description": "Testimonial cards with embedded YouTube/Vimeo video, star rating, quote, and author. Builds deep social proof with video evidence.",
+    "keywords": [
+        "testimonial",
+        "review",
+        "video",
+        "youtube",
+        "vimeo",
+        "social proof",
+        "customer"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-video-testimonial-editor",
+    "editorStyle": "bkbg-video-testimonial-style",
+    "style": "bkbg-video-testimonial-style",
+    "viewScript": "bkbg-video-testimonial-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "vt1",
+                    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                    "thumbnailUrl": "",
+                    "thumbnailId": 0,
+                    "quote": "This completely transformed how our team works. We shipped 3x faster in the first month alone.",
+                    "author": "Sarah Johnson",
+                    "role": "Head of Product",
+                    "company": "Acme Corp",
+                    "rating": 5
+                },
+                {
+                    "id": "vt2",
+                    "videoUrl": "https://vimeo.com/76979871",
+                    "thumbnailUrl": "",
+                    "thumbnailId": 0,
+                    "quote": "I was skeptical at first but the results speak for themselves. Our conversion rate went up 40%.",
+                    "author": "Marcus Lee",
+                    "role": "Founder",
+                    "company": "Bloop AI",
+                    "rating": 5
+                },
+                {
+                    "id": "vt3",
+                    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                    "thumbnailUrl": "",
+                    "thumbnailId": 0,
+                    "quote": "The best investment we made this year. Onboarding took 20 minutes and we were live the same day.",
+                    "author": "Priya Mehta",
+                    "role": "CTO",
+                    "company": "NovaTech",
+                    "rating": 5
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "gap": {
+            "type": "number",
+            "default": 24
+        },
+        "showRating": {
+            "type": "boolean",
+            "default": true
+        },
+        "showQuote": {
+            "type": "boolean",
+            "default": true
+        },
+        "showRole": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCompany": {
+            "type": "boolean",
+            "default": true
+        },
+        "videoAspect": {
+            "type": "string",
+            "default": "16/9"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 24
+        },
+        "cardShadow": {
+            "type": "string",
+            "default": "md"
+        },
+        "quoteSize": {
+            "type": "number",
+            "default": 15
+        },
+        "authorSize": {
+            "type": "number",
+            "default": 15
+        },
+        "roleSize": {
+            "type": "number",
+            "default": 13
+        },
+        "quoteTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "authorTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "roleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "starSize": {
+            "type": "number",
+            "default": 16
+        },
+        "starColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "quoteColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "authorColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "roleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "playIconColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "overlayBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.38)"
+        },
+        "animate": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 40
+        }
+    }
+}

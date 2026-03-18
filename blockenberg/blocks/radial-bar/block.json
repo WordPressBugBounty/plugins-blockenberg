@@ -1,0 +1,129 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/radial-bar",
+    "title": "Radial Bar Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-pie",
+    "description": "Concentric circular progress arcs \u2014 each ring represents a different metric, great for comparing multiple KPIs at a glance.",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Q4 Performance Metrics"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgSize": {
+            "type": "integer",
+            "default": 460
+        },
+        "trackWidth": {
+            "type": "integer",
+            "default": 22
+        },
+        "trackGap": {
+            "type": "integer",
+            "default": 10
+        },
+        "startAngle": {
+            "type": "integer",
+            "default": -90
+        },
+        "maxValue": {
+            "type": "integer",
+            "default": 100
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "roundedCaps": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelFontSize": {
+            "type": "integer",
+            "default": 12
+        },
+        "valueFontSize": {
+            "type": "integer",
+            "default": 11
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "trackBgColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "series": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Revenue",
+                    "value": 87,
+                    "color": "#6366f1"
+                },
+                {
+                    "label": "Users",
+                    "value": 73,
+                    "color": "#10b981"
+                },
+                {
+                    "label": "Conversion",
+                    "value": 61,
+                    "color": "#f59e0b"
+                },
+                {
+                    "label": "Retention",
+                    "value": 94,
+                    "color": "#ef4444"
+                },
+                {
+                    "label": "NPS Score",
+                    "value": 56,
+                    "color": "#8b5cf6"
+                }
+            ]
+        },
+        "labelFontWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "valueFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "editorScript": "bkbg-radial-bar-editor",
+    "style": "bkbg-radial-bar-style"
+}

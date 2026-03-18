@@ -1,0 +1,118 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/bingo-card",
+    "title": "Bingo Card",
+    "category": "bkbg-interactive",
+    "icon": "grid-view",
+    "description": "Interactive 5×5 Bingo card with number calling, win detection, and celebration animations.",
+    "keywords": [
+        "bingo",
+        "game",
+        "card",
+        "lottery",
+        "fun",
+        "interactive"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-bingo-card-editor",
+    "style": "bkbg-bingo-card-style",
+    "viewScript": "bkbg-bingo-card-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Bingo!"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Mark called numbers on your card"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCaller": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCalledList": {
+            "type": "boolean",
+            "default": true
+        },
+        "autoCall": {
+            "type": "boolean",
+            "default": false
+        },
+        "autoCallInterval": {
+            "type": "number",
+            "default": 5
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "markedColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "bingoColor": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "freeColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#1e3a5f"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cellBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cellColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e3a5f"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 32
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 600
+        },
+        "titleTypo": { "type": "object", "default": {} },
+        "subtitleTypo": { "type": "object", "default": {} }
+    }
+}

@@ -1,0 +1,267 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/bio-section",
+    "version": "1.0.0",
+    "title": "Bio Section",
+    "category": "bkbg-business",
+    "icon": "admin-users",
+    "description": "Personal biography section for coaches, authors, consultants, and founders. Features large photo, name, title, rich bio text, credential badges, a pull quote, and social links. Multiple layout options.",
+    "keywords": [
+        "bio",
+        "biography",
+        "about",
+        "author",
+        "founder",
+        "coach",
+        "profile",
+        "personal"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-bio-section-editor",
+    "style": "bkbg-bio-section-style",
+    "viewScript": "bkbg-bio-section-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "integer",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "imageShape": {
+            "type": "string",
+            "default": "rounded"
+        },
+        "name": {
+            "type": "string",
+            "default": "Sarah Mitchell"
+        },
+        "title": {
+            "type": "string",
+            "default": "Business Coach & Bestselling Author"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Forbes 30 Under 30 · 2× TEDx Speaker"
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "bio": {
+            "type": "string",
+            "default": "I help ambitious entrepreneurs build six-figure businesses without burning out. With over a decade of hands-on experience coaching 500+ founders across 40 countries, I've distilled the frameworks that actually work — into actionable strategies you can use starting today.<br><br>Before building my coaching practice, I spent years in the trenches as a startup founder, raising venture capital, managing teams, and learning the hard lessons most business schools don't teach."
+        },
+        "credentials": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "500+ Clients Coached"
+                },
+                {
+                    "text": "10+ Years Experience"
+                },
+                {
+                    "text": "Bestselling Author"
+                },
+                {
+                    "text": "Harvard MBA"
+                }
+            ]
+        },
+        "showCredentials": {
+            "type": "boolean",
+            "default": true
+        },
+        "highlightQuote": {
+            "type": "string",
+            "default": "\"Success isn't about working harder — it's about working on the right things, with the right people, at the right time.\""
+        },
+        "showQuote": {
+            "type": "boolean",
+            "default": true
+        },
+        "socials": {
+            "type": "array",
+            "default": [
+                {
+                    "platform": "twitter",
+                    "url": "#",
+                    "label": "Twitter"
+                },
+                {
+                    "platform": "linkedin",
+                    "url": "#",
+                    "label": "LinkedIn"
+                },
+                {
+                    "platform": "instagram",
+                    "url": "#",
+                    "label": "Instagram"
+                },
+                {
+                    "platform": "website",
+                    "url": "#",
+                    "label": "Website"
+                }
+            ]
+        },
+        "showSocials": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Work with me →"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaIsExternal": {
+            "type": "boolean",
+            "default": false
+        },
+        "layout": {
+            "type": "string",
+            "default": "image-left"
+        },
+        "imageWidth": {
+            "type": "integer",
+            "default": 380
+        },
+        "imageRadius": {
+            "type": "integer",
+            "default": 16
+        },
+        "showDecorator": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "bioColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "credentialBg": {
+            "type": "string",
+            "default": "#f3f0ff"
+        },
+        "credentialColor": {
+            "type": "string",
+            "default": "#5b21b6"
+        },
+        "quoteColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "quoteBorderColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "decoratorColor": {
+            "type": "string",
+            "default": "#f3f0ff"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "socialColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "nameSize": {
+            "type": "integer",
+            "default": 36
+        },
+        "titleSize": {
+            "type": "integer",
+            "default": 16
+        },
+        "bioSize": {
+            "type": "integer",
+            "default": 16
+        },
+        "subtitleFontSize": {
+            "type": "integer",
+            "default": 14
+        },
+        "quoteFontSize": {
+            "type": "integer",
+            "default": 17
+        },
+        "typoName": {
+            "type": "object",
+            "default": {}
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBio": {
+            "type": "object",
+            "default": {}
+        },
+        "typoQuote": {
+            "type": "object",
+            "default": {}
+        },
+        "maxWidth": {
+            "type": "integer",
+            "default": 1060
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 80
+        }
+    }
+}

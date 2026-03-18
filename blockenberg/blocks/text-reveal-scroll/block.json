@@ -1,0 +1,115 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/text-reveal-scroll",
+    "title": "Text Reveal on Scroll",
+    "description": "Cinematic scroll-triggered text reveal: words or characters animate in one by one as the section enters the viewport. Supports fade, slide-up, clip, and blur reveal modes with staggered delays.",
+    "category": "bkbg-effects",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-text-reveal-scroll-editor",
+    "style": "bkbg-text-reveal-scroll-style",
+    "viewScript": "bkbg-text-reveal-scroll-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "text": {
+            "type": "string",
+            "default": "We craft digital experiences that people love and businesses trust."
+        },
+        "subtext": {
+            "type": "string",
+            "default": ""
+        },
+        "tag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "revealUnit": {
+            "type": "string",
+            "default": "word"
+        },
+        "revealAnim": {
+            "type": "string",
+            "default": "slide-up"
+        },
+        "stagger": {
+            "type": "number",
+            "default": 60
+        },
+        "duration": {
+            "type": "number",
+            "default": 600
+        },
+        "triggerOffset": {
+            "type": "number",
+            "default": 15
+        },
+        "once": {
+            "type": "boolean",
+            "default": true
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 900
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "accentWords": {
+            "type": "string",
+            "default": ""
+        },
+        "useGradient": {
+            "type": "boolean",
+            "default": false
+        },
+        "gradFrom": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "gradTo": {
+            "type": "string",
+            "default": "#ec4899"
+        }
+    }
+}

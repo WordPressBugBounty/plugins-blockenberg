@@ -1,0 +1,58 @@
+/* =====================================================
+   Values Circle — bkbg-vc-*
+   ===================================================== */
+
+.bkbg-vc-app {
+    box-sizing: border-box;
+    padding: 24px 16px;
+}
+
+/* ── SVG wrapper ── */
+.bkbg-vc-svg-wrap {
+    margin: 0 auto;
+    max-width: 100%;
+    overflow: visible;
+}
+
+/* ── Animate in ── */
+.bkbg-vc-app.bkbg-vc-animate .bkbg-vc-node-g {
+    opacity: 0;
+    transform: scale(0.7);
+    transform-origin: var(--vc-cx) var(--vc-cy);
+    transition: opacity .5s ease, transform .5s cubic-bezier(.34,1.56,.64,1);
+}
+
+.bkbg-vc-app.bkbg-vc-animate.bkbg-vc-visible .bkbg-vc-node-g {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.bkbg-vc-app.bkbg-vc-animate .bkbg-vc-line {
+    stroke-dashoffset: 1;
+    stroke-dasharray: 1;
+    transition: stroke-dasharray .6s ease;
+}
+
+.bkbg-vc-app.bkbg-vc-animate.bkbg-vc-visible .bkbg-vc-line {
+    stroke-dasharray: 0 0;
+}
+
+/* ── Node hover ── */
+.bkbg-vc-node-g {
+    cursor: default;
+}
+
+.bkbg-vc-node-g:hover .bkbg-vc-node-circle {
+    filter: brightness(1.15);
+}
+
+.bkbg-vc-node-g svg { width: 1em; height: 1em; fill: currentColor; }
+.bkbg-vc-node-g .dashicons { font-size: inherit; width: 1em; height: 1em; line-height: 1; }
+.bkbg-vc-node-g .bkbg-icon-img { width: 1em; height: 1em; object-fit: contain; }
+
+/* ── Responsive ── */
+@media (max-width: 500px) {
+    .bkbg-vc-app {
+        padding: 12px 4px;
+    }
+}

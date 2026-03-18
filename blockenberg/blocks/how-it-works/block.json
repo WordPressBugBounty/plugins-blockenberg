@@ -1,0 +1,204 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/how-it-works",
+    "version": "1.0.0",
+    "title": "How It Works",
+    "category": "bkbg-marketing",
+    "icon": "list-view",
+    "description": "Numbered process steps section — show a 3-6 step sequence with large step numbers, icons, titles, descriptions, and optional connectors. Perfect for onboarding flows and feature walkthroughs.",
+    "keywords": [
+        "how it works",
+        "steps",
+        "process",
+        "numbered",
+        "guide",
+        "workflow"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-how-it-works-editor",
+    "style": "bkbg-how-it-works-style",
+    "viewScript": "bkbg-how-it-works-frontend",
+    "attributes": {
+        "steps": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "s1",
+                    "icon": "🎯",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Define Your Goal",
+                    "description": "Tell us what you want to achieve. The clearer your goal, the better the outcome for your project."
+                },
+                {
+                    "id": "s2",
+                    "icon": "⚙️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Configure & Customize",
+                    "description": "Tailor every detail to match your brand. Colors, fonts, layouts — all under your control."
+                },
+                {
+                    "id": "s3",
+                    "icon": "🚀",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Launch & Grow",
+                    "description": "Go live with confidence. Our platform scales with you as your audience grows."
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "layout": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "numberStyle": {
+            "type": "string",
+            "default": "circle"
+        },
+        "showConnector": {
+            "type": "boolean",
+            "default": true
+        },
+        "connectorStyle": {
+            "type": "string",
+            "default": "line"
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconPosition": {
+            "type": "string",
+            "default": "above-number"
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "plain"
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 28
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "gap": {
+            "type": "number",
+            "default": 40
+        },
+        "numberSize": {
+            "type": "number",
+            "default": 22
+        },
+        "numberBgSize": {
+            "type": "number",
+            "default": 52
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 36
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 18
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "descSize": {
+            "type": "number",
+            "default": 14
+        },
+        "descFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "descLineHeight": {
+            "type": "number",
+            "default": 1.6
+        },
+        "numberBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "numberColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "connectorColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "animate": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ],
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    }
+}

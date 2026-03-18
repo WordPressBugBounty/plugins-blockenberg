@@ -1,0 +1,303 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/status-page",
+    "title": "Status Page",
+    "description": "Display system/service status with component health indicators, uptime percentages, and incident history.",
+    "category": "bkbg-dev",
+    "icon": "shield",
+    "keywords": [
+        "status",
+        "uptime",
+        "incident",
+        "health",
+        "system",
+        "service",
+        "operational"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-status-page-editor",
+    "editorStyle": "bkbg-status-page-style",
+    "style": "bkbg-status-page-style",
+    "viewScript": "bkbg-status-page-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "pageTitle": {
+            "type": "string",
+            "default": "System Status"
+        },
+        "overallStatus": {
+            "type": "string",
+            "default": "operational"
+        },
+        "lastUpdated": {
+            "type": "string",
+            "default": "February 24, 2026 · 12:00 UTC"
+        },
+        "showLastUpdated": {
+            "type": "boolean",
+            "default": true
+        },
+        "components": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "API",
+                    "status": "operational",
+                    "uptime": 99.98,
+                    "description": "Core REST API endpoints"
+                },
+                {
+                    "name": "Web App",
+                    "status": "operational",
+                    "uptime": 99.95,
+                    "description": "Customer-facing application"
+                },
+                {
+                    "name": "Dashboard",
+                    "status": "degraded",
+                    "uptime": 98.12,
+                    "description": "Admin dashboard & analytics"
+                },
+                {
+                    "name": "Authentication",
+                    "status": "operational",
+                    "uptime": 100.0,
+                    "description": "Login, OAuth, SSO"
+                },
+                {
+                    "name": "File Storage",
+                    "status": "operational",
+                    "uptime": 99.87,
+                    "description": "Media uploads & CDN delivery"
+                },
+                {
+                    "name": "Email Delivery",
+                    "status": "maintenance",
+                    "uptime": 99.5,
+                    "description": "Transactional & marketing email"
+                },
+                {
+                    "name": "Webhooks",
+                    "status": "operational",
+                    "uptime": 99.91,
+                    "description": "Event-driven integrations"
+                },
+                {
+                    "name": "Search",
+                    "status": "outage",
+                    "uptime": 94.3,
+                    "description": "Full-text & semantic search"
+                }
+            ]
+        },
+        "showUptime": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "incidents": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Search service outage – indexing failure",
+                    "severity": "major",
+                    "date": "Feb 24, 2026",
+                    "updates": [
+                        {
+                            "time": "11:42 UTC",
+                            "status": "investigating",
+                            "message": "We are investigating reports of search returning no results across all regions."
+                        },
+                        {
+                            "time": "12:00 UTC",
+                            "status": "identified",
+                            "message": "Root cause identified: indexing worker crashed during a schema migration."
+                        }
+                    ]
+                },
+                {
+                    "title": "Dashboard latency elevated",
+                    "severity": "minor",
+                    "date": "Feb 22, 2026",
+                    "updates": [
+                        {
+                            "time": "09:15 UTC",
+                            "status": "investigating",
+                            "message": "Some users reporting slow dashboard load times (>5s)."
+                        },
+                        {
+                            "time": "10:30 UTC",
+                            "status": "monitoring",
+                            "message": "Database query optimisation deployed. Monitoring for stabilisation."
+                        },
+                        {
+                            "time": "11:50 UTC",
+                            "status": "resolved",
+                            "message": "Latency returned to normal. Incident resolved."
+                        }
+                    ]
+                }
+            ]
+        },
+        "showIncidents": {
+            "type": "boolean",
+            "default": true
+        },
+        "incidentsLabel": {
+            "type": "string",
+            "default": "Recent Incidents"
+        },
+        "componentsLabel": {
+            "type": "string",
+            "default": "Components"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 26
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 168
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "sectionHeadColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "componentNameColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "componentDescColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "uptimeColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "operationalBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "operationalColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "degradedBg": {
+            "type": "string",
+            "default": "#fef9c3"
+        },
+        "degradedColor": {
+            "type": "string",
+            "default": "#713f12"
+        },
+        "outageBg": {
+            "type": "string",
+            "default": "#fee2e2"
+        },
+        "outageColor": {
+            "type": "string",
+            "default": "#991b1b"
+        },
+        "maintenanceBg": {
+            "type": "string",
+            "default": "#e0e7ff"
+        },
+        "maintenanceColor": {
+            "type": "string",
+            "default": "#3730a3"
+        },
+        "incidentBorderMajor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "incidentBorderMinor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "incidentBorderNotice": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "updateDotInvestigating": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "updateDotIdentified": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "updateDotMonitoring": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "updateDotResolved": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "sectionHeadTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "componentNameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "incidentTitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

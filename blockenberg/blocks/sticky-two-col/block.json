@@ -1,0 +1,177 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/sticky-two-col",
+    "title": "Sticky Two Column",
+    "description": "One column scrolls through feature highlights; the other stays sticky showing the active image — perfect for product tours and feature pages.",
+    "category": "bkbg-layout",
+    "icon": "columns",
+    "keywords": [
+        "sticky",
+        "two column",
+        "split",
+        "features",
+        "product",
+        "tour",
+        "scroll"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-sticky-two-col-editor",
+    "style": "bkbg-sticky-two-col-style",
+    "viewScript": "bkbg-sticky-two-col-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "eyebrow": "Step 1",
+                    "title": "Set up in minutes",
+                    "text": "Install once and your entire team is ready to go. No complicated configuration — just connect your account and start.",
+                    "icon": "⚡",                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "accentColor": "#6366f1"
+                },
+                {
+                    "eyebrow": "Step 2",
+                    "title": "Collaborate in real time",
+                    "text": "Everyone works on the same canvas simultaneously. Comments, cursors and edits appear instantly across all devices.",
+                    "icon": "🤝",                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "accentColor": "#ec4899"
+                },
+                {
+                    "eyebrow": "Step 3",
+                    "title": "Ship with confidence",
+                    "text": "Built-in review flows, version history and one-click rollback mean you can move fast without breaking things.",
+                    "icon": "🚀",                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "accentColor": "#16a34a"
+                }
+            ]
+        },
+        "stickyPosition": {
+            "type": "string",
+            "default": "right"
+        },
+        "splitRatio": {
+            "type": "string",
+            "default": "50-50"
+        },
+        "stickyOffset": {
+            "type": "number",
+            "default": 80
+        },
+        "imageRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "showDivider": {
+            "type": "boolean",
+            "default": true
+        },
+        "showProgressBar": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 36
+        },
+        "gap": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "panelBg": {
+            "type": "string",
+            "default": "#f8f8fc"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "iconBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "800"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "bodyFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "bodyLineHeight": {
+            "type": "number",
+            "default": 1.7
+        },
+        "eyebrowFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "eyebrowTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

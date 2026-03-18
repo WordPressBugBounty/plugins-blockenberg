@@ -1,0 +1,164 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/media-quote",
+    "version": "1.0.0",
+    "title": "Media Quote",
+    "category": "bkbg-blog",
+    "icon": "format-quote",
+    "description": "Quote with embedded video thumbnail (play button overlay) or image and speaker attribution. Perfect for podcast clips, interview excerpts, and video testimonials.",
+    "keywords": [
+        "quote",
+        "video",
+        "media",
+        "testimonial",
+        "podcast",
+        "interview",
+        "speaker"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-media-quote-editor",
+    "style": "bkbg-media-quote-style",
+    "viewScript": "bkbg-media-quote-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "quote": {
+            "type": "string",
+            "default": "\"This completely changed how I think about building an audience. The insights in this episode are genuinely priceless.\""
+        },
+        "videoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "thumbnailUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "thumbnailId": {
+            "type": "integer",
+            "default": 0
+        },
+        "showVideo": {
+            "type": "boolean",
+            "default": true
+        },
+        "mediaType": {
+            "type": "string",
+            "default": "video"
+        },
+        "mediaLabel": {
+            "type": "string",
+            "default": "Watch the full episode"
+        },
+        "showMediaLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "speakerName": {
+            "type": "string",
+            "default": "Alex Rivera"
+        },
+        "speakerTitle": {
+            "type": "string",
+            "default": "Founder, GrowthLab"
+        },
+        "speakerCompany": {
+            "type": "string",
+            "default": ""
+        },
+        "speakerAvatarUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "speakerAvatarId": {
+            "type": "integer",
+            "default": 0
+        },
+        "layout": {
+            "type": "string",
+            "default": "media-left"
+        },
+        "style": {
+            "type": "string",
+            "default": "card"
+        },
+        "quoteColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "speakerColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "playBtnBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "playBtnColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "quoteSize": {
+            "type": "integer",
+            "default": 20
+        },
+        "quoteTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "speakerNameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "speakerTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "showQuoteIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "mediaRadius": {
+            "type": "integer",
+            "default": 12
+        },
+        "borderRadius": {
+            "type": "integer",
+            "default": 16
+        },
+        "maxWidth": {
+            "type": "integer",
+            "default": 900
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 64
+        }
+    }
+}

@@ -1,0 +1,164 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/faq-schema",
+    "title": "FAQ Schema",
+    "description": "FAQ block with automatic FAQPage JSON-LD structured data for SEO rich snippets.",
+    "category": "bkbg-business",
+    "icon": "editor-help",
+    "keywords": [
+        "faq",
+        "questions",
+        "answers",
+        "schema",
+        "seo",
+        "structured data"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-faq-schema-editor",
+    "editorStyle": "bkbg-faq-schema-style",
+    "style": "bkbg-faq-schema-style",
+    "viewScript": "bkbg-faq-schema-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "question": "What is blockenberg?",
+                    "answer": "Blockenberg is a powerful WordPress plugin that lets you build beautiful pages using a library of custom Gutenberg blocks with rich styling controls."
+                },
+                {
+                    "question": "Do I need coding skills to use it?",
+                    "answer": "No! Blockenberg is designed for everyone. All settings are available directly in the Gutenberg editor sidebar — no code required."
+                },
+                {
+                    "question": "Is it compatible with my theme?",
+                    "answer": "Yes. Blockenberg blocks work with any WordPress theme that supports the block editor (Gutenberg)."
+                }
+            ]
+        },
+        "activeItems": {
+            "type": "array",
+            "default": [
+                0
+            ]
+        },
+        "expandFirst": {
+            "type": "boolean",
+            "default": true
+        },
+        "allowMultiple": {
+            "type": "boolean",
+            "default": false
+        },
+        "iconType": {
+            "type": "string",
+            "default": "chevron"
+        },
+        "iconPosition": {
+            "type": "string",
+            "default": "right"
+        },
+        "layout": {
+            "type": "string",
+            "default": "default"
+        },
+        "spacing": {
+            "type": "number",
+            "default": 10
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "questionPadding": {
+            "type": "number",
+            "default": 18
+        },
+        "answerPadding": {
+            "type": "number",
+            "default": 16
+        },
+        "questionSize": {
+            "type": "number",
+            "default": 16
+        },
+        "questionWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "answerSize": {
+            "type": "number",
+            "default": 15
+        },
+        "answerLineHeight": {
+            "type": "number",
+            "default": 1.7
+        },
+        "typoQuestion": {
+            "type": "object",
+            "default": {}
+        },
+        "typoAnswer": {
+            "type": "object",
+            "default": {}
+        },
+        "animationSpeed": {
+            "type": "number",
+            "default": 300
+        },
+        "questionColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "questionBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "questionHoverBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "activeQuestionBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "activeQuestionColor": {
+            "type": "string",
+            "default": "#1d4ed8"
+        },
+        "answerColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "answerBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "iconActiveColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        }
+    }
+}

@@ -1,0 +1,339 @@
+/* ============================================================
+   Split Price CTA — style.css
+   Prefix: bkbg-spc-
+   ============================================================ */
+
+.bkbg-spc-wrap {
+    box-sizing: border-box;
+    padding: var(--bkbg-spc-pt, 64px) 24px var(--bkbg-spc-pb, 64px);
+    width: 100%;
+}
+
+/* ---- Two-column block ---- */
+.bkbg-spc-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: var(--bkbg-spc-r, 20px);
+    overflow: hidden;
+    box-shadow: 0 4px 40px rgba(0,0,0,.10), 0 1px 4px rgba(0,0,0,.04);
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* ---- LEFT — pricing panel ---- */
+.bkbg-spc-left {
+    position: relative;
+    padding: 48px 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow: hidden;
+    /* background applied via inline style (gradient or solid) */
+    color: #fff;
+}
+
+/* Subtle noise overlay on left panel */
+.bkbg-spc-left::after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px;
+    opacity: .03;
+    mix-blend-mode: overlay;
+}
+
+/* Badge chip */
+.bkbg-spc-badge {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    background: rgba(255,255,255,.18);
+    border: 1px solid rgba(255,255,255,.28);
+    color: #fff;
+    backdrop-filter: blur(6px);
+}
+
+/* Price label */
+.bkbg-spc-price-label {
+    margin: 0 0 6px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--bkbg-spc-pl-c, rgba(255,255,255,.7));
+}
+
+/* Price row: value + period */
+.bkbg-spc-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.bkbg-spc-price-value {
+    font-size: var(--bkbg-spc-price-sz, 60px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -.04em;
+    color: var(--bkbg-spc-pv-c, #ffffff);
+}
+
+.bkbg-spc-price-period {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255,255,255,.65);
+}
+
+.bkbg-spc-old-price {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: line-through;
+    color: rgba(255,255,255,.45);
+    margin-left: 4px;
+}
+
+/* Price note */
+.bkbg-spc-price-note {
+    font-size: 13px;
+    color: rgba(255,255,255,.6);
+    margin: -12px 0 0;
+}
+
+/* ---- Feature list ---- */
+.bkbg-spc-features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bkbg-spc-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255,255,255,.85);
+}
+
+.bkbg-spc-check {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.18);
+    color: var(--bkbg-spc-check-c, #a78bfa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 800;
+    margin-top: 1px;
+}
+
+/* ---- RIGHT — CTA panel ---- */
+.bkbg-spc-right {
+    background: var(--bkbg-spc-right-bg, #ffffff);
+    padding: 48px 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.bkbg-spc-cta-heading {
+    margin: 0;
+    font-size: var(--bkbg-spc-cta-h-sz, 28px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -.02em;
+    color: var(--bkbg-spc-cta-h-c, #0f172a);
+}
+
+.bkbg-spc-cta-subtitle {
+    margin: -8px 0 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--bkbg-spc-cta-sub-c, #64748b);
+}
+
+/* Action buttons */
+.bkbg-spc-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bkbg-spc-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: var(--bkbg-spc-btn-r, 10px);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform .15s, box-shadow .15s, opacity .15s;
+    cursor: pointer;
+    border: none;
+    box-sizing: border-box;
+}
+.bkbg-spc-btn:hover { transform: translateY(-2px); }
+
+.bkbg-spc-btn--primary {
+    background: var(--bkbg-spc-btn-bg, #7c3aed);
+    color: var(--bkbg-spc-btn-c, #ffffff);
+    box-shadow: 0 4px 18px rgba(124,58,237,.3);
+}
+.bkbg-spc-btn--primary:hover { box-shadow: 0 8px 28px rgba(124,58,237,.38); }
+
+.bkbg-spc-btn--secondary {
+    background: transparent;
+    color: var(--bkbg-spc-sec-btn-c, #475569);
+    border: 1px solid var(--bkbg-spc-sec-btn-bc, #cbd5e1);
+}
+.bkbg-spc-btn--secondary:hover { border-color: #94a3b8; color: #1e293b; background: #f8fafc; }
+
+/* ---- Social proof ---- */
+.bkbg-spc-social-proof {
+    margin-top: 4px;
+    padding: 16px 20px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border-left: 3px solid var(--bkbg-spc-check-c, #a78bfa);
+}
+
+.bkbg-spc-sp-text {
+    margin: 0 0 6px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #475569;
+    font-style: italic;
+}
+
+.bkbg-spc-sp-author {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+/* ---- Typography CSS-var rules ---- */
+
+/* Price value */
+.bkbg-spc-price {
+    font-family: var(--bkspc-pv-font-family, inherit);
+    font-size: var(--bkspc-pv-font-size-d, var(--bkbg-spc-price-sz, 60px));
+    font-weight: var(--bkspc-pv-font-weight, var(--bkbg-spc-pv-w, 800));
+    font-style: var(--bkspc-pv-font-style, normal);
+    text-decoration: var(--bkspc-pv-text-decoration, none);
+    text-transform: var(--bkspc-pv-text-transform, none);
+    line-height: var(--bkspc-pv-line-height-d, 1);
+    letter-spacing: var(--bkspc-pv-letter-spacing-d, -0.04em);
+    word-spacing: var(--bkspc-pv-word-spacing-d, normal);
+}
+
+/* CTA heading — ≥0,2,0 specificity for h3 */
+.bkbg-spc-right .bkbg-spc-heading {
+    font-family: var(--bkspc-hd-font-family, inherit);
+    font-size: var(--bkspc-hd-font-size-d, var(--bkbg-spc-ttl-sz, 28px));
+    font-weight: var(--bkspc-hd-font-weight, var(--bkbg-spc-hd-w, 700));
+    font-style: var(--bkspc-hd-font-style, normal);
+    text-decoration: var(--bkspc-hd-text-decoration, none);
+    text-transform: var(--bkspc-hd-text-transform, none);
+    line-height: var(--bkspc-hd-line-height-d, 1.2);
+    letter-spacing: var(--bkspc-hd-letter-spacing-d, -0.02em);
+    word-spacing: var(--bkspc-hd-word-spacing-d, normal);
+}
+
+/* CTA subtitle */
+.bkbg-spc-subtitle {
+    font-family: var(--bkspc-st-font-family, inherit);
+    font-size: var(--bkspc-st-font-size-d, 15px);
+    font-weight: var(--bkspc-st-font-weight, 400);
+    font-style: var(--bkspc-st-font-style, normal);
+    text-decoration: var(--bkspc-st-text-decoration, none);
+    text-transform: var(--bkspc-st-text-transform, none);
+    line-height: var(--bkspc-st-line-height-d, 1.6);
+    letter-spacing: var(--bkspc-st-letter-spacing-d, normal);
+    word-spacing: var(--bkspc-st-word-spacing-d, normal);
+}
+
+/* Badge */
+.bkbg-spc-outer .bkbg-spc-badge {
+    font-family: var(--bkspc-bd-font-family, inherit);
+    font-size: var(--bkspc-bd-font-size-d, 13px);
+    font-weight: var(--bkspc-bd-font-weight, 700);
+    font-style: var(--bkspc-bd-font-style, normal);
+    text-decoration: var(--bkspc-bd-text-decoration, none);
+    text-transform: var(--bkspc-bd-text-transform, none);
+    line-height: var(--bkspc-bd-line-height-d, normal);
+    letter-spacing: var(--bkspc-bd-letter-spacing-d, normal);
+    word-spacing: var(--bkspc-bd-word-spacing-d, normal);
+}
+
+/* Features list item */
+.bkbg-spc-features li {
+    font-family: var(--bkspc-ft-font-family, inherit);
+    font-size: var(--bkspc-ft-font-size-d, 14px);
+    font-weight: var(--bkspc-ft-font-weight, 400);
+    font-style: var(--bkspc-ft-font-style, normal);
+    text-decoration: var(--bkspc-ft-text-decoration, none);
+    text-transform: var(--bkspc-ft-text-transform, none);
+    line-height: var(--bkspc-ft-line-height-d, 1.5);
+    letter-spacing: var(--bkspc-ft-letter-spacing-d, normal);
+    word-spacing: var(--bkspc-ft-word-spacing-d, normal);
+}
+
+/* Primary button — Rule 12: text-decoration on <a> */
+.bkbg-spc-btn-primary {
+    font-family: var(--bkspc-bt-font-family, inherit);
+    font-size: var(--bkspc-bt-font-size-d, 15px);
+    font-weight: var(--bkspc-bt-font-weight, 700);
+    font-style: var(--bkspc-bt-font-style, normal);
+    text-decoration: var(--bkspc-bt-text-decoration, none);
+    text-transform: var(--bkspc-bt-text-transform, none);
+    line-height: var(--bkspc-bt-line-height-d, normal);
+    letter-spacing: var(--bkspc-bt-letter-spacing-d, normal);
+    word-spacing: var(--bkspc-bt-word-spacing-d, normal);
+}
+
+/* ---- Typography responsive — tablet ---- */
+@media (max-width: 1024px) {
+    .bkbg-spc-price { font-size: var(--bkspc-pv-font-size-t, var(--bkspc-pv-font-size-d, var(--bkbg-spc-price-sz, 60px))); line-height: var(--bkspc-pv-line-height-t, var(--bkspc-pv-line-height-d, 1)); letter-spacing: var(--bkspc-pv-letter-spacing-t, var(--bkspc-pv-letter-spacing-d, -0.04em)); word-spacing: var(--bkspc-pv-word-spacing-t, var(--bkspc-pv-word-spacing-d, normal)); }
+    .bkbg-spc-right .bkbg-spc-heading { font-size: var(--bkspc-hd-font-size-t, var(--bkspc-hd-font-size-d, var(--bkbg-spc-ttl-sz, 28px))); line-height: var(--bkspc-hd-line-height-t, var(--bkspc-hd-line-height-d, 1.2)); letter-spacing: var(--bkspc-hd-letter-spacing-t, var(--bkspc-hd-letter-spacing-d, -0.02em)); word-spacing: var(--bkspc-hd-word-spacing-t, var(--bkspc-hd-word-spacing-d, normal)); }
+    .bkbg-spc-subtitle { font-size: var(--bkspc-st-font-size-t, var(--bkspc-st-font-size-d, 15px)); line-height: var(--bkspc-st-line-height-t, var(--bkspc-st-line-height-d, 1.6)); letter-spacing: var(--bkspc-st-letter-spacing-t, var(--bkspc-st-letter-spacing-d, normal)); word-spacing: var(--bkspc-st-word-spacing-t, var(--bkspc-st-word-spacing-d, normal)); }
+    .bkbg-spc-outer .bkbg-spc-badge { font-size: var(--bkspc-bd-font-size-t, var(--bkspc-bd-font-size-d, 13px)); line-height: var(--bkspc-bd-line-height-t, var(--bkspc-bd-line-height-d, normal)); letter-spacing: var(--bkspc-bd-letter-spacing-t, var(--bkspc-bd-letter-spacing-d, normal)); word-spacing: var(--bkspc-bd-word-spacing-t, var(--bkspc-bd-word-spacing-d, normal)); }
+    .bkbg-spc-features li { font-size: var(--bkspc-ft-font-size-t, var(--bkspc-ft-font-size-d, 14px)); line-height: var(--bkspc-ft-line-height-t, var(--bkspc-ft-line-height-d, 1.5)); letter-spacing: var(--bkspc-ft-letter-spacing-t, var(--bkspc-ft-letter-spacing-d, normal)); word-spacing: var(--bkspc-ft-word-spacing-t, var(--bkspc-ft-word-spacing-d, normal)); }
+    .bkbg-spc-btn-primary { font-size: var(--bkspc-bt-font-size-t, var(--bkspc-bt-font-size-d, 15px)); line-height: var(--bkspc-bt-line-height-t, var(--bkspc-bt-line-height-d, normal)); letter-spacing: var(--bkspc-bt-letter-spacing-t, var(--bkspc-bt-letter-spacing-d, normal)); word-spacing: var(--bkspc-bt-word-spacing-t, var(--bkspc-bt-word-spacing-d, normal)); }
+}
+
+/* ---- Typography responsive — mobile ---- */
+@media (max-width: 767px) {
+    .bkbg-spc-price { font-size: var(--bkspc-pv-font-size-m, var(--bkspc-pv-font-size-t, var(--bkspc-pv-font-size-d, var(--bkbg-spc-price-sz, 60px)))); line-height: var(--bkspc-pv-line-height-m, var(--bkspc-pv-line-height-t, var(--bkspc-pv-line-height-d, 1))); letter-spacing: var(--bkspc-pv-letter-spacing-m, var(--bkspc-pv-letter-spacing-t, var(--bkspc-pv-letter-spacing-d, -0.04em))); word-spacing: var(--bkspc-pv-word-spacing-m, var(--bkspc-pv-word-spacing-t, var(--bkspc-pv-word-spacing-d, normal))); }
+    .bkbg-spc-right .bkbg-spc-heading { font-size: var(--bkspc-hd-font-size-m, var(--bkspc-hd-font-size-t, var(--bkspc-hd-font-size-d, var(--bkbg-spc-ttl-sz, 28px)))); line-height: var(--bkspc-hd-line-height-m, var(--bkspc-hd-line-height-t, var(--bkspc-hd-line-height-d, 1.2))); letter-spacing: var(--bkspc-hd-letter-spacing-m, var(--bkspc-hd-letter-spacing-t, var(--bkspc-hd-letter-spacing-d, -0.02em))); word-spacing: var(--bkspc-hd-word-spacing-m, var(--bkspc-hd-word-spacing-t, var(--bkspc-hd-word-spacing-d, normal))); }
+    .bkbg-spc-subtitle { font-size: var(--bkspc-st-font-size-m, var(--bkspc-st-font-size-t, var(--bkspc-st-font-size-d, 15px))); line-height: var(--bkspc-st-line-height-m, var(--bkspc-st-line-height-t, var(--bkspc-st-line-height-d, 1.6))); letter-spacing: var(--bkspc-st-letter-spacing-m, var(--bkspc-st-letter-spacing-t, var(--bkspc-st-letter-spacing-d, normal))); word-spacing: var(--bkspc-st-word-spacing-m, var(--bkspc-st-word-spacing-t, var(--bkspc-st-word-spacing-d, normal))); }
+    .bkbg-spc-outer .bkbg-spc-badge { font-size: var(--bkspc-bd-font-size-m, var(--bkspc-bd-font-size-t, var(--bkspc-bd-font-size-d, 13px))); line-height: var(--bkspc-bd-line-height-m, var(--bkspc-bd-line-height-t, var(--bkspc-bd-line-height-d, normal))); letter-spacing: var(--bkspc-bd-letter-spacing-m, var(--bkspc-bd-letter-spacing-t, var(--bkspc-bd-letter-spacing-d, normal))); word-spacing: var(--bkspc-bd-word-spacing-m, var(--bkspc-bd-word-spacing-t, var(--bkspc-bd-word-spacing-d, normal))); }
+    .bkbg-spc-features li { font-size: var(--bkspc-ft-font-size-m, var(--bkspc-ft-font-size-t, var(--bkspc-ft-font-size-d, 14px))); line-height: var(--bkspc-ft-line-height-m, var(--bkspc-ft-line-height-t, var(--bkspc-ft-line-height-d, 1.5))); letter-spacing: var(--bkspc-ft-letter-spacing-m, var(--bkspc-ft-letter-spacing-t, var(--bkspc-ft-letter-spacing-d, normal))); word-spacing: var(--bkspc-ft-word-spacing-m, var(--bkspc-ft-word-spacing-t, var(--bkspc-ft-word-spacing-d, normal))); }
+    .bkbg-spc-btn-primary { font-size: var(--bkspc-bt-font-size-m, var(--bkspc-bt-font-size-t, var(--bkspc-bt-font-size-d, 15px))); line-height: var(--bkspc-bt-line-height-m, var(--bkspc-bt-line-height-t, var(--bkspc-bt-line-height-d, normal))); letter-spacing: var(--bkspc-bt-letter-spacing-m, var(--bkspc-bt-letter-spacing-t, var(--bkspc-bt-letter-spacing-d, normal))); word-spacing: var(--bkspc-bt-word-spacing-m, var(--bkspc-bt-word-spacing-t, var(--bkspc-bt-word-spacing-d, normal))); }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 720px) {
+    .bkbg-spc-block { grid-template-columns: 1fr; }
+    .bkbg-spc-right { order: -1; }
+    .bkbg-spc-left,
+    .bkbg-spc-right { padding: 36px 28px; }
+}

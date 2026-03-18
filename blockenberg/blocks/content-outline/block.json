@@ -1,0 +1,255 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/content-outline",
+    "title": "Content Outline",
+    "category": "bkbg-blog",
+    "icon": "list-view",
+    "description": "Structured article outline with numbered sections, sub-points, optional status badges, and estimated reading time.",
+    "keywords": [
+        "outline",
+        "contents",
+        "structure",
+        "plan",
+        "article",
+        "sections",
+        "navigation"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-content-outline-editor",
+    "editorStyle": "bkbg-content-outline-style",
+    "style": "bkbg-content-outline-style",
+    "viewScript": "bkbg-content-outline-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "outlineTitle": {
+            "type": "string",
+            "default": "Article Outline"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "intro": {
+            "type": "string",
+            "default": "A structured overview of what this article covers."
+        },
+        "showIntro": {
+            "type": "boolean",
+            "default": true
+        },
+        "sections": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Introduction",
+                    "description": "Set the stage with key context and a compelling hook",
+                    "readTime": 2,
+                    "points": [
+                        {
+                            "text": "Why this topic matters right now",
+                            "status": "done"
+                        },
+                        {
+                            "text": "The core problem we're solving",
+                            "status": "done"
+                        },
+                        {
+                            "text": "What you'll learn in this article",
+                            "status": "done"
+                        }
+                    ]
+                },
+                {
+                    "title": "Core Concepts",
+                    "description": "Build the foundational knowledge readers need",
+                    "readTime": 5,
+                    "points": [
+                        {
+                            "text": "Key terminology and definitions",
+                            "status": "done"
+                        },
+                        {
+                            "text": "How the system works at a high level",
+                            "status": "in-progress"
+                        },
+                        {
+                            "text": "Common misconceptions debunked",
+                            "status": "planned"
+                        }
+                    ]
+                },
+                {
+                    "title": "Step-by-Step Implementation",
+                    "description": "Actionable guide readers can follow immediately",
+                    "readTime": 8,
+                    "points": [
+                        {
+                            "text": "Prerequisites and setup",
+                            "status": "in-progress"
+                        },
+                        {
+                            "text": "Phase 1: Initial configuration",
+                            "status": "planned"
+                        },
+                        {
+                            "text": "Phase 2: Testing and validation",
+                            "status": "planned"
+                        },
+                        {
+                            "text": "Phase 3: Going live",
+                            "status": "planned"
+                        }
+                    ]
+                },
+                {
+                    "title": "Conclusion & Next Steps",
+                    "description": "Wrap up with actionable takeaways",
+                    "readTime": 2,
+                    "points": [
+                        {
+                            "text": "Key takeaways summary",
+                            "status": "planned"
+                        },
+                        {
+                            "text": "Recommended resources",
+                            "status": "planned"
+                        }
+                    ]
+                }
+            ]
+        },
+        "style": {
+            "type": "string",
+            "default": "card"
+        },
+        "showNumbers": {
+            "type": "boolean",
+            "default": true
+        },
+        "showStatus": {
+            "type": "boolean",
+            "default": true
+        },
+        "showReadTime": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPoints": {
+            "type": "boolean",
+            "default": true
+        },
+        "collapsible": {
+            "type": "boolean",
+            "default": false
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "gap": {
+            "type": "number",
+            "default": 16
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "sectionTitleSize": {
+            "type": "number",
+            "default": 16
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "introColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "numberBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "numberColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "sectionTitleColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "descriptionColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "pointColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "doneBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "doneColor": {
+            "type": "string",
+            "default": "#166534"
+        },
+        "inProgressBg": {
+            "type": "string",
+            "default": "#fef9c3"
+        },
+        "inProgressColor": {
+            "type": "string",
+            "default": "#854d0e"
+        },
+        "plannedBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "plannedColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSection": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

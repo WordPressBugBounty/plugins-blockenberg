@@ -1,0 +1,59 @@
+.bkbg-tr-wrap { box-sizing: border-box; }
+.bkbg-tr-wrap * { box-sizing: border-box; }
+
+.bkbg-tr-header { margin-bottom: 24px; }
+.bkbg-tr-wrap .bkbg-tr-title {
+    margin: 0 0 8px;
+    font-family:     var(--bktr-tt-font-family, inherit);
+    font-size:       var(--bktr-tt-font-size-d, 24px);
+    line-height:     var(--bktr-tt-line-height-d, 1.2);
+    letter-spacing:  var(--bktr-tt-letter-spacing-d);
+    word-spacing:    var(--bktr-tt-word-spacing-d);
+    font-weight:     var(--bktr-tt-font-weight, 700);
+    font-style:      var(--bktr-tt-font-style);
+    text-decoration: var(--bktr-tt-text-decoration);
+    text-transform:  var(--bktr-tt-text-transform);
+}
+.bkbg-tr-desc { margin: 0; }
+
+/* Ring grouped view */
+.bkbg-tr-rings { display: flex; flex-direction: column; gap: 16px; }
+.bkbg-tr-ring-section { border-radius: 8px; overflow: hidden; border-left-width: 4px; border-left-style: solid; }
+.bkbg-tr-ring-head { display: flex; align-items: center; justify-content: space-between; padding: 8px 14px; }
+.bkbg-tr-ring-label { font-weight: 800; letter-spacing: 0.08em; }
+.bkbg-tr-ring-count { font-size: 0.82em; opacity: 0.75; }
+
+.bkbg-tr-blip-list { padding: 4px 0; }
+.bkbg-tr-blip { padding: 10px 16px; display: flex; flex-direction: column; gap: 3px; }
+.bkbg-tr-blip + .bkbg-tr-blip { border-top: 1px solid var(--bkbg-tr-border, #e5e7eb); }
+.bkbg-tr-blip-top { display: flex; align-items: center; gap: 8px; }
+.bkbg-tr-blip-name { font-weight: 600; }
+.bkbg-tr-blip-desc { font-size: 0.88em; }
+.bkbg-tr-new-badge { font-size: 0.72em; font-weight: 700; padding: 2px 6px; border-radius: 4px; letter-spacing: 0.05em; }
+
+/* Quadrant grouped view */
+.bkbg-tr-quadrants { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.bkbg-tr-quadrant { overflow: hidden; }
+.bkbg-tr-quadrant-head { font-weight: 700; padding: 10px 14px; font-size: 0.9em; border-bottom-width: 1px; border-bottom-style: solid; }
+
+@media (max-width: 640px) {
+    .bkbg-tr-quadrants { grid-template-columns: 1fr; }
+}
+
+/* ── Responsive typography ──────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-tr-wrap .bkbg-tr-title {
+        font-size:      var(--bktr-tt-font-size-t, var(--bktr-tt-font-size-d, 24px));
+        line-height:    var(--bktr-tt-line-height-t, var(--bktr-tt-line-height-d, 1.2));
+        letter-spacing: var(--bktr-tt-letter-spacing-t, var(--bktr-tt-letter-spacing-d));
+        word-spacing:   var(--bktr-tt-word-spacing-t, var(--bktr-tt-word-spacing-d));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-tr-wrap .bkbg-tr-title {
+        font-size:      var(--bktr-tt-font-size-m, var(--bktr-tt-font-size-t, var(--bktr-tt-font-size-d, 24px)));
+        line-height:    var(--bktr-tt-line-height-m, var(--bktr-tt-line-height-t, var(--bktr-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bktr-tt-letter-spacing-m, var(--bktr-tt-letter-spacing-t, var(--bktr-tt-letter-spacing-d)));
+        word-spacing:   var(--bktr-tt-word-spacing-m, var(--bktr-tt-word-spacing-t, var(--bktr-tt-word-spacing-d)));
+    }
+}

@@ -1,0 +1,213 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/social-stats",
+    "title": "Social Stats",
+    "category": "bkbg-business",
+    "icon": "share",
+    "description": "Social media platform stats — display follower counts, subscriber milestones and engagement metrics with platform-branded icons (Instagram, YouTube, TikTok, LinkedIn, X/Twitter, Facebook, Pinterest).",
+    "keywords": [
+        "social",
+        "stats",
+        "followers",
+        "instagram",
+        "youtube",
+        "tiktok",
+        "linkedin",
+        "twitter",
+        "metrics"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-social-stats-editor",
+    "editorStyle": "bkbg-social-stats-style",
+    "style": "bkbg-social-stats-style",
+    "viewScript": "bkbg-social-stats-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Follow Along"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Join our growing community across every platform."
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "platforms": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "p1",
+                    "platform": "instagram",
+                    "handle": "@yourbrand",
+                    "metric1Label": "Followers",
+                    "metric1Value": "48.2K",
+                    "metric2Label": "Posts",
+                    "metric2Value": "1,240",
+                    "url": "",
+                    "customColor": ""
+                },
+                {
+                    "id": "p2",
+                    "platform": "youtube",
+                    "handle": "YourChannel",
+                    "metric1Label": "Subscribers",
+                    "metric1Value": "124K",
+                    "metric2Label": "Videos",
+                    "metric2Value": "380",
+                    "url": "",
+                    "customColor": ""
+                },
+                {
+                    "id": "p3",
+                    "platform": "tiktok",
+                    "handle": "@yourbrand",
+                    "metric1Label": "Followers",
+                    "metric1Value": "89.4K",
+                    "metric2Label": "Likes",
+                    "metric2Value": "2.1M",
+                    "url": "",
+                    "customColor": ""
+                },
+                {
+                    "id": "p4",
+                    "platform": "linkedin",
+                    "handle": "Your Brand",
+                    "metric1Label": "Followers",
+                    "metric1Value": "18.7K",
+                    "metric2Label": "Connections",
+                    "metric2Value": "5,400",
+                    "url": "",
+                    "customColor": ""
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "columns": {
+            "type": "number",
+            "default": 4
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "card"
+        },
+        "usePlatformColors": {
+            "type": "boolean",
+            "default": false
+        },
+        "showHandle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSecondMetric": {
+            "type": "boolean",
+            "default": true
+        },
+        "animated": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "iconBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "metricValueColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "metricLabelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "handleColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 32
+        },
+        "metricSize": {
+            "type": "number",
+            "default": 28
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 13
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 28
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "gap": {
+            "type": "number",
+            "default": 20
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "metricTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

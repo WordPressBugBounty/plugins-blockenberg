@@ -1,0 +1,131 @@
+/* =====================================================
+   Blockenberg — content-ticker  (bkbg-ctk-*)
+   ===================================================== */
+
+/* ── App shell ── */
+.bkbg-ctk-app {
+    /* filled by frontend.js */
+    display: block;
+}
+
+/* ── Wrapper ── */
+.bkbg-ctk-wrap {
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    position: relative;
+    font-family: var(--bkctk-text-font-family, inherit);
+    font-size: var(--bkctk-text-font-size-d, 14px);
+    font-weight: var(--bkctk-text-font-weight, 400);
+    font-style: var(--bkctk-text-font-style, normal);
+    text-transform: var(--bkctk-text-text-transform, none);
+    text-decoration: var(--bkctk-text-text-decoration, none);
+    line-height: var(--bkctk-text-line-height-d, 1);
+    letter-spacing: var(--bkctk-text-letter-spacing-d, normal);
+    word-spacing: var(--bkctk-text-word-spacing-d, normal);
+}
+
+/* ── Prefix label ── */
+.bkbg-ctk-prefix {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    z-index: 2;
+    font-size: inherit;
+}
+
+/* ── Scrolling track ── */
+.bkbg-ctk-track {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+/* ── Inner strip (doubled for seamless loop) ── */
+.bkbg-ctk-inner {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    will-change: transform;
+    animation: bkbg-ctk-scroll linear infinite;
+    animation-play-state: running;
+}
+
+/* Pause on hover — class set by JS based on pauseOnHover attribute */
+.bkbg-ctk-wrap.bkbg-ctk-pauseable:hover .bkbg-ctk-inner,
+.bkbg-ctk-wrap.bkbg-ctk-paused .bkbg-ctk-inner {
+    animation-play-state: paused;
+}
+
+/* Right-to-left direction */
+.bkbg-ctk-wrap.bkbg-ctk-rtl .bkbg-ctk-inner {
+    animation-direction: reverse;
+}
+
+/* ── Individual item ── */
+.bkbg-ctk-item {
+    display: inline-flex;
+    align-items: center;
+}
+
+.bkbg-ctk-item a {
+    text-decoration: inherit;
+    transition: opacity 0.2s;
+}
+.bkbg-ctk-item a:hover {
+    opacity: 0.75;
+    text-decoration: underline;
+}
+
+/* ── Separator ── */
+.bkbg-ctk-sep {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 4px;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+/* ── Direction arrow badge ── */
+.bkbg-ctk-arrow {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 0.85em;
+    z-index: 2;
+}
+
+/* ── Scroll keyframe ── */
+@keyframes bkbg-ctk-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+/* ── Editor wrapper (block editor only) ── */
+.bkbg-ctk-editor-wrap {
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+    .bkbg-ctk-wrap {
+        font-size: var(--bkctk-text-font-size-t, var(--bkctk-text-font-size-d, 14px));
+        line-height: var(--bkctk-text-line-height-t, var(--bkctk-text-line-height-d, 1));
+        letter-spacing: var(--bkctk-text-letter-spacing-t, var(--bkctk-text-letter-spacing-d, normal));
+        word-spacing: var(--bkctk-text-word-spacing-t, var(--bkctk-text-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-ctk-wrap {
+        font-size: var(--bkctk-text-font-size-m, var(--bkctk-text-font-size-t, var(--bkctk-text-font-size-d, 14px)));
+        line-height: var(--bkctk-text-line-height-m, var(--bkctk-text-line-height-t, var(--bkctk-text-line-height-d, 1)));
+        letter-spacing: var(--bkctk-text-letter-spacing-m, var(--bkctk-text-letter-spacing-t, var(--bkctk-text-letter-spacing-d, normal)));
+        word-spacing: var(--bkctk-text-word-spacing-m, var(--bkctk-text-word-spacing-t, var(--bkctk-text-word-spacing-d, normal)));
+    }
+}

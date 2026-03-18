@@ -1,0 +1,277 @@
+{
+  "apiVersion": 3,
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "blockenberg/testimonials",
+  "title": "Testimonials",
+  "category": "bkbg-marketing",
+  "icon": "testimonial",
+  "description": "Customer testimonials with avatars, ratings, and beautiful layouts.",
+  "keywords": [
+    "testimonial",
+    "reviews",
+    "quote",
+    "rating",
+    "feedback"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-testimonials-editor",
+  "editorStyle": "bkbg-testimonials-style",
+  "style": "bkbg-testimonials-style",
+  "viewScript": "bkbg-testimonials-frontend",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "quote": "This plugin saved us hours every week. The blocks look amazing and are super easy to customize.",
+          "name": "Alex Johnson",
+          "role": "Founder",
+          "company": "Acme Inc.",
+          "rating": 5,
+          "avatar": {
+            "id": 0,
+            "url": "",
+            "alt": ""
+          }
+        },
+        {
+          "quote": "Clean UI, great defaults, and the editor experience is really polished. Highly recommended.",
+          "name": "Maria Garcia",
+          "role": "Creative Director",
+          "company": "Studio Norte",
+          "rating": 5,
+          "avatar": {
+            "id": 0,
+            "url": "",
+            "alt": ""
+          }
+        },
+        {
+          "quote": "Finally a block set that feels native. The design controls are exactly what we needed.",
+          "name": "Sam Lee",
+          "role": "Lead Developer",
+          "company": "Bright Labs",
+          "rating": 4,
+          "avatar": {
+            "id": 0,
+            "url": "",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    "layoutStyle": {
+      "type": "string",
+      "default": "grid"
+    },
+    "columns": {
+      "type": "number",
+      "default": 3
+    },
+    "gap": {
+      "type": "number",
+      "default": 24
+    },
+    "cardBg": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "cardBorderColor": {
+      "type": "string",
+      "default": "#e5e7eb"
+    },
+    "cardBorderWidth": {
+      "type": "number",
+      "default": 1
+    },
+    "cardRadius": {
+      "type": "number",
+      "default": 16
+    },
+    "cardPadding": {
+      "type": "number",
+      "default": 24
+    },
+    "cardShadow": {
+      "type": "boolean",
+      "default": true
+    },
+    "textAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "showQuoteIcon": {
+      "type": "boolean",
+      "default": true
+    },
+    "quoteIconColor": {
+      "type": "string",
+      "default": "#3b82f6"
+    },
+    "quoteIconSize": {
+      "type": "number",
+      "default": 22
+    },
+    "quoteColor": {
+      "type": "string",
+      "default": "#111827"
+    },
+    "quoteTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "nameTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "roleTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "showName": {
+      "type": "boolean",
+      "default": true
+    },
+    "nameColor": {
+      "type": "string",
+      "default": "#111827"
+    },
+    "showRole": {
+      "type": "boolean",
+      "default": true
+    },
+    "roleColor": {
+      "type": "string",
+      "default": "#6b7280"
+    },
+    "showCompany": {
+      "type": "boolean",
+      "default": true
+    },
+    "companyColor": {
+      "type": "string",
+      "default": "#6b7280"
+    },
+    "showRating": {
+      "type": "boolean",
+      "default": true
+    },
+    "ratingStars": {
+      "type": "number",
+      "default": 5
+    },
+    "ratingColor": {
+      "type": "string",
+      "default": "#f59e0b"
+    },
+    "ratingSize": {
+      "type": "number",
+      "default": 16
+    },
+    "featuredIndex": {
+      "type": "number",
+      "default": -1
+    },
+    "featuredBorderColor": {
+      "type": "string",
+      "default": "#3b82f6"
+    },
+    "showAvatar": {
+      "type": "boolean",
+      "default": true
+    },
+    "avatarSize": {
+      "type": "number",
+      "default": 44
+    },
+    "avatarShape": {
+      "type": "string",
+      "default": "circle"
+    },
+    "carouselPeek": {
+      "type": "boolean",
+      "default": true
+    },
+    "carouselNav": {
+      "type": "boolean",
+      "default": true
+    },
+    "carouselNavStyle": {
+      "type": "string",
+      "default": "top"
+    },
+    "carouselIndicators": {
+      "type": "string",
+      "default": "none"
+    },
+    "carouselIndicatorsPosition": {
+      "type": "string",
+      "default": "below"
+    },
+    "carouselDotsStyle": {
+      "type": "string",
+      "default": "default"
+    },
+    "carouselProgressStyle": {
+      "type": "string",
+      "default": "default"
+    },
+    "carouselIndicatorSize": {
+      "type": "number",
+      "default": 8
+    },
+    "carouselIndicatorColor": {
+      "type": "string",
+      "default": "rgba(0,0,0,0.22)"
+    },
+    "carouselIndicatorActiveColor": {
+      "type": "string",
+      "default": "rgba(0,0,0,0.65)"
+    },
+    "carouselProgressHeight": {
+      "type": "number",
+      "default": 6
+    },
+    "carouselProgressBg": {
+      "type": "string",
+      "default": "rgba(0,0,0,0.12)"
+    },
+    "carouselProgressFg": {
+      "type": "string",
+      "default": "rgba(0,0,0,0.55)"
+    },
+    "carouselFractionColor": {
+      "type": "string",
+      "default": "rgba(0,0,0,0.65)"
+    },
+    "carouselFractionSize": {
+      "type": "number",
+      "default": 13
+    },
+    "infiniteScroll": {
+      "type": "boolean",
+      "default": true
+    },
+    "autoScroll": {
+      "type": "boolean",
+      "default": false
+    },
+    "autoScrollSpeed": {
+      "type": "number",
+      "default": 40
+    },
+    "autoScrollPauseOnHover": {
+      "type": "boolean",
+      "default": true
+    },
+  }
+}

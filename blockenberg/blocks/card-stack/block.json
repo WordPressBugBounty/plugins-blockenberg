@@ -1,0 +1,195 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/card-stack",
+    "title": "Card Stack",
+    "category": "bkbg-effects",
+    "icon": "layout",
+    "description": "A fanned or stacked pile of cards with hover-spread interaction. Perfect for testimonials, case studies, or feature highlights.",
+    "keywords": [
+        "cards",
+        "stack",
+        "fan",
+        "testimonial",
+        "swipe",
+        "stacked",
+        "deck",
+        "pile"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-card-stack-editor",
+    "editorStyle": "bkbg-card-stack-style",
+    "style": "bkbg-card-stack-style",
+    "viewScript": "bkbg-card-stack-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "cards": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "c1",
+                    "title": "10× faster deployments",
+                    "desc": "We cut our release cycle from two weeks to a single afternoon. The workflow automation alone is worth every penny.",
+                    "quote": true,
+                    "author": "Sarah K.",
+                    "role": "CTO, Verve Labs",
+                    "avatarUrl": "",
+                    "avatarId": 0,
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "tag": "Case Study",
+                    "tagColor": "#ffffff",
+                    "tagBg": "#6c3fb5",
+                    "accentColor": "#6c3fb5",
+                    "bgColor": "#ffffff",
+                    "textColor": "#111827"
+                },
+                {
+                    "id": "c2",
+                    "title": "Revenue up 40% in Q1",
+                    "desc": "The new checkout flow reduced friction and our conversion rate jumped immediately after go-live.",
+                    "quote": true,
+                    "author": "Marco T.",
+                    "role": "Head of Growth, Helios",
+                    "avatarUrl": "",
+                    "avatarId": 0,
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "tag": "Customer Story",
+                    "tagColor": "#ffffff",
+                    "tagBg": "#3b82f6",
+                    "accentColor": "#3b82f6",
+                    "bgColor": "#f0f9ff",
+                    "textColor": "#1e3a5f"
+                },
+                {
+                    "id": "c3",
+                    "title": "Team onboarded in one day",
+                    "desc": "No training sessions needed. The intuitive interface meant everyone was productive from day one.",
+                    "quote": true,
+                    "author": "Priya M.",
+                    "role": "Engineering Director, Flux",
+                    "avatarUrl": "",
+                    "avatarId": 0,
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "tag": "Testimonial",
+                    "tagColor": "#ffffff",
+                    "tagBg": "#10b981",
+                    "accentColor": "#10b981",
+                    "bgColor": "#f0fdf4",
+                    "textColor": "#14532d"
+                }
+            ]
+        },
+        "stackStyle": {
+            "type": "string",
+            "default": "fan"
+        },
+        "cardWidth": {
+            "type": "number",
+            "default": 380
+        },
+        "cardMinHeight": {
+            "type": "number",
+            "default": 260
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "rotationSpread": {
+            "type": "number",
+            "default": 6
+        },
+        "offsetX": {
+            "type": "number",
+            "default": 10
+        },
+        "offsetY": {
+            "type": "number",
+            "default": 6
+        },
+        "maxVisibleBehind": {
+            "type": "number",
+            "default": 2
+        },
+        "showTag": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAuthor": {
+            "type": "boolean",
+            "default": true
+        },
+        "showQuoteMark": {
+            "type": "boolean",
+            "default": true
+        },
+        "showNavDots": {
+            "type": "boolean",
+            "default": true
+        },
+        "animateIn": {
+            "type": "boolean",
+            "default": true
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 20
+        },
+        "descSize": {
+            "type": "number",
+            "default": 15
+        },
+        "tagSize": {
+            "type": "number",
+            "default": 11
+        },
+        "authorSize": {
+            "type": "number",
+            "default": 13
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 32
+        },
+        "globalCardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "globalTextColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 48
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 48
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoDesc": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

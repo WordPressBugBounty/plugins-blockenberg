@@ -1,0 +1,118 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/code-playground",
+    "title": "Code Playground",
+    "category": "bkbg-dev",
+    "icon": "editor-code",
+    "description": "Interactive HTML/CSS/JS editor with live preview. Let visitors experiment with code directly on the page.",
+    "keywords": [
+        "code",
+        "editor",
+        "html",
+        "css",
+        "javascript",
+        "playground",
+        "sandbox",
+        "live"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-code-playground-editor",
+    "style": "bkbg-code-playground-style",
+    "viewScript": "bkbg-code-playground-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Code Playground"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": ""
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 15
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        },
+        "defaultHtml": {
+            "type": "string",
+            "default": "<h1>Hello World!</h1>\n<p>Edit the code panels and see the result live.</p>\n<button id=\"btn\">Click me</button>"
+        },
+        "defaultCss": {
+            "type": "string",
+            "default": "body {\n  font-family: system-ui, sans-serif;\n  padding: 20px;\n  background: #f0f4ff;\n  color: #1e1b4b;\n}\nh1 { color: #6366f1; }\nbutton {\n  background: #6366f1;\n  color: #fff;\n  border: none;\n  padding: 8px 18px;\n  border-radius: 6px;\n  cursor: pointer;\n  font-size: 15px;\n}"
+        },
+        "defaultJs": {
+            "type": "string",
+            "default": "document.getElementById('btn').addEventListener('click', function() {\n  alert('Hello from JavaScript!');\n});"
+        },
+        "autoRun": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "editorHeight": {
+            "type": "number",
+            "default": 180
+        },
+        "previewHeight": {
+            "type": "number",
+            "default": 260
+        },
+        "activeTab": {
+            "type": "string",
+            "default": "html"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "editorBg": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "editorText": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#312e81"
+        },
+        "previewBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        }
+    }
+}

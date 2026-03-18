@@ -1,0 +1,209 @@
+/* ================================================================
+   Debate Block — bkbg-db-*
+   ================================================================ */
+
+.bkbg-db-block { box-sizing: border-box; }
+
+/* ── Title / intro area ──────────────────────────────────────── */
+.bkbg-db-intro { text-align: center; }
+
+.bkbg-db-intro .bkbg-db-title {
+    font-family: var(--bkbg-db-ttl-font-family, inherit);
+    font-weight: var(--bkbg-db-ttl-font-weight, 800);
+    font-size: var(--bkbg-db-ttl-font-size-d, var(--bkbg-db-ttl-fs, 22px));
+    line-height: var(--bkbg-db-ttl-line-height-d, 1.3);
+    letter-spacing: var(--bkbg-db-ttl-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-db-ttl-word-spacing-d, normal);
+    text-transform: var(--bkbg-db-ttl-text-transform, none);
+    font-style: var(--bkbg-db-ttl-font-style, normal);
+    text-decoration: var(--bkbg-db-ttl-text-decoration, none);
+    margin: 0;
+}
+
+.bkbg-db-subtitle {
+    font-family: var(--bkbg-db-sub-font-family, inherit);
+    font-weight: var(--bkbg-db-sub-font-weight, normal);
+    font-size: var(--bkbg-db-sub-font-size-d, var(--bkbg-db-sub-fs, 14px));
+    line-height: var(--bkbg-db-sub-line-height-d, 1.5);
+    letter-spacing: var(--bkbg-db-sub-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-db-sub-word-spacing-d, normal);
+    text-transform: var(--bkbg-db-sub-text-transform, none);
+    font-style: var(--bkbg-db-sub-font-style, normal);
+    text-decoration: var(--bkbg-db-sub-text-decoration, none);
+    margin: 8px 0 0;
+}
+
+/* ── Sides container ─────────────────────────────────────────── */
+.bkbg-db-sides {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bkbg-db-sides.is-stacked {
+    flex-direction: column;
+}
+
+/* ── VS divider ───────────────────────────────────────────────── */
+.bkbg-db-vs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    flex-shrink: 0;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: .05em;
+}
+
+/* ── Individual side ─────────────────────────────────────────── */
+.bkbg-db-side {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+/* ── Side header ─────────────────────────────────────────────── */
+.bkbg-db-side-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bkbg-db-side-icon {
+    font-size: 22px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.bkbg-db-side-label {
+    font-family: var(--bkbg-db-hdr-font-family, inherit);
+    font-weight: var(--bkbg-db-hdr-font-weight, 700);
+    font-size: var(--bkbg-db-hdr-font-size-d, var(--bkbg-db-hdr-fs, 18px));
+    line-height: var(--bkbg-db-hdr-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-db-hdr-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-db-hdr-word-spacing-d, normal);
+    text-transform: var(--bkbg-db-hdr-text-transform, none);
+    font-style: var(--bkbg-db-hdr-font-style, normal);
+    text-decoration: var(--bkbg-db-hdr-text-decoration, none);
+}
+
+/* ── Points list ─────────────────────────────────────────────── */
+.bkbg-db-points { list-style: none; margin: 0; padding: 0; }
+
+.bkbg-db-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+    line-height: 1.55;
+}
+
+.bkbg-db-point:last-child { border-bottom: none; }
+
+.bkbg-db-bullet {
+    font-weight: 800;
+    font-size: 16px;
+    flex-shrink: 0;
+    line-height: 1.4;
+}
+
+.bkbg-db-point-text {
+    flex: 1;
+    font-family: var(--bkbg-db-pt-font-family, inherit);
+    font-weight: var(--bkbg-db-pt-font-weight, normal);
+    font-size: var(--bkbg-db-pt-font-size-d, var(--bkbg-db-pt-fs, 14px));
+    line-height: var(--bkbg-db-pt-line-height-d, inherit);
+    letter-spacing: var(--bkbg-db-pt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-db-pt-word-spacing-d, normal);
+    text-transform: var(--bkbg-db-pt-text-transform, none);
+    font-style: var(--bkbg-db-pt-font-style, normal);
+    text-decoration: var(--bkbg-db-pt-text-decoration, none);
+}
+
+/* ── Verdict ─────────────────────────────────────────────────── */
+.bkbg-db-verdict {
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.bkbg-db-verdict-label {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.bkbg-db-verdict-text {
+    font-family: var(--bkbg-db-pt-font-family, inherit);
+    font-size: var(--bkbg-db-pt-font-size-d, var(--bkbg-db-pt-fs, 14px));
+    line-height: 1.65;
+}
+
+/* ── Editor: inputs inherit typo from CSS vars ────────────────── */
+input.bkbg-db-side-label {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+input.bkbg-db-point-text {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-db-intro .bkbg-db-title {
+        font-size: var(--bkbg-db-ttl-font-size-t, var(--bkbg-db-ttl-font-size-d, var(--bkbg-db-ttl-fs, 22px)));
+        line-height: var(--bkbg-db-ttl-line-height-t, var(--bkbg-db-ttl-line-height-d, 1.3));
+        letter-spacing: var(--bkbg-db-ttl-letter-spacing-t, var(--bkbg-db-ttl-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-db-ttl-word-spacing-t, var(--bkbg-db-ttl-word-spacing-d, normal));
+    }
+    .bkbg-db-subtitle {
+        font-size: var(--bkbg-db-sub-font-size-t, var(--bkbg-db-sub-font-size-d, var(--bkbg-db-sub-fs, 14px)));
+        line-height: var(--bkbg-db-sub-line-height-t, var(--bkbg-db-sub-line-height-d, 1.5));
+        letter-spacing: var(--bkbg-db-sub-letter-spacing-t, var(--bkbg-db-sub-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-db-sub-word-spacing-t, var(--bkbg-db-sub-word-spacing-d, normal));
+    }
+    .bkbg-db-side-label {
+        font-size: var(--bkbg-db-hdr-font-size-t, var(--bkbg-db-hdr-font-size-d, var(--bkbg-db-hdr-fs, 18px)));
+        line-height: var(--bkbg-db-hdr-line-height-t, var(--bkbg-db-hdr-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-db-hdr-letter-spacing-t, var(--bkbg-db-hdr-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-db-hdr-word-spacing-t, var(--bkbg-db-hdr-word-spacing-d, normal));
+    }
+    .bkbg-db-point-text {
+        font-size: var(--bkbg-db-pt-font-size-t, var(--bkbg-db-pt-font-size-d, var(--bkbg-db-pt-fs, 14px)));
+        line-height: var(--bkbg-db-pt-line-height-t, var(--bkbg-db-pt-line-height-d, inherit));
+        letter-spacing: var(--bkbg-db-pt-letter-spacing-t, var(--bkbg-db-pt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-db-pt-word-spacing-t, var(--bkbg-db-pt-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-db-intro .bkbg-db-title {
+        font-size: var(--bkbg-db-ttl-font-size-m, var(--bkbg-db-ttl-font-size-t, var(--bkbg-db-ttl-font-size-d, var(--bkbg-db-ttl-fs, 22px))));
+        line-height: var(--bkbg-db-ttl-line-height-m, var(--bkbg-db-ttl-line-height-t, var(--bkbg-db-ttl-line-height-d, 1.3)));
+        letter-spacing: var(--bkbg-db-ttl-letter-spacing-m, var(--bkbg-db-ttl-letter-spacing-t, var(--bkbg-db-ttl-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-db-ttl-word-spacing-m, var(--bkbg-db-ttl-word-spacing-t, var(--bkbg-db-ttl-word-spacing-d, normal)));
+    }
+    .bkbg-db-subtitle {
+        font-size: var(--bkbg-db-sub-font-size-m, var(--bkbg-db-sub-font-size-t, var(--bkbg-db-sub-font-size-d, var(--bkbg-db-sub-fs, 14px))));
+        line-height: var(--bkbg-db-sub-line-height-m, var(--bkbg-db-sub-line-height-t, var(--bkbg-db-sub-line-height-d, 1.5)));
+        letter-spacing: var(--bkbg-db-sub-letter-spacing-m, var(--bkbg-db-sub-letter-spacing-t, var(--bkbg-db-sub-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-db-sub-word-spacing-m, var(--bkbg-db-sub-word-spacing-t, var(--bkbg-db-sub-word-spacing-d, normal)));
+    }
+    .bkbg-db-side-label {
+        font-size: var(--bkbg-db-hdr-font-size-m, var(--bkbg-db-hdr-font-size-t, var(--bkbg-db-hdr-font-size-d, var(--bkbg-db-hdr-fs, 18px))));
+        line-height: var(--bkbg-db-hdr-line-height-m, var(--bkbg-db-hdr-line-height-t, var(--bkbg-db-hdr-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-db-hdr-letter-spacing-m, var(--bkbg-db-hdr-letter-spacing-t, var(--bkbg-db-hdr-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-db-hdr-word-spacing-m, var(--bkbg-db-hdr-word-spacing-t, var(--bkbg-db-hdr-word-spacing-d, normal)));
+    }
+    .bkbg-db-point-text {
+        font-size: var(--bkbg-db-pt-font-size-m, var(--bkbg-db-pt-font-size-t, var(--bkbg-db-pt-font-size-d, var(--bkbg-db-pt-fs, 14px))));
+        line-height: var(--bkbg-db-pt-line-height-m, var(--bkbg-db-pt-line-height-t, var(--bkbg-db-pt-line-height-d, inherit)));
+        letter-spacing: var(--bkbg-db-pt-letter-spacing-m, var(--bkbg-db-pt-letter-spacing-t, var(--bkbg-db-pt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-db-pt-word-spacing-m, var(--bkbg-db-pt-word-spacing-t, var(--bkbg-db-pt-word-spacing-d, normal)));
+    }
+    .bkbg-db-sides { flex-direction: column; }
+    .bkbg-db-vs { width: 100%; height: 40px; border-top: 1px solid rgba(0,0,0,.08); border-bottom: 1px solid rgba(0,0,0,.08); }
+}

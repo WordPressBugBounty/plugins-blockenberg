@@ -1,0 +1,125 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/memory-game",
+    "title": "Memory Game",
+    "category": "bkbg-interactive",
+    "icon": "grid-view",
+    "description": "Interactive card-flip memory matching game with emoji themes, difficulty levels, move counter, timer, and best score tracking.",
+    "keywords": [
+        "memory",
+        "game",
+        "cards",
+        "match",
+        "flip",
+        "concentration",
+        "puzzle"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-memory-game-editor",
+    "style": "bkbg-memory-game-style",
+    "viewScript": "bkbg-memory-game-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Memory Game"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Flip the cards and find all matching pairs!"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTimer": {
+            "type": "boolean",
+            "default": true
+        },
+        "showMoves": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBestScore": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultDifficulty": {
+            "type": "string",
+            "default": "medium"
+        },
+        "defaultTheme": {
+            "type": "string",
+            "default": "animals"
+        },
+        "flipDelay": {
+            "type": "number",
+            "default": 900
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#8b5cf6"
+        },
+        "cardBack": {
+            "type": "string",
+            "default": "#8b5cf6"
+        },
+        "cardFront": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardMatched": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#4c1d95"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 28
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 620
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

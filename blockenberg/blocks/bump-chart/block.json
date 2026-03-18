@@ -1,0 +1,171 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/bump-chart",
+    "title": "Bump Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-line",
+    "description": "Ranking chart that shows how positions change over time — each series is a curved line with rank labels at each column.",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "App Store Rankings Over 6 Weeks"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "integer",
+            "default": 720
+        },
+        "svgHeight": {
+            "type": "integer",
+            "default": 380
+        },
+        "padTop": {
+            "type": "integer",
+            "default": 50
+        },
+        "padLeft": {
+            "type": "integer",
+            "default": 120
+        },
+        "padRight": {
+            "type": "integer",
+            "default": 120
+        },
+        "lineThickness": {
+            "type": "integer",
+            "default": 3
+        },
+        "dotRadius": {
+            "type": "integer",
+            "default": 18
+        },
+        "showRankLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "showColumnLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "showEndLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelFontSize": {
+            "type": "integer",
+            "default": 13
+        },
+        "rankFontSize": {
+            "type": "integer",
+            "default": 12
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "xLabels": {
+            "type": "array",
+            "default": [
+                "Week 1",
+                "Week 2",
+                "Week 3",
+                "Week 4",
+                "Week 5",
+                "Week 6"
+            ]
+        },
+        "series": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Notion",
+                    "color": "#1a1a1a",
+                    "ranks": [
+                        3,
+                        2,
+                        1,
+                        1,
+                        2,
+                        1
+                    ]
+                },
+                {
+                    "label": "Obsidian",
+                    "color": "#6366f1",
+                    "ranks": [
+                        1,
+                        1,
+                        2,
+                        3,
+                        1,
+                        2
+                    ]
+                },
+                {
+                    "label": "Craft",
+                    "color": "#10b981",
+                    "ranks": [
+                        2,
+                        3,
+                        3,
+                        2,
+                        3,
+                        3
+                    ]
+                },
+                {
+                    "label": "Logseq",
+                    "color": "#f59e0b",
+                    "ranks": [
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4
+                    ]
+                },
+                {
+                    "label": "Bear",
+                    "color": "#ef4444",
+                    "ranks": [
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                }
+            ]
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "editorScript": "bkbg-bump-chart-editor",
+    "style": "bkbg-bump-chart-style"
+}

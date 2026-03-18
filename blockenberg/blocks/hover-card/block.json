@@ -1,0 +1,126 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/hover-card",
+    "title": "Hover Card",
+    "category": "bkbg-effects",
+    "icon": "images-alt",
+    "description": "Card that reveals hidden content (overlay) when hovered with customizable direction and animation.",
+    "keywords": [
+        "hover",
+        "card",
+        "overlay",
+        "reveal",
+        "effect",
+        "image"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-hover-card-editor",
+    "editorStyle": "bkbg-hover-card-style",
+    "style": "bkbg-hover-card-style",
+    "viewScript": "bkbg-hover-card-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": []
+    },
+    "attributes": {
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#1e0a3c"
+        },
+        "revealDirection": {
+            "type": "string",
+            "default": "bottom"
+        },
+        "overlayBg": {
+            "type": "string",
+            "default": "rgba(108,63,181,0.92)"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Card Title"
+        },
+        "text": {
+            "type": "string",
+            "default": "Hover reveal description goes here."
+        },
+        "btnLabel": {
+            "type": "string",
+            "default": "Learn More"
+        },
+        "btnUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "duration": {
+            "type": "number",
+            "default": 300
+        },
+        "cardWidth": {
+            "type": "number",
+            "default": 300
+        },
+        "cardHeight": {
+            "type": "number",
+            "default": 220
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "headingSz": {
+            "type": "number",
+            "default": 18
+        },
+        "headingFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "headingLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "textSz": {
+            "type": "number",
+            "default": 14
+        },
+        "textFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "textLineHeight": {
+            "type": "number",
+            "default": 1.6
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "textTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

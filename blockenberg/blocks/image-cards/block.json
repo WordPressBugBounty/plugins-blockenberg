@@ -1,0 +1,202 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/image-cards",
+    "version": "1.0.0",
+    "title": "Image Cards",
+    "category": "bkbg-media",
+    "icon": "format-image",
+    "description": "A responsive grid of rich cards with images, category tag, title, description and CTA. Perfect for blog previews, portfolio, services or team showcases.",
+    "keywords": [
+        "cards",
+        "grid",
+        "portfolio",
+        "blog",
+        "team",
+        "gallery",
+        "images"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-image-cards-editor",
+    "style": "bkbg-image-cards-style",
+    "viewScript": "bkbg-image-cards-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "cards": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "c1",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "tag": "Design",
+                    "title": "Beautiful product design that converts",
+                    "description": "Learn how thoughtful design decisions can dramatically improve your conversion rates and user satisfaction.",
+                    "ctaLabel": "Read more",
+                    "ctaUrl": "#",
+                    "accentColor": "#6c3fb5"
+                },
+                {
+                    "id": "c2",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "tag": "Development",
+                    "title": "Build faster with the right tech stack",
+                    "description": "Choosing the right technology for your project can mean the difference between months of work and weeks.",
+                    "ctaLabel": "Read more",
+                    "ctaUrl": "#",
+                    "accentColor": "#0ea5e9"
+                },
+                {
+                    "id": "c3",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "tag": "Marketing",
+                    "title": "Data-driven growth strategies that work",
+                    "description": "Stop guessing and start growing with proven marketing frameworks used by the world's top brands.",
+                    "ctaLabel": "Read more",
+                    "ctaUrl": "#",
+                    "accentColor": "#10b981"
+                }
+            ]
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "shadow"
+        },
+        "imageAspect": {
+            "type": "string",
+            "default": "16/9"
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "gap": {
+            "type": "number",
+            "default": 28
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "imageRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "showTag": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaStyle": {
+            "type": "string",
+            "default": "link-arrow"
+        },
+        "equalHeight": {
+            "type": "boolean",
+            "default": true
+        },
+        "hoverEffect": {
+            "type": "string",
+            "default": "lift"
+        },
+        "sectionTitle": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionSubtitle": {
+            "type": "string",
+            "default": ""
+        },
+        "showHeader": {
+            "type": "boolean",
+            "default": false
+        },
+        "headerAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 19
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "descSize": {
+            "type": "number",
+            "default": 14
+        },
+        "descFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "descLineHeight": {
+            "type": "number",
+            "default": 1.6
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "imagePlaceholderBg": {
+            "type": "string",
+            "default": "#f3f0ff"
+        }
+    }
+}

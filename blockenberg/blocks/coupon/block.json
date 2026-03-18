@@ -1,0 +1,202 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/coupon",
+    "title": "Coupon",
+    "category": "bkbg-marketing",
+    "icon": "tickets-alt",
+    "description": "Eye-catching promo/discount coupon card with copyable code, expiry countdown, and flexible styling.",
+    "keywords": [
+        "coupon",
+        "discount",
+        "promo",
+        "code",
+        "deal",
+        "offer",
+        "voucher"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-coupon-editor",
+    "editorStyle": "bkbg-coupon-style",
+    "style": "bkbg-coupon-style",
+    "viewScript": "bkbg-coupon-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "style": {
+            "type": "string",
+            "default": "classic"
+        },
+        "title": {
+            "type": "string",
+            "default": "Exclusive Offer"
+        },
+        "description": {
+            "type": "string",
+            "default": "Use this code at checkout and save on your order."
+        },
+        "discountType": {
+            "type": "string",
+            "default": "percent"
+        },
+        "discountValue": {
+            "type": "string",
+            "default": "40"
+        },
+        "code": {
+            "type": "string",
+            "default": "SAVE40"
+        },
+        "showCode": {
+            "type": "boolean",
+            "default": true
+        },
+        "codeLabel": {
+            "type": "string",
+            "default": "Coupon Code"
+        },
+        "copyLabel": {
+            "type": "string",
+            "default": "Copy"
+        },
+        "copiedLabel": {
+            "type": "string",
+            "default": "Copied!"
+        },
+        "showExpiry": {
+            "type": "boolean",
+            "default": true
+        },
+        "expiryDate": {
+            "type": "string",
+            "default": ""
+        },
+        "expiryLabel": {
+            "type": "string",
+            "default": "Offer expires:"
+        },
+        "showCountdown": {
+            "type": "boolean",
+            "default": true
+        },
+        "buttonText": {
+            "type": "string",
+            "default": "Claim Discount"
+        },
+        "buttonUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "buttonNewTab": {
+            "type": "boolean",
+            "default": false
+        },
+        "showButton": {
+            "type": "boolean",
+            "default": true
+        },
+        "note": {
+            "type": "string",
+            "default": "* Terms and conditions apply."
+        },
+        "showNote": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "badgeShape": {
+            "type": "string",
+            "default": "circle"
+        },
+        "badgePosition": {
+            "type": "string",
+            "default": "top-right"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "stripSide": {
+            "type": "string",
+            "default": "left"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "codeBg": {
+            "type": "string",
+            "default": "#f5f0ff"
+        },
+        "codeColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 540
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "descFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "codeFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "btnFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoDesc": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

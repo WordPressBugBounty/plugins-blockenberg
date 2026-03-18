@@ -1,0 +1,308 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/kb-article",
+    "title": "Knowledge Base Article",
+    "category": "bkbg-blog",
+    "icon": "book",
+    "description": "Full knowledge base / help center article with category, difficulty, table of contents, sections, and related articles.",
+    "keywords": [
+        "knowledge base",
+        "help",
+        "article",
+        "documentation",
+        "faq",
+        "guide",
+        "kb",
+        "support",
+        "tutorial"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-kb-article-editor",
+    "editorStyle": "bkbg-kb-article-style",
+    "style": "bkbg-kb-article-style",
+    "viewScript": "bkbg-kb-article-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "articleTitle": {
+            "type": "string",
+            "default": "How to Reset Your Password"
+        },
+        "category": {
+            "type": "string",
+            "default": "Account & Security"
+        },
+        "subcategory": {
+            "type": "string",
+            "default": "Password Management"
+        },
+        "showCategory": {
+            "type": "boolean",
+            "default": true
+        },
+        "difficulty": {
+            "type": "string",
+            "default": "beginner"
+        },
+        "showDifficulty": {
+            "type": "boolean",
+            "default": true
+        },
+        "lastUpdated": {
+            "type": "string",
+            "default": "February 24, 2026"
+        },
+        "showLastUpdated": {
+            "type": "boolean",
+            "default": true
+        },
+        "readTime": {
+            "type": "string",
+            "default": "3 min read"
+        },
+        "showReadTime": {
+            "type": "boolean",
+            "default": true
+        },
+        "appliesTo": {
+            "type": "string",
+            "default": "All plans"
+        },
+        "showAppliesTo": {
+            "type": "boolean",
+            "default": true
+        },
+        "intro": {
+            "type": "string",
+            "default": "Forgot your password? No problem. This guide walks you through every way to reset your password and regain access to your account within minutes."
+        },
+        "showIntro": {
+            "type": "boolean",
+            "default": true
+        },
+        "showToc": {
+            "type": "boolean",
+            "default": true
+        },
+        "tocLabel": {
+            "type": "string",
+            "default": "In this article"
+        },
+        "sections": {
+            "type": "array",
+            "default": [
+                {
+                    "heading": "Before You Begin",
+                    "content": "Make sure you have access to the email address associated with your account. If you no longer have access to that email, contact support before proceeding.",
+                    "type": "info"
+                },
+                {
+                    "heading": "Step 1 — Open the Login Page",
+                    "content": "Navigate to app.example.com/login. Click the \"Forgot password?\" link below the password field.",
+                    "type": "step"
+                },
+                {
+                    "heading": "Step 2 — Enter Your Email",
+                    "content": "Type the email address linked to your account and click \"Send Reset Link\". Check your inbox — the email arrives within 2 minutes.",
+                    "type": "step"
+                },
+                {
+                    "heading": "Step 3 — Set a New Password",
+                    "content": "Click the link in the email. Enter a new password (minimum 8 characters, at least one uppercase letter and one number). Click \"Save Password\".",
+                    "type": "step"
+                },
+                {
+                    "heading": "Troubleshooting",
+                    "content": "Didn't receive the email? Check your spam folder. Ensure you're using the correct address. The reset link expires after 30 minutes — request a new one if needed.",
+                    "type": "warning"
+                }
+            ]
+        },
+        "tags": {
+            "type": "array",
+            "default": [
+                "password",
+                "security",
+                "login",
+                "account"
+            ]
+        },
+        "showTags": {
+            "type": "boolean",
+            "default": true
+        },
+        "relatedArticles": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "How to Enable Two-Factor Authentication",
+                    "url": "#"
+                },
+                {
+                    "title": "Changing Your Account Email Address",
+                    "url": "#"
+                },
+                {
+                    "title": "What to Do If Your Account Is Locked",
+                    "url": "#"
+                }
+            ]
+        },
+        "showRelated": {
+            "type": "boolean",
+            "default": true
+        },
+        "relatedLabel": {
+            "type": "string",
+            "default": "Related Articles"
+        },
+        "helpfulYes": {
+            "type": "number",
+            "default": 48
+        },
+        "helpfulNo": {
+            "type": "number",
+            "default": 5
+        },
+        "showHelpful": {
+            "type": "boolean",
+            "default": true
+        },
+        "helpfulLabel": {
+            "type": "string",
+            "default": "Was this article helpful?"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 820
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "categoryColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "tocBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "tocColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "tocLinkColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "sectionBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "infoBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "infoColor": {
+            "type": "string",
+            "default": "#1e40af"
+        },
+        "infoBorderColor": {
+            "type": "string",
+            "default": "#93c5fd"
+        },
+        "warningBg": {
+            "type": "string",
+            "default": "#fffbeb"
+        },
+        "warningColor": {
+            "type": "string",
+            "default": "#92400e"
+        },
+        "warningBorderColor": {
+            "type": "string",
+            "default": "#fcd34d"
+        },
+        "stepNumberBg": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "stepNumberColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "tagBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "tagColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "helpfulYesBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "helpfulYesColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "helpfulNoBg": {
+            "type": "string",
+            "default": "#fee2e2"
+        },
+        "helpfulNoColor": {
+            "type": "string",
+            "default": "#991b1b"
+        }
+    }
+}

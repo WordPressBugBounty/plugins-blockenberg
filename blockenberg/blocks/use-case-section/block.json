@@ -1,0 +1,234 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/use-case-section",
+    "title": "Use Case Section",
+    "category": "bkbg-marketing",
+    "icon": "grid-view",
+    "description": "Showcase who your product is built for — personas or use cases each with icon, title, description and features list.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-use-case-section-editor",
+    "style": "bkbg-use-case-section-style",
+    "viewScript": "bkbg-use-case-section-frontend",
+    "attributes": {
+        "cases": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "uc1",
+                    "icon": "👩‍💻",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Developers",
+                    "description": "Build faster with our CLI, APIs, and GitHub sync. Zero config. Full control.",
+                    "features": [
+                        {
+                            "id": "f1",
+                            "text": "GitHub / GitLab integration"
+                        },
+                        {
+                            "id": "f2",
+                            "text": "CI/CD pipelines"
+                        },
+                        {
+                            "id": "f3",
+                            "text": "REST & GraphQL API"
+                        }
+                    ],
+                    "ctaLabel": "Read docs →",
+                    "ctaUrl": "#",
+                    "accentColor": "#6c3fb5"
+                },
+                {
+                    "id": "uc2",
+                    "icon": "🎨",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Designers",
+                    "description": "Design and preview in real-time. Collaborate without hand-off friction.",
+                    "features": [
+                        {
+                            "id": "f4",
+                            "text": "Figma plugin"
+                        },
+                        {
+                            "id": "f5",
+                            "text": "Live preview"
+                        },
+                        {
+                            "id": "f6",
+                            "text": "Design tokens"
+                        }
+                    ],
+                    "ctaLabel": "See examples →",
+                    "ctaUrl": "#",
+                    "accentColor": "#0ea5e9"
+                },
+                {
+                    "id": "uc3",
+                    "icon": "📈",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Marketers",
+                    "description": "Launch campaigns fast. Update content without touching code.",
+                    "features": [
+                        {
+                            "id": "f7",
+                            "text": "No-code editor"
+                        },
+                        {
+                            "id": "f8",
+                            "text": "A/B testing"
+                        },
+                        {
+                            "id": "f9",
+                            "text": "Analytics built-in"
+                        }
+                    ],
+                    "ctaLabel": "Try it free →",
+                    "ctaUrl": "#",
+                    "accentColor": "#10b981"
+                }
+            ]
+        },
+        "displayStyle": {
+            "type": "string",
+            "default": "cards"
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "gap": {
+            "type": "number",
+            "default": 24
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 32
+        },
+        "showFeatures": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 40
+        },
+        "sectionTitle": {
+            "type": "string",
+            "default": "Built for every team"
+        },
+        "sectionSubtitle": {
+            "type": "string",
+            "default": "Whether you're a developer, designer, or marketer — we have the tools you need."
+        },
+        "showHeader": {
+            "type": "boolean",
+            "default": true
+        },
+        "headerAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "eyebrow": {
+            "type": "string",
+            "default": "Use Cases"
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 72
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 72
+        },
+        "headerGap": {
+            "type": "number",
+            "default": 52
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "featureColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "checkColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "eyebrowBg": {
+            "type": "string",
+            "default": "#f0ebff"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "sectionTitleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionSubColor": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "keywords": [
+        "use case",
+        "persona",
+        "audience",
+        "built for",
+        "target",
+        "cards",
+        "section"
+    ]
+}

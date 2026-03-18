@@ -1,0 +1,179 @@
+.bkbg-ir-app { display: block; }
+
+.bkbg-ir-figure {
+    margin: 0;
+}
+
+.bkbg-ir-container {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    line-height: 0;
+}
+
+.bkbg-ir-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* For auto-ratio containers */
+.bkbg-ir-container.is-auto-ratio .bkbg-ir-img {
+    position: static;
+    width: 100%;
+    height: auto;
+}
+
+.bkbg-ir-container.is-fixed-ratio {
+    height: 0;
+    overflow: hidden;
+}
+
+.bkbg-ir-container.is-fixed-ratio .bkbg-ir-img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ── Overlay ── */
+.bkbg-ir-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.bkbg-ir-overlay-label {
+    font-family:      var(--bkbg-ir-lb-font-family, inherit);
+    font-size:        var(--bkbg-ir-lb-font-size-d, 18px);
+    font-weight:      var(--bkbg-ir-lb-font-weight, 600);
+    font-style:       var(--bkbg-ir-lb-font-style, normal);
+    text-decoration:  var(--bkbg-ir-lb-text-decoration, none);
+    text-transform:   var(--bkbg-ir-lb-text-transform, none);
+    line-height:      var(--bkbg-ir-lb-line-height-d, 1.3);
+    letter-spacing:   var(--bkbg-ir-lb-letter-spacing-d, normal);
+    word-spacing:     var(--bkbg-ir-lb-word-spacing-d, normal);
+    text-align: center;
+    padding: 0 16px;
+}
+
+/* Revealed label (appears after reveal) */
+.bkbg-ir-revealed-label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.3s;
+    pointer-events: none;
+}
+
+.bkbg-ir-container.is-revealed .bkbg-ir-revealed-label {
+    opacity: 1;
+}
+
+/* ── Sweep style ── */
+.bkbg-ir-overlay.style-sweep {
+    transition-property: transform, opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bkbg-ir-container.is-revealed .bkbg-ir-overlay.style-sweep.dir-left  { transform: translateX(100%); }
+.bkbg-ir-container.is-revealed .bkbg-ir-overlay.style-sweep.dir-right { transform: translateX(-100%); }
+.bkbg-ir-container.is-revealed .bkbg-ir-overlay.style-sweep.dir-top   { transform: translateY(100%); }
+.bkbg-ir-container.is-revealed .bkbg-ir-overlay.style-sweep.dir-bottom{ transform: translateY(-100%); }
+
+/* ── Fade style ── */
+.bkbg-ir-overlay.style-fade {
+    transition-property: opacity;
+    transition-timing-function: ease;
+}
+.bkbg-ir-container.is-revealed .bkbg-ir-overlay.style-fade { opacity: 0 !important; }
+
+/* ── Zoom style ── */
+.bkbg-ir-img.style-zoom {
+    transform: scale(1.3);
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.bkbg-ir-container.is-revealed .bkbg-ir-img.style-zoom { transform: scale(1); }
+.bkbg-ir-overlay.style-zoom {
+    transition-property: opacity;
+    transition-timing-function: ease;
+}
+.bkbg-ir-container.is-revealed .bkbg-ir-overlay.style-zoom { opacity: 0 !important; }
+
+/* ── Blur style ── */
+.bkbg-ir-img.style-blur {
+    filter: blur(20px);
+    transform: scale(1.05);
+    transition-property: filter, transform;
+    transition-timing-function: ease;
+}
+.bkbg-ir-container.is-revealed .bkbg-ir-img.style-blur {
+    filter: blur(0);
+    transform: scale(1);
+}
+.bkbg-ir-overlay.style-blur {
+    transition-property: opacity;
+    transition-timing-function: ease;
+}
+.bkbg-ir-container.is-revealed .bkbg-ir-overlay.style-blur { opacity: 0 !important; }
+
+/* ── Caption ── */
+.bkbg-ir-caption {
+    font-family:      var(--bkbg-ir-cp-font-family, inherit);
+    font-size:        var(--bkbg-ir-cp-font-size-d, 13px);
+    font-weight:      var(--bkbg-ir-cp-font-weight, 400);
+    font-style:       var(--bkbg-ir-cp-font-style, normal);
+    text-decoration:  var(--bkbg-ir-cp-text-decoration, none);
+    text-transform:   var(--bkbg-ir-cp-text-transform, none);
+    line-height:      var(--bkbg-ir-cp-line-height-d, 1.4);
+    letter-spacing:   var(--bkbg-ir-cp-letter-spacing-d, normal);
+    word-spacing:     var(--bkbg-ir-cp-word-spacing-d, normal);
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* ── Responsive Typography ── */
+@media (max-width: 1024px) {
+    .bkbg-ir-overlay-label {
+        font-size:       var(--bkbg-ir-lb-font-size-t, var(--bkbg-ir-lb-font-size-d, 18px));
+        line-height:     var(--bkbg-ir-lb-line-height-t, var(--bkbg-ir-lb-line-height-d, 1.3));
+        letter-spacing:  var(--bkbg-ir-lb-letter-spacing-t, var(--bkbg-ir-lb-letter-spacing-d, normal));
+        word-spacing:    var(--bkbg-ir-lb-word-spacing-t, var(--bkbg-ir-lb-word-spacing-d, normal));
+    }
+    .bkbg-ir-caption {
+        font-size:       var(--bkbg-ir-cp-font-size-t, var(--bkbg-ir-cp-font-size-d, 13px));
+        line-height:     var(--bkbg-ir-cp-line-height-t, var(--bkbg-ir-cp-line-height-d, 1.4));
+        letter-spacing:  var(--bkbg-ir-cp-letter-spacing-t, var(--bkbg-ir-cp-letter-spacing-d, normal));
+        word-spacing:    var(--bkbg-ir-cp-word-spacing-t, var(--bkbg-ir-cp-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-ir-overlay-label {
+        font-size:       var(--bkbg-ir-lb-font-size-m, var(--bkbg-ir-lb-font-size-t, var(--bkbg-ir-lb-font-size-d, 18px)));
+        line-height:     var(--bkbg-ir-lb-line-height-m, var(--bkbg-ir-lb-line-height-t, var(--bkbg-ir-lb-line-height-d, 1.3)));
+        letter-spacing:  var(--bkbg-ir-lb-letter-spacing-m, var(--bkbg-ir-lb-letter-spacing-t, var(--bkbg-ir-lb-letter-spacing-d, normal)));
+        word-spacing:    var(--bkbg-ir-lb-word-spacing-m, var(--bkbg-ir-lb-word-spacing-t, var(--bkbg-ir-lb-word-spacing-d, normal)));
+    }
+    .bkbg-ir-caption {
+        font-size:       var(--bkbg-ir-cp-font-size-m, var(--bkbg-ir-cp-font-size-t, var(--bkbg-ir-cp-font-size-d, 13px)));
+        line-height:     var(--bkbg-ir-cp-line-height-m, var(--bkbg-ir-cp-line-height-t, var(--bkbg-ir-cp-line-height-d, 1.4)));
+        letter-spacing:  var(--bkbg-ir-cp-letter-spacing-m, var(--bkbg-ir-cp-letter-spacing-t, var(--bkbg-ir-cp-letter-spacing-d, normal)));
+        word-spacing:    var(--bkbg-ir-cp-word-spacing-m, var(--bkbg-ir-cp-word-spacing-t, var(--bkbg-ir-cp-word-spacing-d, normal)));
+    }
+}
+
+/* ── Hover cursor ── */
+.trigger-hover .bkbg-ir-container {
+    cursor: pointer;
+}

@@ -1,0 +1,107 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/pixel-art",
+    "title": "Pixel Art Editor",
+    "category": "bkbg-interactive",
+    "icon": "art",
+    "description": "An interactive pixel art canvas. Visitors paint, fill, and erase pixels then download their creation as a PNG.",
+    "keywords": [
+        "pixel",
+        "art",
+        "draw",
+        "paint",
+        "canvas",
+        "editor",
+        "sprite",
+        "8-bit"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-pixel-art-editor",
+    "style": "bkbg-pixel-art-style",
+    "viewScript": "bkbg-pixel-art-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Pixel Art"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Draw something pixel by pixel!"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "gridCols": {
+            "type": "number",
+            "default": 32
+        },
+        "gridRows": {
+            "type": "number",
+            "default": 32
+        },
+        "cellSize": {
+            "type": "number",
+            "default": 16
+        },
+        "showGrid": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDownload": {
+            "type": "boolean",
+            "default": true
+        },
+        "palette": {
+            "type": "array",
+            "default": [
+                "#000000",
+                "#ffffff",
+                "#ef4444",
+                "#f97316",
+                "#f59e0b",
+                "#22c55e",
+                "#06b6d4",
+                "#3b82f6",
+                "#8b5cf6",
+                "#ec4899",
+                "#78716c",
+                "#94a3b8"
+            ]
+        },
+        "canvasBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gridLineColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        }
+    }
+}

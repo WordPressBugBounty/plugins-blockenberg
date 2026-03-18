@@ -1,0 +1,148 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/skill-rings",
+	"title": "Skill Rings",
+	"description": "Animated SVG circular progress rings for showcasing skills, proficiencies, or statistics. Supports both concentric (nested rings) and row (individual rings) layouts with scroll-triggered fill animations.",
+	"category": "bkbg-effects",
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-skill-rings-editor",
+	"style": "bkbg-skill-rings-style",
+	"viewScript": "bkbg-skill-rings-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"skills": {
+			"type": "array",
+			"default": [
+				{
+					"name": "Design",
+					"pct": 92,
+					"color": "#7c3aed"
+				},
+				{
+					"name": "Frontend",
+					"pct": 88,
+					"color": "#ec4899"
+				},
+				{
+					"name": "Backend",
+					"pct": 75,
+					"color": "#06b6d4"
+				},
+				{
+					"name": "DevOps",
+					"pct": 60,
+					"color": "#f59e0b"
+				}
+			]
+		},
+		"layout": {
+			"type": "string",
+			"default": "row"
+		},
+		"ringSize": {
+			"type": "number",
+			"default": 140
+		},
+		"ringGap": {
+			"type": "number",
+			"default": 14
+		},
+		"strokeWidth": {
+			"type": "number",
+			"default": 10
+		},
+		"trackColor": {
+			"type": "string",
+			"default": "#1f2937"
+		},
+		"animDuration": {
+			"type": "number",
+			"default": 1400
+		},
+		"animEasing": {
+			"type": "string",
+			"default": "ease-out"
+		},
+		"animDelay": {
+			"type": "number",
+			"default": 120
+		},
+		"showPercentage": {
+			"type": "boolean",
+			"default": true
+		},
+		"showLabel": {
+			"type": "boolean",
+			"default": true
+		},
+		"labelPosition": {
+			"type": "string",
+			"default": "below"
+		},
+		"lineCap": {
+			"type": "string",
+			"default": "round"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": ""
+		},
+		"labelColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"pctColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"pctSize": {
+			"type": "number",
+			"default": 28
+		},
+		"labelSize": {
+			"type": "number",
+			"default": 14
+		},
+		"centerLabelSize": {
+			"type": "number",
+			"default": 18
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 60
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 60
+		},
+		"centerLabel": {
+			"type": "string",
+			"default": ""
+		},
+		"centerLabelColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"pctFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"pctTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"labelTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

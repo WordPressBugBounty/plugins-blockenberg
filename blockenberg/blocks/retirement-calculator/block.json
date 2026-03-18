@@ -1,0 +1,191 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/retirement-calculator",
+    "title": "Retirement Calculator",
+    "category": "bkbg-calculators",
+    "icon": "chart-line",
+    "description": "Project retirement savings based on current age, target retirement age, monthly contributions, and expected investment returns. Shows inflation-adjusted projections with a visual breakdown.",
+    "keywords": [
+        "retirement",
+        "savings",
+        "investment",
+        "pension",
+        "401k",
+        "ira",
+        "financial",
+        "calculator",
+        "projection"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-retirement-calculator-editor",
+    "style": "bkbg-retirement-calculator-style",
+    "viewScript": "bkbg-retirement-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Retirement Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "See how your savings can grow over time."
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "currencyPos": {
+            "type": "string",
+            "default": "before"
+        },
+        "currentAge": {
+            "type": "number",
+            "default": 30
+        },
+        "retirementAge": {
+            "type": "number",
+            "default": 65
+        },
+        "currentSavings": {
+            "type": "number",
+            "default": 10000
+        },
+        "monthlyContrib": {
+            "type": "number",
+            "default": 500
+        },
+        "annualReturn": {
+            "type": "number",
+            "default": 7
+        },
+        "inflationRate": {
+            "type": "number",
+            "default": 2.5
+        },
+        "showInflation": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBreakdown": {
+            "type": "boolean",
+            "default": true
+        },
+        "showProjection": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "resultBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "totalColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "inflationColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "contribColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "growthColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "barTrackBg": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "projBgA": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "projBgB": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "totalSize": {
+            "type": "number",
+            "default": 52
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 620
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

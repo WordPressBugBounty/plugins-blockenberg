@@ -1,0 +1,129 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/tic-tac-toe",
+    "title": "Tic-Tac-Toe",
+    "category": "bkbg-interactive",
+    "icon": "grid-view",
+    "description": "Playable Tic-Tac-Toe game with AI opponent, score tracking, custom symbols, and multiple difficulty modes.",
+    "keywords": [
+        "tic-tac-toe",
+        "game",
+        "noughts",
+        "crosses",
+        "XO",
+        "interactive",
+        "ai"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-tic-tac-toe-editor",
+    "style": "bkbg-tic-tac-toe-style",
+    "viewScript": "bkbg-tic-tac-toe-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Tic-Tac-Toe"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Can you beat the AI?"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showScore": {
+            "type": "boolean",
+            "default": true
+        },
+        "playerSymbol": {
+            "type": "string",
+            "default": "X"
+        },
+        "aiSymbol": {
+            "type": "string",
+            "default": "O"
+        },
+        "defaultMode": {
+            "type": "string",
+            "default": "ai"
+        },
+        "aiDifficulty": {
+            "type": "string",
+            "default": "hard"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "xColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "oColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "cellBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cellHover": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "winLineBg": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "gridLine": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#eef2ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#312e81"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 480
+        }
+    }
+}

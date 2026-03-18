@@ -1,0 +1,118 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/mouse-trail",
+    "title": "Mouse Trail",
+    "category": "bkbg-effects",
+    "icon": "admin-customizer",
+    "description": "Add a magical cursor trail effect to your page — sparkles, dots, comets, ribbons, stars, or fire. Works globally across the page or scoped to a specific section. No dependencies, pure canvas.",
+    "keywords": [
+        "cursor",
+        "mouse",
+        "trail",
+        "sparkle",
+        "effect",
+        "animation",
+        "interactive",
+        "particles"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-mouse-trail-editor",
+    "style": "bkbg-mouse-trail-style",
+    "viewScript": "bkbg-mouse-trail-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "trailStyle": {
+            "type": "string",
+            "default": "sparkle"
+        },
+        "particleCount": {
+            "type": "number",
+            "default": 30
+        },
+        "particleSize": {
+            "type": "number",
+            "default": 8
+        },
+        "trailFade": {
+            "type": "number",
+            "default": 60
+        },
+        "spreadRadius": {
+            "type": "number",
+            "default": 20
+        },
+        "gravity": {
+            "type": "number",
+            "default": 0.15
+        },
+        "colorMode": {
+            "type": "string",
+            "default": "gradient"
+        },
+        "color1": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "color2": {
+            "type": "string",
+            "default": "#ec4899"
+        },
+        "glowEffect": {
+            "type": "boolean",
+            "default": true
+        },
+        "glowSize": {
+            "type": "number",
+            "default": 12
+        },
+        "scope": {
+            "type": "string",
+            "default": "page"
+        },
+        "showOnMobile": {
+            "type": "boolean",
+            "default": false
+        },
+        "hideOnClick": {
+            "type": "boolean",
+            "default": false
+        },
+        "burstOnClick": {
+            "type": "boolean",
+            "default": true
+        },
+        "burstCount": {
+            "type": "number",
+            "default": 20
+        },
+        "mixBlend": {
+            "type": "string",
+            "default": "normal"
+        },
+        "previewText": {
+            "type": "string",
+            "default": "Move your cursor here ✨"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "sectionHeight": {
+            "type": "number",
+            "default": 200
+        },
+        "sectionRadius": {
+            "type": "number",
+            "default": 16
+        }
+    }
+}

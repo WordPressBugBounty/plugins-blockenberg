@@ -1,0 +1,140 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/morphing-text",
+    "version": "1.0.0",
+    "title": "Morphing Text",
+    "category": "bkbg-effects",
+    "icon": "editor-textcolor",
+    "description": "Headline that smoothly morphs between multiple words with blur, crossfade, slide, or typewriter transitions.",
+    "keywords": [
+        "morph",
+        "text",
+        "animation",
+        "headline",
+        "typing",
+        "loop",
+        "words",
+        "blur"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-morphing-text-editor",
+    "style": "bkbg-morphing-text-style",
+    "viewScript": "bkbg-morphing-text-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "staticBefore": {
+            "type": "string",
+            "default": "We"
+        },
+        "staticAfter": {
+            "type": "string",
+            "default": ""
+        },
+        "words": {
+            "type": "array",
+            "default": [
+                "build websites",
+                "design brands",
+                "craft experiences",
+                "shape the future"
+            ]
+        },
+        "morphMode": {
+            "type": "string",
+            "default": "blur"
+        },
+        "duration": {
+            "type": "number",
+            "default": 2500
+        },
+        "pauseDuration": {
+            "type": "number",
+            "default": 1500
+        },
+        "tag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "fontSize": {
+            "type": "integer",
+            "default": 56
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "800"
+        },
+        "letterSpacing": {
+            "type": "number",
+            "default": -1
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "fontFamily": {
+            "type": "string",
+            "default": "inherit"
+        },
+        "staticColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "morphColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "morphColor2": {
+            "type": "string",
+            "default": "#ec4899"
+        },
+        "useGradient": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBg": {
+            "type": "boolean",
+            "default": false
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "paddingV": {
+            "type": "integer",
+            "default": 32
+        },
+        "paddingH": {
+            "type": "integer",
+            "default": 24
+        },
+        "borderRadius": {
+            "type": "integer",
+            "default": 0
+        },
+        "loop": {
+            "type": "boolean",
+            "default": true
+        },
+        "cursor": {
+            "type": "boolean",
+            "default": false
+        }
+    }
+}

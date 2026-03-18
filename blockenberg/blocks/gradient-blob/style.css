@@ -1,0 +1,72 @@
+/* ─────────────────────────────────────────────────────────────────
+   Gradient Blob — bkgb
+   ───────────────────────────────────────────────────────────────── */
+
+@keyframes bkgb-morph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        transform: translate(3%, -4%) scale(1.05);
+    }
+    50% {
+        border-radius: 50% 60% 30% 60% / 40% 50% 60% 50%;
+        transform: translate(-3%, 5%) scale(0.96);
+    }
+    75% {
+        border-radius: 70% 30% 50% 40% / 30% 70% 40% 60%;
+        transform: translate(2%, 3%) scale(1.03);
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+.bkgb-section {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Blob base style — picks up CSS custom properties from inline style */
+.bkgb-blob {
+    position: absolute;
+    width:   var(--bkgb-size, 60%);
+    height:  var(--bkgb-size, 60%);
+    background: var(--bkgb-c, #c084fc);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    opacity: var(--bkgb-opacity, 0.6);
+    filter:  blur(var(--bkgb-blur, 80px));
+    will-change: transform, border-radius;
+    pointer-events: none;
+    animation: bkgb-morph var(--bkgb-speed, 10s) var(--bkgb-delay, 0s) ease-in-out infinite;
+    transform-origin: center;
+}
+
+/* Per-blob offset animation so they don't sync */
+.bkgb-blob-1 { animation-delay: 0s;  }
+.bkgb-blob-2 { animation-delay: -4s; }
+.bkgb-blob-3 { animation-delay: -7s; }
+.bkgb-blob-4 { animation-delay: -2s; }
+.bkgb-blob-5 { animation-delay: -9s; }
+
+/* Paused state */
+.bkgb-section[data-paused="true"] .bkgb-blob {
+    animation-play-state: paused;
+}
+
+/* Inner content */
+.bkgb-inner {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .bkgb-blob {
+        animation: none;
+    }
+}

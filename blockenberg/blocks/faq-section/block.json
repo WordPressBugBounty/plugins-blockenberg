@@ -1,0 +1,208 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/faq-section",
+    "version": "1.0.0",
+    "title": "FAQ Section",
+    "category": "bkbg-business",
+    "icon": "editor-help",
+    "description": "Complete FAQ landing-page section with styled section header, inline accordion items, multiple layout variants, and a bottom contact CTA. Different from FAQ Schema (SEO) and FAQ Categories (search UI).",
+    "keywords": [
+        "faq",
+        "questions",
+        "accordion",
+        "help",
+        "support",
+        "section"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-faq-section-editor",
+    "style": "bkbg-faq-section-style",
+    "viewScript": "bkbg-faq-section-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "FAQ"
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "heading": {
+            "type": "string",
+            "default": "Frequently Asked Questions"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Everything you need to know. Can't find the answer? Reach out to our team."
+        },
+        "showSubtext": {
+            "type": "boolean",
+            "default": true
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "question": "What's included in the plan?",
+                    "answer": "You get full access to all features, including priority support, unlimited projects, and monthly updates. No hidden fees."
+                },
+                {
+                    "question": "Can I cancel at any time?",
+                    "answer": "Yes — cancel any time from your dashboard. You'll retain access until the end of your billing period."
+                },
+                {
+                    "question": "Do you offer a free trial?",
+                    "answer": "We offer a 14-day free trial with no credit card required. Explore all features before committing."
+                },
+                {
+                    "question": "Is there a limit on team members?",
+                    "answer": "No. All plans support unlimited team members. Invite your whole team at no extra cost."
+                },
+                {
+                    "question": "What payment methods do you accept?",
+                    "answer": "We accept all major credit cards, PayPal, and bank transfers for annual plans."
+                },
+                {
+                    "question": "How do I get support?",
+                    "answer": "Our support team is available via live chat and email Monday–Friday, 9am–6pm EST, with average response times under 2 hours."
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "centered"
+        },
+        "expandFirst": {
+            "type": "boolean",
+            "default": true
+        },
+        "allowMultiple": {
+            "type": "boolean",
+            "default": false
+        },
+        "iconType": {
+            "type": "string",
+            "default": "chevron"
+        },
+        "showDividers": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaText": {
+            "type": "string",
+            "default": "Still have questions?"
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Contact us →"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "eyebrowBg": {
+            "type": "string",
+            "default": "#f3f0ff"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "questionColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "answerColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "activeAccent": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "ctaLinkColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "headingSize": {
+            "type": "integer",
+            "default": 40
+        },
+        "questionSize": {
+            "type": "integer",
+            "default": 16
+        },
+        "answerSize": {
+            "type": "integer",
+            "default": 15
+        },
+        "typoEyebrow": {
+            "type": "object",
+            "default": {}
+        },
+        "typoHeading": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtext": {
+            "type": "object",
+            "default": {}
+        },
+        "typoQuestion": {
+            "type": "object",
+            "default": {}
+        },
+        "typoAnswer": {
+            "type": "object",
+            "default": {}
+        },
+        "itemRadius": {
+            "type": "integer",
+            "default": 10
+        },
+        "maxWidth": {
+            "type": "integer",
+            "default": 800
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 80
+        }
+    }
+}

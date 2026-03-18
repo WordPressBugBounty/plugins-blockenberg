@@ -1,0 +1,278 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/comparison-swipe-wall",
+    "title": "Comparison Wall",
+    "category": "bkbg-marketing",
+    "icon": "editor-table",
+    "description": "Side-by-side feature comparison with two columns — ideal for before/after, free vs pro, etc.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-comparison-swipe-wall-editor",
+    "style": "bkbg-comparison-swipe-wall-style",
+    "attributes": {
+        "leftTitle": {
+            "type": "string",
+            "default": "Without us"
+        },
+        "rightTitle": {
+            "type": "string",
+            "default": "With us"
+        },
+        "leftEmoji": {
+            "type": "string",
+            "default": "😔"
+        },
+        "leftEmojiType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "leftEmojiDashicon": {
+            "type": "string",
+            "default": "dismiss"
+        },
+        "leftEmojiImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "rightEmoji": {
+            "type": "string",
+            "default": "🚀"
+        },
+        "rightEmojiType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "rightEmojiDashicon": {
+            "type": "string",
+            "default": "yes-alt"
+        },
+        "rightEmojiImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "leftItems": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "l1",
+                    "text": "Manual, time-consuming setup"
+                },
+                {
+                    "id": "l2",
+                    "text": "Error-prone deployments"
+                },
+                {
+                    "id": "l3",
+                    "text": "No visibility into performance"
+                },
+                {
+                    "id": "l4",
+                    "text": "Scattered team collaboration"
+                }
+            ]
+        },
+        "rightItems": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "r1",
+                    "text": "One-click automated setup"
+                },
+                {
+                    "id": "r2",
+                    "text": "Zero-downtime deployments"
+                },
+                {
+                    "id": "r3",
+                    "text": "Real-time analytics dashboard"
+                },
+                {
+                    "id": "r4",
+                    "text": "Unified team workspace"
+                }
+            ]
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "split-card"
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        },
+        "leftIcon": {
+            "type": "string",
+            "default": "✗"
+        },
+        "leftIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "leftIconDashicon": {
+            "type": "string",
+            "default": "no"
+        },
+        "leftIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "rightIcon": {
+            "type": "string",
+            "default": "✓"
+        },
+        "rightIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "rightIconDashicon": {
+            "type": "string",
+            "default": "yes"
+        },
+        "rightIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionTitle": {
+            "type": "string",
+            "default": "See the difference"
+        },
+        "sectionSubtitle": {
+            "type": "string",
+            "default": "Stop struggling with outdated workflows."
+        },
+        "showHeader": {
+            "type": "boolean",
+            "default": true
+        },
+        "headerAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "eyebrow": {
+            "type": "string",
+            "default": "Comparison"
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Get started free"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "gap": {
+            "type": "number",
+            "default": 24
+        },
+        "itemSize": {
+            "type": "number",
+            "default": 15
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 72
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 72
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "leftCardBg": {
+            "type": "string",
+            "default": "#fff7f7"
+        },
+        "rightCardBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "leftTitleColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "rightTitleColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "leftIconColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "rightIconColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "leftItemColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "rightItemColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "eyebrowBg": {
+            "type": "string",
+            "default": "#f0ebff"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "sectionTitleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionSubColor": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionTitleSize": {
+            "type": "number",
+            "default": 36
+        },
+        "sectionSubSize": {
+            "type": "number",
+            "default": 18
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoItem": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "keywords": [
+        "comparison",
+        "table",
+        "vs",
+        "before after",
+        "features"
+    ]
+}

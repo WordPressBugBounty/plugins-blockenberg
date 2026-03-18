@@ -1,0 +1,46 @@
+/* ── Word Cloud ─────────────────────────────────────────────────────────────── */
+.bkwc-wrap {
+    box-sizing: border-box;
+}
+
+.bkwc-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--bkwcl-cl-ff, inherit);
+    font-style: var(--bkwcl-cl-fst, normal);
+    text-transform: var(--bkwcl-cl-tt, none);
+}
+
+.bkwc-word {
+    display: inline-block;
+    line-height: 1.4;
+    text-decoration: none;
+    cursor: default;
+    transition: transform 0.2s ease, opacity 0.2s ease, font-weight 0.1s ease;
+}
+
+a.bkwc-word {
+    cursor: pointer;
+}
+
+a.bkwc-word:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+/* hover=scale */
+.bkwc-word[data-hover="scale"]:hover {
+    transform: scale(1.12);
+}
+
+/* hover=bold */
+.bkwc-word[data-hover="bold"]:hover {
+    font-weight: 900 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bkwc-word {
+        transition: none !important;
+        transform: none !important;
+    }
+}

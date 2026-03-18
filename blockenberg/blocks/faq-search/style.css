@@ -1,0 +1,206 @@
+.bkbg-fs-wrap {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.bkbg-fs-inner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Search bar */
+.bkbg-fs-search-wrap {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.bkbg-fs-search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    pointer-events: none;
+    font-size: 15px;
+}
+
+.bkbg-fs-search-input {
+    width: 100%;
+    padding: 12px 16px 12px 40px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.bkbg-fs-search-input:focus {
+    border-color: var(--bkbg-fs-accent, #7c3aed);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.12);
+}
+
+/* FAQ Items */
+.bkbg-fs-item {
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+
+/* bordered */
+.bkbg-fs-item--bordered {
+    border: 1px solid var(--bkbg-fs-border, #e5e7eb);
+    border-radius: var(--bkbg-fs-radius, 10px);
+    margin-bottom: 8px;
+}
+
+/* boxed */
+.bkbg-fs-item--boxed {
+    border-radius: var(--bkbg-fs-radius, 10px);
+    margin-bottom: 8px;
+}
+
+/* plain */
+.bkbg-fs-item--plain {
+    border-bottom: 1px solid var(--bkbg-fs-border, #e5e7eb);
+}
+
+.bkbg-fs-item--plain:first-child {
+    border-top: 1px solid var(--bkbg-fs-border, #e5e7eb);
+}
+
+.bkbg-fs-question-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 16px 20px;
+    cursor: pointer;
+    text-align: left;
+    gap: 12px;
+    transition: background 0.15s;
+}
+
+.bkbg-fs-item--plain .bkbg-fs-question-btn {
+    padding: 16px 0;
+}
+
+.bkbg-fs-question-btn:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.bkbg-fs-item--plain .bkbg-fs-question-btn:hover {
+    background: transparent;
+}
+
+.bkbg-fs-question-text {
+    flex: 1;
+    font-family: var(--bkbg-fsrch-qt-font-family, inherit);
+    font-size: var(--bkbg-fsrch-qt-font-size-d, 17px);
+    font-weight: var(--bkbg-fsrch-qt-font-weight, 600);
+    line-height: var(--bkbg-fsrch-qt-line-height-d, 1.4);
+    text-transform: var(--bkbg-fsrch-qt-text-transform, none);
+    font-style: var(--bkbg-fsrch-qt-font-style, normal);
+    text-decoration: var(--bkbg-fsrch-qt-text-decoration, none);
+    letter-spacing: var(--bkbg-fsrch-qt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fsrch-qt-word-spacing-d, normal);
+}
+
+.bkbg-fs-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease;
+    font-size: 18px;
+    line-height: 1;
+    color: var(--bkbg-fs-accent, #7c3aed);
+    border: 2px solid currentColor;
+}
+
+.bkbg-fs-item--open .bkbg-fs-icon {
+    transform: rotate(45deg);
+}
+
+.bkbg-fs-answer-wrap {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.bkbg-fs-item--open .bkbg-fs-answer-wrap {
+    max-height: 1000px;
+}
+
+.bkbg-fs-answer {
+    padding: 0 20px 16px;
+    font-family: var(--bkbg-fsrch-an-font-family, inherit);
+    font-size: var(--bkbg-fsrch-an-font-size-d, 15px);
+    font-weight: var(--bkbg-fsrch-an-font-weight, normal);
+    line-height: var(--bkbg-fsrch-an-line-height-d, 1.65);
+    text-transform: var(--bkbg-fsrch-an-text-transform, none);
+    font-style: var(--bkbg-fsrch-an-font-style, normal);
+    text-decoration: var(--bkbg-fsrch-an-text-decoration, none);
+    letter-spacing: var(--bkbg-fsrch-an-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fsrch-an-word-spacing-d, normal);
+}
+
+.bkbg-fs-item--plain .bkbg-fs-answer {
+    padding: 0 0 16px;
+}
+
+/* Hidden for search */
+.bkbg-fs-item--hidden {
+    display: none !important;
+}
+
+.bkbg-fs-no-results {
+    text-align: center;
+    color: #9ca3af;
+    padding: 24px 0;
+    display: none;
+}
+
+.bkbg-fs-no-results--visible {
+    display: block;
+}
+
+/* Editor */
+.bkbg-fs-editor {
+    min-height: 40px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .bkbg-fs-question-text {
+        font-size: var(--bkbg-fsrch-qt-font-size-t, var(--bkbg-fsrch-qt-font-size-d, 17px));
+        line-height: var(--bkbg-fsrch-qt-line-height-t, var(--bkbg-fsrch-qt-line-height-d, 1.4));
+        letter-spacing: var(--bkbg-fsrch-qt-letter-spacing-t, var(--bkbg-fsrch-qt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-fsrch-qt-word-spacing-t, var(--bkbg-fsrch-qt-word-spacing-d, normal));
+    }
+    .bkbg-fs-answer {
+        font-size: var(--bkbg-fsrch-an-font-size-t, var(--bkbg-fsrch-an-font-size-d, 15px));
+        line-height: var(--bkbg-fsrch-an-line-height-t, var(--bkbg-fsrch-an-line-height-d, 1.65));
+        letter-spacing: var(--bkbg-fsrch-an-letter-spacing-t, var(--bkbg-fsrch-an-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-fsrch-an-word-spacing-t, var(--bkbg-fsrch-an-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-fs-question-text {
+        font-size: var(--bkbg-fsrch-qt-font-size-m, var(--bkbg-fsrch-qt-font-size-t, var(--bkbg-fsrch-qt-font-size-d, 17px)));
+        line-height: var(--bkbg-fsrch-qt-line-height-m, var(--bkbg-fsrch-qt-line-height-t, var(--bkbg-fsrch-qt-line-height-d, 1.4)));
+        letter-spacing: var(--bkbg-fsrch-qt-letter-spacing-m, var(--bkbg-fsrch-qt-letter-spacing-t, var(--bkbg-fsrch-qt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-fsrch-qt-word-spacing-m, var(--bkbg-fsrch-qt-word-spacing-t, var(--bkbg-fsrch-qt-word-spacing-d, normal)));
+    }
+    .bkbg-fs-answer {
+        font-size: var(--bkbg-fsrch-an-font-size-m, var(--bkbg-fsrch-an-font-size-t, var(--bkbg-fsrch-an-font-size-d, 15px)));
+        line-height: var(--bkbg-fsrch-an-line-height-m, var(--bkbg-fsrch-an-line-height-t, var(--bkbg-fsrch-an-line-height-d, 1.65)));
+        letter-spacing: var(--bkbg-fsrch-an-letter-spacing-m, var(--bkbg-fsrch-an-letter-spacing-t, var(--bkbg-fsrch-an-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-fsrch-an-word-spacing-m, var(--bkbg-fsrch-an-word-spacing-t, var(--bkbg-fsrch-an-word-spacing-d, normal)));
+    }
+}

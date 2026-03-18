@@ -1,0 +1,233 @@
+/* ============================================================
+   Email Signature — style.css
+   Prefix: bkbg-esig-
+   ============================================================ */
+
+.bkbg-esig-wrap {
+    box-sizing: border-box;
+    width: 100%;
+    background: var(--bkbg-esig-bg, #ffffff);
+    padding: 20px;
+}
+
+/* Editor header bar */
+.bkbg-esig-editor-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-bottom: 16px;
+}
+
+/* ---- Signature wrapper ---- */
+.bkbg-esig-sig {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 560px;
+    font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    background: var(--bkbg-esig-bg, #ffffff);
+    border: 1px solid var(--bkbg-esig-divider-c, #e2e8f0);
+    border-radius: 12px;
+    padding: 20px 24px;
+}
+
+/* ---- Avatar ---- */
+.bkbg-esig-avatar-col { flex-shrink: 0; }
+
+.bkbg-esig-avatar {
+    width: var(--bkbg-esig-avatar-sz, 72px);
+    height: var(--bkbg-esig-avatar-sz, 72px);
+    border-radius: var(--bkbg-esig-avatar-r, 50%);
+    object-fit: cover;
+    display: block;
+}
+
+.bkbg-esig-avatar-placeholder {
+    width: var(--bkbg-esig-avatar-sz, 72px);
+    height: var(--bkbg-esig-avatar-sz, 72px);
+    border-radius: var(--bkbg-esig-avatar-r, 50%);
+    background: color-mix(in srgb, var(--bkbg-esig-accent, #6c3fb5) 10%, #f1f5f9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---- Body ---- */
+.bkbg-esig-body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ---- Identity ---- */
+.bkbg-esig-identity {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.bkbg-esig-name {
+    font-family: var(--bkbg-esig-nm-font-family, inherit);
+    font-size: var(--bkbg-esig-nm-font-size-d, var(--bkbg-esig-name-sz, 17px));
+    font-weight: var(--bkbg-esig-nm-font-weight, var(--bkbg-esig-name-w, 700));
+    color: var(--bkbg-esig-name-c, #0f172a);
+    line-height: var(--bkbg-esig-nm-line-height-d, var(--bkbg-esig-name-lh, 1.2));
+    font-style: var(--bkbg-esig-nm-font-style, normal);
+    text-decoration: var(--bkbg-esig-nm-text-decoration, none);
+    text-transform: var(--bkbg-esig-nm-text-transform, none);
+    letter-spacing: var(--bkbg-esig-nm-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-esig-nm-word-spacing-d, normal);
+    display: block;
+}
+
+.bkbg-esig-title {
+    font-family: var(--bkbg-esig-jt-font-family, inherit);
+    font-size: var(--bkbg-esig-jt-font-size-d, var(--bkbg-esig-title-sz, 13px));
+    font-weight: var(--bkbg-esig-jt-font-weight, var(--bkbg-esig-title-w, 600));
+    line-height: var(--bkbg-esig-jt-line-height-d, var(--bkbg-esig-title-lh, 1.4));
+    color: var(--bkbg-esig-title-c, #6c3fb5);
+    font-style: var(--bkbg-esig-jt-font-style, normal);
+    text-decoration: var(--bkbg-esig-jt-text-decoration, none);
+    text-transform: var(--bkbg-esig-jt-text-transform, none);
+    letter-spacing: var(--bkbg-esig-jt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-esig-jt-word-spacing-d, normal);
+    display: block;
+    letter-spacing: .01em;
+}
+
+.bkbg-esig-company {
+    font-size: var(--bkbg-esig-title-sz, 13px);
+    color: var(--bkbg-esig-company-c, #374151);
+    display: block;
+}
+
+/* ---- Divider ---- */
+.bkbg-esig-divider { width: 100%; }
+.bkbg-esig-divider--line {
+    height: 1px;
+    background: var(--bkbg-esig-divider-c, #e2e8f0);
+}
+.bkbg-esig-divider--accent {
+    height: 2px;
+    background: var(--bkbg-esig-accent, #6c3fb5);
+    width: 48px;
+    border-radius: 2px;
+}
+
+/* ---- Contact ---- */
+.bkbg-esig-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bkbg-esig-info-row {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: var(--bkbg-esig-info-sz, 13px);
+}
+
+.bkbg-esig-info-icon { font-size: .85em; flex-shrink: 0; }
+
+.bkbg-esig-info-link {
+    color: var(--bkbg-esig-info-c, #64748b);
+    text-decoration: none;
+    transition: color .13s;
+}
+.bkbg-esig-info-link:hover { color: var(--bkbg-esig-accent, #6c3fb5); text-decoration: underline; }
+
+/* ---- Socials ---- */
+.bkbg-esig-socials {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bkbg-esig-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: color-mix(in srgb, var(--bkbg-esig-accent, #6c3fb5) 8%, #f1f5f9);
+    color: var(--bkbg-esig-social-c, #64748b);
+    text-decoration: none;
+    font-size: var(--bkbg-esig-social-icon-sz, 16px);
+    transition: background .14s, color .14s;
+}
+.bkbg-esig-social-icon:hover {
+    background: var(--bkbg-esig-accent, #6c3fb5);
+    color: #ffffff;
+}
+
+/* ---- Banner ---- */
+.bkbg-esig-banner { margin-top: 4px; }
+.bkbg-esig-banner-img {
+    display: block;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* ============================================================
+   Style Variants
+   ============================================================ */
+
+/* minimal — no border container */
+.bkbg-esig-style--minimal .bkbg-esig-sig {
+    border: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* branded — left accent bar */
+.bkbg-esig-style--branded .bkbg-esig-sig {
+    border-left: 4px solid var(--bkbg-esig-accent, #6c3fb5);
+    border-radius: 0 12px 12px 0;
+}
+
+/* compact — reduced spacing */
+.bkbg-esig-style--compact .bkbg-esig-sig {
+    padding: 14px 18px;
+    gap: 14px;
+}
+.bkbg-esig-style--compact .bkbg-esig-contact { gap: 3px; }
+
+/* ── Responsive typography ── */
+@media (max-width: 1024px) {
+    .bkbg-esig-name {
+        font-size: var(--bkbg-esig-nm-font-size-t, var(--bkbg-esig-nm-font-size-d, var(--bkbg-esig-name-sz, 17px)));
+        line-height: var(--bkbg-esig-nm-line-height-t, var(--bkbg-esig-nm-line-height-d, var(--bkbg-esig-name-lh, 1.2)));
+        letter-spacing: var(--bkbg-esig-nm-letter-spacing-t, var(--bkbg-esig-nm-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-esig-nm-word-spacing-t, var(--bkbg-esig-nm-word-spacing-d, normal));
+    }
+    .bkbg-esig-title {
+        font-size: var(--bkbg-esig-jt-font-size-t, var(--bkbg-esig-jt-font-size-d, var(--bkbg-esig-title-sz, 13px)));
+        line-height: var(--bkbg-esig-jt-line-height-t, var(--bkbg-esig-jt-line-height-d, var(--bkbg-esig-title-lh, 1.4)));
+        letter-spacing: var(--bkbg-esig-jt-letter-spacing-t, var(--bkbg-esig-jt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-esig-jt-word-spacing-t, var(--bkbg-esig-jt-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-esig-name {
+        font-size: var(--bkbg-esig-nm-font-size-m, var(--bkbg-esig-nm-font-size-t, var(--bkbg-esig-nm-font-size-d, var(--bkbg-esig-name-sz, 17px))));
+        line-height: var(--bkbg-esig-nm-line-height-m, var(--bkbg-esig-nm-line-height-t, var(--bkbg-esig-nm-line-height-d, var(--bkbg-esig-name-lh, 1.2))));
+        letter-spacing: var(--bkbg-esig-nm-letter-spacing-m, var(--bkbg-esig-nm-letter-spacing-t, var(--bkbg-esig-nm-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-esig-nm-word-spacing-m, var(--bkbg-esig-nm-word-spacing-t, var(--bkbg-esig-nm-word-spacing-d, normal)));
+    }
+    .bkbg-esig-title {
+        font-size: var(--bkbg-esig-jt-font-size-m, var(--bkbg-esig-jt-font-size-t, var(--bkbg-esig-jt-font-size-d, var(--bkbg-esig-title-sz, 13px))));
+        line-height: var(--bkbg-esig-jt-line-height-m, var(--bkbg-esig-jt-line-height-t, var(--bkbg-esig-jt-line-height-d, var(--bkbg-esig-title-lh, 1.4))));
+        letter-spacing: var(--bkbg-esig-jt-letter-spacing-m, var(--bkbg-esig-jt-letter-spacing-t, var(--bkbg-esig-jt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-esig-jt-word-spacing-m, var(--bkbg-esig-jt-word-spacing-t, var(--bkbg-esig-jt-word-spacing-d, normal)));
+    }
+}

@@ -1,0 +1,162 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/box-plot",
+    "title": "Box Plot",
+    "category": "bkbg-charts",
+    "icon": "chart-bar",
+    "description": "Box-and-whisker statistical chart showing min, Q1, median, Q3, max, mean, and outliers for multiple data series.",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Score Distribution by Group"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "integer",
+            "default": 700
+        },
+        "svgHeight": {
+            "type": "integer",
+            "default": 380
+        },
+        "padTop": {
+            "type": "integer",
+            "default": 40
+        },
+        "padLeft": {
+            "type": "integer",
+            "default": 60
+        },
+        "padRight": {
+            "type": "integer",
+            "default": 30
+        },
+        "padBottom": {
+            "type": "integer",
+            "default": 50
+        },
+        "boxWidth": {
+            "type": "integer",
+            "default": 48
+        },
+        "whiskerWidth": {
+            "type": "integer",
+            "default": 24
+        },
+        "showGridLines": {
+            "type": "boolean",
+            "default": true
+        },
+        "showMean": {
+            "type": "boolean",
+            "default": true
+        },
+        "showOutliers": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelFontSize": {
+            "type": "integer",
+            "default": 13
+        },
+        "valueFontSize": {
+            "type": "integer",
+            "default": 10
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "series": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Group A",
+                    "color": "#6366f1",
+                    "min": 42,
+                    "q1": 55,
+                    "median": 68,
+                    "mean": 67,
+                    "q3": 78,
+                    "max": 95,
+                    "outliers": [
+                        22,
+                        98
+                    ]
+                },
+                {
+                    "label": "Group B",
+                    "color": "#10b981",
+                    "min": 38,
+                    "q1": 60,
+                    "median": 72,
+                    "mean": 70,
+                    "q3": 82,
+                    "max": 91,
+                    "outliers": [
+                        15
+                    ]
+                },
+                {
+                    "label": "Group C",
+                    "color": "#f59e0b",
+                    "min": 50,
+                    "q1": 58,
+                    "median": 65,
+                    "mean": 64,
+                    "q3": 74,
+                    "max": 88,
+                    "outliers": [
+                        100
+                    ]
+                },
+                {
+                    "label": "Group D",
+                    "color": "#ef4444",
+                    "min": 30,
+                    "q1": 45,
+                    "median": 58,
+                    "mean": 60,
+                    "q3": 72,
+                    "max": 90,
+                    "outliers": [
+                        10,
+                        105
+                    ]
+                }
+            ]
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "editorScript": "bkbg-box-plot-editor",
+    "style": "bkbg-box-plot-style"
+}

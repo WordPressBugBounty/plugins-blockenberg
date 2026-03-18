@@ -1,0 +1,198 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/pros-cons",
+    "title": "Pros & Cons",
+    "category": "bkbg-blog",
+    "icon": "editor-table",
+    "description": "A two-column pros and cons comparison block for reviews and articles. Supports editable items, custom icons, heading, and full color control for each column.",
+    "keywords": [
+        "pros",
+        "cons",
+        "advantages",
+        "disadvantages",
+        "comparison",
+        "review",
+        "checklist",
+        "good",
+        "bad"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-pros-cons-editor",
+    "style": "bkbg-pros-cons-style",
+    "viewScript": "bkbg-pros-cons-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Pros & Cons"
+        },
+        "showHeading": {
+            "type": "boolean",
+            "default": true
+        },
+        "prosHeading": {
+            "type": "string",
+            "default": "Pros"
+        },
+        "consHeading": {
+            "type": "string",
+            "default": "Cons"
+        },
+        "prosIcon": {
+            "type": "string",
+            "default": "✓"
+        },
+        "prosIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "prosIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "prosIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "consIcon": {
+            "type": "string",
+            "default": "✗"
+        },
+        "consIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "consIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "consIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "pros": {
+            "type": "array",
+            "default": [
+                "Easy to set up and get started quickly",
+                "Excellent performance and reliability",
+                "Great value for the price"
+            ]
+        },
+        "cons": {
+            "type": "array",
+            "default": [
+                "Limited customization options",
+                "Steeper learning curve for advanced features"
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "two-col"
+        },
+        "prosBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "consBg": {
+            "type": "string",
+            "default": "#fef2f2"
+        },
+        "prosHeadBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "consHeadBg": {
+            "type": "string",
+            "default": "#fee2e2"
+        },
+        "prosHeadColor": {
+            "type": "string",
+            "default": "#15803d"
+        },
+        "consHeadColor": {
+            "type": "string",
+            "default": "#b91c1c"
+        },
+        "prosBulletColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "consBulletColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "prosItemColor": {
+            "type": "string",
+            "default": "#166534"
+        },
+        "consItemColor": {
+            "type": "string",
+            "default": "#991b1b"
+        },
+        "prosBorder": {
+            "type": "string",
+            "default": "#bbf7d0"
+        },
+        "consBorder": {
+            "type": "string",
+            "default": "#fecaca"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": ""
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "colHeadTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "itemTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "itemGap": {
+            "type": "number",
+            "default": 12
+        },
+        "colRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "paddingV": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingH": {
+            "type": "number",
+            "default": 0
+        },
+        "columnGap": {
+            "type": "number",
+            "default": 16
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 860
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        }
+    }
+}

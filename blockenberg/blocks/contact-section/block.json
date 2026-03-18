@@ -1,0 +1,269 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/contact-section",
+    "version": "1.0.0",
+    "title": "Contact Section",
+    "category": "bkbg-business",
+    "icon": "email-alt",
+    "description": "All-in-one contact page section: info cards (address, phone, email, hours) + a contact form + optional embedded map — all in a polished configurable layout.",
+    "keywords": [
+        "contact",
+        "form",
+        "map",
+        "address",
+        "email",
+        "phone"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-contact-section-editor",
+    "style": "bkbg-contact-section-style",
+    "viewScript": "bkbg-contact-section-frontend",
+    "attributes": {
+        "layout": {
+            "type": "string",
+            "default": "info-left"
+        },
+        "sectionTitle": {
+            "type": "string",
+            "default": "Get In Touch"
+        },
+        "sectionSubtitle": {
+            "type": "string",
+            "default": "We'd love to hear from you. Send us a message and we'll respond as soon as possible."
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "infoCards": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "c1",
+                    "icon": "📍",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "Our Office",
+                    "value": "123 Main Street, New York, NY 10001"
+                },
+                {
+                    "id": "c2",
+                    "icon": "📞",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "Phone",
+                    "value": "+1 (555) 000-0000"
+                },
+                {
+                    "id": "c3",
+                    "icon": "✉️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "Email",
+                    "value": "hello@example.com"
+                },
+                {
+                    "id": "c4",
+                    "icon": "🕐",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "label": "Hours",
+                    "value": "Mon–Fri 9am–6pm EST"
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "showInfoCards": {
+            "type": "boolean",
+            "default": true
+        },
+        "showForm": {
+            "type": "boolean",
+            "default": true
+        },
+        "showName": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPhone": {
+            "type": "boolean",
+            "default": false
+        },
+        "showSubject": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelName": {
+            "type": "string",
+            "default": "Full Name"
+        },
+        "labelEmail": {
+            "type": "string",
+            "default": "Email Address"
+        },
+        "labelPhone": {
+            "type": "string",
+            "default": "Phone Number"
+        },
+        "labelSubject": {
+            "type": "string",
+            "default": "Subject"
+        },
+        "labelMessage": {
+            "type": "string",
+            "default": "Your Message"
+        },
+        "submitLabel": {
+            "type": "string",
+            "default": "Send Message"
+        },
+        "successMessage": {
+            "type": "string",
+            "default": "Thank you! We'll be in touch shortly."
+        },
+        "recipientEmail": {
+            "type": "string",
+            "default": ""
+        },
+        "showMap": {
+            "type": "boolean",
+            "default": false
+        },
+        "mapEmbedUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "mapHeight": {
+            "type": "number",
+            "default": 280
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "cardGap": {
+            "type": "number",
+            "default": 16
+        },
+        "formRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "fieldRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 36
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 16
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 32
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 13
+        },
+        "fieldSize": {
+            "type": "number",
+            "default": 14
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "cardIconBg": {
+            "type": "string",
+            "default": "#ede9f7"
+        },
+        "cardLabelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "cardValueColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "formBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "fieldBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "fieldBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ],
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    }
+}

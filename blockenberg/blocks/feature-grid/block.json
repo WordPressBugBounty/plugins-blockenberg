@@ -1,0 +1,189 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/feature-grid",
+    "version": "1.0.0",
+    "title": "Feature Grid",
+    "category": "bkbg-marketing",
+    "icon": "grid-view",
+    "description": "Responsive grid of feature cards — each with an icon, title, text, and optional link. Perfect for services, benefits, and product highlights.",
+    "keywords": [
+        "feature",
+        "grid",
+        "icon",
+        "cards",
+        "services",
+        "benefits"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-feature-grid-editor",
+    "style": "bkbg-feature-grid-style",
+    "viewScript": "bkbg-feature-grid-frontend",
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "iconType": "emoji",
+                    "iconChar": "🚀",
+                    "iconDashicon": "star-filled",
+                    "title": "Fast Performance",
+                    "text": "Optimized for speed from the ground up — your visitors get results instantly.",
+                    "linkLabel": "",
+                    "linkUrl": "",
+                    "linkTarget": false
+                },
+                {
+                    "iconType": "emoji",
+                    "iconChar": "🎨",
+                    "iconDashicon": "admin-appearance",
+                    "title": "Beautiful Design",
+                    "text": "Pixel-perfect components that look great on every device and screen size.",
+                    "linkLabel": "",
+                    "linkUrl": "",
+                    "linkTarget": false
+                },
+                {
+                    "iconType": "emoji",
+                    "iconChar": "🔒",
+                    "iconDashicon": "shield",
+                    "title": "Secure & Reliable",
+                    "text": "Built with security best practices so you can focus on what matters most.",
+                    "linkLabel": "",
+                    "linkUrl": "",
+                    "linkTarget": false
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "columnsTablet": {
+            "type": "number",
+            "default": 2
+        },
+        "columnsMobile": {
+            "type": "number",
+            "default": 1
+        },
+        "gap": {
+            "type": "number",
+            "default": 24
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "shadow"
+        },
+        "iconPosition": {
+            "type": "string",
+            "default": "top"
+        },
+        "iconShape": {
+            "type": "string",
+            "default": "circle"
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 42
+        },
+        "iconShapeSize": {
+            "type": "number",
+            "default": 72
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 32
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 18
+        },
+        "titleWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "textSize": {
+            "type": "number",
+            "default": 14
+        },
+        "linkSize": {
+            "type": "number",
+            "default": 14
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoText": {
+            "type": "object",
+            "default": {}
+        },
+        "typoLink": {
+            "type": "object",
+            "default": {}
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "iconBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "cardShadow": {
+            "type": "string",
+            "default": "md"
+        },
+        "hoverEffect": {
+            "type": "string",
+            "default": "lift"
+        },
+        "animate": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ],
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    }
+}

@@ -1,0 +1,211 @@
+/* ===== Project Brief Block ===== */
+.bkbg-pb-wrap {
+    font-family: var(--bkbg-pjb-bd-font-family, inherit);
+    font-size: var(--bkbg-pjb-bd-font-size-d, 14px);
+    font-weight: var(--bkbg-pjb-bd-font-weight, 400);
+    font-style: var(--bkbg-pjb-bd-font-style, normal);
+    text-transform: var(--bkbg-pjb-bd-text-transform, none);
+    line-height: var(--bkbg-pjb-bd-line-height-d, 1.68);
+    letter-spacing: var(--bkbg-pjb-bd-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-pjb-bd-word-spacing-d, normal);
+    overflow: hidden;
+}
+
+/* Header */
+.bkbg-pb-header {
+    padding: 20px 24px;
+}
+.bkbg-pb-header-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+/* Title — h2 heading, needs specificity >= (0,2,0) */
+.bkbg-pb-wrap h2.bkbg-pb-title {
+    font-family: var(--bkbg-pjb-tt-font-family, inherit);
+    font-size: var(--bkbg-pjb-tt-font-size-d, 24px);
+    font-weight: var(--bkbg-pjb-tt-font-weight, 700);
+    font-style: var(--bkbg-pjb-tt-font-style, normal);
+    text-decoration: var(--bkbg-pjb-tt-text-decoration, none);
+    text-transform: var(--bkbg-pjb-tt-text-transform, none);
+    line-height: var(--bkbg-pjb-tt-line-height-d, 1.2);
+    letter-spacing: var(--bkbg-pjb-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-pjb-tt-word-spacing-d, normal);
+    margin: 0 0 4px;
+    padding: 0;
+}
+.bkbg-pb-type {
+    font-size: .8em;
+    opacity: .7;
+}
+.bkbg-pb-status {
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: .8em;
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.bkbg-pb-meta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.bkbg-pb-meta-item {
+    font-size: .82em;
+    opacity: .75;
+}
+
+/* Body */
+.bkbg-pb-body {
+    padding: 20px 24px;
+    display: grid;
+    gap: 20px;
+}
+
+/* Section heading */
+.bkbg-pb-section-head {
+    font-size: .7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+}
+.bkbg-pb-overview {
+    margin: 0;
+    line-height: 1.68;
+}
+
+/* Goals & Deliverables */
+.bkbg-pb-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.bkbg-pb-card {
+    padding: 16px;
+    border-radius: 8px;
+}
+.bkbg-pb-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.bkbg-pb-list-item {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    align-items: flex-start;
+    line-height: 1.5;
+}
+.bkbg-pb-list-item:last-child {
+    margin-bottom: 0;
+}
+.bkbg-pb-list-dot {
+    font-weight: 800;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* Stakeholders */
+.bkbg-pb-stakeholders {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+    gap: 8px;
+}
+.bkbg-pb-stakeholder {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border-left: 3px solid;
+}
+.bkbg-pb-sh-name {
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+.bkbg-pb-sh-role {
+    font-size: .82em;
+    opacity: .7;
+}
+
+/* Risks */
+.bkbg-pb-risks {
+    display: grid;
+    gap: 6px;
+}
+.bkbg-pb-risk-row {
+    display: grid;
+    grid-template-columns: 1fr 90px 90px;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    align-items: center;
+    border-left: 3px solid;
+}
+.bkbg-pb-risk-text {
+    line-height: 1.45;
+    font-size: .9em;
+}
+.bkbg-pb-risk-badge {
+    padding: 2px 8px;
+    border-radius: 100px;
+    font-size: .72em;
+    font-weight: 700;
+    text-align: center;
+}
+.bkbg-pb-notes {
+    margin: 0;
+    font-style: italic;
+    line-height: 1.65;
+}
+
+/* Responsive — Typography */
+@media (max-width: 1024px) {
+    .bkbg-pb-wrap h2.bkbg-pb-title,
+    .bkbg-pb-wrap .bkbg-pb-title {
+        font-size: var(--bkbg-pjb-tt-font-size-t, var(--bkbg-pjb-tt-font-size-d, 24px));
+        line-height: var(--bkbg-pjb-tt-line-height-t, var(--bkbg-pjb-tt-line-height-d, 1.2));
+        letter-spacing: var(--bkbg-pjb-tt-letter-spacing-t, var(--bkbg-pjb-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-pjb-tt-word-spacing-t, var(--bkbg-pjb-tt-word-spacing-d, normal));
+    }
+    .bkbg-pb-wrap {
+        font-size: var(--bkbg-pjb-bd-font-size-t, var(--bkbg-pjb-bd-font-size-d, 14px));
+        line-height: var(--bkbg-pjb-bd-line-height-t, var(--bkbg-pjb-bd-line-height-d, 1.68));
+        letter-spacing: var(--bkbg-pjb-bd-letter-spacing-t, var(--bkbg-pjb-bd-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-pjb-bd-word-spacing-t, var(--bkbg-pjb-bd-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-pb-wrap h2.bkbg-pb-title,
+    .bkbg-pb-wrap .bkbg-pb-title {
+        font-size: var(--bkbg-pjb-tt-font-size-m, var(--bkbg-pjb-tt-font-size-t, var(--bkbg-pjb-tt-font-size-d, 24px)));
+        line-height: var(--bkbg-pjb-tt-line-height-m, var(--bkbg-pjb-tt-line-height-t, var(--bkbg-pjb-tt-line-height-d, 1.2)));
+        letter-spacing: var(--bkbg-pjb-tt-letter-spacing-m, var(--bkbg-pjb-tt-letter-spacing-t, var(--bkbg-pjb-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-pjb-tt-word-spacing-m, var(--bkbg-pjb-tt-word-spacing-t, var(--bkbg-pjb-tt-word-spacing-d, normal)));
+    }
+    .bkbg-pb-wrap {
+        font-size: var(--bkbg-pjb-bd-font-size-m, var(--bkbg-pjb-bd-font-size-t, var(--bkbg-pjb-bd-font-size-d, 14px)));
+        line-height: var(--bkbg-pjb-bd-line-height-m, var(--bkbg-pjb-bd-line-height-t, var(--bkbg-pjb-bd-line-height-d, 1.68)));
+        letter-spacing: var(--bkbg-pjb-bd-letter-spacing-m, var(--bkbg-pjb-bd-letter-spacing-t, var(--bkbg-pjb-bd-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-pjb-bd-word-spacing-m, var(--bkbg-pjb-bd-word-spacing-t, var(--bkbg-pjb-bd-word-spacing-d, normal)));
+    }
+}
+
+/* Responsive — Layout */
+@media (max-width: 580px) {
+    .bkbg-pb-two-col {
+        grid-template-columns: 1fr;
+    }
+    .bkbg-pb-risk-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+    .bkbg-pb-meta {
+        flex-direction: column;
+        gap: 4px;
+    }
+}

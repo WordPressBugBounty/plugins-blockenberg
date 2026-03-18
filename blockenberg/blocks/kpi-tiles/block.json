@@ -1,0 +1,187 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/kpi-tiles",
+    "title": "KPI Tiles",
+    "category": "bkbg-business",
+    "description": "Metric tiles grid with numbers, labels, trend indicators and mini sparkline charts.",
+    "keywords": [
+        "kpi",
+        "metrics",
+        "stats",
+        "sparkline",
+        "dashboard"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-kpi-tiles-editor",
+    "style": "bkbg-kpi-tiles-style",
+    "viewScript": "bkbg-kpi-tiles-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "tiles": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Revenue",
+                    "value": "$124,500",
+                    "trend": "+18%",
+                    "direction": "up",
+                    "sparkline": "40,55,45,70,60,80,90,75,95,110",
+                    "icon": "💰",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "label": "Users",
+                    "value": "38,421",
+                    "trend": "+12%",
+                    "direction": "up",
+                    "sparkline": "20,30,28,40,38,50,55,48,60,72",
+                    "icon": "👥",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "label": "Churn Rate",
+                    "value": "2.4%",
+                    "trend": "-0.6%",
+                    "direction": "down-good",
+                    "sparkline": "10,9,8,10,7,6,8,5,4,3",
+                    "icon": "📉",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                },
+                {
+                    "label": "NPS Score",
+                    "value": "74",
+                    "trend": "+5 pts",
+                    "direction": "up",
+                    "sparkline": "50,55,52,60,58,65,68,70,72,74",
+                    "icon": "⭐",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": ""
+                }
+            ]
+        },
+        "columns": {
+            "type": "number",
+            "default": 4
+        },
+        "showSparkline": {
+            "type": "boolean",
+            "default": true
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTrend": {
+            "type": "boolean",
+            "default": true
+        },
+        "animateNumbers": {
+            "type": "boolean",
+            "default": true
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 24
+        },
+        "sparklineHeight": {
+            "type": "number",
+            "default": 48
+        },
+        "sparklineWidth": {
+            "type": "number",
+            "default": 120
+        },
+        "valueSize": {
+            "type": "number",
+            "default": 32
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 13
+        },
+        "trendSize": {
+            "type": "number",
+            "default": 12
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 32
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardShadow": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.08)"
+        },
+        "valueColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "upColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "downColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "downGoodColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "sparklineColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "sparklineFill": {
+            "type": "string",
+            "default": "rgba(99,102,241,0.12)"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "valueTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "trendTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

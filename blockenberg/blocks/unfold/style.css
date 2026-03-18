@@ -1,0 +1,136 @@
+/* =====================================================
+   Blockenberg — unfold  (bkbg-ufd-*)
+   ===================================================== */
+
+/* ── Content wrapper ── */
+.bkbg-ufd-content-wrap {
+    position: relative;
+    overflow: hidden;
+    transition: max-height ease-in-out;
+}
+
+/* ── Hidden source element (read by frontend.js) ── */
+.bkbg-ufd-content-src {
+    display: none;
+}
+
+/* ── Fade gradient overlay ── */
+.bkbg-ufd-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.bkbg-ufd-content-wrap.bkbg-ufd-expanded .bkbg-ufd-gradient {
+    opacity: 0;
+}
+
+/* ── Button row ── */
+.bkbg-ufd-btn-wrap {
+    margin-top: 16px;
+}
+
+/* ── Button base ── */
+.bkbg-ufd-btn {
+    display: inline-block;
+    cursor: pointer;
+    font-family: var(--bkufd-bt-ff, inherit);
+    font-size: var(--bkufd-bt-fsd, 14px);
+    line-height: var(--bkufd-bt-lhd, 1.4);
+    letter-spacing: var(--bkufd-bt-lsd, normal);
+    word-spacing: var(--bkufd-bt-wsd, normal);
+    font-weight: var(--bkufd-bt-fw, 600);
+    font-style: var(--bkufd-bt-fst, normal);
+    text-decoration: var(--bkufd-bt-td, none);
+    text-transform: var(--bkufd-bt-tt, none);
+    transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.bkbg-ufd-btn:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+/* Filled */
+.bkbg-ufd-btn.bkbg-ufd-btn-filled {
+    padding: 10px 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.bkbg-ufd-btn.bkbg-ufd-btn-filled:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+.bkbg-ufd-btn.bkbg-ufd-btn-filled:active {
+    transform: translateY(0);
+}
+
+/* Outline */
+.bkbg-ufd-btn.bkbg-ufd-btn-outline {
+    padding: 10px 24px;
+    background: transparent;
+}
+.bkbg-ufd-btn.bkbg-ufd-btn-outline:hover {
+    opacity: 0.78;
+}
+
+/* Text */
+.bkbg-ufd-btn.bkbg-ufd-btn-text {
+    background: none;
+    border: none;
+    padding: 4px 0;
+}
+.bkbg-ufd-btn.bkbg-ufd-btn-text:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+/* ── Content richtext body ── */
+.bkbg-ufd-content-body {
+    font-family: var(--bkufd-ct-ff, inherit);
+    font-size: var(--bkufd-ct-fsd, 16px);
+    line-height: var(--bkufd-ct-lhd, 1.7);
+    letter-spacing: var(--bkufd-ct-lsd, normal);
+    word-spacing: var(--bkufd-ct-wsd, normal);
+    font-weight: var(--bkufd-ct-fw, normal);
+    font-style: var(--bkufd-ct-fst, normal);
+    text-decoration: var(--bkufd-ct-td, none);
+    text-transform: var(--bkufd-ct-tt, none);
+}
+.bkbg-ufd-content-body p {
+    margin: 0 0 1em;
+}
+.bkbg-ufd-content-body p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+    .bkbg-ufd-content-body {
+        font-size: var(--bkufd-ct-fst1, var(--bkufd-ct-fsd, 16px));
+        line-height: var(--bkufd-ct-lht, var(--bkufd-ct-lhd, 1.7));
+        letter-spacing: var(--bkufd-ct-lst, var(--bkufd-ct-lsd, normal));
+        word-spacing: var(--bkufd-ct-wst, var(--bkufd-ct-wsd, normal));
+    }
+    .bkbg-ufd-btn {
+        font-size: var(--bkufd-bt-fst1, var(--bkufd-bt-fsd, 14px));
+        line-height: var(--bkufd-bt-lht, var(--bkufd-bt-lhd, 1.4));
+        letter-spacing: var(--bkufd-bt-lst, var(--bkufd-bt-lsd, normal));
+        word-spacing: var(--bkufd-bt-wst, var(--bkufd-bt-wsd, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-ufd-content-body {
+        font-size: var(--bkufd-ct-fsm, var(--bkufd-ct-fst1, var(--bkufd-ct-fsd, 16px)));
+        line-height: var(--bkufd-ct-lhm, var(--bkufd-ct-lht, var(--bkufd-ct-lhd, 1.7)));
+        letter-spacing: var(--bkufd-ct-lsm, var(--bkufd-ct-lst, var(--bkufd-ct-lsd, normal)));
+        word-spacing: var(--bkufd-ct-wsm, var(--bkufd-ct-wst, var(--bkufd-ct-wsd, normal)));
+    }
+    .bkbg-ufd-btn {
+        font-size: var(--bkufd-bt-fsm, var(--bkufd-bt-fst1, var(--bkufd-bt-fsd, 14px)));
+        line-height: var(--bkufd-bt-lhm, var(--bkufd-bt-lht, var(--bkufd-bt-lhd, 1.4)));
+        letter-spacing: var(--bkufd-bt-lsm, var(--bkufd-bt-lst, var(--bkufd-bt-lsd, normal)));
+        word-spacing: var(--bkufd-bt-wsm, var(--bkufd-bt-wst, var(--bkufd-bt-wsd, normal)));
+    }
+}

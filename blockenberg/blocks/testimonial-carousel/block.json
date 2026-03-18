@@ -1,0 +1,130 @@
+{
+  "apiVersion": 3,
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "blockenberg/testimonial-carousel",
+  "title": "Testimonial Carousel",
+  "category": "bkbg-marketing",
+  "icon": "format-quote",
+  "description": "Auto-playing testimonial slider with stars, avatars, and dot/arrow navigation.",
+  "keywords": [
+    "testimonial",
+    "carousel",
+    "slider",
+    "review",
+    "quote",
+    "autoplay"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-testimonial-carousel-editor",
+  "editorStyle": "bkbg-testimonial-carousel-style",
+  "style": "bkbg-testimonial-carousel-style",
+  "viewScript": "bkbg-testimonial-carousel-frontend",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "quote": "Absolutely transformed the way we work. Highly recommended!",
+          "author": "Sarah Johnson",
+          "role": "CEO, TechCorp",
+          "avatarUrl": "",
+          "avatarId": 0,
+          "stars": 5
+        },
+        {
+          "quote": "The best product I've ever used. Support is phenomenal.",
+          "author": "Michael Chen",
+          "role": "Designer, Studio X",
+          "avatarUrl": "",
+          "avatarId": 0,
+          "stars": 5
+        },
+        {
+          "quote": "Five stars, no question. It just works perfectly every time.",
+          "author": "Emily Davis",
+          "role": "Founder, GrowthLab",
+          "avatarUrl": "",
+          "avatarId": 0,
+          "stars": 4
+        }
+      ]
+    },
+    "autoplay": {
+      "type": "boolean",
+      "default": true
+    },
+    "speed": {
+      "type": "number",
+      "default": 3500
+    },
+    "pauseOnHover": {
+      "type": "boolean",
+      "default": true
+    },
+    "loop": {
+      "type": "boolean",
+      "default": true
+    },
+    "showArrows": {
+      "type": "boolean",
+      "default": true
+    },
+    "showDots": {
+      "type": "boolean",
+      "default": true
+    },
+    "showStars": {
+      "type": "boolean",
+      "default": true
+    },
+    "cardAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#f8f7ff"
+    },
+    "cardBg": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#222222"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": "#6c3fb5"
+    },
+    "starColor": {
+      "type": "string",
+      "default": "#f5a623"
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 16
+    },
+    "cardPadding": {
+      "type": "number",
+      "default": 36
+    },
+    "quoteTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "nameTypo": {
+      "type": "object",
+      "default": {}
+    }
+  }
+}

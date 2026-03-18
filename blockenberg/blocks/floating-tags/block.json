@@ -1,0 +1,165 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/floating-tags",
+    "title": "Floating Tags",
+    "description": "Animated tag cloud where tags gently float with subtle motion.",
+    "category": "bkbg-effects",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-floating-tags-editor",
+    "style": "bkbg-floating-tags-style",
+    "viewScript": "bkbg-floating-tags-frontend",
+    "icon": "tag",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "tags": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "Design",
+                    "size": 1,
+                    "url": ""
+                },
+                {
+                    "text": "Development",
+                    "size": 2,
+                    "url": ""
+                },
+                {
+                    "text": "Marketing",
+                    "size": 1,
+                    "url": ""
+                },
+                {
+                    "text": "SEO",
+                    "size": 3,
+                    "url": ""
+                },
+                {
+                    "text": "Branding",
+                    "size": 2,
+                    "url": ""
+                },
+                {
+                    "text": "Strategy",
+                    "size": 1,
+                    "url": ""
+                },
+                {
+                    "text": "React",
+                    "size": 2,
+                    "url": ""
+                },
+                {
+                    "text": "WordPress",
+                    "size": 3,
+                    "url": ""
+                },
+                {
+                    "text": "UX",
+                    "size": 2,
+                    "url": ""
+                },
+                {
+                    "text": "Analytics",
+                    "size": 1,
+                    "url": ""
+                },
+                {
+                    "text": "Content",
+                    "size": 2,
+                    "url": ""
+                },
+                {
+                    "text": "Automation",
+                    "size": 1,
+                    "url": ""
+                }
+            ]
+        },
+        "minFontSize": {
+            "type": "integer",
+            "default": 13
+        },
+        "maxFontSize": {
+            "type": "integer",
+            "default": 26
+        },
+        "typoTag": {
+            "type": "object",
+            "default": {}
+        },
+        "tagRadius": {
+            "type": "integer",
+            "default": 100
+        },
+        "tagPaddingH": {
+            "type": "integer",
+            "default": 14
+        },
+        "tagPaddingV": {
+            "type": "integer",
+            "default": 7
+        },
+        "gap": {
+            "type": "integer",
+            "default": 10
+        },
+        "animateFloat": {
+            "type": "boolean",
+            "default": true
+        },
+        "floatAmplitude": {
+            "type": "integer",
+            "default": 8
+        },
+        "floatSpeed": {
+            "type": "integer",
+            "default": 3
+        },
+        "hoverScale": {
+            "type": "number",
+            "default": 1.1
+        },
+        "showSizes": {
+            "type": "boolean",
+            "default": true
+        },
+        "alignment": {
+            "type": "string",
+            "default": "center"
+        },
+        "tagBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "tagColor": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "tagHoverBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "tagHoverColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "tagBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        }
+    }
+}

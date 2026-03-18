@@ -1,0 +1,261 @@
+/* Job Listing — style */
+.bkjl-wrap {
+    box-sizing: border-box;
+}
+
+.bkjl-wrap *,
+.bkjl-wrap *::before,
+.bkjl-wrap *::after {
+    box-sizing: inherit;
+}
+
+.bkjl-card {
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.bkjl-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+}
+
+.bkjl-card h3.bkjl-title,
+.bkjl-card .bkjl-title {
+    font-family: var(--bkjl-tt-font-family, inherit);
+    font-size:   var(--bkjl-tt-font-size-d, 22px);
+    font-weight: var(--bkjl-tt-font-weight, 700);
+    font-style:  var(--bkjl-tt-font-style, normal);
+    text-decoration: var(--bkjl-tt-text-decoration, none);
+    text-transform:  var(--bkjl-tt-text-transform, none);
+    line-height: var(--bkjl-tt-line-height-d, 1.3);
+    letter-spacing: var(--bkjl-tt-letter-spacing-d, normal);
+    word-spacing: var(--bkjl-tt-word-spacing-d, normal);
+}
+
+.bkjl-desc {
+    line-height: 1.65;
+    font-family:      var(--bkjl-de-font-family, inherit);
+    font-size:        var(--bkjl-de-font-size-d, 14px);
+    font-weight:      var(--bkjl-de-font-weight, 400);
+    font-style:       var(--bkjl-de-font-style, normal);
+    text-decoration:  var(--bkjl-de-text-decoration, none);
+    text-transform:   var(--bkjl-de-text-transform, none);
+    line-height:      var(--bkjl-de-line-height-d, 1.65);
+    letter-spacing:   var(--bkjl-de-letter-spacing-d, normal);
+    word-spacing:     var(--bkjl-de-word-spacing-d, normal);
+}
+
+/* Company */
+.bkjl-company {
+    font-family:      var(--bkjl-co-font-family, inherit);
+    font-size:        var(--bkjl-co-font-size-d, 14px);
+    font-weight:      var(--bkjl-co-font-weight, 600);
+    font-style:       var(--bkjl-co-font-style, normal);
+    text-decoration:  var(--bkjl-co-text-decoration, none);
+    text-transform:   var(--bkjl-co-text-transform, none);
+    line-height:      var(--bkjl-co-line-height-d, 1.4);
+    letter-spacing:   var(--bkjl-co-letter-spacing-d, normal);
+    word-spacing:     var(--bkjl-co-word-spacing-d, normal);
+}
+
+/* Skills */
+.bkjl-skill {
+    font-family:      var(--bkjl-sk-font-family, inherit);
+    font-size:        var(--bkjl-sk-font-size-d, 12px);
+    font-weight:      var(--bkjl-sk-font-weight, 500);
+    font-style:       var(--bkjl-sk-font-style, normal);
+    text-decoration:  var(--bkjl-sk-text-decoration, none);
+    text-transform:   var(--bkjl-sk-text-transform, none);
+    line-height:      var(--bkjl-sk-line-height-d, 1.4);
+    letter-spacing:   var(--bkjl-sk-letter-spacing-d, normal);
+    word-spacing:     var(--bkjl-sk-word-spacing-d, normal);
+}
+
+/* Badges (Featured / Urgent) */
+.bkjl-badge-featured,
+.bkjl-badge-urgent {
+    font-family:      var(--bkjl-ba-font-family, inherit);
+    font-size:        var(--bkjl-ba-font-size-d, 11px);
+    font-weight:      var(--bkjl-ba-font-weight, 700);
+    font-style:       var(--bkjl-ba-font-style, normal);
+    text-decoration:  var(--bkjl-ba-text-decoration, none);
+    text-transform:   var(--bkjl-ba-text-transform, none);
+    line-height:      var(--bkjl-ba-line-height-d, 1.4);
+    letter-spacing:   var(--bkjl-ba-letter-spacing-d, 0.03em);
+    word-spacing:     var(--bkjl-ba-word-spacing-d, normal);
+}
+
+/* Meta Pills */
+.bkjl-pill {
+    font-family:      var(--bkjl-pi-font-family, inherit);
+    font-size:        var(--bkjl-pi-font-size-d, 12px);
+    font-weight:      var(--bkjl-pi-font-weight, 600);
+    font-style:       var(--bkjl-pi-font-style, normal);
+    text-decoration:  var(--bkjl-pi-text-decoration, none);
+    text-transform:   var(--bkjl-pi-text-transform, none);
+    line-height:      var(--bkjl-pi-line-height-d, 1.4);
+    letter-spacing:   var(--bkjl-pi-letter-spacing-d, normal);
+    word-spacing:     var(--bkjl-pi-word-spacing-d, normal);
+}
+
+/* Meta / Dates */
+.bkjl-posted,
+.bkjl-deadline {
+    font-family:      var(--bkjl-mt-font-family, inherit);
+    font-size:        var(--bkjl-mt-font-size-d, 12px);
+    font-weight:      var(--bkjl-mt-font-weight, 400);
+    font-style:       var(--bkjl-mt-font-style, normal);
+    text-decoration:  var(--bkjl-mt-text-decoration, none);
+    text-transform:   var(--bkjl-mt-text-transform, none);
+    line-height:      var(--bkjl-mt-line-height-d, 1.4);
+    letter-spacing:   var(--bkjl-mt-letter-spacing-d, normal);
+    word-spacing:     var(--bkjl-mt-word-spacing-d, normal);
+}
+
+/* Buttons */
+.bkjl-btn-apply,
+.bkjl-btn-secondary {
+    font-family:      var(--bkjl-bt-font-family, inherit);
+    font-size:        var(--bkjl-bt-font-size-d, 14px);
+    font-weight:      var(--bkjl-bt-font-weight, 600);
+    font-style:       var(--bkjl-bt-font-style, normal);
+    text-decoration:  var(--bkjl-bt-text-decoration, none);
+    text-transform:   var(--bkjl-bt-text-transform, none);
+    line-height:      var(--bkjl-bt-line-height-d, 1.4);
+    letter-spacing:   var(--bkjl-bt-letter-spacing-d, normal);
+    word-spacing:     var(--bkjl-bt-word-spacing-d, normal);
+}
+
+/* Buttons */
+.bkjl-btn-apply:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.bkjl-btn-secondary:hover {
+    background: var(--bkjl-primary, #6c3fb5) !important;
+    color: #fff !important;
+}
+
+/* Skills */
+.bkjl-skill {
+    transition: background 0.15s ease;
+}
+
+.bkjl-skill:hover {
+    filter: brightness(0.95);
+}
+
+/* Responsive typography */
+@media (max-width: 1024px) {
+    .bkjl-card h3.bkjl-title,
+    .bkjl-card .bkjl-title {
+        font-size: var(--bkjl-tt-font-size-t, var(--bkjl-tt-font-size-d, 22px));
+        line-height: var(--bkjl-tt-line-height-t, var(--bkjl-tt-line-height-d, 1.3));
+        letter-spacing: var(--bkjl-tt-letter-spacing-t, var(--bkjl-tt-letter-spacing-d, normal));
+        word-spacing: var(--bkjl-tt-word-spacing-t, var(--bkjl-tt-word-spacing-d, normal));
+    }
+    .bkjl-company {
+        font-size: var(--bkjl-co-font-size-t, var(--bkjl-co-font-size-d, 14px));
+        line-height: var(--bkjl-co-line-height-t, var(--bkjl-co-line-height-d, 1.4));
+        letter-spacing: var(--bkjl-co-letter-spacing-t, var(--bkjl-co-letter-spacing-d, normal));
+        word-spacing: var(--bkjl-co-word-spacing-t, var(--bkjl-co-word-spacing-d, normal));
+    }
+    .bkjl-desc {
+        font-size: var(--bkjl-de-font-size-t, var(--bkjl-de-font-size-d, 14px));
+        line-height: var(--bkjl-de-line-height-t, var(--bkjl-de-line-height-d, 1.65));
+        letter-spacing: var(--bkjl-de-letter-spacing-t, var(--bkjl-de-letter-spacing-d, normal));
+        word-spacing: var(--bkjl-de-word-spacing-t, var(--bkjl-de-word-spacing-d, normal));
+    }
+    .bkjl-skill {
+        font-size: var(--bkjl-sk-font-size-t, var(--bkjl-sk-font-size-d, 12px));
+        line-height: var(--bkjl-sk-line-height-t, var(--bkjl-sk-line-height-d, 1.4));
+        letter-spacing: var(--bkjl-sk-letter-spacing-t, var(--bkjl-sk-letter-spacing-d, normal));
+        word-spacing: var(--bkjl-sk-word-spacing-t, var(--bkjl-sk-word-spacing-d, normal));
+    }
+    .bkjl-badge-featured, .bkjl-badge-urgent {
+        font-size: var(--bkjl-ba-font-size-t, var(--bkjl-ba-font-size-d, 11px));
+        line-height: var(--bkjl-ba-line-height-t, var(--bkjl-ba-line-height-d, 1.4));
+        letter-spacing: var(--bkjl-ba-letter-spacing-t, var(--bkjl-ba-letter-spacing-d, 0.03em));
+        word-spacing: var(--bkjl-ba-word-spacing-t, var(--bkjl-ba-word-spacing-d, normal));
+    }
+    .bkjl-pill {
+        font-size: var(--bkjl-pi-font-size-t, var(--bkjl-pi-font-size-d, 12px));
+        line-height: var(--bkjl-pi-line-height-t, var(--bkjl-pi-line-height-d, 1.4));
+        letter-spacing: var(--bkjl-pi-letter-spacing-t, var(--bkjl-pi-letter-spacing-d, normal));
+        word-spacing: var(--bkjl-pi-word-spacing-t, var(--bkjl-pi-word-spacing-d, normal));
+    }
+    .bkjl-posted, .bkjl-deadline {
+        font-size: var(--bkjl-mt-font-size-t, var(--bkjl-mt-font-size-d, 12px));
+        line-height: var(--bkjl-mt-line-height-t, var(--bkjl-mt-line-height-d, 1.4));
+        letter-spacing: var(--bkjl-mt-letter-spacing-t, var(--bkjl-mt-letter-spacing-d, normal));
+        word-spacing: var(--bkjl-mt-word-spacing-t, var(--bkjl-mt-word-spacing-d, normal));
+    }
+    .bkjl-btn-apply, .bkjl-btn-secondary {
+        font-size: var(--bkjl-bt-font-size-t, var(--bkjl-bt-font-size-d, 14px));
+        line-height: var(--bkjl-bt-line-height-t, var(--bkjl-bt-line-height-d, 1.4));
+        letter-spacing: var(--bkjl-bt-letter-spacing-t, var(--bkjl-bt-letter-spacing-d, normal));
+        word-spacing: var(--bkjl-bt-word-spacing-t, var(--bkjl-bt-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkjl-card h3.bkjl-title,
+    .bkjl-card .bkjl-title {
+        font-size: var(--bkjl-tt-font-size-m, var(--bkjl-tt-font-size-t, var(--bkjl-tt-font-size-d, 22px)));
+        line-height: var(--bkjl-tt-line-height-m, var(--bkjl-tt-line-height-t, var(--bkjl-tt-line-height-d, 1.3)));
+        letter-spacing: var(--bkjl-tt-letter-spacing-m, var(--bkjl-tt-letter-spacing-t, var(--bkjl-tt-letter-spacing-d, normal)));
+        word-spacing: var(--bkjl-tt-word-spacing-m, var(--bkjl-tt-word-spacing-t, var(--bkjl-tt-word-spacing-d, normal)));
+    }
+    .bkjl-company {
+        font-size: var(--bkjl-co-font-size-m, var(--bkjl-co-font-size-t, var(--bkjl-co-font-size-d, 14px)));
+        line-height: var(--bkjl-co-line-height-m, var(--bkjl-co-line-height-t, var(--bkjl-co-line-height-d, 1.4)));
+        letter-spacing: var(--bkjl-co-letter-spacing-m, var(--bkjl-co-letter-spacing-t, var(--bkjl-co-letter-spacing-d, normal)));
+        word-spacing: var(--bkjl-co-word-spacing-m, var(--bkjl-co-word-spacing-t, var(--bkjl-co-word-spacing-d, normal)));
+    }
+    .bkjl-desc {
+        font-size: var(--bkjl-de-font-size-m, var(--bkjl-de-font-size-t, var(--bkjl-de-font-size-d, 14px)));
+        line-height: var(--bkjl-de-line-height-m, var(--bkjl-de-line-height-t, var(--bkjl-de-line-height-d, 1.65)));
+        letter-spacing: var(--bkjl-de-letter-spacing-m, var(--bkjl-de-letter-spacing-t, var(--bkjl-de-letter-spacing-d, normal)));
+        word-spacing: var(--bkjl-de-word-spacing-m, var(--bkjl-de-word-spacing-t, var(--bkjl-de-word-spacing-d, normal)));
+    }
+    .bkjl-skill {
+        font-size: var(--bkjl-sk-font-size-m, var(--bkjl-sk-font-size-t, var(--bkjl-sk-font-size-d, 12px)));
+        line-height: var(--bkjl-sk-line-height-m, var(--bkjl-sk-line-height-t, var(--bkjl-sk-line-height-d, 1.4)));
+        letter-spacing: var(--bkjl-sk-letter-spacing-m, var(--bkjl-sk-letter-spacing-t, var(--bkjl-sk-letter-spacing-d, normal)));
+        word-spacing: var(--bkjl-sk-word-spacing-m, var(--bkjl-sk-word-spacing-t, var(--bkjl-sk-word-spacing-d, normal)));
+    }
+    .bkjl-badge-featured, .bkjl-badge-urgent {
+        font-size: var(--bkjl-ba-font-size-m, var(--bkjl-ba-font-size-t, var(--bkjl-ba-font-size-d, 11px)));
+        line-height: var(--bkjl-ba-line-height-m, var(--bkjl-ba-line-height-t, var(--bkjl-ba-line-height-d, 1.4)));
+        letter-spacing: var(--bkjl-ba-letter-spacing-m, var(--bkjl-ba-letter-spacing-t, var(--bkjl-ba-letter-spacing-d, 0.03em)));
+        word-spacing: var(--bkjl-ba-word-spacing-m, var(--bkjl-ba-word-spacing-t, var(--bkjl-ba-word-spacing-d, normal)));
+    }
+    .bkjl-pill {
+        font-size: var(--bkjl-pi-font-size-m, var(--bkjl-pi-font-size-t, var(--bkjl-pi-font-size-d, 12px)));
+        line-height: var(--bkjl-pi-line-height-m, var(--bkjl-pi-line-height-t, var(--bkjl-pi-line-height-d, 1.4)));
+        letter-spacing: var(--bkjl-pi-letter-spacing-m, var(--bkjl-pi-letter-spacing-t, var(--bkjl-pi-letter-spacing-d, normal)));
+        word-spacing: var(--bkjl-pi-word-spacing-m, var(--bkjl-pi-word-spacing-t, var(--bkjl-pi-word-spacing-d, normal)));
+    }
+    .bkjl-posted, .bkjl-deadline {
+        font-size: var(--bkjl-mt-font-size-m, var(--bkjl-mt-font-size-t, var(--bkjl-mt-font-size-d, 12px)));
+        line-height: var(--bkjl-mt-line-height-m, var(--bkjl-mt-line-height-t, var(--bkjl-mt-line-height-d, 1.4)));
+        letter-spacing: var(--bkjl-mt-letter-spacing-m, var(--bkjl-mt-letter-spacing-t, var(--bkjl-mt-letter-spacing-d, normal)));
+        word-spacing: var(--bkjl-mt-word-spacing-m, var(--bkjl-mt-word-spacing-t, var(--bkjl-mt-word-spacing-d, normal)));
+    }
+    .bkjl-btn-apply, .bkjl-btn-secondary {
+        font-size: var(--bkjl-bt-font-size-m, var(--bkjl-bt-font-size-t, var(--bkjl-bt-font-size-d, 14px)));
+        line-height: var(--bkjl-bt-line-height-m, var(--bkjl-bt-line-height-t, var(--bkjl-bt-line-height-d, 1.4)));
+        letter-spacing: var(--bkjl-bt-letter-spacing-m, var(--bkjl-bt-letter-spacing-t, var(--bkjl-bt-letter-spacing-d, normal)));
+        word-spacing: var(--bkjl-bt-word-spacing-m, var(--bkjl-bt-word-spacing-t, var(--bkjl-bt-word-spacing-d, normal)));
+    }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .bkjl-header {
+        flex-direction: column;
+    }
+    .bkjl-footer {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+}

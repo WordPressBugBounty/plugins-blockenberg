@@ -1,0 +1,245 @@
+/* ========================================
+   Taxonomy List Block Styles
+   Prefix: bkbg-txl-
+   ======================================== */
+
+.bkbg-txl-wrap {
+    --bkbg-txl-item-bg: #ffffff;
+    --bkbg-txl-item-bg-hover: #f1f5f9;
+    --bkbg-txl-item-color: #1e293b;
+    --bkbg-txl-item-color-hover: #2563eb;
+    --bkbg-txl-count-bg: #e2e8f0;
+    --bkbg-txl-count-color: #475569;
+    --bkbg-txl-icon-color: #6b7280;
+    --bkbg-txl-border-color: #e2e8f0;
+    --bkbg-txl-accent-color: #2563eb;
+    --bkbg-txl-radius: 8px;
+    --bkbg-txl-gap: 8px;
+    --bkbg-txl-padding: 14px;
+    --bkbg-txl-font-size: var(--bktxl-it-font-size-d, 15px);
+    --bkbg-txl-font-weight: var(--bktxl-it-font-weight, 400);
+    --bkbg-txl-cols: 2;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    box-sizing: border-box;
+}
+
+/* ── Base list reset ── */
+.bkbg-txl-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--bkbg-txl-gap);
+}
+
+/* ── LIST layout (default) ── */
+.bkbg-txl-wrap[data-layout="list"] .bkbg-txl-list {
+    flex-direction: column;
+}
+
+/* ── GRID layout ── */
+.bkbg-txl-wrap[data-layout="grid"] .bkbg-txl-list,
+.bkbg-txl-wrap[data-layout="cards"] .bkbg-txl-list {
+    display: grid;
+    grid-template-columns: repeat(var(--bkbg-txl-cols), 1fr);
+    flex-direction: unset;
+}
+
+/* ── CHIPS / PILLS layout ── */
+.bkbg-txl-wrap[data-layout="chips"] .bkbg-txl-list,
+.bkbg-txl-wrap[data-layout="pills"] .bkbg-txl-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* ── Link / item base ── */
+.bkbg-txl-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: var(--bkbg-txl-padding) calc(var(--bkbg-txl-padding) * 1.1);
+    background: var(--bkbg-txl-item-bg);
+    color: var(--bkbg-txl-item-color);
+    font-family: var(--bktxl-it-font-family, inherit);
+    font-size: var(--bkbg-txl-font-size);
+    font-weight: var(--bkbg-txl-font-weight);
+    font-style: var(--bktxl-it-font-style);
+    line-height: var(--bktxl-it-line-height-d, 1.4);
+    letter-spacing: var(--bktxl-it-letter-spacing-d);
+    word-spacing: var(--bktxl-it-word-spacing-d);
+    text-decoration: var(--bktxl-it-text-decoration, none);
+    text-transform: var(--bktxl-it-text-transform);
+    border: 1px solid var(--bkbg-txl-border-color);
+    border-radius: var(--bkbg-txl-radius);
+    transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Chips/pills: auto width */
+.bkbg-txl-wrap[data-layout="chips"] .bkbg-txl-link,
+.bkbg-txl-wrap[data-layout="pills"] .bkbg-txl-link {
+    width: auto;
+}
+
+/* Chips: less padding */
+.bkbg-txl-wrap[data-layout="chips"] .bkbg-txl-link {
+    padding: calc(var(--bkbg-txl-padding) * 0.6) calc(var(--bkbg-txl-padding) * 1.0);
+    font-size: calc(var(--bkbg-txl-font-size) * 0.9);
+}
+
+/* Pills: fully rounded, compact */
+.bkbg-txl-wrap[data-layout="pills"] .bkbg-txl-link {
+    border-radius: 50px;
+    padding: calc(var(--bkbg-txl-padding) * 0.55) calc(var(--bkbg-txl-padding) * 1.4);
+    font-size: calc(var(--bkbg-txl-font-size) * 0.9);
+}
+
+/* Cards: vertical stack with shadow */
+.bkbg-txl-wrap[data-layout="cards"] .bkbg-txl-link {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: calc(var(--bkbg-txl-padding) * 1.3);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+/* Hover state */
+.bkbg-txl-link:hover {
+    background: var(--bkbg-txl-item-bg-hover);
+    color: var(--bkbg-txl-item-color-hover);
+    border-color: var(--bkbg-txl-accent-color);
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Non-link (span) items */
+span.bkbg-txl-link {
+    cursor: default;
+}
+
+/* ── Icon ── */
+.bkbg-txl-icon {
+    font-size: calc(var(--bkbg-txl-font-size) * 1.15);
+    color: var(--bkbg-txl-icon-color);
+    flex-shrink: 0;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+}
+.bkbg-txl-icon svg { width: 1em; height: 1em; fill: currentColor; }
+.bkbg-txl-icon .dashicons { font-size: inherit; width: 1em; height: 1em; line-height: 1; }
+.bkbg-txl-icon .bkbg-icon-img { width: 1em; height: 1em; object-fit: contain; }
+
+/* ── Name ── */
+.bkbg-txl-name {
+    flex: 1;
+    line-height: inherit;
+}
+
+/* ── Count ── */
+.bkbg-txl-count {
+    font-size: calc(var(--bkbg-txl-font-size) * 0.84);
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.bkbg-txl-count--badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 7px;
+    background: var(--bkbg-txl-count-bg);
+    color: var(--bkbg-txl-count-color);
+    border-radius: 50px;
+    line-height: 1;
+}
+
+.bkbg-txl-count--inline {
+    color: var(--bkbg-txl-count-color);
+}
+
+.bkbg-txl-count--bracket {
+    color: var(--bkbg-txl-count-color);
+    opacity: 0.72;
+}
+
+/* ── Chevron ── */
+.bkbg-txl-chevron {
+    margin-left: auto;
+    font-size: calc(var(--bkbg-txl-font-size) * 1.25);
+    color: var(--bkbg-txl-accent-color);
+    line-height: 1;
+    transition: transform 0.18s ease;
+    flex-shrink: 0;
+    font-style: normal;
+}
+
+.bkbg-txl-link:hover .bkbg-txl-chevron {
+    transform: translateX(3px);
+}
+
+/* Cards layout: chevron at end of name row */
+.bkbg-txl-wrap[data-layout="cards"] .bkbg-txl-chevron {
+    display: none;
+}
+
+/* ── Editor styles ── */
+.bkbg-editor-wrap .bkbg-txl-link {
+    pointer-events: none;
+}
+
+/* ── Responsive typography ──────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-txl-wrap {
+        --bkbg-txl-font-size: var(--bktxl-it-font-size-t, var(--bktxl-it-font-size-d, 15px));
+            line-height: var(--bktxl-it-line-height-t, var(--bktxl-it-line-height-d, 1.4));
+            letter-spacing: var(--bktxl-it-letter-spacing-t, var(--bktxl-it-letter-spacing-d));
+            word-spacing: var(--bktxl-it-word-spacing-t, var(--bktxl-it-word-spacing-d));
+    }
+    .bkbg-txl-link {
+        line-height:    var(--bktxl-it-line-height-t, var(--bktxl-it-line-height-d, 1.4));
+        letter-spacing: var(--bktxl-it-letter-spacing-t, var(--bktxl-it-letter-spacing-d));
+        word-spacing:   var(--bktxl-it-word-spacing-t, var(--bktxl-it-word-spacing-d));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-txl-wrap {
+        --bkbg-txl-font-size: var(--bktxl-it-font-size-m, var(--bktxl-it-font-size-t, var(--bktxl-it-font-size-d, 15px)));
+            line-height: var(--bktxl-it-line-height-m, var(--bktxl-it-line-height-t, var(--bktxl-it-line-height-d, 1.4)));
+            letter-spacing: var(--bktxl-it-letter-spacing-m, var(--bktxl-it-letter-spacing-t, var(--bktxl-it-letter-spacing-d)));
+            word-spacing: var(--bktxl-it-word-spacing-m, var(--bktxl-it-word-spacing-t, var(--bktxl-it-word-spacing-d)));
+    }
+    .bkbg-txl-link {
+        line-height:    var(--bktxl-it-line-height-m, var(--bktxl-it-line-height-t, var(--bktxl-it-line-height-d, 1.4)));
+        letter-spacing: var(--bktxl-it-letter-spacing-m, var(--bktxl-it-letter-spacing-t, var(--bktxl-it-letter-spacing-d)));
+        word-spacing:   var(--bktxl-it-word-spacing-m, var(--bktxl-it-word-spacing-t, var(--bktxl-it-word-spacing-d)));
+    }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .bkbg-txl-wrap[data-layout="grid"] .bkbg-txl-list,
+    .bkbg-txl-wrap[data-layout="cards"] .bkbg-txl-list {
+        grid-template-columns: repeat(
+            min(var(--bkbg-txl-cols), 2),
+            1fr
+        );
+    }
+
+    .bkbg-txl-wrap[data-layout="chips"] .bkbg-txl-list,
+    .bkbg-txl-wrap[data-layout="pills"] .bkbg-txl-list {
+        gap: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bkbg-txl-wrap[data-layout="grid"] .bkbg-txl-list,
+    .bkbg-txl-wrap[data-layout="cards"] .bkbg-txl-list {
+        grid-template-columns: 1fr;
+    }
+}

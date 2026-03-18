@@ -1,0 +1,131 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/faq-search",
+    "title": "FAQ with Search",
+    "category": "bkbg-business",
+    "icon": "search",
+    "description": "Accordion FAQ with a live client-side search filter above the items.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-faq-search-editor",
+    "style": "bkbg-faq-search-style",
+    "viewScript": "bkbg-faq-search-frontend",
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "question": "What is your return policy?",
+                    "answer": "We offer a 30-day money-back guarantee on all purchases."
+                },
+                {
+                    "question": "How does shipping work?",
+                    "answer": "Orders ship within 1-2 business days and arrive in 3-7 days depending on location."
+                },
+                {
+                    "question": "Can I cancel my subscription?",
+                    "answer": "Yes, you can cancel anytime from your account dashboard with no cancellation fees."
+                },
+                {
+                    "question": "Do you offer customer support?",
+                    "answer": "Our support team is available 24/7 via chat and email."
+                }
+            ]
+        },
+        "searchPlaceholder": {
+            "type": "string",
+            "default": "Search FAQs…"
+        },
+        "showSearch": {
+            "type": "boolean",
+            "default": true
+        },
+        "noResultsText": {
+            "type": "string",
+            "default": "No FAQs match your search."
+        },
+        "openFirst": {
+            "type": "boolean",
+            "default": false
+        },
+        "allowMultiple": {
+            "type": "boolean",
+            "default": false
+        },
+        "itemStyle": {
+            "type": "string",
+            "default": "bordered"
+        },
+        "questionColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "answerColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "itemBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "searchBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "searchBorderColor": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "questionSize": {
+            "type": "number",
+            "default": 17
+        },
+        "answerSize": {
+            "type": "number",
+            "default": 15
+        },
+        "typoQuestion": {
+            "type": "object",
+            "default": {}
+        },
+        "typoAnswer": {
+            "type": "object",
+            "default": {}
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 800
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 48
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 48
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

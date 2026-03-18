@@ -1,0 +1,148 @@
+.bkbg-upn-app { display: none; }
+
+.bkbg-upn-wrap {
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+/* banner style */
+.bkbg-upn-wrap.bkbg-upn-banner {
+    padding: 12px 16px;
+}
+
+/* box style */
+.bkbg-upn-wrap.bkbg-upn-box {
+    padding: 14px 18px;
+}
+
+/* pill style */
+.bkbg-upn-wrap.bkbg-upn-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+}
+
+.bkbg-upn-top-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.bkbg-upn-type-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.bkbg-upn-icon {
+    font-size: 15px;
+    line-height: 1;
+}
+
+.bkbg-upn-label {
+    font-family: var(--bkupn-lb-ff, inherit);
+    font-size: var(--bkupn-lb-fsd, 12px);
+    line-height: var(--bkupn-lb-lhd, 1.4);
+    letter-spacing: var(--bkupn-lb-lsd, 0.04em);
+    word-spacing: var(--bkupn-lb-wsd, normal);
+    font-weight: var(--bkupn-lb-fw, 700);
+    font-style: var(--bkupn-lb-fst, normal);
+    text-decoration: var(--bkupn-lb-td, none);
+    text-transform: var(--bkupn-lb-tt, uppercase);
+}
+
+.bkbg-upn-date {
+    font-family: var(--bkupn-lb-ff, inherit);
+    font-size: var(--bkupn-lb-fsd, 13px);
+    line-height: var(--bkupn-lb-lhd, 1.4);
+    letter-spacing: var(--bkupn-lb-lsd, normal);
+    word-spacing: var(--bkupn-lb-wsd, normal);
+    font-weight: var(--bkupn-lb-fw, 600);
+    font-style: var(--bkupn-lb-fst, normal);
+    text-decoration: var(--bkupn-lb-td, none);
+    text-transform: var(--bkupn-lb-tt, none);
+}
+
+.bkbg-upn-orig-date {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.bkbg-upn-summary {
+    margin: 8px 0 0;
+    font-family: var(--bkupn-sm-ff, inherit);
+    font-size: var(--bkupn-sm-fsd, 13px);
+    line-height: var(--bkupn-sm-lhd, 1.6);
+    letter-spacing: var(--bkupn-sm-lsd, normal);
+    word-spacing: var(--bkupn-sm-wsd, normal);
+    font-weight: var(--bkupn-sm-fw, normal);
+    font-style: var(--bkupn-sm-fst, normal);
+    text-decoration: var(--bkupn-sm-td, none);
+    text-transform: var(--bkupn-sm-tt, none);
+}
+
+.bkbg-upn-summary p {
+    margin: 0;
+}
+
+.bkbg-upn-history {
+    margin-top: 12px;
+    padding-top: 10px;
+}
+
+.bkbg-upn-history-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+.bkbg-upn-history-list {
+    margin: 0;
+    padding-left: 16px;
+}
+
+.bkbg-upn-history-item {
+    font-size: 12px;
+    margin-bottom: 4px;
+    line-height: 1.5;
+}
+
+.bkbg-upn-history-item strong {
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .bkbg-upn-label,
+    .bkbg-upn-date {
+        font-size: var(--bkupn-lb-fst1, var(--bkupn-lb-fsd, 13px));
+        line-height: var(--bkupn-lb-lht, var(--bkupn-lb-lhd, 1.4));
+        letter-spacing: var(--bkupn-lb-lst, var(--bkupn-lb-lsd, normal));
+        word-spacing: var(--bkupn-lb-wst, var(--bkupn-lb-wsd, normal));
+    }
+    .bkbg-upn-summary {
+        font-size: var(--bkupn-sm-fst1, var(--bkupn-sm-fsd, 13px));
+        line-height: var(--bkupn-sm-lht, var(--bkupn-sm-lhd, 1.6));
+        letter-spacing: var(--bkupn-sm-lst, var(--bkupn-sm-lsd, normal));
+        word-spacing: var(--bkupn-sm-wst, var(--bkupn-sm-wsd, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-upn-label,
+    .bkbg-upn-date {
+        font-size: var(--bkupn-lb-fsm, var(--bkupn-lb-fst1, var(--bkupn-lb-fsd, 13px)));
+        line-height: var(--bkupn-lb-lhm, var(--bkupn-lb-lht, var(--bkupn-lb-lhd, 1.4)));
+        letter-spacing: var(--bkupn-lb-lsm, var(--bkupn-lb-lst, var(--bkupn-lb-lsd, normal)));
+        word-spacing: var(--bkupn-lb-wsm, var(--bkupn-lb-wst, var(--bkupn-lb-wsd, normal)));
+    }
+    .bkbg-upn-summary {
+        font-size: var(--bkupn-sm-fsm, var(--bkupn-sm-fst1, var(--bkupn-sm-fsd, 13px)));
+        line-height: var(--bkupn-sm-lhm, var(--bkupn-sm-lht, var(--bkupn-sm-lhd, 1.6)));
+        letter-spacing: var(--bkupn-sm-lsm, var(--bkupn-sm-lst, var(--bkupn-sm-lsd, normal)));
+        word-spacing: var(--bkupn-sm-wsm, var(--bkupn-sm-wst, var(--bkupn-sm-wsd, normal)));
+    }
+}

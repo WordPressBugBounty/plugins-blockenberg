@@ -1,0 +1,257 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/daily-schedule",
+    "version": "1.0.0",
+    "title": "Daily Schedule",
+    "category": "bkbg-blog",
+    "icon": "calendar-alt",
+    "description": "A time-blocked daily schedule — share your ideal day, work routine, or time-management system with a visual timeline.",
+    "keywords": [
+        "schedule",
+        "calendar",
+        "time block",
+        "day",
+        "routine",
+        "planner",
+        "agenda",
+        "timeline"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-daily-schedule-editor",
+    "editorStyle": "bkbg-daily-schedule-style",
+    "style": "bkbg-daily-schedule-style",
+    "viewScript": "bkbg-daily-schedule-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "dayTitle": {
+            "type": "string",
+            "default": "A Typical Work Day"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "hourStart": {
+            "type": "number",
+            "default": 6
+        },
+        "hourEnd": {
+            "type": "number",
+            "default": 22
+        },
+        "use12Hour": {
+            "type": "boolean",
+            "default": true
+        },
+        "hourHeight": {
+            "type": "number",
+            "default": 60
+        },
+        "showGridLines": {
+            "type": "boolean",
+            "default": true
+        },
+        "showEventTime": {
+            "type": "boolean",
+            "default": true
+        },
+        "showEventNote": {
+            "type": "boolean",
+            "default": true
+        },
+        "events": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Morning Run & Stretch",
+                    "startHour": 6,
+                    "startMin": 0,
+                    "duration": 45,
+                    "category": "health",
+                    "note": "Light jog + 10 min yoga"
+                },
+                {
+                    "title": "Breakfast & Email Triage",
+                    "startHour": 7,
+                    "startMin": 0,
+                    "duration": 60,
+                    "category": "meal",
+                    "note": "Inbox zero strategy"
+                },
+                {
+                    "title": "Deep Work Block #1",
+                    "startHour": 8,
+                    "startMin": 0,
+                    "duration": 120,
+                    "category": "work",
+                    "note": "Most important project — no distractions"
+                },
+                {
+                    "title": "Team Standup",
+                    "startHour": 10,
+                    "startMin": 0,
+                    "duration": 30,
+                    "category": "work",
+                    "note": "Daily sync with the team"
+                },
+                {
+                    "title": "Deep Work Block #2",
+                    "startHour": 10,
+                    "startMin": 30,
+                    "duration": 90,
+                    "category": "work",
+                    "note": "Feature development / writing"
+                },
+                {
+                    "title": "Lunch Break",
+                    "startHour": 12,
+                    "startMin": 0,
+                    "duration": 60,
+                    "category": "meal",
+                    "note": "Screen-free lunch"
+                },
+                {
+                    "title": "Meetings & Reviews",
+                    "startHour": 13,
+                    "startMin": 0,
+                    "duration": 90,
+                    "category": "work",
+                    "note": "1:1s, PRs, code review"
+                },
+                {
+                    "title": "Creative / Learning Time",
+                    "startHour": 14,
+                    "startMin": 30,
+                    "duration": 90,
+                    "category": "personal",
+                    "note": "Side project, reading, courses"
+                },
+                {
+                    "title": "Short Break & Walk",
+                    "startHour": 16,
+                    "startMin": 0,
+                    "duration": 30,
+                    "category": "break",
+                    "note": "Reset + step outside"
+                },
+                {
+                    "title": "Admin & Planning",
+                    "startHour": 16,
+                    "startMin": 30,
+                    "duration": 60,
+                    "category": "work",
+                    "note": "Wrap up tasks, plan tomorrow"
+                },
+                {
+                    "title": "Dinner & Family Time",
+                    "startHour": 18,
+                    "startMin": 0,
+                    "duration": 120,
+                    "category": "meal",
+                    "note": "Disconnect from work"
+                },
+                {
+                    "title": "Reading & Wind Down",
+                    "startHour": 20,
+                    "startMin": 30,
+                    "duration": 90,
+                    "category": "personal",
+                    "note": "Fiction, podcasts, journaling"
+                }
+            ]
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "timeFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "timeColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "gridLineColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "workBg": {
+            "type": "string",
+            "default": "#1e3a5f"
+        },
+        "workColor": {
+            "type": "string",
+            "default": "#93c5fd"
+        },
+        "breakBg": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "breakColor": {
+            "type": "string",
+            "default": "#86efac"
+        },
+        "personalBg": {
+            "type": "string",
+            "default": "#3b0764"
+        },
+        "personalColor": {
+            "type": "string",
+            "default": "#c4b5fd"
+        },
+        "healthBg": {
+            "type": "string",
+            "default": "#431407"
+        },
+        "healthColor": {
+            "type": "string",
+            "default": "#fdba74"
+        },
+        "mealBg": {
+            "type": "string",
+            "default": "#451a03"
+        },
+        "mealColor": {
+            "type": "string",
+            "default": "#fde68a"
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

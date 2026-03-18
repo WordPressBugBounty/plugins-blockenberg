@@ -1,0 +1,242 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/video-grid",
+    "title": "Video Grid",
+    "category": "bkbg-media",
+    "icon": "video-alt3",
+    "description": "Responsive grid of video cards with play-in-lightbox functionality. Supports YouTube, Vimeo, and self-hosted videos. Custom thumbnails, titles, and duration badges.",
+    "keywords": [
+        "video",
+        "grid",
+        "gallery",
+        "youtube",
+        "vimeo",
+        "lightbox",
+        "media"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-video-grid-editor",
+    "style": "bkbg-video-grid-style",
+    "viewScript": "bkbg-video-grid-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": ""
+        },
+        "subtitle": {
+            "type": "string",
+            "default": ""
+        },
+        "videos": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "v1",
+                    "title": "Product Overview",
+                    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                    "thumbUrl": "",
+                    "thumbId": 0,
+                    "duration": "3:24",
+                    "category": "Product",
+                    "description": "A full walkthrough of all key features."
+                },
+                {
+                    "id": "v2",
+                    "title": "Getting Started Guide",
+                    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                    "thumbUrl": "",
+                    "thumbId": 0,
+                    "duration": "5:10",
+                    "category": "Tutorial",
+                    "description": "Set up your account in minutes."
+                },
+                {
+                    "id": "v3",
+                    "title": "Advanced Workflows",
+                    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                    "thumbUrl": "",
+                    "thumbId": 0,
+                    "duration": "8:45",
+                    "category": "Tutorial",
+                    "description": "Power-user tips and automation techniques."
+                },
+                {
+                    "id": "v4",
+                    "title": "Customer Success Story",
+                    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                    "thumbUrl": "",
+                    "thumbId": 0,
+                    "duration": "2:58",
+                    "category": "Story",
+                    "description": "How Acme Corp 10x'd their productivity."
+                },
+                {
+                    "id": "v5",
+                    "title": "Integration Setup",
+                    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                    "thumbUrl": "",
+                    "thumbId": 0,
+                    "duration": "4:33",
+                    "category": "Tutorial",
+                    "description": "Connect your favourite tools in one click."
+                },
+                {
+                    "id": "v6",
+                    "title": "2025 Roadmap Webinar",
+                    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                    "thumbUrl": "",
+                    "thumbId": 0,
+                    "duration": "42:00",
+                    "category": "Webinar",
+                    "description": "Everything coming this year — straight from our CEO."
+                }
+            ]
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "gap": {
+            "type": "number",
+            "default": 24
+        },
+        "showFilter": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDuration": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCategory": {
+            "type": "boolean",
+            "default": true
+        },
+        "aspectRatio": {
+            "type": "string",
+            "default": "16/9"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "thumbRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "playBtnSize": {
+            "type": "number",
+            "default": 56
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "playBtnBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "playBtnColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "durationBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.65)"
+        },
+        "durationColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "filterActiveBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "filterActiveColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "filterInactiveBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "filterInactiveColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "sectionTitleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "categoryColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 32
+        },
+        "cardTitleSize": {
+            "type": "number",
+            "default": 16
+        },
+        "descSize": {
+            "type": "number",
+            "default": 14
+        },
+        "sectionTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "cardTitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        }
+    }
+}

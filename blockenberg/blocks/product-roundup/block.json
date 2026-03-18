@@ -1,0 +1,203 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/product-roundup",
+    "title": "Product Roundup",
+    "description": "Ranked multi-product review section with ratings, pros/cons and CTAs.",
+    "category": "bkbg-blog",
+    "icon": "products",
+    "keywords": [
+        "product",
+        "review",
+        "roundup",
+        "best",
+        "compare",
+        "rating"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-product-roundup-editor",
+    "style": "bkbg-product-roundup-style",
+    "viewScript": "bkbg-product-roundup-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "sectionTitle": {
+            "type": "string",
+            "default": "Our Top Picks"
+        },
+        "sectionSubtitle": {
+            "type": "string",
+            "default": ""
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "products": {
+            "type": "array",
+            "default": [
+                {
+                    "rank": 1,
+                    "name": "Product Name",
+                    "image": "",
+                    "imageId": 0,
+                    "badge": "Editor's Pick",
+                    "showBadge": true,
+                    "rating": 4.5,
+                    "summary": "A short description of this product and why it stands out.",
+                    "pros": [
+                        "Great quality",
+                        "Easy to use"
+                    ],
+                    "cons": [
+                        "Pricey"
+                    ],
+                    "price": "$99",
+                    "ctaLabel": "Check Price",
+                    "ctaUrl": ""
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "list"
+        },
+        "showRank": {
+            "type": "boolean",
+            "default": true
+        },
+        "showRating": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPros": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCons": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPrice": {
+            "type": "boolean",
+            "default": true
+        },
+        "showImage": {
+            "type": "boolean",
+            "default": true
+        },
+        "openInNewTab": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "rankBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "rankColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "ratingColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "summaryColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "prosColor": {
+            "type": "string",
+            "default": "#16a34a"
+        },
+        "consColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "priceColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "summaryTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

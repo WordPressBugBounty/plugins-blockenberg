@@ -1,0 +1,162 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/post-grid",
+    "title": "Post Grid",
+    "description": "Display posts or custom post types in a responsive card grid. Powered by the built-in REST API endpoint.",
+    "category": "bkbg-blog",
+    "icon": "grid-view",
+    "keywords": [
+        "posts",
+        "grid",
+        "blog",
+        "cards",
+        "query",
+        "cpt"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-post-grid-editor",
+    "editorStyle": "bkbg-post-grid-style",
+    "style": "bkbg-post-grid-style",
+    "viewScript": "bkbg-post-grid-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "postType": {
+            "type": "string",
+            "default": "post"
+        },
+        "orderby": {
+            "type": "string",
+            "default": "date"
+        },
+        "order": {
+            "type": "string",
+            "default": "desc"
+        },
+        "perPage": {
+            "type": "number",
+            "default": 6
+        },
+        "offset": {
+            "type": "number",
+            "default": 0
+        },
+        "excerptLen": {
+            "type": "number",
+            "default": 20
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "columnsTablet": {
+            "type": "number",
+            "default": 2
+        },
+        "columnsMobile": {
+            "type": "number",
+            "default": 1
+        },
+        "gapX": {
+            "type": "number",
+            "default": 24
+        },
+        "gapY": {
+            "type": "number",
+            "default": 24
+        },
+        "showImage": {
+            "type": "boolean",
+            "default": true
+        },
+        "imageRatio": {
+            "type": "string",
+            "default": "56.25"
+        },
+        "imageHoverEffect": {
+            "type": "string",
+            "default": "zoom"
+        },
+        "showMeta": {
+            "type": "boolean",
+            "default": true
+        },
+        "showExcerpt": {
+            "type": "boolean",
+            "default": true
+        },
+        "showReadMore": {
+            "type": "boolean",
+            "default": true
+        },
+        "readMoreLabel": {
+            "type": "string",
+            "default": "Read More"
+        },
+        "readMoreStyle": {
+            "type": "string",
+            "default": "link"
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "shadow"
+        },
+
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "titleHoverColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "excerptColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "noPostsMessage": {
+            "type": "string",
+            "default": "No posts found."
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "excerptTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "metaTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,176 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/gallery-showcase",
+    "version": "1.0.0",
+    "title": "Gallery Showcase",
+    "category": "bkbg-media",
+    "icon": "format-gallery",
+    "description": "Featured image with a clickable thumbnail strip — click any thumbnail to swap the main large view. Perfect for portfolio details, product image galleries, and case study illustrations.",
+    "keywords": [
+        "gallery",
+        "showcase",
+        "thumbnails",
+        "product",
+        "portfolio",
+        "viewer"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-gallery-showcase-editor",
+    "style": "bkbg-gallery-showcase-style",
+    "viewScript": "bkbg-gallery-showcase-frontend",
+    "attributes": {
+        "images": {
+            "type": "array",
+            "default": [],
+            "items": {
+                "type": "object"
+            }
+        },
+        "thumbnailPosition": {
+            "type": "string",
+            "default": "bottom"
+        },
+        "thumbnailsVisible": {
+            "type": "number",
+            "default": 5
+        },
+        "thumbnailGap": {
+            "type": "number",
+            "default": 8
+        },
+        "thumbnailRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "mainRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "mainAspect": {
+            "type": "string",
+            "default": "4/3"
+        },
+        "mainObjectFit": {
+            "type": "string",
+            "default": "cover"
+        },
+        "showCaption": {
+            "type": "boolean",
+            "default": true
+        },
+        "captionPosition": {
+            "type": "string",
+            "default": "overlay"
+        },
+        "showCounter": {
+            "type": "boolean",
+            "default": true
+        },
+        "enableLightbox": {
+            "type": "boolean",
+            "default": true
+        },
+        "lightboxOverlayBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.92)"
+        },
+        "enableKeyboard": {
+            "type": "boolean",
+            "default": true
+        },
+        "showArrows": {
+            "type": "boolean",
+            "default": true
+        },
+        "arrowStyle": {
+            "type": "string",
+            "default": "circle"
+        },
+        "showZoom": {
+            "type": "boolean",
+            "default": false
+        },
+        "transitionType": {
+            "type": "string",
+            "default": "fade"
+        },
+        "transitionDuration": {
+            "type": "number",
+            "default": 320
+        },
+        "mainShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "captionBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.55)"
+        },
+        "captionColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "captionSize": {
+            "type": "number",
+            "default": 14
+        },
+        "typoCaption": {
+            "type": "object",
+            "default": {}
+        },
+        "typoCounter": {
+            "type": "object",
+            "default": {}
+        },
+        "activeBorderColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "activeBorderWidth": {
+            "type": "number",
+            "default": 3
+        },
+        "arrowBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.5)"
+        },
+        "arrowColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "counterBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.45)"
+        },
+        "counterColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 40
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ],
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    }
+}

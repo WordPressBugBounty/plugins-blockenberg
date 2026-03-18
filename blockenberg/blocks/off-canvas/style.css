@@ -1,0 +1,122 @@
+/* Off-Canvas Drawer — bkoc- */
+.bkoc-wrap {
+  font-family: inherit;
+}
+.bkoc-trigger {
+  cursor: pointer;
+  font-size: var(--bkoc-trg-font-size-d, 15px);
+  font-weight: var(--bkoc-trg-font-weight, 700);
+  line-height: var(--bkoc-trg-line-height-d, var(--bkoc-trg-line-height, 1));
+  font-style: var(--bkoc-trg-font-style);
+  text-decoration: var(--bkoc-trg-text-decoration);
+  text-transform: var(--bkoc-trg-text-transform);
+  letter-spacing: var(--bkoc-trg-letter-spacing-d, var(--bkoc-trg-letter-spacing));
+  font-family: var(--bkoc-trg-font-family, inherit);
+  transition: opacity 0.2s, transform 0.15s;
+}
+.bkoc-trigger:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+.bkoc-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.bkoc-drawer {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  max-width: 90vw;
+  overflow-y: auto;
+  z-index: 9999;
+  box-sizing: border-box;
+}
+/* Open states */
+.bkoc-wrap.bkoc-open .bkoc-overlay {
+  opacity: 1 !important;
+  pointer-events: auto;
+}
+.bkoc-wrap.bkoc-open .bkoc-drawer {
+  transform: translateX(0) !important;
+}
+.bkoc-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+.bkoc-close:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* ── Drawer title ─────────────────────────────────────────── */
+.bkoc-wrap h3.bkoc-drawer-title,
+.bkoc-wrap .bkoc-drawer-title {
+  font-size: var(--bkoc-tt-font-size-d, 18px);
+  font-weight: var(--bkoc-tt-font-weight, 700);
+  line-height: var(--bkoc-tt-line-height-d, var(--bkoc-tt-line-height, 1.2));
+  font-style: var(--bkoc-tt-font-style);
+  text-decoration: var(--bkoc-tt-text-decoration);
+  text-transform: var(--bkoc-tt-text-transform);
+  letter-spacing: var(--bkoc-tt-letter-spacing-d, var(--bkoc-tt-letter-spacing));
+  font-family: var(--bkoc-tt-font-family);
+}
+
+/* ── Drawer content ───────────────────────────────────────── */
+.bkoc-content {
+  font-size: var(--bkoc-ct-font-size-d, 15px);
+  font-weight: var(--bkoc-ct-font-weight, 400);
+  line-height: var(--bkoc-ct-line-height-d, var(--bkoc-ct-line-height, 1.7));
+  font-style: var(--bkoc-ct-font-style);
+  text-decoration: var(--bkoc-ct-text-decoration);
+  text-transform: var(--bkoc-ct-text-transform);
+  letter-spacing: var(--bkoc-ct-letter-spacing-d, var(--bkoc-ct-letter-spacing));
+  font-family: var(--bkoc-ct-font-family);
+}
+
+/* ── Responsive typography ────────────────────────────────── */
+@media (max-width: 1024px) {
+  .bkoc-trigger {
+    font-size: var(--bkoc-trg-font-size-t, var(--bkoc-trg-font-size-d, 15px));
+    line-height: var(--bkoc-trg-line-height-t, var(--bkoc-trg-line-height-d, var(--bkoc-trg-line-height, 1)));
+        letter-spacing: var(--bkoc-trg-letter-spacing-t, var(--bkoc-trg-letter-spacing-d, var(--bkoc-trg-letter-spacing)));
+  }
+  .bkoc-wrap h3.bkoc-drawer-title,
+  .bkoc-wrap .bkoc-drawer-title {
+    font-size: var(--bkoc-tt-font-size-t, var(--bkoc-tt-font-size-d, 18px));
+    line-height: var(--bkoc-tt-line-height-t, var(--bkoc-tt-line-height-d, var(--bkoc-tt-line-height, 1.2)));
+        letter-spacing: var(--bkoc-tt-letter-spacing-t, var(--bkoc-tt-letter-spacing-d, var(--bkoc-tt-letter-spacing)));
+  }
+  .bkoc-content {
+    font-size: var(--bkoc-ct-font-size-t, var(--bkoc-ct-font-size-d, 15px));
+    line-height: var(--bkoc-ct-line-height-t, var(--bkoc-ct-line-height-d, var(--bkoc-ct-line-height, 1.7)));
+        letter-spacing: var(--bkoc-ct-letter-spacing-t, var(--bkoc-ct-letter-spacing-d, var(--bkoc-ct-letter-spacing)));
+  }
+}
+@media (max-width: 767px) {
+  .bkoc-trigger {
+    font-size: var(--bkoc-trg-font-size-m, 14px);
+    line-height: var(--bkoc-trg-line-height-m, var(--bkoc-trg-line-height-t, var(--bkoc-trg-line-height-d, var(--bkoc-trg-line-height, 1))));
+        letter-spacing: var(--bkoc-trg-letter-spacing-m, var(--bkoc-trg-letter-spacing-t, var(--bkoc-trg-letter-spacing-d, var(--bkoc-trg-letter-spacing))));
+  }
+  .bkoc-wrap h3.bkoc-drawer-title,
+  .bkoc-wrap .bkoc-drawer-title {
+    font-size: var(--bkoc-tt-font-size-m, 16px);
+    line-height: var(--bkoc-tt-line-height-m, var(--bkoc-tt-line-height-t, var(--bkoc-tt-line-height-d, var(--bkoc-tt-line-height, 1.2))));
+        letter-spacing: var(--bkoc-tt-letter-spacing-m, var(--bkoc-tt-letter-spacing-t, var(--bkoc-tt-letter-spacing-d, var(--bkoc-tt-letter-spacing))));
+  }
+  .bkoc-content {
+    font-size: var(--bkoc-ct-font-size-m, 14px);
+    line-height: var(--bkoc-ct-line-height-m, var(--bkoc-ct-line-height-t, var(--bkoc-ct-line-height-d, var(--bkoc-ct-line-height, 1.7))));
+        letter-spacing: var(--bkoc-ct-letter-spacing-m, var(--bkoc-ct-letter-spacing-t, var(--bkoc-ct-letter-spacing-d, var(--bkoc-ct-letter-spacing))));
+  }
+}

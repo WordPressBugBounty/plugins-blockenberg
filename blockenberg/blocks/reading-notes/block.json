@@ -1,0 +1,219 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/reading-notes",
+    "title": "Reading Notes",
+    "category": "bkbg-blog",
+    "icon": "book",
+    "description": "Annotated reading notes for books and articles with quotes, insights, questions, and a star rating.",
+    "keywords": [
+        "reading",
+        "notes",
+        "book",
+        "annotation",
+        "quote",
+        "insight",
+        "review",
+        "highlight",
+        "summary"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-reading-notes-editor",
+    "editorStyle": "bkbg-reading-notes-style",
+    "style": "bkbg-reading-notes-style",
+    "viewScript": "bkbg-reading-notes-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "bookTitle": {
+            "type": "string",
+            "default": "Atomic Habits"
+        },
+        "author": {
+            "type": "string",
+            "default": "James Clear"
+        },
+        "genre": {
+            "type": "string",
+            "default": "Self-Development"
+        },
+        "coverEmoji": {
+            "type": "string",
+            "default": "📖"
+        },
+        "coverEmojiType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "coverEmojiDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "coverEmojiImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "rating": {
+            "type": "number",
+            "default": 5
+        },
+        "dateRead": {
+            "type": "string",
+            "default": ""
+        },
+        "showHeader": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAuthor": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGenre": {
+            "type": "boolean",
+            "default": true
+        },
+        "showRating": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDateRead": {
+            "type": "boolean",
+            "default": true
+        },
+        "notes": {
+            "type": "array",
+            "default": [
+                {
+                    "type": "quote",
+                    "text": "You do not rise to the level of your goals. You fall to the level of your systems.",
+                    "source": "Chapter 1, p. 27"
+                },
+                {
+                    "type": "insight",
+                    "text": "Small improvements of 1% each day compound to 37x improvement over a year. Tiny habits matter enormously over time."
+                },
+                {
+                    "type": "question",
+                    "text": "How can I design my environment to make good habits obvious and bad habits invisible?"
+                },
+                {
+                    "type": "quote",
+                    "text": "Every action you take is a vote for the type of person you wish to become.",
+                    "source": "Chapter 2"
+                },
+                {
+                    "type": "insight",
+                    "text": "The four laws of behaviour change: Make it Obvious, Make it Attractive, Make it Easy, Make it Satisfying."
+                },
+                {
+                    "type": "summary",
+                    "text": "An essential read for anyone wanting to build lasting habits. Clear writing, actionable framework, evidence-based advice. Highly recommended for entrepreneurs, students, and anyone seeking personal growth."
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "list"
+        },
+        "style": {
+            "type": "string",
+            "default": "card"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "gap": {
+            "type": "number",
+            "default": 12
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "noteTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "quoteBg": {
+            "type": "string",
+            "default": "#fdf2f8"
+        },
+        "quoteColor": {
+            "type": "string",
+            "default": "#86198f"
+        },
+        "quoteAccent": {
+            "type": "string",
+            "default": "#d946ef"
+        },
+        "insightBg": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "insightColor": {
+            "type": "string",
+            "default": "#1d4ed8"
+        },
+        "insightAccent": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "questionBg": {
+            "type": "string",
+            "default": "#fffbeb"
+        },
+        "questionColor": {
+            "type": "string",
+            "default": "#92400e"
+        },
+        "questionAccent": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "summaryBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "summaryColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "summaryAccent": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "starColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        }
+    }
+}

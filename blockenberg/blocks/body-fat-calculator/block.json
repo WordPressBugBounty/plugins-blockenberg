@@ -1,0 +1,158 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/body-fat-calculator",
+    "title": "Body Fat Calculator",
+    "category": "bkbg-calculators",
+    "icon": "heart",
+    "description": "Calculate body fat percentage using the US Navy method based on height, neck, waist, and hip measurements. Shows body fat category and health range.",
+    "keywords": [
+        "body fat",
+        "BMI",
+        "health",
+        "fitness",
+        "navy",
+        "measurement",
+        "calculator",
+        "weight"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-body-fat-calculator-editor",
+    "style": "bkbg-body-fat-calculator-style",
+    "viewScript": "bkbg-body-fat-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Body Fat Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Estimate your body fat percentage using the US Navy method."
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultUnit": {
+            "type": "string",
+            "default": "metric"
+        },
+        "defaultGender": {
+            "type": "string",
+            "default": "male"
+        },
+        "showChart": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCategories": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "resultBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "resultColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "gaugeEssential": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "gaugeAthletes": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "gaugeFitness": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "gaugeAverage": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "gaugeObese": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "resultSize": {
+            "type": "number",
+            "default": 64
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 560
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoResult": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

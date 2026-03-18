@@ -1,0 +1,253 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/loan-calculator",
+    "title": "Loan Calculator",
+    "category": "bkbg-calculators",
+    "icon": "chart-line",
+    "description": "Interactive mortgage and loan calculator with sliders for loan amount, interest rate, and term. Displays monthly payment, total interest, and total cost. Optional amortization schedule and doughnut chart.",
+    "keywords": [
+        "loan",
+        "mortgage",
+        "calculator",
+        "finance",
+        "interest",
+        "payment",
+        "amortization"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-loan-calculator-editor",
+    "style": "bkbg-loan-calculator-style",
+    "viewScript": "bkbg-loan-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Loan Calculator"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Estimate your monthly payments in seconds."
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "loanAmountDefault": {
+            "type": "number",
+            "default": 300000
+        },
+        "loanAmountMin": {
+            "type": "number",
+            "default": 10000
+        },
+        "loanAmountMax": {
+            "type": "number",
+            "default": 2000000
+        },
+        "loanAmountStep": {
+            "type": "number",
+            "default": 5000
+        },
+        "interestDefault": {
+            "type": "number",
+            "default": 5.5
+        },
+        "interestMin": {
+            "type": "number",
+            "default": 0.5
+        },
+        "interestMax": {
+            "type": "number",
+            "default": 20
+        },
+        "interestStep": {
+            "type": "number",
+            "default": 0.1
+        },
+        "termDefault": {
+            "type": "number",
+            "default": 25
+        },
+        "termMin": {
+            "type": "number",
+            "default": 1
+        },
+        "termMax": {
+            "type": "number",
+            "default": 30
+        },
+        "termStep": {
+            "type": "number",
+            "default": 1
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "currencyPos": {
+            "type": "string",
+            "default": "before"
+        },
+        "showChart": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAmortization": {
+            "type": "boolean",
+            "default": false
+        },
+        "amortizationRows": {
+            "type": "number",
+            "default": 12
+        },
+        "loanLabel": {
+            "type": "string",
+            "default": "Loan Amount"
+        },
+        "interestLabel": {
+            "type": "string",
+            "default": "Annual Interest Rate"
+        },
+        "termLabel": {
+            "type": "string",
+            "default": "Loan Term (years)"
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Apply Now"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaNewTab": {
+            "type": "boolean",
+            "default": false
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "disclaimer": {
+            "type": "string",
+            "default": "This calculator is for illustrative purposes only. Actual rates may vary."
+        },
+        "showDisclaimer": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "sliderFill": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "sliderTrack": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "principalColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "interestColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "resultBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "valueColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "monthlyColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "monthlySize": {
+            "type": "number",
+            "default": 48
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "btnRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 760
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        }
+    }
+}

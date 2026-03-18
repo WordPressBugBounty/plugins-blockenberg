@@ -1,0 +1,114 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/number-box",
+    "title": "Number Box",
+    "category": "bkbg-content",
+    "icon": "tag",
+    "description": "Square or circle box with a large metric number, prefix, suffix and label.",
+    "keywords": [
+        "number",
+        "metric",
+        "stat",
+        "kpi",
+        "counter",
+        "box"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-number-box-editor",
+    "editorStyle": "bkbg-number-box-style",
+    "style": "bkbg-number-box-style",
+    "viewScript": "bkbg-number-box-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": []
+    },
+    "attributes": {
+        "number": {
+            "type": "string",
+            "default": "42"
+        },
+        "prefix": {
+            "type": "string",
+            "default": ""
+        },
+        "suffix": {
+            "type": "string",
+            "default": "%"
+        },
+        "label": {
+            "type": "string",
+            "default": "Satisfaction Rate"
+        },
+        "shape": {
+            "type": "string",
+            "default": "square"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": ""
+        },
+        "numberSz": {
+            "type": "number",
+            "default": 56
+        },
+        "labelSz": {
+            "type": "number",
+            "default": 14
+        },
+        "numberFontWeight": {
+            "type": "integer",
+            "default": 700
+        },
+        "labelFontWeight": {
+            "type": "integer",
+            "default": 500
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "numberTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "boxSize": {
+            "type": "number",
+            "default": 160
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "shadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "border": {
+            "type": "boolean",
+            "default": false
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e0d7f8"
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 2
+        }
+    }
+}

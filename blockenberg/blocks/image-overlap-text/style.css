@@ -1,0 +1,253 @@
+.bkbg-iot-wrap {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.bkbg-iot-wrap *,
+.bkbg-iot-wrap *::before,
+.bkbg-iot-wrap *::after {
+    box-sizing: inherit;
+}
+
+/* ── Layout ── */
+.bkbg-iot-inner {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    overflow: visible;
+    margin: 0 auto;
+}
+
+.bkbg-iot-inner--right {
+    flex-direction: row-reverse;
+}
+
+/* ── Image column ── */
+.bkbg-iot-image-col {
+    position: relative;
+    flex: 0 0 55%;
+    overflow: visible;
+}
+
+.bkbg-iot-img {
+    display: block;
+    width: 100%;
+    min-height: 360px;
+    object-fit: cover;
+}
+
+/* ── Text column ── */
+.bkbg-iot-text-col {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ── Decoratives ── */
+.bkbg-iot-decor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Dot grid — shows in bottom-right corner of image, bleeding into text */
+.bkbg-iot-decor--dots {
+    bottom: -24px;
+    right: -24px;
+    width: 120px;
+    height: 120px;
+    background-image: radial-gradient(circle, var(--dot-color, #e5e7eb) 2px, transparent 2px);
+    background-size: 14px 14px;
+}
+
+.bkbg-iot-inner--right .bkbg-iot-decor--dots {
+    left: -24px;
+    right: auto;
+}
+
+/* Diagonal lines */
+.bkbg-iot-decor--lines {
+    bottom: 24px;
+    right: -32px;
+    width: 80px;
+    height: 200px;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        var(--accent, #7c3aed),
+        var(--accent, #7c3aed) 1px,
+        transparent 1px,
+        transparent 8px
+    );
+    opacity: 0.35;
+}
+
+.bkbg-iot-inner--right .bkbg-iot-decor--lines {
+    left: -32px;
+    right: auto;
+}
+
+/* Solid shape */
+.bkbg-iot-decor--shape {
+    bottom: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    opacity: 0.12;
+}
+
+.bkbg-iot-inner--right .bkbg-iot-decor--shape {
+    left: -20px;
+    right: auto;
+}
+
+/* ── Typography ── */
+.bkbg-iot-eyebrow {
+    font-family:      var(--bkbg-iot-ey-font-family, inherit);
+    font-size:        var(--bkbg-iot-ey-font-size-d, 12px);
+    font-weight:      var(--bkbg-iot-ey-font-weight, 700);
+    font-style:       var(--bkbg-iot-ey-font-style, normal);
+    text-decoration:  var(--bkbg-iot-ey-text-decoration, none);
+    text-transform:   var(--bkbg-iot-ey-text-transform, uppercase);
+    line-height:      var(--bkbg-iot-ey-line-height-d, 1.4);
+    letter-spacing:   var(--bkbg-iot-ey-letter-spacing-d, 0.1em);
+    word-spacing:     var(--bkbg-iot-ey-word-spacing-d, normal);
+    margin: 0 0 12px;
+}
+
+.bkbg-iot-text-col h2.bkbg-iot-heading {
+    font-family:      var(--bkbg-iot-h-font-family, inherit);
+    font-size:        var(--bkbg-iot-h-font-size-d, 36px);
+    font-weight:      var(--bkbg-iot-h-font-weight, 800);
+    font-style:       var(--bkbg-iot-h-font-style, normal);
+    text-decoration:  var(--bkbg-iot-h-text-decoration, none);
+    text-transform:   var(--bkbg-iot-h-text-transform, none);
+    line-height:      var(--bkbg-iot-h-line-height-d, 1.2);
+    letter-spacing:   var(--bkbg-iot-h-letter-spacing-d, normal);
+    word-spacing:     var(--bkbg-iot-h-word-spacing-d, normal);
+    margin: 0 0 16px;
+}
+
+.bkbg-iot-subtext {
+    font-family:      var(--bkbg-iot-st-font-family, inherit);
+    font-size:        var(--bkbg-iot-st-font-size-d, 18px);
+    font-weight:      var(--bkbg-iot-st-font-weight, 400);
+    font-style:       var(--bkbg-iot-st-font-style, normal);
+    text-decoration:  var(--bkbg-iot-st-text-decoration, none);
+    text-transform:   var(--bkbg-iot-st-text-transform, none);
+    line-height:      var(--bkbg-iot-st-line-height-d, 1.6);
+    letter-spacing:   var(--bkbg-iot-st-letter-spacing-d, normal);
+    word-spacing:     var(--bkbg-iot-st-word-spacing-d, normal);
+    margin: 0 0 16px;
+}
+
+.bkbg-iot-body {
+    font-family:      var(--bkbg-iot-bd-font-family, inherit);
+    font-size:        var(--bkbg-iot-bd-font-size-d, 16px);
+    font-weight:      var(--bkbg-iot-bd-font-weight, 400);
+    font-style:       var(--bkbg-iot-bd-font-style, normal);
+    text-decoration:  var(--bkbg-iot-bd-text-decoration, none);
+    text-transform:   var(--bkbg-iot-bd-text-transform, none);
+    line-height:      var(--bkbg-iot-bd-line-height-d, 1.7);
+    letter-spacing:   var(--bkbg-iot-bd-letter-spacing-d, normal);
+    word-spacing:     var(--bkbg-iot-bd-word-spacing-d, normal);
+    margin: 0 0 24px;
+}
+
+/* ── CTA ── */
+.bkbg-iot-cta {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: opacity 0.15s, transform 0.15s;
+    align-self: flex-start;
+}
+
+.bkbg-iot-cta:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}
+
+/* ── Responsive Typography ── */
+@media (max-width: 1024px) {
+    .bkbg-iot-eyebrow {
+        font-size:       var(--bkbg-iot-ey-font-size-t, var(--bkbg-iot-ey-font-size-d, 12px));
+        line-height:     var(--bkbg-iot-ey-line-height-t, var(--bkbg-iot-ey-line-height-d, 1.4));
+        letter-spacing:  var(--bkbg-iot-ey-letter-spacing-t, var(--bkbg-iot-ey-letter-spacing-d, 0.1em));
+        word-spacing:    var(--bkbg-iot-ey-word-spacing-t, var(--bkbg-iot-ey-word-spacing-d, normal));
+    }
+    .bkbg-iot-text-col h2.bkbg-iot-heading,
+    .bkbg-iot-text-col .bkbg-iot-heading {
+        font-size:       var(--bkbg-iot-h-font-size-t, var(--bkbg-iot-h-font-size-d, 36px));
+        line-height:     var(--bkbg-iot-h-line-height-t, var(--bkbg-iot-h-line-height-d, 1.2));
+        letter-spacing:  var(--bkbg-iot-h-letter-spacing-t, var(--bkbg-iot-h-letter-spacing-d, normal));
+        word-spacing:    var(--bkbg-iot-h-word-spacing-t, var(--bkbg-iot-h-word-spacing-d, normal));
+    }
+    .bkbg-iot-subtext {
+        font-size:       var(--bkbg-iot-st-font-size-t, var(--bkbg-iot-st-font-size-d, 18px));
+        line-height:     var(--bkbg-iot-st-line-height-t, var(--bkbg-iot-st-line-height-d, 1.6));
+        letter-spacing:  var(--bkbg-iot-st-letter-spacing-t, var(--bkbg-iot-st-letter-spacing-d, normal));
+        word-spacing:    var(--bkbg-iot-st-word-spacing-t, var(--bkbg-iot-st-word-spacing-d, normal));
+    }
+    .bkbg-iot-body {
+        font-size:       var(--bkbg-iot-bd-font-size-t, var(--bkbg-iot-bd-font-size-d, 16px));
+        line-height:     var(--bkbg-iot-bd-line-height-t, var(--bkbg-iot-bd-line-height-d, 1.7));
+        letter-spacing:  var(--bkbg-iot-bd-letter-spacing-t, var(--bkbg-iot-bd-letter-spacing-d, normal));
+        word-spacing:    var(--bkbg-iot-bd-word-spacing-t, var(--bkbg-iot-bd-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-iot-eyebrow {
+        font-size:       var(--bkbg-iot-ey-font-size-m, var(--bkbg-iot-ey-font-size-t, var(--bkbg-iot-ey-font-size-d, 12px)));
+        line-height:     var(--bkbg-iot-ey-line-height-m, var(--bkbg-iot-ey-line-height-t, var(--bkbg-iot-ey-line-height-d, 1.4)));
+        letter-spacing:  var(--bkbg-iot-ey-letter-spacing-m, var(--bkbg-iot-ey-letter-spacing-t, var(--bkbg-iot-ey-letter-spacing-d, 0.1em)));
+        word-spacing:    var(--bkbg-iot-ey-word-spacing-m, var(--bkbg-iot-ey-word-spacing-t, var(--bkbg-iot-ey-word-spacing-d, normal)));
+    }
+    .bkbg-iot-text-col h2.bkbg-iot-heading,
+    .bkbg-iot-text-col .bkbg-iot-heading {
+        font-size:       var(--bkbg-iot-h-font-size-m, var(--bkbg-iot-h-font-size-t, var(--bkbg-iot-h-font-size-d, 36px)));
+        line-height:     var(--bkbg-iot-h-line-height-m, var(--bkbg-iot-h-line-height-t, var(--bkbg-iot-h-line-height-d, 1.2)));
+        letter-spacing:  var(--bkbg-iot-h-letter-spacing-m, var(--bkbg-iot-h-letter-spacing-t, var(--bkbg-iot-h-letter-spacing-d, normal)));
+        word-spacing:    var(--bkbg-iot-h-word-spacing-m, var(--bkbg-iot-h-word-spacing-t, var(--bkbg-iot-h-word-spacing-d, normal)));
+    }
+    .bkbg-iot-subtext {
+        font-size:       var(--bkbg-iot-st-font-size-m, var(--bkbg-iot-st-font-size-t, var(--bkbg-iot-st-font-size-d, 18px)));
+        line-height:     var(--bkbg-iot-st-line-height-m, var(--bkbg-iot-st-line-height-t, var(--bkbg-iot-st-line-height-d, 1.6)));
+        letter-spacing:  var(--bkbg-iot-st-letter-spacing-m, var(--bkbg-iot-st-letter-spacing-t, var(--bkbg-iot-st-letter-spacing-d, normal)));
+        word-spacing:    var(--bkbg-iot-st-word-spacing-m, var(--bkbg-iot-st-word-spacing-t, var(--bkbg-iot-st-word-spacing-d, normal)));
+    }
+    .bkbg-iot-body {
+        font-size:       var(--bkbg-iot-bd-font-size-m, var(--bkbg-iot-bd-font-size-t, var(--bkbg-iot-bd-font-size-d, 16px)));
+        line-height:     var(--bkbg-iot-bd-line-height-m, var(--bkbg-iot-bd-line-height-t, var(--bkbg-iot-bd-line-height-d, 1.7)));
+        letter-spacing:  var(--bkbg-iot-bd-letter-spacing-m, var(--bkbg-iot-bd-letter-spacing-t, var(--bkbg-iot-bd-letter-spacing-d, normal)));
+        word-spacing:    var(--bkbg-iot-bd-word-spacing-m, var(--bkbg-iot-bd-word-spacing-t, var(--bkbg-iot-bd-word-spacing-d, normal)));
+    }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .bkbg-iot-inner,
+    .bkbg-iot-inner--right {
+        flex-direction: column;
+    }
+
+    .bkbg-iot-image-col {
+        flex: none;
+        width: 100%;
+    }
+
+    .bkbg-iot-img {
+        min-height: 240px;
+    }
+
+    .bkbg-iot-text-col {
+        padding: 32px 24px !important;
+    }
+}

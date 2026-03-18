@@ -1,0 +1,294 @@
+/* ====================================================
+   Perspective Device — style.css
+   Block: blockenberg/perspective-device
+   ==================================================== */
+
+.bkbg-pdev-wrap {
+    padding-top:    var(--bkbg-pdev-pt, 48px);
+    padding-bottom: var(--bkbg-pdev-pb, 48px);
+    box-sizing: border-box;
+}
+
+.bkbg-pdev-inner {
+    position: relative;
+}
+
+/* ---- Device base ---- */
+.bkbg-pdev-device {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: visible;
+    box-sizing: border-box;
+}
+
+.bkbg-pdev-device--shadow {
+    filter: drop-shadow(0 28px 60px rgba(0,0,0,.22)) drop-shadow(0 4px 16px rgba(0,0,0,.10));
+}
+
+/* ---- Perspective transforms ---- */
+.bkbg-pdev-persp--tilt-left .bkbg-pdev-device {
+    transform: perspective(1400px) rotateY(14deg) rotateX(4deg);
+    transform-origin: left center;
+}
+
+.bkbg-pdev-persp--tilt-right .bkbg-pdev-device {
+    transform: perspective(1400px) rotateY(-14deg) rotateX(4deg);
+    transform-origin: right center;
+}
+
+.bkbg-pdev-persp--float .bkbg-pdev-device {
+    animation: bkbg-pdev-float 4s ease-in-out infinite;
+}
+
+@keyframes bkbg-pdev-float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-12px); }
+}
+
+/* ---- Browser ---- */
+.bkbg-pdev-device--browser {
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.bkbg-pdev-theme--dark .bkbg-pdev-device--browser {
+    background: #1e1e2e;
+    border-color: rgba(255,255,255,.1);
+}
+
+.bkbg-pdev-browser-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.bkbg-pdev-theme--dark .bkbg-pdev-browser-bar {
+    border-bottom-color: rgba(255,255,255,.08);
+    background: #181825;
+}
+
+.bkbg-pdev-dots {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.bkbg-pdev-dots span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e2e8f0;
+}
+
+.bkbg-pdev-dots span:nth-child(1) { background: #fc605b; }
+.bkbg-pdev-dots span:nth-child(2) { background: #fdbc40; }
+.bkbg-pdev-dots span:nth-child(3) { background: #33c748; }
+
+.bkbg-pdev-url-bar {
+    flex: 1;
+    height: 22px;
+    border-radius: 4px;
+    background: rgba(0,0,0,.06);
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+.bkbg-pdev-theme--dark .bkbg-pdev-url-bar { background: rgba(255,255,255,.08); }
+
+/* ---- Phone ---- */
+.bkbg-pdev-device--phone {
+    width: 260px;
+    border: 10px solid var(--bkbg-pdev-frame-c, #1e293b);
+    border-radius: 36px;
+    overflow: hidden;
+    position: relative;
+    background: var(--bkbg-pdev-screen-bg, #f1f5f9);
+    margin: 0 auto;
+}
+
+.bkbg-pdev-phone-notch {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bkbg-pdev-frame-c, #1e293b);
+}
+
+.bkbg-pdev-phone-notch::after {
+    content: '';
+    width: 80px;
+    height: 14px;
+    border-radius: 50px;
+    background: rgba(0,0,0,.5);
+}
+
+.bkbg-pdev-phone-home {
+    height: 20px;
+    background: var(--bkbg-pdev-frame-c, #1e293b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bkbg-pdev-phone-home::after {
+    content: '';
+    width: 48px;
+    height: 5px;
+    border-radius: 50px;
+    background: rgba(255,255,255,.3);
+}
+
+/* ---- Tablet ---- */
+.bkbg-pdev-device--tablet {
+    width: 480px;
+    border: 14px solid var(--bkbg-pdev-frame-c, #1e293b);
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    background: var(--bkbg-pdev-screen-bg, #f1f5f9);
+    margin: 0 auto;
+}
+
+.bkbg-pdev-tablet-cam {
+    height: 20px;
+    background: var(--bkbg-pdev-frame-c, #1e293b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bkbg-pdev-tablet-cam::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.2);
+}
+
+.bkbg-pdev-tablet-home {
+    height: 20px;
+    background: var(--bkbg-pdev-frame-c, #1e293b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bkbg-pdev-tablet-home::after {
+    content: '';
+    width: 36px;
+    height: 4px;
+    border-radius: 50px;
+    background: rgba(255,255,255,.2);
+}
+
+/* ---- Laptop ---- */
+.bkbg-pdev-device--laptop {
+    position: relative;
+    width: 100%;
+}
+
+.bkbg-pdev-laptop-lid {
+    background: var(--bkbg-pdev-frame-c, #1e293b);
+    border-radius: 10px 10px 0 0;
+    padding: 14px 14px 0;
+    position: relative;
+}
+
+.bkbg-pdev-laptop-cam {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.2);
+    margin: 0 auto 8px;
+}
+
+.bkbg-pdev-laptop-base {
+    background: var(--bkbg-pdev-frame-c, #1e293b);
+    border-radius: 0 0 12px 12px;
+    height: 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 0 20px;
+}
+
+.bkbg-pdev-laptop-keyboard {
+    width: 100%;
+    height: 8px;
+    border-radius: 2px;
+    background: rgba(255,255,255,.08);
+}
+
+.bkbg-pdev-laptop-trackpad {
+    width: 60px;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255,255,255,.06);
+}
+
+/* ---- Screen (common) ---- */
+.bkbg-pdev-screen {
+    background: var(--bkbg-pdev-screen-bg, #f1f5f9);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.bkbg-pdev-laptop-lid .bkbg-pdev-screen {
+    border-radius: 4px;
+}
+
+/* ---- Screenshot image ---- */
+.bkbg-pdev-screenshot {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ---- Placeholder ---- */
+.bkbg-pdev-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    color: #94a3b8;
+    font-size: 13px;
+    background: linear-gradient(135deg, #f0ebff 0%, #ede9fe 100%);
+}
+
+/* ---- Reflection overlay ---- */
+.bkbg-pdev-reflection {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,.15) 0%, transparent 50%);
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+/* Dark theme tweaks */
+.bkbg-pdev-theme--dark .bkbg-pdev-device--phone,
+.bkbg-pdev-theme--dark .bkbg-pdev-device--tablet {
+    border-color: #374151;
+}
+.bkbg-pdev-theme--dark .bkbg-pdev-phone-notch,
+.bkbg-pdev-theme--dark .bkbg-pdev-phone-home,
+.bkbg-pdev-theme--dark .bkbg-pdev-tablet-cam,
+.bkbg-pdev-theme--dark .bkbg-pdev-tablet-home,
+.bkbg-pdev-theme--dark .bkbg-pdev-laptop-lid,
+.bkbg-pdev-theme--dark .bkbg-pdev-laptop-base {
+    background: #374151;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .bkbg-pdev-device--phone  { width: 200px; }
+    .bkbg-pdev-device--tablet { width: 320px; }
+}

@@ -1,0 +1,127 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/cron-builder",
+    "title": "Cron Builder",
+    "category": "bkbg-dev",
+    "icon": "clock",
+    "description": "Visual cron expression builder. Edit each field individually, see a human-readable description, choose from common presets, preview next run times, and copy the final expression.",
+    "keywords": [
+        "cron",
+        "scheduler",
+        "schedule",
+        "expression",
+        "task",
+        "automation",
+        "developer",
+        "unix",
+        "linux"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-cron-builder-editor",
+    "style": "bkbg-cron-builder-style",
+    "viewScript": "bkbg-cron-builder-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Cron Expression Builder"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Build and understand cron schedules visually"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultExpression": {
+            "type": "string",
+            "default": "0 9 * * *"
+        },
+        "showNextRuns": {
+            "type": "boolean",
+            "default": true
+        },
+        "nextRunsCount": {
+            "type": "number",
+            "default": 5
+        },
+        "showPresets": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#0ea5e9"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f0f9ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#e0f2fe"
+        },
+        "fieldBg": {
+            "type": "string",
+            "default": "#e0f2fe"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0c4a6e"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 26
+        },
+        "subtitleFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "expressionFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 720
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,106 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/unfold",
+    "title": "Unfold",
+    "category": "bkbg-effects",
+    "icon": "sort",
+    "description": "Expandable content section that starts collapsed with a fade gradient and expands smoothly on button click.",
+    "keywords": [
+        "expand",
+        "read more",
+        "toggle",
+        "spoiler",
+        "collapsible",
+        "unfold"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-unfold-editor",
+    "style": "bkbg-unfold-style",
+    "viewScript": "bkbg-unfold-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "content": {
+            "type": "string",
+            "source": "html",
+            "selector": ".bkbg-ufd-content-src",
+            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>"
+        },
+        "previewHeight": {
+            "type": "integer",
+            "default": 200
+        },
+        "expandText": {
+            "type": "string",
+            "default": "Read More ↓"
+        },
+        "collapseText": {
+            "type": "string",
+            "default": "Show Less ↑"
+        },
+        "showCollapseBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "gradientHeight": {
+            "type": "integer",
+            "default": 60
+        },
+        "animationDuration": {
+            "type": "integer",
+            "default": 400
+        },
+        "buttonAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "buttonStyle": {
+            "type": "string",
+            "default": "filled"
+        },
+        "borderRadius": {
+            "type": "integer",
+            "default": 8
+        },
+        "contentTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "buttonTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "contentColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "gradientTo": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "buttonBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "buttonColor": {
+            "type": "string",
+            "default": "#ffffff"
+        }
+    }
+}

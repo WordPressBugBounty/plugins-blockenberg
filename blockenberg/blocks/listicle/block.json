@@ -1,0 +1,179 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/listicle",
+    "version": "1.0.0",
+    "title": "Listicle",
+    "category": "bkbg-blog",
+    "description": "Rich numbered list article format for Top 10, Best of, and ranked editorial content. Each item has number badge, title, image, description, verdict and tags.",
+    "keywords": [
+        "listicle",
+        "top 10",
+        "ranked",
+        "list",
+        "numbered",
+        "editorial",
+        "best of"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-listicle-editor",
+    "style": "bkbg-listicle-style",
+    "viewScript": "bkbg-listicle-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": ""
+        },
+        "showHeading": {
+            "type": "boolean",
+            "default": false
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "First Item",
+                    "subtitle": "",
+                    "description": "",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "tag": "",
+                    "verdict": "",
+                    "rating": 5
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "list"
+        },
+        "numberStyle": {
+            "type": "string",
+            "default": "badge"
+        },
+        "showNumbers": {
+            "type": "boolean",
+            "default": true
+        },
+        "showImages": {
+            "type": "boolean",
+            "default": true
+        },
+        "showRatings": {
+            "type": "boolean",
+            "default": false
+        },
+        "showTags": {
+            "type": "boolean",
+            "default": true
+        },
+        "showVerdicts": {
+            "type": "boolean",
+            "default": false
+        },
+        "countDown": {
+            "type": "boolean",
+            "default": false
+        },
+        "imageRatio": {
+            "type": "string",
+            "default": "16:9"
+        },
+        "imageRadius": {
+            "type": "integer",
+            "default": 8
+        },
+        "gap": {
+            "type": "integer",
+            "default": 24
+        },
+        "cardRadius": {
+            "type": "integer",
+            "default": 12
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 0
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "numberBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "numberColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "tagBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "tagColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "verdictBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "verdictColor": {
+            "type": "string",
+            "default": "#15803d"
+        },
+        "starColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

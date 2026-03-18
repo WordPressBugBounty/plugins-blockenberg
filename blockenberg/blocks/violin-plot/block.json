@@ -1,0 +1,193 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/violin-plot",
+    "title": "Violin Plot",
+    "category": "bkbg-charts",
+    "icon": "chart-area",
+    "description": "Statistical violin plot showing data distribution shape and quartile summary for multiple groups.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-violin-plot-editor",
+    "style": "bkbg-violin-plot-style",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Score Distribution by Group"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "number",
+            "default": 680
+        },
+        "svgHeight": {
+            "type": "number",
+            "default": 380
+        },
+        "padTop": {
+            "type": "number",
+            "default": 30
+        },
+        "padLeft": {
+            "type": "number",
+            "default": 55
+        },
+        "padRight": {
+            "type": "number",
+            "default": 20
+        },
+        "padBottom": {
+            "type": "number",
+            "default": 50
+        },
+        "violinWidth": {
+            "type": "number",
+            "default": 60
+        },
+        "showMedian": {
+            "type": "boolean",
+            "default": true
+        },
+        "showIQR": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGrid": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "fillOpacity": {
+            "type": "number",
+            "default": 75
+        },
+        "yAxisLabel": {
+            "type": "string",
+            "default": "Score"
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "groups": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Group A",
+                    "color": "#6366f1",
+                    "values": [
+                        45,
+                        52,
+                        60,
+                        63,
+                        67,
+                        70,
+                        72,
+                        75,
+                        78,
+                        80,
+                        82,
+                        85,
+                        88,
+                        90,
+                        92,
+                        95
+                    ]
+                },
+                {
+                    "label": "Group B",
+                    "color": "#10b981",
+                    "values": [
+                        30,
+                        38,
+                        50,
+                        55,
+                        60,
+                        65,
+                        68,
+                        72,
+                        74,
+                        76,
+                        79,
+                        82,
+                        86,
+                        90,
+                        95,
+                        98
+                    ]
+                },
+                {
+                    "label": "Group C",
+                    "color": "#f59e0b",
+                    "values": [
+                        55,
+                        58,
+                        60,
+                        62,
+                        64,
+                        66,
+                        68,
+                        70,
+                        72,
+                        74,
+                        76,
+                        78,
+                        80,
+                        82,
+                        84,
+                        86
+                    ]
+                },
+                {
+                    "label": "Group D",
+                    "color": "#ef4444",
+                    "values": [
+                        20,
+                        30,
+                        40,
+                        55,
+                        70,
+                        72,
+                        74,
+                        76,
+                        78,
+                        80,
+                        88,
+                        92,
+                        96,
+                        98,
+                        99,
+                        100
+                    ]
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        }
+    }
+}

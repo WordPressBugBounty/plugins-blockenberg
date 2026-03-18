@@ -1,0 +1,184 @@
+{
+  "apiVersion": 3,
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "blockenberg/swot-analysis",
+  "title": "SWOT Analysis",
+  "category": "bkbg-business",
+  "icon": "grid-view",
+  "description": "2\u00d72 SWOT matrix with per-quadrant item lists, colors, and icons.",
+  "keywords": [
+    "swot",
+    "analysis",
+    "strengths",
+    "weaknesses",
+    "opportunities",
+    "threats",
+    "strategy",
+    "business"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-swot-analysis-editor",
+  "editorStyle": "bkbg-swot-analysis-style",
+  "style": "bkbg-swot-analysis-style",
+  "viewScript": "bkbg-swot-analysis-frontend",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "blockTitle": {
+      "type": "string",
+      "default": "SWOT Analysis"
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "layout": {
+      "type": "string",
+      "default": "grid"
+    },
+    "quadrants": {
+      "type": "array",
+      "default": [
+        {
+          "id": "strengths",
+          "label": "Strengths",
+          "icon": "\ud83d\udcaa",
+          "items": [
+            "Strong brand recognition",
+            "Experienced leadership team",
+            "Innovative product lineup",
+            "Loyal customer base"
+          ]
+        },
+        {
+          "id": "weaknesses",
+          "label": "Weaknesses",
+          "icon": "\u26a0\ufe0f",
+          "items": [
+            "Limited market reach",
+            "High operational costs",
+            "Dependence on key suppliers",
+            "Gaps in digital presence"
+          ]
+        },
+        {
+          "id": "opportunities",
+          "label": "Opportunities",
+          "icon": "\ud83d\ude80",
+          "items": [
+            "Growing global market",
+            "Emerging technology trends",
+            "Strategic partnership potential",
+            "Untapped customer segments"
+          ]
+        },
+        {
+          "id": "threats",
+          "label": "Threats",
+          "icon": "\ud83d\udee1\ufe0f",
+          "items": [
+            "Intensifying competition",
+            "Regulatory changes",
+            "Economic uncertainty",
+            "Rapid market disruption"
+          ]
+        }
+      ]
+    },
+    "showIcons": {
+      "type": "boolean",
+      "default": true
+    },
+    "listStyle": {
+      "type": "string",
+      "default": "bullet"
+    },
+    "showNumbers": {
+      "type": "boolean",
+      "default": false
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 12
+    },
+    "gap": {
+      "type": "number",
+      "default": 16
+    },
+    "headerPaddingV": {
+      "type": "number",
+      "default": 16
+    },
+    "headerPaddingH": {
+      "type": "number",
+      "default": 20
+    },
+    "bodyPaddingV": {
+      "type": "number",
+      "default": 16
+    },
+    "bodyPaddingH": {
+      "type": "number",
+      "default": 20
+    },
+    "titleTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "headerTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "itemTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "enableShadow": {
+      "type": "boolean",
+      "default": true
+    },
+    "strengthsColor": {
+      "type": "string",
+      "default": "#22c55e"
+    },
+    "weaknessesColor": {
+      "type": "string",
+      "default": "#ef4444"
+    },
+    "opportunitiesColor": {
+      "type": "string",
+      "default": "#3b82f6"
+    },
+    "threatsColor": {
+      "type": "string",
+      "default": "#f59e0b"
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "borderColor": {
+      "type": "string",
+      "default": "#e2e8f0"
+    },
+    "titleColor": {
+      "type": "string",
+      "default": "#1e293b"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#374151"
+    },
+    "headerTextColor": {
+      "type": "string",
+      "default": "#ffffff"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/notification-bar",
+    "title": "Notification Bar",
+    "description": "Dismissible sticky announcement or promo bar — shown at the top or bottom of the page.",
+    "category": "bkbg-marketing",
+    "icon": "megaphone",
+    "keywords": [
+        "notification",
+        "bar",
+        "announcement",
+        "promo",
+        "banner",
+        "sticky",
+        "top bar"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-notification-bar-editor",
+    "editorStyle": "bkbg-notification-bar-style",
+    "style": "bkbg-notification-bar-style",
+    "viewScript": "bkbg-notification-bar-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": []
+    },
+    "attributes": {
+        "message": {
+            "type": "string",
+            "default": "🎉 Special offer! Save 20% today only."
+        },
+        "linkLabel": {
+            "type": "string",
+            "default": "Shop Now"
+        },
+        "linkUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "linkTarget": {
+            "type": "string",
+            "default": "_self"
+        },
+        "position": {
+            "type": "string",
+            "default": "top"
+        },
+        "icon": {
+            "type": "string",
+            "default": "none"
+        },
+        "showClose": {
+            "type": "boolean",
+            "default": true
+        },
+        "cookieName": {
+            "type": "string",
+            "default": "bkbg_nb_dismissed"
+        },
+        "cookieDays": {
+            "type": "number",
+            "default": 1
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#bfdbfe"
+        },
+        "closeBtnColor": {
+            "type": "string",
+            "default": "#93c5fd"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "fontWeight": {
+            "type": "number",
+            "default": 500
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "messageTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "padding": {
+            "type": "number",
+            "default": 12
+        },
+        "animation": {
+            "type": "string",
+            "default": "slide"
+        },
+        "sticky": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAfterDelay": {
+            "type": "number",
+            "default": 0
+        }
+    }
+}

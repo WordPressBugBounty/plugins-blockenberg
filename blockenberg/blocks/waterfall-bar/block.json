@@ -1,0 +1,152 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/waterfall-bar",
+    "title": "Waterfall Bar Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-bar",
+    "description": "Bridge / waterfall chart showing cumulative running totals with positive and negative steps.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-waterfall-bar-editor",
+    "style": "bkbg-waterfall-bar-style",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "P&L Waterfall: FY 2024"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "number",
+            "default": 700
+        },
+        "svgHeight": {
+            "type": "number",
+            "default": 400
+        },
+        "padTop": {
+            "type": "number",
+            "default": 30
+        },
+        "padLeft": {
+            "type": "number",
+            "default": 60
+        },
+        "padRight": {
+            "type": "number",
+            "default": 30
+        },
+        "padBottom": {
+            "type": "number",
+            "default": 64
+        },
+        "barWidth": {
+            "type": "number",
+            "default": 42
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGridLines": {
+            "type": "boolean",
+            "default": true
+        },
+        "showConnectors": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelRotate": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "valueFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "posColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "negColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "totalColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "connectorColor": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Starting Balance",
+                    "value": 1000,
+                    "isTotal": true
+                },
+                {
+                    "label": "Q1 Revenue",
+                    "value": 420,
+                    "isTotal": false
+                },
+                {
+                    "label": "Q1 Costs",
+                    "value": -180,
+                    "isTotal": false
+                },
+                {
+                    "label": "Q2 Revenue",
+                    "value": 380,
+                    "isTotal": false
+                },
+                {
+                    "label": "Q2 Costs",
+                    "value": -210,
+                    "isTotal": false
+                },
+                {
+                    "label": "Adjustments",
+                    "value": -65,
+                    "isTotal": false
+                },
+                {
+                    "label": "Final Total",
+                    "value": 0,
+                    "isTotal": true
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        }
+    }
+}

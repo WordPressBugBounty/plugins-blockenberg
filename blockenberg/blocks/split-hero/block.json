@@ -1,0 +1,246 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/split-hero",
+    "version": "1.0.0",
+    "title": "Split Hero",
+    "category": "bkbg-layout",
+    "icon": "align-pull-left",
+    "description": "Two-column hero section with headline, badge, body text, dual CTA buttons and social proof on one side — image or video on the other. Built for landing pages.",
+    "keywords": [
+        "hero",
+        "split",
+        "landing",
+        "headline",
+        "cta",
+        "two column",
+        "marketing"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-split-hero-editor",
+    "editorStyle": "bkbg-split-hero-style",
+    "style": "bkbg-split-hero-style",
+    "viewScript": "bkbg-split-hero-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "contentSide": {
+            "type": "string",
+            "default": "left"
+        },
+        "splitRatio": {
+            "type": "string",
+            "default": "50"
+        },
+        "minHeight": {
+            "type": "number",
+            "default": 620
+        },
+        "badge": {
+            "type": "string",
+            "default": "🚀 Now in public beta"
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "badgeStyle": {
+            "type": "string",
+            "default": "pill"
+        },
+        "headline": {
+            "type": "string",
+            "default": "Build products your users actually love"
+        },
+        "headlineTag": {
+            "type": "string",
+            "default": "h1"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "The all-in-one workspace for modern product teams. Design, ship, and iterate — all in one place."
+        },
+        "ctaPrimaryLabel": {
+            "type": "string",
+            "default": "Start for free"
+        },
+        "ctaPrimaryUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaPrimaryTarget": {
+            "type": "boolean",
+            "default": false
+        },
+        "ctaSecondaryLabel": {
+            "type": "string",
+            "default": "Watch demo →"
+        },
+        "ctaSecondaryUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaSecondaryTarget": {
+            "type": "boolean",
+            "default": false
+        },
+        "showSecondaryCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "showRating": {
+            "type": "boolean",
+            "default": true
+        },
+        "ratingScore": {
+            "type": "string",
+            "default": "4.9 / 5"
+        },
+        "ratingStars": {
+            "type": "number",
+            "default": 5
+        },
+        "ratingText": {
+            "type": "string",
+            "default": "from 2,000+ reviews"
+        },
+        "showSocialProof": {
+            "type": "boolean",
+            "default": true
+        },
+        "socialProofText": {
+            "type": "string",
+            "default": "Trusted by 10,000+ teams worldwide"
+        },
+        "mediaType": {
+            "type": "string",
+            "default": "image"
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "imageShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "videoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "contentPaddingH": {
+            "type": "number",
+            "default": 60
+        },
+        "contentPaddingV": {
+            "type": "number",
+            "default": 80
+        },
+        "headlineSize": {
+            "type": "number",
+            "default": 52
+        },
+        "headlineFontWeight": {
+            "type": "number",
+            "default": 800
+        },
+        "subtextSize": {
+            "type": "number",
+            "default": 17
+        },
+        "badgeSize": {
+            "type": "number",
+            "default": 13
+        },
+        "ratingSize": {
+            "type": "number",
+            "default": 13
+        },
+        "ctaPrimarySize": {
+            "type": "number",
+            "default": 16
+        },
+        "ctaSecondarySize": {
+            "type": "number",
+            "default": 15
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "headlineColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#f3f0ff"
+        },
+        "ctaPrimaryBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "ctaPrimaryColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "ctaSecondaryColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "starColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "socialProofColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "contentBg": {
+            "type": "string",
+            "default": ""
+        },
+        "mediaBg": {
+            "type": "string",
+            "default": "#f3f0ff"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headlineTypo": { "type": "object", "default": {} },
+        "subtextTypo":  { "type": "object", "default": {} },
+        "badgeTypo":    { "type": "object", "default": {} },
+        "ratingTypo":   { "type": "object", "default": {} },
+        "proofTypo":    { "type": "object", "default": {} },
+        "cta1Typo":     { "type": "object", "default": {} },
+        "cta2Typo":     { "type": "object", "default": {} }
+    }
+}

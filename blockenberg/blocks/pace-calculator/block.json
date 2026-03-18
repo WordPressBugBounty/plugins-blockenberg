@@ -1,0 +1,182 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/pace-calculator",
+    "title": "Pace Calculator",
+    "category": "bkbg-calculators",
+    "icon": "performance",
+    "description": "Running, walking, or cycling pace calculator. Find pace from distance and time, find finish time from pace and distance, or find distance from pace and time. Supports km and miles.",
+    "keywords": [
+        "pace",
+        "running",
+        "cycling",
+        "walking",
+        "speed",
+        "fitness",
+        "marathon",
+        "5k",
+        "10k",
+        "race",
+        "calculator"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-pace-calculator-editor",
+    "style": "bkbg-pace-calculator-style",
+    "viewScript": "bkbg-pace-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Pace Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Calculate your running pace, finish time, or distance."
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultMode": {
+            "type": "string",
+            "default": "find_pace"
+        },
+        "defaultUnit": {
+            "type": "string",
+            "default": "km"
+        },
+        "showPresets": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSpeedConv": {
+            "type": "boolean",
+            "default": true
+        },
+        "presets": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "5K",
+                    "dist": 5
+                },
+                {
+                    "label": "10K",
+                    "dist": 10
+                },
+                {
+                    "label": "Half",
+                    "dist": 21.0975
+                },
+                {
+                    "label": "Marathon",
+                    "dist": 42.195
+                }
+            ]
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "resultBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "resultColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "presetBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "presetColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "convBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "resultSize": {
+            "type": "number",
+            "default": 52
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 560
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "resultFontWeight": {
+            "type": "string",
+            "default": "800"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "resultTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

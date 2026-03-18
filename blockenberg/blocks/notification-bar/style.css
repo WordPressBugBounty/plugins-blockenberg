@@ -1,0 +1,170 @@
+/* =========================================================
+   Notification Bar – bkbg-nb-*
+   ========================================================= */
+
+/* ── Variables (set via inline style on .bkbg-nb-bar) ── */
+.bkbg-nb-bar {
+    --bkbg-nb-bg:    #2563eb;
+    --bkbg-nb-text:  #ffffff;
+    --bkbg-nb-link:  #bfdbfe;
+    --bkbg-nb-close: #93c5fd;
+    --bkbg-nb-fs:    14px;
+    --bkbg-nb-pad:   12px;
+
+    background: var(--bkbg-nb-bg);
+    color: var(--bkbg-nb-text);
+    font-size: var(--bkbg-nb-fs);
+    padding: var(--bkbg-nb-pad) 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 9999;
+    will-change: transform, opacity;
+}
+
+/* ── Sticky states (applied to outer wrapper by frontend.js) ── */
+.bkbg-nb-wrap--top-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.bkbg-nb-wrap--bottom-sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* ── Inner layout ── */
+.bkbg-nb-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.bkbg-nb-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ── Icon ── */
+.bkbg-nb-icon {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    line-height: 1;
+}
+.bkbg-nb-icon svg,
+.bkbg-nb-icon img {
+    width: 16px;
+    height: 16px;
+}
+/* Inline SVG icons rendered by frontend.js */
+.bkbg-nb-icon--info::before      { content: 'ℹ️'; }
+.bkbg-nb-icon--warning::before   { content: '⚠️'; }
+.bkbg-nb-icon--star::before      { content: '⭐'; }
+.bkbg-nb-icon--megaphone::before { content: '📢'; }
+.bkbg-nb-icon--bell::before      { content: '🔔'; }
+
+/* ── Message ── */
+.bkbg-nb-message {
+    font-family: var(--bkbg-nb-msg-font-family, inherit);
+    font-size: var(--bkbg-nb-msg-font-size-d, var(--bkbg-nb-fs, 14px));
+    font-weight: var(--bkbg-nb-msg-font-weight, var(--bkbg-nb-fw, 500));
+    font-style: var(--bkbg-nb-msg-font-style, normal);
+    text-decoration: var(--bkbg-nb-msg-text-decoration, none);
+    text-transform: var(--bkbg-nb-msg-text-transform, none);
+    line-height: var(--bkbg-nb-msg-line-height-d, var(--bkbg-nb-lh, 1.4));
+    letter-spacing: var(--bkbg-nb-msg-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-nb-msg-word-spacing-d, normal);
+}
+.bkbg-nb-message strong,
+.bkbg-nb-message b { font-weight: 700; }
+
+/* ── CTA link ── */
+.bkbg-nb-link {
+    color: var(--bkbg-nb-link);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+.bkbg-nb-link:hover { opacity: 0.8; }
+
+/* ── Close button ── */
+.bkbg-nb-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--bkbg-nb-close);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+.bkbg-nb-close:hover { opacity: 1; }
+.bkbg-nb-close svg {
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+}
+
+/* ── Animations ── */
+@keyframes bkbg-nb-slide-down { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+@keyframes bkbg-nb-slide-up   { from { transform: translateY(100%);  } to { transform: translateY(0); } }
+@keyframes bkbg-nb-fade-in    { from { opacity: 0; } to { opacity: 1; } }
+
+.bkbg-nb-wrap--anim-slide.bkbg-nb-wrap--top-sticky    { animation: bkbg-nb-slide-down 0.35s ease forwards; }
+.bkbg-nb-wrap--anim-slide.bkbg-nb-wrap--bottom-sticky { animation: bkbg-nb-slide-up   0.35s ease forwards; }
+.bkbg-nb-wrap--anim-fade                              { animation: bkbg-nb-fade-in    0.35s ease forwards; }
+
+/* hidden until JS shows it */
+.bkbg-nb-wrap[data-delay] { opacity: 0; }
+.bkbg-nb-wrap--visible    { opacity: 1; }
+
+/* ── Push body down when top-sticky so content isn't obscured ── */
+body.bkbg-nb-push-top    { transition: padding-top 0.35s ease; }
+body.bkbg-nb-push-bottom { transition: padding-bottom 0.35s ease; }
+
+/* ── Editor preview label ── */
+.bkbg-nb-editor-wrap {
+    padding: 8px 0;
+}
+.bkbg-nb-preview-label {
+    font-size: 11px;
+    color: #6b7280;
+    margin-bottom: 6px;
+    font-style: italic;
+}
+
+@media (max-width: 1024px) {
+    /* ── Message ── */
+.bkbg-nb-message {
+        font-size: var(--bkbg-nb-msg-font-size-t, var(--bkbg-nb-msg-font-size-d, var(--bkbg-nb-fs, 14px)));
+        line-height: var(--bkbg-nb-msg-line-height-t, var(--bkbg-nb-msg-line-height-d, var(--bkbg-nb-lh, 1.4)));
+        letter-spacing: var(--bkbg-nb-msg-letter-spacing-t, var(--bkbg-nb-msg-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-nb-msg-word-spacing-t, var(--bkbg-nb-msg-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    /* ── Message ── */
+.bkbg-nb-message {
+        font-size: var(--bkbg-nb-msg-font-size-m, var(--bkbg-nb-msg-font-size-t, var(--bkbg-nb-msg-font-size-d, var(--bkbg-nb-fs, 14px))));
+        line-height: var(--bkbg-nb-msg-line-height-m, var(--bkbg-nb-msg-line-height-t, var(--bkbg-nb-msg-line-height-d, var(--bkbg-nb-lh, 1.4))));
+        letter-spacing: var(--bkbg-nb-msg-letter-spacing-m, var(--bkbg-nb-msg-letter-spacing-t, var(--bkbg-nb-msg-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-nb-msg-word-spacing-m, var(--bkbg-nb-msg-word-spacing-t, var(--bkbg-nb-msg-word-spacing-d, normal)));
+    }
+}

@@ -1,0 +1,182 @@
+{
+  "apiVersion": 3,
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "blockenberg/step-cards",
+  "title": "Step Cards",
+  "category": "bkbg-business",
+  "icon": "list-ul",
+  "description": "Process steps as cards with large sequential numbers, icons, titles, descriptions, and connector lines.",
+  "keywords": [
+    "steps",
+    "process",
+    "how it works",
+    "numbered",
+    "workflow",
+    "cards",
+    "sequence"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-step-cards-editor",
+  "editorStyle": "bkbg-step-cards-style",
+  "style": "bkbg-step-cards-style",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "steps": {
+      "type": "array",
+      "default": [
+        {
+          "id": "s1",
+          "icon": "edit",
+          "title": "Create Account",
+          "body": "Sign up in seconds. No credit card required to get started with our free plan."
+        },
+        {
+          "id": "s2",
+          "icon": "admin-customizer",
+          "title": "Configure Your Setup",
+          "body": "Follow our simple setup wizard to tailor the experience to your specific needs."
+        },
+        {
+          "id": "s3",
+          "icon": "update",
+          "title": "Connect Your Tools",
+          "body": "Integrate with your existing stack in one click. We support 200+ popular services."
+        },
+        {
+          "id": "s4",
+          "icon": "chart-line",
+          "title": "See Results",
+          "body": "Watch your metrics improve from day one. Most users see impact within 48 hours."
+        }
+      ]
+    },
+    "layout": {
+      "type": "string",
+      "default": "horizontal"
+    },
+    "columns": {
+      "type": "number",
+      "default": 4
+    },
+    "cardStyle": {
+      "type": "string",
+      "default": "card"
+    },
+    "numberStyle": {
+      "type": "string",
+      "default": "circle"
+    },
+    "showConnector": {
+      "type": "boolean",
+      "default": true
+    },
+    "showIcon": {
+      "type": "boolean",
+      "default": true
+    },
+    "iconPosition": {
+      "type": "string",
+      "default": "number-only"
+    },
+    "gap": {
+      "type": "number",
+      "default": 24
+    },
+    "cardPadding": {
+      "type": "number",
+      "default": 28
+    },
+    "cardRadius": {
+      "type": "number",
+      "default": 16
+    },
+    "numberSize": {
+      "type": "number",
+      "default": 44
+    },
+    "iconSize": {
+      "type": "number",
+      "default": 22
+    },
+    "titleSize": {
+      "type": "number",
+      "default": 18
+    },
+    "titleWeight": {
+      "type": "number",
+      "default": 700
+    },
+    "bodySize": {
+      "type": "number",
+      "default": 14
+    },
+    "paddingTop": {
+      "type": "number",
+      "default": 0
+    },
+    "paddingBottom": {
+      "type": "number",
+      "default": 0
+    },
+    "numberBg": {
+      "type": "string",
+      "default": "#6c3fb5"
+    },
+    "numberColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "connectorColor": {
+      "type": "string",
+      "default": "#e2e8f0"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": "#6c3fb5"
+    },
+    "titleColor": {
+      "type": "string",
+      "default": "#0f172a"
+    },
+    "bodyColor": {
+      "type": "string",
+      "default": "#64748b"
+    },
+    "cardBg": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "cardBorder": {
+      "type": "string",
+      "default": "#e2e8f0"
+    },
+    "iconColor": {
+      "type": "string",
+      "default": "#6c3fb5"
+    },
+    "titleLineHeight": {
+      "type": "number",
+      "default": 1.3
+    },
+    "bodyLineHeight": {
+      "type": "number",
+      "default": 1.6
+    },
+    "titleTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "bodyTypo": {
+      "type": "object",
+      "default": {}
+    }
+  }
+}

@@ -1,0 +1,158 @@
+/* File Download — bkfd- */
+.bkfd-wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+.bkfd-icon-wrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bkfd-info {
+  flex: 1;
+  min-width: 0;
+}
+.bkfd-name {
+  word-break: break-word;
+  font-family:    var(--bkfd-tn-font-family, inherit);
+  font-size:      var(--bkfd-tn-font-size-d, 16px);
+  font-weight:    var(--bkfd-tn-font-weight, 700);
+  line-height:    var(--bkfd-tn-line-height-d, 1.3);
+  text-transform: var(--bkfd-tn-text-transform, none);
+  font-style:     var(--bkfd-tn-font-style, normal);
+  text-decoration:var(--bkfd-tn-text-decoration, none);
+  letter-spacing: var(--bkfd-tn-letter-spacing-d, normal);
+  word-spacing:   var(--bkfd-tn-word-spacing-d, normal);
+}
+.bkfd-meta {
+  font-family:    var(--bkfd-tm-font-family, inherit);
+  font-size:      var(--bkfd-tm-font-size-d, 13px);
+  font-weight:    var(--bkfd-tm-font-weight, 400);
+  line-height:    var(--bkfd-tm-line-height-d, 1.4);
+  text-transform: var(--bkfd-tm-text-transform, none);
+  font-style:     var(--bkfd-tm-font-style, normal);
+  text-decoration:var(--bkfd-tm-text-decoration, none);
+  letter-spacing: var(--bkfd-tm-letter-spacing-d, normal);
+  word-spacing:   var(--bkfd-tm-word-spacing-d, normal);
+}
+.bkfd-desc {
+  font-family:    var(--bkfd-td-font-family, inherit);
+  font-size:      var(--bkfd-td-font-size-d, 14px);
+  font-weight:    var(--bkfd-td-font-weight, 400);
+  line-height:    var(--bkfd-td-line-height-d, 1.5);
+  text-transform: var(--bkfd-td-text-transform, none);
+  font-style:     var(--bkfd-td-font-style, normal);
+  text-decoration:var(--bkfd-td-text-decoration, none);
+  letter-spacing: var(--bkfd-td-letter-spacing-d, normal);
+  word-spacing:   var(--bkfd-td-word-spacing-d, normal);
+}
+.bkfd-badge {
+  display: inline-block;
+  flex-shrink: 0;
+  font-family:    var(--bkfd-tb-font-family, inherit);
+  font-size:      var(--bkfd-tb-font-size-d, 11px);
+  font-weight:    var(--bkfd-tb-font-weight, 700);
+  line-height:    var(--bkfd-tb-line-height-d, 1.2);
+  text-transform: var(--bkfd-tb-text-transform, none);
+  font-style:     var(--bkfd-tb-font-style, normal);
+  text-decoration:var(--bkfd-tb-text-decoration, none);
+  letter-spacing: var(--bkfd-tb-letter-spacing-d, normal);
+  word-spacing:   var(--bkfd-tb-word-spacing-d, normal);
+}
+.bkfd-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+  flex-shrink: 0;
+  font-family:    var(--bkfd-tbt-font-family, inherit);
+  font-size:      var(--bkfd-tbt-font-size-d, 14px);
+  font-weight:    var(--bkfd-tbt-font-weight, 600);
+  line-height:    var(--bkfd-tbt-line-height-d, 1.4);
+  text-transform: var(--bkfd-tbt-text-transform, none);
+  font-style:     var(--bkfd-tbt-font-style, normal);
+  text-decoration:var(--bkfd-tbt-text-decoration, none);
+  letter-spacing: var(--bkfd-tbt-letter-spacing-d, normal);
+  word-spacing:   var(--bkfd-tbt-word-spacing-d, normal);
+}
+.bkfd-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+/* ---- Responsive typography ---- */
+@media (max-width: 1024px) {
+  .bkfd-name {
+    font-size:      var(--bkfd-tn-font-size-t, var(--bkfd-tn-font-size-d, 16px));
+    line-height:    var(--bkfd-tn-line-height-t, var(--bkfd-tn-line-height-d, 1.3));
+    letter-spacing: var(--bkfd-tn-letter-spacing-t, var(--bkfd-tn-letter-spacing-d, normal));
+    word-spacing:   var(--bkfd-tn-word-spacing-t, var(--bkfd-tn-word-spacing-d, normal));
+  }
+  .bkfd-meta {
+    font-size:      var(--bkfd-tm-font-size-t, var(--bkfd-tm-font-size-d, 13px));
+    line-height:    var(--bkfd-tm-line-height-t, var(--bkfd-tm-line-height-d, 1.4));
+    letter-spacing: var(--bkfd-tm-letter-spacing-t, var(--bkfd-tm-letter-spacing-d, normal));
+    word-spacing:   var(--bkfd-tm-word-spacing-t, var(--bkfd-tm-word-spacing-d, normal));
+  }
+  .bkfd-desc {
+    font-size:      var(--bkfd-td-font-size-t, var(--bkfd-td-font-size-d, 14px));
+    line-height:    var(--bkfd-td-line-height-t, var(--bkfd-td-line-height-d, 1.5));
+    letter-spacing: var(--bkfd-td-letter-spacing-t, var(--bkfd-td-letter-spacing-d, normal));
+    word-spacing:   var(--bkfd-td-word-spacing-t, var(--bkfd-td-word-spacing-d, normal));
+  }
+  .bkfd-badge {
+    font-size:      var(--bkfd-tb-font-size-t, var(--bkfd-tb-font-size-d, 11px));
+    line-height:    var(--bkfd-tb-line-height-t, var(--bkfd-tb-line-height-d, 1.2));
+    letter-spacing: var(--bkfd-tb-letter-spacing-t, var(--bkfd-tb-letter-spacing-d, normal));
+    word-spacing:   var(--bkfd-tb-word-spacing-t, var(--bkfd-tb-word-spacing-d, normal));
+  }
+  .bkfd-btn {
+    font-size:      var(--bkfd-tbt-font-size-t, var(--bkfd-tbt-font-size-d, 14px));
+    line-height:    var(--bkfd-tbt-line-height-t, var(--bkfd-tbt-line-height-d, 1.4));
+    letter-spacing: var(--bkfd-tbt-letter-spacing-t, var(--bkfd-tbt-letter-spacing-d, normal));
+    word-spacing:   var(--bkfd-tbt-word-spacing-t, var(--bkfd-tbt-word-spacing-d, normal));
+  }
+}
+@media (max-width: 767px) {
+  .bkfd-name {
+    font-size:      var(--bkfd-tn-font-size-m, var(--bkfd-tn-font-size-t, var(--bkfd-tn-font-size-d, 16px)));
+    line-height:    var(--bkfd-tn-line-height-m, var(--bkfd-tn-line-height-t, var(--bkfd-tn-line-height-d, 1.3)));
+    letter-spacing: var(--bkfd-tn-letter-spacing-m, var(--bkfd-tn-letter-spacing-t, var(--bkfd-tn-letter-spacing-d, normal)));
+    word-spacing:   var(--bkfd-tn-word-spacing-m, var(--bkfd-tn-word-spacing-t, var(--bkfd-tn-word-spacing-d, normal)));
+  }
+  .bkfd-meta {
+    font-size:      var(--bkfd-tm-font-size-m, var(--bkfd-tm-font-size-t, var(--bkfd-tm-font-size-d, 13px)));
+    line-height:    var(--bkfd-tm-line-height-m, var(--bkfd-tm-line-height-t, var(--bkfd-tm-line-height-d, 1.4)));
+    letter-spacing: var(--bkfd-tm-letter-spacing-m, var(--bkfd-tm-letter-spacing-t, var(--bkfd-tm-letter-spacing-d, normal)));
+    word-spacing:   var(--bkfd-tm-word-spacing-m, var(--bkfd-tm-word-spacing-t, var(--bkfd-tm-word-spacing-d, normal)));
+  }
+  .bkfd-desc {
+    font-size:      var(--bkfd-td-font-size-m, var(--bkfd-td-font-size-t, var(--bkfd-td-font-size-d, 14px)));
+    line-height:    var(--bkfd-td-line-height-m, var(--bkfd-td-line-height-t, var(--bkfd-td-line-height-d, 1.5)));
+    letter-spacing: var(--bkfd-td-letter-spacing-m, var(--bkfd-td-letter-spacing-t, var(--bkfd-td-letter-spacing-d, normal)));
+    word-spacing:   var(--bkfd-td-word-spacing-m, var(--bkfd-td-word-spacing-t, var(--bkfd-td-word-spacing-d, normal)));
+  }
+  .bkfd-badge {
+    font-size:      var(--bkfd-tb-font-size-m, var(--bkfd-tb-font-size-t, var(--bkfd-tb-font-size-d, 11px)));
+    line-height:    var(--bkfd-tb-line-height-m, var(--bkfd-tb-line-height-t, var(--bkfd-tb-line-height-d, 1.2)));
+    letter-spacing: var(--bkfd-tb-letter-spacing-m, var(--bkfd-tb-letter-spacing-t, var(--bkfd-tb-letter-spacing-d, normal)));
+    word-spacing:   var(--bkfd-tb-word-spacing-m, var(--bkfd-tb-word-spacing-t, var(--bkfd-tb-word-spacing-d, normal)));
+  }
+  .bkfd-btn {
+    font-size:      var(--bkfd-tbt-font-size-m, var(--bkfd-tbt-font-size-t, var(--bkfd-tbt-font-size-d, 14px)));
+    line-height:    var(--bkfd-tbt-line-height-m, var(--bkfd-tbt-line-height-t, var(--bkfd-tbt-line-height-d, 1.4)));
+    letter-spacing: var(--bkfd-tbt-letter-spacing-m, var(--bkfd-tbt-letter-spacing-t, var(--bkfd-tbt-letter-spacing-d, normal)));
+    word-spacing:   var(--bkfd-tbt-word-spacing-m, var(--bkfd-tbt-word-spacing-t, var(--bkfd-tbt-word-spacing-d, normal)));
+  }
+}
+
+/* ---- Responsive layout ---- */
+@media (max-width: 600px) {
+  .bkfd-wrap { flex-direction: column; align-items: flex-start; }
+  .bkfd-btn { width: 100%; justify-content: center; }
+}

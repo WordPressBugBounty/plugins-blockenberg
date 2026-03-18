@@ -1,0 +1,202 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/project-brief",
+    "title": "Project Brief",
+    "description": "A structured project brief with goals, deliverables, stakeholders, risks, and budget.",
+    "category": "bkbg-blog",
+    "icon": "clipboard",
+    "keywords": [
+        "project",
+        "brief",
+        "plan",
+        "scope",
+        "deliverables",
+        "stakeholders",
+        "risks"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-project-brief-editor",
+    "editorStyle": "bkbg-project-brief-style",
+    "style": "bkbg-project-brief-style",
+    "viewScript": "bkbg-project-brief-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "projectName": {
+            "type": "string",
+            "default": "Acme Platform Redesign"
+        },
+        "projectType": {
+            "type": "string",
+            "default": "Web Application"
+        },
+        "status": {
+            "type": "string",
+            "default": "active"
+        },
+        "client": {
+            "type": "string",
+            "default": "Acme Corporation"
+        },
+        "owner": {
+            "type": "string",
+            "default": "Jane Smith"
+        },
+        "startDate": {
+            "type": "string",
+            "default": "March 1, 2026"
+        },
+        "endDate": {
+            "type": "string",
+            "default": "August 31, 2026"
+        },
+        "showDates": {
+            "type": "boolean",
+            "default": true
+        },
+        "overview": {
+            "type": "string",
+            "default": "A complete redesign of the Acme customer-facing platform focusing on improved user experience, performance, and accessibility. The project encompasses UI/UX redesign, frontend rebuild, and integration with the new API layer."
+        },
+        "goals": {
+            "type": "array",
+            "default": [
+                "Reduce page load time by 40% across all core views",
+                "Achieve WCAG 2.1 AA accessibility compliance",
+                "Increase mobile conversion rate by 25%",
+                "Unify design system across 6 product areas"
+            ]
+        },
+        "deliverables": {
+            "type": "array",
+            "default": [
+                "Updated design system and component library",
+                "Redesigned customer portal (40+ screens)",
+                "Mobile-responsive checkout and onboarding flows",
+                "Performance audit report and optimisation",
+                "Accessibility audit and remediation"
+            ]
+        },
+        "stakeholders": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Jane Smith",
+                    "role": "Project Owner"
+                },
+                {
+                    "name": "Tom Bradley",
+                    "role": "Engineering Lead"
+                },
+                {
+                    "name": "Sara Park",
+                    "role": "Design Lead"
+                },
+                {
+                    "name": "Mike Chen",
+                    "role": "Client Sponsor"
+                }
+            ]
+        },
+        "risks": {
+            "type": "array",
+            "default": [
+                {
+                    "risk": "API delays from third-party vendor",
+                    "likelihood": "medium",
+                    "impact": "high"
+                },
+                {
+                    "risk": "Design scope creep across milestones",
+                    "likelihood": "high",
+                    "impact": "medium"
+                },
+                {
+                    "risk": "Resource availability during Q2",
+                    "likelihood": "low",
+                    "impact": "medium"
+                }
+            ]
+        },
+        "budget": {
+            "type": "string",
+            "default": "$240,000"
+        },
+        "showBudget": {
+            "type": "boolean",
+            "default": true
+        },
+        "notes": {
+            "type": "string",
+            "default": ""
+        },
+        "showNotes": {
+            "type": "boolean",
+            "default": false
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "headerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "sectionTitleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "bodyTextColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "goalDotColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "delivDotColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        }
+    }
+}

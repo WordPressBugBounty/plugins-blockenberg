@@ -1,0 +1,163 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/review-schema",
+    "title": "Review Schema",
+    "description": "Displays an aggregate star rating with Schema.org JSON-LD markup for rich search results.",
+    "category": "bkbg-blog",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-review-schema-editor",
+    "style": "bkbg-review-schema-style",
+    "viewScript": "bkbg-review-schema-frontend",
+    "icon": "star-filled",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "itemName": {
+            "type": "string",
+            "default": "Our Product"
+        },
+        "itemType": {
+            "type": "string",
+            "default": "Product"
+        },
+        "description": {
+            "type": "string",
+            "default": ""
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "ratingValue": {
+            "type": "number",
+            "default": 4.8
+        },
+        "ratingCount": {
+            "type": "integer",
+            "default": 127
+        },
+        "bestRating": {
+            "type": "integer",
+            "default": 5
+        },
+        "worstRating": {
+            "type": "integer",
+            "default": 1
+        },
+        "reviews": {
+            "type": "array",
+            "default": [
+                {
+                    "author": "Alex M.",
+                    "date": "2024-01-15",
+                    "rating": 5,
+                    "body": "Absolutely love it! Exceeded all expectations."
+                },
+                {
+                    "author": "Sarah K.",
+                    "date": "2024-02-03",
+                    "rating": 5,
+                    "body": "Top quality and great support. Highly recommend."
+                },
+                {
+                    "author": "James L.",
+                    "date": "2024-02-20",
+                    "rating": 4,
+                    "body": "Very good overall, minor improvements possible."
+                }
+            ]
+        },
+        "showReviews": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSchema": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "card"
+        },
+        "starSize": {
+            "type": "integer",
+            "default": 32
+        },
+        "reviewColumns": {
+            "type": "integer",
+            "default": 3
+        },
+        "cardRadius": {
+            "type": "integer",
+            "default": 16
+        },
+        "starColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "starEmpty": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "bodyColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "authorColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "ratingSize": {
+            "type": "integer",
+            "default": 56
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "fontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

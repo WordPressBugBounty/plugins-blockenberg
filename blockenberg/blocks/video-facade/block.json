@@ -1,0 +1,176 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/video-facade",
+    "title": "Video Facade",
+    "category": "bkbg-media",
+    "icon": "video-alt3",
+    "description": "Performance-optimized video thumbnail that loads the actual YouTube or Vimeo player only on click. Eliminates heavy iframes on page load, improving Core Web Vitals. Supports custom thumbnails, overlay text, and animated play buttons.",
+    "keywords": [
+        "video",
+        "youtube",
+        "vimeo",
+        "thumbnail",
+        "facade",
+        "lazy",
+        "performance",
+        "embed",
+        "play"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-video-facade-editor",
+    "editorStyle": "bkbg-video-facade-style",
+    "style": "bkbg-video-facade-style",
+    "viewScript": "bkbg-video-facade-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "videoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "videoProvider": {
+            "type": "string",
+            "default": "youtube"
+        },
+        "videoId": {
+            "type": "string",
+            "default": "dQw4w9WgXcQ"
+        },
+        "thumbnailUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "thumbnailId": {
+            "type": "number",
+            "default": 0
+        },
+        "autoThumb": {
+            "type": "boolean",
+            "default": true
+        },
+        "overlayColor": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "overlayOpacity": {
+            "type": "number",
+            "default": 35
+        },
+        "playStyle": {
+            "type": "string",
+            "default": "circle"
+        },
+        "playColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "playBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "playSize": {
+            "type": "number",
+            "default": 72
+        },
+        "playPulsing": {
+            "type": "boolean",
+            "default": true
+        },
+        "aspectRatio": {
+            "type": "string",
+            "default": "16-9"
+        },
+        "title": {
+            "type": "string",
+            "default": ""
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": false
+        },
+        "subtitle": {
+            "type": "string",
+            "default": ""
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": false
+        },
+        "titlePosition": {
+            "type": "string",
+            "default": "center"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.85)"
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 16
+        },
+        "caption": {
+            "type": "string",
+            "default": ""
+        },
+        "showCaption": {
+            "type": "boolean",
+            "default": false
+        },
+        "captionColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "captionSize": {
+            "type": "number",
+            "default": 13
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "captionTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 14
+        },
+        "showShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        }
+    }
+}

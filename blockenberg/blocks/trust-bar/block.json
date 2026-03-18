@@ -1,0 +1,171 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/trust-bar",
+    "title": "Trust Bar",
+    "category": "bkbg-marketing",
+    "icon": "shield",
+    "description": "A horizontal row of trust, security, and compliance badges — SOC 2, GDPR, SSL, uptime SLAs, etc. Different from Social Proof Bar (user counts) and Logo Wall (brand logos).",
+    "keywords": [
+        "trust",
+        "security",
+        "compliance",
+        "badges",
+        "certifications",
+        "gdpr",
+        "ssl",
+        "soc2",
+        "guarantee"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-trust-bar-editor",
+    "editorStyle": "bkbg-trust-bar-style",
+    "style": "bkbg-trust-bar-style",
+    "viewScript": "bkbg-trust-bar-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "t1",
+                    "icon": "shield",
+                    "label": "SOC 2 Certified",
+                    "sublabel": "Type II audited",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "t2",
+                    "icon": "lock",
+                    "label": "256-bit SSL",
+                    "sublabel": "End-to-end encrypted",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "t3",
+                    "icon": "check",
+                    "label": "GDPR Ready",
+                    "sublabel": "EU data regulations",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "t4",
+                    "icon": "bolt",
+                    "label": "99.9% Uptime",
+                    "sublabel": "SLA guaranteed",
+                    "imageUrl": "",
+                    "imageId": 0
+                },
+                {
+                    "id": "t5",
+                    "icon": "headphones",
+                    "label": "24/7 Support",
+                    "sublabel": "Human, not bots",
+                    "imageUrl": "",
+                    "imageId": 0
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "row"
+        },
+        "itemStyle": {
+            "type": "string",
+            "default": "icon-top"
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "plain"
+        },
+        "showDivider": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSublabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 32
+        },
+        "iconBgSize": {
+            "type": "number",
+            "default": 56
+        },
+        "iconBgRadius": {
+            "type": "number",
+            "default": 50
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "sublabelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "gap": {
+            "type": "number",
+            "default": 40
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 20
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "iconColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "iconBg": {
+            "type": "string",
+            "default": "#f5f0ff"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "sublabelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 32
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 32
+        }
+    }
+}

@@ -1,0 +1,253 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/problem-solution",
+    "title": "Problem / Solution",
+    "description": "Side-by-side problem vs solution section \u2014 two contrast columns each with icon, title, and feature lists. A classic landing page persuasion block.",
+    "icon": "editor-contract",
+    "category": "bkbg-marketing",
+    "keywords": [
+        "problem",
+        "solution",
+        "comparison",
+        "before after",
+        "vs",
+        "old way",
+        "new way"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-problem-solution-editor",
+    "style": "bkbg-problem-solution-style",
+    "viewScript": "bkbg-problem-solution-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "style": {
+            "type": "string",
+            "default": "split"
+        },
+        "problemIcon": {
+            "type": "string",
+            "default": "\ud83d\ude29"
+        },
+        "problemIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "problemIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "problemIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "problemLabel": {
+            "type": "string",
+            "default": "The Problem"
+        },
+        "problemTitle": {
+            "type": "string",
+            "default": "Struggling with the old way?"
+        },
+        "problemItems": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "pi1",
+                    "text": "Wasted hours on repetitive manual tasks"
+                },
+                {
+                    "id": "pi2",
+                    "text": "Disconnected tools that don't work together"
+                },
+                {
+                    "id": "pi3",
+                    "text": "Teams burned out from context-switching"
+                },
+                {
+                    "id": "pi4",
+                    "text": "Unreliable results and missed deadlines"
+                },
+                {
+                    "id": "pi5",
+                    "text": "No clear visibility into project status"
+                }
+            ]
+        },
+        "problemBg": {
+            "type": "string",
+            "default": "#fff1f2"
+        },
+        "problemColor": {
+            "type": "string",
+            "default": "#9f1239"
+        },
+        "problemIconBg": {
+            "type": "string",
+            "default": "#fecdd3"
+        },
+        "problemItemIcon": {
+            "type": "string",
+            "default": "\u2715"
+        },
+        "problemItemIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "problemItemIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "problemItemIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "solutionIcon": {
+            "type": "string",
+            "default": "\ud83c\udfaf"
+        },
+        "solutionIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "solutionIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "solutionIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "solutionLabel": {
+            "type": "string",
+            "default": "The Solution"
+        },
+        "solutionTitle": {
+            "type": "string",
+            "default": "Meet a smarter way forward."
+        },
+        "solutionItems": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "si1",
+                    "text": "Automate workflows in minutes, not months"
+                },
+                {
+                    "id": "si2",
+                    "text": "All your tools, unified in one platform"
+                },
+                {
+                    "id": "si3",
+                    "text": "Teams focus on what actually moves the needle"
+                },
+                {
+                    "id": "si4",
+                    "text": "Consistent, predictable results every time"
+                },
+                {
+                    "id": "si5",
+                    "text": "Real-time dashboards with full transparency"
+                }
+            ]
+        },
+        "solutionBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "solutionColor": {
+            "type": "string",
+            "default": "#14532d"
+        },
+        "solutionIconBg": {
+            "type": "string",
+            "default": "#bbf7d0"
+        },
+        "solutionItemIcon": {
+            "type": "string",
+            "default": "\u2713"
+        },
+        "solutionItemIconType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "solutionItemIconDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "solutionItemIconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "dividerLabel": {
+            "type": "string",
+            "default": "vs"
+        },
+        "dividerVertical": {
+            "type": "boolean",
+            "default": false
+        },
+        "dividerMobileRotate": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDivider": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "gap": {
+            "type": "number",
+            "default": 24
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 20
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingV": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingH": {
+            "type": "number",
+            "default": 40
+        },
+        "itemSpacing": {
+            "type": "number",
+            "default": 12
+        },
+        "dividerBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "dividerTextColor": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "itemTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

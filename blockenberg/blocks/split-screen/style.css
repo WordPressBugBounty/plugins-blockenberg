@@ -1,0 +1,148 @@
+/* Split Screen — bkss- */
+.bkss-wrap {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.bkss-layout {
+  display: flex;
+  gap: var(--bkss-gap, 0px);
+  min-height: var(--bkss-min-h, 500px);
+}
+.bkss-left {
+  width: var(--bkss-left-w, 50%);
+  flex-shrink: 0;
+}
+.bkss-right {
+  flex: 1;
+}
+.bkss-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.bkss-heading {
+  margin: 0 0 12px;
+}
+.bkss-text {
+  margin: 0 0 20px;
+}
+.bkss-btn {
+  display: inline-block;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+/* ---- Typography CSS-var rules ---- */
+
+/* Left heading — ≥0,2,0 for h1-h4 */
+.bkss-left .bkss-heading {
+  font-family: var(--bkss-lh-font-family, inherit);
+  font-size: var(--bkss-lh-font-size-d, var(--bkss-lh-sz, 36px));
+  font-weight: var(--bkss-lh-font-weight, var(--bkss-lh-w, 700));
+  font-style: var(--bkss-lh-font-style, normal);
+  text-decoration: var(--bkss-lh-text-decoration, none);
+  text-transform: var(--bkss-lh-text-transform, none);
+  line-height: var(--bkss-lh-line-height-d, 1.2);
+  letter-spacing: var(--bkss-lh-letter-spacing-d, normal);
+  word-spacing: var(--bkss-lh-word-spacing-d, normal);
+}
+/* Left text */
+.bkss-left .bkss-text {
+  font-family: var(--bkss-lt-font-family, inherit);
+  font-size: var(--bkss-lt-font-size-d, 16px);
+  font-weight: var(--bkss-lt-font-weight, 400);
+  font-style: var(--bkss-lt-font-style, normal);
+  text-decoration: var(--bkss-lt-text-decoration, none);
+  text-transform: var(--bkss-lt-text-transform, none);
+  line-height: var(--bkss-lt-line-height-d, 1.6);
+  letter-spacing: var(--bkss-lt-letter-spacing-d, normal);
+  word-spacing: var(--bkss-lt-word-spacing-d, normal);
+}
+/* Left button — Rule 12 text-decoration on <a> */
+.bkss-left .bkss-btn {
+  font-family: var(--bkss-lb-font-family, inherit);
+  font-size: var(--bkss-lb-font-size-d, 14px);
+  font-weight: var(--bkss-lb-font-weight, 600);
+  font-style: var(--bkss-lb-font-style, normal);
+  text-decoration: var(--bkss-lb-text-decoration, none);
+  text-transform: var(--bkss-lb-text-transform, none);
+  line-height: var(--bkss-lb-line-height-d, normal);
+  letter-spacing: var(--bkss-lb-letter-spacing-d, normal);
+  word-spacing: var(--bkss-lb-word-spacing-d, normal);
+}
+/* Right heading — ≥0,2,0 for h1-h4 */
+.bkss-right .bkss-heading {
+  font-family: var(--bkss-rh-font-family, inherit);
+  font-size: var(--bkss-rh-font-size-d, var(--bkss-rh-sz, 36px));
+  font-weight: var(--bkss-rh-font-weight, var(--bkss-rh-w, 700));
+  font-style: var(--bkss-rh-font-style, normal);
+  text-decoration: var(--bkss-rh-text-decoration, none);
+  text-transform: var(--bkss-rh-text-transform, none);
+  line-height: var(--bkss-rh-line-height-d, 1.2);
+  letter-spacing: var(--bkss-rh-letter-spacing-d, normal);
+  word-spacing: var(--bkss-rh-word-spacing-d, normal);
+}
+/* Right text */
+.bkss-right .bkss-text {
+  font-family: var(--bkss-rt-font-family, inherit);
+  font-size: var(--bkss-rt-font-size-d, 16px);
+  font-weight: var(--bkss-rt-font-weight, 400);
+  font-style: var(--bkss-rt-font-style, normal);
+  text-decoration: var(--bkss-rt-text-decoration, none);
+  text-transform: var(--bkss-rt-text-transform, none);
+  line-height: var(--bkss-rt-line-height-d, 1.6);
+  letter-spacing: var(--bkss-rt-letter-spacing-d, normal);
+  word-spacing: var(--bkss-rt-word-spacing-d, normal);
+}
+/* Right button — Rule 12 text-decoration on <a> */
+.bkss-right .bkss-btn {
+  font-family: var(--bkss-rb-font-family, inherit);
+  font-size: var(--bkss-rb-font-size-d, 14px);
+  font-weight: var(--bkss-rb-font-weight, 600);
+  font-style: var(--bkss-rb-font-style, normal);
+  text-decoration: var(--bkss-rb-text-decoration, none);
+  text-transform: var(--bkss-rb-text-transform, none);
+  line-height: var(--bkss-rb-line-height-d, normal);
+  letter-spacing: var(--bkss-rb-letter-spacing-d, normal);
+  word-spacing: var(--bkss-rb-word-spacing-d, normal);
+}
+
+/* ---- Typography responsive — tablet ---- */
+@media (max-width: 1024px) {
+  .bkss-left .bkss-heading { font-size: var(--bkss-lh-font-size-t, var(--bkss-lh-font-size-d, var(--bkss-lh-sz, 36px))); line-height: var(--bkss-lh-line-height-t, var(--bkss-lh-line-height-d, 1.2)); letter-spacing: var(--bkss-lh-letter-spacing-t, var(--bkss-lh-letter-spacing-d, normal)); word-spacing: var(--bkss-lh-word-spacing-t, var(--bkss-lh-word-spacing-d, normal)); }
+  .bkss-left .bkss-text { font-size: var(--bkss-lt-font-size-t, var(--bkss-lt-font-size-d, 16px)); line-height: var(--bkss-lt-line-height-t, var(--bkss-lt-line-height-d, 1.6)); letter-spacing: var(--bkss-lt-letter-spacing-t, var(--bkss-lt-letter-spacing-d, normal)); word-spacing: var(--bkss-lt-word-spacing-t, var(--bkss-lt-word-spacing-d, normal)); }
+  .bkss-left .bkss-btn { font-size: var(--bkss-lb-font-size-t, var(--bkss-lb-font-size-d, 14px)); line-height: var(--bkss-lb-line-height-t, var(--bkss-lb-line-height-d, normal)); letter-spacing: var(--bkss-lb-letter-spacing-t, var(--bkss-lb-letter-spacing-d, normal)); word-spacing: var(--bkss-lb-word-spacing-t, var(--bkss-lb-word-spacing-d, normal)); }
+  .bkss-right .bkss-heading { font-size: var(--bkss-rh-font-size-t, var(--bkss-rh-font-size-d, var(--bkss-rh-sz, 36px))); line-height: var(--bkss-rh-line-height-t, var(--bkss-rh-line-height-d, 1.2)); letter-spacing: var(--bkss-rh-letter-spacing-t, var(--bkss-rh-letter-spacing-d, normal)); word-spacing: var(--bkss-rh-word-spacing-t, var(--bkss-rh-word-spacing-d, normal)); }
+  .bkss-right .bkss-text { font-size: var(--bkss-rt-font-size-t, var(--bkss-rt-font-size-d, 16px)); line-height: var(--bkss-rt-line-height-t, var(--bkss-rt-line-height-d, 1.6)); letter-spacing: var(--bkss-rt-letter-spacing-t, var(--bkss-rt-letter-spacing-d, normal)); word-spacing: var(--bkss-rt-word-spacing-t, var(--bkss-rt-word-spacing-d, normal)); }
+  .bkss-right .bkss-btn { font-size: var(--bkss-rb-font-size-t, var(--bkss-rb-font-size-d, 14px)); line-height: var(--bkss-rb-line-height-t, var(--bkss-rb-line-height-d, normal)); letter-spacing: var(--bkss-rb-letter-spacing-t, var(--bkss-rb-letter-spacing-d, normal)); word-spacing: var(--bkss-rb-word-spacing-t, var(--bkss-rb-word-spacing-d, normal)); }
+}
+
+/* ---- Typography responsive — mobile ---- */
+@media (max-width: 767px) {
+  .bkss-left .bkss-heading { font-size: var(--bkss-lh-font-size-m, var(--bkss-lh-font-size-t, var(--bkss-lh-font-size-d, var(--bkss-lh-sz, 36px)))); line-height: var(--bkss-lh-line-height-m, var(--bkss-lh-line-height-t, var(--bkss-lh-line-height-d, 1.2))); letter-spacing: var(--bkss-lh-letter-spacing-m, var(--bkss-lh-letter-spacing-t, var(--bkss-lh-letter-spacing-d, normal))); word-spacing: var(--bkss-lh-word-spacing-m, var(--bkss-lh-word-spacing-t, var(--bkss-lh-word-spacing-d, normal))); }
+  .bkss-left .bkss-text { font-size: var(--bkss-lt-font-size-m, var(--bkss-lt-font-size-t, var(--bkss-lt-font-size-d, 16px))); line-height: var(--bkss-lt-line-height-m, var(--bkss-lt-line-height-t, var(--bkss-lt-line-height-d, 1.6))); letter-spacing: var(--bkss-lt-letter-spacing-m, var(--bkss-lt-letter-spacing-t, var(--bkss-lt-letter-spacing-d, normal))); word-spacing: var(--bkss-lt-word-spacing-m, var(--bkss-lt-word-spacing-t, var(--bkss-lt-word-spacing-d, normal))); }
+  .bkss-left .bkss-btn { font-size: var(--bkss-lb-font-size-m, var(--bkss-lb-font-size-t, var(--bkss-lb-font-size-d, 14px))); line-height: var(--bkss-lb-line-height-m, var(--bkss-lb-line-height-t, var(--bkss-lb-line-height-d, normal))); letter-spacing: var(--bkss-lb-letter-spacing-m, var(--bkss-lb-letter-spacing-t, var(--bkss-lb-letter-spacing-d, normal))); word-spacing: var(--bkss-lb-word-spacing-m, var(--bkss-lb-word-spacing-t, var(--bkss-lb-word-spacing-d, normal))); }
+  .bkss-right .bkss-heading { font-size: var(--bkss-rh-font-size-m, var(--bkss-rh-font-size-t, var(--bkss-rh-font-size-d, var(--bkss-rh-sz, 36px)))); line-height: var(--bkss-rh-line-height-m, var(--bkss-rh-line-height-t, var(--bkss-rh-line-height-d, 1.2))); letter-spacing: var(--bkss-rh-letter-spacing-m, var(--bkss-rh-letter-spacing-t, var(--bkss-rh-letter-spacing-d, normal))); word-spacing: var(--bkss-rh-word-spacing-m, var(--bkss-rh-word-spacing-t, var(--bkss-rh-word-spacing-d, normal))); }
+  .bkss-right .bkss-text { font-size: var(--bkss-rt-font-size-m, var(--bkss-rt-font-size-t, var(--bkss-rt-font-size-d, 16px))); line-height: var(--bkss-rt-line-height-m, var(--bkss-rt-line-height-t, var(--bkss-rt-line-height-d, 1.6))); letter-spacing: var(--bkss-rt-letter-spacing-m, var(--bkss-rt-letter-spacing-t, var(--bkss-rt-letter-spacing-d, normal))); word-spacing: var(--bkss-rt-word-spacing-m, var(--bkss-rt-word-spacing-t, var(--bkss-rt-word-spacing-d, normal))); }
+  .bkss-right .bkss-btn { font-size: var(--bkss-rb-font-size-m, var(--bkss-rb-font-size-t, var(--bkss-rb-font-size-d, 14px))); line-height: var(--bkss-rb-line-height-m, var(--bkss-rb-line-height-t, var(--bkss-rb-line-height-d, normal))); letter-spacing: var(--bkss-rb-letter-spacing-m, var(--bkss-rb-letter-spacing-t, var(--bkss-rb-letter-spacing-d, normal))); word-spacing: var(--bkss-rb-word-spacing-m, var(--bkss-rb-word-spacing-t, var(--bkss-rb-word-spacing-d, normal))); }
+}
+.bkss-btn:hover { opacity: 0.85; }
+.bkss-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .bkss-stack-mobile .bkss-layout {
+    flex-direction: column;
+  }
+  .bkss-stack-mobile .bkss-left,
+  .bkss-stack-mobile .bkss-right {
+    width: 100% !important;
+    flex: none !important;
+  }
+}

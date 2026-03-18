@@ -1,0 +1,176 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/macro-calculator",
+    "version": "1.0.0",
+    "title": "Macro Calculator",
+    "category": "bkbg-calculators",
+    "icon": "food",
+    "description": "Calculate daily macronutrients (protein, carbs, fat) based on TDEE and fitness goals.",
+    "keywords": [
+        "macro",
+        "macronutrient",
+        "protein",
+        "carbs",
+        "fat",
+        "fitness",
+        "diet",
+        "tdee",
+        "calories"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-macro-calculator-editor",
+    "style": "bkbg-macro-calculator-style",
+    "viewScript": "bkbg-macro-calculator-frontend",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Macro Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Find your ideal daily macronutrient targets"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultUnit": {
+            "type": "string",
+            "default": "metric"
+        },
+        "defaultGender": {
+            "type": "string",
+            "default": "male"
+        },
+        "defaultAge": {
+            "type": "number",
+            "default": 30
+        },
+        "defaultWeight": {
+            "type": "number",
+            "default": 75
+        },
+        "defaultHeight": {
+            "type": "number",
+            "default": 175
+        },
+        "defaultActivity": {
+            "type": "string",
+            "default": "moderate"
+        },
+        "defaultGoal": {
+            "type": "string",
+            "default": "maintain"
+        },
+        "showPieChart": {
+            "type": "boolean",
+            "default": true
+        },
+        "showFoodExamples": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": ""
+        },
+        "calorieBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "calorieColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "proteinColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "carbColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "fatColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "statBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "statBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "inputBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "calorieSize": {
+            "type": "number",
+            "default": 52
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 580
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

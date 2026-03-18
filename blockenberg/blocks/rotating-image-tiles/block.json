@@ -1,0 +1,163 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/rotating-image-tiles",
+    "title": "Rotating Image Tiles",
+    "category": "bkbg-effects",
+    "description": "Responsive grid of tiles that continuously flip to reveal a second image, with staggered timing.",
+    "keywords": [
+        "rotate",
+        "flip",
+        "tiles",
+        "grid",
+        "images",
+        "gallery",
+        "animation"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-rotating-image-tiles-editor",
+    "style": "bkbg-rotating-image-tiles-style",
+    "viewScript": "bkbg-rotating-image-tiles-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "tiles": {
+            "type": "array",
+            "default": [
+                {
+                    "frontUrl": "",
+                    "frontAlt": "Front 1",
+                    "backUrl": "",
+                    "backAlt": "Back 1",
+                    "frontBg": "#6366f1",
+                    "backBg": "#a5b4fc",
+                    "label": ""
+                },
+                {
+                    "frontUrl": "",
+                    "frontAlt": "Front 2",
+                    "backUrl": "",
+                    "backAlt": "Back 2",
+                    "frontBg": "#8b5cf6",
+                    "backBg": "#c4b5fd",
+                    "label": ""
+                },
+                {
+                    "frontUrl": "",
+                    "frontAlt": "Front 3",
+                    "backUrl": "",
+                    "backAlt": "Back 3",
+                    "frontBg": "#ec4899",
+                    "backBg": "#f9a8d4",
+                    "label": ""
+                },
+                {
+                    "frontUrl": "",
+                    "frontAlt": "Front 4",
+                    "backUrl": "",
+                    "backAlt": "Back 4",
+                    "frontBg": "#f59e0b",
+                    "backBg": "#fde68a",
+                    "label": ""
+                },
+                {
+                    "frontUrl": "",
+                    "frontAlt": "Front 5",
+                    "backUrl": "",
+                    "backAlt": "Back 5",
+                    "frontBg": "#10b981",
+                    "backBg": "#6ee7b7",
+                    "label": ""
+                },
+                {
+                    "frontUrl": "",
+                    "frontAlt": "Front 6",
+                    "backUrl": "",
+                    "backAlt": "Back 6",
+                    "frontBg": "#3b82f6",
+                    "backBg": "#93c5fd",
+                    "label": ""
+                }
+            ]
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "tileWidth": {
+            "type": "number",
+            "default": 300
+        },
+        "tileHeight": {
+            "type": "number",
+            "default": 200
+        },
+        "tileRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "flipDuration": {
+            "type": "number",
+            "default": 800
+        },
+        "staggerDelay": {
+            "type": "number",
+            "default": 300
+        },
+        "autoFlip": {
+            "type": "boolean",
+            "default": true
+        },
+        "autoInterval": {
+            "type": "number",
+            "default": 3000
+        },
+        "flipOnHover": {
+            "type": "boolean",
+            "default": true
+        },
+        "flipAxis": {
+            "type": "string",
+            "default": "Y"
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": false
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 14
+        },
+        "gap": {
+            "type": "number",
+            "default": 16
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "labelBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.5)"
+        },
+        "labelFontWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "labelLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

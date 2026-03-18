@@ -1,0 +1,91 @@
+/* Avatar Group Block — bkag- prefix */
+.bkag-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.bkag-group {
+  display: flex;
+  align-items: center;
+}
+.bkag-avatar {
+  width: var(--bkag-size, 48px);
+  height: var(--bkag-size, 48px);
+  border-radius: 50%;
+  object-fit: cover;
+  border: var(--bkag-brd, 3px solid #fff);
+  box-shadow: 0 2px 6px rgba(0,0,0,.12);
+  position: relative;
+  transition: transform .2s, z-index .2s;
+  z-index: 1;
+}
+.bkag-avatar:hover {
+  transform: scale(1.1) translateY(-2px);
+  z-index: 10;
+}
+
+/* ── Counter ──────────────────────────────────── */
+.bkag-counter {
+  width: var(--bkag-size, 48px);
+  height: var(--bkag-size, 48px);
+  border-radius: 50%;
+  background: var(--bkag-cBg, #6c3fb5);
+  color: var(--bkag-cText, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--bkag-brd, 3px solid #fff);
+  font-family: var(--bkag-counter-font-family, inherit);
+  font-size: var(--bkag-counter-font-size-d, var(--bkag-counter-font-size, 13px));
+  font-weight: var(--bkag-counter-font-weight, 700);
+  font-style: var(--bkag-counter-font-style, normal);
+  text-transform: var(--bkag-counter-text-transform, none);
+  text-decoration: var(--bkag-counter-text-decoration, none);
+  line-height: var(--bkag-counter-line-height-d, var(--bkag-counter-line-height, 1));
+  letter-spacing: var(--bkag-counter-letter-spacing-d, var(--bkag-counter-letter-spacing, normal));
+  word-spacing: var(--bkag-counter-word-spacing-d, var(--bkag-counter-word-spacing, normal));
+}
+
+/* ── Label ────────────────────────────────────── */
+.bkag-label {
+  font-family: var(--bkag-label-font-family, inherit);
+  font-size: var(--bkag-label-font-size-d, var(--bkag-label-font-size, 14px));
+  font-weight: var(--bkag-label-font-weight, normal);
+  font-style: var(--bkag-label-font-style, normal);
+  text-transform: var(--bkag-label-text-transform, none);
+  text-decoration: var(--bkag-label-text-decoration, none);
+  line-height: var(--bkag-label-line-height-d, var(--bkag-label-line-height, 1.4));
+  letter-spacing: var(--bkag-label-letter-spacing-d, var(--bkag-label-letter-spacing, normal));
+  word-spacing: var(--bkag-label-word-spacing-d, var(--bkag-label-word-spacing, normal));
+  color: #6b7280;
+}
+
+/* ── Responsive Typography ────────────────────── */
+@media (max-width: 1024px) {
+  .bkag-counter {
+    font-size: var(--bkag-counter-font-size-t, var(--bkag-counter-font-size-d, var(--bkag-counter-font-size, 13px)));
+    line-height: var(--bkag-counter-line-height-t, var(--bkag-counter-line-height-d, var(--bkag-counter-line-height, 1)));
+    letter-spacing: var(--bkag-counter-letter-spacing-t, var(--bkag-counter-letter-spacing-d, var(--bkag-counter-letter-spacing, normal)));
+    word-spacing: var(--bkag-counter-word-spacing-t, var(--bkag-counter-word-spacing-d, var(--bkag-counter-word-spacing, normal)));
+  }
+  .bkag-label {
+    font-size: var(--bkag-label-font-size-t, var(--bkag-label-font-size-d, var(--bkag-label-font-size, 14px)));
+    line-height: var(--bkag-label-line-height-t, var(--bkag-label-line-height-d, var(--bkag-label-line-height, 1.4)));
+    letter-spacing: var(--bkag-label-letter-spacing-t, var(--bkag-label-letter-spacing-d, var(--bkag-label-letter-spacing, normal)));
+    word-spacing: var(--bkag-label-word-spacing-t, var(--bkag-label-word-spacing-d, var(--bkag-label-word-spacing, normal)));
+  }
+}
+@media (max-width: 767px) {
+  .bkag-counter {
+    font-size: var(--bkag-counter-font-size-m, var(--bkag-counter-font-size-t, var(--bkag-counter-font-size-d, var(--bkag-counter-font-size, 13px))));
+    line-height: var(--bkag-counter-line-height-m, var(--bkag-counter-line-height-t, var(--bkag-counter-line-height-d, var(--bkag-counter-line-height, 1))));
+    letter-spacing: var(--bkag-counter-letter-spacing-m, var(--bkag-counter-letter-spacing-t, var(--bkag-counter-letter-spacing-d, var(--bkag-counter-letter-spacing, normal))));
+    word-spacing: var(--bkag-counter-word-spacing-m, var(--bkag-counter-word-spacing-t, var(--bkag-counter-word-spacing-d, var(--bkag-counter-word-spacing, normal))));
+  }
+  .bkag-label {
+    font-size: var(--bkag-label-font-size-m, var(--bkag-label-font-size-t, var(--bkag-label-font-size-d, var(--bkag-label-font-size, 14px))));
+    line-height: var(--bkag-label-line-height-m, var(--bkag-label-line-height-t, var(--bkag-label-line-height-d, var(--bkag-label-line-height, 1.4))));
+    letter-spacing: var(--bkag-label-letter-spacing-m, var(--bkag-label-letter-spacing-t, var(--bkag-label-letter-spacing-d, var(--bkag-label-letter-spacing, normal))));
+    word-spacing: var(--bkag-label-word-spacing-m, var(--bkag-label-word-spacing-t, var(--bkag-label-word-spacing-d, var(--bkag-label-word-spacing, normal))));
+  }
+}

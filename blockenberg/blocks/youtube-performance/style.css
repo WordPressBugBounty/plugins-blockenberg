@@ -1,0 +1,247 @@
+/* ========================================
+   YouTube Performance Embed
+   ======================================== */
+
+/* Theme safety */
+.wp-block-blockenberg-youtube-performance,
+.wp-block-blockenberg-youtube-performance .bkbg-ytp-wrap {
+    border: 0;
+    outline: 0;
+}
+
+.bkbg-ytp-wrap {
+    --bkbg-ytp-radius: 12px;
+    --bkbg-ytp-min-height: 260px;
+    --bkbg-ytp-play-size: 64px;
+    --bkbg-ytp-play-bg: #01adee;
+    --bkbg-ytp-play-color: #ffffff;
+    --bkbg-ytp-play-hover: 1.05;
+
+    width: 100%;
+}
+
+.bkbg-ytp-aspect {
+    width: 100%;
+}
+
+.bkbg-ytp-inner {
+    position: relative;
+    width: 100%;
+    min-height: var(--bkbg-ytp-min-height);
+    border-radius: var(--bkbg-ytp-radius);
+    overflow: hidden;
+    background: #0b1220;
+}
+
+.bkbg-ytp-wrap.has-shadow .bkbg-ytp-inner {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+}
+
+.bkbg-ytp-media-layer {
+    position: absolute;
+    inset: 0;
+}
+
+.bkbg-ytp-poster-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transform: scale(1.02);
+}
+
+.bkbg-ytp-iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.bkbg-ytp-embed {
+    position: absolute;
+    inset: 0;
+}
+
+.bkbg-ytp-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    z-index: 2;
+}
+
+.bkbg-ytp-wrap.is-playing .bkbg-ytp-media-layer,
+.bkbg-ytp-wrap.is-playing .bkbg-ytp-play,
+.bkbg-ytp-wrap.is-playing .bkbg-ytp-title {
+    display: none;
+}
+
+.bkbg-ytp-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--bkbg-ytp-play-size);
+    height: var(--bkbg-ytp-play-size);
+    border: 0;
+    background: var(--bkbg-ytp-play-bg);
+    color: var(--bkbg-ytp-play-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    transition: transform 160ms ease, background 160ms ease;
+    z-index: 3;
+}
+
+.bkbg-ytp-wrap.is-play-circle .bkbg-ytp-play {
+    border-radius: 999px;
+}
+
+.bkbg-ytp-wrap.is-play-youtube .bkbg-ytp-play {
+    width: calc(var(--bkbg-ytp-play-size) * 1.65);
+    height: calc(var(--bkbg-ytp-play-size) * 1.08);
+    border-radius: calc(var(--bkbg-ytp-play-size) * 0.28);
+    background: var(--bkbg-ytp-play-bg);
+}
+
+.bkbg-ytp-wrap.is-play-rounded .bkbg-ytp-play {
+    border-radius: 16px;
+}
+
+.bkbg-ytp-wrap.is-play-square .bkbg-ytp-play {
+    border-radius: 8px;
+}
+
+.bkbg-ytp-play:hover {
+    transform: translate(-50%, -50%) scale(var(--bkbg-ytp-play-hover));
+}
+
+.bkbg-ytp-play:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.bkbg-ytp-play-triangle {
+    width: 0;
+    height: 0;
+    border-left: calc(var(--bkbg-ytp-play-size) * 0.28) solid currentColor;
+    border-top: calc(var(--bkbg-ytp-play-size) * 0.17) solid transparent;
+    border-bottom: calc(var(--bkbg-ytp-play-size) * 0.17) solid transparent;
+    margin-left: calc(var(--bkbg-ytp-play-size) * 0.06);
+}
+
+.bkbg-ytp-title {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    z-index: 3;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.55);
+    font-family:      var(--bkytp-tt-font-family, inherit);
+    font-size:        var(--bkytp-tt-font-size-d, 15px);
+    font-weight:      var(--bkytp-tt-font-weight, 700);
+    line-height:      var(--bkytp-tt-line-height-d);
+    letter-spacing:   var(--bkytp-tt-letter-spacing-d);
+    word-spacing:     var(--bkytp-tt-word-spacing-d);
+    text-transform:   var(--bkytp-tt-text-transform);
+    font-style:       var(--bkytp-tt-font-style);
+    text-decoration:  var(--bkytp-tt-text-decoration);
+}
+
+.bkbg-ytp-hint {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    z-index: 3;
+    color: rgba(255,255,255,0.9);
+    font-size: 12px;
+    background: rgba(0,0,0,0.35);
+    padding: 8px 10px;
+    border-radius: 10px;
+}
+
+.bkbg-ytp-empty {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(255,255,255,0.88);
+    padding: 18px;
+}
+
+/* Inspector helpers */
+.bkbg-ytp-media {
+    display: grid;
+    gap: 10px;
+}
+
+.bkbg-ytp-media-thumb {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.12);
+}
+
+.bkbg-ytp-media-placeholder {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    border: 1px dashed rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0,0,0,0.6);
+    font-size: 12px;
+}
+
+.bkbg-ytp-color-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.bkbg-ytp-color-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.12);
+    cursor: pointer;
+}
+
+/* Editor-only: show overlay for poster */
+.editor-styles-wrapper .bkbg-ytp-inner {
+    outline: 1px dashed rgba(0, 124, 186, 0.25);
+    outline-offset: -1px;
+}
+
+@media (max-width: 1024px) {
+    .bkbg-ytp-title {
+        font-size:        var(--bkytp-tt-font-size-t, var(--bkytp-tt-font-size-d, 15px));
+        line-height:      var(--bkytp-tt-line-height-t, var(--bkytp-tt-line-height-d));
+        letter-spacing:   var(--bkytp-tt-letter-spacing-t, var(--bkytp-tt-letter-spacing-d));
+        word-spacing:     var(--bkytp-tt-word-spacing-t, var(--bkytp-tt-word-spacing-d));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-ytp-title {
+        font-size:        var(--bkytp-tt-font-size-m, var(--bkytp-tt-font-size-t, var(--bkytp-tt-font-size-d, 15px)));
+        line-height:      var(--bkytp-tt-line-height-m, var(--bkytp-tt-line-height-t, var(--bkytp-tt-line-height-d)));
+        letter-spacing:   var(--bkytp-tt-letter-spacing-m, var(--bkytp-tt-letter-spacing-t, var(--bkytp-tt-letter-spacing-d)));
+        word-spacing:     var(--bkytp-tt-word-spacing-m, var(--bkytp-tt-word-spacing-t, var(--bkytp-tt-word-spacing-d)));
+    }
+}

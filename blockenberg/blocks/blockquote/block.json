@@ -1,0 +1,225 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/blockquote",
+    "title": "Blockquote / Pull Quote",
+    "category": "bkbg-content",
+    "icon": "format-quote",
+    "description": "Stylish quote block with accent line or decorative marks, author name, role and photo.",
+    "keywords": [
+        "quote",
+        "blockquote",
+        "pullquote",
+        "citation",
+        "testimonial",
+        "author"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-blockquote-editor",
+    "editorStyle": "bkbg-blockquote-style",
+    "style": "bkbg-blockquote-style",
+    "viewScript": "bkbg-blockquote-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "blockId": {
+            "type": "string",
+            "default": ""
+        },
+        "quoteText": {
+            "type": "string",
+            "default": "The best way to predict the future is to create it."
+        },
+        "quoteStyle": {
+            "type": "string",
+            "default": "line"
+        },
+        "quoteAlign": {
+            "type": "string",
+            "default": "left"
+        },
+        "quoteFontSize": {
+            "type": "number",
+            "default": 22
+        },
+        "quoteFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "quoteFontStyle": {
+            "type": "string",
+            "default": "italic"
+        },
+        "quoteLH": {
+            "type": "number",
+            "default": 1.65
+        },
+        "quoteColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "quoteSpacing": {
+            "type": "number",
+            "default": 20
+        },
+        "showMark": {
+            "type": "boolean",
+            "default": true
+        },
+        "markStyle": {
+            "type": "string",
+            "default": "fancy"
+        },
+        "markSize": {
+            "type": "number",
+            "default": 72
+        },
+        "markColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "markOpacity": {
+            "type": "number",
+            "default": 16
+        },
+        "markPosition": {
+            "type": "string",
+            "default": "float"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "accentLineWidth": {
+            "type": "number",
+            "default": 4
+        },
+        "accentLineRadius": {
+            "type": "number",
+            "default": 2
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 28
+        },
+        "paddingRight": {
+            "type": "number",
+            "default": 32
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 28
+        },
+        "paddingLeft": {
+            "type": "number",
+            "default": 32
+        },
+        "enableShadow": {
+            "type": "boolean",
+            "default": false
+        },
+        "showAuthor": {
+            "type": "boolean",
+            "default": true
+        },
+        "authorName": {
+            "type": "string",
+            "default": "Peter Drucker"
+        },
+        "authorLayout": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "nameSize": {
+            "type": "number",
+            "default": 15
+        },
+        "nameWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "showRole": {
+            "type": "boolean",
+            "default": true
+        },
+        "authorRole": {
+            "type": "string",
+            "default": "Management Consultant"
+        },
+        "roleSize": {
+            "type": "number",
+            "default": 13
+        },
+        "roleWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "roleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "showPhoto": {
+            "type": "boolean",
+            "default": false
+        },
+        "photoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "photoAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "photoShape": {
+            "type": "string",
+            "default": "circle"
+        },
+        "photoSize": {
+            "type": "number",
+            "default": 52
+        },
+        "photoBorder": {
+            "type": "boolean",
+            "default": false
+        },
+        "photoBorderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "gapPhotoText": {
+            "type": "number",
+            "default": 12
+        },
+        "typoQuote": {
+            "type": "object",
+            "default": {}
+        },
+        "typoName": {
+            "type": "object",
+            "default": {}
+        },
+        "typoRole": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

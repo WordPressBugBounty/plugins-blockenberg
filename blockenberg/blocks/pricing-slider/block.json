@@ -1,0 +1,188 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/pricing-slider",
+    "title": "Pricing Slider",
+    "category": "bkbg-marketing",
+    "icon": "slides",
+    "description": "Interactive pricing section with a usage/tier slider \u2014 drag to select a plan and prices update dynamically with smooth animation.",
+    "keywords": [
+        "pricing",
+        "slider",
+        "plan",
+        "subscription",
+        "tier",
+        "interactive",
+        "billing"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-pricing-slider-editor",
+    "style": "bkbg-pricing-slider-style",
+    "viewScript": "bkbg-pricing-slider-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Simple, transparent pricing"
+        },
+        "subheading": {
+            "type": "string",
+            "default": "Scale up or down as your needs change."
+        },
+        "showBilling": {
+            "type": "boolean",
+            "default": true
+        },
+        "annualDiscount": {
+            "type": "number",
+            "default": 20
+        },
+        "initialTier": {
+            "type": "number",
+            "default": 1
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "period": {
+            "type": "string",
+            "default": "/month"
+        },
+        "ctaText": {
+            "type": "string",
+            "default": "Get Started"
+        },
+        "tiers": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Starter",
+                    "users": "Up to 5 users",
+                    "monthlyPrice": 19,
+                    "features": [
+                        "5 projects",
+                        "10 GB storage",
+                        "Email support",
+                        "Basic analytics"
+                    ]
+                },
+                {
+                    "label": "Growth",
+                    "users": "Up to 20 users",
+                    "monthlyPrice": 49,
+                    "features": [
+                        "Unlimited projects",
+                        "50 GB storage",
+                        "Priority support",
+                        "Advanced analytics",
+                        "Custom domain"
+                    ]
+                },
+                {
+                    "label": "Pro",
+                    "users": "Up to 100 users",
+                    "monthlyPrice": 99,
+                    "features": [
+                        "Unlimited projects",
+                        "200 GB storage",
+                        "24/7 support",
+                        "Advanced analytics",
+                        "Custom domain",
+                        "API access"
+                    ]
+                },
+                {
+                    "label": "Enterprise",
+                    "users": "Unlimited",
+                    "monthlyPrice": 199,
+                    "features": [
+                        "Unlimited projects",
+                        "1 TB storage",
+                        "Dedicated support",
+                        "Custom analytics",
+                        "Custom domain",
+                        "API access",
+                        "SSO / SAML"
+                    ]
+                }
+            ]
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 24
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "priceColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "featureColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "sliderColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "trackBg": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "checkColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subheadingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "priceTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "ctaTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "featureTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

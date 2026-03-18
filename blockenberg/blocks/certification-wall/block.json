@@ -1,0 +1,189 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/certification-wall",
+    "version": "1.0.0",
+    "title": "Certification Wall",
+    "category": "bkbg-business",
+    "icon": "awards",
+    "description": "Showcase professional certifications, accreditations and badges with verify links.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-certification-wall-editor",
+    "style": "bkbg-certification-wall-style",
+    "viewScript": "bkbg-certification-wall-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "Trusted & Verified"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Our Certifications & Accreditations"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Industry-recognised credentials that demonstrate our commitment to excellence."
+        },
+        "certs": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "ISO 9001:2015",
+                    "issuer": "ISO",
+                    "year": "2023",
+                    "imageUrl": "",
+                    "verifyUrl": "#"
+                },
+                {
+                    "name": "AWS Certified",
+                    "issuer": "Amazon",
+                    "year": "2023",
+                    "imageUrl": "",
+                    "verifyUrl": "#"
+                },
+                {
+                    "name": "SOC 2 Type II",
+                    "issuer": "AICPA",
+                    "year": "2024",
+                    "imageUrl": "",
+                    "verifyUrl": "#"
+                },
+                {
+                    "name": "GDPR Compliant",
+                    "issuer": "EU DPA",
+                    "year": "2024",
+                    "imageUrl": "",
+                    "verifyUrl": "#"
+                },
+                {
+                    "name": "PCI DSS Level 1",
+                    "issuer": "PCI SSC",
+                    "year": "2024",
+                    "imageUrl": "",
+                    "verifyUrl": "#"
+                },
+                {
+                    "name": "Google Partner",
+                    "issuer": "Google",
+                    "year": "2024",
+                    "imageUrl": "",
+                    "verifyUrl": "#"
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "showYear": {
+            "type": "boolean",
+            "default": true
+        },
+        "showIssuer": {
+            "type": "boolean",
+            "default": true
+        },
+        "showVerify": {
+            "type": "boolean",
+            "default": true
+        },
+        "verifyLabel": {
+            "type": "string",
+            "default": "Verify Certificate"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1100
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "issuerColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "verifyColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "headingFontSize": {
+            "type": "number",
+            "default": 32
+        },
+        "headingFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "headingLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "bodyFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "bodyLineHeight": {
+            "type": "number",
+            "default": 1.6
+        },
+        "certNameFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "certNameFontWeight": {
+            "type": "string",
+            "default": "600"
+        },
+        "typoHeading": { "type": "object", "default": {} },
+        "typoSubtext": { "type": "object", "default": {} },
+        "typoCertName": { "type": "object", "default": {} }
+    }
+}

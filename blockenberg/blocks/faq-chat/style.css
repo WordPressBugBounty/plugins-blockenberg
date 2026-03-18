@@ -1,0 +1,270 @@
+/* ── FAQ Chat ── bkbg-faqc-* ── */
+
+.bkbg-faqc-editor-wrap {
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* ── widget shell ── */
+.bkbg-faqc-widget {
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, sans-serif;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07), 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ── header ── */
+.bkbg-faqc-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+}
+
+.bkbg-faqc-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.bkbg-faqc-bot-name {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.bkbg-faqc-status {
+    font-size: 12px;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bkbg-faqc-status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #4ade80;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+/* ── chat area ── */
+.bkbg-faqc-messages {
+    overflow-y: auto;
+    padding: 16px;
+    scroll-behavior: smooth;
+}
+
+/* ── message rows ── */
+.bkbg-faqc-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.bkbg-faqc-row.user-row {
+    flex-direction: row-reverse;
+}
+
+.bkbg-faqc-row-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.bkbg-faqc-meta {
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 3px;
+    opacity: 0.7;
+}
+
+.bkbg-faqc-row.user-row .bkbg-faqc-meta {
+    text-align: right;
+}
+
+/* ── bubbles ── */
+.bkbg-faqc-bubble {
+    display: inline-block;
+    padding: 10px 14px;
+    line-height: 1.6;
+    max-width: 78%;
+    word-break: break-word;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.bkbg-faqc-bubble.bot-bubble {
+    font-family: var(--bkbg-fcht-an-font-family, inherit);
+    font-size: var(--bkbg-fcht-an-font-size-d, 14px);
+    font-weight: var(--bkbg-fcht-an-font-weight, normal);
+    font-style: var(--bkbg-fcht-an-font-style, normal);
+    text-transform: var(--bkbg-fcht-an-text-transform, none);
+    text-decoration: var(--bkbg-fcht-an-text-decoration, none);
+    line-height: var(--bkbg-fcht-an-line-height-d, 1.6);
+    letter-spacing: var(--bkbg-fcht-an-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fcht-an-word-spacing-d, normal);
+}
+
+.bkbg-faqc-bubble.user-bubble {
+    font-family: var(--bkbg-fcht-qt-font-family, inherit);
+    font-size: var(--bkbg-fcht-qt-font-size-d, 14px);
+    font-weight: var(--bkbg-fcht-qt-font-weight, normal);
+    font-style: var(--bkbg-fcht-qt-font-style, normal);
+    text-transform: var(--bkbg-fcht-qt-text-transform, none);
+    text-decoration: var(--bkbg-fcht-qt-text-decoration, none);
+    line-height: var(--bkbg-fcht-qt-line-height-d, 1.5);
+    letter-spacing: var(--bkbg-fcht-qt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fcht-qt-word-spacing-d, normal);
+}
+
+/* style variants applied inline by JS */
+.bkbg-faqc-style-rounded .bkbg-faqc-bubble {
+    border-radius: 12px;
+}
+
+.bkbg-faqc-style-bubble .bkbg-faqc-bubble {
+    border-radius: 20px;
+}
+
+.bkbg-faqc-style-sharp .bkbg-faqc-bubble {
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+/* ── typing indicator ── */
+.bkbg-faqc-typing {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 16px;
+}
+
+.bkbg-faqc-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    animation: bkbg-faqc-bounce 1.2s infinite ease-in-out;
+}
+
+.bkbg-faqc-dot:nth-child(1) { animation-delay: 0s; }
+.bkbg-faqc-dot:nth-child(2) { animation-delay: 0.2s; }
+.bkbg-faqc-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bkbg-faqc-bounce {
+    0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+    40%            { transform: translateY(-6px); opacity: 1; }
+}
+
+/* ── questions panel ── */
+.bkbg-faqc-questions {
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding: 14px;
+}
+
+.bkbg-faqc-questions-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+}
+
+.bkbg-faqc-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.bkbg-faqc-q-btn {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    padding: 6px 13px;
+    cursor: pointer;
+    font-family: var(--bkbg-fcht-qt-font-family, inherit);
+    font-size: var(--bkbg-fcht-qt-font-size-d, 14px);
+    font-weight: var(--bkbg-fcht-qt-font-weight, normal);
+    font-style: var(--bkbg-fcht-qt-font-style, normal);
+    text-transform: var(--bkbg-fcht-qt-text-transform, none);
+    text-decoration: var(--bkbg-fcht-qt-text-decoration, none);
+    line-height: var(--bkbg-fcht-qt-line-height-d, 1.45);
+    letter-spacing: var(--bkbg-fcht-qt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fcht-qt-word-spacing-d, normal);
+    transition: background 0.15s, color 0.15s, border-color 0.15s, opacity 0.15s;
+    text-align: left;
+}
+
+.bkbg-faqc-q-btn:hover {
+    opacity: 0.82;
+}
+
+.bkbg-faqc-q-btn.is-answered {
+    cursor: default;
+    opacity: 0.65;
+}
+
+.bkbg-faqc-q-btn.is-answered:hover {
+    opacity: 0.65;
+}
+
+/* ── responsive ── */
+@media (max-width: 1024px) {
+    .bkbg-faqc-bubble.bot-bubble {
+        font-size: var(--bkbg-fcht-an-font-size-t, var(--bkbg-fcht-an-font-size-d, 14px));
+        line-height: var(--bkbg-fcht-an-line-height-t, var(--bkbg-fcht-an-line-height-d, 1.6));
+        letter-spacing: var(--bkbg-fcht-an-letter-spacing-t, var(--bkbg-fcht-an-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-fcht-an-word-spacing-t, var(--bkbg-fcht-an-word-spacing-d, normal));
+    }
+    .bkbg-faqc-bubble.user-bubble {
+        font-size: var(--bkbg-fcht-qt-font-size-t, var(--bkbg-fcht-qt-font-size-d, 14px));
+        line-height: var(--bkbg-fcht-qt-line-height-t, var(--bkbg-fcht-qt-line-height-d, 1.5));
+        letter-spacing: var(--bkbg-fcht-qt-letter-spacing-t, var(--bkbg-fcht-qt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-fcht-qt-word-spacing-t, var(--bkbg-fcht-qt-word-spacing-d, normal));
+    }
+    .bkbg-faqc-q-btn {
+        font-size: var(--bkbg-fcht-qt-font-size-t, var(--bkbg-fcht-qt-font-size-d, 14px));
+        line-height: var(--bkbg-fcht-qt-line-height-t, var(--bkbg-fcht-qt-line-height-d, 1.45));
+        letter-spacing: var(--bkbg-fcht-qt-letter-spacing-t, var(--bkbg-fcht-qt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-fcht-qt-word-spacing-t, var(--bkbg-fcht-qt-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-faqc-bubble.bot-bubble {
+        font-size: var(--bkbg-fcht-an-font-size-m, var(--bkbg-fcht-an-font-size-t, var(--bkbg-fcht-an-font-size-d, 14px)));
+        line-height: var(--bkbg-fcht-an-line-height-m, var(--bkbg-fcht-an-line-height-t, var(--bkbg-fcht-an-line-height-d, 1.6)));
+        letter-spacing: var(--bkbg-fcht-an-letter-spacing-m, var(--bkbg-fcht-an-letter-spacing-t, var(--bkbg-fcht-an-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-fcht-an-word-spacing-m, var(--bkbg-fcht-an-word-spacing-t, var(--bkbg-fcht-an-word-spacing-d, normal)));
+    }
+    .bkbg-faqc-bubble.user-bubble {
+        font-size: var(--bkbg-fcht-qt-font-size-m, var(--bkbg-fcht-qt-font-size-t, var(--bkbg-fcht-qt-font-size-d, 14px)));
+        line-height: var(--bkbg-fcht-qt-line-height-m, var(--bkbg-fcht-qt-line-height-t, var(--bkbg-fcht-qt-line-height-d, 1.5)));
+        letter-spacing: var(--bkbg-fcht-qt-letter-spacing-m, var(--bkbg-fcht-qt-letter-spacing-t, var(--bkbg-fcht-qt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-fcht-qt-word-spacing-m, var(--bkbg-fcht-qt-word-spacing-t, var(--bkbg-fcht-qt-word-spacing-d, normal)));
+    }
+    .bkbg-faqc-q-btn {
+        font-size: var(--bkbg-fcht-qt-font-size-m, var(--bkbg-fcht-qt-font-size-t, var(--bkbg-fcht-qt-font-size-d, 14px)));
+        line-height: var(--bkbg-fcht-qt-line-height-m, var(--bkbg-fcht-qt-line-height-t, var(--bkbg-fcht-qt-line-height-d, 1.45)));
+        letter-spacing: var(--bkbg-fcht-qt-letter-spacing-m, var(--bkbg-fcht-qt-letter-spacing-t, var(--bkbg-fcht-qt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-fcht-qt-word-spacing-m, var(--bkbg-fcht-qt-word-spacing-t, var(--bkbg-fcht-qt-word-spacing-d, normal)));
+    }
+}
+@media (max-width: 480px) {
+    .bkbg-faqc-bubble {
+        max-width: 88%;
+    }
+}

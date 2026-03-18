@@ -1,0 +1,193 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/url-encoder",
+    "version": "1.0.0",
+    "title": "URL Encoder / Decoder",
+    "category": "bkbg-dev",
+    "icon": "admin-links",
+    "description": "Encode and decode URLs or convert text to and from Base64, with a clean multi-tab interface.",
+    "keywords": [
+        "url",
+        "encode",
+        "decode",
+        "base64",
+        "percent",
+        "uri"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-url-encoder-editor",
+    "style": "bkbg-url-encoder-style",
+    "viewScript": "bkbg-url-encoder-frontend",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "URL Encoder / Decoder"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Encode, decode URLs and convert Base64"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultMode": {
+            "type": "string",
+            "default": "encode"
+        },
+        "defaultText": {
+            "type": "string",
+            "default": "https://example.com/search?q=hello world&lang=en#results"
+        },
+        "showBase64Tab": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCopyButton": {
+            "type": "boolean",
+            "default": true
+        },
+        "showClearButton": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCharCount": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDiffHighlight": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "tabActiveBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "tabActiveColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "tabInactiveBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "tabInactiveColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "inputBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "inputColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "outputBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "outputBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "outputColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "errorColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "errorBg": {
+            "type": "string",
+            "default": "#fef2f2"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "textareaRows": {
+            "type": "number",
+            "default": 5
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "tabRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 680
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

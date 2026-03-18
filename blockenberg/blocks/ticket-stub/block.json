@@ -1,0 +1,122 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/ticket-stub",
+    "version": "1.0.0",
+    "title": "Ticket Stub",
+    "category": "bkbg-marketing",
+    "icon": "tickets-alt",
+    "description": "Stylized event ticket card with tear-off stub showing seat, row, section, barcode, and key event details.",
+    "keywords": [
+        "ticket",
+        "event",
+        "stub",
+        "admission",
+        "concert",
+        "venue"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-ticket-stub-editor",
+    "style": "bkbg-ticket-stub-style",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eventName": {
+            "type": "string",
+            "default": "Summer Music Festival"
+        },
+        "tagline": {
+            "type": "string",
+            "default": "General Admission"
+        },
+        "eventDate": {
+            "type": "string",
+            "default": "August 15, 2025"
+        },
+        "eventTime": {
+            "type": "string",
+            "default": "7:00 PM"
+        },
+        "venue": {
+            "type": "string",
+            "default": "Central Park, New York"
+        },
+        "price": {
+            "type": "string",
+            "default": "$85.00"
+        },
+        "logoEmoji": {
+            "type": "string",
+            "default": "🎵"
+        },
+        "logoEmojiType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "logoEmojiDashicon": {
+            "type": "string",
+            "default": ""
+        },
+        "logoEmojiImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "seatSection": {
+            "type": "string",
+            "default": "A"
+        },
+        "seatRow": {
+            "type": "string",
+            "default": "12"
+        },
+        "seatNumber": {
+            "type": "string",
+            "default": "24"
+        },
+        "ticketNumber": {
+            "type": "string",
+            "default": "#00847"
+        },
+        "showPrice": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBarcode": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSection": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6d28d9"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "stubBg": {
+            "type": "string",
+            "default": "#4c1d95"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

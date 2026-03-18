@@ -1,0 +1,182 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/chat-bubble",
+    "version": "1.0.0",
+    "title": "Chat Bubbles",
+    "category": "bkbg-content",
+    "icon": "format-chat",
+    "description": "Decorative chat-conversation UI — perfect for testimonials in a messaging format, product walkthroughs, or dialogue-based storytelling.",
+    "keywords": [
+        "chat",
+        "bubble",
+        "message",
+        "testimonial",
+        "conversation",
+        "sms",
+        "dialogue"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-chat-bubble-editor",
+    "editorStyle": "bkbg-chat-bubble-style",
+    "style": "bkbg-chat-bubble-style",
+    "viewScript": "bkbg-chat-bubble-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "messages": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "m1",
+                    "side": "left",
+                    "senderName": "Support Team",
+                    "senderInitials": "ST",
+                    "avatarUrl": "",
+                    "avatarId": 0,
+                    "text": "Hey! How can we help you today?",
+                    "time": "9:41 AM"
+                },
+                {
+                    "id": "m2",
+                    "side": "right",
+                    "senderName": "Customer",
+                    "senderInitials": "JD",
+                    "avatarUrl": "",
+                    "avatarId": 0,
+                    "text": "I just signed up — this product is incredible! Got a quick question about billing.",
+                    "time": "9:42 AM"
+                },
+                {
+                    "id": "m3",
+                    "side": "left",
+                    "senderName": "Support Team",
+                    "senderInitials": "ST",
+                    "avatarUrl": "",
+                    "avatarId": 0,
+                    "text": "Happy to help! Ask away 😊",
+                    "time": "9:42 AM"
+                },
+                {
+                    "id": "m4",
+                    "side": "right",
+                    "senderName": "Customer",
+                    "senderInitials": "JD",
+                    "avatarUrl": "",
+                    "avatarId": 0,
+                    "text": "Can I switch plans mid-cycle? No hidden fees?",
+                    "time": "9:43 AM"
+                }
+            ]
+        },
+        "chatStyle": {
+            "type": "string",
+            "default": "modern"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 560
+        },
+        "bubbleRadius": {
+            "type": "number",
+            "default": 18
+        },
+        "avatarSize": {
+            "type": "number",
+            "default": 36
+        },
+        "messageGap": {
+            "type": "number",
+            "default": 12
+        },
+        "showAvatars": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTimestamp": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSenderName": {
+            "type": "boolean",
+            "default": true
+        },
+        "typingIndicator": {
+            "type": "boolean",
+            "default": true
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "leftBubbleBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "leftBubbleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "rightBubbleBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "rightBubbleColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "avatarBg": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "timeColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "chatBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "showBorder": {
+            "type": "boolean",
+            "default": true
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "containerRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 32
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 32
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "typoBubble": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

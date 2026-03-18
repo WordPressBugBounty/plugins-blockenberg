@@ -1,0 +1,82 @@
+/* ─────────────────────────────────────────────────────────────────
+   Text Stroke — bkts
+   ───────────────────────────────────────────────────────────────── */
+
+.bkts-wrap {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.bkts-text {
+    display: block;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    will-change: color, -webkit-text-stroke-color;
+    font-family:      var(--bkts-tt-font-family, inherit);
+    font-size:        var(--bkts-tt-font-size-d, 80px);
+    line-height:      var(--bkts-tt-line-height-d, 1.1);
+    font-weight:      var(--bkts-tt-font-weight, 800);
+    font-style:       var(--bkts-tt-font-style, normal);
+    text-decoration:  var(--bkts-tt-text-decoration, none);
+    text-transform:   var(--bkts-tt-text-transform, none);
+    letter-spacing:   var(--bkts-tt-letter-spacing-d, 0px);
+    word-spacing:     var(--bkts-tt-word-spacing-d, normal);
+}
+
+.bkts-wrap h1.bkts-text,
+.bkts-wrap h2.bkts-text,
+.bkts-wrap h3.bkts-text,
+.bkts-wrap h4.bkts-text {
+    font-family:      var(--bkts-tt-font-family, inherit);
+    font-size:        var(--bkts-tt-font-size-d, 80px);
+    line-height:      var(--bkts-tt-line-height-d, 1.1);
+    font-weight:      var(--bkts-tt-font-weight, 800);
+    font-style:       var(--bkts-tt-font-style, normal);
+    text-decoration:  var(--bkts-tt-text-decoration, none);
+    text-transform:   var(--bkts-tt-text-transform, none);
+    letter-spacing:   var(--bkts-tt-letter-spacing-d, 0px);
+    word-spacing:     var(--bkts-tt-word-spacing-d, normal);
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .bkts-wrap .bkts-text {
+        font-size:        var(--bkts-tt-font-size-t, var(--bkts-tt-font-size-d, 80px));
+        line-height:      var(--bkts-tt-line-height-t, var(--bkts-tt-line-height-d, 1.1));
+        letter-spacing:   var(--bkts-tt-letter-spacing-t, var(--bkts-tt-letter-spacing-d, 0px));
+        word-spacing:     var(--bkts-tt-word-spacing-t, var(--bkts-tt-word-spacing-d, normal));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkts-wrap .bkts-text {
+        font-size:        var(--bkts-tt-font-size-m, var(--bkts-tt-font-size-t, var(--bkts-tt-font-size-d, 80px)));
+        line-height:      var(--bkts-tt-line-height-m, var(--bkts-tt-line-height-t, var(--bkts-tt-line-height-d, 1.1)));
+        letter-spacing:   var(--bkts-tt-letter-spacing-m, var(--bkts-tt-letter-spacing-t, var(--bkts-tt-letter-spacing-d, 0px)));
+        word-spacing:     var(--bkts-tt-word-spacing-m, var(--bkts-tt-word-spacing-t, var(--bkts-tt-word-spacing-d, normal)));
+    }
+}
+
+/* Hover: fill */
+.bkts-wrap[data-hover="fill"] .bkts-text:hover {
+    color: var(--bkts-hover-fill) !important;
+    -webkit-text-stroke-color: var(--bkts-hover-fill) !important;
+}
+
+/* Hover: stroke color */
+.bkts-wrap[data-hover="stroke"] .bkts-text:hover {
+    -webkit-text-stroke-color: var(--bkts-hover-stroke) !important;
+}
+
+/* Hover: scale */
+.bkts-wrap[data-hover="scale"] .bkts-text:hover {
+    transform: scale(1.04);
+}
+
+/* Link reset */
+.bkts-wrap a {
+    display: block;
+    text-decoration: inherit;
+    color: inherit;
+}

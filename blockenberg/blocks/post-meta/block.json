@@ -1,0 +1,270 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/post-meta",
+    "title": "Post Meta Bar",
+    "description": "A configurable post metadata row: author, date, reading time, categories, tags, and comment count.",
+    "icon": "info",
+    "category": "bkbg-blog",
+    "keywords": [
+        "meta",
+        "author",
+        "date",
+        "categories",
+        "tags",
+        "reading time",
+        "post info"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-post-meta-editor",
+    "style": "bkbg-post-meta-style",
+    "viewScript": "bkbg-post-meta-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "layout": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "separator": {
+            "type": "string",
+            "default": "•"
+        },
+        "customSeparator": {
+            "type": "string",
+            "default": ""
+        },
+        "showAvatar": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAuthor": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDate": {
+            "type": "boolean",
+            "default": true
+        },
+        "showReadingTime": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCategories": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTags": {
+            "type": "boolean",
+            "default": false
+        },
+        "showComments": {
+            "type": "boolean",
+            "default": true
+        },
+        "itemOrder": {
+            "type": "array",
+            "default": [
+                "avatar",
+                "author",
+                "date",
+                "readingTime",
+                "categories",
+                "tags",
+                "comments"
+            ]
+        },
+        "authorLabel": {
+            "type": "string",
+            "default": "By"
+        },
+        "authorName": {
+            "type": "string",
+            "default": "Jane Doe"
+        },
+        "authorUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "authorAvatarUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "dateLabel": {
+            "type": "string",
+            "default": "📅"
+        },
+        "dateLabelType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "dateLabelDashicon": {
+            "type": "string",
+            "default": "calendar-alt"
+        },
+        "dateLabelImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "dateValue": {
+            "type": "string",
+            "default": "June 12, 2025"
+        },
+        "readingTimeLabel": {
+            "type": "string",
+            "default": "⏱"
+        },
+        "readingTimeLabelType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "readingTimeLabelDashicon": {
+            "type": "string",
+            "default": "clock"
+        },
+        "readingTimeLabelImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "readingTimeValue": {
+            "type": "string",
+            "default": "5 min read"
+        },
+        "categoriesLabel": {
+            "type": "string",
+            "default": "🏷"
+        },
+        "categoriesLabelType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "categoriesLabelDashicon": {
+            "type": "string",
+            "default": "tag"
+        },
+        "categoriesLabelImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "categories": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Design",
+                    "url": "#"
+                },
+                {
+                    "label": "Typography",
+                    "url": "#"
+                }
+            ]
+        },
+        "tags": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "ux",
+                    "url": "#"
+                },
+                {
+                    "label": "branding",
+                    "url": "#"
+                }
+            ]
+        },
+        "commentsLabel": {
+            "type": "string",
+            "default": "💬"
+        },
+        "commentsLabelType": {
+            "type": "string",
+            "default": "custom-char"
+        },
+        "commentsLabelDashicon": {
+            "type": "string",
+            "default": "admin-comments"
+        },
+        "commentsLabelImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "commentsCount": {
+            "type": "string",
+            "default": "14 comments"
+        },
+        "commentsUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "avatarSize": {
+            "type": "number",
+            "default": 32
+        },
+        "gap": {
+            "type": "number",
+            "default": 14
+        },
+        "paddingV": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingH": {
+            "type": "number",
+            "default": 0
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 0
+        },
+        "tagPaddingV": {
+            "type": "number",
+            "default": 2
+        },
+        "tagPaddingH": {
+            "type": "number",
+            "default": 8
+        },
+        "tagRadius": {
+            "type": "number",
+            "default": 50
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "linkColorHover": {
+            "type": "string",
+            "default": "#4f2d99"
+        },
+        "separatorColor": {
+            "type": "string",
+            "default": "#cbd5e1"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "avatarBorderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "tagBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "tagColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "textTypo": { "type": "object", "default": {} }
+    }
+}

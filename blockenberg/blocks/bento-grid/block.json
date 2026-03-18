@@ -1,0 +1,185 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/bento-grid",
+    "version": "1.0.0",
+    "title": "Bento Grid",
+    "category": "bkbg-layout",
+    "icon": "grid-view",
+    "description": "Modern asymmetric bento-box grid with featured large cells and smaller detail cards — perfect for showcasing features, stats, or portfolio highlights.",
+    "keywords": [
+        "bento",
+        "grid",
+        "mosaic",
+        "asymmetric",
+        "cards",
+        "features",
+        "showcase",
+        "apple",
+        "layout"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-bento-grid-editor",
+    "editorStyle": "bkbg-bento-grid-style",
+    "style": "bkbg-bento-grid-style",
+    "viewScript": "bkbg-bento-grid-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "layout": {
+            "type": "string",
+            "default": "classic"
+        },
+        "cells": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "c1",
+                    "span": "large",
+                    "type": "text",
+                    "eyebrow": "Featured",
+                    "title": "Build something the world needs",
+                    "desc": "Start with a clear vision, ruthless prioritisation, and shipping fast.",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imagePosition": "right",
+                    "accentColor": "#6c3fb5",
+                    "bgColor": "#f5f0ff",
+                    "textColor": "#111827",
+                    "showButton": true,
+                    "buttonLabel": "Learn more",
+                    "buttonUrl": ""
+                },
+                {
+                    "id": "c2",
+                    "span": "small",
+                    "type": "stat",
+                    "eyebrow": "Users",
+                    "title": "10,000+",
+                    "desc": "Active users worldwide",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "accentColor": "#3b82f6",
+                    "bgColor": "#eff6ff",
+                    "textColor": "#1e40af",
+                    "showButton": false,
+                    "buttonLabel": "",
+                    "buttonUrl": ""
+                },
+                {
+                    "id": "c3",
+                    "span": "small",
+                    "type": "stat",
+                    "eyebrow": "Rating",
+                    "title": "4.9 ★",
+                    "desc": "Average review score",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "accentColor": "#f59e0b",
+                    "bgColor": "#fffbeb",
+                    "textColor": "#92400e",
+                    "showButton": false,
+                    "buttonLabel": "",
+                    "buttonUrl": ""
+                },
+                {
+                    "id": "c4",
+                    "span": "medium",
+                    "type": "image",
+                    "eyebrow": "",
+                    "title": "Visual storytelling",
+                    "desc": "Use images to anchor your grid.",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "accentColor": "#10b981",
+                    "bgColor": "#ecfdf5",
+                    "textColor": "#065f46",
+                    "showButton": false,
+                    "buttonLabel": "",
+                    "buttonUrl": ""
+                },
+                {
+                    "id": "c5",
+                    "span": "medium",
+                    "type": "text",
+                    "eyebrow": "Our mission",
+                    "title": "Crafted with care",
+                    "desc": "Every pixel, every interaction — thoughtfully designed to delight.",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "accentColor": "#ec4899",
+                    "bgColor": "#fdf2f8",
+                    "textColor": "#831843",
+                    "showButton": true,
+                    "buttonLabel": "Read story",
+                    "buttonUrl": ""
+                }
+            ]
+        },
+        "gap": {
+            "type": "number",
+            "default": 16
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 20
+        },
+        "minRowHeight": {
+            "type": "number",
+            "default": 200
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 26
+        },
+        "eyebrowSize": {
+            "type": "number",
+            "default": 12
+        },
+        "descSize": {
+            "type": "number",
+            "default": 15
+        },
+        "btnBorderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "hoverLift": {
+            "type": "boolean",
+            "default": true
+        },
+        "animateIn": {
+            "type": "boolean",
+            "default": true
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 32
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 32
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "eyebrowTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

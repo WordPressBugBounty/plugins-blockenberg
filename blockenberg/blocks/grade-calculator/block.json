@@ -1,0 +1,190 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/grade-calculator",
+	"title": "Grade Calculator",
+	"category": "bkbg-calculators",
+	"icon": "awards",
+	"description": "Calculate weighted average grades across multiple subjects or assignments. Shows overall grade with letter and percentage.",
+	"keywords": [
+		"grade",
+		"average",
+		"weighted",
+		"gpa",
+		"score",
+		"assignment",
+		"calculator",
+		"school"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-grade-calculator-editor",
+	"style": "bkbg-grade-calculator-style",
+	"viewScript": "bkbg-grade-calculator-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Grade Calculator"
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Calculate your weighted average grade across all subjects"
+		},
+		"showTitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"showSubtitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"gradeMode": {
+			"type": "string",
+			"default": "weighted"
+		},
+		"showLetterGrade": {
+			"type": "boolean",
+			"default": true
+		},
+		"showGradeScale": {
+			"type": "boolean",
+			"default": true
+		},
+		"showBreakdown": {
+			"type": "boolean",
+			"default": true
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"cardBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"resultBg": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"resultColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"gradeAColor": {
+			"type": "string",
+			"default": "#10b981"
+		},
+		"gradeBColor": {
+			"type": "string",
+			"default": "#3b82f6"
+		},
+		"gradeCColor": {
+			"type": "string",
+			"default": "#f59e0b"
+		},
+		"gradeDColor": {
+			"type": "string",
+			"default": "#ef4444"
+		},
+		"gradeFColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"rowBg": {
+			"type": "string",
+			"default": "#f9fafb"
+		},
+		"rowBorder": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"scaleBg": {
+			"type": "string",
+			"default": "#f3f4f6"
+		},
+		"scaleBorder": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"inputBorder": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"labelColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": ""
+		},
+		"subtitleColor": {
+			"type": "string",
+			"default": ""
+		},
+		"sectionBg": {
+			"type": "string",
+			"default": ""
+		},
+		"titleSize": {
+			"type": "number",
+			"default": 28
+		},
+		"resultSize": {
+			"type": "number",
+			"default": 64
+		},
+		"letterSize": {
+			"type": "number",
+			"default": 48
+		},
+		"cardRadius": {
+			"type": "number",
+			"default": 16
+		},
+		"inputRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"maxWidth": {
+			"type": "number",
+			"default": 640
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 60
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 60
+		},
+		"titleLineHeight": {
+			"type": "number",
+			"default": 1.2
+		},
+		"resultFontWeight": {
+			"type": "string",
+			"default": "800"
+		},
+		"typoTitle": {
+			"type": "object",
+			"default": {}
+		},
+		"typoResult": {
+			"type": "object",
+			"default": {}
+		},
+		"typoLetter": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

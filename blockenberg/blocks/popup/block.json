@@ -1,0 +1,200 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/popup",
+    "title": "Popup",
+    "category": "bkbg-marketing",
+    "icon": "external",
+    "description": "Popup/lightbox builder with a configurable trigger button and rich popup content \u2014 heading, text, image, CTA and close. Supports click, scroll-depth, time-delay and exit-intent triggers.",
+    "keywords": [
+        "popup",
+        "modal",
+        "lightbox",
+        "overlay",
+        "trigger",
+        "dialog"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-popup-editor",
+    "style": "bkbg-popup-style",
+    "viewScript": "bkbg-popup-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "triggerLabel": {
+            "type": "string",
+            "default": "Open Popup"
+        },
+        "triggerStyle": {
+            "type": "string",
+            "default": "filled"
+        },
+        "triggerSize": {
+            "type": "string",
+            "default": "md"
+        },
+        "triggerAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "triggerType": {
+            "type": "string",
+            "default": "click"
+        },
+        "scrollDepth": {
+            "type": "number",
+            "default": 40
+        },
+        "timeDelay": {
+            "type": "number",
+            "default": 3
+        },
+        "showOnce": {
+            "type": "string",
+            "default": "always"
+        },
+        "popupPosition": {
+            "type": "string",
+            "default": "center"
+        },
+        "popupSize": {
+            "type": "string",
+            "default": "md"
+        },
+        "popupWidth": {
+            "type": "number",
+            "default": 560
+        },
+        "popupAnimation": {
+            "type": "string",
+            "default": "scale"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "closeOnOverlay": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCloseBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "imagePosition": {
+            "type": "string",
+            "default": "top"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Get 20% Off Today"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Subscribe to our newsletter and get your exclusive discount code instantly."
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Claim Your Discount"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaNewTab": {
+            "type": "boolean",
+            "default": false
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaStyle": {
+            "type": "string",
+            "default": "filled"
+        },
+        "dismissLabel": {
+            "type": "string",
+            "default": "No thanks"
+        },
+        "showDismiss": {
+            "type": "boolean",
+            "default": true
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "overlayColor": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "overlayOpacity": {
+            "type": "number",
+            "default": 60
+        },
+        "popupBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "triggerBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "triggerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "dismissColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

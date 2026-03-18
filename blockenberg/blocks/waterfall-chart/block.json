@@ -1,0 +1,181 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/waterfall-chart",
+    "title": "Waterfall Chart",
+    "category": "bkbg-charts",
+    "description": "Financial waterfall (bridge) chart showing cumulative effect of sequential positive and negative values. Perfect for P&L analysis, budget breakdowns, and cash flow visualization.",
+    "keywords": [
+        "waterfall",
+        "bridge",
+        "chart",
+        "finance",
+        "revenue",
+        "budget",
+        "cascade",
+        "bar"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-waterfall-chart-editor",
+    "editorStyle": "bkbg-waterfall-chart-style",
+    "style": "bkbg-waterfall-chart-style",
+    "viewScript": "bkbg-waterfall-chart-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Revenue Waterfall"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Q1 Revenue",
+                    "value": 120000,
+                    "type": "start"
+                },
+                {
+                    "label": "New Clients",
+                    "value": 45000,
+                    "type": "increase"
+                },
+                {
+                    "label": "Upsells",
+                    "value": 28000,
+                    "type": "increase"
+                },
+                {
+                    "label": "Churn",
+                    "value": -18000,
+                    "type": "decrease"
+                },
+                {
+                    "label": "Refunds",
+                    "value": -7000,
+                    "type": "decrease"
+                },
+                {
+                    "label": "Q2 Revenue",
+                    "value": 168000,
+                    "type": "total"
+                }
+            ]
+        },
+        "valuePrefix": {
+            "type": "string",
+            "default": "$"
+        },
+        "valueSuffix": {
+            "type": "string",
+            "default": ""
+        },
+        "abbreviate": {
+            "type": "boolean",
+            "default": true
+        },
+        "height": {
+            "type": "number",
+            "default": 380
+        },
+        "barThickness": {
+            "type": "number",
+            "default": 48
+        },
+        "showConnectors": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDataLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGrid": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 4
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 800
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 20
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 12
+        },
+        "valueSize": {
+            "type": "number",
+            "default": 11
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "startColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "increaseColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "decreaseColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "totalColor": {
+            "type": "string",
+            "default": "#8b5cf6"
+        },
+        "connectorColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        }
+    }
+}

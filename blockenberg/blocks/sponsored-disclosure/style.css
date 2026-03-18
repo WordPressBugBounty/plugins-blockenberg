@@ -1,0 +1,78 @@
+.bkbg-spd-app { display: block; }
+
+.bkbg-spd-wrap {
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+/* pill */
+.bkbg-spd-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* banner */
+.bkbg-spd-banner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 4px;
+}
+
+/* box */
+.bkbg-spd-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 8px;
+}
+
+.bkbg-spd-label-chip {
+    border-radius: 999px;
+    padding: 2px 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--bksd-lb-font-family, inherit);
+    font-size: var(--bksd-lb-font-size-d, var(--bksd-lb-sz, 12px));
+    font-weight: var(--bksd-lb-font-weight, var(--bksd-lb-w, 700));
+    font-style: var(--bksd-lb-font-style, normal);
+    text-decoration: var(--bksd-lb-text-decoration, none);
+    text-transform: var(--bksd-lb-text-transform, uppercase);
+    line-height: var(--bksd-lb-line-height-d, var(--bksd-lb-lh, 1.5));
+    letter-spacing: var(--bksd-lb-letter-spacing-d, 0.05em);
+    word-spacing: var(--bksd-lb-word-spacing-d, normal);
+}
+.bkbg-spd-label-chip svg { width: 1em; height: 1em; fill: currentColor; display: block; }
+.bkbg-spd-label-chip .dashicons { font-size: inherit; width: 1em; height: 1em; line-height: 1; }
+.bkbg-spd-label-chip .bkbg-icon-img { width: 1em; height: 1em; object-fit: contain; }
+
+.bkbg-spd-text {
+    margin: 0;
+    font-family: var(--bksd-tx-font-family, inherit);
+    font-size: var(--bksd-tx-font-size-d, var(--bksd-tx-sz, 12px));
+    font-weight: var(--bksd-tx-font-weight, var(--bksd-tx-w, 600));
+    font-style: var(--bksd-tx-font-style, normal);
+    text-decoration: var(--bksd-tx-text-decoration, none);
+    text-transform: var(--bksd-tx-text-transform, none);
+    line-height: var(--bksd-tx-line-height-d, var(--bksd-tx-lh, 1.55));
+    letter-spacing: var(--bksd-tx-letter-spacing-d, normal);
+    word-spacing: var(--bksd-tx-word-spacing-d, normal);
+}
+
+/* ---- Typography responsive — tablet ---- */
+@media (max-width: 1024px) {
+    .bkbg-spd-label-chip { font-size: var(--bksd-lb-font-size-t, var(--bksd-lb-font-size-d, var(--bksd-lb-sz, 12px))); line-height: var(--bksd-lb-line-height-t, var(--bksd-lb-line-height-d, var(--bksd-lb-lh, 1.5))); letter-spacing: var(--bksd-lb-letter-spacing-t, var(--bksd-lb-letter-spacing-d, 0.05em)); word-spacing: var(--bksd-lb-word-spacing-t, var(--bksd-lb-word-spacing-d, normal)); }
+    .bkbg-spd-text { font-size: var(--bksd-tx-font-size-t, var(--bksd-tx-font-size-d, var(--bksd-tx-sz, 12px))); line-height: var(--bksd-tx-line-height-t, var(--bksd-tx-line-height-d, var(--bksd-tx-lh, 1.55))); letter-spacing: var(--bksd-tx-letter-spacing-t, var(--bksd-tx-letter-spacing-d, normal)); word-spacing: var(--bksd-tx-word-spacing-t, var(--bksd-tx-word-spacing-d, normal)); }
+}
+
+/* ---- Typography responsive — mobile ---- */
+@media (max-width: 767px) {
+    .bkbg-spd-label-chip { font-size: var(--bksd-lb-font-size-m, var(--bksd-lb-font-size-t, var(--bksd-lb-font-size-d, var(--bksd-lb-sz, 12px)))); line-height: var(--bksd-lb-line-height-m, var(--bksd-lb-line-height-t, var(--bksd-lb-line-height-d, var(--bksd-lb-lh, 1.5)))); letter-spacing: var(--bksd-lb-letter-spacing-m, var(--bksd-lb-letter-spacing-t, var(--bksd-lb-letter-spacing-d, 0.05em))); word-spacing: var(--bksd-lb-word-spacing-m, var(--bksd-lb-word-spacing-t, var(--bksd-lb-word-spacing-d, normal)); }
+    .bkbg-spd-text { font-size: var(--bksd-tx-font-size-m, var(--bksd-tx-font-size-t, var(--bksd-tx-font-size-d, var(--bksd-tx-sz, 12px)))); line-height: var(--bksd-tx-line-height-m, var(--bksd-tx-line-height-t, var(--bksd-tx-line-height-d, var(--bksd-tx-lh, 1.55)))); letter-spacing: var(--bksd-tx-letter-spacing-m, var(--bksd-tx-letter-spacing-t, var(--bksd-tx-letter-spacing-d, normal)); word-spacing: var(--bksd-tx-word-spacing-m, var(--bksd-tx-word-spacing-t, var(--bksd-tx-word-spacing-d, normal)); }
+}

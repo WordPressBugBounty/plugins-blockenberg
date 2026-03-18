@@ -1,0 +1,100 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/hotspot-image",
+    "title": "Hotspot Image",
+    "category": "bkbg-media",
+    "icon": "location-alt",
+    "description": "Image with interactive hotspot pins that reveal tooltips on hover or click.",
+    "keywords": [
+        "hotspot",
+        "image",
+        "pin",
+        "tooltip",
+        "annotation",
+        "interactive"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-hotspot-image-editor",
+    "editorStyle": "bkbg-hotspot-image-style",
+    "style": "bkbg-hotspot-image-style",
+    "viewScript": "bkbg-hotspot-image-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "hotspots": {
+            "type": "array",
+            "default": [
+                {
+                    "x": 30,
+                    "y": 40,
+                    "title": "Feature One",
+                    "content": "Description of this highlighted area.",
+                    "tooltipPos": "right"
+                },
+                {
+                    "x": 65,
+                    "y": 25,
+                    "title": "Feature Two",
+                    "content": "Another annotation tooltip here.",
+                    "tooltipPos": "bottom"
+                }
+            ]
+        },
+        "trigger": {
+            "type": "string",
+            "default": "hover"
+        },
+        "markerStyle": {
+            "type": "string",
+            "default": "pulse"
+        },
+        "markerColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "tooltipBg": {
+            "type": "string",
+            "default": "#1e1e2e"
+        },
+        "tooltipText": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "markerSize": {
+            "type": "number",
+            "default": 18
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "contentTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

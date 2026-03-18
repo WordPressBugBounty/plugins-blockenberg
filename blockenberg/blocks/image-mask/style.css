@@ -1,0 +1,70 @@
+/* ── Image Mask ───────────────────────────────────────────────────────────── */
+.bkim-wrap {
+    box-sizing: border-box;
+    display: block;
+}
+
+.bkim-figure {
+    margin: 0;
+    display: inline-block;
+}
+
+.bkim-img {
+    display: block;
+}
+
+/* Hover effects */
+.bkim-img[data-hover="zoom"]:hover {
+    transform: scale(calc(var(--bkim-scale, 108) / 100));
+}
+
+.bkim-img[data-hover="zoom-out"]:hover {
+    transform: scale(calc(var(--bkim-scale, 92) / 100));
+}
+
+.bkim-img[data-hover="rotate"]:hover {
+    transform: rotate(8deg) scale(1.06);
+}
+
+.bkim-caption {
+    margin: 12px 0 0;
+    font-style: italic;
+    padding: 0;
+    font-family:      var(--bkim-cp-font-family, inherit);
+    font-size:        var(--bkim-cp-font-size-d, var(--bkim-cp-sz, 14px));
+    font-weight:      var(--bkim-cp-font-weight, var(--bkim-cp-w, 400));
+    text-decoration:  var(--bkim-cp-text-decoration, none);
+    text-transform:   var(--bkim-cp-text-transform, none);
+    line-height:      var(--bkim-cp-line-height-d, var(--bkim-cp-lh, 1.4));
+    letter-spacing:   var(--bkim-cp-letter-spacing-d, normal);
+    word-spacing:     var(--bkim-cp-word-spacing-d, normal);
+}
+
+/* ── Responsive typography ────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkim-caption {
+        font-size:      var(--bkim-cp-font-size-t, var(--bkim-cp-font-size-d, var(--bkim-cp-sz, 14px)));
+        line-height:    var(--bkim-cp-line-height-t, var(--bkim-cp-line-height-d, var(--bkim-cp-lh, 1.4)));
+        letter-spacing: var(--bkim-cp-letter-spacing-t, var(--bkim-cp-letter-spacing-d, normal));
+        word-spacing:   var(--bkim-cp-word-spacing-t, var(--bkim-cp-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkim-caption {
+        font-size:      var(--bkim-cp-font-size-m, var(--bkim-cp-font-size-t, var(--bkim-cp-font-size-d, var(--bkim-cp-sz, 14px))));
+        line-height:    var(--bkim-cp-line-height-m, var(--bkim-cp-line-height-t, var(--bkim-cp-line-height-d, var(--bkim-cp-lh, 1.4))));
+        letter-spacing: var(--bkim-cp-letter-spacing-m, var(--bkim-cp-letter-spacing-t, var(--bkim-cp-letter-spacing-d, normal)));
+        word-spacing:   var(--bkim-cp-word-spacing-m, var(--bkim-cp-word-spacing-t, var(--bkim-cp-word-spacing-d, normal)));
+    }
+}
+
+/* Alignment helpers */
+.bkim-wrap.has-text-align-left   { text-align: left;   }
+.bkim-wrap.has-text-align-center { text-align: center; }
+.bkim-wrap.has-text-align-right  { text-align: right;  }
+
+@media (prefers-reduced-motion: reduce) {
+    .bkim-img {
+        transition: none !important;
+    }
+}

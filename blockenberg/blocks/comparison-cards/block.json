@@ -1,0 +1,329 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/comparison-cards",
+	"title": "Comparison Cards",
+	"category": "bkbg-marketing",
+	"icon": "columns",
+	"description": "Visual side-by-side product or plan comparison cards with features, pricing, and CTA. Distinct from the tabular Comparison Table block.",
+	"keywords": [
+		"comparison",
+		"cards",
+		"versus",
+		"vs",
+		"plans",
+		"products",
+		"pricing",
+		"features"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-comparison-cards-editor",
+	"style": "bkbg-comparison-cards-style",
+	"viewScript": "bkbg-comparison-cards-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Compare Plans"
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Choose the plan that fits your needs"
+		},
+		"showTitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"showSubtitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"showVsBadge": {
+			"type": "boolean",
+			"default": true
+		},
+		"items": {
+			"type": "array",
+			"default": [
+				{
+					"id": "c1",
+					"title": "Starter",
+					"subtitle": "Perfect for small teams",
+					"price": "29",
+					"period": "/month",
+					"badge": "",
+					"highlighted": false,
+					"features": [
+						{
+							"text": "5 team members",
+							"type": "check"
+						},
+						{
+							"text": "10 GB storage",
+							"type": "check"
+						},
+						{
+							"text": "Email support",
+							"type": "check"
+						},
+						{
+							"text": "Analytics dashboard",
+							"type": "dash"
+						},
+						{
+							"text": "Priority support",
+							"type": "cross"
+						},
+						{
+							"text": "Custom integrations",
+							"type": "cross"
+						}
+					],
+					"ctaLabel": "Get Started",
+					"ctaUrl": "#",
+					"ctaNewTab": false
+				},
+				{
+					"id": "c2",
+					"title": "Pro",
+					"subtitle": "Best value for growing businesses",
+					"price": "79",
+					"period": "/month",
+					"badge": "Most Popular",
+					"highlighted": true,
+					"features": [
+						{
+							"text": "25 team members",
+							"type": "check"
+						},
+						{
+							"text": "100 GB storage",
+							"type": "check"
+						},
+						{
+							"text": "Email & chat support",
+							"type": "check"
+						},
+						{
+							"text": "Advanced analytics",
+							"type": "check"
+						},
+						{
+							"text": "Priority support",
+							"type": "check"
+						},
+						{
+							"text": "Custom integrations",
+							"type": "cross"
+						}
+					],
+					"ctaLabel": "Start Free Trial",
+					"ctaUrl": "#",
+					"ctaNewTab": false
+				},
+				{
+					"id": "c3",
+					"title": "Enterprise",
+					"subtitle": "For large organizations",
+					"price": "199",
+					"period": "/month",
+					"badge": "",
+					"highlighted": false,
+					"features": [
+						{
+							"text": "Unlimited members",
+							"type": "check"
+						},
+						{
+							"text": "1 TB storage",
+							"type": "check"
+						},
+						{
+							"text": "24/7 dedicated support",
+							"type": "check"
+						},
+						{
+							"text": "Advanced analytics",
+							"type": "check"
+						},
+						{
+							"text": "Priority support",
+							"type": "check"
+						},
+						{
+							"text": "Custom integrations",
+							"type": "check"
+						}
+					],
+					"ctaLabel": "Contact Sales",
+					"ctaUrl": "#",
+					"ctaNewTab": false
+				}
+			]
+		},
+		"currency": {
+			"type": "string",
+			"default": "$"
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"highlightBg": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"highlightColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"highlightBorder": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"cardBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"cardBorder": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"checkColor": {
+			"type": "string",
+			"default": "#10b981"
+		},
+		"crossColor": {
+			"type": "string",
+			"default": "#ef4444"
+		},
+		"dashColor": {
+			"type": "string",
+			"default": "#9ca3af"
+		},
+		"badgeBg": {
+			"type": "string",
+			"default": "#fef9c3"
+		},
+		"badgeColor": {
+			"type": "string",
+			"default": "#854d0e"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"sectionTitleColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"subtitleColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"priceColor": {
+			"type": "string",
+			"default": "#111827"
+		},
+		"periodColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"featureColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"ctaBg": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"ctaColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"ctaHighlightBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"ctaHighlightColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": ""
+		},
+		"cardRadius": {
+			"type": "number",
+			"default": 16
+		},
+		"ctaRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"badgeRadius": {
+			"type": "number",
+			"default": 99
+		},
+		"gap": {
+			"type": "number",
+			"default": 20
+		},
+		"titleSize": {
+			"type": "number",
+			"default": 32
+		},
+		"cardTitleSize": {
+			"type": "number",
+			"default": 22
+		},
+		"priceSize": {
+			"type": "number",
+			"default": 44
+		},
+		"featureSize": {
+			"type": "number",
+			"default": 14
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 64
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 64
+		},
+		"titleFontWeight": {
+			"type": "string",
+			"default": "900"
+		},
+		"titleLineHeight": {
+			"type": "number",
+			"default": 1.2
+		},
+		"featureFontWeight": {
+			"type": "string",
+			"default": "400"
+		},
+		"featureLineHeight": {
+			"type": "number",
+			"default": 1.4
+		},
+		"typoTitle": {
+			"type": "object",
+			"default": {}
+		},
+		"typoFeature": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

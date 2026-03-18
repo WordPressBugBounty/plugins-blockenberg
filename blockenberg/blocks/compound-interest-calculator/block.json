@@ -1,0 +1,170 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/compound-interest-calculator",
+    "version": "1.0.0",
+    "title": "Compound Interest Calculator",
+    "category": "bkbg-calculators",
+    "icon": "chart-line",
+    "description": "Calculate compound interest growth with configurable compounding frequency, monthly contributions, and a year-by-year breakdown.",
+    "keywords": [
+        "compound interest",
+        "investment",
+        "calculator",
+        "finance",
+        "growth"
+    ],
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-compound-interest-calculator-editor",
+    "style": "bkbg-compound-interest-calculator-style",
+    "viewScript": "bkbg-compound-interest-calculator-frontend",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Compound Interest Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "See how your money grows over time"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "defaultPrincipal": {
+            "type": "number",
+            "default": 10000
+        },
+        "defaultMonthly": {
+            "type": "number",
+            "default": 200
+        },
+        "defaultRate": {
+            "type": "number",
+            "default": 7
+        },
+        "defaultYears": {
+            "type": "number",
+            "default": 20
+        },
+        "defaultFrequency": {
+            "type": "string",
+            "default": "12"
+        },
+        "showTable": {
+            "type": "boolean",
+            "default": true
+        },
+        "tableRows": {
+            "type": "number",
+            "default": 10
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": ""
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "resultColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "principalColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "interestColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "tableBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "tableHeaderBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "tableBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "inputBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "resultSize": {
+            "type": "number",
+            "default": 48
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 580
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoResult": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

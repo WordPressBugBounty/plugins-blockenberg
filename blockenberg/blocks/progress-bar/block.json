@@ -1,0 +1,155 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/progress-bar",
+    "title": "Progress Bar",
+    "category": "bkbg-content",
+    "icon": "chart-bar",
+    "description": "Display animated progress bars with customizable styles and labels.",
+    "keywords": [
+        "progress",
+        "bar",
+        "skill",
+        "percentage",
+        "stats",
+        "chart"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-progress-bar-editor",
+    "editorStyle": "bkbg-progress-bar-style",
+    "style": "bkbg-progress-bar-style",
+    "viewScript": "bkbg-progress-bar-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Web Design",
+                    "percentage": 90,
+                    "color": "#3b82f6"
+                },
+                {
+                    "label": "Development",
+                    "percentage": 85,
+                    "color": "#10b981"
+                },
+                {
+                    "label": "Marketing",
+                    "percentage": 75,
+                    "color": "#f59e0b"
+                }
+            ]
+        },
+        "layoutStyle": {
+            "type": "string",
+            "default": "default"
+        },
+        "showPercentage": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "animateOnScroll": {
+            "type": "boolean",
+            "default": true
+        },
+        "animationDuration": {
+            "type": "number",
+            "default": 1000
+        },
+        "barHeight": {
+            "type": "number",
+            "default": 20
+        },
+        "barSpacing": {
+            "type": "number",
+            "default": 24
+        },
+        "barRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "trackColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "percentageColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "percentagePosition": {
+            "type": "string",
+            "default": "right"
+        },
+        "stripes": {
+            "type": "boolean",
+            "default": false
+        },
+        "stripesAnimated": {
+            "type": "boolean",
+            "default": false
+        },
+        "glowEffect": {
+            "type": "boolean",
+            "default": false
+        },
+        "gradient": {
+            "type": "boolean",
+            "default": false
+        },
+        "gradientAngle": {
+            "type": "number",
+            "default": 90
+        },
+        "title": {
+            "type": "string",
+            "default": ""
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": false
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "pctTypo": {
+            "type": "object",
+            "default": {}
+        }
+    },
+    "deprecated": [
+        {
+            "attributes": {
+                "labelSize": { "type": "number", "default": 16 },
+                "labelWeight": { "type": "number", "default": 500 },
+                "labelLineHeight": { "type": "number", "default": 1.4 },
+                "percentageSize": { "type": "number", "default": 14 },
+                "titleSize": { "type": "number", "default": 24 },
+                "titleFontWeight": { "type": "number", "default": 600 },
+                "titleLineHeight": { "type": "number", "default": 1.3 }
+            }
+        }
+    ]
+}

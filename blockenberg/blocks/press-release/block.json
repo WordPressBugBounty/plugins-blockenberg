@@ -1,0 +1,207 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/press-release",
+    "title": "Press Release",
+    "category": "bkbg-blog",
+    "icon": "megaphone",
+    "description": "Structured press release with dateline, headline, body paragraphs, boilerplate, and media contact block.",
+    "keywords": [
+        "press",
+        "release",
+        "news",
+        "pr",
+        "media",
+        "announcement",
+        "journalism",
+        "wire"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-press-release-editor",
+    "editorStyle": "bkbg-press-release-style",
+    "style": "bkbg-press-release-style",
+    "viewScript": "bkbg-press-release-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "releaseLabel": {
+            "type": "string",
+            "default": "FOR IMMEDIATE RELEASE"
+        },
+        "showReleaseLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "city": {
+            "type": "string",
+            "default": "San Francisco, CA"
+        },
+        "releaseDate": {
+            "type": "string",
+            "default": "February 24, 2026"
+        },
+        "showDateline": {
+            "type": "boolean",
+            "default": true
+        },
+        "headline": {
+            "type": "string",
+            "default": "Acme Corp Raises $50M Series B to Accelerate Global Expansion"
+        },
+        "subheadline": {
+            "type": "string",
+            "default": "Investment led by leading venture capital firms will fuel product development and entry into new markets"
+        },
+        "showSubheadline": {
+            "type": "boolean",
+            "default": true
+        },
+        "introParagraph": {
+            "type": "string",
+            "default": "Acme Corp, the leading provider of innovative enterprise solutions, today announced it has secured $50 million in Series B funding led by Benchmark Capital, with participation from existing investors Sequoia Capital and Andreessen Horowitz."
+        },
+        "bodyParagraphs": {
+            "type": "array",
+            "default": [
+                "The new funding will be used to accelerate product development, expand the company's go-to-market team, and drive international expansion into Europe and Asia-Pacific markets. This milestone follows a period of exceptional growth, with the company tripling revenue year-over-year and reaching 500 enterprise customers globally.",
+                "\"This investment validates the tremendous market opportunity we've identified and the strength of the team we've assembled,\" said Jane Smith, CEO of Acme Corp. \"We've built something that our customers truly love, and now we have the resources to bring it to every major market around the world.\"",
+                "The company plans to use the funds to hire 150 additional employees over the next 12 months, with a focus on engineering, sales, and customer success roles across its San Francisco headquarters and new offices in London and Singapore."
+            ]
+        },
+        "showQuoteBlock": {
+            "type": "boolean",
+            "default": false
+        },
+        "quoteText": {
+            "type": "string",
+            "default": ""
+        },
+        "quoteAttribution": {
+            "type": "string",
+            "default": ""
+        },
+        "endMarker": {
+            "type": "string",
+            "default": "###"
+        },
+        "showEndMarker": {
+            "type": "boolean",
+            "default": true
+        },
+        "boilerplateTitle": {
+            "type": "string",
+            "default": "About Acme Corp"
+        },
+        "boilerplateText": {
+            "type": "string",
+            "default": "Acme Corp (acmecorp.com) is the leading enterprise platform for modern workflow automation. Founded in 2019, the company serves over 500 customers in 30 countries, helping them save time and reduce operational costs. Acme Corp is headquartered in San Francisco, CA, with offices in New York, London, and Singapore."
+        },
+        "showBoilerplate": {
+            "type": "boolean",
+            "default": true
+        },
+        "mediaContactName": {
+            "type": "string",
+            "default": "Sarah Johnson"
+        },
+        "mediaContactTitle": {
+            "type": "string",
+            "default": "Head of Communications"
+        },
+        "mediaContactCompany": {
+            "type": "string",
+            "default": "Acme Corp"
+        },
+        "mediaContactEmail": {
+            "type": "string",
+            "default": "press@acmecorp.com"
+        },
+        "mediaContactPhone": {
+            "type": "string",
+            "default": "+1 (415) 555-0192"
+        },
+        "showMediaContact": {
+            "type": "boolean",
+            "default": true
+        },
+        "headlineTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 760
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#1a1a2e"
+        },
+        "headlineColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "subheadlineColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "dateBg": {
+            "type": "string",
+            "default": ""
+        },
+        "dateBorderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "releaseLabelColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "boilerplateBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "boilerplateBorderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "boilerplateTextColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "contactBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "contactBorderColor": {
+            "type": "string",
+            "default": "#cbd5e1"
+        },
+        "contactColor": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#2563eb"
+        }
+    }
+}

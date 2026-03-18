@@ -1,0 +1,120 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/drawing-canvas",
+    "title": "Drawing Canvas",
+    "category": "bkbg-interactive",
+    "icon": "edit",
+    "description": "A fully interactive freehand drawing canvas with multiple tools, undo, and download — right in your page.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-drawing-canvas-editor",
+    "style": "bkbg-drawing-canvas-style",
+    "viewScript": "bkbg-drawing-canvas-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Drawing Canvas"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Draw anything — your creativity is the limit!"
+        },
+        "canvasWidth": {
+            "type": "number",
+            "default": 800
+        },
+        "canvasHeight": {
+            "type": "number",
+            "default": 480
+        },
+        "defaultTool": {
+            "type": "string",
+            "default": "pen"
+        },
+        "defaultColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "defaultLineWidth": {
+            "type": "number",
+            "default": 4
+        },
+        "showGrid": {
+            "type": "boolean",
+            "default": false
+        },
+        "showToolbar": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDownload": {
+            "type": "boolean",
+            "default": true
+        },
+        "showUndo": {
+            "type": "boolean",
+            "default": true
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 26
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "800"
+        },
+        "lineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "subtitleSize": {
+            "type": "number",
+            "default": 14
+        },
+        "subtitleFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "subtitleLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

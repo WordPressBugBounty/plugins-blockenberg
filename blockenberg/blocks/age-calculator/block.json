@@ -1,0 +1,166 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/age-calculator",
+    "title": "Age Calculator",
+    "category": "bkbg-calculators",
+    "icon": "calendar",
+    "description": "An interactive age calculator that computes exact age in years, months, and days from a birth date. Includes next birthday countdown, total days lived, zodiac sign, and day of week born.",
+    "keywords": [
+        "age",
+        "birthday",
+        "calculator",
+        "born",
+        "date",
+        "years",
+        "zodiac",
+        "countdown"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-age-calculator-editor",
+    "style": "bkbg-age-calculator-style",
+    "viewScript": "bkbg-age-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Age Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Enter your birth date to find out your exact age"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAgeCards": {
+            "type": "boolean",
+            "default": true
+        },
+        "showNextBirthday": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLifeStats": {
+            "type": "boolean",
+            "default": true
+        },
+        "showZodiac": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBornDay": {
+            "type": "boolean",
+            "default": true
+        },
+        "yearsLabel": {
+            "type": "string",
+            "default": "Years"
+        },
+        "monthsLabel": {
+            "type": "string",
+            "default": "Months"
+        },
+        "daysLabel": {
+            "type": "string",
+            "default": "Days"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "resultBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "ageCardBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "ageCardColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "statsBg": {
+            "type": "string",
+            "default": "#fafafa"
+        },
+        "statsBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "ageNumSize": {
+            "type": "number",
+            "default": 52
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "ageCardRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 680
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "ageNumTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

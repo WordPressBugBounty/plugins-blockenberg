@@ -1,0 +1,119 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/reveal-swipe-cards",
+    "title": "Reveal Swipe Cards",
+    "description": "Before/after swipe reveal cards \u2014 drag the divider to uncover the back image.",
+    "category": "bkbg-effects",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-reveal-swipe-cards-editor",
+    "style": "bkbg-reveal-swipe-cards-style",
+    "viewScript": "bkbg-reveal-swipe-cards-frontend",
+    "icon": "slides",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "cards": {
+            "type": "array",
+            "default": [
+                {
+                    "frontUrl": "",
+                    "frontAlt": "Before",
+                    "frontLabel": "Before",
+                    "backUrl": "",
+                    "backAlt": "After",
+                    "backLabel": "After",
+                    "frontBg": "#94a3b8",
+                    "backBg": "#6366f1",
+                    "initialPosition": 50
+                },
+                {
+                    "frontUrl": "",
+                    "frontAlt": "Before",
+                    "frontLabel": "Before",
+                    "backUrl": "",
+                    "backAlt": "After",
+                    "backLabel": "After",
+                    "frontBg": "#fb923c",
+                    "backBg": "#f43f5e",
+                    "initialPosition": 50
+                }
+            ]
+        },
+        "columns": {
+            "type": "integer",
+            "default": 2
+        },
+        "cardHeight": {
+            "type": "integer",
+            "default": 360
+        },
+        "cardRadius": {
+            "type": "integer",
+            "default": 16
+        },
+        "gap": {
+            "type": "integer",
+            "default": 24
+        },
+        "dividerWidth": {
+            "type": "integer",
+            "default": 3
+        },
+        "handleSize": {
+            "type": "integer",
+            "default": 44
+        },
+        "showLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelSize": {
+            "type": "integer",
+            "default": 13
+        },
+        "orientation": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "handleBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "handleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "labelBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.55)"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "labelFontWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "labelLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

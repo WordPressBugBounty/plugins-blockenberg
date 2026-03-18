@@ -1,0 +1,215 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/chapter-navigation",
+    "title": "Chapter Navigation",
+    "description": "Multi-part guide and series navigation with progress, prev/next, and chapter list.",
+    "category": "bkbg-blog",
+    "icon": "book-alt",
+    "keywords": [
+        "chapter",
+        "navigation",
+        "series",
+        "guide",
+        "toc",
+        "next",
+        "previous"
+    ],
+    "editorScript": "bkbg-chapter-navigation-editor",
+    "style": "bkbg-chapter-navigation-style",
+    "viewScript": "bkbg-chapter-navigation-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "seriesTitle": {
+            "type": "string",
+            "default": "Complete Guide to SEO"
+        },
+        "currentPart": {
+            "type": "number",
+            "default": 3
+        },
+        "totalParts": {
+            "type": "number",
+            "default": 7
+        },
+        "currentTitle": {
+            "type": "string",
+            "default": "On-Page Optimization"
+        },
+        "prevTitle": {
+            "type": "string",
+            "default": "Keyword Research"
+        },
+        "prevUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "nextTitle": {
+            "type": "string",
+            "default": "Technical SEO"
+        },
+        "nextUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "chapters": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Introduction to SEO",
+                    "url": ""
+                },
+                {
+                    "title": "Keyword Research",
+                    "url": ""
+                },
+                {
+                    "title": "On-Page Optimization",
+                    "url": ""
+                },
+                {
+                    "title": "Technical SEO",
+                    "url": ""
+                },
+                {
+                    "title": "Link Building",
+                    "url": ""
+                },
+                {
+                    "title": "Content Strategy",
+                    "url": ""
+                },
+                {
+                    "title": "Measuring Results",
+                    "url": ""
+                }
+            ]
+        },
+        "showChapterList": {
+            "type": "boolean",
+            "default": true
+        },
+        "chapterListOpen": {
+            "type": "boolean",
+            "default": false
+        },
+        "showProgress": {
+            "type": "boolean",
+            "default": true
+        },
+        "style": {
+            "type": "string",
+            "default": "card"
+        },
+        "openInNewTab": {
+            "type": "boolean",
+            "default": false
+        },
+        "partLabel": {
+            "type": "string",
+            "default": "Part"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "seriesTitleColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "currentTitleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "progressBg": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "progressFill": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "btnHoverBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "pillBg": {
+            "type": "string",
+            "default": "#eef2ff"
+        },
+        "pillColor": {
+            "type": "string",
+            "default": "#4f46e5"
+        },
+        "chapterListBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "activeChapterBg": {
+            "type": "string",
+            "default": "#eef2ff"
+        },
+        "activeChapterColor": {
+            "type": "string",
+            "default": "#4f46e5"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 0
+        },
+        "seriesTitleFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "currentTitleFontSize": {
+            "type": "number",
+            "default": 17
+        },
+        "currentTitleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "navFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "chapterListFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

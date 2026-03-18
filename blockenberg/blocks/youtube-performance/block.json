@@ -1,0 +1,133 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/youtube-performance",
+    "title": "YouTube Performance Embed",
+    "category": "bkbg-dev",
+    "icon": "video-alt3",
+    "description": "High-performance YouTube embed with poster + lazy iframe on click.",
+    "keywords": [
+        "youtube",
+        "video",
+        "embed",
+        "lazy",
+        "performance",
+        "poster"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-youtube-performance-editor",
+    "editorStyle": "bkbg-youtube-performance-style",
+    "style": "bkbg-youtube-performance-style",
+    "viewScript": "bkbg-youtube-performance-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "videoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "videoId": {
+            "type": "string",
+            "default": ""
+        },
+        "privacyMode": {
+            "type": "boolean",
+            "default": true
+        },
+        "startTime": {
+            "type": "number",
+            "default": 0
+        },
+        "controls": {
+            "type": "boolean",
+            "default": true
+        },
+        "rel": {
+            "type": "boolean",
+            "default": false
+        },
+        "mute": {
+            "type": "boolean",
+            "default": false
+        },
+        "loop": {
+            "type": "boolean",
+            "default": false
+        },
+        "posterSource": {
+            "type": "string",
+            "default": "youtube-max"
+        },
+        "posterImage": {
+            "type": "object",
+            "default": {
+                "id": 0,
+                "url": "",
+                "alt": ""
+            }
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": false
+        },
+        "title": {
+            "type": "string",
+            "default": ""
+        },
+        "aspect": {
+            "type": "string",
+            "default": "4/3"
+        },
+        "minHeight": {
+            "type": "number",
+            "default": 350
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "shadow": {
+            "type": "boolean",
+            "default": false
+        },
+        "playStyle": {
+            "type": "string",
+            "default": "youtube"
+        },
+        "playSize": {
+            "type": "number",
+            "default": 50
+        },
+        "playBg": {
+            "type": "string",
+            "default": "#01adee"
+        },
+        "playColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "playHoverScale": {
+            "type": "number",
+            "default": 1.05
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

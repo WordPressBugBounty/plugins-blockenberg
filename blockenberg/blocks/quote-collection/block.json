@@ -1,0 +1,150 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/quote-collection",
+    "version": "1.0.0",
+    "title": "Quote Collection",
+    "category": "bkbg-blog",
+    "description": "Curated editorial multi-quote grid — inspirational quotes, expert opinions, notable sayings.",
+    "keywords": [
+        "quotes",
+        "collection",
+        "grid",
+        "sayings",
+        "editorial",
+        "inspiration"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-quote-collection-editor",
+    "style": "bkbg-quote-collection-style",
+    "viewScript": "bkbg-quote-collection-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "sectionTitle": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionSubtitle": {
+            "type": "string",
+            "default": ""
+        },
+        "showHeader": {
+            "type": "boolean",
+            "default": false
+        },
+        "quotes": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "type": "string"
+                    },
+                    "author": {
+                        "type": "string"
+                    },
+                    "role": {
+                        "type": "string"
+                    },
+                    "source": {
+                        "type": "string"
+                    }
+                }
+            },
+            "default": [
+                {
+                    "text": "",
+                    "author": "",
+                    "role": "",
+                    "source": ""
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "columns": {
+            "type": "integer",
+            "default": 2
+        },
+        "quoteStyle": {
+            "type": "string",
+            "default": "classic"
+        },
+        "showQuoteMark": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f8f9fa"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e9ecef"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "quoteMarkColor": {
+            "type": "string",
+            "default": "#e0e7ff"
+        },
+        "quoteColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "authorColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "roleColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "gap": {
+            "type": "integer",
+            "default": 20
+        },
+        "cardRadius": {
+            "type": "integer",
+            "default": 12
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 0
+        },
+        "quoteTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "authorTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,179 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/statistics-calculator",
+	"title": "Statistics Calculator",
+	"category": "bkbg-calculators",
+	"icon": "chart-bar",
+	"description": "Enter a dataset and instantly compute descriptive statistics: mean, median, mode, range, variance, standard deviation, quartiles, and more.",
+	"keywords": [
+		"statistics",
+		"mean",
+		"median",
+		"mode",
+		"standard deviation",
+		"variance",
+		"calculator",
+		"data",
+		"math"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-statistics-calculator-editor",
+	"style": "bkbg-statistics-calculator-style",
+	"viewScript": "bkbg-statistics-calculator-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Statistics Calculator"
+		},
+		"showTitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Enter numbers separated by commas or spaces to compute descriptive statistics."
+		},
+		"showSubtitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"defaultData": {
+			"type": "string",
+			"default": "4, 8, 15, 16, 23, 42"
+		},
+		"showHistogram": {
+			"type": "boolean",
+			"default": true
+		},
+		"showSortedList": {
+			"type": "boolean",
+			"default": true
+		},
+		"showBoxPlot": {
+			"type": "boolean",
+			"default": true
+		},
+		"decimalPlaces": {
+			"type": "number",
+			"default": 4
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"meanColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"medianColor": {
+			"type": "string",
+			"default": "#0ea5e9"
+		},
+		"modeColor": {
+			"type": "string",
+			"default": "#10b981"
+		},
+		"stdDevColor": {
+			"type": "string",
+			"default": "#f59e0b"
+		},
+		"barColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"cardBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"sectionBg": {
+			"type": "string",
+			"default": "#f5f3ff"
+		},
+		"statCardBg": {
+			"type": "string",
+			"default": "#fafafa"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#1e1b4b"
+		},
+		"subtitleColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"labelColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"inputBg": {
+			"type": "string",
+			"default": "#f9fafb"
+		},
+		"inputBorder": {
+			"type": "string",
+			"default": "#d1d5db"
+		},
+		"cardRadius": {
+			"type": "number",
+			"default": 16
+		},
+		"statRadius": {
+			"type": "number",
+			"default": 12
+		},
+		"inputRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"titleSize": {
+			"type": "number",
+			"default": 26
+		},
+		"titleFontWeight": {
+			"type": "string",
+			"default": "800"
+		},
+		"subtitleFontSize": {
+			"type": "number",
+			"default": 14
+		},
+		"maxWidth": {
+			"type": "number",
+			"default": 680
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 60
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 60
+		},
+		"titleLineHeight": {
+			"type": "number",
+			"default": 1.2
+		},
+		"subtitleLineHeight": {
+			"type": "number",
+			"default": 1.5
+		},
+		"titleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"subtitleTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

@@ -1,0 +1,158 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/cookie-consent",
+    "title": "Cookie Consent",
+    "description": "GDPR-compliant cookie consent banner with customizable position, layout, categories, and GTM integration.",
+    "category": "bkbg-marketing",
+    "icon": "shield",
+    "keywords": [
+        "cookie",
+        "gdpr",
+        "consent",
+        "privacy",
+        "banner",
+        "gtm"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-cookie-consent-editor",
+    "editorStyle": "bkbg-cookie-consent-style",
+    "style": "bkbg-cookie-consent-style",
+    "viewScript": "bkbg-cookie-consent-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": false,
+        "align": false
+    },
+    "attributes": {
+        "message": {
+            "type": "string",
+            "default": "We use cookies to enhance your experience, analyze site traffic, and serve personalized content. By clicking \"Accept All\", you consent to our use of cookies."
+        },
+        "acceptLabel": {
+            "type": "string",
+            "default": "Accept All"
+        },
+        "declineLabel": {
+            "type": "string",
+            "default": "Decline"
+        },
+        "customizeLabel": {
+            "type": "string",
+            "default": "Customize"
+        },
+        "showDecline": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCustomize": {
+            "type": "boolean",
+            "default": false
+        },
+        "privacyLabel": {
+            "type": "string",
+            "default": "Privacy Policy"
+        },
+        "privacyUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "position": {
+            "type": "string",
+            "default": "bottom"
+        },
+        "layout": {
+            "type": "string",
+            "default": "bar"
+        },
+        "cookieName": {
+            "type": "string",
+            "default": "bkbg_cookie_consent"
+        },
+        "cookieDays": {
+            "type": "number",
+            "default": 365
+        },
+        "showAnalytics": {
+            "type": "boolean",
+            "default": true
+        },
+        "showMarketing": {
+            "type": "boolean",
+            "default": true
+        },
+        "showFunctional": {
+            "type": "boolean",
+            "default": true
+        },
+        "analyticsLabel": {
+            "type": "string",
+            "default": "Analytics"
+        },
+        "marketingLabel": {
+            "type": "string",
+            "default": "Marketing"
+        },
+        "functionalLabel": {
+            "type": "string",
+            "default": "Functional"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#1f2937"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "acceptBg": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "acceptColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "declineBg": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "declineColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "declineBorderColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#93c5fd"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "padding": {
+            "type": "number",
+            "default": 16
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 900
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "animation": {
+            "type": "string",
+            "default": "slide"
+        },
+        "typoMessage": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

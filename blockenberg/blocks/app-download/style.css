@@ -1,0 +1,144 @@
+/* App Download – shared styles */
+.bkbg-app-download-wrap { box-sizing: border-box; }
+
+.bkbg-app-dl-inner {
+    max-width: var(--bkbg-ad-max-width, 1200px);
+    margin: 0 auto;
+}
+
+.bkbg-app-dl-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.bkbg-app-dl-grid.centered { grid-template-columns: 1fr; text-align: center; }
+.bkbg-app-dl-grid.centered .bkbg-app-dl-text { align-items: center; }
+
+.bkbg-app-dl-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.bkbg-app-dl-tag {
+    display: inline-block;
+    border-radius: 100px;
+    padding: 4px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    align-self: flex-start;
+}
+
+.centered .bkbg-app-dl-tag { align-self: center; }
+
+.bkbg-app-dl-heading {
+    margin: 0;
+    font-family: var(--bkbg-ad-heading-font-family, inherit);
+    font-size: var(--bkbg-ad-heading-font-size-d, var(--bkbg-ad-heading-font-size, var(--bkbg-ad-heading-sz, 44px)));
+    font-weight: var(--bkbg-ad-heading-font-weight, 800);
+    font-style: var(--bkbg-ad-heading-font-style, normal);
+    text-transform: var(--bkbg-ad-heading-text-transform, none);
+    text-decoration: var(--bkbg-ad-heading-text-decoration, none);
+    line-height: var(--bkbg-ad-heading-line-height-d, var(--bkbg-ad-heading-line-height, 1.15));
+    letter-spacing: var(--bkbg-ad-heading-letter-spacing-d, var(--bkbg-ad-heading-letter-spacing, normal));
+    word-spacing: var(--bkbg-ad-heading-word-spacing-d, var(--bkbg-ad-heading-word-spacing, normal));
+}
+.bkbg-app-dl-body {
+    margin: 0;
+    font-family: var(--bkbg-ad-body-font-family, inherit);
+    font-size: var(--bkbg-ad-body-font-size-d, var(--bkbg-ad-body-font-size, var(--bkbg-ad-body-sz, 18px)));
+    font-weight: var(--bkbg-ad-body-font-weight, inherit);
+    font-style: var(--bkbg-ad-body-font-style, normal);
+    text-transform: var(--bkbg-ad-body-text-transform, none);
+    text-decoration: var(--bkbg-ad-body-text-decoration, none);
+    line-height: var(--bkbg-ad-body-line-height-d, var(--bkbg-ad-body-line-height, 1.7));
+    letter-spacing: var(--bkbg-ad-body-letter-spacing-d, var(--bkbg-ad-body-letter-spacing, normal));
+    word-spacing: var(--bkbg-ad-body-word-spacing-d, var(--bkbg-ad-body-word-spacing, normal));
+}
+
+@media (max-width: 1024px) {
+    .bkbg-app-dl-heading {
+        font-size: var(--bkbg-ad-heading-font-size-t, var(--bkbg-ad-heading-font-size-d, var(--bkbg-ad-heading-font-size, var(--bkbg-ad-heading-sz, 44px))));
+        line-height: var(--bkbg-ad-heading-line-height-t, var(--bkbg-ad-heading-line-height-d, var(--bkbg-ad-heading-line-height, 1.15)));
+        letter-spacing: var(--bkbg-ad-heading-letter-spacing-t, var(--bkbg-ad-heading-letter-spacing-d, var(--bkbg-ad-heading-letter-spacing, normal)));
+        word-spacing: var(--bkbg-ad-heading-word-spacing-t, var(--bkbg-ad-heading-word-spacing-d, var(--bkbg-ad-heading-word-spacing, normal)));
+    }
+    .bkbg-app-dl-body {
+        font-size: var(--bkbg-ad-body-font-size-t, var(--bkbg-ad-body-font-size-d, var(--bkbg-ad-body-font-size, var(--bkbg-ad-body-sz, 18px))));
+        line-height: var(--bkbg-ad-body-line-height-t, var(--bkbg-ad-body-line-height-d, var(--bkbg-ad-body-line-height, 1.7)));
+        letter-spacing: var(--bkbg-ad-body-letter-spacing-t, var(--bkbg-ad-body-letter-spacing-d, var(--bkbg-ad-body-letter-spacing, normal)));
+        word-spacing: var(--bkbg-ad-body-word-spacing-t, var(--bkbg-ad-body-word-spacing-d, var(--bkbg-ad-body-word-spacing, normal)));
+    }
+}
+
+@media (max-width: 767px) {
+    .bkbg-app-dl-heading {
+        font-size: var(--bkbg-ad-heading-font-size-m, var(--bkbg-ad-heading-font-size-t, var(--bkbg-ad-heading-font-size-d, var(--bkbg-ad-heading-font-size, var(--bkbg-ad-heading-sz, 44px)))));
+        line-height: var(--bkbg-ad-heading-line-height-m, var(--bkbg-ad-heading-line-height-t, var(--bkbg-ad-heading-line-height-d, var(--bkbg-ad-heading-line-height, 1.15))));
+        letter-spacing: var(--bkbg-ad-heading-letter-spacing-m, var(--bkbg-ad-heading-letter-spacing-t, var(--bkbg-ad-heading-letter-spacing-d, var(--bkbg-ad-heading-letter-spacing, normal))));
+        word-spacing: var(--bkbg-ad-heading-word-spacing-m, var(--bkbg-ad-heading-word-spacing-t, var(--bkbg-ad-heading-word-spacing-d, var(--bkbg-ad-heading-word-spacing, normal))));
+    }
+    .bkbg-app-dl-body {
+        font-size: var(--bkbg-ad-body-font-size-m, var(--bkbg-ad-body-font-size-t, var(--bkbg-ad-body-font-size-d, var(--bkbg-ad-body-font-size, var(--bkbg-ad-body-sz, 18px)))));
+        line-height: var(--bkbg-ad-body-line-height-m, var(--bkbg-ad-body-line-height-t, var(--bkbg-ad-body-line-height-d, var(--bkbg-ad-body-line-height, 1.7))));
+        letter-spacing: var(--bkbg-ad-body-letter-spacing-m, var(--bkbg-ad-body-letter-spacing-t, var(--bkbg-ad-body-letter-spacing-d, var(--bkbg-ad-body-letter-spacing, normal))));
+        word-spacing: var(--bkbg-ad-body-word-spacing-m, var(--bkbg-ad-body-word-spacing-t, var(--bkbg-ad-body-word-spacing-d, var(--bkbg-ad-body-word-spacing, normal))));
+    }
+}
+
+.bkbg-app-dl-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bkbg-app-dl-stars { font-size: 20px; }
+.bkbg-app-dl-rating-text { font-size: 14px; }
+
+.bkbg-app-dl-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+}
+
+.bkbg-app-dl-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 12px;
+    padding: 10px 20px;
+    min-width: 160px;
+    text-decoration: none;
+    transition: opacity .2s, transform .15s;
+}
+
+.bkbg-app-dl-badge:hover { opacity: .85; transform: translateY(-2px); }
+
+.bkbg-app-dl-badge.black { background: #000; }
+.bkbg-app-dl-badge.white { background: #fff; border: 1.5px solid #ccc; }
+
+.bkbg-app-dl-badge-small  { font-size: 9px; letter-spacing: .05em; }
+.bkbg-app-dl-badge-big    { font-size: 17px; font-weight: 700; line-height: 1.1; }
+
+.bkbg-app-dl-device-col {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.bkbg-app-dl-device-col img {
+    max-height: 480px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 30px 60px rgba(0,0,0,.5));
+}
+
+@media (max-width: 768px) {
+    .bkbg-app-dl-grid { grid-template-columns: 1fr; }
+    .bkbg-app-dl-device-col { display: none; }
+}

@@ -1,0 +1,219 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/sankey-diagram",
+    "version": "1.0.0",
+    "title": "Sankey Diagram",
+    "category": "bkbg-charts",
+    "icon": "chart-line",
+    "description": "Flow diagram showing proportional transfers between stages. Great for budget allocation, user journeys, traffic sources, and energy/material flows.",
+    "keywords": [
+        "sankey",
+        "flow",
+        "diagram",
+        "budget",
+        "journey",
+        "alluvial",
+        "waterfall",
+        "stream"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-sankey-diagram-editor",
+    "style": "bkbg-sankey-diagram-style",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Traffic Sources"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "number",
+            "default": 800
+        },
+        "svgHeight": {
+            "type": "number",
+            "default": 440
+        },
+        "nodeWidth": {
+            "type": "number",
+            "default": 24
+        },
+        "nodePad": {
+            "type": "number",
+            "default": 20
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "labelFontWeight": {
+            "type": "number",
+            "default": 600
+        },
+        "labelLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "valueFontSize": {
+            "type": "number",
+            "default": 11
+        },
+        "valueFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "valueLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "flowOpacity": {
+            "type": "number",
+            "default": 40
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "nodes": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "organic",
+                    "label": "Organic Search",
+                    "color": "#4f46e5"
+                },
+                {
+                    "id": "social",
+                    "label": "Social Media",
+                    "color": "#0891b2"
+                },
+                {
+                    "id": "direct",
+                    "label": "Direct",
+                    "color": "#059669"
+                },
+                {
+                    "id": "referral",
+                    "label": "Referral",
+                    "color": "#d97706"
+                },
+                {
+                    "id": "blog",
+                    "label": "Blog",
+                    "color": "#7c3aed"
+                },
+                {
+                    "id": "product",
+                    "label": "Product Pages",
+                    "color": "#dc2626"
+                },
+                {
+                    "id": "checkout",
+                    "label": "Checkout",
+                    "color": "#ea580c"
+                },
+                {
+                    "id": "purchase",
+                    "label": "Purchase",
+                    "color": "#16a34a"
+                },
+                {
+                    "id": "bounced",
+                    "label": "Bounced",
+                    "color": "#9ca3af"
+                }
+            ]
+        },
+        "links": {
+            "type": "array",
+            "default": [
+                {
+                    "source": "organic",
+                    "target": "blog",
+                    "value": 4200
+                },
+                {
+                    "source": "organic",
+                    "target": "product",
+                    "value": 2800
+                },
+                {
+                    "source": "social",
+                    "target": "blog",
+                    "value": 1900
+                },
+                {
+                    "source": "social",
+                    "target": "product",
+                    "value": 1400
+                },
+                {
+                    "source": "direct",
+                    "target": "product",
+                    "value": 1700
+                },
+                {
+                    "source": "referral",
+                    "target": "product",
+                    "value": 900
+                },
+                {
+                    "source": "blog",
+                    "target": "product",
+                    "value": 2400
+                },
+                {
+                    "source": "blog",
+                    "target": "bounced",
+                    "value": 3700
+                },
+                {
+                    "source": "product",
+                    "target": "checkout",
+                    "value": 3200
+                },
+                {
+                    "source": "product",
+                    "target": "bounced",
+                    "value": 5600
+                },
+                {
+                    "source": "checkout",
+                    "target": "purchase",
+                    "value": 2600
+                },
+                {
+                    "source": "checkout",
+                    "target": "bounced",
+                    "value": 600
+                }
+            ]
+        }
+    }
+}

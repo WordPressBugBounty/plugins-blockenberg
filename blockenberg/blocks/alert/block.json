@@ -1,0 +1,160 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/alert",
+    "title": "Alert / Notice",
+    "category": "bkbg-content",
+    "icon": "warning",
+    "description": "Info, success, warning or error notice block with icon, title and body text. Pure CSS — zero JS.",
+    "keywords": [
+        "alert",
+        "notice",
+        "warning",
+        "info",
+        "error",
+        "success",
+        "message",
+        "tip",
+        "callout"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-alert-editor",
+    "editorStyle": "bkbg-alert-style",
+    "style": "bkbg-alert-style",
+    "viewScript": "bkbg-alert-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "alertType": {
+            "type": "string",
+            "default": "info"
+        },
+        "useCustomColors": {
+            "type": "boolean",
+            "default": false
+        },
+        "customBgColor": {
+            "type": "string",
+            "default": "#eff6ff"
+        },
+        "customBorderColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "customIconColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "customTitleColor": {
+            "type": "string",
+            "default": "#1e3a5f"
+        },
+        "customTextColor": {
+            "type": "string",
+            "default": "#1e40af"
+        },
+        "borderStyle": {
+            "type": "string",
+            "default": "left"
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 4
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "iconStyle": {
+            "type": "string",
+            "default": "auto"
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 22
+        },
+        "iconPosition": {
+            "type": "string",
+            "default": "top"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "titleText": {
+            "type": "string",
+            "default": "Heads up!"
+        },
+        "titleTag": {
+            "type": "string",
+            "default": "p"
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 15
+        },
+        "titleWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "bodyText": {
+            "type": "string",
+            "default": "This is a notice block. You can use it to highlight important information on your page."
+        },
+        "bodySize": {
+            "type": "number",
+            "default": 14
+        },
+        "bodyWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "bodyLH": {
+            "type": "number",
+            "default": 1.6
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 16
+        },
+        "paddingRight": {
+            "type": "number",
+            "default": 20
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 16
+        },
+        "paddingLeft": {
+            "type": "number",
+            "default": 20
+        },
+        "gapIconContent": {
+            "type": "number",
+            "default": 14
+        },
+        "gapTitleBody": {
+            "type": "number",
+            "default": 4
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bodyTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

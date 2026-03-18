@@ -1,0 +1,154 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/split-flap-display",
+    "title": "Split-Flap Display",
+    "category": "bkbg-effects",
+    "icon": "editor-table",
+    "description": "Recreate the iconic airport departure-board split-flap animation. Characters roll through the alphabet and settle on the target text. Supports multiple messages, ticker mode, custom colours, and scroll-triggered animation.",
+    "keywords": [
+        "split flap",
+        "solari",
+        "airport",
+        "departure",
+        "board",
+        "flipboard",
+        "animation",
+        "text"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-split-flap-display-editor",
+    "style": "bkbg-split-flap-display-style",
+    "viewScript": "bkbg-split-flap-display-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "messages": {
+            "type": "array",
+            "default": [
+                "DEPARTURES",
+                "GATE  A7",
+                "ON TIME "
+            ]
+        },
+        "charSet": {
+            "type": "string",
+            "default": "alpha"
+        },
+        "tickerMode": {
+            "type": "boolean",
+            "default": true
+        },
+        "tickerDelay": {
+            "type": "number",
+            "default": 3000
+        },
+        "flipOnScroll": {
+            "type": "boolean",
+            "default": true
+        },
+        "autoPlay": {
+            "type": "boolean",
+            "default": false
+        },
+        "charWidth": {
+            "type": "number",
+            "default": 48
+        },
+        "charHeight": {
+            "type": "number",
+            "default": 64
+        },
+        "charGap": {
+            "type": "number",
+            "default": 4
+        },
+        "rowGap": {
+            "type": "number",
+            "default": 8
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 28
+        },
+        "fontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "flipSpeed": {
+            "type": "number",
+            "default": 60
+        },
+        "flipStagger": {
+            "type": "number",
+            "default": 30
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 6
+        },
+        "boardRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "boardPadding": {
+            "type": "number",
+            "default": 24
+        },
+        "boardBg": {
+            "type": "string",
+            "default": "#1a1a1a"
+        },
+        "charBg": {
+            "type": "string",
+            "default": "#2a2a2a"
+        },
+        "charColor": {
+            "type": "string",
+            "default": "#f5f5dc"
+        },
+        "flapHalfBg": {
+            "type": "string",
+            "default": "#222222"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#111111"
+        },
+        "glowColor": {
+            "type": "string",
+            "default": ""
+        },
+        "label": {
+            "type": "string",
+            "default": "FLIGHT INFORMATION"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#888888"
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "fontFamily": {
+            "type": "string",
+            "default": "mono"
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "charTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

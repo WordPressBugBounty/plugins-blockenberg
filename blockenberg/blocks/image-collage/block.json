@@ -1,0 +1,192 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/image-collage",
+    "version": "1.0.0",
+    "title": "Image Collage",
+    "category": "bkbg-media",
+    "icon": "format-gallery",
+    "description": "Creative overlapping image composition with up to 5 images, custom rotations, positions, frames and a floating overlay card. Perfect for hero and about sections.",
+    "keywords": [
+        "collage",
+        "images",
+        "overlap",
+        "composition",
+        "scattered",
+        "photo",
+        "gallery",
+        "creative",
+        "stack"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-image-collage-editor",
+    "editorStyle": "bkbg-image-collage-style",
+    "style": "bkbg-image-collage-style",
+    "viewScript": "bkbg-image-collage-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "images": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "img1",
+                    "url": "",
+                    "imageId": 0,
+                    "alt": "",
+                    "rotation": -4,
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "scale": 1,
+                    "zIndex": 1,
+                    "frame": "shadow",
+                    "w": 55,
+                    "h": 65
+                },
+                {
+                    "id": "img2",
+                    "url": "",
+                    "imageId": 0,
+                    "alt": "",
+                    "rotation": 3,
+                    "offsetX": 40,
+                    "offsetY": 15,
+                    "scale": 0.85,
+                    "zIndex": 2,
+                    "frame": "polaroid",
+                    "w": 45,
+                    "h": 50
+                },
+                {
+                    "id": "img3",
+                    "url": "",
+                    "imageId": 0,
+                    "alt": "",
+                    "rotation": -2,
+                    "offsetX": -10,
+                    "offsetY": 55,
+                    "scale": 0.7,
+                    "zIndex": 3,
+                    "frame": "shadow",
+                    "w": 40,
+                    "h": 40
+                }
+            ]
+        },
+        "preset": {
+            "type": "string",
+            "default": "scattered"
+        },
+        "canvasHeight": {
+            "type": "number",
+            "default": 460
+        },
+        "canvasMaxWidth": {
+            "type": "number",
+            "default": 680
+        },
+        "hoverLift": {
+            "type": "boolean",
+            "default": true
+        },
+        "animateIn": {
+            "type": "boolean",
+            "default": true
+        },
+        "frameColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "framePadding": {
+            "type": "number",
+            "default": 10
+        },
+        "shadowIntensity": {
+            "type": "number",
+            "default": 20
+        },
+        "showOverlayCard": {
+            "type": "boolean",
+            "default": false
+        },
+        "overlayCardText": {
+            "type": "string",
+            "default": "Our Story"
+        },
+        "overlayCardSubtext": {
+            "type": "string",
+            "default": "Since 2012"
+        },
+        "overlayCardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "overlayCardColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "overlayCardAccent": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "overlayCardPos": {
+            "type": "string",
+            "default": "bottom-right"
+        },
+        "overlayCardTextSize": {
+            "type": "number",
+            "default": 16
+        },
+        "overlayCardTextWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "overlayCardTextLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "overlayCardSubtextSize": {
+            "type": "number",
+            "default": 13
+        },
+        "overlayCardSubtextWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "overlayCardSubtextLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "headlineTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "align": {
+            "type": "string",
+            "default": "center"
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 40
+        }
+    }
+}

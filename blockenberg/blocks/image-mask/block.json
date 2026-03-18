@@ -1,0 +1,188 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/image-mask",
+    "title": "Image Mask",
+    "category": "bkbg-media",
+    "icon": "format-image",
+    "description": "Display an image through a decorative shape mask — circle, hexagon, blob, star, diamond, cross, heart, or pentagon.",
+    "keywords": [
+        "image",
+        "mask",
+        "shape",
+        "clip",
+        "hexagon",
+        "blob",
+        "circle",
+        "silhouette"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-image-mask-editor",
+    "editorStyle": "bkbg-image-mask-style",
+    "style": "bkbg-image-mask-style",
+    "viewScript": "bkbg-image-mask-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "left",
+            "center",
+            "right"
+        ]
+    },
+    "attributes": {
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "shape": {
+            "type": "string",
+            "default": "circle"
+        },
+        "size": {
+            "type": "number",
+            "default": 320
+        },
+        "objectPosition": {
+            "type": "string",
+            "default": "center center"
+        },
+        "rotation": {
+            "type": "number",
+            "default": 0
+        },
+        "showBorder": {
+            "type": "boolean",
+            "default": false
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 4
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "borderOffset": {
+            "type": "number",
+            "default": 8
+        },
+        "showShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "shadowIntensity": {
+            "type": "number",
+            "default": 30
+        },
+        "shadowColor": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "hoverEffect": {
+            "type": "string",
+            "default": "zoom"
+        },
+        "hoverScale": {
+            "type": "number",
+            "default": 108
+        },
+        "transitionDuration": {
+            "type": "number",
+            "default": 400
+        },
+        "showCaption": {
+            "type": "boolean",
+            "default": false
+        },
+        "caption": {
+            "type": "string",
+            "default": ""
+        },
+        "captionColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "captionSize": {
+            "type": "number",
+            "default": 14
+        },
+        "captionAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "linkUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "linkNewTab": {
+            "type": "boolean",
+            "default": false
+        },
+        "aspectRatio": {
+            "type": "string",
+            "default": "1/1"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": ""
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 32
+        },
+        "titleFontWeight": {
+            "type": "number",
+            "default": 700
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "subtitleFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "subtitleFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "subtitleLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "captionFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "captionFontWeight": {
+            "type": "number",
+            "default": 400
+        },
+        "captionLineHeight": {
+            "type": "number",
+            "default": 1.4
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "captionTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

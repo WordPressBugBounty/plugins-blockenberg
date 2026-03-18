@@ -1,0 +1,217 @@
+/* ============================================================
+   FAQ Grid — style.css
+   Prefix: bkbg-fg-
+   ============================================================ */
+
+.bkbg-fg-wrap {
+    box-sizing: border-box;
+    width: 100%;
+    padding: var(--bkbg-fg-pt, 64px) 0 var(--bkbg-fg-pb, 64px);
+    background: var(--bkbg-fg-bg, #ffffff);
+}
+
+/* ---- Section header ---- */
+.bkbg-fg-header {
+    margin-bottom: var(--bkbg-fg-sect-gap, 48px);
+}
+
+.bkbg-fg-wrap .bkbg-fg-heading {
+    margin: 0 0 12px;
+    font-family: var(--bkbg-fg-hd-font-family, inherit);
+    font-size: var(--bkbg-fg-hd-font-size-d, 32px);
+    font-weight: var(--bkbg-fg-hd-font-weight, 800);
+    font-style: var(--bkbg-fg-hd-font-style, normal);
+    text-transform: var(--bkbg-fg-hd-text-transform, none);
+    text-decoration: var(--bkbg-fg-hd-text-decoration, none);
+    line-height: var(--bkbg-fg-hd-line-height-d, 1.15);
+    letter-spacing: var(--bkbg-fg-hd-letter-spacing-d, -.03em);
+    word-spacing: var(--bkbg-fg-hd-word-spacing-d, normal);
+    color: var(--bkbg-fg-heading-c, #0f172a);
+}
+
+.bkbg-fg-subheading {
+    margin: 0;
+    font-family: var(--bkbg-fg-sh-font-family, inherit);
+    font-size: var(--bkbg-fg-sh-font-size-d, 18px);
+    font-weight: var(--bkbg-fg-sh-font-weight, normal);
+    font-style: var(--bkbg-fg-sh-font-style, normal);
+    text-transform: var(--bkbg-fg-sh-text-transform, none);
+    text-decoration: var(--bkbg-fg-sh-text-decoration, none);
+    line-height: var(--bkbg-fg-sh-line-height-d, 1.6);
+    letter-spacing: var(--bkbg-fg-sh-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fg-sh-word-spacing-d, normal);
+    color: var(--bkbg-fg-sub-c, #64748b);
+}
+
+/* ---- Grid ---- */
+.bkbg-fg-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--bkbg-fg-cols, 2), 1fr);
+    gap: var(--bkbg-fg-gap, 20px);
+}
+
+/* ---- Card ---- */
+.bkbg-fg-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: var(--bkbg-fg-card-p, 28px);
+    border-radius: var(--bkbg-fg-card-r, 14px);
+    background: var(--bkbg-fg-card-bg, #ffffff);
+    transition: transform .18s, box-shadow .18s;
+}
+
+.bkbg-fg-num {
+    font-size: var(--bkbg-fg-qt-font-size-d, 17px);
+    font-weight: 800;
+    color: var(--bkbg-fg-num-c, #6c3fb5);
+    opacity: .5;
+    line-height: 1;
+}
+
+.bkbg-fg-q {
+    font-family: var(--bkbg-fg-qt-font-family, inherit);
+    font-size: var(--bkbg-fg-qt-font-size-d, 17px);
+    font-weight: var(--bkbg-fg-qt-font-weight, 700);
+    font-style: var(--bkbg-fg-qt-font-style, normal);
+    text-transform: var(--bkbg-fg-qt-text-transform, none);
+    text-decoration: var(--bkbg-fg-qt-text-decoration, none);
+    line-height: var(--bkbg-fg-qt-line-height-d, 1.35);
+    letter-spacing: var(--bkbg-fg-qt-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fg-qt-word-spacing-d, normal);
+    color: var(--bkbg-fg-q-c, #0f172a);
+}
+
+.bkbg-fg-divider {
+    width: 32px; height: 2px;
+    background: var(--bkbg-fg-accent, #6c3fb5);
+    border-radius: 2px;
+    opacity: .4;
+    flex-shrink: 0;
+}
+
+.bkbg-fg-a {
+    font-family: var(--bkbg-fg-an-font-family, inherit);
+    font-size: var(--bkbg-fg-an-font-size-d, 15px);
+    font-weight: var(--bkbg-fg-an-font-weight, normal);
+    font-style: var(--bkbg-fg-an-font-style, normal);
+    text-transform: var(--bkbg-fg-an-text-transform, none);
+    text-decoration: var(--bkbg-fg-an-text-decoration, none);
+    line-height: var(--bkbg-fg-an-line-height-d, 1.7);
+    letter-spacing: var(--bkbg-fg-an-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-fg-an-word-spacing-d, normal);
+    color: var(--bkbg-fg-a-c, #475569);
+    margin: 0;
+}
+
+/* ============================================================
+   Style Variants
+   ============================================================ */
+
+/* card */
+.bkbg-fg-style--card .bkbg-fg-card {
+    box-shadow: 0 2px 8px rgba(0,0,0,.05), 0 0 0 1px rgba(0,0,0,.04);
+}
+.bkbg-fg-style--card .bkbg-fg-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+
+/* bordered */
+.bkbg-fg-style--bordered .bkbg-fg-card {
+    border: 1px solid var(--bkbg-fg-card-border, #e2e8f0);
+    background: var(--bkbg-fg-card-bg, #ffffff);
+}
+.bkbg-fg-style--bordered .bkbg-fg-card:hover {
+    border-color: var(--bkbg-fg-accent, #6c3fb5);
+    box-shadow: 0 4px 16px rgba(0,0,0,.06);
+}
+
+/* flat */
+.bkbg-fg-style--flat .bkbg-fg-card {
+    background: #f8fafc;
+    border-radius: var(--bkbg-fg-card-r, 14px);
+}
+.bkbg-fg-style--flat .bkbg-fg-card:hover { background: #f1f5f9; }
+
+/* gradient */
+.bkbg-fg-style--gradient .bkbg-fg-card {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--bkbg-fg-accent, #6c3fb5) 6%, #ffffff), #ffffff);
+    border: 1px solid color-mix(in srgb, var(--bkbg-fg-accent, #6c3fb5) 15%, transparent);
+}
+
+/* dark */
+.bkbg-fg-style--dark {
+    background: #0f172a;
+}
+.bkbg-fg-style--dark .bkbg-fg-heading { color: #ffffff; }
+.bkbg-fg-style--dark .bkbg-fg-subheading { color: rgba(255,255,255,.55); }
+.bkbg-fg-style--dark .bkbg-fg-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); }
+.bkbg-fg-style--dark .bkbg-fg-q { color: rgba(255,255,255,.9); }
+.bkbg-fg-style--dark .bkbg-fg-a { color: rgba(255,255,255,.6); }
+
+/* Inspector helpers */
+.bkbg-fg-item-ctrl { border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 10px; }
+.bkbg-fg-item-ctrl--open { background: #f8fafc; border-radius: 8px; padding: 10px; margin-bottom: 10px; }
+.bkbg-fg-item-head { display: flex; align-items: center; justify-content: space-between; cursor: pointer; }
+.bkbg-fg-item-actions { display: flex; gap: 4px; }
+.bkbg-fg-item-body { margin-top: 12px; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .bkbg-fg-wrap .bkbg-fg-heading {
+        font-size: var(--bkbg-fg-hd-font-size-t, var(--bkbg-fg-hd-font-size-d, 32px));
+        line-height: var(--bkbg-fg-hd-line-height-t, var(--bkbg-fg-hd-line-height-d, 1.15));
+        letter-spacing: var(--bkbg-fg-hd-letter-spacing-t, var(--bkbg-fg-hd-letter-spacing-d, -.03em));
+        word-spacing: var(--bkbg-fg-hd-word-spacing-t, var(--bkbg-fg-hd-word-spacing-d, normal));
+    }
+    .bkbg-fg-subheading {
+        font-size: var(--bkbg-fg-sh-font-size-t, var(--bkbg-fg-sh-font-size-d, 18px));
+        line-height: var(--bkbg-fg-sh-line-height-t, var(--bkbg-fg-sh-line-height-d, 1.6));
+        letter-spacing: var(--bkbg-fg-sh-letter-spacing-t, var(--bkbg-fg-sh-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-fg-sh-word-spacing-t, var(--bkbg-fg-sh-word-spacing-d, normal));
+    }
+    .bkbg-fg-q {
+        font-size: var(--bkbg-fg-qt-font-size-t, var(--bkbg-fg-qt-font-size-d, 17px));
+        line-height: var(--bkbg-fg-qt-line-height-t, var(--bkbg-fg-qt-line-height-d, 1.35));
+        letter-spacing: var(--bkbg-fg-qt-letter-spacing-t, var(--bkbg-fg-qt-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-fg-qt-word-spacing-t, var(--bkbg-fg-qt-word-spacing-d, normal));
+    }
+    .bkbg-fg-num { font-size: var(--bkbg-fg-qt-font-size-t, var(--bkbg-fg-qt-font-size-d, 17px));line-height:var(--bkbg-fg-qt-line-height-t, var(--bkbg-fg-qt-line-height-d, 1.35));letter-spacing:var(--bkbg-fg-qt-letter-spacing-t, var(--bkbg-fg-qt-letter-spacing-d, normal));word-spacing:var(--bkbg-fg-qt-word-spacing-t, var(--bkbg-fg-qt-word-spacing-d, normal))}
+    .bkbg-fg-a {
+        font-size: var(--bkbg-fg-an-font-size-t, var(--bkbg-fg-an-font-size-d, 15px));
+        line-height: var(--bkbg-fg-an-line-height-t, var(--bkbg-fg-an-line-height-d, 1.7));
+        letter-spacing: var(--bkbg-fg-an-letter-spacing-t, var(--bkbg-fg-an-letter-spacing-d, normal));
+        word-spacing: var(--bkbg-fg-an-word-spacing-t, var(--bkbg-fg-an-word-spacing-d, normal));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-fg-wrap .bkbg-fg-heading {
+        font-size: var(--bkbg-fg-hd-font-size-m, var(--bkbg-fg-hd-font-size-t, var(--bkbg-fg-hd-font-size-d, 32px)));
+        line-height: var(--bkbg-fg-hd-line-height-m, var(--bkbg-fg-hd-line-height-t, var(--bkbg-fg-hd-line-height-d, 1.15)));
+        letter-spacing: var(--bkbg-fg-hd-letter-spacing-m, var(--bkbg-fg-hd-letter-spacing-t, var(--bkbg-fg-hd-letter-spacing-d, -.03em)));
+        word-spacing: var(--bkbg-fg-hd-word-spacing-m, var(--bkbg-fg-hd-word-spacing-t, var(--bkbg-fg-hd-word-spacing-d, normal)));
+    }
+    .bkbg-fg-subheading {
+        font-size: var(--bkbg-fg-sh-font-size-m, var(--bkbg-fg-sh-font-size-t, var(--bkbg-fg-sh-font-size-d, 18px)));
+        line-height: var(--bkbg-fg-sh-line-height-m, var(--bkbg-fg-sh-line-height-t, var(--bkbg-fg-sh-line-height-d, 1.6)));
+        letter-spacing: var(--bkbg-fg-sh-letter-spacing-m, var(--bkbg-fg-sh-letter-spacing-t, var(--bkbg-fg-sh-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-fg-sh-word-spacing-m, var(--bkbg-fg-sh-word-spacing-t, var(--bkbg-fg-sh-word-spacing-d, normal)));
+    }
+    .bkbg-fg-q {
+        font-size: var(--bkbg-fg-qt-font-size-m, var(--bkbg-fg-qt-font-size-t, var(--bkbg-fg-qt-font-size-d, 17px)));
+        line-height: var(--bkbg-fg-qt-line-height-m, var(--bkbg-fg-qt-line-height-t, var(--bkbg-fg-qt-line-height-d, 1.35)));
+        letter-spacing: var(--bkbg-fg-qt-letter-spacing-m, var(--bkbg-fg-qt-letter-spacing-t, var(--bkbg-fg-qt-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-fg-qt-word-spacing-m, var(--bkbg-fg-qt-word-spacing-t, var(--bkbg-fg-qt-word-spacing-d, normal)));
+    }
+    .bkbg-fg-num { font-size: var(--bkbg-fg-qt-font-size-m, var(--bkbg-fg-qt-font-size-t, var(--bkbg-fg-qt-font-size-d, 17px)));line-height:var(--bkbg-fg-qt-line-height-m, var(--bkbg-fg-qt-line-height-t, var(--bkbg-fg-qt-line-height-d, 1.35)));letter-spacing:var(--bkbg-fg-qt-letter-spacing-m, var(--bkbg-fg-qt-letter-spacing-t, var(--bkbg-fg-qt-letter-spacing-d, normal)));word-spacing:var(--bkbg-fg-qt-word-spacing-m, var(--bkbg-fg-qt-word-spacing-t, var(--bkbg-fg-qt-word-spacing-d, normal)))}
+    .bkbg-fg-a {
+        font-size: var(--bkbg-fg-an-font-size-m, var(--bkbg-fg-an-font-size-t, var(--bkbg-fg-an-font-size-d, 15px)));
+        line-height: var(--bkbg-fg-an-line-height-m, var(--bkbg-fg-an-line-height-t, var(--bkbg-fg-an-line-height-d, 1.7)));
+        letter-spacing: var(--bkbg-fg-an-letter-spacing-m, var(--bkbg-fg-an-letter-spacing-t, var(--bkbg-fg-an-letter-spacing-d, normal)));
+        word-spacing: var(--bkbg-fg-an-word-spacing-m, var(--bkbg-fg-an-word-spacing-t, var(--bkbg-fg-an-word-spacing-d, normal)));
+    }
+}
+@media (max-width: 768px) {
+    .bkbg-fg-grid { grid-template-columns: 1fr; }
+}

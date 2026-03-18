@@ -1,0 +1,239 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/affiliate-section",
+    "version": "1.0.0",
+    "title": "Affiliate Section",
+    "category": "bkbg-marketing",
+    "icon": "money-alt",
+    "description": "Affiliate/referral program landing section with commission highlight, how-it-works steps, benefits list, and stats.",
+    "keywords": [
+        "affiliate",
+        "referral",
+        "partner",
+        "commission",
+        "program"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-affiliate-section-editor",
+    "style": "bkbg-affiliate-section-style",
+    "viewScript": "bkbg-affiliate-section-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "Partner Program"
+        },
+        "heading": {
+            "type": "string",
+            "default": "Earn While You Share"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Join our affiliate program and earn generous commissions for every customer you refer to us."
+        },
+        "commission": {
+            "type": "string",
+            "default": "30%"
+        },
+        "commissionLabel": {
+            "type": "string",
+            "default": "recurring commission"
+        },
+        "commissionNote": {
+            "type": "string",
+            "default": "on every sale, every month, for life"
+        },
+        "steps": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "🔗",
+                    "title": "Sign Up Free",
+                    "description": "Create your affiliate account in minutes. No fees, no approval delays."
+                },
+                {
+                    "icon": "📢",
+                    "title": "Share Your Link",
+                    "description": "Get a unique link and promote via blog, email, social media, or any channel."
+                },
+                {
+                    "icon": "💰",
+                    "title": "Earn Commission",
+                    "description": "Get paid automatically each month for every customer you refer."
+                }
+            ]
+        },
+        "showBenefits": {
+            "type": "boolean",
+            "default": true
+        },
+        "benefits": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "30-day cookie window"
+                },
+                {
+                    "text": "Real-time tracking dashboard"
+                },
+                {
+                    "text": "Monthly payouts via PayPal"
+                },
+                {
+                    "text": "Dedicated affiliate manager"
+                },
+                {
+                    "text": "Marketing materials provided"
+                }
+            ]
+        },
+        "showStats": {
+            "type": "boolean",
+            "default": true
+        },
+        "stats": {
+            "type": "array",
+            "default": [
+                {
+                    "number": "2,400+",
+                    "label": "Active Affiliates"
+                },
+                {
+                    "number": "$1.2M",
+                    "label": "Paid Out"
+                },
+                {
+                    "number": "4.8★",
+                    "label": "Affiliate Rating"
+                }
+            ]
+        },
+        "ctaLabel": {
+            "type": "string",
+            "default": "Join the Program"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "ctaSecondaryLabel": {
+            "type": "string",
+            "default": "Learn More"
+        },
+        "ctaSecondaryUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showSecondary": {
+            "type": "boolean",
+            "default": true
+        },
+        "layout": {
+            "type": "string",
+            "default": "split"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "commissionBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "commissionColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#a5b4fc"
+        },
+        "stepCardBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "stepTitleColor": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "stepDescColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "benefitColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "statNumColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "statLabelColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 1100
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "eyebrowFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "headingFontSize": {
+            "type": "number",
+            "default": 38
+        },
+        "subtextFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "eyebrowTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

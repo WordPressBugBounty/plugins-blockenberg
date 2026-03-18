@@ -1,0 +1,288 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/job-listing",
+    "title": "Job Listing",
+    "category": "bkbg-business",
+    "icon": "businessman",
+    "description": "Display a job posting card with title, company, location, salary, job type, skills, apply CTA, and rich styling options.",
+    "keywords": [
+        "job",
+        "listing",
+        "career",
+        "hiring",
+        "vacancy",
+        "work",
+        "employment",
+        "position"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-job-listing-editor",
+    "style": "bkbg-job-listing-style",
+    "viewScript": "bkbg-job-listing-frontend",
+    "attributes": {
+        "jobTitle": {
+            "type": "string",
+            "default": "Senior Frontend Developer"
+        },
+        "company": {
+            "type": "string",
+            "default": "Acme Corp"
+        },
+        "department": {
+            "type": "string",
+            "default": "Engineering"
+        },
+        "location": {
+            "type": "string",
+            "default": "New York, NY"
+        },
+        "locationType": {
+            "type": "string",
+            "default": "hybrid"
+        },
+        "jobType": {
+            "type": "string",
+            "default": "full-time"
+        },
+        "salaryMin": {
+            "type": "string",
+            "default": "80,000"
+        },
+        "salaryMax": {
+            "type": "string",
+            "default": "120,000"
+        },
+        "salaryCurrency": {
+            "type": "string",
+            "default": "$"
+        },
+        "salaryPeriod": {
+            "type": "string",
+            "default": "year"
+        },
+        "showSalary": {
+            "type": "boolean",
+            "default": true
+        },
+        "postedDate": {
+            "type": "string",
+            "default": ""
+        },
+        "showPostedDate": {
+            "type": "boolean",
+            "default": true
+        },
+        "deadline": {
+            "type": "string",
+            "default": ""
+        },
+        "showDeadline": {
+            "type": "boolean",
+            "default": false
+        },
+        "description": {
+            "type": "string",
+            "default": "We are looking for an experienced frontend developer to join our growing team. You will work closely with designers and backend engineers to build world-class user interfaces."
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "skills": {
+            "type": "string",
+            "default": "React, TypeScript, CSS, REST APIs"
+        },
+        "showSkills": {
+            "type": "boolean",
+            "default": true
+        },
+        "applyLabel": {
+            "type": "string",
+            "default": "Apply Now"
+        },
+        "applyUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "applyNewTab": {
+            "type": "boolean",
+            "default": false
+        },
+        "showApplyBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "secondaryLabel": {
+            "type": "string",
+            "default": "Learn More"
+        },
+        "secondaryUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "showSecondaryBtn": {
+            "type": "boolean",
+            "default": false
+        },
+        "logoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "logoId": {
+            "type": "number",
+            "default": 0
+        },
+        "logoAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "showLogo": {
+            "type": "boolean",
+            "default": true
+        },
+        "logoSize": {
+            "type": "number",
+            "default": 56
+        },
+        "featured": {
+            "type": "boolean",
+            "default": false
+        },
+        "featuredLabel": {
+            "type": "string",
+            "default": "Featured"
+        },
+        "featuredColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "featuredTextColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "urgent": {
+            "type": "boolean",
+            "default": false
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 28
+        },
+        "showShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBorder": {
+            "type": "boolean",
+            "default": false
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1e1e"
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 22
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "typoCompany": {
+            "type": "object",
+            "default": {}
+        },
+        "typoDesc": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSkill": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBadge": {
+            "type": "object",
+            "default": {}
+        },
+        "typoPill": {
+            "type": "object",
+            "default": {}
+        },
+        "typoMeta": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBtn": {
+            "type": "object",
+            "default": {}
+        },
+        "companyColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "bodyColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "primaryBtnBg": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "primaryBtnText": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "primaryBtnRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "jobTypeBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "jobTypeText": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "skillBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "skillText": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "showDivider": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

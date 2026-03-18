@@ -1,0 +1,195 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/loan-affordability",
+    "title": "Loan Affordability Calculator",
+    "category": "bkbg-calculators",
+    "icon": "building",
+    "description": "Calculate how much home or loan you can afford based on annual income, existing debts, interest rate, and debt-to-income ratios. Ideal for real estate and finance sites.",
+    "keywords": [
+        "affordability",
+        "home",
+        "loan",
+        "mortgage",
+        "income",
+        "dti",
+        "real estate",
+        "calculator",
+        "budget"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-loan-affordability-editor",
+    "style": "bkbg-loan-affordability-style",
+    "viewScript": "bkbg-loan-affordability-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Home Affordability Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Find out how much home you can afford based on your income and debts."
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "currencyPos": {
+            "type": "string",
+            "default": "before"
+        },
+        "defaultIncome": {
+            "type": "number",
+            "default": 75000
+        },
+        "defaultDebts": {
+            "type": "number",
+            "default": 500
+        },
+        "defaultRate": {
+            "type": "number",
+            "default": 6.5
+        },
+        "defaultTerm": {
+            "type": "number",
+            "default": 30
+        },
+        "defaultDown": {
+            "type": "number",
+            "default": 20
+        },
+        "frontEndRatio": {
+            "type": "number",
+            "default": 28
+        },
+        "backEndRatio": {
+            "type": "number",
+            "default": 43
+        },
+        "monthlyPaymentMode": {
+            "type": "string",
+            "default": "min"
+        },
+        "incomeShareLimit": {
+            "type": "number",
+            "default": 30
+        },
+        "showMaxHome": {
+            "type": "boolean",
+            "default": true
+        },
+        "showMaxLoan": {
+            "type": "boolean",
+            "default": true
+        },
+        "showMonthly": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDTI": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDownPayment": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "resultBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "maxHomeColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "maxLoanColor": {
+            "type": "string",
+            "default": "#3b82f6"
+        },
+        "monthlyColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "dtiColor": {
+            "type": "string",
+            "default": "#f59e0b"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "statCardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "resultTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 680
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        }
+    }
+}

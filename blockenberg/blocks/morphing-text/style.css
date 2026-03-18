@@ -1,0 +1,111 @@
+/* Morphing Text Block — bkbg-mt-* */
+
+.bkbg-mt-app { display: block; }
+
+.bkbg-mt-wrap { display: block; }
+
+.bkbg-mt-heading { margin: 0; padding: 0; }
+
+/* ---- Heading typography via CSS vars ---- */
+.bkbg-mt-wrap .bkbg-mt-heading {
+    font-family: var(--bkbg-mrt-hd-font-family, inherit);
+    font-size: var(--bkbg-mrt-hd-font-size-d, 56px);
+    font-weight: var(--bkbg-mrt-hd-font-weight, 800);
+    font-style: var(--bkbg-mrt-hd-font-style, normal);
+    line-height: var(--bkbg-mrt-hd-line-height-d, var(--bkbg-mrt-hd-line-height, 1.2));
+    letter-spacing: var(--bkbg-mrt-hd-letter-spacing-d, var(--bkbg-mrt-hd-letter-spacing, -1px));
+    text-decoration: var(--bkbg-mrt-hd-text-decoration, none);
+    text-transform: var(--bkbg-mrt-hd-text-transform, none);
+}
+
+/* Cursor */
+.bkbg-mt-cursor {
+    display: inline-block;
+    width: 3px;
+    background: currentColor;
+    margin-left: 3px;
+    vertical-align: baseline;
+    animation: bkbg-mt-blink 1s step-end infinite;
+}
+
+@keyframes bkbg-mt-blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+/* ── Blur mode ── */
+.bkbg-mt-morph-word {
+    display: inline-block;
+    transition: filter 0.35s ease, opacity 0.35s ease;
+}
+
+.bkbg-mt-morph-word.bkbg-mt-out-blur {
+    filter: blur(12px);
+    opacity: 0;
+}
+
+.bkbg-mt-morph-word.bkbg-mt-in-blur {
+    filter: blur(0);
+    opacity: 1;
+}
+
+/* ── Crossfade mode ── */
+.bkbg-mt-morph-word.bkbg-mt-out-fade {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.bkbg-mt-morph-word.bkbg-mt-in-fade {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* ── Slide Up ── */
+.bkbg-mt-morph-word.bkbg-mt-out-slideup {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.bkbg-mt-morph-word.bkbg-mt-in-slideup {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* ── Slide Down ── */
+.bkbg-mt-morph-word.bkbg-mt-out-slidedown {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.bkbg-mt-morph-word.bkbg-mt-in-slidedown {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* ── Gradient text ── */
+.bkbg-mt-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* ---- Responsive typography ---- */
+@media (max-width: 1024px) {
+    .bkbg-mt-wrap .bkbg-mt-heading {
+        font-size: var(--bkbg-mrt-hd-font-size-t, var(--bkbg-mrt-hd-font-size-d, 56px));
+        line-height: var(--bkbg-mrt-hd-line-height-t, var(--bkbg-mrt-hd-line-height-d, var(--bkbg-mrt-hd-line-height, 1.2)));
+            letter-spacing: var(--bkbg-mrt-hd-letter-spacing-t, var(--bkbg-mrt-hd-letter-spacing-d, var(--bkbg-mrt-hd-letter-spacing, -1px)));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-mt-wrap .bkbg-mt-heading {
+        font-size: var(--bkbg-mrt-hd-font-size-m, var(--bkbg-mrt-hd-font-size-t, var(--bkbg-mrt-hd-font-size-d, 42px)));
+        line-height: var(--bkbg-mrt-hd-line-height-m, var(--bkbg-mrt-hd-line-height-t, var(--bkbg-mrt-hd-line-height-d, var(--bkbg-mrt-hd-line-height, 1.2))));
+            letter-spacing: var(--bkbg-mrt-hd-letter-spacing-m, var(--bkbg-mrt-hd-letter-spacing-t, var(--bkbg-mrt-hd-letter-spacing-d, var(--bkbg-mrt-hd-letter-spacing, -1px))));
+    }
+}

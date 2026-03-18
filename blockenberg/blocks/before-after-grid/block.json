@@ -1,0 +1,151 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/before-after-grid",
+    "title": "Before / After Grid",
+    "category": "bkbg-media",
+    "description": "A grid of interactive before/after image comparison sliders — show multiple transformations, makeovers, or design iterations in one layout.",
+    "keywords": [
+        "before after",
+        "comparison",
+        "slider",
+        "gallery",
+        "transformation",
+        "reveal"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-before-after-grid-editor",
+    "editorStyle": "bkbg-before-after-grid-style",
+    "style": "bkbg-before-after-grid-style",
+    "viewScript": "bkbg-before-after-grid-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "pairs": {
+            "type": "array",
+            "default": [
+                {
+                    "beforeUrl": "https://images.unsplash.com/photo-1484503793037-5c9644d6a955?w=800&q=70",
+                    "beforeId": 0,
+                    "beforeAlt": "Before",
+                    "beforeLabel": "Before",
+                    "afterUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=70",
+                    "afterId": 0,
+                    "afterAlt": "After",
+                    "afterLabel": "After",
+                    "caption": "Kitchen renovation"
+                },
+                {
+                    "beforeUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=70",
+                    "beforeId": 0,
+                    "beforeAlt": "Before",
+                    "beforeLabel": "Before",
+                    "afterUrl": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=70",
+                    "afterId": 0,
+                    "afterAlt": "After",
+                    "afterLabel": "After",
+                    "caption": "Landscape treatment"
+                }
+            ]
+        },
+        "columns": {
+            "type": "number",
+            "default": 2
+        },
+        "gap": {
+            "type": "number",
+            "default": 20
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "aspect": {
+            "type": "string",
+            "default": "4/3"
+        },
+        "startPosition": {
+            "type": "number",
+            "default": 50
+        },
+        "orientation": {
+            "type": "string",
+            "default": "horizontal"
+        },
+        "showLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "labelPosition": {
+            "type": "string",
+            "default": "inner-edge"
+        },
+        "showCaptions": {
+            "type": "boolean",
+            "default": true
+        },
+        "handleStyle": {
+            "type": "string",
+            "default": "circle-arrows"
+        },
+        "handleSize": {
+            "type": "number",
+            "default": 44
+        },
+        "lineWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "labelSize": {
+            "type": "number",
+            "default": 12
+        },
+        "captionSize": {
+            "type": "number",
+            "default": 13
+        },
+        "labelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "captionTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "handleBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "handleColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "lineColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "labelBg": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.55)"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "captionBg": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "captionColor": {
+            "type": "string",
+            "default": "#374151"
+        }
+    }
+}

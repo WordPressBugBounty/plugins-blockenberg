@@ -1,0 +1,148 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/split-testimonial",
+	"version": "1.0.0",
+	"title": "Split Testimonial",
+	"category": "bkbg-marketing",
+	"icon": "format-quote",
+	"description": "Hero-size featured testimonial with large pull-quote, author photo, name, title, company, star rating, and full accent/background controls.",
+	"keywords": [
+		"testimonial",
+		"quote",
+		"review",
+		"split",
+		"featured"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-split-testimonial-editor",
+	"style": "bkbg-split-testimonial-style",
+	"viewScript": "bkbg-split-testimonial-frontend",
+	"attributes": {
+		"quote": {
+			"type": "string",
+			"default": "This product completely transformed how our team operates. We saved over 20 hours a week from the very first month."
+		},
+		"authorName": {
+			"type": "string",
+			"default": "Sarah Mitchell"
+		},
+		"authorTitle": {
+			"type": "string",
+			"default": "VP of Operations"
+		},
+		"authorCompany": {
+			"type": "string",
+			"default": "Acme Corp"
+		},
+		"authorImageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"authorImageId": {
+			"type": "number",
+			"default": 0
+		},
+		"authorAlt": {
+			"type": "string",
+			"default": ""
+		},
+		"stars": {
+			"type": "number",
+			"default": 5
+		},
+		"showStars": {
+			"type": "boolean",
+			"default": true
+		},
+		"showCompany": {
+			"type": "boolean",
+			"default": true
+		},
+		"showQuoteMark": {
+			"type": "boolean",
+			"default": true
+		},
+		"layout": {
+			"type": "string",
+			"default": "left-photo"
+		},
+		"avatarShape": {
+			"type": "string",
+			"default": "circle"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#1e1b4b"
+		},
+		"accentBg": {
+			"type": "string",
+			"default": "#7c3aed"
+		},
+		"quoteColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"authorColor": {
+			"type": "string",
+			"default": "#c4b5fd"
+		},
+		"starColor": {
+			"type": "string",
+			"default": "#fbbf24"
+		},
+		"quoteMarkColor": {
+			"type": "string",
+			"default": "rgba(124,58,237,.45)"
+		},
+		"quoteSize": {
+			"type": "number",
+			"default": 28
+		},
+		"authorSize": {
+			"type": "number",
+			"default": 16
+		},
+		"avatarSize": {
+			"type": "number",
+			"default": 120
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 80
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 80
+		},
+		"maxWidth": {
+			"type": "number",
+			"default": 1100
+		},
+		"quoteFontWeight": {
+			"type": "number",
+			"default": 400
+		},
+		"quoteTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"nameTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"metaTypo": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	}
+}

@@ -1,0 +1,165 @@
+/* ================================================================
+   Content Outline — bkbg-co-*
+   ================================================================ */
+
+.bkbg-co-block { box-sizing: border-box; }
+
+/* ── Outline title / intro ───────────────────────────────────── */
+.bkbg-co-header { border-bottom: 1px solid; }
+.bkbg-co-title {
+    font-family: var(--bkco-title-font-family, inherit);
+    font-size: var(--bkco-title-font-size-d, var(--bkco-title-font-size, 22px));
+    font-weight: var(--bkco-title-font-weight, 800);
+    font-style: var(--bkco-title-font-style, normal);
+    text-transform: var(--bkco-title-text-transform, none);
+    text-decoration: var(--bkco-title-text-decoration, none);
+    line-height: var(--bkco-title-line-height-d, var(--bkco-title-line-height, 1.3));
+    letter-spacing: var(--bkco-title-letter-spacing-d, var(--bkco-title-letter-spacing, normal));
+    word-spacing: var(--bkco-title-word-spacing-d, var(--bkco-title-word-spacing, normal));
+    margin: 0 0 6px;
+}
+.bkbg-co-intro  { margin: 0; line-height: 1.6; }
+
+/* ── Sections list ───────────────────────────────────────────── */
+.bkbg-co-sections { display: flex; flex-direction: column; }
+
+/* ── Individual section card ─────────────────────────────────── */
+.bkbg-co-section { overflow: hidden; }
+
+.bkbg-co-section.is-card {
+    transition: box-shadow .15s, transform .1s;
+}
+.bkbg-co-section.is-card:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,.07); }
+
+/* ── Section header row ──────────────────────────────────────── */
+.bkbg-co-section-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: default;
+}
+
+.bkbg-co-collapsible .bkbg-co-section-head { cursor: pointer; }
+
+.bkbg-co-number {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 12px;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.bkbg-co-section-info { flex: 1; min-width: 0; }
+
+.bkbg-co-section-title {
+    font-family: var(--bkco-sec-font-family, inherit);
+    font-size: var(--bkco-sec-font-size-d, var(--bkco-sec-font-size, 16px));
+    font-weight: var(--bkco-sec-font-weight, 700);
+    font-style: var(--bkco-sec-font-style, normal);
+    text-transform: var(--bkco-sec-text-transform, none);
+    text-decoration: var(--bkco-sec-text-decoration, none);
+    line-height: var(--bkco-sec-line-height-d, var(--bkco-sec-line-height, 1.3));
+    letter-spacing: var(--bkco-sec-letter-spacing-d, var(--bkco-sec-letter-spacing, normal));
+    word-spacing: var(--bkco-sec-word-spacing-d, var(--bkco-sec-word-spacing, normal));
+    margin: 0;
+}
+
+.bkbg-co-section-desc {
+    font-size: 12px;
+    margin: 2px 0 0;
+    line-height: 1.4;
+}
+
+.bkbg-co-read-time {
+    font-size: 11px;
+    font-weight: 500;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* ── Points list ─────────────────────────────────────────────── */
+.bkbg-co-points { list-style: none; margin: 0; padding: 0; }
+
+.bkbg-co-point {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.5;
+}
+
+.bkbg-co-arrow { font-size: 10px; flex-shrink: 0; }
+.bkbg-co-point-text { flex: 1; }
+
+.bkbg-co-status {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 100px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* ── Collapsible toggle ──────────────────────────────────────── */
+.bkbg-co-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    padding: 0;
+    font-size: 14px;
+    flex-shrink: 0;
+    opacity: .5;
+    transition: opacity .12s, transform .15s;
+}
+.bkbg-co-toggle.is-open { transform: rotate(90deg); opacity: 1; }
+
+.bkbg-co-body { overflow: hidden; transition: max-height .25s ease; }
+
+/* ── Responsive typography ──────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-co-title {
+        font-size: var(--bkco-title-font-size-t, var(--bkco-title-font-size-d, var(--bkco-title-font-size, 22px)));
+        line-height: var(--bkco-title-line-height-t, var(--bkco-title-line-height-d, var(--bkco-title-line-height, 1.3)));
+        letter-spacing: var(--bkco-title-letter-spacing-t, var(--bkco-title-letter-spacing-d, var(--bkco-title-letter-spacing, normal)));
+        word-spacing: var(--bkco-title-word-spacing-t, var(--bkco-title-word-spacing-d, var(--bkco-title-word-spacing, normal)));
+    }
+    .bkbg-co-section-title {
+        font-size: var(--bkco-sec-font-size-t, var(--bkco-sec-font-size-d, var(--bkco-sec-font-size, 16px)));
+        line-height: var(--bkco-sec-line-height-t, var(--bkco-sec-line-height-d, var(--bkco-sec-line-height, 1.3)));
+        letter-spacing: var(--bkco-sec-letter-spacing-t, var(--bkco-sec-letter-spacing-d, var(--bkco-sec-letter-spacing, normal)));
+        word-spacing: var(--bkco-sec-word-spacing-t, var(--bkco-sec-word-spacing-d, var(--bkco-sec-word-spacing, normal)));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-co-title {
+        font-size: var(--bkco-title-font-size-m, var(--bkco-title-font-size-t, var(--bkco-title-font-size-d, var(--bkco-title-font-size, 22px))));
+        line-height: var(--bkco-title-line-height-m, var(--bkco-title-line-height-t, var(--bkco-title-line-height-d, var(--bkco-title-line-height, 1.3))));
+        letter-spacing: var(--bkco-title-letter-spacing-m, var(--bkco-title-letter-spacing-t, var(--bkco-title-letter-spacing-d, var(--bkco-title-letter-spacing, normal))));
+        word-spacing: var(--bkco-title-word-spacing-m, var(--bkco-title-word-spacing-t, var(--bkco-title-word-spacing-d, var(--bkco-title-word-spacing, normal))));
+    }
+    .bkbg-co-section-title {
+        font-size: var(--bkco-sec-font-size-m, var(--bkco-sec-font-size-t, var(--bkco-sec-font-size-d, var(--bkco-sec-font-size, 16px))));
+        line-height: var(--bkco-sec-line-height-m, var(--bkco-sec-line-height-t, var(--bkco-sec-line-height-d, var(--bkco-sec-line-height, 1.3))));
+        letter-spacing: var(--bkco-sec-letter-spacing-m, var(--bkco-sec-letter-spacing-t, var(--bkco-sec-letter-spacing-d, var(--bkco-sec-letter-spacing, normal))));
+        word-spacing: var(--bkco-sec-word-spacing-m, var(--bkco-sec-word-spacing-t, var(--bkco-sec-word-spacing-d, var(--bkco-sec-word-spacing, normal))));
+    }
+}
+
+/* ── Progress summary bar ────────────────────────────────────── */
+.bkbg-co-progress-bar {
+    height: 4px;
+    border-radius: 2px;
+    background: #e2e8f0;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.bkbg-co-progress-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width .4s ease;
+}

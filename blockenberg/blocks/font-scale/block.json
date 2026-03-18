@@ -1,0 +1,191 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/font-scale",
+    "version": "1.0.0",
+    "title": "Font Scale",
+    "category": "bkbg-dev",
+    "icon": "editor-textcolor",
+    "description": "Type specimen / typography scale block showing font sizes from xs to 9xl. Displays sample text at each step with optional metadata (size, weight, line-height). Perfect for design systems and style guides.",
+    "keywords": [
+        "font",
+        "typography",
+        "scale",
+        "type",
+        "specimen",
+        "design system",
+        "sizes"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-font-scale-editor",
+    "style": "bkbg-font-scale-style",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Type Scale"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "A consistent typographic system for clear, readable content"
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "fontFamily": {
+            "type": "string",
+            "default": "inherit"
+        },
+        "showMeta": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDividers": {
+            "type": "boolean",
+            "default": true
+        },
+        "metaPosition": {
+            "type": "string",
+            "default": "right"
+        },
+        "steps": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "9xl",
+                    "size": 96,
+                    "weight": 800,
+                    "lineHeight": 1.0,
+                    "text": "The quick brown"
+                },
+                {
+                    "name": "6xl",
+                    "size": 60,
+                    "weight": 700,
+                    "lineHeight": 1.05,
+                    "text": "The quick brown fox"
+                },
+                {
+                    "name": "4xl",
+                    "size": 36,
+                    "weight": 700,
+                    "lineHeight": 1.1,
+                    "text": "The quick brown fox jumps"
+                },
+                {
+                    "name": "2xl",
+                    "size": 24,
+                    "weight": 600,
+                    "lineHeight": 1.25,
+                    "text": "The quick brown fox jumps over the lazy dog"
+                },
+                {
+                    "name": "xl",
+                    "size": 20,
+                    "weight": 600,
+                    "lineHeight": 1.35,
+                    "text": "The quick brown fox jumps over the lazy dog. Sphinx of black quartz."
+                },
+                {
+                    "name": "lg",
+                    "size": 18,
+                    "weight": 400,
+                    "lineHeight": 1.5,
+                    "text": "The quick brown fox jumps over the lazy dog. Sphinx of black quartz, judge my vow."
+                },
+                {
+                    "name": "base",
+                    "size": 16,
+                    "weight": 400,
+                    "lineHeight": 1.6,
+                    "text": "The quick brown fox jumps over the lazy dog. Sphinx of black quartz, judge my vow. Pack my box with five dozen liquor jugs."
+                },
+                {
+                    "name": "sm",
+                    "size": 14,
+                    "weight": 400,
+                    "lineHeight": 1.6,
+                    "text": "The quick brown fox jumps over the lazy dog. Sphinx of black quartz, judge my vow. Pack my box with five dozen liquor jugs. How quickly daft jumping zebras vex."
+                },
+                {
+                    "name": "xs",
+                    "size": 12,
+                    "weight": 400,
+                    "lineHeight": 1.6,
+                    "text": "The quick brown fox jumps over the lazy dog. Sphinx of black quartz, judge my vow. Pack my box with five dozen liquor jugs. How quickly daft jumping zebras vex. The five boxing wizards jump quickly."
+                }
+            ]
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "metaColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "nameBg": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#475569"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#f1f5f9"
+        },
+        "borderRadius": {
+            "type": "integer",
+            "default": 16
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 48
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 48
+        },
+        "titleSize": {
+            "type": "integer",
+            "default": 24
+        },
+        "subtitleSize": {
+            "type": "integer",
+            "default": 15
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

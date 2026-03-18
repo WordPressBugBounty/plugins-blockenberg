@@ -1,0 +1,176 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockenberg/testimonial-featured",
+  "version": "1.0.0",
+  "title": "Testimonial Featured",
+  "category": "bkbg-marketing",
+  "icon": "format-quote",
+  "description": "A single large featured testimonial section \u2014 big decorative quote mark, full testimonial text, person photo, name, title, company logo, star rating, and optional result metric badge. Designed as a standalone section for maximum impact. Different from testimonial carousels or grids.",
+  "keywords": [
+    "testimonial",
+    "quote",
+    "review",
+    "featured",
+    "success story",
+    "customer",
+    "case study"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-testimonial-featured-editor",
+  "style": "bkbg-testimonial-featured-style",
+  "viewScript": "bkbg-testimonial-featured-frontend",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "quote": {
+      "type": "string",
+      "default": "Switching to this platform was the single best decision we made last year. Within 90 days, our team's productivity tripled and our clients noticed the difference immediately. I genuinely can't imagine going back to how we worked before."
+    },
+    "personName": {
+      "type": "string",
+      "default": "Alexandra Chen"
+    },
+    "personTitle": {
+      "type": "string",
+      "default": "CEO & Co-Founder, Luminary Tech"
+    },
+    "personAvatarUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "personAvatarId": {
+      "type": "integer",
+      "default": 0
+    },
+    "personAvatarAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "companyLogoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "companyLogoId": {
+      "type": "integer",
+      "default": 0
+    },
+    "companyLogoAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "showCompanyLogo": {
+      "type": "boolean",
+      "default": false
+    },
+    "rating": {
+      "type": "integer",
+      "default": 5
+    },
+    "showRating": {
+      "type": "boolean",
+      "default": true
+    },
+    "showResultMetric": {
+      "type": "boolean",
+      "default": true
+    },
+    "resultMetric": {
+      "type": "string",
+      "default": "+340% Productivity in 90 days"
+    },
+    "layout": {
+      "type": "string",
+      "default": "centered"
+    },
+    "cardStyle": {
+      "type": "string",
+      "default": "clean"
+    },
+    "showQuotemark": {
+      "type": "boolean",
+      "default": true
+    },
+    "quotemarkSize": {
+      "type": "integer",
+      "default": 120
+    },
+    "avatarSize": {
+      "type": "integer",
+      "default": 64
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#111827"
+    },
+    "nameColor": {
+      "type": "string",
+      "default": "#111827"
+    },
+    "titleColor": {
+      "type": "string",
+      "default": "#6b7280"
+    },
+    "quotemarkColor": {
+      "type": "string",
+      "default": "#ede9fe"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": "#7c3aed"
+    },
+    "starColor": {
+      "type": "string",
+      "default": "#f59e0b"
+    },
+    "resultBg": {
+      "type": "string",
+      "default": "#f0fdf4"
+    },
+    "resultColor": {
+      "type": "string",
+      "default": "#15803d"
+    },
+    "cardBg": {
+      "type": "string",
+      "default": "#f9fafb"
+    },
+    "borderColor": {
+      "type": "string",
+      "default": "#e5e7eb"
+    },
+    "quoteTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "nameTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "titleTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "maxWidth": {
+      "type": "integer",
+      "default": 860
+    },
+    "paddingTop": {
+      "type": "integer",
+      "default": 80
+    },
+    "paddingBottom": {
+      "type": "integer",
+      "default": 80
+    }
+  }
+}

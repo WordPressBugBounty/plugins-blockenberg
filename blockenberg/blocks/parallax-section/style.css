@@ -1,0 +1,55 @@
+/* ── Parallax Section ───────────────────────────────────────────────────────── */
+.bkps-outer {
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.bkps-bg {
+    position: absolute;
+    inset: -30% 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    will-change: transform;
+    z-index: 0;
+}
+
+/* editor: disable the huge inset so it's workable */
+.block-editor-block-list__block .bkps-bg {
+    inset: 0;
+}
+
+.bkps-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.bkps-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+/* inner blocks inherit text color */
+.bkps-content,
+.bkps-content p,
+.bkps-content h1,
+.bkps-content h2,
+.bkps-content h3,
+.bkps-content h4,
+.bkps-content h5,
+.bkps-content h6 {
+    color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bkps-bg {
+        will-change: auto !important;
+        transform: none !important;
+        inset: 0 !important;
+    }
+}

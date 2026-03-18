@@ -1,0 +1,278 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/comparison-guide",
+	"title": "Comparison Guide",
+	"description": "A structured X vs Y comparison guide with criteria scoring, winner badges, and a verdict. Perfect for product, software, and strategy comparisons.",
+	"category": "bkbg-marketing",
+	"icon": "image-flip-horizontal",
+	"keywords": [
+		"comparison",
+		"versus",
+		"vs",
+		"guide",
+		"review",
+		"product",
+		"software",
+		"criteria"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-comparison-guide-editor",
+	"editorStyle": "bkbg-comparison-guide-style",
+	"style": "bkbg-comparison-guide-style",
+	"viewScript": "bkbg-comparison-guide-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"guideTitle": {
+			"type": "string",
+			"default": "React vs Vue: Which Framework Should You Choose in 2026?"
+		},
+		"intro": {
+			"type": "string",
+			"default": "Both React and Vue are excellent choices for modern web development. This guide breaks down the key decision criteria so you can choose the right tool for your project."
+		},
+		"showIntro": {
+			"type": "boolean",
+			"default": true
+		},
+		"nameA": {
+			"type": "string",
+			"default": "React"
+		},
+		"descA": {
+			"type": "string",
+			"default": "A JavaScript library for building user interfaces, maintained by Meta."
+		},
+		"emojiA": {
+			"type": "string",
+			"default": "⚛️"
+		},
+		"emojiAType": {
+			"type": "string",
+			"default": "custom-char"
+		},
+		"emojiADashicon": {
+			"type": "string",
+			"default": "admin-site"
+		},
+		"emojiAImageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"scoreA": {
+			"type": "number",
+			"default": 87
+		},
+		"showScores": {
+			"type": "boolean",
+			"default": true
+		},
+		"nameB": {
+			"type": "string",
+			"default": "Vue"
+		},
+		"descB": {
+			"type": "string",
+			"default": "The progressive JavaScript framework for building web interfaces, created by Evan You."
+		},
+		"emojiB": {
+			"type": "string",
+			"default": "💚"
+		},
+		"emojiBType": {
+			"type": "string",
+			"default": "custom-char"
+		},
+		"emojiBDashicon": {
+			"type": "string",
+			"default": "admin-site"
+		},
+		"emojiBImageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"scoreB": {
+			"type": "number",
+			"default": 84
+		},
+		"criteria": {
+			"type": "array",
+			"default": [
+				{
+					"name": "Learning Curve",
+					"winner": "B",
+					"scoreA": 6,
+					"scoreB": 9,
+					"notes": "Vue's template syntax feels more natural to developers coming from HTML/CSS backgrounds. React's JSX takes more adjustment."
+				},
+				{
+					"name": "Ecosystem & Libraries",
+					"winner": "A",
+					"scoreA": 10,
+					"scoreB": 7,
+					"notes": "React has the largest ecosystem by far, including React Native for mobile, Next.js for SSR, and thousands of UI component libraries."
+				},
+				{
+					"name": "Performance",
+					"winner": "tie",
+					"scoreA": 8,
+					"scoreB": 8,
+					"notes": "Both frameworks deliver excellent performance with virtual DOM diffing. The difference is negligible for most real-world applications."
+				},
+				{
+					"name": "Job Market",
+					"winner": "A",
+					"scoreA": 10,
+					"scoreB": 6,
+					"notes": "React dominates job postings globally, making it the safer career investment for front-end developers."
+				},
+				{
+					"name": "Official Tooling",
+					"winner": "B",
+					"scoreA": 7,
+					"scoreB": 9,
+					"notes": "Vue's official tooling (Vite integration, Pinia, Vue Router) is more cohesive and better documented than React's fragmented ecosystem."
+				},
+				{
+					"name": "Corporate Backing",
+					"winner": "A",
+					"scoreA": 9,
+					"scoreB": 7,
+					"notes": "React is backed by Meta. Vue is community-driven — an advantage for independence but a risk for long-term funding."
+				}
+			]
+		},
+		"showNotes": {
+			"type": "boolean",
+			"default": true
+		},
+		"showCritScores": {
+			"type": "boolean",
+			"default": true
+		},
+		"verdictWinner": {
+			"type": "string",
+			"default": "A"
+		},
+		"verdictSummary": {
+			"type": "string",
+			"default": "React is the better choice for teams prioritizing employability, ecosystem depth, and mobile development via React Native. Choose Vue if you value a gentler learning curve, tighter official tooling, or are building smaller to mid-size SPAs."
+		},
+		"showVerdict": {
+			"type": "boolean",
+			"default": true
+		},
+		"layout": {
+			"type": "string",
+			"default": "table"
+		},
+		"fontSize": {
+			"type": "number",
+			"default": 14
+		},
+		"titleFontSize": {
+			"type": "number",
+			"default": 24
+		},
+		"lineHeight": {
+			"type": "number",
+			"default": 170
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 12
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"borderColor": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"headerBg": {
+			"type": "string",
+			"default": "#f8fafc"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#0f172a"
+		},
+		"introColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"colABg": {
+			"type": "string",
+			"default": "#eff6ff"
+		},
+		"colAColor": {
+			"type": "string",
+			"default": "#1e3a8a"
+		},
+		"colBBg": {
+			"type": "string",
+			"default": "#f0fdf4"
+		},
+		"colBColor": {
+			"type": "string",
+			"default": "#14532d"
+		},
+		"winnerBadgeBg": {
+			"type": "string",
+			"default": "#fef9c3"
+		},
+		"winnerBadgeColor": {
+			"type": "string",
+			"default": "#713f12"
+		},
+		"tieBg": {
+			"type": "string",
+			"default": "#f1f5f9"
+		},
+		"tieColor": {
+			"type": "string",
+			"default": "#475569"
+		},
+		"notesColor": {
+			"type": "string",
+			"default": "#6b7280"
+		},
+		"rowAltBg": {
+			"type": "string",
+			"default": "#f8fafc"
+		},
+		"verdictBg": {
+			"type": "string",
+			"default": "#0f172a"
+		},
+		"verdictColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#3b82f6"
+		},
+		"fontWeight": {
+			"type": "string",
+			"default": "400"
+		},
+		"typoTitle": {
+			"type": "object",
+			"default": {}
+		},
+		"typoBody": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

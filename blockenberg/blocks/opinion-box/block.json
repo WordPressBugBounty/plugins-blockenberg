@@ -1,0 +1,155 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/opinion-box",
+    "title": "Opinion Box",
+    "description": "Editorial 'My Take' opinion callout with author attribution, badge, and signed commentary.",
+    "category": "bkbg-blog",
+    "icon": "format-chat",
+    "keywords": [
+        "opinion",
+        "my take",
+        "editorial",
+        "take",
+        "analysis",
+        "hot take",
+        "expert view",
+        "author"
+    ],
+    "editorScript": "bkbg-opinion-box-editor",
+    "style": "bkbg-opinion-box-style",
+    "viewScript": "bkbg-opinion-box-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "badgeText": {
+            "type": "string",
+            "default": "My Take"
+        },
+        "opinion": {
+            "type": "string",
+            "default": ""
+        },
+        "authorName": {
+            "type": "string",
+            "default": ""
+        },
+        "authorTitle": {
+            "type": "string",
+            "default": ""
+        },
+        "avatarUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "avatarId": {
+            "type": "number",
+            "default": 0
+        },
+        "avatarAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "style": {
+            "type": "string",
+            "default": "featured"
+        },
+        "showAvatar": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#fefce8"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#fde047"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#ca8a04"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#ca8a04"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#1c1917"
+        },
+        "authorColor": {
+            "type": "string",
+            "default": "#57534e"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#78716c"
+        },
+        "avatarBg": {
+            "type": "string",
+            "default": "#d97706"
+        },
+        "avatarColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "quoteMarkColor": {
+            "type": "string",
+            "default": "#fde047"
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 10
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 4
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 4
+        },
+        "opinionFontSize": {
+            "type": "number",
+            "default": 15
+        },
+        "opinionLineHeight": {
+            "type": "number",
+            "default": 1.7
+        },
+        "authorNameSize": {
+            "type": "number",
+            "default": 13
+        },
+        "authorTitleSize": {
+            "type": "number",
+            "default": 12
+        },
+        "opinionTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "authorNameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "authorTitleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,191 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/media-coverage",
+    "version": "1.0.0",
+    "title": "Media Coverage",
+    "category": "bkbg-business",
+    "icon": "megaphone",
+    "description": "\"As Featured In\" press section with publication logos, grayscale hover effects, and an optional featured pull quote from a specific outlet. Common on landing pages and about pages. Different from Logo Wall (general) and Trust Bar (security badges).",
+    "keywords": [
+        "press",
+        "media",
+        "featured",
+        "coverage",
+        "publications",
+        "logos",
+        "as seen in"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-media-coverage-editor",
+    "style": "bkbg-media-coverage-style",
+    "viewScript": "bkbg-media-coverage-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "eyebrow": {
+            "type": "string",
+            "default": "As Featured In"
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "heading": {
+            "type": "string",
+            "default": "Trusted by leading publications worldwide"
+        },
+        "showHeading": {
+            "type": "boolean",
+            "default": false
+        },
+        "logos": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Forbes",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "url": "#"
+                },
+                {
+                    "name": "TechCrunch",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "url": "#"
+                },
+                {
+                    "name": "The Guardian",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "url": "#"
+                },
+                {
+                    "name": "Wired",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "url": "#"
+                },
+                {
+                    "name": "Inc.",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "url": "#"
+                }
+            ]
+        },
+        "grayscale": {
+            "type": "boolean",
+            "default": true
+        },
+        "grayscaleAmount": {
+            "type": "integer",
+            "default": 100
+        },
+        "logoHeight": {
+            "type": "integer",
+            "default": 36
+        },
+        "logosPerRow": {
+            "type": "integer",
+            "default": 5
+        },
+        "logoGap": {
+            "type": "integer",
+            "default": 48
+        },
+        "showFeaturedQuote": {
+            "type": "boolean",
+            "default": true
+        },
+        "featuredQuote": {
+            "type": "string",
+            "default": "\"This product completely changed the way we think about workflow. A genuine game-changer for modern teams.\""
+        },
+        "featuredPublication": {
+            "type": "string",
+            "default": "Forbes"
+        },
+        "featuredLink": {
+            "type": "string",
+            "default": "#"
+        },
+        "featuredLogoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "layout": {
+            "type": "string",
+            "default": "logos-quote"
+        },
+        "dividerStyle": {
+            "type": "string",
+            "default": "line"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "logoColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "logoHoverColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "quoteBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "quoteColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "quoteAccent": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "dividerColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "eyebrowTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "headingTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "quoteTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "maxWidth": {
+            "type": "integer",
+            "default": 1100
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 64
+        }
+    }
+}

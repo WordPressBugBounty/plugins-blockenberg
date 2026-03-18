@@ -1,0 +1,127 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/margin-calculator",
+    "version": "1.0.0",
+    "title": "Profit Margin Calculator",
+    "category": "bkbg-calculators",
+    "icon": "chart-line",
+    "description": "Calculate profit margin, markup, selling price and gross profit for any product or service.",
+    "keywords": [
+        "margin",
+        "profit",
+        "markup",
+        "selling price",
+        "revenue",
+        "cost",
+        "calculator",
+        "ecommerce"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-margin-calculator-editor",
+    "style": "bkbg-margin-calculator-style",
+    "viewScript": "bkbg-margin-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Profit Margin Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Calculate selling price, markup and gross profit instantly"
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "defaultMode": {
+            "type": "string",
+            "default": "margin"
+        },
+        "defaultCost": {
+            "type": "number",
+            "default": 50
+        },
+        "defaultMargin": {
+            "type": "number",
+            "default": 40
+        },
+        "defaultRevenue": {
+            "type": "number",
+            "default": 100
+        },
+        "showMarkup": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBar": {
+            "type": "boolean",
+            "default": true
+        },
+        "showMarginScale": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "profitColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "costColor": {
+            "type": "string",
+            "default": "#f43f5e"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#dcfce7"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "contentMaxWidth": {
+            "type": "integer",
+            "default": 680
+        }
+    }
+}

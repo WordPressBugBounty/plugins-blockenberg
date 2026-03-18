@@ -1,0 +1,136 @@
+/* ─────────────────────────────────────────────────────────────────
+   Split Text — bkst
+   ───────────────────────────────────────────────────────────────── */
+
+.bkst-section {
+    box-sizing: border-box;
+    width:      100%;
+    overflow:   hidden;
+}
+
+/* ── Text container ────────────────────────────────────────────── */
+.bkst-text {
+    margin:      0;
+    padding:     0;
+    word-break:  break-word;
+    overflow:    hidden;
+}
+
+/* ── Typography CSS-var rules — ≥0,2,0 for h1-h4 ── */
+.bkst-section .bkst-text {
+    font-family: var(--bkst-tx-font-family, inherit);
+    font-size: var(--bkst-tx-font-size-d, var(--bkst-tx-sz, 48px));
+    font-weight: var(--bkst-tx-font-weight, var(--bkst-tx-w, 800));
+    font-style: var(--bkst-tx-font-style, normal);
+    text-decoration: var(--bkst-tx-text-decoration, none);
+    text-transform: var(--bkst-tx-text-transform, var(--bkst-tx-tt, none));
+    line-height: var(--bkst-tx-line-height-d, var(--bkst-tx-lh, 1.2));
+    letter-spacing: var(--bkst-tx-letter-spacing-d, var(--bkst-tx-ls, normal));
+    word-spacing: var(--bkst-tx-word-spacing-d, normal);
+}
+
+/* ── Typography responsive — tablet ── */
+@media (max-width: 1024px) {
+    .bkst-section .bkst-text { font-size: var(--bkst-tx-font-size-t, var(--bkst-tx-font-size-d, var(--bkst-tx-sz, 48px))); line-height: var(--bkst-tx-line-height-t, var(--bkst-tx-line-height-d, var(--bkst-tx-lh, 1.2))); letter-spacing: var(--bkst-tx-letter-spacing-t, var(--bkst-tx-letter-spacing-d, var(--bkst-tx-ls, normal))); word-spacing: var(--bkst-tx-word-spacing-t, var(--bkst-tx-word-spacing-d, normal)); }
+}
+
+/* ── Typography responsive — mobile ── */
+@media (max-width: 767px) {
+    .bkst-section .bkst-text { font-size: var(--bkst-tx-font-size-m, var(--bkst-tx-font-size-t, var(--bkst-tx-font-size-d, var(--bkst-tx-sz, 48px)))); line-height: var(--bkst-tx-line-height-m, var(--bkst-tx-line-height-t, var(--bkst-tx-line-height-d, var(--bkst-tx-lh, 1.2)))); letter-spacing: var(--bkst-tx-letter-spacing-m, var(--bkst-tx-letter-spacing-t, var(--bkst-tx-letter-spacing-d, var(--bkst-tx-ls, normal)))); word-spacing: var(--bkst-tx-word-spacing-m, var(--bkst-tx-word-spacing-t, var(--bkst-tx-word-spacing-d, normal))); }
+}
+
+/* ── Shared unit styles ────────────────────────────────────────── */
+.bkst-word,
+.bkst-char,
+.bkst-line {
+    display:         inline-block;
+    will-change:     transform, opacity, filter;
+    overflow:        hidden;
+    /* Initial hidden state — overridden to "revealed" state by JS */
+    opacity:         0;
+    transform:       translateY(1em);
+    transition:
+        opacity   var(--bkst-dur, 600ms) var(--bkst-ease, cubic-bezier(0.22,1,0.36,1)),
+        transform var(--bkst-dur, 600ms) var(--bkst-ease, cubic-bezier(0.22,1,0.36,1)),
+        filter    var(--bkst-dur, 600ms) ease;
+    transition-delay: calc(var(--bkst-i, 0) * var(--bkst-stagger, 80ms));
+}
+
+.bkst-line { display: block; }
+
+/* ── Revealed state ────────────────────────────────────────────── */
+.bkst-word.bkst-revealed,
+.bkst-char.bkst-revealed,
+.bkst-line.bkst-revealed {
+    opacity:   1;
+    transform: none;
+    filter:    none;
+}
+
+/* ── Animation: fade-in ───────────────────────────────── */
+.bkst-section[data-animation="fade-in"] .bkst-word,
+.bkst-section[data-animation="fade-in"] .bkst-char,
+.bkst-section[data-animation="fade-in"] .bkst-line {
+    transform: none;
+}
+
+/* ── Animation: slide-right ───────────────────────────── */
+.bkst-section[data-animation="slide-right"] .bkst-word,
+.bkst-section[data-animation="slide-right"] .bkst-char,
+.bkst-section[data-animation="slide-right"] .bkst-line {
+    transform: translateX(-1em);
+}
+
+/* ── Animation: zoom-in ───────────────────────────────── */
+.bkst-section[data-animation="zoom-in"] .bkst-word,
+.bkst-section[data-animation="zoom-in"] .bkst-char,
+.bkst-section[data-animation="zoom-in"] .bkst-line {
+    transform: scale(0.6);
+    transform-origin: center bottom;
+}
+
+/* ── Animation: blur-in ───────────────────────────────── */
+.bkst-section[data-animation="blur-in"] .bkst-word,
+.bkst-section[data-animation="blur-in"] .bkst-char,
+.bkst-section[data-animation="blur-in"] .bkst-line {
+    transform: translateY(0.4em);
+    filter:    blur(8px);
+}
+
+/* ── Animation: drop-down ─────────────────────────────── */
+.bkst-section[data-animation="drop-down"] .bkst-word,
+.bkst-section[data-animation="drop-down"] .bkst-char,
+.bkst-section[data-animation="drop-down"] .bkst-line {
+    transform: translateY(-1em);
+}
+
+/* ── Highlight words ───────────────────────────────────────────── */
+.bkst-highlight {
+    color: var(--bkst-hl-c, #6c3fb5);
+}
+
+/* ── Non-breaking space ────────────────────────────────────────── */
+.bkst-space {
+    display: inline-block;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* ── Editor: show text fully revealed (no animation in editor) ─── */
+.bkst-revealed {
+    opacity:   1 !important;
+    transform: none !important;
+    filter:    none !important;
+}
+
+/* ── Reduced motion: show everything immediately ───────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .bkst-word,
+    .bkst-char,
+    .bkst-line {
+        opacity:    1;
+        transform:  none;
+        filter:     none;
+        transition: none;
+    }
+}

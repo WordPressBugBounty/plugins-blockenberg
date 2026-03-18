@@ -1,0 +1,274 @@
+/* =========================================================
+   Blockenberg — Margin Calculator  (bkbg-mgc-*)
+   ========================================================= */
+
+/* ── Wrapper ────────────────────────────────────────────── */
+.bkbg-mgc-wrap {
+    box-sizing:    border-box;
+    border-radius: 12px;
+    padding:       32px 24px;
+    font-family:   inherit;
+    margin:        0 auto;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+.bkbg-mgc-title {
+    font-family:      var(--bkbg-mgc-tt-font-family, inherit);
+    font-size:        var(--bkbg-mgc-tt-font-size-d, 26px);
+    font-weight:      var(--bkbg-mgc-tt-font-weight, 700);
+    font-style:       var(--bkbg-mgc-tt-font-style, normal);
+    text-decoration:  var(--bkbg-mgc-tt-text-decoration, none);
+    text-transform:   var(--bkbg-mgc-tt-text-transform, none);
+    line-height:      var(--bkbg-mgc-tt-line-height-d, 1.2);
+    letter-spacing:   var(--bkbg-mgc-tt-letter-spacing-d, normal);
+    word-spacing:     var(--bkbg-mgc-tt-word-spacing-d, normal);
+    margin:           0 0 6px 0;
+}
+.bkbg-mgc-wrap h3.bkbg-mgc-title {
+    font-family:      var(--bkbg-mgc-tt-font-family, inherit);
+    font-size:        var(--bkbg-mgc-tt-font-size-d, 26px);
+    font-weight:      var(--bkbg-mgc-tt-font-weight, 700);
+    font-style:       var(--bkbg-mgc-tt-font-style, normal);
+    text-decoration:  var(--bkbg-mgc-tt-text-decoration, none);
+    text-transform:   var(--bkbg-mgc-tt-text-transform, none);
+    line-height:      var(--bkbg-mgc-tt-line-height-d, 1.2);
+    letter-spacing:   var(--bkbg-mgc-tt-letter-spacing-d, normal);
+    word-spacing:     var(--bkbg-mgc-tt-word-spacing-d, normal);
+    margin:           0 0 6px 0;
+}
+.bkbg-mgc-subtitle {
+    font-family:      var(--bkbg-mgc-st-font-family, inherit);
+    font-size:        var(--bkbg-mgc-st-font-size-d, 14px);
+    font-weight:      var(--bkbg-mgc-st-font-weight, 400);
+    font-style:       var(--bkbg-mgc-st-font-style, normal);
+    text-decoration:  var(--bkbg-mgc-st-text-decoration, none);
+    text-transform:   var(--bkbg-mgc-st-text-transform, none);
+    line-height:      var(--bkbg-mgc-st-line-height-d, 1.5);
+    letter-spacing:   var(--bkbg-mgc-st-letter-spacing-d, normal);
+    word-spacing:     var(--bkbg-mgc-st-word-spacing-d, normal);
+    margin:           0 0 24px 0;
+}
+
+/* ── Mode tabs ──────────────────────────────────────────── */
+.bkbg-mgc-tabs {
+    display:       flex;
+    gap:           8px;
+    flex-wrap:     wrap;
+    margin-bottom: 20px;
+}
+.bkbg-mgc-tab {
+    padding:         8px 20px;
+    border-radius:   8px;
+    border:          2px solid #d1d5db;
+    background:      #ffffff;
+    color:           #374151;
+    font-size:       14px;
+    font-weight:     500;
+    cursor:          pointer;
+    transition:      all 0.18s ease;
+    white-space:     nowrap;
+}
+.bkbg-mgc-tab:hover {
+    border-color:    #10b981;
+    color:           #10b981;
+}
+.bkbg-mgc-tab.active {
+    border-color:    var(--mgc-accent, #10b981);
+    background:      var(--mgc-accent, #10b981);
+    color:           #ffffff;
+    font-weight:     700;
+}
+
+/* ── Inputs grid ────────────────────────────────────────── */
+.bkbg-mgc-inputs {
+    display:               grid;
+    grid-template-columns: 1fr 1fr;
+    gap:                   14px;
+    margin-bottom:         22px;
+}
+@media (max-width: 500px) {
+    .bkbg-mgc-inputs { grid-template-columns: 1fr; }
+}
+.bkbg-mgc-field label {
+    display:       block;
+    font-size:     13px;
+    font-weight:   600;
+    margin-bottom: 5px;
+}
+.bkbg-mgc-input {
+    width:         100%;
+    box-sizing:    border-box;
+    border:        1.5px solid #e5e7eb;
+    border-radius: 8px;
+    padding:       10px 14px;
+    font-size:     15px;
+    font-family:   inherit;
+    transition:    border-color 0.18s;
+    outline:       none;
+    -moz-appearance: textfield;
+}
+.bkbg-mgc-input:focus {
+    border-color:  var(--mgc-accent, #10b981);
+    box-shadow:    0 0 0 3px rgba(16,185,129,0.15);
+}
+.bkbg-mgc-input::-webkit-outer-spin-button,
+.bkbg-mgc-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* ── Result cards ───────────────────────────────────────── */
+.bkbg-mgc-cards {
+    display:               grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:                   12px;
+    margin-bottom:         20px;
+}
+@media (max-width: 440px) {
+    .bkbg-mgc-cards { grid-template-columns: 1fr; }
+}
+.bkbg-mgc-card {
+    border-radius: 10px;
+    padding:       14px 16px;
+    border-left:   4px solid var(--mgc-accent, #10b981);
+    transition:    transform 0.15s;
+}
+.bkbg-mgc-card:hover {
+    transform:     translateY(-2px);
+}
+.bkbg-mgc-card-label {
+    font-size:      11px;
+    font-weight:    600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color:          #6b7280;
+    margin-bottom:  6px;
+}
+.bkbg-mgc-card-value {
+    font-size:   22px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+/* ── Breakdown bar ──────────────────────────────────────── */
+.bkbg-mgc-bar-section {
+    margin-bottom:  20px;
+}
+.bkbg-mgc-bar-heading {
+    font-size:     12px;
+    font-weight:   600;
+    margin-bottom: 7px;
+}
+.bkbg-mgc-bar-track {
+    display:       flex;
+    border-radius: 8px;
+    overflow:      hidden;
+    height:        28px;
+}
+.bkbg-mgc-bar-cost {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    color:           #ffffff;
+    font-size:       11px;
+    font-weight:     700;
+    transition:      width 0.4s ease;
+    min-width:       0;
+    overflow:        hidden;
+}
+.bkbg-mgc-bar-profit {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    color:           #ffffff;
+    font-size:       11px;
+    font-weight:     700;
+    transition:      width 0.4s ease;
+    min-width:       0;
+    overflow:        hidden;
+}
+.bkbg-mgc-bar-legend {
+    display:    flex;
+    gap:        16px;
+    margin-top: 6px;
+}
+.bkbg-mgc-bar-legend span {
+    font-size:   12px;
+    font-weight: 600;
+}
+
+/* ── Margin health scale ────────────────────────────────── */
+.bkbg-mgc-scale {
+    border-radius: 10px;
+    padding:       14px 16px;
+    border:        1.5px solid #e5e7eb;
+    margin-bottom: 8px;
+}
+.bkbg-mgc-scale-header {
+    display:         flex;
+    justify-content: space-between;
+    align-items:     center;
+    margin-bottom:   8px;
+}
+.bkbg-mgc-scale-label {
+    font-size:   13px;
+    font-weight: 600;
+}
+.bkbg-mgc-scale-status {
+    font-size:   13px;
+    font-weight: 700;
+}
+.bkbg-mgc-scale-track {
+    background:    #e5e7eb;
+    border-radius: 999px;
+    height:        8px;
+    overflow:      hidden;
+}
+.bkbg-mgc-scale-fill {
+    height:        100%;
+    border-radius: 999px;
+    transition:    width 0.4s ease, background 0.3s;
+}
+.bkbg-mgc-scale-ticks {
+    display:         flex;
+    justify-content: space-between;
+    margin-top:      4px;
+}
+.bkbg-mgc-scale-ticks span {
+    font-size: 11px;
+    color:     #9ca3af;
+}
+
+/* ── Error state ────────────────────────────────────────── */
+.bkbg-mgc-error {
+    background:    #fef2f2;
+    border:        1.5px solid #fca5a5;
+    border-radius: 8px;
+    padding:       12px 16px;
+    color:         #dc2626;
+    font-size:     14px;
+    font-weight:   500;
+    margin-bottom: 16px;
+}
+
+/* ── Animations ─────────────────────────────────────────── */
+@keyframes bkbg-mgc-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0);   }
+}
+.bkbg-mgc-cards,
+.bkbg-mgc-bar-section,
+.bkbg-mgc-scale {
+    animation: bkbg-mgc-fadein 0.3s ease both;
+}
+
+/* ── Responsive typography ──────────────────────────────── */
+@media (max-width: 1024px) {
+    .bkbg-mgc-title,
+    .bkbg-mgc-wrap h3.bkbg-mgc-title    { font-size: var(--bkbg-mgc-tt-font-size-t, 26px); line-height: var(--bkbg-mgc-tt-line-height-t, 1.2); letter-spacing: var(--bkbg-mgc-tt-letter-spacing-t, normal); word-spacing: var(--bkbg-mgc-tt-word-spacing-t, normal); }
+    .bkbg-mgc-subtitle { font-size: var(--bkbg-mgc-st-font-size-t, 14px); line-height: var(--bkbg-mgc-st-line-height-t, 1.5); letter-spacing: var(--bkbg-mgc-st-letter-spacing-t, normal); word-spacing: var(--bkbg-mgc-st-word-spacing-t, normal); }
+}
+@media (max-width: 767px) {
+    .bkbg-mgc-title,
+    .bkbg-mgc-wrap h3.bkbg-mgc-title    { font-size: var(--bkbg-mgc-tt-font-size-m, 26px); line-height: var(--bkbg-mgc-tt-line-height-m, 1.2); letter-spacing: var(--bkbg-mgc-tt-letter-spacing-m, normal); word-spacing: var(--bkbg-mgc-tt-word-spacing-m, normal); }
+    .bkbg-mgc-subtitle { font-size: var(--bkbg-mgc-st-font-size-m, 14px); line-height: var(--bkbg-mgc-st-line-height-m, 1.5); letter-spacing: var(--bkbg-mgc-st-letter-spacing-m, normal); word-spacing: var(--bkbg-mgc-st-word-spacing-m, normal); }
+}

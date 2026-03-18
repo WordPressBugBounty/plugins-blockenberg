@@ -1,0 +1,321 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/pricing-table",
+    "title": "Pricing Table",
+    "category": "bkbg-marketing",
+    "icon": "products",
+    "description": "Pricing card with plan name, price, features list, and CTA button. Highlight popular plans with a badge.",
+    "keywords": [
+        "pricing",
+        "plan",
+        "price",
+        "table",
+        "card",
+        "subscription",
+        "tariff"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-pricing-table-editor",
+    "editorStyle": "bkbg-pricing-table-style",
+    "style": "bkbg-pricing-table-style",
+    "viewScript": "bkbg-pricing-table-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "planName": {
+            "type": "string",
+            "default": "Professional"
+        },
+        "planDescription": {
+            "type": "string",
+            "default": "Perfect for growing teams and projects"
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "currencyPosition": {
+            "type": "string",
+            "default": "before"
+        },
+        "price": {
+            "type": "string",
+            "default": "49"
+        },
+        "pricePeriod": {
+            "type": "string",
+            "default": "/month"
+        },
+        "priceSubtext": {
+            "type": "string",
+            "default": "Billed annually"
+        },
+        "features": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "Unlimited projects",
+                    "included": true,
+                    "icon": "dashicons-yes-alt"
+                },
+                {
+                    "text": "Advanced analytics",
+                    "included": true,
+                    "icon": "dashicons-yes-alt"
+                },
+                {
+                    "text": "Priority support",
+                    "included": true,
+                    "icon": "dashicons-yes-alt"
+                },
+                {
+                    "text": "Custom integrations",
+                    "included": true,
+                    "icon": "dashicons-yes-alt"
+                },
+                {
+                    "text": "White label exports",
+                    "included": false,
+                    "icon": "dashicons-no-alt"
+                },
+                {
+                    "text": "Dedicated manager",
+                    "included": false,
+                    "icon": "dashicons-no-alt"
+                }
+            ]
+        },
+        "buttonText": {
+            "type": "string",
+            "default": "Get Started"
+        },
+        "buttonUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "buttonTarget": {
+            "type": "boolean",
+            "default": false
+        },
+        "isPopular": {
+            "type": "boolean",
+            "default": true
+        },
+        "popularLabel": {
+            "type": "string",
+            "default": "Most Popular"
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "shadow"
+        },
+        "layout": {
+            "type": "string",
+            "default": "vertical"
+        },
+        "iconStyle": {
+            "type": "string",
+            "default": "dashicons"
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPriceSubtext": {
+            "type": "boolean",
+            "default": true
+        },
+        "showFeatureDivider": {
+            "type": "boolean",
+            "default": true
+        },
+        "featureListStyle": {
+            "type": "string",
+            "default": "icon"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "accentColorSecondary": {
+            "type": "string",
+            "default": "#1e40af"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorderColor": {
+            "type": "string",
+            "default": "#e2e8f0"
+        },
+        "cardBorderWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "cardBorderRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "cardPaddingTop": {
+            "type": "number",
+            "default": 36
+        },
+        "cardPaddingRight": {
+            "type": "number",
+            "default": 32
+        },
+        "cardPaddingBottom": {
+            "type": "number",
+            "default": 36
+        },
+        "cardPaddingLeft": {
+            "type": "number",
+            "default": 32
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "priceTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "featureTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "btnTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "planNameColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "descriptionColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "priceColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "currencySize": {
+            "type": "number",
+            "default": 24
+        },
+        "periodSize": {
+            "type": "number",
+            "default": 16
+        },
+        "periodColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "priceSubtextSize": {
+            "type": "number",
+            "default": 13
+        },
+        "priceSubtextColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "featureColor": {
+            "type": "string",
+            "default": "#334155"
+        },
+        "featureExcludedColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "featureIncludedIconColor": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "featureExcludedIconColor": {
+            "type": "string",
+            "default": "#cbd5e1"
+        },
+        "featureGap": {
+            "type": "number",
+            "default": 12
+        },
+        "btnBg": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "btnColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btnBgHover": {
+            "type": "string",
+            "default": "#1d4ed8"
+        },
+        "btnColorHover": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "btnBorderColor": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "btnBorderWidth": {
+            "type": "number",
+            "default": 2
+        },
+        "btnBorderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "btnPaddingV": {
+            "type": "number",
+            "default": 14
+        },
+        "btnWidth": {
+            "type": "string",
+            "default": "full"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#2563eb"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "badgeSize": {
+            "type": "number",
+            "default": 12
+        },
+        "badgeBorderRadius": {
+            "type": "number",
+            "default": 50
+        },
+        "headerBg": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "headerStyle": {
+            "type": "string",
+            "default": "default"
+        },
+        "sectionGap": {
+            "type": "number",
+            "default": 24
+        }
+    }
+}

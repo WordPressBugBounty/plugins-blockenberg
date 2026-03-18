@@ -1,0 +1,101 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/trivia-game",
+    "title": "Trivia Game",
+    "category": "bkbg-interactive",
+    "icon": "editor-help",
+    "description": "A timed multiple-choice trivia game with built-in questions across Science, History, Geography, and Pop Culture categories.",
+    "keywords": [
+        "trivia",
+        "quiz",
+        "game",
+        "questions",
+        "knowledge",
+        "multiple choice",
+        "fun"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-trivia-game-editor",
+    "style": "bkbg-trivia-game-style",
+    "viewScript": "bkbg-trivia-game-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Trivia Challenge"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Test your knowledge!"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtitleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "questionsPerRound": {
+            "type": "number",
+            "default": 10
+        },
+        "timePerQuestion": {
+            "type": "number",
+            "default": 20
+        },
+        "category": {
+            "type": "string",
+            "default": "mixed"
+        },
+        "difficulty": {
+            "type": "string",
+            "default": "mixed"
+        },
+        "showTimer": {
+            "type": "boolean",
+            "default": true
+        },
+        "showProgress": {
+            "type": "boolean",
+            "default": true
+        },
+        "showExplanation": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "correctColor": {
+            "type": "string",
+            "default": "#22c55e"
+        },
+        "wrongColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f0f4ff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        }
+    }
+}

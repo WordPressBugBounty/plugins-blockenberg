@@ -1,0 +1,258 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/feature-video-tabs",
+    "title": "Feature Video Tabs",
+    "description": "A feature showcase section with tab navigation and an auto-playing video per tab. Each tab shows a headline, description, bullet points, and an optional CTA button alongside its video.",
+    "category": "bkbg-marketing",
+    "icon": "video-alt3",
+    "keywords": [
+        "feature",
+        "tabs",
+        "video",
+        "showcase",
+        "features",
+        "autoplay",
+        "demo"
+    ],
+    "editorScript": "bkbg-feature-video-tabs-editor",
+    "editorStyle": "bkbg-feature-video-tabs-style",
+    "style": "bkbg-feature-video-tabs-style",
+    "viewScript": "bkbg-feature-video-tabs-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "tabs": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Easy Setup",
+                    "icon": "⚡",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "headline": "Get started in minutes",
+                    "description": "No complicated configuration. Our intuitive onboarding process guides you every step of the way so you can focus on what matters.",
+                    "bullets": [
+                        "One-click install",
+                        "Pre-built templates",
+                        "Import from any platform"
+                    ],
+                    "ctaLabel": "Start Free Trial",
+                    "ctaUrl": "#",
+                    "videoUrl": "",
+                    "videoPoster": "",
+                    "fallbackImageUrl": "",
+                    "fallbackImageId": 0
+                },
+                {
+                    "label": "Powerful Analytics",
+                    "icon": "📊",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "headline": "Data-driven decisions",
+                    "description": "Real-time dashboards, custom reports, and AI-powered insights help you understand your audience and grow faster.",
+                    "bullets": [
+                        "Real-time reporting",
+                        "Custom funnels",
+                        "AI recommendations"
+                    ],
+                    "ctaLabel": "See Analytics",
+                    "ctaUrl": "#",
+                    "videoUrl": "",
+                    "videoPoster": "",
+                    "fallbackImageUrl": "",
+                    "fallbackImageId": 0
+                },
+                {
+                    "label": "Team Collaboration",
+                    "icon": "🤝",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "headline": "Work better together",
+                    "description": "Comment, assign, and ship — all in one place. Keep your entire team in sync with shared workspaces and live editing.",
+                    "bullets": [
+                        "Shared workspaces",
+                        "Live editing",
+                        "Role-based access"
+                    ],
+                    "ctaLabel": "Invite Team",
+                    "ctaUrl": "#",
+                    "videoUrl": "",
+                    "videoPoster": "",
+                    "fallbackImageUrl": "",
+                    "fallbackImageId": 0
+                }
+            ]
+        },
+        "layout": {
+            "type": "string",
+            "default": "right-video"
+        },
+        "tabStyle": {
+            "type": "string",
+            "default": "pills"
+        },
+        "defaultActive": {
+            "type": "number",
+            "default": 0
+        },
+        "autoAdvance": {
+            "type": "boolean",
+            "default": false
+        },
+        "autoAdvanceDelay": {
+            "type": "number",
+            "default": 5000
+        },
+        "videoAutoPlay": {
+            "type": "boolean",
+            "default": true
+        },
+        "videoLoop": {
+            "type": "boolean",
+            "default": true
+        },
+        "videoMuted": {
+            "type": "boolean",
+            "default": true
+        },
+        "aspect": {
+            "type": "string",
+            "default": "16/9"
+        },
+        "videoRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "videoShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBullets": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        },
+        "gap": {
+            "type": "number",
+            "default": 48
+        },
+        "tabAreaWidth": {
+            "type": "number",
+            "default": 40
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        },
+        "headlineSize": {
+            "type": "number",
+            "default": 26
+        },
+        "descSize": {
+            "type": "number",
+            "default": 15
+        },
+        "bulletSize": {
+            "type": "number",
+            "default": 14
+        },
+        "tabLabelSize": {
+            "type": "number",
+            "default": 14
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 24
+        },
+        "typoHeadline": {
+            "type": "object",
+            "default": {}
+        },
+        "typoDesc": {
+            "type": "object",
+            "default": {}
+        },
+        "typoTabLabel": {
+            "type": "object",
+            "default": {}
+        },
+        "typoBullet": {
+            "type": "object",
+            "default": {}
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "activeTabBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "activeTabColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "idleTabBg": {
+            "type": "string",
+            "default": ""
+        },
+        "idleTabColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "headlineColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "bulletColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "bulletDot": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaBg": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ctaColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "videoBg": {
+            "type": "string",
+            "default": "#000000"
+        }
+    }
+}

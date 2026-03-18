@@ -1,0 +1,204 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/team-slider",
+    "version": "1.0.0",
+    "title": "Team Slider",
+    "category": "bkbg-business",
+    "description": "Team members in an interactive carousel. Each member has avatar, name, role, bio, social links, and department tag.",
+    "keywords": [
+        "team",
+        "slider",
+        "carousel",
+        "members",
+        "staff",
+        "people"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-team-slider-editor",
+    "style": "bkbg-team-slider-style",
+    "viewScript": "bkbg-team-slider-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": ""
+        },
+        "showHeading": {
+            "type": "boolean",
+            "default": false
+        },
+        "members": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Jane Doe",
+                    "role": "CEO & Founder",
+                    "bio": "",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "tag": "",
+                    "linkedin": "",
+                    "twitter": "",
+                    "email": "",
+                    "website": ""
+                }
+            ]
+        },
+        "perView": {
+            "type": "integer",
+            "default": 3
+        },
+        "autoplay": {
+            "type": "boolean",
+            "default": false
+        },
+        "autoplayDelay": {
+            "type": "integer",
+            "default": 4000
+        },
+        "showArrows": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDots": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBio": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSocials": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTag": {
+            "type": "boolean",
+            "default": true
+        },
+        "cardStyle": {
+            "type": "string",
+            "default": "default"
+        },
+        "avatarSize": {
+            "type": "integer",
+            "default": 80
+        },
+        "avatarRadius": {
+            "type": "integer",
+            "default": 50
+        },
+        "cardRadius": {
+            "type": "integer",
+            "default": 12
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 0
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 0
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "cardBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "nameColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "roleColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "bioColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "tagBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "tagColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "socialColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "socialHover": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "dotColor": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "dotActive": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "arrowBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "arrowColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "nameTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bioTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "headingFontSize": {
+            "type": "number",
+            "default": 28
+        },
+        "nameFontSize": {
+            "type": "number",
+            "default": 17
+        },
+        "nameFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "roleFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "bioFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "bioLineHeight": {
+            "type": "number",
+            "default": 1.6
+        }
+    }
+}

@@ -1,0 +1,149 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/readability-score",
+    "version": "1.0.0",
+    "title": "Readability Score",
+    "category": "bkbg-dev",
+    "icon": "text-page",
+    "description": "Analyze text readability with Flesch-Kincaid, Gunning Fog, and more.",
+    "keywords": [
+        "readability",
+        "flesch",
+        "kincaid",
+        "text",
+        "analyzer",
+        "score"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-readability-score-editor",
+    "style": "bkbg-readability-score-style",
+    "viewScript": "bkbg-readability-score-frontend",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Readability Analyzer"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Paste your text to get a readability score instantly"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "placeholder": {
+            "type": "string",
+            "default": "Paste or type your text here..."
+        },
+        "showFleschEase": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGradeLevel": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGunningFog": {
+            "type": "boolean",
+            "default": true
+        },
+        "showStats": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGauge": {
+            "type": "boolean",
+            "default": true
+        },
+        "showReadingTime": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": ""
+        },
+        "textareaBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "textareaBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "statBg": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "statBorder": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "statValueColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "statLabelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "gaugeTrackColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "scoreBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": ""
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleTypo": { "type": "object", "default": {} },
+        "subtitleTypo": { "type": "object", "default": {} },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 620
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

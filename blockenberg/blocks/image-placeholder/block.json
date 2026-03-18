@@ -1,0 +1,124 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/image-placeholder",
+    "title": "Image Placeholder",
+    "category": "bkbg-media",
+    "icon": "format-image",
+    "description": "Generate custom placeholder images using Canvas. Set dimensions, colors, text, and download or copy the data URI.",
+    "keywords": [
+        "placeholder",
+        "image",
+        "canvas",
+        "dummy",
+        "generator",
+        "mockup"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-image-placeholder-editor",
+    "style": "bkbg-image-placeholder-style",
+    "viewScript": "bkbg-image-placeholder-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Image Placeholder Generator"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultWidth": {
+            "type": "number",
+            "default": 800
+        },
+        "defaultHeight": {
+            "type": "number",
+            "default": 600
+        },
+        "defaultBgColor": {
+            "type": "string",
+            "default": "#cccccc"
+        },
+        "defaultTextColor": {
+            "type": "string",
+            "default": "#555555"
+        },
+        "defaultText": {
+            "type": "string",
+            "default": ""
+        },
+        "defaultTheme": {
+            "type": "string",
+            "default": "flat"
+        },
+        "showAspectPresets": {
+            "type": "boolean",
+            "default": true
+        },
+        "showThemeSelector": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDownloadBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCopyUriBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCopyUrlBtn": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#3730a3"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 24
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 800
+        }
+    }
+}

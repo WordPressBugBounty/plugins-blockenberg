@@ -1,0 +1,141 @@
+/* Color Thief Block — bkbg-ct-* */
+
+.bkbg-ct-app {
+    font-family: inherit;
+}
+
+.bkbg-ct-image-wrap {
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.bkbg-ct-image-wrap img {
+    width: 100%;
+    display: block;
+}
+
+.bkbg-ct-dominant {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.bkbg-ct-swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding: 4px 0;
+}
+
+.bkbg-ct-swatches.bkbg-ct-list {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bkbg-ct-swatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.bkbg-ct-swatch-color {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.bkbg-ct-swatch-color:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.bkbg-ct-swatch-color.bkbg-ct-copyable {
+    cursor: pointer;
+}
+
+.bkbg-ct-swatch-color.bkbg-ct-copied::after {
+    content: "✓";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.bkbg-ct-swatch-label {
+    font-family: var(--bkbg-cth-lb-font-family, 'Courier New', monospace);
+    font-size: var(--bkbg-cth-lb-font-size-d, 11px);
+    font-weight: var(--bkbg-cth-lb-font-weight, 400);
+    font-style: var(--bkbg-cth-lb-font-style, normal);
+    text-transform: var(--bkbg-cth-lb-text-transform, none);
+    text-decoration: var(--bkbg-cth-lb-text-decoration, none);
+    text-align: center;
+    line-height: var(--bkbg-cth-lb-line-height-d, 1.4);
+    letter-spacing: var(--bkbg-cth-lb-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-cth-lb-word-spacing-d, normal);
+    word-break: break-all;
+    max-width: 70px;
+}
+@media (max-width: 1024px) {
+  .bkbg-ct-swatch-label { font-size: var(--bkbg-cth-lb-font-size-t, var(--bkbg-cth-lb-font-size-d, 11px)); line-height: var(--bkbg-cth-lb-line-height-t, var(--bkbg-cth-lb-line-height-d, 1.4)); letter-spacing: var(--bkbg-cth-lb-letter-spacing-t, var(--bkbg-cth-lb-letter-spacing-d, normal)); word-spacing: var(--bkbg-cth-lb-word-spacing-t, var(--bkbg-cth-lb-word-spacing-d, normal)); }
+}
+@media (max-width: 767px) {
+  .bkbg-ct-swatch-label { font-size: var(--bkbg-cth-lb-font-size-m, var(--bkbg-cth-lb-font-size-t, var(--bkbg-cth-lb-font-size-d, 11px))); line-height: var(--bkbg-cth-lb-line-height-m, var(--bkbg-cth-lb-line-height-t, var(--bkbg-cth-lb-line-height-d, 1.4))); letter-spacing: var(--bkbg-cth-lb-letter-spacing-m, var(--bkbg-cth-lb-letter-spacing-t, var(--bkbg-cth-lb-letter-spacing-d, normal))); word-spacing: var(--bkbg-cth-lb-word-spacing-m, var(--bkbg-cth-lb-word-spacing-t, var(--bkbg-cth-lb-word-spacing-d, normal))); }
+}
+
+.bkbg-ct-list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    width: 100%;
+}
+
+.bkbg-ct-list-item:last-child {
+    border-bottom: none;
+}
+
+.bkbg-ct-list-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    font-size: 12px;
+}
+
+.bkbg-ct-copy-btn {
+    background: none;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 11px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    font-family: inherit;
+}
+
+.bkbg-ct-copy-btn:hover {
+    opacity: 1;
+}
+
+.bkbg-ct-editor .bkbg-ct-swatch-color {
+    cursor: default;
+}

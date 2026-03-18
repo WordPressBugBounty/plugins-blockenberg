@@ -1,0 +1,176 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/fuel-calculator",
+    "title": "Fuel Calculator",
+    "category": "bkbg-calculators",
+    "icon": "car",
+    "description": "Calculate road trip fuel costs, consumption, and CO₂ emissions. Supports MPG, L/100km, and km/L efficiency units with round-trip and cost-per-person options.",
+    "keywords": [
+        "fuel",
+        "gas",
+        "trip",
+        "cost",
+        "calculator",
+        "mpg",
+        "car",
+        "road",
+        "travel",
+        "petrol"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-fuel-calculator-editor",
+    "style": "bkbg-fuel-calculator-style",
+    "viewScript": "bkbg-fuel-calculator-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Fuel Cost Calculator"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Estimate your road trip fuel costs and emissions."
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "unit": {
+            "type": "string",
+            "default": "mpg"
+        },
+        "currency": {
+            "type": "string",
+            "default": "$"
+        },
+        "defaultDist": {
+            "type": "number",
+            "default": 300
+        },
+        "defaultEff": {
+            "type": "number",
+            "default": 30
+        },
+        "defaultPrice": {
+            "type": "number",
+            "default": 3.5
+        },
+        "defaultPassengers": {
+            "type": "number",
+            "default": 2
+        },
+        "showRoundTrip": {
+            "type": "boolean",
+            "default": true
+        },
+        "showPerPerson": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCO2": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLitres": {
+            "type": "boolean",
+            "default": true
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "resultBg": {
+            "type": "string",
+            "default": "#f5f3ff"
+        },
+        "resultBorder": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "totalColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "statCardBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "co2Color": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": ""
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 28
+        },
+        "resultSize": {
+            "type": "number",
+            "default": 52
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoResult": {
+            "type": "object",
+            "default": {}
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "inputRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 620
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 60
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 60
+        }
+    }
+}

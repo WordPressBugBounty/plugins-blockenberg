@@ -1,0 +1,155 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/error-page",
+    "version": "1.0.0",
+    "title": "Error Page",
+    "category": "bkbg-dev",
+    "icon": "warning",
+    "description": "404 / error page section with large decorative error code, heading, description, primary and secondary CTA buttons, optional illustration image, and full background controls.",
+    "keywords": [
+        "404",
+        "error",
+        "not found",
+        "page",
+        "section"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-error-page-editor",
+    "style": "bkbg-error-page-style",
+    "viewScript": "bkbg-error-page-frontend",
+    "attributes": {
+        "errorCode": {
+            "type": "string",
+            "default": "404"
+        },
+        "showError": {
+            "type": "boolean",
+            "default": true
+        },
+        "heading": {
+            "type": "string",
+            "default": "Page not found."
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Oops! The page you're looking for doesn't exist. It might have been moved or deleted."
+        },
+        "showImage": {
+            "type": "boolean",
+            "default": false
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "imageWidth": {
+            "type": "number",
+            "default": 360
+        },
+        "primaryLabel": {
+            "type": "string",
+            "default": "Go to Homepage"
+        },
+        "primaryUrl": {
+            "type": "string",
+            "default": "/"
+        },
+        "showSecondary": {
+            "type": "boolean",
+            "default": true
+        },
+        "secondaryLabel": {
+            "type": "string",
+            "default": "Contact Support"
+        },
+        "secondaryUrl": {
+            "type": "string",
+            "default": "/contact"
+        },
+        "showSearch": {
+            "type": "boolean",
+            "default": false
+        },
+        "layout": {
+            "type": "string",
+            "default": "centered"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "errorCodeColor": {
+            "type": "string",
+            "default": "#f3f0ff"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "primaryBg": {
+            "type": "string",
+            "default": "#7c3aed"
+        },
+        "primaryColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "secondaryBg": {
+            "type": "string",
+            "default": "transparent"
+        },
+        "secondaryColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "errorCodeSize": {
+            "type": "number",
+            "default": 180
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 40
+        },
+        "textSize": {
+            "type": "number",
+            "default": 18
+        },
+        "typoCode": { "type": "object", "default": {} },
+        "typoHeading": { "type": "object", "default": {} },
+        "typoBody": { "type": "object", "default": {} },
+        "paddingTop": {
+            "type": "number",
+            "default": 100
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 100
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 700
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

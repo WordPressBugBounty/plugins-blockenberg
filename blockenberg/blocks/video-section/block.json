@@ -1,0 +1,223 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/video-section",
+    "title": "Video Section",
+    "description": "Featured video section with headline, description, play button and optional stat strip below.",
+    "category": "bkbg-media",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-video-section-editor",
+    "style": "bkbg-video-section-style",
+    "viewScript": "bkbg-video-section-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "videoType": {
+            "type": "string",
+            "default": "youtube"
+        },
+        "videoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "youtubeId": {
+            "type": "string",
+            "default": ""
+        },
+        "vimeoId": {
+            "type": "string",
+            "default": ""
+        },
+        "posterUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "posterId": {
+            "type": "number",
+            "default": 0
+        },
+        "videoLayout": {
+            "type": "string",
+            "default": "hero"
+        },
+        "showContent": {
+            "type": "boolean",
+            "default": true
+        },
+        "contentPosition": {
+            "type": "string",
+            "default": "above"
+        },
+        "badge": {
+            "type": "string",
+            "default": "Watch Now"
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "headline": {
+            "type": "string",
+            "default": "See It In Action"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Watch how our product transforms the way you work in just 2 minutes."
+        },
+        "headlineTag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "aspectRatio": {
+            "type": "string",
+            "default": "16/9"
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 900
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 16
+        },
+        "showShadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "playButtonStyle": {
+            "type": "string",
+            "default": "circle"
+        },
+        "playButtonSize": {
+            "type": "number",
+            "default": 72
+        },
+        "showStats": {
+            "type": "boolean",
+            "default": true
+        },
+        "stats": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "s1",
+                    "value": "2M+",
+                    "label": "Total Views"
+                },
+                {
+                    "id": "s2",
+                    "value": "4.9★",
+                    "label": "Average Rating"
+                },
+                {
+                    "id": "s3",
+                    "value": "50k+",
+                    "label": "Happy Users"
+                }
+            ]
+        },
+        "headlineSize": {
+            "type": "number",
+            "default": 42
+        },
+        "subtextSize": {
+            "type": "number",
+            "default": 18
+        },
+        "statValueSize": {
+            "type": "number",
+            "default": 28
+        },
+        "statLabelSize": {
+            "type": "number",
+            "default": 13
+        },
+        "badgeSize": {
+            "type": "number",
+            "default": 13
+        },
+        "badgeTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "headlineTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "subtextTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "statValueTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "statLabelTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "headlineColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtextColor": {
+            "type": "string",
+            "default": "#4b5563"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#ede9f7"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "playBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "playColor": {
+            "type": "string",
+            "default": "#6c3fb5"
+        },
+        "statValueColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "statLabelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "statDividerColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": ""
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "center"
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 64
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 64
+        }
+    }
+}

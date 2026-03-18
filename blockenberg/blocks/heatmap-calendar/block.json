@@ -1,0 +1,167 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/heatmap-calendar",
+    "version": "1.0.0",
+    "title": "Heatmap Calendar",
+    "category": "bkbg-charts",
+    "icon": "calendar-alt",
+    "description": "GitHub-style activity heatmap calendar showing intensity by day across a full year. 53 × 7 grid of colour-coded squares with month labels, day-of-week labels, and a configurable colour scale.",
+    "keywords": [
+        "heatmap",
+        "calendar",
+        "activity",
+        "github",
+        "contribution",
+        "chart",
+        "grid"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-heatmap-calendar-editor",
+    "style": "bkbg-heatmap-calendar-style",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Activity Overview"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "365 days of data"
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "year": {
+            "type": "integer",
+            "default": 2025
+        },
+        "cellSize": {
+            "type": "integer",
+            "default": 13
+        },
+        "cellGap": {
+            "type": "integer",
+            "default": 3
+        },
+        "cellRadius": {
+            "type": "integer",
+            "default": 2
+        },
+        "showMonths": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDayLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLegend": {
+            "type": "boolean",
+            "default": true
+        },
+        "legendLabel": {
+            "type": "string",
+            "default": "contributions"
+        },
+        "seed": {
+            "type": "integer",
+            "default": 42
+        },
+        "maxValue": {
+            "type": "integer",
+            "default": 20
+        },
+        "color0": {
+            "type": "string",
+            "default": "#ebedf0"
+        },
+        "color1": {
+            "type": "string",
+            "default": "#9be9a8"
+        },
+        "color2": {
+            "type": "string",
+            "default": "#40c463"
+        },
+        "color3": {
+            "type": "string",
+            "default": "#30a14e"
+        },
+        "color4": {
+            "type": "string",
+            "default": "#216e39"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#64748b"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "borderRadius": {
+            "type": "integer",
+            "default": 16
+        },
+        "paddingTop": {
+            "type": "integer",
+            "default": 40
+        },
+        "paddingBottom": {
+            "type": "integer",
+            "default": 40
+        },
+        "titleSize": {
+            "type": "integer",
+            "default": 22
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "subtitleSize": {
+            "type": "integer",
+            "default": 14
+        },
+        "subtitleFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "subtitleLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

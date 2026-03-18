@@ -1,0 +1,215 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockenberg/testimonial-marquee",
+  "title": "Testimonial Marquee",
+  "category": "bkbg-marketing",
+  "icon": "format-quote",
+  "description": "Infinite auto-scrolling testimonial ticker with star ratings, avatar images, and author details. Pause on hover.",
+  "keywords": [
+    "testimonial",
+    "review",
+    "marquee",
+    "infinite",
+    "scroll",
+    "ticker",
+    "social proof"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-testimonial-marquee-editor",
+  "style": "bkbg-testimonial-marquee-style",
+  "viewScript": "bkbg-testimonial-marquee-frontend",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "quote": "This product completely changed how our team works. Couldn't imagine going back.",
+          "author": "Sarah Chen",
+          "role": "Head of Product",
+          "company": "Acme Corp",
+          "avatarUrl": "",
+          "avatarId": 0,
+          "rating": 5,
+          "companyLogo": "",
+          "companyLogoId": 0
+        },
+        {
+          "quote": "Outstanding quality and support. The onboarding was seamless and the results speak for themselves.",
+          "author": "Marcus Webb",
+          "role": "Founder & CEO",
+          "company": "Launchpad",
+          "avatarUrl": "",
+          "avatarId": 0,
+          "rating": 5,
+          "companyLogo": "",
+          "companyLogoId": 0
+        },
+        {
+          "quote": "Five stars isn't enough. We cut our workflow time in half within the first week.",
+          "author": "Priya Nair",
+          "role": "Operations Lead",
+          "company": "CloudStack",
+          "avatarUrl": "",
+          "avatarId": 0,
+          "rating": 5,
+          "companyLogo": "",
+          "companyLogoId": 0
+        },
+        {
+          "quote": "The attention to detail is unreal. Every feature feels thoughtfully designed.",
+          "author": "James Holloway",
+          "role": "Creative Director",
+          "company": "Studio Alto",
+          "avatarUrl": "",
+          "avatarId": 0,
+          "rating": 5,
+          "companyLogo": "",
+          "companyLogoId": 0
+        },
+        {
+          "quote": "We evaluated six alternatives. This was the clear winner \u2014 by a wide margin.",
+          "author": "Lena Kova\u010d",
+          "role": "VP of Engineering",
+          "company": "DevOps HQ",
+          "avatarUrl": "",
+          "avatarId": 0,
+          "rating": 5,
+          "companyLogo": "",
+          "companyLogoId": 0
+        },
+        {
+          "quote": "My team is more productive and happier. That's all I needed to know.",
+          "author": "David Torres",
+          "role": "Team Lead",
+          "company": "Momentum",
+          "avatarUrl": "",
+          "avatarId": 0,
+          "rating": 4,
+          "companyLogo": "",
+          "companyLogoId": 0
+        }
+      ]
+    },
+    "rows": {
+      "type": "number",
+      "default": 1
+    },
+    "speed": {
+      "type": "number",
+      "default": 60
+    },
+    "direction": {
+      "type": "string",
+      "default": "left"
+    },
+    "pauseOnHover": {
+      "type": "boolean",
+      "default": true
+    },
+    "showStars": {
+      "type": "boolean",
+      "default": true
+    },
+    "showAvatar": {
+      "type": "boolean",
+      "default": true
+    },
+    "showRole": {
+      "type": "boolean",
+      "default": true
+    },
+    "showCompany": {
+      "type": "boolean",
+      "default": true
+    },
+    "showCompanyLogo": {
+      "type": "boolean",
+      "default": false
+    },
+    "fadeEdges": {
+      "type": "boolean",
+      "default": true
+    },
+    "cardWidth": {
+      "type": "number",
+      "default": 340
+    },
+    "cardGap": {
+      "type": "number",
+      "default": 20
+    },
+    "cardRadius": {
+      "type": "number",
+      "default": 14
+    },
+    "cardPadding": {
+      "type": "number",
+      "default": 24
+    },
+
+    "avatarSize": {
+      "type": "number",
+      "default": 44
+    },
+    "paddingY": {
+      "type": "number",
+      "default": 40
+    },
+    "wrapperBg": {
+      "type": "string",
+      "default": ""
+    },
+    "cardBg": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "cardBorder": {
+      "type": "string",
+      "default": "#e5e7eb"
+    },
+    "cardShadow": {
+      "type": "string",
+      "default": "sm"
+    },
+    "quoteColor": {
+      "type": "string",
+      "default": "#374151"
+    },
+    "starColor": {
+      "type": "string",
+      "default": "#f59e0b"
+    },
+    "authorColor": {
+      "type": "string",
+      "default": "#111827"
+    },
+    "roleColor": {
+      "type": "string",
+      "default": "#6b7280"
+    },
+    "quoteIconColor": {
+      "type": "string",
+      "default": "#e0e7ff"
+    },
+    "quoteTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "nameTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "roleTypo": {
+      "type": "object",
+      "default": {}
+    }
+  }
+}

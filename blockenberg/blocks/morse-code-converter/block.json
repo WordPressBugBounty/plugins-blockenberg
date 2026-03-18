@@ -1,0 +1,194 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockenberg/morse-code-converter",
+	"title": "Morse Code Converter",
+	"category": "bkbg-calculators",
+	"icon": "controls-volumeon",
+	"description": "Encode plain text to Morse code and decode Morse code back to text. Supports dots, dashes and spaces.",
+	"keywords": [
+		"morse",
+		"code",
+		"encode",
+		"decode",
+		"cipher",
+		"dots",
+		"dashes",
+		"signal"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-morse-code-converter-editor",
+	"style": "bkbg-morse-code-converter-style",
+	"viewScript": "bkbg-morse-code-converter-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Morse Code Converter"
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Encode and decode messages in Morse code instantly"
+		},
+		"showTitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"showSubtitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"defaultMode": {
+			"type": "string",
+			"default": "encode"
+		},
+		"defaultText": {
+			"type": "string",
+			"default": "Hello World"
+		},
+		"showCopyButton": {
+			"type": "boolean",
+			"default": true
+		},
+		"showPlayButton": {
+			"type": "boolean",
+			"default": true
+		},
+		"showReference": {
+			"type": "boolean",
+			"default": true
+		},
+		"dotChar": {
+			"type": "string",
+			"default": "\u00b7"
+		},
+		"dashChar": {
+			"type": "string",
+			"default": "\u2014"
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"cardBg": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"outputBg": {
+			"type": "string",
+			"default": "#f5f3ff"
+		},
+		"outputBorder": {
+			"type": "string",
+			"default": "#ede9fe"
+		},
+		"outputColor": {
+			"type": "string",
+			"default": "#3b0764"
+		},
+		"tabActiveBg": {
+			"type": "string",
+			"default": "#6c3fb5"
+		},
+		"tabActiveColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"tabInactiveBg": {
+			"type": "string",
+			"default": "#f3f4f6"
+		},
+		"tabInactiveColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"refBg": {
+			"type": "string",
+			"default": "#f9fafb"
+		},
+		"refBorder": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"inputBorder": {
+			"type": "string",
+			"default": "#e5e7eb"
+		},
+		"labelColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": ""
+		},
+		"subtitleColor": {
+			"type": "string",
+			"default": ""
+		},
+		"sectionBg": {
+			"type": "string",
+			"default": ""
+		},
+		"titleSize": {
+			"type": "number",
+			"default": 28
+		},
+		"outputFontSize": {
+			"type": "number",
+			"default": 18
+		},
+		"cardRadius": {
+			"type": "number",
+			"default": 16
+		},
+		"inputRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"maxWidth": {
+			"type": "number",
+			"default": 620
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 60
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 60
+		},
+		"titleFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"subtitleFontSize": {
+			"type": "number",
+			"default": 14
+		},
+		"outputLineHeight": {
+			"type": "number",
+			"default": 1.5
+		},
+		"titleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"subtitleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"outputTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

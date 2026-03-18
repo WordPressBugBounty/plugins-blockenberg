@@ -1,0 +1,74 @@
+/* =====================================================
+   Floating Tags — bkbg-ft-*
+   ===================================================== */
+
+.bkbg-ft-app {
+    box-sizing: border-box;
+    padding: 24px 16px;
+}
+
+.bkbg-ft-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* ── Base tag ── */
+.bkbg-ft-tag {
+    display: inline-block;
+    line-height: 1.3;
+    border: 1px solid var(--ft-border, #e2e8f0);
+    cursor: default;
+    white-space: nowrap;
+    font-family: var(--bkbg-ft-tg-font-family, inherit);
+    font-style: var(--bkbg-ft-tg-font-style, normal);
+    text-decoration: var(--bkbg-ft-tg-text-decoration, none);
+    text-transform: var(--bkbg-ft-tg-text-transform, none);
+    letter-spacing: var(--bkbg-ft-tg-letter-spacing-d, normal);
+    word-spacing: var(--bkbg-ft-tg-word-spacing-d, normal);
+    transition: background .2s, color .2s, transform .2s, box-shadow .2s;
+    will-change: transform;
+}
+
+.bkbg-ft-tag a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.bkbg-ft-tag:hover,
+.bkbg-ft-tag:focus-within {
+    background: var(--ft-hover-bg)  !important;
+    color:      var(--ft-hover-clr) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+}
+
+/* ── Float keyframes (assigned per-tag via JS) ── */
+@keyframes bkbg-ft-float {
+    0%   { transform: translateY(0px) scale(1); }
+    50%  { transform: translateY(var(--ft-amp, -8px)) scale(1); }
+    100% { transform: translateY(0px) scale(1); }
+}
+
+.bkbg-ft-tag.bkbg-ft-floating {
+    animation: bkbg-ft-float var(--ft-dur, 3s) ease-in-out infinite;
+    animation-delay: var(--ft-delay, 0s);
+}
+
+.bkbg-ft-tag.bkbg-ft-floating:hover {
+    animation-play-state: paused;
+}
+
+/* ── Typography responsive ── */
+@media (max-width: 1024px) {
+    .bkbg-ft-tag { letter-spacing: var(--bkbg-ft-tg-letter-spacing-t, var(--bkbg-ft-tg-letter-spacing-d, normal)); word-spacing: var(--bkbg-ft-tg-word-spacing-t, var(--bkbg-ft-tg-word-spacing-d, normal)); }
+}
+@media (max-width: 767px) {
+    .bkbg-ft-tag { letter-spacing: var(--bkbg-ft-tg-letter-spacing-m, var(--bkbg-ft-tg-letter-spacing-t, var(--bkbg-ft-tg-letter-spacing-d, normal))); word-spacing: var(--bkbg-ft-tg-word-spacing-m, var(--bkbg-ft-tg-word-spacing-t, var(--bkbg-ft-tg-word-spacing-d, normal))); }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+    .bkbg-ft-tag.bkbg-ft-floating {
+        animation: none !important;
+    }
+}

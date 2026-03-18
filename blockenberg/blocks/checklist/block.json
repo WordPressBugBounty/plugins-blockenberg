@@ -1,0 +1,176 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/checklist",
+    "title": "Interactive Checklist",
+    "category": "bkbg-content",
+    "icon": "list-view",
+    "description": "A fully interactive checklist with progress tracking, emoji icons, add/remove items, and optional persistence via localStorage. Rich color and layout controls.",
+    "keywords": [
+        "checklist",
+        "todo",
+        "tasks",
+        "list",
+        "interactive",
+        "progress",
+        "check"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-checklist-editor",
+    "style": "bkbg-checklist-style",
+    "viewScript": "bkbg-checklist-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Checklist"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Check off items as you go"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showProgress": {
+            "type": "boolean",
+            "default": true
+        },
+        "showAddItem": {
+            "type": "boolean",
+            "default": true
+        },
+        "allowDelete": {
+            "type": "boolean",
+            "default": true
+        },
+        "rememberState": {
+            "type": "boolean",
+            "default": true
+        },
+        "checkStyle": {
+            "type": "string",
+            "default": "circle"
+        },
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "1",
+                    "text": "Read the documentation",
+                    "done": false,
+                    "icon": "📄"
+                },
+                {
+                    "id": "2",
+                    "text": "Install the plugin",
+                    "done": false,
+                    "icon": "🔌"
+                },
+                {
+                    "id": "3",
+                    "text": "Configure block settings",
+                    "done": false,
+                    "icon": "⚙️"
+                },
+                {
+                    "id": "4",
+                    "text": "Publish your first post",
+                    "done": false,
+                    "icon": "🚀"
+                },
+                {
+                    "id": "5",
+                    "text": "Share with your audience",
+                    "done": false,
+                    "icon": "📢"
+                }
+            ]
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#10b981"
+        },
+        "checkColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "doneTextColor": {
+            "type": "string",
+            "default": "#9ca3af"
+        },
+        "progressBg": {
+            "type": "string",
+            "default": "#d1fae5"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#f0fdf4"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "itemBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 26
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 600
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.3
+        },
+        "itemFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "itemFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoItem": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

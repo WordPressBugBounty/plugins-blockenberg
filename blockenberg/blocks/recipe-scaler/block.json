@@ -1,0 +1,107 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/recipe-scaler",
+    "version": "1.0.0",
+    "title": "Recipe Scaler",
+    "category": "bkbg-calculators",
+    "icon": "food",
+    "description": "Scale recipe ingredient quantities up or down by adjusting the number of servings. Add, edit and remove ingredients with a live WYSIWYG preview.",
+    "keywords": [
+        "recipe",
+        "scaler",
+        "ingredients",
+        "servings",
+        "cooking",
+        "food",
+        "scale",
+        "multiply"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-recipe-scaler-editor",
+    "style": "bkbg-recipe-scaler-style",
+    "viewScript": "bkbg-recipe-scaler-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Recipe Scaler"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Adjust serving size and all ingredient quantities update automatically"
+        },
+        "recipeName": {
+            "type": "string",
+            "default": "Classic Pancakes"
+        },
+        "defaultServings": {
+            "type": "number",
+            "default": 4
+        },
+        "maxServings": {
+            "type": "number",
+            "default": 24
+        },
+        "showQuickBtns": {
+            "type": "boolean",
+            "default": true
+        },
+        "showNotes": {
+            "type": "boolean",
+            "default": true
+        },
+        "recipeNotes": {
+            "type": "string",
+            "default": "Do not over-mix the batter \u2014 a few lumps are fine!"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#f97316"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#fff7ed"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "inputBg": {
+            "type": "string",
+            "default": "#fafafa"
+        },
+        "ingredientBg": {
+            "type": "string",
+            "default": "#fef3c7"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "contentMaxWidth": {
+            "type": "integer",
+            "default": 660
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

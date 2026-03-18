@@ -1,0 +1,147 @@
+{
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "blockenberg/mixed-chart",
+	"title": "Mixed Chart",
+	"category": "bkbg-charts",
+	"icon": "chart-bar",
+	"description": "Combination bar + line chart with an optional dual Y-axis. Perfect for overlaying revenue (bar) with growth rate (line) or any two related metrics in the same canvas. Powered by Chart.js CDN.",
+	"keywords": [
+		"chart",
+		"mixed",
+		"combo",
+		"bar",
+		"line",
+		"dual axis",
+		"overlay",
+		"analytics"
+	],
+	"textdomain": "blockenberg",
+	"editorScript": "bkbg-mixed-chart-editor",
+	"editorStyle": "bkbg-mixed-chart-style",
+	"style": "bkbg-mixed-chart-style",
+	"viewScript": "bkbg-mixed-chart-frontend",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"className": true,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"attributes": {
+		"chartTitle": {
+			"type": "string",
+			"default": "Revenue & Growth"
+		},
+		"chartSubtitle": {
+			"type": "string",
+			"default": "Monthly performance overview"
+		},
+		"showTitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"showSubtitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"labels": {
+			"type": "string",
+			"default": "Jan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug\nSep\nOct\nNov\nDec"
+		},
+		"datasetsJson": {
+			"type": "string",
+			"default": "[{\"id\":\"d1\",\"label\":\"Revenue ($K)\",\"type\":\"bar\",\"color\":\"#6c3fb5\",\"yAxis\":\"y\",\"data\":\"42\\n48\\n55\\n61\\n58\\n72\\n79\\n84\\n88\\n95\\n103\\n118\"},{\"id\":\"d2\",\"label\":\"Growth (%)\",\"type\":\"line\",\"color\":\"#10b981\",\"yAxis\":\"y1\",\"data\":\"5.2\\n6.1\\n7.4\\n9.2\\n8.8\\n11.5\\n12.1\\n13.4\\n14.2\\n15.6\\n16.8\\n18.3\"}]"
+		},
+		"dualAxis": {
+			"type": "boolean",
+			"default": true
+		},
+		"yLabel": {
+			"type": "string",
+			"default": "Revenue ($K)"
+		},
+		"y1Label": {
+			"type": "string",
+			"default": "Growth (%)"
+		},
+		"showGrid": {
+			"type": "boolean",
+			"default": true
+		},
+		"showLegend": {
+			"type": "boolean",
+			"default": true
+		},
+		"legendPos": {
+			"type": "string",
+			"default": "bottom"
+		},
+		"barRadius": {
+			"type": "number",
+			"default": 4
+		},
+		"lineWidth": {
+			"type": "number",
+			"default": 2
+		},
+		"dotSize": {
+			"type": "number",
+			"default": 4
+		},
+		"fillAlpha": {
+			"type": "number",
+			"default": 85
+		},
+		"animate": {
+			"type": "boolean",
+			"default": true
+		},
+		"chartHeight": {
+			"type": "number",
+			"default": 400
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 14
+		},
+		"paddingTop": {
+			"type": "number",
+			"default": 0
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 0
+		},
+		"titleFontSize": {
+			"type": "number",
+			"default": 20
+		},
+		"titleFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"titleLineHeight": {
+			"type": "number",
+			"default": 1.3
+		},
+		"subtitleFontSize": {
+			"type": "number",
+			"default": 14
+		},
+		"titleTypo": {
+			"type": "object",
+			"default": {}
+		},
+		"subtitleTypo": {
+			"type": "object",
+			"default": {}
+		}
+	}
+}

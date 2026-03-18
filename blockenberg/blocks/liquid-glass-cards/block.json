@@ -1,0 +1,153 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/liquid-glass-cards",
+    "title": "Liquid Glass Cards",
+    "category": "bkbg-effects",
+    "icon": "category",
+    "description": "Glassmorphism-style frosted-glass cards with blur, border-light and subtle mouse-parallax effect.",
+    "keywords": [
+        "glass",
+        "glassmorphism",
+        "blur",
+        "frosted",
+        "card",
+        "liquid",
+        "modern",
+        "ui"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-liquid-glass-cards-editor",
+    "style": "bkbg-liquid-glass-cards-style",
+    "viewScript": "bkbg-liquid-glass-cards-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "cards": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "🌊",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Ocean Breeze",
+                    "description": "Fluid design with crystal-clear transparency and soft edges.",
+                    "linkUrl": "",
+                    "linkText": "Learn More"
+                },
+                {
+                    "icon": "❄️",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Frost Layer",
+                    "description": "Frosted glass surface with subtle blur and light border.",
+                    "linkUrl": "",
+                    "linkText": "Learn More"
+                },
+                {
+                    "icon": "💎",
+                    "iconType": "custom-char",
+                    "iconDashicon": "",
+                    "iconImageUrl": "",
+                    "title": "Crystal Core",
+                    "description": "Diamond-clear clarity with iridescent shimmer highlights.",
+                    "linkUrl": "",
+                    "linkText": "Learn More"
+                }
+            ]
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "blurAmount": {
+            "type": "number",
+            "default": 20
+        },
+        "glassOpacity": {
+            "type": "number",
+            "default": 18
+        },
+        "borderOpacity": {
+            "type": "number",
+            "default": 30
+        },
+        "cardRadius": {
+            "type": "number",
+            "default": 24
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 32
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 44
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 20
+        },
+        "descSize": {
+            "type": "number",
+            "default": 15
+        },
+        "showLink": {
+            "type": "boolean",
+            "default": true
+        },
+        "parallaxStrength": {
+            "type": "number",
+            "default": 8
+        },
+        "bgGradient": {
+            "type": "string",
+            "default": "linear-gradient(135deg,#667eea 0%,#764ba2 100%)"
+        },
+        "glassColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "descColor": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.8)"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.3)"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "shadowColor": {
+            "type": "string",
+            "default": "rgba(0,0,0,0.2)"
+        },
+        "iconBg": {
+            "type": "string",
+            "default": "rgba(255,255,255,0.2)"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "descTypo": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

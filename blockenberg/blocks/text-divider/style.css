@@ -1,0 +1,47 @@
+/* Text Divider — bktd- */
+.bktd-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+}
+.bktd-line {
+  flex: 1;
+  height: 0;
+}
+.bktd-label {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+.bktd-text {
+  font-family:       var(--bktd-lb-ff);
+  font-size:         var(--bktd-lb-fs-d, 13px);
+  line-height:       var(--bktd-lb-lh-d, 1.2);
+  letter-spacing:    var(--bktd-lb-ls-d, 1px);
+  word-spacing:      var(--bktd-lb-ws-d);
+  font-weight:       var(--bktd-lb-fw, 600);
+  font-style:        var(--bktd-lb-fst);
+  text-decoration:   var(--bktd-lb-td);
+  text-transform:    var(--bktd-lb-tt);
+}
+
+/* Typography responsive */
+@media (max-width: 1024px) {
+  .bktd-text {
+    font-size:      var(--bktd-lb-fs-t, var(--bktd-lb-fs-d, 13px));
+    line-height:    var(--bktd-lb-lh-t, var(--bktd-lb-lh-d, 1.2));
+    letter-spacing: var(--bktd-lb-ls-t, var(--bktd-lb-ls-d, 1px));
+    word-spacing:   var(--bktd-lb-ws-t, var(--bktd-lb-ws-d));
+  }
+}
+@media (max-width: 767px) {
+  .bktd-text {
+    font-size:      var(--bktd-lb-fs-m, var(--bktd-lb-fs-t, var(--bktd-lb-fs-d, 13px)));
+    line-height:    var(--bktd-lb-lh-m, var(--bktd-lb-lh-t, var(--bktd-lb-lh-d, 1.2)));
+    letter-spacing: var(--bktd-lb-ls-m, var(--bktd-lb-ls-t, var(--bktd-lb-ls-d, 1px)));
+    word-spacing:   var(--bktd-lb-ws-m, var(--bktd-lb-ws-t, var(--bktd-lb-ws-d)));
+  }
+}

@@ -1,0 +1,165 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/histogram-chart",
+    "title": "Histogram Chart",
+    "category": "bkbg-charts",
+    "icon": "chart-bar",
+    "description": "Frequency-distribution histogram with configurable bins, colours, and axis labels.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-histogram-chart-editor",
+    "style": "bkbg-histogram-chart-style",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Response Time Distribution"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "number",
+            "default": 680
+        },
+        "svgHeight": {
+            "type": "number",
+            "default": 360
+        },
+        "padTop": {
+            "type": "number",
+            "default": 30
+        },
+        "padLeft": {
+            "type": "number",
+            "default": 60
+        },
+        "padRight": {
+            "type": "number",
+            "default": 30
+        },
+        "padBottom": {
+            "type": "number",
+            "default": 54
+        },
+        "barGap": {
+            "type": "number",
+            "default": 2
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "showGrid": {
+            "type": "boolean",
+            "default": true
+        },
+        "showCurve": {
+            "type": "boolean",
+            "default": false
+        },
+        "barColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "curveColor": {
+            "type": "string",
+            "default": "#ef4444"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "xAxisLabel": {
+            "type": "string",
+            "default": "Response Time (ms)"
+        },
+        "yAxisLabel": {
+            "type": "string",
+            "default": "Frequency"
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "valueFontSize": {
+            "type": "number",
+            "default": 10
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 18
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "bins": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "0–50",
+                    "count": 12
+                },
+                {
+                    "label": "50–100",
+                    "count": 38
+                },
+                {
+                    "label": "100–150",
+                    "count": 74
+                },
+                {
+                    "label": "150–200",
+                    "count": 91
+                },
+                {
+                    "label": "200–250",
+                    "count": 68
+                },
+                {
+                    "label": "250–300",
+                    "count": 43
+                },
+                {
+                    "label": "300–350",
+                    "count": 27
+                },
+                {
+                    "label": "350–400",
+                    "count": 15
+                },
+                {
+                    "label": "400–450",
+                    "count": 8
+                },
+                {
+                    "label": "450–500",
+                    "count": 4
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        }
+    }
+}

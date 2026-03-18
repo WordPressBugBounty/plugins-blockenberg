@@ -1,0 +1,290 @@
+/* =============================================
+   Modal Window Block — blockenberg/modal
+   ============================================= */
+
+.bkbg-modal-block {
+    --bkbg-modal-bg: #ffffff;
+    --bkbg-modal-radius: 12px;
+    --bkbg-modal-padding: 32px;
+    --bkbg-modal-title-size: 22px;
+    --bkbg-modal-title-weight: 700;
+    --bkbg-modal-title-color: #111827;
+    --bkbg-modal-content-size: 15px;
+    --bkbg-modal-content-color: #374151;
+    --bkbg-modal-content-lh: 1.7;
+    --bkbg-modal-close-color: #6b7280;
+    --bkbg-modal-close-hover: #111827;
+    --bkbg-modal-overlay-bg: rgba(0,0,0,0.6);
+    --bkbg-modal-btn-bg: #2563eb;
+    --bkbg-modal-btn-color: #ffffff;
+    --bkbg-modal-btn-radius: 8px;
+}
+
+/* ---- Trigger wrap ---- */
+.bkbg-modal-trigger-wrap {
+    display: block;
+}
+
+/* ---- Trigger button - primary ---- */
+.bkbg-modal-trigger.bkbg-modal-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bkbg-modal-btn-bg);
+    color: var(--bkbg-modal-btn-color);
+    border: 2px solid var(--bkbg-modal-btn-bg);
+    border-radius: var(--bkbg-modal-btn-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+    text-decoration: none;
+    line-height: 1.3;
+}
+
+.bkbg-modal-trigger.bkbg-modal-btn-primary:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}
+
+/* ---- Outline ---- */
+.bkbg-modal-trigger.bkbg-modal-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--bkbg-modal-btn-bg);
+    border: 2px solid var(--bkbg-modal-btn-bg);
+    border-radius: var(--bkbg-modal-btn-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease, color 0.2s ease;
+    text-decoration: none;
+}
+
+.bkbg-modal-trigger.bkbg-modal-btn-outline:hover {
+    background: var(--bkbg-modal-btn-bg);
+    color: var(--bkbg-modal-btn-color);
+}
+
+/* ---- Ghost ---- */
+.bkbg-modal-trigger.bkbg-modal-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--bkbg-modal-btn-bg);
+    border: none;
+    border-radius: var(--bkbg-modal-btn-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: text-decoration 0.15s;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    padding: 0;
+}
+
+/* ---- Sizes ---- */
+.bkbg-modal-trigger.bkbg-modal-btn-sm { padding: 8px 16px; font-size: 13px; }
+.bkbg-modal-trigger.bkbg-modal-btn-md { padding: 12px 24px; font-size: 15px; }
+.bkbg-modal-trigger.bkbg-modal-btn-lg { padding: 15px 32px; font-size: 17px; }
+
+/* ---- Auto badge (editor only hint) ---- */
+.bkbg-modal-auto-badge {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 11px;
+    color: #6b7280;
+    background: #f3f4f6;
+    border-radius: 4px;
+    padding: 2px 8px;
+    vertical-align: middle;
+}
+
+/* ---- Overlay ---- */
+.bkbg-modal-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    background: var(--bkbg-modal-overlay-bg);
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.bkbg-modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.bkbg-modal-overlay[data-overlay-blur="1"] {
+    backdrop-filter: blur(4px);
+}
+
+/* ---- Dialog ---- */
+.bkbg-modal-dialog {
+    background: var(--bkbg-modal-bg);
+    border-radius: var(--bkbg-modal-radius);
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.bkbg-modal-overlay.is-open .bkbg-modal-dialog {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Sizes */
+.bkbg-modal-overlay[data-size="sm"] .bkbg-modal-dialog { max-width: 480px; }
+.bkbg-modal-overlay[data-size="md"] .bkbg-modal-dialog { max-width: 640px; }
+.bkbg-modal-overlay[data-size="lg"] .bkbg-modal-dialog { max-width: 800px; }
+.bkbg-modal-overlay[data-size="xl"] .bkbg-modal-dialog { max-width: 1100px; }
+.bkbg-modal-overlay[data-size="full"] .bkbg-modal-dialog {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+    margin: 0;
+}
+
+/* Animations */
+.bkbg-modal-overlay[data-animation="slide-up"] .bkbg-modal-dialog { transform: translateY(40px); opacity: 0; }
+.bkbg-modal-overlay[data-animation="slide-up"].is-open .bkbg-modal-dialog { transform: translateY(0); opacity: 1; }
+.bkbg-modal-overlay[data-animation="slide-down"] .bkbg-modal-dialog { transform: translateY(-40px); opacity: 0; }
+.bkbg-modal-overlay[data-animation="slide-down"].is-open .bkbg-modal-dialog { transform: translateY(0); opacity: 1; }
+.bkbg-modal-overlay[data-animation="fade"] .bkbg-modal-dialog { transform: none; opacity: 0; }
+.bkbg-modal-overlay[data-animation="fade"].is-open .bkbg-modal-dialog { opacity: 1; }
+.bkbg-modal-overlay[data-animation="none"] .bkbg-modal-dialog { transform: none; transition: none; }
+
+/* ---- Header ---- */
+.bkbg-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--bkbg-modal-padding) var(--bkbg-modal-padding) calc(var(--bkbg-modal-padding) * 0.5);
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.bkbg-modal-header h2.bkbg-modal-title {
+    margin: 0;
+    font-family: var(--bkbg-modal-tt-font-family, inherit);
+    font-size: var(--bkbg-modal-tt-font-size-d, var(--bkbg-modal-title-size, 22px));
+    font-weight: var(--bkbg-modal-tt-font-weight, var(--bkbg-modal-title-weight, 700));
+    font-style: var(--bkbg-modal-tt-font-style, normal);
+    line-height: var(--bkbg-modal-tt-line-height-d, var(--bkbg-modal-tt-line-height, var(--bkbg-modal-title-lh, 1.3)));
+    letter-spacing: var(--bkbg-modal-tt-letter-spacing-d, var(--bkbg-modal-tt-letter-spacing, normal));
+    text-decoration: var(--bkbg-modal-tt-text-decoration, none);
+    text-transform: var(--bkbg-modal-tt-text-transform, none);
+    color: var(--bkbg-modal-title-color);
+}
+
+/* ---- Close button ---- */
+.bkbg-modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--bkbg-modal-close-color);
+    font-size: 20px;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: color 0.15s, background 0.15s;
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+.bkbg-modal-close:hover {
+    color: var(--bkbg-modal-close-hover);
+    background: #f3f4f6;
+}
+
+/* ---- Content ---- */
+.bkbg-modal-content {
+    padding: var(--bkbg-modal-padding);
+}
+
+.bkbg-modal-body {
+    font-family: var(--bkbg-modal-bd-font-family, inherit);
+    font-size: var(--bkbg-modal-bd-font-size-d, var(--bkbg-modal-content-size, 15px));
+    font-weight: var(--bkbg-modal-bd-font-weight, normal);
+    font-style: var(--bkbg-modal-bd-font-style, normal);
+    line-height: var(--bkbg-modal-bd-line-height-d, var(--bkbg-modal-bd-line-height, var(--bkbg-modal-content-lh, 1.7)));
+    letter-spacing: var(--bkbg-modal-bd-letter-spacing-d, var(--bkbg-modal-bd-letter-spacing, normal));
+    text-decoration: var(--bkbg-modal-bd-text-decoration, none);
+    text-transform: var(--bkbg-modal-bd-text-transform, none);
+    color: var(--bkbg-modal-content-color);
+}
+
+.bkbg-modal-body > *:last-child { margin-bottom: 0; }
+
+/* Padding adjustment when no header */
+.bkbg-modal-dialog:not(:has(.bkbg-modal-header)) .bkbg-modal-content {
+    padding-top: calc(var(--bkbg-modal-padding) + 8px);
+}
+
+/* =============================================
+   Editor-specific
+   ============================================= */
+.bkbg-modal-editor-preview {
+    position: relative;
+    margin-top: 16px;
+    background: rgba(0,0,0,0.45);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.bkbg-modal-editor-preview .bkbg-modal-dialog {
+    position: static;
+    transform: none;
+    opacity: 1;
+    max-width: 560px;
+    width: 100%;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+}
+
+.bkbg-modal-editor-preview .bkbg-modal-header .components-text-control__input {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    color: inherit !important;
+}
+
+/* ---- Responsive typography ---- */
+@media (max-width: 1024px) {
+    .bkbg-modal-header h2.bkbg-modal-title {
+        font-size: var(--bkbg-modal-tt-font-size-t, var(--bkbg-modal-tt-font-size-d, var(--bkbg-modal-title-size, 22px)));
+        line-height: var(--bkbg-modal-tt-line-height-t, var(--bkbg-modal-tt-line-height-d, var(--bkbg-modal-tt-line-height, var(--bkbg-modal-title-lh, 1.3))));
+            letter-spacing: var(--bkbg-modal-tt-letter-spacing-t, var(--bkbg-modal-tt-letter-spacing-d, var(--bkbg-modal-tt-letter-spacing, normal)));
+    }
+    .bkbg-modal-body {
+        font-size: var(--bkbg-modal-bd-font-size-t, var(--bkbg-modal-bd-font-size-d, var(--bkbg-modal-content-size, 15px)));
+        line-height: var(--bkbg-modal-bd-line-height-t, var(--bkbg-modal-bd-line-height-d, var(--bkbg-modal-bd-line-height, var(--bkbg-modal-content-lh, 1.7))));
+            letter-spacing: var(--bkbg-modal-bd-letter-spacing-t, var(--bkbg-modal-bd-letter-spacing-d, var(--bkbg-modal-bd-letter-spacing, normal)));
+    }
+}
+@media (max-width: 767px) {
+    .bkbg-modal-header h2.bkbg-modal-title {
+        font-size: var(--bkbg-modal-tt-font-size-m, var(--bkbg-modal-tt-font-size-t, var(--bkbg-modal-tt-font-size-d, var(--bkbg-modal-title-size, 20px))));
+        line-height: var(--bkbg-modal-tt-line-height-m, var(--bkbg-modal-tt-line-height-t, var(--bkbg-modal-tt-line-height-d, var(--bkbg-modal-tt-line-height, var(--bkbg-modal-title-lh, 1.3)))));
+            letter-spacing: var(--bkbg-modal-tt-letter-spacing-m, var(--bkbg-modal-tt-letter-spacing-t, var(--bkbg-modal-tt-letter-spacing-d, var(--bkbg-modal-tt-letter-spacing, normal))));
+    }
+    .bkbg-modal-body {
+        font-size: var(--bkbg-modal-bd-font-size-m, var(--bkbg-modal-bd-font-size-t, var(--bkbg-modal-bd-font-size-d, var(--bkbg-modal-content-size, 14px))));
+        line-height: var(--bkbg-modal-bd-line-height-m, var(--bkbg-modal-bd-line-height-t, var(--bkbg-modal-bd-line-height-d, var(--bkbg-modal-bd-line-height, var(--bkbg-modal-content-lh, 1.7)))));
+            letter-spacing: var(--bkbg-modal-bd-letter-spacing-m, var(--bkbg-modal-bd-letter-spacing-t, var(--bkbg-modal-bd-letter-spacing-d, var(--bkbg-modal-bd-letter-spacing, normal))));
+    }
+}

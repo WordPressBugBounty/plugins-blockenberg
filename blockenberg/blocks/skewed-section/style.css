@@ -1,0 +1,39 @@
+/* ── Skewed Section ───────────────────────────────────────────────────────── */
+.bksk-wrap {
+    position: relative;
+    box-sizing: border-box;
+    /* clip-path applied via frontend.js inline style */
+}
+
+.bksk-content {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0 24px;
+}
+
+/* Color inheritance */
+.bksk-content,
+.bksk-content h1,
+.bksk-content h2,
+.bksk-content h3,
+.bksk-content h4,
+.bksk-content h5,
+.bksk-content h6,
+.bksk-content p {
+    color: inherit;
+}
+
+/* Wide & full align */
+.wp-block-blockenberg-skewed-section.alignfull,
+.wp-block-blockenberg-skewed-section.alignwide {
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bksk-wrap * {
+        transition: none !important;
+        animation: none !important;
+    }
+}

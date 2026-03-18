@@ -1,0 +1,225 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/card-carousel",
+    "title": "Card Carousel",
+    "description": "Horizontal drag-to-scroll card carousel with rich cards, autoplay, arrows, dots, and responsive column settings.",
+    "category": "bkbg-effects",
+    "icon": "slides",
+    "keywords": [
+        "carousel",
+        "slider",
+        "cards",
+        "swipe",
+        "gallery",
+        "testimonial"
+    ],
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "items": {
+            "type": "array",
+            "default": [
+                {
+                    "eyebrow": "Design",
+                    "heading": "Modern UI Components",
+                    "description": "Beautiful, reusable components designed for speed and flexibility.",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "link": "",
+                    "linkLabel": "Learn more",
+                    "badge": "New",
+                    "accentColor": "#6366f1"
+                },
+                {
+                    "eyebrow": "Development",
+                    "heading": "Full-stack Performance",
+                    "description": "Optimized from front to back—load fast, scale easier, stay reliable.",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "link": "",
+                    "linkLabel": "Explore",
+                    "badge": "Popular",
+                    "accentColor": "#0ea5e9"
+                },
+                {
+                    "eyebrow": "Growth",
+                    "heading": "Analytics That Matter",
+                    "description": "Real insights, clear dashboards, actionable data without noise.",
+                    "imageUrl": "",
+                    "imageId": 0,
+                    "imageAlt": "",
+                    "link": "",
+                    "linkLabel": "See more",
+                    "badge": "",
+                    "accentColor": "#10b981"
+                }
+            ]
+        },
+        "cardLayout": {
+            "type": "string",
+            "default": "stacked"
+        },
+        "imageAspect": {
+            "type": "string",
+            "default": "16-9"
+        },
+        "desktopCols": {
+            "type": "number",
+            "default": 3
+        },
+        "tabletCols": {
+            "type": "number",
+            "default": 2
+        },
+        "mobileCols": {
+            "type": "number",
+            "default": 1
+        },
+        "gap": {
+            "type": "number",
+            "default": 24
+        },
+        "cardMinHeight": {
+            "type": "number",
+            "default": 0
+        },
+        "cardBorderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "cardShadow": {
+            "type": "string",
+            "default": "sm"
+        },
+        "showArrows": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDots": {
+            "type": "boolean",
+            "default": true
+        },
+        "loop": {
+            "type": "boolean",
+            "default": true
+        },
+        "autoplay": {
+            "type": "boolean",
+            "default": false
+        },
+        "autoplaySpeed": {
+            "type": "number",
+            "default": 3000
+        },
+        "pauseOnHover": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBadge": {
+            "type": "boolean",
+            "default": true
+        },
+        "showEyebrow": {
+            "type": "boolean",
+            "default": true
+        },
+        "showDescription": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLink": {
+            "type": "boolean",
+            "default": true
+        },
+        "linkStyle": {
+            "type": "string",
+            "default": "arrow"
+        },
+        "imageFit": {
+            "type": "string",
+            "default": "cover"
+        },
+        "padding": {
+            "type": "number",
+            "default": 0
+        },
+        "containerBg": {
+            "type": "string",
+            "default": ""
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "eyebrowColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "linkColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "badgeBg": {
+            "type": "string",
+            "default": "#ede9fe"
+        },
+        "badgeColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "arrowBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "arrowColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "dotActiveColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "dotInactiveColor": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "headingSize": {
+            "type": "number",
+            "default": 18
+        },
+        "textSize": {
+            "type": "number",
+            "default": 14
+        },
+        "eyebrowSize": {
+            "type": "number",
+            "default": 11
+        },
+        "cardPadding": {
+            "type": "number",
+            "default": 20
+        },
+        "typoHeading": { "type": "object", "default": {} },
+        "typoDesc": { "type": "object", "default": {} },
+        "typoEyebrow": { "type": "object", "default": {} }
+    },
+    "editorScript": "bkbg-card-carousel-editor",
+    "style": "bkbg-card-carousel-style",
+    "viewScript": "bkbg-card-carousel-frontend"
+}

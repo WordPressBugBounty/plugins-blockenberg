@@ -1,0 +1,154 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/dice-roller",
+    "title": "Dice Roller",
+    "category": "bkbg-interactive",
+    "icon": "randomize",
+    "description": "Interactive dice roller supporting d4, d6, d8, d10, d12, d20 and d100. Roll multiple dice, see individual results, totals, and past roll history.",
+    "keywords": [
+        "dice",
+        "roller",
+        "random",
+        "d20",
+        "d6",
+        "RPG",
+        "game",
+        "tabletop"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-dice-roller-editor",
+    "style": "bkbg-dice-roller-style",
+    "viewScript": "bkbg-dice-roller-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Dice Roller"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Roll the dice and test your luck"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSubtitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "showHistory": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTotal": {
+            "type": "boolean",
+            "default": true
+        },
+        "showModifier": {
+            "type": "boolean",
+            "default": true
+        },
+        "defaultDie": {
+            "type": "string",
+            "default": "d6"
+        },
+        "defaultCount": {
+            "type": "number",
+            "default": 2
+        },
+        "historySize": {
+            "type": "number",
+            "default": 8
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "dieColor": {
+            "type": "string",
+            "default": "#1e1b4b"
+        },
+        "dieFace": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "totalBg": {
+            "type": "string",
+            "default": "#fef2f2"
+        },
+        "totalColor": {
+            "type": "string",
+            "default": "#dc2626"
+        },
+        "histBg": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "sectionBg": {
+            "type": "string",
+            "default": "#fff1f2"
+        },
+        "cardBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 26
+        },
+        "titleFontWeight": {
+            "type": "string",
+            "default": "700"
+        },
+        "titleLineHeight": {
+            "type": "number",
+            "default": 1.2
+        },
+        "subtitleFontSize": {
+            "type": "number",
+            "default": 14
+        },
+        "subtitleFontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "subtitleLineHeight": {
+            "type": "number",
+            "default": 1.5
+        },
+        "contentMaxWidth": {
+            "type": "number",
+            "default": 580
+        },
+        "typoTitle": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSubtitle": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

@@ -1,0 +1,240 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockenberg/sticky-sidebar",
+  "title": "Sticky Sidebar",
+  "description": "Two-column layout with a rich sticky sidebar \u2014 perfect for articles, docs, pricing pages, and long-form content.",
+  "category": "bkbg-layout",
+  "icon": "columns",
+  "keywords": [
+    "sticky",
+    "sidebar",
+    "layout",
+    "columns",
+    "two-column",
+    "toc"
+  ],
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "sidebarSide": {
+      "type": "string",
+      "default": "left"
+    },
+    "sidebarWidth": {
+      "type": "string",
+      "default": "30"
+    },
+    "stickyTop": {
+      "type": "number",
+      "default": 80
+    },
+    "sidebarStyle": {
+      "type": "string",
+      "default": "card"
+    },
+    "gap": {
+      "type": "number",
+      "default": 40
+    },
+    "containerPadding": {
+      "type": "number",
+      "default": 0
+    },
+    "mainContent": {
+      "type": "string",
+      "default": "<p>Add your main article or page content here. This area is scrollable while the sidebar stays fixed on screen.</p><p>Use rich text formatting \u2014 headings, bullet lists, images, and more.</p>"
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageId": {
+      "type": "number",
+      "default": 0
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "imageStyle": {
+      "type": "string",
+      "default": "rounded"
+    },
+    "imageSize": {
+      "type": "number",
+      "default": 80
+    },
+    "showImage": {
+      "type": "boolean",
+      "default": false
+    },
+    "heading": {
+      "type": "string",
+      "default": "Sidebar heading"
+    },
+    "showHeading": {
+      "type": "boolean",
+      "default": true
+    },
+    "headingTag": {
+      "type": "string",
+      "default": "h3"
+    },
+    "subText": {
+      "type": "string",
+      "default": "A helpful sidebar panel that stays in view as your visitor scrolls."
+    },
+    "showSubText": {
+      "type": "boolean",
+      "default": true
+    },
+    "bullets": {
+      "type": "array",
+      "default": [
+        {
+          "text": "Key feature or benefit"
+        },
+        {
+          "text": "Another important point"
+        }
+      ]
+    },
+    "showBullets": {
+      "type": "boolean",
+      "default": true
+    },
+    "bulletIcon": {
+      "type": "string",
+      "default": "\u2713"
+    },
+    "showCta": {
+      "type": "boolean",
+      "default": true
+    },
+    "ctaLabel": {
+      "type": "string",
+      "default": "Get Started"
+    },
+    "ctaUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "ctaNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "ctaStyle": {
+      "type": "string",
+      "default": "filled"
+    },
+    "showRatingBox": {
+      "type": "boolean",
+      "default": false
+    },
+    "ratingStars": {
+      "type": "number",
+      "default": 5
+    },
+    "ratingCount": {
+      "type": "string",
+      "default": "4.9 / 5"
+    },
+    "ratingLabel": {
+      "type": "string",
+      "default": "based on 120 reviews"
+    },
+    "showContactInfo": {
+      "type": "boolean",
+      "default": false
+    },
+    "contactPhone": {
+      "type": "string",
+      "default": ""
+    },
+    "contactEmail": {
+      "type": "string",
+      "default": ""
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 12
+    },
+    "sidebarPadding": {
+      "type": "number",
+      "default": 24
+    },
+    "containerBg": {
+      "type": "string",
+      "default": ""
+    },
+    "mainBg": {
+      "type": "string",
+      "default": ""
+    },
+    "sidebarBg": {
+      "type": "string",
+      "default": "#f8fafc"
+    },
+    "sidebarBorderColor": {
+      "type": "string",
+      "default": "#e2e8f0"
+    },
+    "headingColor": {
+      "type": "string",
+      "default": "#111827"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#374151"
+    },
+    "bulletIconColor": {
+      "type": "string",
+      "default": "#6366f1"
+    },
+    "ctaBg": {
+      "type": "string",
+      "default": "#6366f1"
+    },
+    "ctaColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "starColor": {
+      "type": "string",
+      "default": "#f59e0b"
+    },
+    "linkColor": {
+      "type": "string",
+      "default": "#6366f1"
+    },
+    "subTextSize": {
+      "type": "number",
+      "default": 14
+    },
+    "subTextFontWeight": {
+      "type": "string",
+      "default": "400"
+    },
+    "subTextLineHeight": {
+      "type": "number",
+      "default": 1.5
+    },
+    "headingTypo": {
+      "type": "object",
+      "default": {}
+    },
+    "subTextTypo": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "editorScript": "bkbg-sticky-sidebar-editor",
+  "style": "bkbg-sticky-sidebar-style",
+  "viewScript": "bkbg-sticky-sidebar-frontend"
+}

@@ -1,0 +1,149 @@
+{
+    "apiVersion": 3,
+    "name": "blockenberg/timeline-chart",
+    "title": "Timeline Chart",
+    "category": "bkbg-charts",
+    "icon": "calendar-alt",
+    "description": "Horizontal Gantt-style timeline showing events and milestones on a shared time axis.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-timeline-chart-editor",
+    "style": "bkbg-timeline-chart-style",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Project Roadmap 2025"
+        },
+        "showTitle": {
+            "type": "boolean",
+            "default": true
+        },
+        "svgWidth": {
+            "type": "number",
+            "default": 720
+        },
+        "padTop": {
+            "type": "number",
+            "default": 50
+        },
+        "padLeft": {
+            "type": "number",
+            "default": 130
+        },
+        "padRight": {
+            "type": "number",
+            "default": 20
+        },
+        "padBottom": {
+            "type": "number",
+            "default": 30
+        },
+        "rowHeight": {
+            "type": "number",
+            "default": 44
+        },
+        "barHeight": {
+            "type": "number",
+            "default": 22
+        },
+        "timeStart": {
+            "type": "number",
+            "default": 0
+        },
+        "timeEnd": {
+            "type": "number",
+            "default": 12
+        },
+        "timeUnit": {
+            "type": "string",
+            "default": "Month"
+        },
+        "showGrid": {
+            "type": "boolean",
+            "default": true
+        },
+        "showValues": {
+            "type": "boolean",
+            "default": true
+        },
+        "showConnectors": {
+            "type": "boolean",
+            "default": false
+        },
+        "labelFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "barFontSize": {
+            "type": "number",
+            "default": 10
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gridColor": {
+            "type": "string",
+            "default": "#f3f4f6"
+        },
+        "axisColor": {
+            "type": "string",
+            "default": "#e5e7eb"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "titleTypo": {
+            "type": "object",
+            "default": {}
+        },
+        "events": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Discovery",
+                    "color": "#6366f1",
+                    "start": 0,
+                    "end": 2
+                },
+                {
+                    "label": "Design",
+                    "color": "#8b5cf6",
+                    "start": 1.5,
+                    "end": 4
+                },
+                {
+                    "label": "Development",
+                    "color": "#10b981",
+                    "start": 3.5,
+                    "end": 9
+                },
+                {
+                    "label": "QA & Testing",
+                    "color": "#f59e0b",
+                    "start": 7,
+                    "end": 10
+                },
+                {
+                    "label": "Marketing",
+                    "color": "#ec4899",
+                    "start": 8,
+                    "end": 11
+                },
+                {
+                    "label": "Launch",
+                    "color": "#ef4444",
+                    "start": 11,
+                    "end": 12
+                }
+            ],
+            "items": {
+                "type": "object"
+            }
+        }
+    }
+}

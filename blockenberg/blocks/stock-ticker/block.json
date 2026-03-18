@@ -1,0 +1,143 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockenberg/stock-ticker",
+  "title": "Crypto Price Ticker",
+  "category": "bkbg-effects",
+  "icon": "chart-line",
+  "description": "Live cryptocurrency price ticker powered by the free CoinGecko API. Display scrolling prices, cards, or a table with 24 h change, market cap, volume, and coin icons. Auto-refreshes on a configurable interval.",
+  "keywords": [
+    "crypto",
+    "bitcoin",
+    "price",
+    "ticker",
+    "stock",
+    "currency",
+    "coingecko",
+    "live",
+    "finance"
+  ],
+  "textdomain": "blockenberg",
+  "editorScript": "bkbg-stock-ticker-editor",
+  "style": "bkbg-stock-ticker-style",
+  "viewScript": "bkbg-stock-ticker-frontend",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "coins": {
+      "type": "string",
+      "default": "bitcoin,ethereum,solana,cardano,dogecoin,polkadot"
+    },
+    "currency": {
+      "type": "string",
+      "default": "usd"
+    },
+    "layout": {
+      "type": "string",
+      "default": "ticker"
+    },
+    "tickerSpeed": {
+      "type": "number",
+      "default": 40
+    },
+    "refreshInterval": {
+      "type": "number",
+      "default": 60
+    },
+    "showChange": {
+      "type": "boolean",
+      "default": true
+    },
+    "showVolume": {
+      "type": "boolean",
+      "default": false
+    },
+    "showMarketCap": {
+      "type": "boolean",
+      "default": false
+    },
+    "showIcons": {
+      "type": "boolean",
+      "default": true
+    },
+    "showSymbol": {
+      "type": "boolean",
+      "default": true
+    },
+    "pauseOnHover": {
+      "type": "boolean",
+      "default": true
+    },
+    "cardColumns": {
+      "type": "number",
+      "default": 3
+    },
+    "fontSize": {
+      "type": "number",
+      "default": 14
+    },
+    "fontWeight": {
+      "type": "number",
+      "default": 600
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 12
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#0f172a"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#e2e8f0"
+    },
+    "upColor": {
+      "type": "string",
+      "default": "#22c55e"
+    },
+    "downColor": {
+      "type": "string",
+      "default": "#ef4444"
+    },
+    "cardBg": {
+      "type": "string",
+      "default": "#1e293b"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": "#38bdf8"
+    },
+    "borderColor": {
+      "type": "string",
+      "default": "#334155"
+    },
+    "labelText": {
+      "type": "string",
+      "default": "LIVE"
+    },
+    "showLabel": {
+      "type": "boolean",
+      "default": true
+    },
+    "currencySymbol": {
+      "type": "string",
+      "default": "$"
+    },
+    "lineHeight": {
+      "type": "number",
+      "default": 1.4
+    },
+    "textTypo": {
+      "type": "object",
+      "default": {}
+    }
+  }
+}

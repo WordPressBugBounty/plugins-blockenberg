@@ -1,0 +1,171 @@
+{
+    "apiVersion": 3,
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "blockenberg/browser-mockup",
+    "version": "1.0.0",
+    "title": "Browser Mockup",
+    "category": "bkbg-dev",
+    "icon": "desktop",
+    "description": "Display a realistic browser chrome window around a customizable mini page preview — perfect for product screenshots, UI demos, and tutorials.",
+    "keywords": [
+        "browser",
+        "mockup",
+        "screenshot",
+        "preview",
+        "window",
+        "chrome",
+        "safari",
+        "ui",
+        "demo"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-browser-mockup-editor",
+    "editorStyle": "bkbg-browser-mockup-style",
+    "style": "bkbg-browser-mockup-style",
+    "viewScript": "bkbg-browser-mockup-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "browserStyle": {
+            "type": "string",
+            "default": "chrome"
+        },
+        "url": {
+            "type": "string",
+            "default": "https://yoursite.com"
+        },
+        "tabTitle": {
+            "type": "string",
+            "default": "My Awesome App"
+        },
+        "showTabs": {
+            "type": "boolean",
+            "default": true
+        },
+        "showURL": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBookmarks": {
+            "type": "boolean",
+            "default": false
+        },
+        "bookmarks": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Dashboard"
+                },
+                {
+                    "label": "Projects"
+                },
+                {
+                    "label": "Settings"
+                }
+            ]
+        },
+        "sections": {
+            "type": "array",
+            "default": [
+                {
+                    "type": "nav",
+                    "label": "Navigation Bar",
+                    "height": 56,
+                    "bg": "#1a1a2e",
+                    "textColor": "#ffffff"
+                },
+                {
+                    "type": "hero",
+                    "label": "Ship faster with AI-powered drafts",
+                    "height": 200,
+                    "bg": "#0f172a",
+                    "textColor": "#e2e8f0"
+                },
+                {
+                    "type": "feature",
+                    "label": "Features — 3-column grid",
+                    "height": 120,
+                    "bg": "#f8fafc",
+                    "textColor": "#0f172a"
+                },
+                {
+                    "type": "content",
+                    "label": "Trusted by 10,000+ teams",
+                    "height": 80,
+                    "bg": "#f1f5f9",
+                    "textColor": "#334155"
+                },
+                {
+                    "type": "footer",
+                    "label": "Footer",
+                    "height": 64,
+                    "bg": "#1a1a2e",
+                    "textColor": "#94a3b8"
+                }
+            ]
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "titleFontSize": {
+            "type": "number",
+            "default": 13
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 12
+        },
+        "scale": {
+            "type": "number",
+            "default": 100
+        },
+        "frameBg": {
+            "type": "string",
+            "default": "#e8e8e8"
+        },
+        "frameText": {
+            "type": "string",
+            "default": "#3c3c3c"
+        },
+        "urlBarBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "urlBarText": {
+            "type": "string",
+            "default": "#374151"
+        },
+        "urlBarBorder": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "tabActiveBg": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "tabActiveText": {
+            "type": "string",
+            "default": "#111827"
+        },
+        "tabInactiveBg": {
+            "type": "string",
+            "default": "#d1d5db"
+        },
+        "tabInactiveText": {
+            "type": "string",
+            "default": "#6b7280"
+        },
+        "frameShadow": {
+            "type": "string",
+            "default": "#00000033"
+        }
+    }
+}

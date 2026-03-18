@@ -1,0 +1,147 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/countdown-progress",
+    "version": "1.0.0",
+    "title": "Countdown Progress",
+    "category": "bkbg-effects",
+    "icon": "clock",
+    "description": "Visual ring or bar countdown timer to a target date, with live ticking.",
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-countdown-progress-editor",
+    "style": "bkbg-countdown-progress-style",
+    "viewScript": "bkbg-countdown-progress-frontend",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Launching In"
+        },
+        "subtext": {
+            "type": "string",
+            "default": "Don't miss out — get notified when we go live."
+        },
+        "endDate": {
+            "type": "string",
+            "default": ""
+        },
+        "style": {
+            "type": "string",
+            "default": "ring"
+        },
+        "showDays": {
+            "type": "boolean",
+            "default": true
+        },
+        "showHours": {
+            "type": "boolean",
+            "default": true
+        },
+        "showMins": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSecs": {
+            "type": "boolean",
+            "default": true
+        },
+        "showLabels": {
+            "type": "boolean",
+            "default": true
+        },
+        "radius": {
+            "type": "number",
+            "default": 60
+        },
+        "strokeWidth": {
+            "type": "number",
+            "default": 10
+        },
+        "maxWidth": {
+            "type": "number",
+            "default": 900
+        },
+        "paddingTop": {
+            "type": "number",
+            "default": 80
+        },
+        "paddingBottom": {
+            "type": "number",
+            "default": 80
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "headingColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "subColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "ringColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "ringBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "numColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "#94a3b8"
+        },
+        "barColor": {
+            "type": "string",
+            "default": "#6366f1"
+        },
+        "barBg": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "headingFontSize": {
+            "type": "number",
+            "default": 28
+        },
+        "subtextFontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "numFontSize": {
+            "type": "number",
+            "default": 36
+        },
+        "unitFontSize": {
+            "type": "number",
+            "default": 12
+        },
+        "typoHeading": {
+            "type": "object",
+            "default": {}
+        },
+        "typoSub": {
+            "type": "object",
+            "default": {}
+        },
+        "typoNum": {
+            "type": "object",
+            "default": {}
+        },
+        "typoUnit": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}
