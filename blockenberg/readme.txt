@@ -3,7 +3,7 @@ Contributors: blockenberg, alxrlov, olgadev
 Tags: gutenberg, blocks, editor, custom-blocks, page-builder
 Requires at least: 5.6
 Tested up to: 6.9
-Stable tag: 2.0.7
+Stable tag: 2.0.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -107,6 +107,11 @@ Absolutely. Each block offers extensive customization options in the block edito
 Yes. All blocks are built with accessibility in mind, including keyboard navigation and ARIA labels.
 
 == Changelog ==
+
+= 2.0.8 - Apr 25, 2026 =
+* [Improved] Refined shared block controls for a smoother editing experience across the library.
+* [Improved] Better responsive behavior and frontend consistency for layout, content, and media blocks.
+* [Fixed] General stability and compatibility improvements for modern WordPress block editor workflows.
 
 = 2.0.7 - Mar 6, 2026 =
 * [New] Large collection of new blocks across all categories, including interactive tools, media blocks, marketing sections, and more.

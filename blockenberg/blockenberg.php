@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Blockenberg
  * Description: Advanced Gutenberg Blocks for WordPress Block Editor
- * Version:     2.0.7
+ * Version:     2.0.8
  * Author:      Blockenberg
  * Text Domain: blockenberg
  * Domain Path: /languages
