@@ -2,8 +2,8 @@
 Contributors: blockenberg, alxrlov, olgadev
 Tags: gutenberg, blocks, editor, custom-blocks, page-builder
 Requires at least: 5.6
-Tested up to: 6.9
-Stable tag: 2.0.8
+Tested up to: 7.0
+Stable tag: 2.0.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -107,6 +107,11 @@ Absolutely. Each block offers extensive customization options in the block edito
 Yes. All blocks are built with accessibility in mind, including keyboard navigation and ARIA labels.
 
 == Changelog ==
+
+= 2.0.9 - May 23, 2026 =
+* [Fixed] Knowledge Check block now keeps the explanation hidden until the answer is revealed when "Show explanation after reveal" is enabled.
+* [Compatibility] Reviewed plugin readiness for WordPress 7.0 block editor APIs and PHP 8.5+ compatibility.
+* [Compatibility] PHP files lint clean on the PHP 8.4.6 runtime; no deprecated PHP compatibility patterns were found in the plugin PHP sources during this review.
 
 = 2.0.8 - Apr 25, 2026 =
 * [Improved] Refined shared block controls for a smoother editing experience across the library.

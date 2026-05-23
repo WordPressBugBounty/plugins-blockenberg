@@ -34,7 +34,7 @@
         var setAttributes = props.setAttributes;
 
         return el('div', {
-            className: 'bkbg-kc-block bkbg-kc-style-' + a.style,
+            className: 'bkbg-kc-block bkbg-kc-editor-preview bkbg-kc-style-' + a.style,
             style: { background: a.bgColor, borderColor: a.borderColor, borderRadius: a.borderRadius + 'px' }
         },
             // Header row
