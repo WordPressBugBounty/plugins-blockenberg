@@ -30,6 +30,7 @@
         edit: function (props) {
             var a = props.attributes;
             var setAttributes = props.setAttributes;
+            var keyboardShortcutsEnabled = a.enableKeyboardShortcuts !== false;
             var wrapStyle = Object.assign({},
                 _tv()(a.typoTitle, '--bkbg-flash-tt-'),
                 _tv()(a.typoSubtitle, '--bkbg-flash-ts-'),
@@ -170,6 +171,12 @@
                             __nextHasNoMarginBottom: true
                         }),
                         el(ToggleControl, {
+                            label: __('Enable keyboard shortcuts', 'blockenberg'),
+                            checked: keyboardShortcutsEnabled,
+                            onChange: function (v) { setAttributes({ enableKeyboardShortcuts: v }); },
+                            __nextHasNoMarginBottom: true
+                        }),
+                        el(ToggleControl, {
                             label: __('Show Keyboard Hint', 'blockenberg'),
                             checked: a.showKeyboardHint,
                             onChange: function (v) { setAttributes({ showKeyboardHint: v }); },
@@ -259,7 +266,7 @@
                             a.showShuffleBtn && el('button', { style: { background: 'transparent', border: '1px solid ' + a.accentColor, color: a.accentColor, borderRadius: '6px', padding: '4px 12px', cursor: 'pointer', fontSize: '12px' } }, '⇌ Shuffle'),
                             el('button', { style: { background: 'transparent', border: '1px solid #e5e7eb', color: a.subtitleColor, borderRadius: '6px', padding: '4px 12px', cursor: 'pointer', fontSize: '12px' } }, '↺ Reset')
                         ),
-                        a.showKeyboardHint && el('div', { style: { textAlign: 'center', marginTop: '12px', color: a.subtitleColor, fontSize: '12px' } },
+                        keyboardShortcutsEnabled && a.showKeyboardHint && el('div', { style: { textAlign: 'center', marginTop: '12px', color: a.subtitleColor, fontSize: '12px' } },
                             '← → Arrow keys to navigate • Space to flip'
                         )
                     )

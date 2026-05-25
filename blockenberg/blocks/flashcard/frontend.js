@@ -43,6 +43,7 @@
         var deck = rawCards.map(function (c) { return { id: c.id, front: c.front, back: c.back, known: false }; });
         var currentIndex = 0;
         var isFlipped = false;
+        var keyboardShortcutsEnabled = a.enableKeyboardShortcuts !== false;
 
         root.innerHTML = '';
 
@@ -104,6 +105,9 @@
         var card = document.createElement('div');
         card.className = 'bkbg-fc-card';
         card.style.height = a.cardHeight + 'px';
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('aria-label', 'Flip flashcard');
         scene.appendChild(card);
 
         var front = document.createElement('div');
@@ -207,7 +211,7 @@
         counterRow.appendChild(resetBtn);
 
         var skHint = null;
-        if (a.showKeyboardHint) {
+        if (keyboardShortcutsEnabled && a.showKeyboardHint) {
             skHint = document.createElement('div');
             skHint.className = 'bkbg-fc-keyboard-hint';
             skHint.style.color = a.subtitleColor;
@@ -313,15 +317,18 @@
             }
         }
 
-        // Keyboard nav
-        document.addEventListener('keydown', function (e) {
-            if (!root.closest(':focus-within') && document.activeElement !== document.body) {
-                var rect = root.getBoundingClientRect();
-                if (rect.top > window.innerHeight || rect.bottom < 0) return;
-            }
-            if (e.key === 'ArrowLeft') { prevBtn.click(); }
-            if (e.key === 'ArrowRight') { nextBtn.click(); }
-            if (e.key === ' ') { e.preventDefault(); card.click(); }
+        function isTypingTarget(target) {
+            if (!target || target === document.body) return false;
+            if (target.isContentEditable) return true;
+            return !!target.closest('input, textarea, select, button, [contenteditable="true"], [role="textbox"]');
+        }
+
+        // Keyboard nav is scoped to this block so typing in other plugins is never intercepted.
+        wrap.addEventListener('keydown', function (e) {
+            if (!keyboardShortcutsEnabled || isTypingTarget(e.target)) return;
+            if (e.key === 'ArrowLeft') { e.preventDefault(); prevBtn.click(); }
+            if (e.key === 'ArrowRight') { e.preventDefault(); nextBtn.click(); }
+            if (e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); card.click(); }
         });
 
         render();

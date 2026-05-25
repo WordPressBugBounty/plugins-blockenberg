@@ -3,7 +3,7 @@ Contributors: blockenberg, alxrlov, olgadev
 Tags: gutenberg, blocks, editor, custom-blocks, page-builder
 Requires at least: 5.6
 Tested up to: 7.0
-Stable tag: 2.0.9
+Stable tag: 2.0.10
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -107,6 +107,10 @@ Absolutely. Each block offers extensive customization options in the block edito
 Yes. All blocks are built with accessibility in mind, including keyboard navigation and ARIA labels.
 
 == Changelog ==
+
+= 2.0.10 - May 26, 2026 =
+* [Fixed] Flashcard keyboard shortcuts are now scoped to the Flashcard block and no longer intercept typing in other plugins, such as LearnPress sticky note editors.
+* [Improved] Added an "Enable keyboard shortcuts" option to Flashcard so site owners can disable arrow-key and spacebar shortcuts when needed.
 
 = 2.0.9 - May 23, 2026 =
 * [Fixed] Knowledge Check block now keeps the explanation hidden until the answer is revealed when "Show explanation after reveal" is enabled.
