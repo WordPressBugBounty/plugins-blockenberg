@@ -62,6 +62,82 @@
         }, _tv(a.typoTitle, '--bkbg-ccr-ttl-'), _tv(a.typoSection, '--bkbg-ccr-sec-'), _tv(a.typoLesson, '--bkbg-ccr-les-'));
     }
 
+    /** Pre-typography save style (no typo CSS vars) — used by deprecated. */
+    function buildWrapStyleLegacy(a) {
+        return {
+            '--bkbg-cc-accent':           a.accentColor,
+            '--bkbg-cc-card-bg':          a.cardBg,
+            '--bkbg-cc-card-border':      a.cardBorder,
+            '--bkbg-cc-section-bg':       a.sectionBg,
+            '--bkbg-cc-section-border':   a.sectionBorder,
+            '--bkbg-cc-section-hover':    a.sectionHoverBg,
+            '--bkbg-cc-lesson-bg':        a.lessonBg,
+            '--bkbg-cc-lesson-hover':     a.lessonHoverBg,
+            '--bkbg-cc-free-bg':          a.freeBg,
+            '--bkbg-cc-free-color':       a.freeColor,
+            '--bkbg-cc-locked-color':     a.lockedColor,
+            '--bkbg-cc-title-color':      a.titleColor,
+            '--bkbg-cc-sec-title-color':  a.sectionTitleColor,
+            '--bkbg-cc-lesson-color':     a.lessonTitleColor,
+            '--bkbg-cc-meta-color':       a.metaColor,
+            '--bkbg-cc-btn-bg':           a.btnBg,
+            '--bkbg-cc-btn-color':        a.btnColor,
+            '--bkbg-cc-card-r':           a.cardRadius + 'px',
+            '--bkbg-cc-sec-r':            a.sectionRadius + 'px',
+            '--bkbg-cc-btn-r':            a.btnRadius + 'px',
+            '--bkbg-cc-title-sz':         a.titleSize + 'px',
+            '--bkbg-cc-sec-title-sz':     a.sectionTitleSize + 'px',
+            '--bkbg-cc-lesson-sz':        a.lessonTitleSize + 'px',
+            paddingTop:    a.paddingTop    + 'px',
+            paddingBottom: a.paddingBottom + 'px',
+            backgroundColor: a.bgColor || undefined
+        };
+    }
+
+    function saveCurriculum(a, styleFn) {
+        var totalLessons = a.sections.reduce(function (sum, s) { return sum + s.lessons.length; }, 0);
+        return el('div', wp.blockEditor.useBlockProps.save({ className: 'bkbg-cc-wrapper', style: styleFn(a) }),
+            el('div', { className: 'bkbg-cc-card', 'data-expand-all': a.expandAll ? '1' : '0', 'data-default-open': a.defaultOpen },
+                el('div', { className: 'bkbg-cc-card-hdr' },
+                    el(RichText.Content, { tagName: 'h2', className: 'bkbg-cc-course-title', value: a.courseTitle }),
+                    a.showCourseMeta && el('p', { className: 'bkbg-cc-course-meta' }, a.courseMeta || (a.sections.length + ' sections • ' + totalLessons + ' lessons'))
+                ),
+                el('div', { className: 'bkbg-cc-sections-list' },
+                    a.sections.map(function (section, idx) {
+                        var videoCount = section.lessons.filter(function (l) { return l.type === 'video'; }).length;
+                        return el('div', { key: section.id, className: 'bkbg-cc-section', 'data-section-idx': idx },
+                            el('button', { type: 'button', className: 'bkbg-cc-sec-hdr', 'aria-expanded': a.expandAll || a.defaultOpen === idx ? 'true' : 'false' },
+                                el('span', { className: 'bkbg-cc-sec-arrow', 'aria-hidden': 'true' }, '▶'),
+                                el('span', { className: 'bkbg-cc-sec-title' }, section.title),
+                                el('span', { className: 'bkbg-cc-sec-meta' }, section.lessons.length + ' ' + __('lessons', 'blockenberg') + (videoCount ? ' • ' + videoCount + ' ' + __('videos', 'blockenberg') : ''))
+                            ),
+                            el('div', { className: 'bkbg-cc-lessons', 'aria-hidden': a.expandAll || a.defaultOpen === idx ? 'false' : 'true' },
+                                section.lessons.map(function (lesson) {
+                                    var icon = LESSON_ICONS[lesson.type] || '▶';
+                                    return el('div', { key: lesson.id, className: 'bkbg-cc-lesson ' + (lesson.free ? 'is-free' : 'is-locked'), 'data-type': lesson.type },
+                                        el('div', { className: 'bkbg-cc-lesson-left' },
+                                            el('span', { className: 'bkbg-cc-lesson-icon', 'aria-hidden': 'true' }, icon),
+                                            el('span', { className: 'bkbg-cc-lesson-title' }, lesson.title)
+                                        ),
+                                        el('div', { className: 'bkbg-cc-lesson-right' },
+                                            lesson.free
+                                                ? el('span', { className: 'bkbg-cc-free-badge' }, __('Free', 'blockenberg'))
+                                                : el('span', { className: 'bkbg-cc-locked-icon', 'aria-label': __('Locked', 'blockenberg') }, '🔒'),
+                                            lesson.duration && el('span', { className: 'bkbg-cc-lesson-dur' }, lesson.duration)
+                                        )
+                                    );
+                                })
+                            )
+                        );
+                    })
+                ),
+                a.showCta && el('div', { className: 'bkbg-cc-cta-wrap' },
+                    el('a', { href: a.ctaUrl, className: 'bkbg-cc-cta-btn' }, a.ctaLabel)
+                )
+            )
+        );
+    }
+
     function renderColorControl(key, label, value, onChange, openKey, setOpenKey) {
         var isOpen = openKey === key;
         return el('div', { key: key, style: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '4px 0', gap: '8px' } },
@@ -311,49 +387,14 @@ el(PanelBody, { title: __('Colors', 'blockenberg'), initialOpen: false },
         },
 
         save: function (props) {
-            var a = props.attributes;
-            var totalLessons = a.sections.reduce(function (sum, s) { return sum + s.lessons.length; }, 0);
+            return saveCurriculum(props.attributes, buildWrapStyle);
+        },
 
-            return el('div', wp.blockEditor.useBlockProps.save({ className: 'bkbg-cc-wrapper', style: buildWrapStyle(a) }),
-                el('div', { className: 'bkbg-cc-card', 'data-expand-all': a.expandAll ? '1' : '0', 'data-default-open': a.defaultOpen },
-                    el('div', { className: 'bkbg-cc-card-hdr' },
-                        el(RichText.Content, { tagName: 'h2', className: 'bkbg-cc-course-title', value: a.courseTitle }),
-                        a.showCourseMeta && el('p', { className: 'bkbg-cc-course-meta' }, a.courseMeta || (a.sections.length + ' sections • ' + totalLessons + ' lessons'))
-                    ),
-                    el('div', { className: 'bkbg-cc-sections-list' },
-                        a.sections.map(function (section, idx) {
-                            var videoCount = section.lessons.filter(function (l) { return l.type === 'video'; }).length;
-                            return el('div', { key: section.id, className: 'bkbg-cc-section', 'data-section-idx': idx },
-                                el('button', { type: 'button', className: 'bkbg-cc-sec-hdr', 'aria-expanded': a.expandAll || a.defaultOpen === idx ? 'true' : 'false' },
-                                    el('span', { className: 'bkbg-cc-sec-arrow', 'aria-hidden': 'true' }, '▶'),
-                                    el('span', { className: 'bkbg-cc-sec-title' }, section.title),
-                                    el('span', { className: 'bkbg-cc-sec-meta' }, section.lessons.length + ' ' + __('lessons', 'blockenberg') + (videoCount ? ' • ' + videoCount + ' ' + __('videos', 'blockenberg') : ''))
-                                ),
-                                el('div', { className: 'bkbg-cc-lessons', 'aria-hidden': a.expandAll || a.defaultOpen === idx ? 'false' : 'true' },
-                                    section.lessons.map(function (lesson) {
-                                        var icon = LESSON_ICONS[lesson.type] || '▶';
-                                        return el('div', { key: lesson.id, className: 'bkbg-cc-lesson ' + (lesson.free ? 'is-free' : 'is-locked'), 'data-type': lesson.type },
-                                            el('div', { className: 'bkbg-cc-lesson-left' },
-                                                el('span', { className: 'bkbg-cc-lesson-icon', 'aria-hidden': 'true' }, icon),
-                                                el('span', { className: 'bkbg-cc-lesson-title' }, lesson.title)
-                                            ),
-                                            el('div', { className: 'bkbg-cc-lesson-right' },
-                                                lesson.free
-                                                    ? el('span', { className: 'bkbg-cc-free-badge' }, __('Free', 'blockenberg'))
-                                                    : el('span', { className: 'bkbg-cc-locked-icon', 'aria-label': __('Locked', 'blockenberg') }, '🔒'),
-                                                lesson.duration && el('span', { className: 'bkbg-cc-lesson-dur' }, lesson.duration)
-                                            )
-                                        );
-                                    })
-                                )
-                            );
-                        })
-                    ),
-                    a.showCta && el('div', { className: 'bkbg-cc-cta-wrap' },
-                        el('a', { href: a.ctaUrl, className: 'bkbg-cc-cta-btn' }, a.ctaLabel)
-                    )
-                )
-            );
-        }
+        deprecated: [{
+            save: function (props) {
+                return saveCurriculum(props.attributes, buildWrapStyleLegacy);
+            },
+            migrate: function (attributes) { return attributes; }
+        }]
     });
 }() );

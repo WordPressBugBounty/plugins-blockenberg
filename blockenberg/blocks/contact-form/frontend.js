@@ -7,10 +7,11 @@
         var status = wrapper.querySelector('.bkbg-cf-status');
         if (!form || !btn || !status) return;
 
-        var recipient = wrapper.dataset.recipient || '';
-        var subject   = wrapper.dataset.subject   || 'New message from your website';
-        var successMsg = wrapper.dataset.success  || 'Thank you! Your message has been sent.';
-        var errorMsg   = wrapper.dataset.error    || 'Something went wrong. Please try again.';
+        var recipient    = wrapper.dataset.recipient || '';
+        var recipientSig = wrapper.dataset.recipientSig || '';
+        var subject      = wrapper.dataset.subject   || 'New message from your website';
+        var successMsg   = wrapper.dataset.success  || 'Thank you! Your message has been sent.';
+        var errorMsg     = wrapper.dataset.error    || 'Something went wrong. Please try again.';
 
         var endpoint = (window.wpApiSettings && window.wpApiSettings.root)
             ? window.wpApiSettings.root.replace(/\/?$/, '/') + 'blockenberg/v1/contact'
@@ -52,6 +53,7 @@
                 message : (form.querySelector('[name="message"]') || {}).value || '',
                 website : (form.querySelector('[name="website"]') || {}).value || '', // honeypot
                 recipient: recipient,
+                recipientSig: recipientSig,
                 subject  : subject
             };
 

@@ -416,9 +416,9 @@
                         el('div', { style: { height: 6 } }),
                         el(ToggleControl, { label: 'Show feature list', checked: a.showFeatures, onChange: function (v) { set({ showFeatures: v }); }, __nextHasNoMarginBottom: true }),
                         el('div', { style: { height: 10 } }),
-                        el(IP().IconPickerControl, IP().iconPickerProps(attr, set, { charAttr: 'includedIcon', typeAttr: 'includedIconType', dashiconAttr: 'includedIconDashicon', imageUrlAttr: 'includedIconImageUrl', colorAttr: 'includedIconDashiconColor' })),
+                        el(IP().IconPickerControl, IP().iconPickerProps(a, set, { charAttr: 'includedIcon', typeAttr: 'includedIconType', dashiconAttr: 'includedIconDashicon', imageUrlAttr: 'includedIconImageUrl', colorAttr: 'includedIconDashiconColor' })),
                         el('div', { style: { height: 6 } }),
-                        el(IP().IconPickerControl, IP().iconPickerProps(attr, set, { charAttr: 'notIncludedIcon', typeAttr: 'notIncludedIconType', dashiconAttr: 'notIncludedIconDashicon', imageUrlAttr: 'notIncludedIconImageUrl', colorAttr: 'notIncludedIconDashiconColor' }))
+                        el(IP().IconPickerControl, IP().iconPickerProps(a, set, { charAttr: 'notIncludedIcon', typeAttr: 'notIncludedIconType', dashiconAttr: 'notIncludedIconDashicon', imageUrlAttr: 'notIncludedIconImageUrl', colorAttr: 'notIncludedIconDashiconColor' }))
                     ),
 
                     // Typography panel

@@ -1,0 +1,80 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/user-field",
+    "title": "User Field",
+    "category": "bkbg-blog",
+    "icon": "admin-users",
+    "description": "Show a field from the logged-in user’s WordPress profile (first name, display name, email, and more). Guests see an optional fallback.",
+    "keywords": [
+        "user",
+        "profile",
+        "first name",
+        "logged in",
+        "member",
+        "account",
+        "greeting"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-user-field-editor",
+    "style": "bkbg-user-field-style",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "field": {
+            "type": "string",
+            "default": "first_name"
+        },
+        "prefix": {
+            "type": "string",
+            "default": ""
+        },
+        "suffix": {
+            "type": "string",
+            "default": ""
+        },
+        "guestFallback": {
+            "type": "string",
+            "default": ""
+        },
+        "hideWhenEmpty": {
+            "type": "boolean",
+            "default": true
+        },
+        "hideForGuests": {
+            "type": "boolean",
+            "default": false
+        },
+        "htmlTag": {
+            "type": "string",
+            "default": "span"
+        },
+        "textAlign": {
+            "type": "string",
+            "default": "left"
+        },
+        "textColor": {
+            "type": "string",
+            "default": ""
+        },
+        "fontSize": {
+            "type": "number",
+            "default": 16
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "400"
+        },
+        "typoText": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

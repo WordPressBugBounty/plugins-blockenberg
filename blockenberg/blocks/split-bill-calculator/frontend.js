@@ -22,6 +22,11 @@
         }
     }
 
+    function number(value, fallback, min, max) {
+        var n = parseFloat(value);
+        return Number.isFinite(n) ? Math.min(max === undefined ? Infinity : max, Math.max(min || 0, n)) : fallback;
+    }
+
     function fmt(sym, n) {
         return sym + n.toFixed(2);
     }
@@ -30,24 +35,26 @@
         try {
             var a = JSON.parse(app.getAttribute('data-opts'));
         } catch(e) { return; }
+        if (!a || typeof a !== 'object' || Array.isArray(a)) return;
 
+        var labels = Object.assign({ bill:'Bill Amount', people:'Number of People', tip:'Tip Percentage', result:'Each person pays', subtotal:'Bill Subtotal', tipTotal:'Tip', total:'Total', split:'Split {n} ways', each:'each', validation:'Enter a valid bill, tip (0–100%), and whole number of people (at least 1).' }, a.labels || {});
         var sym    = a.currencySymbol || '$';
         var accent = a.accentColor    || '#6c3fb5';
-        var tipPresets = String(a.tipPresets || '10,15,20,25').split(',').map(function(s){ return parseInt(s.trim()) || 0; });
+        var tipPresets = String(a.tipPresets || '10,15,20,25').split(',').map(function(s){ return number(s.trim(), 0, 0, 100); });
 
-        var billVal   = parseFloat(a.defaultBill)   || 100;
-        var tipVal    = parseFloat(a.defaultTip)     || 15;
-        var peopleVal = parseInt(a.defaultPeople)    || 4;
+        var billVal   = number(a.defaultBill, 100);
+        var tipVal    = number(a.defaultTip, 15, 0, 100);
+        var peopleVal = Math.floor(number(a.defaultPeople, 4, 1));
 
         // Build DOM
         app.innerHTML = '';
         var wrap = document.createElement('div');
         wrap.className = 'bkbg-sbc-wrap';
         wrap.style.maxWidth    = (a.maxWidth || 500) + 'px';
-        wrap.style.borderRadius = (a.cardRadius || 16) + 'px';
+        wrap.style.borderRadius = number(a.cardRadius, 16) + 'px';
         wrap.style.background  = a.cardBg || '#fff';
-        app.style.paddingTop    = (a.paddingTop || 60) + 'px';
-        app.style.paddingBottom = (a.paddingBottom || 60) + 'px';
+        app.style.paddingTop    = number(a.paddingTop, 60) + 'px';
+        app.style.paddingBottom = number(a.paddingBottom, 60) + 'px';
         if (a.sectionBg) app.style.background = a.sectionBg;
 
         typoCssVarsForEl(app, a.titleTypo, '--bksbc-tt-');
@@ -61,7 +68,7 @@
             var header = document.createElement('div');
             header.className = 'bkbg-sbc-header';
             if (a.showTitle && a.title) {
-                var title = document.createElement('div');
+                var title = document.createElement('h2');
                 title.className = 'bkbg-sbc-title';
                 title.textContent = a.title;
                 title.style.color = a.titleColor || '';
@@ -77,7 +84,7 @@
             wrap.appendChild(header);
         }
 
-        var inputRadius = (a.inputRadius || 8) + 'px';
+        var inputRadius = number(a.inputRadius, 8) + 'px';
         var inputBorder = '1.5px solid ' + (a.inputBorder || '#e5e7eb');
 
         function makeField(labelText) {
@@ -104,20 +111,24 @@
         }
 
         // Bill field
-        var billField = makeField('Bill Amount');
+        var billField = makeField(labels.bill);
         var billInput = makeInput('number', billVal);
+        billInput.setAttribute('aria-label', labels.bill);
+        billInput.step = 'any';
         billField.appendChild(billInput);
         wrap.appendChild(billField);
 
         // People field
-        var peopleField = makeField('Number of People');
+        var peopleField = makeField(labels.people);
         var peopleInput = makeInput('number', peopleVal);
         peopleInput.min = '1';
+        peopleInput.step = '1';
+        peopleInput.setAttribute('aria-label', labels.people);
         peopleField.appendChild(peopleInput);
         wrap.appendChild(peopleField);
 
         // Tip field
-        var tipField = makeField('Tip Percentage');
+        var tipField = makeField(labels.tip);
 
         var customTipInput;
         if (a.showTipPresets) {
@@ -127,6 +138,8 @@
             tipPresets.forEach(function(p) {
                 var btn = document.createElement('button');
                 btn.className = 'bkbg-sbc-preset-btn';
+                btn.type = 'button';
+                btn.setAttribute('aria-pressed', p === tipVal ? 'true' : 'false');
                 btn.textContent = p + '%';
                 btn.style.background = p === tipVal ? (a.presetActiveBg || accent) : (a.presetBg || '#f3f4f6');
                 btn.style.borderColor = p === tipVal ? (a.presetActiveBg || accent) : '#e5e7eb';
@@ -146,10 +159,12 @@
             customTipInput.value = tipVal;
             customTipInput.min = '0';
             customTipInput.max = '100';
+            customTipInput.step = 'any';
+            customTipInput.setAttribute('aria-label', labels.tip);
             customTipInput.style.borderRadius = inputRadius;
             customTipInput.style.border = inputBorder;
             customTipInput.addEventListener('input', function() {
-                tipVal = parseFloat(this.value) || 0;
+                tipVal = number(this.value, 0, 0, 100);
                 updatePresetButtons();
                 recalculate();
             });
@@ -158,7 +173,9 @@
         } else {
             var tipInputDirect = makeInput('number', tipVal);
             tipInputDirect.max = '100';
-            tipInputDirect.addEventListener('input', function(){ tipVal = parseFloat(this.value)||0; recalculate(); });
+            tipInputDirect.step = 'any';
+            tipInputDirect.setAttribute('aria-label', labels.tip);
+            tipInputDirect.addEventListener('input', function(){ tipVal = number(this.value, 0, 0, 100); recalculate(); });
             tipField.appendChild(tipInputDirect);
         }
         wrap.appendChild(tipField);
@@ -167,6 +184,7 @@
             var btns = presetsRow ? presetsRow.querySelectorAll('.bkbg-sbc-preset-btn') : [];
             tipPresets.forEach(function(p, i) {
                 var active = p === tipVal;
+                btns[i].setAttribute('aria-pressed', active ? 'true' : 'false');
                 btns[i].style.background  = active ? (a.presetActiveBg || accent)  : (a.presetBg || '#f3f4f6');
                 btns[i].style.borderColor = active ? (a.presetActiveBg || accent)  : '#e5e7eb';
                 btns[i].style.color       = active ? (a.presetActiveColor || '#fff'): (a.presetColor || '#374151');
@@ -176,6 +194,8 @@
         // Result card
         var resultCard = document.createElement('div');
         resultCard.className = 'bkbg-sbc-result';
+        resultCard.setAttribute('aria-live', 'polite');
+        resultCard.setAttribute('aria-atomic', 'true');
         resultCard.style.background   = a.resultBg || accent;
         resultCard.style.borderRadius = inputRadius;
         resultCard.style.marginBottom = a.showBreakdown ? '16px' : '0';
@@ -183,7 +203,7 @@
         var resultLabel = document.createElement('div');
         resultLabel.className = 'bkbg-sbc-result-label';
         resultLabel.style.color = a.resultColor || '#fff';
-        resultLabel.textContent = 'Each person pays';
+        resultLabel.textContent = labels.result;
 
         var resultAmount = document.createElement('div');
         resultAmount.className = 'bkbg-sbc-result-amount';
@@ -219,8 +239,15 @@
         }
 
         function recalculate() {
-            billVal   = parseFloat(billInput.value) || 0;
-            peopleVal = Math.max(1, parseInt(peopleInput.value) || 1);
+            billVal   = number(billInput.value, 0);
+            peopleVal = Math.floor(number(peopleInput.value, 1, 1));
+
+            var currentTip = customTipInput || tipInputDirect;
+            var valid = billInput.value !== '' && billInput.validity.valid && peopleInput.value !== '' && peopleInput.validity.valid && currentTip.value !== '' && currentTip.validity.valid;
+            resultLabel.textContent = valid ? labels.result : labels.validation;
+            if (breakdownEl) breakdownEl.hidden = !valid;
+            [billInput, peopleInput, currentTip].forEach(function (input) { input.setAttribute('aria-invalid', input.value === '' || !input.validity.valid ? 'true' : 'false'); });
+            if (!valid) { resultAmount.textContent = '—'; return; }
 
             var tipAmt  = billVal * tipVal / 100;
             var total   = billVal + tipAmt;
@@ -231,14 +258,14 @@
             resultAmount.textContent = fmt(sym, perPerson);
 
             if (a.showBreakdown && rows) {
-                rows['Bill Subtotal'].lbl.textContent  = 'Bill Subtotal';
+                rows['Bill Subtotal'].lbl.textContent  = labels.subtotal;
                 rows['Bill Subtotal'].val.textContent  = fmt(sym, billVal);
-                rows['Tip'].lbl.textContent            = 'Tip (' + tipVal + '%)';
+                rows['Tip'].lbl.textContent            = labels.tipTotal + ' (' + tipVal + '%)';
                 rows['Tip'].val.textContent            = '+' + fmt(sym, tipAmt);
-                rows['Total'].lbl.textContent          = 'Total';
+                rows['Total'].lbl.textContent          = labels.total;
                 rows['Total'].val.textContent          = fmt(sym, total);
-                rows['Split'].lbl.textContent          = 'Split ' + peopleVal + ' ways';
-                rows['Split'].val.textContent          = fmt(sym, perPerson) + ' each';
+                rows['Split'].lbl.textContent          = labels.split.replace('{n}', peopleVal);
+                rows['Split'].val.textContent          = fmt(sym, perPerson) + ' ' + labels.each;
             }
         }
 

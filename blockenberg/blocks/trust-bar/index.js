@@ -15,9 +15,19 @@
         var SelectControl = wp.components.SelectControl;
         var Button = wp.components.Button;
 
-        var _tc, _tvf;
-        Object.defineProperty(window, '_tc', { get: function () { return _tc || (_tc = window.bkbgTypographyControl); } });
-        Object.defineProperty(window, '_tvf', { get: function () { return _tvf || (_tvf = window.bkbgTypoCssVars); } });
+        // Resolve the shared components lazily without defining globals for each block.
+        function _tc(props, key, label) {
+            var Control = window.bkbgTypographyControl;
+            return Control ? el(Control, {
+                label: label,
+                value: props.attributes[key] || {},
+                onChange: function (value) { var update = {}; update[key] = value; props.setAttributes(update); }
+            }) : null;
+        }
+        function _tvf(typo, prefix) {
+            var cssVars = window.bkbgTypoCssVars;
+            return cssVars ? cssVars(typo || {}, prefix) : {};
+        }
         function getTypoControl(p, key, label) { return _tc ? _tc(p, key, label) : null; }
         function getTypoCssVars(a) {
             if (!_tvf) return {};

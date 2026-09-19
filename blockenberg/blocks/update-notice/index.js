@@ -14,9 +14,20 @@
     var TextareaControl = wp.components.TextareaControl;
     var Button = wp.components.Button;
 
-    var _tc, _tvf;
-    Object.defineProperty(window, '_tc',  { get: function () { return _tc  || (_tc  = window.bkbgTypographyControl); } });
-    Object.defineProperty(window, '_tvf', { get: function () { return _tvf || (_tvf = window.bkbgTypoCssVars); } });
+    // Resolve the shared components lazily without defining globals for each block.
+    function _tc(label, key, attrs, setA) {
+        var Control = window.bkbgTypographyControl;
+        return Control ? el(Control, {
+            label: label,
+            value: attrs[key] || {},
+            onChange: function (value) { var update = {}; update[key] = value; setA(update); }
+        }) : null;
+    }
+    function _tvf(vars, key, attrs, prefix) {
+        var cssVars = window.bkbgTypoCssVars;
+        if (cssVars) Object.assign(vars, cssVars(attrs[key] || {}, prefix));
+        return vars;
+    }
     function getTypoControl(label, key, attrs, setA) { return _tc(label, key, attrs, setA); }
     function getTypoCssVars(attrs) {
         var v = {};
@@ -77,7 +88,7 @@
             var topRow = el('div', { style: { display: 'flex', alignItems: 'flex-start', gap: '10px', flexWrap: 'wrap' } },
                 el('div', { style: { display: 'flex', alignItems: 'center', gap: '6px', flexShrink: 0 } },
                     el('span', { style: { fontSize: '16px' } }, t.icon),
-                    el('span', { className: 'bkbg-upn-label', style: { color: attr.labelColor } }, t.label + ':'))
+                    el('span', { className: 'bkbg-upn-label', style: { color: attr.labelColor } }, t.label + ':')
                 ),
                 attr.primaryDate && el('span', { className: 'bkbg-upn-date', style: { color: attr.dateColor } }, attr.primaryDate),
                 attr.showOriginalDate && attr.originalPublishDate && el('span', { style: { fontSize: '12px', color: attr.textColor, opacity: 0.7 } }, '(originally published ' + attr.originalPublishDate + ')')

@@ -170,7 +170,7 @@
                         el(ToggleControl, { label: __('Show Heading', 'blockenberg'), checked: a.showHeading, onChange: function (v) { setAttr({ showHeading: v }); }, __nextHasNoMarginBottom: true }),
                         a.showHeading && el(TextControl, { label: __('Heading Text', 'blockenberg'), value: a.heading, onChange: function (v) { setAttr({ heading: v }); } }),
                         a.showHeading && el(ToggleControl, { label: __('Show Heading Icon', 'blockenberg'), checked: a.showHeadingIcon, onChange: function (v) { setAttr({ showHeadingIcon: v }); }, __nextHasNoMarginBottom: true }),
-                        a.showHeading && a.showHeadingIcon && el(IP().IconPickerControl, IP().iconPickerProps(attr, setAttr, { charAttr: 'headingIcon', typeAttr: 'headingIconType', dashiconAttr: 'headingIconDashicon', imageUrlAttr: 'headingIconImageUrl', colorAttr: 'headingIconDashiconColor' })),
+                        a.showHeading && a.showHeadingIcon && el(IP().IconPickerControl, IP().iconPickerProps(a, setAttr, { charAttr: 'headingIcon', typeAttr: 'headingIconType', dashiconAttr: 'headingIconDashicon', imageUrlAttr: 'headingIconImageUrl', colorAttr: 'headingIconDashiconColor' })),
                         a.showHeading && el(ToggleControl, { label: __('Divider Below Heading', 'blockenberg'), checked: a.showDivider, onChange: function (v) { setAttr({ showDivider: v }); }, __nextHasNoMarginBottom: true })
                     ),
 

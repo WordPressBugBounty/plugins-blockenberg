@@ -12,10 +12,20 @@
     var ToggleControl = wp.components.ToggleControl;
     var SelectControl = wp.components.SelectControl;
 
-    var _tc, _tvf;
-    Object.defineProperty(window, '_bkbgTypoCtrlCache', { get: function () { if (!_tc) { _tc = window.bkbgTypographyControl; } return _tc; } });
-    Object.defineProperty(window, '_bkbgTypoVarsCache', { get: function () { if (!_tvf) { _tvf = window.bkbgTypoCssVars; } return _tvf; } });
-    function getTypoControl(props, attrName, label) { return window._bkbgTypoCtrlCache(props, attrName, label); }
+    // Resolve the shared components lazily without defining globals for each block.
+    function _tc(props, key, label) {
+        var Control = window.bkbgTypographyControl;
+        return Control ? el(Control, {
+            label: label,
+            value: props.attributes[key] || {},
+            onChange: function (value) { var update = {}; update[key] = value; props.setAttributes(update); }
+        }) : null;
+    }
+    function _tvf(typo, prefix) {
+        var cssVars = window.bkbgTypoCssVars;
+        return cssVars ? cssVars(typo || {}, prefix) : {};
+    }
+    function getTypoControl(props, attrName, label) { return _tc(props, attrName, label); }
 
     var CATEGORIES = [
         { label: 'Mixed (all)', value: 'mixed' },
@@ -35,7 +45,7 @@
         var setAttributes = props.setAttributes;
         var blockProps = (function () {
                 var s = { background: a.sectionBg || '#f0f4ff', padding: '28px 20px' };
-                Object.assign(s, window._bkbgTypoVarsCache(a.titleTypo, '--bktrv-tt-'), window._bkbgTypoVarsCache(a.subtitleTypo, '--bktrv-st-'));
+                Object.assign(s, _tvf(a.titleTypo, '--bktrv-tt-'), _tvf(a.subtitleTypo, '--bktrv-st-'));
                 return useBlockProps({ style: s });
             })();
 
@@ -129,7 +139,7 @@ el(PanelColorSettings, {
         save: function (props) {
             var a = props.attributes;
             var bp = (function () {
-                var tv = Object.assign({}, window._bkbgTypoVarsCache(a.titleTypo, '--bktrv-tt-'), window._bkbgTypoVarsCache(a.subtitleTypo, '--bktrv-st-'));
+                var tv = Object.assign({}, _tvf(a.titleTypo, '--bktrv-tt-'), _tvf(a.subtitleTypo, '--bktrv-st-'));
                 var parts = []; Object.keys(tv).forEach(function (k) { parts.push(k + ':' + tv[k]); });
                 return useBlockProps.save(parts.length ? { style: parts.join(';') } : {});
             })();

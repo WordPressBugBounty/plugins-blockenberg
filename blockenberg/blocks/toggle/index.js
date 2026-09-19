@@ -14,10 +14,20 @@
     var SelectControl = wp.components.SelectControl;
     var TextControl = wp.components.TextControl;
 
-    var _tc, _tvf;
-    Object.defineProperty(window, '_bkbgTypoCtrlCache', { get: function () { if (!_tc) { _tc = window.bkbgTypographyControl; } return _tc; } });
-    Object.defineProperty(window, '_bkbgTypoVarsCache', { get: function () { if (!_tvf) { _tvf = window.bkbgTypoCssVars; } return _tvf; } });
-    function getTypoControl(props, attrName, label) { return window._bkbgTypoCtrlCache(props, attrName, label); }
+    // Resolve the shared components lazily without defining globals for each block.
+    function _tc(props, key, label) {
+        var Control = window.bkbgTypographyControl;
+        return Control ? el(Control, {
+            label: label,
+            value: props.attributes[key] || {},
+            onChange: function (value) { var update = {}; update[key] = value; props.setAttributes(update); }
+        }) : null;
+    }
+    function _tvf(typo, prefix) {
+        var cssVars = window.bkbgTypoCssVars;
+        return cssVars ? cssVars(typo || {}, prefix) : {};
+    }
+    function getTypoControl(props, attrName, label) { return _tc(props, attrName, label); }
 
     var icons = {
         chevron: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>',
@@ -84,7 +94,7 @@
                 '--bkbg-tgl-border-color': a.borderColor,
                 '--bkbg-tgl-divider-color': a.dividerColor
             };
-            Object.assign(wrapStyle, window._bkbgTypoVarsCache(a.titleTypo, '--bktgl-tt-'), window._bkbgTypoVarsCache(a.contentTypo, '--bktgl-ct-'));
+            Object.assign(wrapStyle, _tvf(a.titleTypo, '--bktgl-tt-'), _tvf(a.contentTypo, '--bktgl-ct-'));
 
             var blockProps = useBlockProps({
                 className: 'bkbg-tgl-wrap bkbg-tgl-editor' + (isOpen ? ' is-open' : ''),
@@ -243,7 +253,7 @@
                 '--bkbg-tgl-border-color:' + a.borderColor,
                 '--bkbg-tgl-divider-color:' + a.dividerColor
             ];
-            var tv = Object.assign({}, window._bkbgTypoVarsCache(a.titleTypo, '--bktgl-tt-'), window._bkbgTypoVarsCache(a.contentTypo, '--bktgl-ct-'));
+            var tv = Object.assign({}, _tvf(a.titleTypo, '--bktgl-tt-'), _tvf(a.contentTypo, '--bktgl-ct-'));
             Object.keys(tv).forEach(function (k) { wrapParts.push(k + ':' + tv[k]); });
             var wrapStyle = wrapParts.join(';');
 

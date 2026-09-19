@@ -190,6 +190,10 @@
     }
 
     function getEditorPreviewDevice() {
+        var editor = wp.data && wp.data.select ? wp.data.select( 'core/editor' ) : null;
+        if ( editor && typeof editor.getDeviceType === 'function' ) {
+            return normalizePreviewDeviceName( editor.getDeviceType() );
+        }
         var stores = [ 'core/edit-post', 'core/edit-site' ];
         for ( var i = 0; i < stores.length; i++ ) {
             var sel = wp.data && wp.data.select ? wp.data.select( stores[ i ] ) : null;
@@ -206,6 +210,11 @@
 
     function setEditorPreviewDevice( deviceName ) {
         var mapped = deviceName === 'desktop' ? 'Desktop' : ( deviceName === 'tablet' ? 'Tablet' : 'Mobile' );
+        var editor = wp.data && wp.data.dispatch ? wp.data.dispatch( 'core/editor' ) : null;
+        if ( editor && typeof editor.setDeviceType === 'function' ) {
+            editor.setDeviceType( mapped );
+            return;
+        }
         var stores = [ 'core/edit-post', 'core/edit-site' ];
         stores.forEach( function ( storeName ) {
             var dispatcher = wp.data && wp.data.dispatch ? wp.data.dispatch( storeName ) : null;
@@ -233,7 +242,8 @@
             el( Button, {
                 className: 'bkbg-device-btn',
                 onClick: function () { setOpen( ! isOpen ); },
-                'aria-label': __( 'Switch device', 'blockenberg' )
+                'aria-label': __( 'Switch device', 'blockenberg' ),
+                'aria-expanded': isOpen
             }, iconDevice( device, false ) ),
             isOpen && el( Popover, {
                 position: 'bottom center',
@@ -247,6 +257,8 @@
                         return el( Button, {
                             key: d,
                             className: 'bkbg-device-option' + ( d === device ? ' is-active' : '' ),
+                            'aria-label': d === 'desktop' ? __( 'Desktop', 'blockenberg' ) : ( d === 'tablet' ? __( 'Tablet', 'blockenberg' ) : __( 'Mobile', 'blockenberg' ) ),
+                            'aria-pressed': d === device,
                             onClick: function () {
                                 onChange( d );
                                 setEditorPreviewDevice( d );

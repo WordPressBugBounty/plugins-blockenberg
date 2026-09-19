@@ -12,6 +12,12 @@
     background: var(--bkbg-gh-bg, #0f172a);
 }
 
+/* Block themes expand alignfull using negative side margins. A fixed 100%
+   width only fills the padded content box and leaves a gap on the right. */
+.has-global-padding > .bkbg-gh-wrap.alignfull {
+    width: auto;
+}
+
 /* ---- Background layer (mesh / gradient / aurora) ---- */
 .bkbg-gh-bg-layer {
     position: absolute;

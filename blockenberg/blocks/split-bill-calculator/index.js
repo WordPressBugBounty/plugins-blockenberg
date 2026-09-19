@@ -1,6 +1,7 @@
 ( function () {
     var el                = wp.element.createElement;
     var useState          = wp.element.useState;
+    var useEffect         = wp.element.useEffect;
     var Fragment          = wp.element.Fragment;
     var registerBlockType = wp.blocks.registerBlockType;
     var __                = wp.i18n.__;
@@ -16,26 +17,38 @@
     var _tc; function getTypoControl() { return _tc || (_tc = window.bkbgTypographyControl); }
     var _tv; function getTypoCssVars() { return _tv || (_tv = window.bkbgTypoCssVars); }
 
+    function number(value, fallback, min, max) {
+        var n = parseFloat(value);
+        return Number.isFinite(n) ? Math.min(max === undefined ? Infinity : max, Math.max(min || 0, n)) : fallback;
+    }
+
+    var labelDefaults = { bill: 'Bill Amount', people: 'Number of People', peopleHint: 'persons', tip: 'Tip Percentage', result: 'Each person pays', subtotal: 'Bill Subtotal', tipTotal: 'Tip', total: 'Total', split: 'Split {n} ways', each: 'each', validation: 'Enter a valid bill, tip (0–100%), and whole number of people (at least 1).' };
+
     function fmt(sym, n) { return sym + n.toFixed(2); }
 
     function SplitBillPreview(props) {
         var a  = props.attributes;
-        var sa = props.setAttributes;
+        var labels = Object.assign({}, labelDefaults, a.labels || {});
         var sym = a.currencySymbol || '$';
         var accent = a.accentColor || '#6c3fb5';
 
-        var _bill   = useState(String(a.defaultBill || 100));     var bill = _bill[0];   var setBill = _bill[1];
-        var _tip    = useState(a.defaultTip || 15);               var tip = _tip[0];    var setTip = _tip[1];
-        var _people = useState(String(a.defaultPeople || 4));     var people = _people[0]; var setPeople = _people[1];
+        var _bill   = useState(String(number(a.defaultBill, 100)));     var bill = _bill[0];   var setBill = _bill[1];
+        var _tip    = useState(number(a.defaultTip, 15, 0, 100));               var tip = _tip[0];    var setTip = _tip[1];
+        var _people = useState(String(Math.floor(number(a.defaultPeople, 4, 1))));     var people = _people[0]; var setPeople = _people[1];
 
-        var billN   = parseFloat(bill)   || 0;
-        var tipN    = parseFloat(tip)    || 0;
-        var peopleN = Math.max(1, parseInt(people) || 1);
+        useEffect(function () { setBill(String(number(a.defaultBill, 100))); }, [a.defaultBill]);
+        useEffect(function () { setTip(number(a.defaultTip, 15, 0, 100)); }, [a.defaultTip]);
+        useEffect(function () { setPeople(String(Math.floor(number(a.defaultPeople, 4, 1)))); }, [a.defaultPeople]);
+
+        var billN   = number(bill, 0);
+        var tipN    = number(tip, 0, 0, 100);
+        var peopleN = Math.floor(number(people, 1, 1));
+        var valid = bill !== '' && Number.isFinite(Number(bill)) && Number(bill) >= 0 && tip !== '' && Number.isFinite(Number(tip)) && Number(tip) >= 0 && Number(tip) <= 100 && people !== '' && Number.isInteger(Number(people)) && Number(people) >= 1;
         var tipAmt  = billN * tipN / 100;
         var total   = billN + tipAmt;
         var perPerson = a.roundUp ? Math.ceil(total / peopleN * 100) / 100 : total / peopleN;
 
-        var tipPresets = String(a.tipPresets || '10,15,20,25').split(',').map(function(s){ return parseInt(s.trim()) || 0; });
+        var tipPresets = String(a.tipPresets || '10,15,20,25').split(',').map(function(s){ return number(s.trim(), 0, 0, 100); });
 
         function inputRow(lbl, val, setVal, hint, type) {
             return el('div', { style:{ marginBottom:'16px' }},
@@ -43,56 +56,56 @@
                     el('span', null, lbl),
                     hint && el('span', { style:{ fontWeight:400,color:'#9ca3af',fontSize:'12px' }}, hint)
                 ),
-                el('input', { type: type||'number', value: val, min:0,
-                    style:{ width:'100%',padding:'11px 14px',borderRadius:(a.inputRadius||8)+'px',border:'1.5px solid '+(a.inputBorder||'#e5e7eb'),fontSize:'16px',outline:'none',boxSizing:'border-box',fontFamily:'inherit' },
+                el('input', { type: 'number', value: val, min:type === 'people' ? 1 : 0, step:type === 'people' ? 1 : 'any', 'aria-label':lbl,
+                    style:{ width:'100%',padding:'11px 14px',borderRadius:number(a.inputRadius,8)+'px',border:'1.5px solid '+(a.inputBorder||'#e5e7eb'),fontSize:'16px',boxSizing:'border-box',fontFamily:'inherit' },
                     onChange: function(e){ setVal(e.target.value); }
                 })
             );
         }
 
-        return el('div', { style:{ paddingTop:a.paddingTop+'px',paddingBottom:a.paddingBottom+'px',background:a.sectionBg||undefined }},
-            el('div', { style:{ background:a.cardBg,borderRadius:(a.cardRadius||16)+'px',padding:'36px 32px',maxWidth:(a.maxWidth||500)+'px',margin:'0 auto',boxShadow:'0 4px 24px rgba(0,0,0,0.09)' }},
+        return el('div', { className:'bkbg-sbc-app', style:{ paddingTop:a.paddingTop+'px',paddingBottom:a.paddingBottom+'px',background:a.sectionBg||undefined }},
+            el('div', { className:'bkbg-sbc-wrap', style:{ background:a.cardBg,borderRadius:number(a.cardRadius,16)+'px',maxWidth:(a.maxWidth||500)+'px',margin:'0 auto',boxShadow:'0 4px 24px rgba(0,0,0,0.09)' }},
 
                 (a.showTitle||a.showSubtitle) && el('div', { style:{marginBottom:'22px'}},
-                    a.showTitle    && el('div', { className: 'bkbg-sbc-title', style:{color:a.titleColor,marginBottom:'6px'} }, a.title),
+                    a.showTitle    && el('h2', { className: 'bkbg-sbc-title', style:{color:a.titleColor,marginBottom:'6px'} }, a.title),
                     a.showSubtitle && el('div', { className: 'bkbg-sbc-subtitle', style:{color:a.subtitleColor} }, a.subtitle)
                 ),
 
-                inputRow('Bill Amount', bill, setBill, sym),
-                inputRow('Number of People', people, setPeople, 'persons', 'number'),
+                inputRow(labels.bill, bill, setBill, sym),
+                inputRow(labels.people, people, setPeople, labels.peopleHint, 'people'),
 
                 // Tip %
                 el('div', { style:{marginBottom:'16px'}},
-                    el('label', { style:{display:'block',fontSize:'13px',fontWeight:600,color:a.labelColor,marginBottom:'5px' }}, 'Tip Percentage'),
+                    el('label', { style:{display:'block',fontSize:'13px',fontWeight:600,color:a.labelColor,marginBottom:'5px' }}, labels.tip),
                     a.showTipPresets && el('div', { style:{display:'flex',gap:'8px',flexWrap:'wrap',marginBottom:'10px'}},
                         tipPresets.map(function(p) {
-                            var active = tip === p;
-                            return el('button', { key:p, onClick:function(){ setTip(p); }, style:{ flex:1, padding:'8px 6px', borderRadius:'8px', border:'2px solid '+(active?accent:'#e5e7eb'), background:active?(a.presetActiveBg||accent):(a.presetBg||'#f3f4f6'), color:active?(a.presetActiveColor||'#fff'):(a.presetColor||'#374151'), fontWeight:700, fontSize:'14px', cursor:'pointer', fontFamily:'inherit', minWidth:'48px' }}, p+'%');
+                            var active = tipN === p;
+                            return el('button', { key:p, type:'button', 'aria-pressed':tipN === p, onClick:function(){ setTip(p); }, style:{ flex:1, padding:'8px 6px', borderRadius:'8px', border:'2px solid '+(active?accent:'#e5e7eb'), background:active?(a.presetActiveBg||accent):(a.presetBg||'#f3f4f6'), color:active?(a.presetActiveColor||'#fff'):(a.presetColor||'#374151'), fontWeight:700, fontSize:'14px', cursor:'pointer', fontFamily:'inherit', minWidth:'48px' }}, p+'%');
                         }),
-                        el('input', { type:'number', value:tip, min:0, max:100,
-                            style:{width:'72px',padding:'8px 10px',borderRadius:'8px',border:'1.5px solid '+(a.inputBorder||'#e5e7eb'),fontSize:'15px',outline:'none',fontFamily:'inherit'},
-                            onChange: function(e){ setTip(parseFloat(e.target.value)||0); }
+                        el('input', { type:'number', value:tip, min:0, max:100, step:'any', 'aria-label':labels.tip,
+                            style:{width:'72px',padding:'8px 10px',borderRadius:'8px',border:'1.5px solid '+(a.inputBorder||'#e5e7eb'),fontSize:'15px',fontFamily:'inherit'},
+                            onChange: function(e){ setTip(e.target.value); }
                         })
                     ),
-                    !a.showTipPresets && el('input', { type:'number', value:tip, min:0, max:100,
-                        style:{width:'100%',padding:'11px 14px',borderRadius:(a.inputRadius||8)+'px',border:'1.5px solid '+(a.inputBorder||'#e5e7eb'),fontSize:'16px',outline:'none',boxSizing:'border-box',fontFamily:'inherit'},
-                        onChange: function(e){ setTip(parseFloat(e.target.value)||0); }
+                    !a.showTipPresets && el('input', { type:'number', value:tip, min:0, max:100, step:'any', 'aria-label':labels.tip,
+                        style:{width:'100%',padding:'11px 14px',borderRadius:number(a.inputRadius,8)+'px',border:'1.5px solid '+(a.inputBorder||'#e5e7eb'),fontSize:'16px',boxSizing:'border-box',fontFamily:'inherit'},
+                        onChange: function(e){ setTip(e.target.value); }
                     })
                 ),
 
                 // Per-person result
-                el('div', { style:{background:a.resultBg||accent,borderRadius:(a.inputRadius||8)+'px',padding:'24px',textAlign:'center',marginBottom:a.showBreakdown?'16px':'0' }},
-                    el('div', { style:{fontSize:'13px',fontWeight:600,color:a.resultColor||'#fff',opacity:.8,marginBottom:'6px'} }, 'Each person pays'),
-                    el('div', { className: 'bkbg-sbc-result-amount', style:{color:a.resultColor||'#fff'} }, sym + perPerson.toFixed(2))
+                el('div', { 'aria-live':'polite', 'aria-atomic':true, style:{background:a.resultBg||accent,borderRadius:number(a.inputRadius,8)+'px',padding:'24px',textAlign:'center',marginBottom:a.showBreakdown?'16px':'0' }},
+                    el('div', { style:{fontSize:'13px',fontWeight:600,color:a.resultColor||'#fff',marginBottom:'6px'} }, valid ? labels.result : labels.validation),
+                    el('div', { className: 'bkbg-sbc-result-amount', style:{color:a.resultColor||'#fff'} }, valid ? sym + perPerson.toFixed(2) : '—')
                 ),
 
                 // Breakdown
-                a.showBreakdown && el('div', { style:{background:a.breakdownBg||'#f5f3ff',border:'1.5px solid '+(a.breakdownBorder||'#ede9fe'),borderRadius:(a.inputRadius||8)+'px',padding:'16px 20px'} },
+                a.showBreakdown && valid && el('div', { style:{background:a.breakdownBg||'#f5f3ff',border:'1.5px solid '+(a.breakdownBorder||'#ede9fe'),borderRadius:number(a.inputRadius,8)+'px',padding:'16px 20px'} },
                     [
-                        ['Bill Subtotal', fmt(sym, billN)],
-                        ['Tip (' + tipN + '%)', '+' + fmt(sym, tipAmt)],
-                        ['Total', fmt(sym, total)],
-                        ['Split ' + peopleN + ' ways', fmt(sym, perPerson) + ' each']
+                        [labels.subtotal, fmt(sym, billN)],
+                        [labels.tipTotal + ' (' + tipN + '%)', '+' + fmt(sym, tipAmt)],
+                        [labels.total, fmt(sym, total)],
+                        [labels.split.replace('{n}', peopleN), fmt(sym, perPerson) + ' ' + labels.each]
                     ].map(function(row) {
                         return el('div', { key:row[0], style:{display:'flex',justifyContent:'space-between',padding:'5px 0',fontSize:'14px',color:a.labelColor,borderBottom:'1px solid '+(a.breakdownBorder||'#ede9fe')} },
                             el('span', null, row[0]),
@@ -142,6 +155,12 @@
                         el(TextControl,   { label: 'Title',    value: a.title,    onChange: function(v){ set({title:v}); } }),
                         el(TextControl,   { label: 'Subtitle', value: a.subtitle, onChange: function(v){ set({subtitle:v}); } })
                     ),
+                    el(PanelBody, { title: __('Interface labels', 'blockenberg'), initialOpen: false },
+                        Object.keys(labelDefaults).map(function (key) {
+                            return el(TextControl, { key:key, label:labelDefaults[key], value:(a.labels || {})[key] === undefined ? labelDefaults[key] : a.labels[key],
+                                onChange:function (value) { var next = Object.assign({}, a.labels || {}); next[key] = value; set({labels:next}); } });
+                        })
+                    ),
                     el(PanelBody, { title: 'Calculator Settings', initialOpen: true },
                         el(TextControl,   { label: 'Currency Symbol',  value: a.currencySymbol, onChange: function(v){ set({currencySymbol:v}); } }),
                         el(TextControl,   { label: 'Default Bill Amount', value: String(a.defaultBill),  onChange: function(v){ set({defaultBill:parseFloat(v)||0}); } }),
@@ -172,7 +191,7 @@ el(PanelColorSettings, { title: 'Colors', initialOpen: false, colorSettings: col
         },
         save: function(props) {
             var a = props.attributes;
-            return el('div', wp.blockEditor.useBlockProps.save(), el('div', { className: 'bkbg-sbc-app', 'data-opts': JSON.stringify({ titleTypo: a.titleTypo, subtitleTypo: a.subtitleTypo, resultTypo: a.resultTypo, title: a.title, subtitle: a.subtitle, showTitle: a.showTitle, showSubtitle: a.showSubtitle, currencySymbol: a.currencySymbol, defaultBill: a.defaultBill, defaultTip: a.defaultTip, defaultPeople: a.defaultPeople, showTipPresets: a.showTipPresets, tipPresets: a.tipPresets, showBreakdown: a.showBreakdown, roundUp: a.roundUp, accentColor: a.accentColor, cardBg: a.cardBg, resultBg: a.resultBg, resultColor: a.resultColor, presetBg: a.presetBg, presetColor: a.presetColor, presetActiveBg: a.presetActiveBg, presetActiveColor: a.presetActiveColor, breakdownBg: a.breakdownBg, breakdownBorder: a.breakdownBorder, labelColor: a.labelColor, inputBorder: a.inputBorder, titleColor: a.titleColor, subtitleColor: a.subtitleColor, sectionBg: a.sectionBg, cardRadius: a.cardRadius, inputRadius: a.inputRadius, maxWidth: a.maxWidth, paddingTop: a.paddingTop, paddingBottom: a.paddingBottom }) }));
+            return el('div', wp.blockEditor.useBlockProps.save(), el('div', { className: 'bkbg-sbc-app', 'data-opts': JSON.stringify({ labels: a.labels, titleTypo: a.titleTypo, subtitleTypo: a.subtitleTypo, resultTypo: a.resultTypo, title: a.title, subtitle: a.subtitle, showTitle: a.showTitle, showSubtitle: a.showSubtitle, currencySymbol: a.currencySymbol, defaultBill: a.defaultBill, defaultTip: a.defaultTip, defaultPeople: a.defaultPeople, showTipPresets: a.showTipPresets, tipPresets: a.tipPresets, showBreakdown: a.showBreakdown, roundUp: a.roundUp, accentColor: a.accentColor, cardBg: a.cardBg, resultBg: a.resultBg, resultColor: a.resultColor, presetBg: a.presetBg, presetColor: a.presetColor, presetActiveBg: a.presetActiveBg, presetActiveColor: a.presetActiveColor, breakdownBg: a.breakdownBg, breakdownBorder: a.breakdownBorder, labelColor: a.labelColor, inputBorder: a.inputBorder, titleColor: a.titleColor, subtitleColor: a.subtitleColor, sectionBg: a.sectionBg, cardRadius: a.cardRadius, inputRadius: a.inputRadius, maxWidth: a.maxWidth, paddingTop: a.paddingTop, paddingBottom: a.paddingBottom }) }));
         }
     });
 }() );

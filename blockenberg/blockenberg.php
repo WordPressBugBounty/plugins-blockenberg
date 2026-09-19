@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Blockenberg
- * Description: Advanced Gutenberg Blocks for WordPress Block Editor
- * Version:     2.0.10
+ * Plugin Name: Blockenberg — 600+ Advanced Gutenberg Blocks & AI Agent for WordPress Block Editor
+ * Description: Advanced Gutenberg Blocks and an AI Agent for the WordPress Block Editor
+ * Version:     2.0.13
  * Author:      Blockenberg
  * Text Domain: blockenberg
  * Domain Path: /languages
@@ -23,6 +23,17 @@ defined( 'ABSPATH' ) || exit;
  * Google Fonts list for the Typography Control.
  */
 require_once __DIR__ . '/assets/php/google-fonts.php';
+
+/**
+ * User Field block — dynamic PHP render for logged-in profile values.
+ */
+require_once __DIR__ . '/blocks/user-field/render.php';
+
+/**
+ * AI Agent — OpenRouter-powered chat panel inside the block editor.
+ */
+require_once __DIR__ . '/assets/php/ai-assistant.php';
+require_once __DIR__ . '/assets/php/ai-external.php';
 
 /**
  * Admin dashboard — Block Manager (enable / disable blocks).
@@ -1095,8 +1106,96 @@ add_action( 'rest_api_init', function () {
 } );
 
 /**
+ * Strip CR/LF and related sequences so values cannot inject mail headers.
+ *
+ * @param string $value Raw header fragment.
+ * @return string
+ */
+function bkbg_sanitize_mail_header( $value ) {
+	$value = (string) $value;
+	$value = str_replace( array( "\r", "\n", '%0a', '%0d', '%0A', '%0D' ), '', $value );
+	return trim( sanitize_text_field( $value ) );
+}
+
+/**
+ * HMAC signature for a contact-form recipient email.
+ * Prevents open-relay abuse: the client may only use a recipient that was
+ * signed server-side when the block was rendered.
+ *
+ * @param string $email Recipient email.
+ * @return string Hex HMAC or empty string if invalid.
+ */
+function bkbg_contact_recipient_sig( $email ) {
+	$email = strtolower( sanitize_email( (string) $email ) );
+	if ( ! is_email( $email ) ) {
+		return '';
+	}
+	return hash_hmac( 'sha256', $email, wp_salt( 'auth' ) );
+}
+
+/**
+ * Verify a contact-form recipient signature.
+ *
+ * @param string $email Recipient email from the client.
+ * @param string $sig   HMAC from data-recipient-sig.
+ * @return bool
+ */
+function bkbg_verify_contact_recipient( $email, $sig ) {
+	$email = strtolower( sanitize_email( (string) $email ) );
+	if ( ! is_email( $email ) || ! is_string( $sig ) || '' === $sig ) {
+		return false;
+	}
+	$expected = bkbg_contact_recipient_sig( $email );
+	return ( '' !== $expected && hash_equals( $expected, $sig ) );
+}
+
+/**
+ * Inject a server-signed recipient HMAC into Contact Form markup on render.
+ * Existing posts do not need to be re-saved — the signature is added at runtime.
+ */
+add_filter( 'render_block', function ( $block_content, $block ) {
+	if ( empty( $block['blockName'] ) || 'blockenberg/contact-form' !== $block['blockName'] ) {
+		return $block_content;
+	}
+	if ( ! is_string( $block_content ) || '' === $block_content ) {
+		return $block_content;
+	}
+
+	$attrs     = isset( $block['attrs'] ) && is_array( $block['attrs'] ) ? $block['attrs'] : array();
+	$recipient = isset( $attrs['recipientEmail'] ) ? sanitize_email( (string) $attrs['recipientEmail'] ) : '';
+	if ( ! is_email( $recipient ) ) {
+		return $block_content;
+	}
+
+	$sig = bkbg_contact_recipient_sig( $recipient );
+	if ( '' === $sig ) {
+		return $block_content;
+	}
+
+	// Replace existing sig if present, otherwise inject onto the first opening tag.
+	if ( false !== strpos( $block_content, 'data-recipient-sig=' ) ) {
+		$block_content = preg_replace(
+			'/\sdata-recipient-sig=(["\'])[^"\']*\1/',
+			' data-recipient-sig="' . esc_attr( $sig ) . '"',
+			$block_content,
+			1
+		);
+	} else {
+		$block_content = preg_replace(
+			'/^\s*(<[a-zA-Z][^>]*)/',
+			'$1 data-recipient-sig="' . esc_attr( $sig ) . '"',
+			$block_content,
+			1
+		);
+	}
+
+	return $block_content;
+}, 10, 2 );
+
+/**
  * Contact Form endpoint — POST /wp-json/blockenberg/v1/contact
  * Sends an email via wp_mail() to the admin or a custom recipient stored in the block.
+ * Custom recipients require a valid server-issued HMAC (data-recipient-sig).
  */
 add_action( 'rest_api_init', function () {
     register_rest_route( 'blockenberg/v1', '/contact', array(
@@ -1146,12 +1245,20 @@ add_action( 'rest_api_init', function () {
                 return new WP_Error( 'empty_message', __( 'Message is required.', 'blockenberg' ), array( 'status' => 400 ) );
             }
 
-            // Determine recipient and subject.
-            $recipient = isset( $payload['recipient'] ) ? sanitize_email( (string) $payload['recipient'] ) : '';
-            if ( ! is_email( $recipient ) ) {
-                $recipient = get_option( 'admin_email' );
+            // Recipient: only accept a client-supplied address when it carries a
+            // valid server HMAC. Otherwise always fall back to admin_email (no open relay).
+            $admin_email = sanitize_email( (string) get_option( 'admin_email' ) );
+            $recipient   = $admin_email;
+            $requested   = isset( $payload['recipient'] ) ? sanitize_email( (string) $payload['recipient'] ) : '';
+            $sig         = isset( $payload['recipientSig'] ) ? (string) $payload['recipientSig'] : '';
+            if ( is_email( $requested ) && bkbg_verify_contact_recipient( $requested, $sig ) ) {
+                $recipient = strtolower( $requested );
             }
-            $subject = isset( $payload['subject'] ) ? sanitize_text_field( (string) $payload['subject'] ) : __( 'New Contact Form Submission', 'blockenberg' );
+
+            $subject = isset( $payload['subject'] ) ? bkbg_sanitize_mail_header( (string) $payload['subject'] ) : '';
+            if ( '' === $subject ) {
+                $subject = __( 'New Contact Form Submission', 'blockenberg' );
+            }
 
             // Build email body.
             $body  = "Name: {$name}\n";
@@ -1161,9 +1268,18 @@ add_action( 'rest_api_init', function () {
             }
             $body .= "\nMessage:\n{$message}\n";
 
+            // Reply-To: strip CR/LF from name; never allow header injection.
+            $safe_name = bkbg_sanitize_mail_header( $name );
+            $safe_name = str_replace( array( '"', '<', '>' ), '', $safe_name );
+            if ( '' !== $safe_name ) {
+                $reply_to = sprintf( 'Reply-To: %s <%s>', $safe_name, $email );
+            } else {
+                $reply_to = 'Reply-To: ' . $email;
+            }
+
             $headers = array(
                 'Content-Type: text/plain; charset=UTF-8',
-                "Reply-To: {$name} <{$email}>",
+                $reply_to,
             );
 
             $sent = wp_mail( $recipient, $subject, $body, $headers );

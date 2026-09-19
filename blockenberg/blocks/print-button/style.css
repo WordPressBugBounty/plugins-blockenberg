@@ -1,0 +1,108 @@
+/* Print / PDF Button — bkbg-prb- */
+
+.bkbg-prb-wrap--inline {
+	display: block;
+}
+
+.bkbg-prb-wrap--floating {
+	pointer-events: none;
+}
+
+.bkbg-prb-wrap--floating .bkbg-prb-btn {
+	pointer-events: auto;
+}
+
+.bkbg-prb-btn {
+	font-family: var(--bkbg-prb-btn-font-family, inherit);
+	font-size: var(--bkbg-prb-btn-font-size-d, 14px);
+	font-weight: var(--bkbg-prb-btn-font-weight, 600);
+	font-style: var(--bkbg-prb-btn-font-style, normal);
+	text-transform: var(--bkbg-prb-btn-text-transform, none);
+	text-decoration: var(--bkbg-prb-btn-text-decoration, none);
+	line-height: var(--bkbg-prb-btn-line-height-d, 1.2);
+	letter-spacing: var(--bkbg-prb-btn-letter-spacing-d, normal);
+	word-spacing: var(--bkbg-prb-btn-word-spacing-d, normal);
+	transition: background-color 0.18s ease, color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* Label must carry decoration/line-height — flex items don't always
+   paint text-decoration from the flex parent, and line-height:1 was killing typo. */
+.bkbg-prb-btn .bkbg-prb-label {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	text-transform: inherit;
+	text-decoration: var(--bkbg-prb-btn-text-decoration, none);
+	line-height: inherit;
+	letter-spacing: inherit;
+	word-spacing: inherit;
+}
+
+.bkbg-prb-btn:hover,
+.bkbg-prb-btn:focus-visible {
+	background: var(--bkbg-prb-hover-bg, #0f172a) !important;
+	color: var(--bkbg-prb-hover-color, #ffffff) !important;
+	transform: translateY(-1px);
+}
+
+.bkbg-prb-btn:active {
+	transform: translateY(0);
+}
+
+.bkbg-prb-icon,
+.bkbg-prb-label {
+	display: inline-flex;
+	align-items: center;
+}
+
+.bkbg-prb-icon {
+	line-height: 1;
+}
+
+.bkbg-prb-icon .dashicons {
+	width: 1em;
+	height: 1em;
+	font-size: inherit;
+	line-height: 1;
+}
+
+.bkbg-prb-editor-hint {
+	margin: 0 0 10px;
+	font-size: 12px;
+	color: #64748b;
+	font-weight: 600;
+	text-align: center;
+	width: 100%;
+}
+
+@media (max-width: 1024px) {
+	.bkbg-prb-btn {
+		font-size: var(--bkbg-prb-btn-font-size-t, var(--bkbg-prb-btn-font-size-d, 14px));
+		line-height: var(--bkbg-prb-btn-line-height-t, var(--bkbg-prb-btn-line-height-d, 1.2));
+		letter-spacing: var(--bkbg-prb-btn-letter-spacing-t, var(--bkbg-prb-btn-letter-spacing-d, normal));
+		word-spacing: var(--bkbg-prb-btn-word-spacing-t, var(--bkbg-prb-btn-word-spacing-d, normal));
+	}
+}
+
+@media (max-width: 767px) {
+	.bkbg-prb-btn {
+		font-size: var(--bkbg-prb-btn-font-size-m, var(--bkbg-prb-btn-font-size-t, var(--bkbg-prb-btn-font-size-d, 14px)));
+		line-height: var(--bkbg-prb-btn-line-height-m, var(--bkbg-prb-btn-line-height-t, var(--bkbg-prb-btn-line-height-d, 1.2)));
+		letter-spacing: var(--bkbg-prb-btn-letter-spacing-m, var(--bkbg-prb-btn-letter-spacing-t, var(--bkbg-prb-btn-letter-spacing-d, normal)));
+		word-spacing: var(--bkbg-prb-btn-word-spacing-m, var(--bkbg-prb-btn-word-spacing-t, var(--bkbg-prb-btn-word-spacing-d, normal)));
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.bkbg-prb-btn {
+		transition: none;
+	}
+}
+
+@media print {
+	.bkbg-prb-wrap,
+	.bkbg-prb-editor {
+		display: none !important;
+	}
+}

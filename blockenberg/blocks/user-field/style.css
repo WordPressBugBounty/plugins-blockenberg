@@ -1,0 +1,67 @@
+/* User Field — logged-in profile value */
+
+.bkbg-user-field,
+.bkbg-user-field-editor .bkbg-user-field {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	word-break: break-word;
+	font-family: var(--bkbg-uf-font-family, inherit);
+	font-size: var(--bkbg-uf-font-size-d, var(--bkbg-uf-font-size, var(--bkbg-uf-size, 16px)));
+	font-weight: var(--bkbg-uf-font-weight, var(--bkbg-uf-w, 400));
+	font-style: var(--bkbg-uf-font-style, normal);
+	text-transform: var(--bkbg-uf-text-transform, none);
+	text-decoration: var(--bkbg-uf-text-decoration, none);
+	line-height: var(--bkbg-uf-line-height-d, var(--bkbg-uf-line-height, 1.4));
+	letter-spacing: var(--bkbg-uf-letter-spacing-d, var(--bkbg-uf-letter-spacing, normal));
+	word-spacing: var(--bkbg-uf-word-spacing-d, var(--bkbg-uf-word-spacing, normal));
+	color: var(--bkbg-uf-color, inherit);
+	text-align: var(--bkbg-uf-align, left);
+}
+
+.bkbg-user-field--block,
+.bkbg-user-field-editor.bkbg-user-field--block .bkbg-user-field {
+	display: block;
+	width: 100%;
+}
+
+/* Responsive typography */
+@media (max-width: 1024px) {
+	.bkbg-user-field,
+	.bkbg-user-field-editor .bkbg-user-field {
+		font-size: var(--bkbg-uf-font-size-t, var(--bkbg-uf-font-size-d, var(--bkbg-uf-font-size, var(--bkbg-uf-size, 16px))));
+		line-height: var(--bkbg-uf-line-height-t, var(--bkbg-uf-line-height-d, var(--bkbg-uf-line-height, 1.4)));
+		letter-spacing: var(--bkbg-uf-letter-spacing-t, var(--bkbg-uf-letter-spacing-d, var(--bkbg-uf-letter-spacing, normal)));
+		word-spacing: var(--bkbg-uf-word-spacing-t, var(--bkbg-uf-word-spacing-d, var(--bkbg-uf-word-spacing, normal)));
+	}
+}
+
+@media (max-width: 767px) {
+	.bkbg-user-field,
+	.bkbg-user-field-editor .bkbg-user-field {
+		font-size: var(--bkbg-uf-font-size-m, var(--bkbg-uf-font-size-t, var(--bkbg-uf-font-size-d, var(--bkbg-uf-font-size, var(--bkbg-uf-size, 16px)))));
+		line-height: var(--bkbg-uf-line-height-m, var(--bkbg-uf-line-height-t, var(--bkbg-uf-line-height-d, var(--bkbg-uf-line-height, 1.4))));
+		letter-spacing: var(--bkbg-uf-letter-spacing-m, var(--bkbg-uf-letter-spacing-t, var(--bkbg-uf-letter-spacing-d, var(--bkbg-uf-letter-spacing, normal))));
+		word-spacing: var(--bkbg-uf-word-spacing-m, var(--bkbg-uf-word-spacing-t, var(--bkbg-uf-word-spacing-d, var(--bkbg-uf-word-spacing, normal))));
+	}
+}
+
+.editor-styles-wrapper .bkbg-user-field-editor {
+	min-height: 1.4em;
+}
+
+.bkbg-user-field-editor__hint {
+	display: block;
+	margin-top: 6px;
+	font-family: inherit;
+	font-size: 11px;
+	font-weight: 400;
+	font-style: normal;
+	text-transform: none;
+	text-decoration: none;
+	letter-spacing: normal;
+	word-spacing: normal;
+	line-height: 1.4;
+	color: #94a3b8;
+	text-align: left;
+}

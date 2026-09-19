@@ -1,0 +1,144 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "blockenberg/print-button",
+    "title": "Print / PDF Button",
+    "category": "bkbg-layout",
+    "icon": "printer",
+    "description": "A print button that opens the browser print dialog (Save as PDF included). Supports custom icons via the shared icon picker.",
+    "keywords": [
+        "print",
+        "pdf",
+        "save",
+        "download",
+        "button",
+        "printer"
+    ],
+    "textdomain": "blockenberg",
+    "editorScript": "bkbg-print-button-editor",
+    "style": "bkbg-print-button-style",
+    "viewScript": "bkbg-print-button-frontend",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "label": {
+            "type": "string",
+            "default": "Print / Save PDF"
+        },
+        "showLabel": {
+            "type": "boolean",
+            "default": true
+        },
+        "showIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "icon": {
+            "type": "string",
+            "default": "🖨"
+        },
+        "iconType": {
+            "type": "string",
+            "default": "dashicon"
+        },
+        "iconDashicon": {
+            "type": "string",
+            "default": "printer"
+        },
+        "iconImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "iconDashiconColor": {
+            "type": "string",
+            "default": ""
+        },
+        "iconPosition": {
+            "type": "string",
+            "default": "left"
+        },
+        "iconSize": {
+            "type": "number",
+            "default": 18
+        },
+        "layout": {
+            "type": "string",
+            "default": "inline"
+        },
+        "position": {
+            "type": "string",
+            "default": "bottom-right"
+        },
+        "offsetX": {
+            "type": "number",
+            "default": 24
+        },
+        "offsetY": {
+            "type": "number",
+            "default": 24
+        },
+        "alignBtn": {
+            "type": "string",
+            "default": "left"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "hoverBg": {
+            "type": "string",
+            "default": "#0f172a"
+        },
+        "hoverColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#1e293b"
+        },
+        "borderWidth": {
+            "type": "number",
+            "default": 0
+        },
+        "borderRadius": {
+            "type": "number",
+            "default": 8
+        },
+        "paddingH": {
+            "type": "number",
+            "default": 20
+        },
+        "paddingV": {
+            "type": "number",
+            "default": 12
+        },
+        "shadow": {
+            "type": "boolean",
+            "default": true
+        },
+        "zIndex": {
+            "type": "number",
+            "default": 9990
+        },
+        "ariaLabel": {
+            "type": "string",
+            "default": ""
+        },
+        "typoBtn": {
+            "type": "object",
+            "default": {}
+        }
+    }
+}

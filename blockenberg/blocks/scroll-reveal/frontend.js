@@ -46,27 +46,48 @@
     }
 
     function init() {
-        var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var motionPreference = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+        // Content stays readable when motion is unwanted or observers are unavailable.
+        if ((motionPreference && motionPreference.matches) || typeof window.IntersectionObserver !== 'function') { return; }
+        var animated = [];
+        var observers = [];
+
+        function revealWithoutMotion() {
+            if (!motionPreference.matches) { return; }
+            observers.forEach(function (observer) { observer.disconnect(); });
+            animated.forEach(function (element) {
+                element.style.transition = 'none';
+                element.style.transitionDelay = '0ms';
+                element.style.opacity = '1';
+                element.style.transform = 'none';
+                element.style.willChange = '';
+            });
+        }
+
+        function option(wrap, name, fallback, min, max) {
+            var n = parseFloat(wrap.getAttribute('data-' + name));
+            return Number.isFinite(n) ? Math.min(max, Math.max(min, n)) : fallback;
+        }
 
         document.querySelectorAll('.bksr-wrap[data-animation]').forEach(function (wrap) {
             if (wrap._bksrInit) { return; }
             wrap._bksrInit = true;
 
             var animation    = wrap.getAttribute('data-animation')    || 'fade-up';
-            var duration     = parseInt(wrap.getAttribute('data-duration'),  10) || 600;
-            var delay        = parseInt(wrap.getAttribute('data-delay'),      10) || 0;
+            var duration     = option(wrap, 'duration', 600, 0, 10000);
+            var delay        = option(wrap, 'delay', 0, 0, 10000);
             var easing       = wrap.getAttribute('data-easing')       || 'ease';
-            var distance     = parseInt(wrap.getAttribute('data-distance'),   10) || 32;
-            var scale        = parseInt(wrap.getAttribute('data-scale'),      10) || 95;
-            var rotate       = parseInt(wrap.getAttribute('data-rotate'),     10) || 0;
-            var opacity      = parseInt(wrap.getAttribute('data-opacity'),    10) || 0;
-            var threshold    = (parseInt(wrap.getAttribute('data-threshold'), 10) || 15) / 100;
+            var distance     = option(wrap, 'distance', 32, 0, 1000);
+            var scale        = option(wrap, 'scale', 95, 0, 300);
+            var rotate       = option(wrap, 'rotate', 0, -360, 360);
+            var opacity      = option(wrap, 'opacity', 0, 0, 100);
+            var threshold    = option(wrap, 'threshold', 15, 0, 100) / 100;
             var once         = wrap.getAttribute('data-once')         !== '0';
             var stagger      = wrap.getAttribute('data-stagger')      === '1';
-            var staggerDelay = parseInt(wrap.getAttribute('data-stagger-delay'), 10) || 100;
-
-            /* skip animation for reduced motion preference */
-            if (prefersReduced) { return; }
+            var staggerDelay = option(wrap, 'stagger-delay', 100, 0, 10000);
+            // A long composition cannot fit its requested intersection ratio in
+            // the viewport. Cap it to a reachable ratio so it can still reveal.
+            threshold = Math.min(threshold, window.innerHeight / Math.max(1, wrap.getBoundingClientRect().height) * 0.9);
 
             var transition = getRevealTransition(animation, easing, duration);
 
@@ -74,6 +95,8 @@
                 /* animate each direct child individually */
                 var children = Array.prototype.slice.call(wrap.children);
                 children.forEach(function (child) {
+                    child.classList.add('bksr-child-reveal');
+                    animated.push(child);
                     applyInitial(child, animation, distance, scale, rotate, opacity);
                 });
 
@@ -89,10 +112,12 @@
                 }, { threshold: threshold });
 
                 observer.observe(wrap);
+                observers.push(observer);
 
             } else {
                 /* animate whole wrapper */
                 applyInitial(wrap, animation, distance, scale, rotate, opacity);
+                animated.push(wrap);
 
                 var obs = new IntersectionObserver(function (entries) {
                     entries.forEach(function (entry) {
@@ -110,8 +135,13 @@
                 }, { threshold: threshold });
 
                 obs.observe(wrap);
+                observers.push(obs);
             }
         });
+        if (motionPreference && animated.length) {
+            if (motionPreference.addEventListener) { motionPreference.addEventListener('change', revealWithoutMotion); }
+            else if (motionPreference.addListener) { motionPreference.addListener(revealWithoutMotion); }
+        }
     }
 
     if (document.readyState === 'loading') {

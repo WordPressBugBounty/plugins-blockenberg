@@ -43,27 +43,16 @@
                 return { className: 'bkbg-sps-editor', style: s };
             })());
 
-            var validLogos = logos.filter(function (l) { return l.imageUrl; });
+            function updateStat(index, key, value) {
+                setAttr({ stats: stats.map(function (stat, i) {
+                    if (i !== index) return stat;
+                    var updated = Object.assign({}, stat);
+                    updated[key] = value;
+                    return updated;
+                }) });
+            }
 
-            return el('div', blockProps, controls,
-                el('div', { className: 'bkbg-sps-wrap' },
-                    el('div', { className: 'bkbg-sps-inner', style: { maxWidth: attr.maxWidth + 'px' } },
-                        attr.showEyebrow && el('p', {
-                            className: 'bkbg-sps-eyebrow',
-                            style: { color: attr.eyebrowColor, margin: '0 0 12px' }
-                        }, attr.eyebrow),
-                        attr.showHeading && el(RichText, {
-                            tagName: 'h2', value: attr.heading,
-                            className: 'bkbg-sps-heading',
-                            style: { color: attr.headingColor, margin: '0 0 12px' },
-                            onChange: function (v) { setAttr({ heading: v }); }
-                        }),
-                        attr.showSubtext && el(RichText, {
-                            tagName: 'p', value: attr.subtext,
-                            className: 'bkbg-sps-subtext',
-                            style: { color: attr.subtextColor, margin: '0 0 32px' },
-                            onChange: function (v) { setAttr({ subtext: v }); }
-                        }),
+            var controls = el(InspectorControls, {},
                 el(PanelBody, { title: __('Section Header', 'blockenberg'), initialOpen: true },
                     el(ToggleControl, { label: __('Show Eyebrow', 'blockenberg'), checked: attr.showEyebrow, onChange: function (v) { setAttr({ showEyebrow: v }); }, __nextHasNoMarginBottom: true }),
                     el(TextControl, { label: __('Eyebrow Text', 'blockenberg'), value: attr.eyebrow, onChange: function (v) { setAttr({ eyebrow: v }); }, __nextHasNoMarginBottom: true }),
@@ -126,8 +115,8 @@
                                     : el(Button, { isSecondary: true, isSmall: true, onClick: ref.open }, __('Upload Photo', 'blockenberg'));
                             }
                         })
-                    ),
-                    ),
+                    )
+                ),
                 
                 el( PanelBody, { title: __( 'Typography', 'blockenberg' ), initialOpen: false },
                     getTypoControl() && el( getTypoControl(), { label: __('Eyebrow Typography'), value: attr.eyebrowTypo || {}, onChange: function(v){ setAttr({ eyebrowTypo: v }); } }),
@@ -136,7 +125,7 @@
                     getTypoControl() && el( getTypoControl(), { label: __('Stat Label Typography'), value: attr.statLabelTypo || {}, onChange: function(v){ setAttr({ statLabelTypo: v }); } }),
                     getTypoControl() && el( getTypoControl(), { label: __('Quote Typography'), value: attr.quoteTypo || {}, onChange: function(v){ setAttr({ quoteTypo: v }); } })
                 ),
-el(PanelColorSettings, {
+                el(PanelColorSettings, {
                     title: __('Colors', 'blockenberg'), initialOpen: false,
                     colorSettings: [
                         { label: __('Background', 'blockenberg'), value: attr.bgColor, onChange: function (v) { setAttr({ bgColor: v || '#f9fafb' }); } },

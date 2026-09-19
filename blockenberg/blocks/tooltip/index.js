@@ -15,10 +15,20 @@
     var TextControl = wp.components.TextControl;
     var TextareaControl = wp.components.TextareaControl;
 
-    var _tc, _tvf;
-    Object.defineProperty(window, '_bkbgTypoCtrlCache', { get: function () { if (!_tc) { _tc = window.bkbgTypographyControl; } return _tc; } });
-    Object.defineProperty(window, '_bkbgTypoVarsCache', { get: function () { if (!_tvf) { _tvf = window.bkbgTypoCssVars; } return _tvf; } });
-    function getTypoControl(props, attrName, label) { return window._bkbgTypoCtrlCache(props, attrName, label); }
+    // Resolve the shared components lazily without defining globals for each block.
+    function _tc(props, key, label) {
+        var Control = window.bkbgTypographyControl;
+        return Control ? el(Control, {
+            label: label,
+            value: props.attributes[key] || {},
+            onChange: function (value) { var update = {}; update[key] = value; props.setAttributes(update); }
+        }) : null;
+    }
+    function _tvf(typo, prefix) {
+        var cssVars = window.bkbgTypoCssVars;
+        return cssVars ? cssVars(typo || {}, prefix) : {};
+    }
+    function getTypoControl(props, attrName, label) { return _tc(props, attrName, label); }
 
     var POSITION_OPTIONS = [
         { label: 'Top',    value: 'top' },
@@ -109,7 +119,7 @@
 
             var blockProps = (function () {
                 var s = { textAlign: a.align };
-                Object.assign(s, window._bkbgTypoVarsCache(a.triggerTypo, '--bkttp-tr-'), window._bkbgTypoVarsCache(a.tooltipTypo, '--bkttp-tp-'));
+                Object.assign(s, _tvf(a.triggerTypo, '--bkttp-tr-'), _tvf(a.tooltipTypo, '--bkttp-tp-'));
                 return useBlockProps({ style: s });
             })();
 
@@ -302,7 +312,7 @@ el(PanelColorSettings, {
 
         save: function (props) {
             var bp = (function () {
-                var tv = Object.assign({}, window._bkbgTypoVarsCache(props.attributes.triggerTypo, '--bkttp-tr-'), window._bkbgTypoVarsCache(props.attributes.tooltipTypo, '--bkttp-tp-'));
+                var tv = Object.assign({}, _tvf(props.attributes.triggerTypo, '--bkttp-tr-'), _tvf(props.attributes.tooltipTypo, '--bkttp-tp-'));
                 var parts = []; Object.keys(tv).forEach(function (k) { parts.push(k + ':' + tv[k]); });
                 return useBlockProps.save(parts.length ? { style: parts.join(';') } : {});
             })();

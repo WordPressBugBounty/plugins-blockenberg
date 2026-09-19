@@ -6,10 +6,20 @@
     const { __ } = window.wp.i18n;
     const { useState } = window.wp.element;
 
-    var _tc, _tvf;
-    Object.defineProperty(window, '_bkbgTypoCtrlCache', { get: function () { if (!_tc) { _tc = window.bkbgTypographyControl; } return _tc; } });
-    Object.defineProperty(window, '_bkbgTypoVarsCache', { get: function () { if (!_tvf) { _tvf = window.bkbgTypoCssVars; } return _tvf; } });
-    function getTypoControl(props, attrName, label) { return window._bkbgTypoCtrlCache(props, attrName, label); }
+    // Resolve the shared components lazily without defining globals for each block.
+    function _tc(props, key, label) {
+        var Control = window.bkbgTypographyControl;
+        return Control ? el(Control, {
+            label: label,
+            value: props.attributes[key] || {},
+            onChange: function (value) { var update = {}; update[key] = value; props.setAttributes(update); }
+        }) : null;
+    }
+    function _tvf(typo, prefix) {
+        var cssVars = window.bkbgTypoCssVars;
+        return cssVars ? cssVars(typo || {}, prefix) : {};
+    }
+    function getTypoControl(props, attrName, label) { return _tc(props, attrName, label); }
 
     // ── Binary partition treemap algorithm ───────────────────────────────────
     // Recursively splits the rectangle between items based on value ratio.
@@ -176,7 +186,7 @@
             const { attributes: a, setAttributes } = props;
             const blockProps = ( function () {
                 var s = {};
-                Object.assign( s, window._bkbgTypoVarsCache( a.titleTypo, '--bktmc-tt-' ) );
+                Object.assign( s, _tvf( a.titleTypo, '--bktmc-tt-' ) );
                 return useBlockProps( { className: 'bkbg-treemap-wrap', style: Object.keys( s ).length ? s : undefined } );
             } )();
 
@@ -243,7 +253,7 @@ el( PanelColorSettings, {
 
         save: function ( { attributes: a } ) {
             const blockProps = ( function () {
-                var tv = window._bkbgTypoVarsCache( a.titleTypo, '--bktmc-tt-' );
+                var tv = _tvf( a.titleTypo, '--bktmc-tt-' );
                 var parts = []; Object.keys( tv ).forEach( function ( k ) { parts.push( k + ':' + tv[k] ); } );
                 return useBlockProps.save( { className: 'bkbg-treemap-wrap', style: parts.length ? parts.join( ';' ) : undefined } );
             } )();

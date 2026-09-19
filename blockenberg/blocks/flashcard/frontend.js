@@ -37,8 +37,13 @@
         try { opts = JSON.parse(root.getAttribute('data-opts')); } catch (e) { return; }
 
         var a = opts;
-        var rawCards;
-        try { rawCards = JSON.parse(a.cards); } catch (e) { rawCards = []; }
+        // cards may be an array (new saves) or a JSON string (legacy data-opts).
+        var rawCards = [];
+        if (Array.isArray(a.cards)) {
+            rawCards = a.cards;
+        } else if (typeof a.cards === 'string' && a.cards) {
+            try { rawCards = JSON.parse(a.cards); } catch (e) { rawCards = []; }
+        }
 
         var deck = rawCards.map(function (c) { return { id: c.id, front: c.front, back: c.back, known: false }; });
         var currentIndex = 0;

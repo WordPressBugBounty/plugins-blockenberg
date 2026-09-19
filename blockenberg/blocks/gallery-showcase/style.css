@@ -1,6 +1,19 @@
 /* Gallery Showcase — Style */
 .bkbg-gs-wrapper { box-sizing: border-box; }
 
+/*
+ * Gradient Section also uses .bkbg-gs-wrapper (purple animated gradient).
+ * In the editor every block stylesheet is loaded, so that rule leaked onto
+ * this block. Scope a reset to Gallery Showcase only.
+ */
+.wp-block-blockenberg-gallery-showcase.bkbg-gs-wrapper {
+    background: transparent;
+    background-image: none;
+    animation: none;
+    overflow: visible;
+    width: auto;
+}
+
 /* Layout containers */
 .bkbg-gs-showcase { display: flex; gap: 14px; }
 .bkbg-gs-showcase.bkbg-gs--thumb-bottom,
@@ -8,22 +21,46 @@
 .bkbg-gs-showcase.bkbg-gs--thumb-left   { flex-direction: row-reverse; align-items: flex-start; }
 .bkbg-gs-showcase.bkbg-gs--thumb-right  { flex-direction: row; align-items: flex-start; }
 
-/* Main image area */
+/* Main image area
+   IMPORTANT: do not rely on flex:1 alone — with overflow:hidden the flex
+   min-size collapses to 0 on the frontend and absolute images disappear. */
 .bkbg-gs-main {
     position: relative;
+    width: 100%;
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 0;
+    aspect-ratio: var(--bkbg-gs-aspect, 4 / 3);
     border-radius: var(--bkbg-gs-main-r, 16px);
     overflow: hidden;
-    flex: 1;
     background: #f3f4f6;
+    box-shadow: var(--bkbg-gs-main-shadow, none);
 }
 
-.bkbg-gs-slide { position: relative; }
+.bkbg-gs-showcase.bkbg-gs--thumb-bottom .bkbg-gs-main,
+.bkbg-gs-showcase.bkbg-gs--thumb-top .bkbg-gs-main {
+    flex: 0 0 auto;
+}
+
+.bkbg-gs-main-images {
+    position: absolute;
+    inset: 0;
+}
+
+.bkbg-gs-slide {
+    position: absolute;
+    inset: 0;
+    display: none;
+}
+.bkbg-gs-slide.is-active {
+    display: block;
+}
 .bkbg-gs-slide img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: var(--bkbg-gs-object-fit, cover);
     display: block;
     transition: opacity 0.32s ease;
 }
@@ -61,15 +98,19 @@
     line-height: var(--bkbg-gs-cap-line-height-d, 1.4);
     letter-spacing: var(--bkbg-gs-cap-letter-spacing-d, normal);
     word-spacing: var(--bkbg-gs-cap-word-spacing-d, normal);
-    color: var(--bkbg-gs-caption-color, #ffffff);
     pointer-events: none;
     z-index: 2;
+}
+.bkbg-gs-caption:empty,
+.bkbg-gs-below-caption:empty {
+    display: none;
 }
 .bkbg-gs-caption--overlay {
     position: absolute;
     bottom: 0; left: 0; right: 0;
     padding: 10px 14px;
     background: var(--bkbg-gs-caption-bg, rgba(0,0,0,0.55));
+    color: var(--bkbg-gs-caption-color, #ffffff);
 }
 .bkbg-gs-below-caption {
     text-align: center;
@@ -82,7 +123,8 @@
     line-height: var(--bkbg-gs-cap-line-height-d, 1.4);
     letter-spacing: var(--bkbg-gs-cap-letter-spacing-d, normal);
     word-spacing: var(--bkbg-gs-cap-word-spacing-d, normal);
-    color: var(--bkbg-gs-caption-color, #6b7280);
+    /* Default gray — white overlay color must not leak here */
+    color: var(--bkbg-gs-caption-below-color, #6b7280);
     margin: 10px 0 0;
 }
 
@@ -158,7 +200,12 @@
     border-width: var(--bkbg-gs-active-bw, 3px);
     opacity: 1;
 }
-.bkbg-gs-thumb:hover { opacity: 0.9; }
+.bkbg-gs-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 .bkbg-gs-showcase.bkbg-gs--thumb-left  .bkbg-gs-thumb,
 .bkbg-gs-showcase.bkbg-gs--thumb-right .bkbg-gs-thumb { width: 100%; height: 64px; }
 

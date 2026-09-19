@@ -158,6 +158,56 @@
 		"paddingBottom": {
 			"type": "number",
 			"default": 60
+		},
+		"labels": {
+			"type": "object",
+			"description": "Editable interface text; translate these labels to the page language. Omitted fields retain English defaults.",
+			"properties": {
+				"bill": {
+					"type": "string",
+					"description": "Bill Amount"
+				},
+				"people": {
+					"type": "string",
+					"description": "Number of People"
+				},
+				"peopleHint": {
+					"type": "string",
+					"description": "persons"
+				},
+				"tip": {
+					"type": "string",
+					"description": "Tip Percentage"
+				},
+				"result": {
+					"type": "string",
+					"description": "Each person pays"
+				},
+				"subtotal": {
+					"type": "string",
+					"description": "Bill Subtotal"
+				},
+				"tipTotal": {
+					"type": "string",
+					"description": "Tip"
+				},
+				"total": {
+					"type": "string",
+					"description": "Total"
+				},
+				"split": {
+					"type": "string",
+					"description": "Split {n} ways (preserve {n})"
+				},
+				"each": {
+					"type": "string",
+					"description": "each"
+				},
+				"validation": {
+					"type": "string",
+					"description": "Validation message for an invalid bill, tip (0–100), or whole people count (>=1)."
+				}
+			}
 		}
 	},
 	"supports": {

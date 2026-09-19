@@ -14,9 +14,20 @@
     var ToggleControl     = wp.components.ToggleControl;
     var Button            = wp.components.Button;
 
-    var _tc, _tvf;
-    Object.defineProperty(window, '_tc',  { get: function () { return _tc  || (_tc  = window.bkbgTypographyControl); } });
-    Object.defineProperty(window, '_tvf', { get: function () { return _tvf || (_tvf = window.bkbgTypoCssVars); } });
+    // Resolve the shared components lazily without defining globals for each block.
+    function _tc(label, key, attrs, setA) {
+        var Control = window.bkbgTypographyControl;
+        return Control ? el(Control, {
+            label: label,
+            value: attrs[key] || {},
+            onChange: function (value) { var update = {}; update[key] = value; setA(update); }
+        }) : null;
+    }
+    function _tvf(vars, key, attrs, prefix) {
+        var cssVars = window.bkbgTypoCssVars;
+        if (cssVars) Object.assign(vars, cssVars(attrs[key] || {}, prefix));
+        return vars;
+    }
     function getTypoControl(label, key, attrs, setA) { return _tc(label, key, attrs, setA); }
     function getTypoCssVars(attrs) {
         var v = {};

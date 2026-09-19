@@ -16,10 +16,20 @@
     var TextareaControl = wp.components.TextareaControl;
     var Button = wp.components.Button;
 
-    var _tc, _tvf;
-    Object.defineProperty(window, '_bkbgTypoCtrlCache', { get: function () { if (!_tc) { _tc = window.bkbgTypographyControl; } return _tc; } });
-    Object.defineProperty(window, '_bkbgTypoVarsCache', { get: function () { if (!_tvf) { _tvf = window.bkbgTypoCssVars; } return _tvf; } });
-    function getTypoControl(props, attrName, label) { return window._bkbgTypoCtrlCache(props, attrName, label); }
+    // Resolve the shared components lazily without defining globals for each block.
+    function _tc(props, key, label) {
+        var Control = window.bkbgTypographyControl;
+        return Control ? el(Control, {
+            label: label,
+            value: props.attributes[key] || {},
+            onChange: function (value) { var update = {}; update[key] = value; props.setAttributes(update); }
+        }) : null;
+    }
+    function _tvf(typo, prefix) {
+        var cssVars = window.bkbgTypoCssVars;
+        return cssVars ? cssVars(typo || {}, prefix) : {};
+    }
+    function getTypoControl(props, attrName, label) { return _tc(props, attrName, label); }
 
     function HalfStar(color, key) {
         return el('span', { key: key, style: { position: 'relative', display: 'inline-block', color: '#d1d5db', lineHeight: 1 } },
@@ -49,7 +59,7 @@
 
             var blockProps = (function () {
                 var s = { background: '#f8fafc', padding: '24px' };
-                Object.assign(s, window._bkbgTypoVarsCache(attr.nameTypo, '--bktlc-nt-'), window._bkbgTypoVarsCache(attr.bodyTypo, '--bktlc-bt-'));
+                Object.assign(s, _tvf(attr.nameTypo, '--bktlc-nt-'), _tvf(attr.bodyTypo, '--bktlc-bt-'));
                 return useBlockProps({ style: s });
             })();
 
@@ -226,7 +236,7 @@
             var attr = props.attributes;
             var useBlockProps = wp.blockEditor.useBlockProps;
             var bp = (function () {
-                var tv = Object.assign({}, window._bkbgTypoVarsCache(attr.nameTypo, '--bktlc-nt-'), window._bkbgTypoVarsCache(attr.bodyTypo, '--bktlc-bt-'));
+                var tv = Object.assign({}, _tvf(attr.nameTypo, '--bktlc-nt-'), _tvf(attr.bodyTypo, '--bktlc-bt-'));
                 var parts = []; Object.keys(tv).forEach(function (k) { parts.push(k + ':' + tv[k]); });
                 return useBlockProps.save(parts.length ? { style: parts.join(';') } : {});
             })();

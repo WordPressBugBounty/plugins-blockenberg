@@ -1722,3 +1722,47 @@
     font-size: 11px !important;
 }
 
+/* Custom HTML is used as full-width page sections. Theme content-size otherwise boxes and centers it.
+   Do not use 100vw here: it includes the scrollbar and padding, so sections overflow the canvas. */
+.editor-styles-wrapper .block-editor-block-list__block[data-type="core/html"] {
+    max-width: none !important;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: clip;
+}
+
+.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > .block-editor-block-list__block[data-type="core/html"] {
+    margin-left: calc(-1 * var(--wp--style--root--padding-left, 0px)) !important;
+    margin-right: calc(-1 * var(--wp--style--root--padding-right, 0px)) !important;
+    width: auto !important;
+    max-width: none !important;
+}
+
+.editor-styles-wrapper .block-editor-block-list__block[data-type="core/html"] > :where(section, div, header, footer, article, main, aside),
+.editor-styles-wrapper .block-editor-block-list__block[data-type="core/html"] .block-editor-inner-content > :where(section, div, header, footer, article, main, aside) {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    left: auto !important;
+    transform: none !important;
+}
+
+.editor-styles-wrapper.bkbg-ai-html-picking [data-type="core/html"] {
+    cursor: crosshair;
+}
+
+.editor-styles-wrapper [data-bkbg-html-target] {
+    outline: 2px solid #8668ff;
+    outline-offset: 3px;
+    position: relative;
+}
+
+.editor-styles-wrapper .block-editor-block-list__block[data-type="core/html"] img,
+.editor-styles-wrapper .block-editor-block-list__block[data-type="core/html"] video,
+.editor-styles-wrapper .block-editor-block-list__block[data-type="core/html"] iframe {
+    max-width: 100%;
+    height: auto;
+}
+

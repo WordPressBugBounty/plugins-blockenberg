@@ -360,12 +360,99 @@
 
         save: function (props) {
             var useBlockProps = wp.blockEditor.useBlockProps;
+            var a = props.attributes;
+            // Whitelist only block-owned attrs. Dumping props.attributes (incl. Advanced
+            // bkbg*) into data-opts breaks validation whenever the schema changes.
+            var opts = {
+                lessonTitle: a.lessonTitle,
+                moduleTitle: a.moduleTitle,
+                showModule: a.showModule,
+                lessonNumber: a.lessonNumber,
+                showLessonNumber: a.showLessonNumber,
+                duration: a.duration,
+                showDuration: a.showDuration,
+                difficulty: a.difficulty,
+                showDifficulty: a.showDifficulty,
+                instructor: a.instructor,
+                showInstructor: a.showInstructor,
+                prerequisites: a.prerequisites,
+                showPrerequisites: a.showPrerequisites,
+                prerequisitesLabel: a.prerequisitesLabel,
+                objectives: a.objectives,
+                showObjectives: a.showObjectives,
+                objectivesLabel: a.objectivesLabel,
+                intro: a.intro,
+                showIntro: a.showIntro,
+                sections: a.sections,
+                showSections: a.showSections,
+                resources: a.resources,
+                showResources: a.showResources,
+                resourcesLabel: a.resourcesLabel,
+                prevLesson: a.prevLesson,
+                prevLessonUrl: a.prevLessonUrl,
+                nextLesson: a.nextLesson,
+                nextLessonUrl: a.nextLessonUrl,
+                showNav: a.showNav,
+                fontSize: a.fontSize,
+                titleFontSize: a.titleFontSize,
+                lineHeight: a.lineHeight,
+                borderRadius: a.borderRadius,
+                moduleTitleSize: a.moduleTitleSize,
+                bgColor: a.bgColor,
+                borderColor: a.borderColor,
+                headerBg: a.headerBg,
+                headerColor: a.headerColor,
+                metaColor: a.metaColor,
+                introBg: a.introBg,
+                introColor: a.introColor,
+                objectiveBg: a.objectiveBg,
+                objectiveColor: a.objectiveColor,
+                objectiveDot: a.objectiveDot,
+                prereqBg: a.prereqBg,
+                prereqColor: a.prereqColor,
+                prereqDot: a.prereqDot,
+                textColor: a.textColor,
+                headingColor: a.headingColor,
+                tipBg: a.tipBg,
+                tipColor: a.tipColor,
+                tipBorder: a.tipBorder,
+                warningBg: a.warningBg,
+                warningColor: a.warningColor,
+                warningBorder: a.warningBorder,
+                noteBg: a.noteBg,
+                noteColor: a.noteColor,
+                noteBorder: a.noteBorder,
+                resourceBg: a.resourceBg,
+                accentColor: a.accentColor,
+                navBg: a.navBg,
+                typoTitle: a.typoTitle || {},
+                typoBody: a.typoBody || {}
+            };
             return wp.element.createElement('div', useBlockProps.save(),
                 wp.element.createElement('div', {
                     className: 'bkbg-course-lesson-app',
-                    'data-opts': JSON.stringify(props.attributes)
+                    'data-opts': JSON.stringify(opts)
                 })
             );
-        }
+        },
+
+        deprecated: [{
+            save: function (props) {
+                var useBlockProps = wp.blockEditor.useBlockProps;
+                var a = props.attributes;
+                var opts = {};
+                Object.keys(a).forEach(function (key) {
+                    if (key.indexOf('bkbg') === 0) return;
+                    opts[key] = a[key];
+                });
+                return wp.element.createElement('div', useBlockProps.save(),
+                    wp.element.createElement('div', {
+                        className: 'bkbg-course-lesson-app',
+                        'data-opts': JSON.stringify(opts)
+                    })
+                );
+            },
+            migrate: function (attributes) { return attributes; }
+        }]
     });
 }() );

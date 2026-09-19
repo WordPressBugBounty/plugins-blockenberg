@@ -1,16 +1,16 @@
-=== Blockenberg — 600+ Advanced Gutenberg Blocks for WordPress Block Editor ===
+=== Blockenberg — 600+ Advanced Gutenberg Blocks & AI Agent for WordPress Block Editor ===
 Contributors: blockenberg, alxrlov, olgadev
 Tags: gutenberg, blocks, editor, custom-blocks, page-builder
 Requires at least: 5.6
-Tested up to: 7.0
-Stable tag: 2.0.10
+Tested up to: 7.1
+Stable tag: 2.0.13
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-600+ Gutenberg blocks for layouts, content, media, marketing, charts, calculators, testimonials, tables, maps, videos and more.
+600+ Gutenberg blocks plus an AI Agent for layouts, content, media, marketing, charts, calculators, testimonials, tables, maps, videos and more.
 
 == Description ==
-Blockenberg is an advanced Gutenberg block library with 600+ lightweight, professional blocks for WordPress. Build landing pages, business sites, blogs, documentation, comparison pages, review content, interactive tools, and rich editorial layouts faster — all inside the native block editor.
+Blockenberg is an advanced Gutenberg block library with 600+ lightweight, professional blocks and an AI Agent for WordPress. Build landing pages, business sites, blogs, documentation, comparison pages, review content, interactive tools, and rich editorial layouts faster — all inside the native block editor.
 
 Instead of combining multiple block plugins, Blockenberg gives you one consistent toolkit with shared design controls, responsive settings, modern styling options, and performance-focused frontend output.
 
@@ -24,8 +24,12 @@ Instead of combining multiple block plugins, Blockenberg gives you one consisten
 
 From simple content blocks to advanced interactive elements, Blockenberg is built for speed, accessibility, and everyday real-world publishing.
 
+**AI Agent:**
+Open the AI Agent sidebar in the block editor and describe what to build. It inserts and edits Blockenberg blocks on the page. Powered by OpenRouter, including free models, so you can start without a paid plan. You can also connect a local Codex, Claude, or Cursor session to the same open editor.
+
 **Key Features:**
 - 600+ blocks covering page building, content, marketing, media, business, charts, utilities, and more
+- AI Agent in the editor — build and edit pages in chat via OpenRouter (free models included) or Codex, Claude, and Cursor
 - Consistent controls for colors, typography, spacing, borders, shadows, layout, and responsiveness
 - Accessibility-first design with keyboard support and thoughtful frontend behavior
 - Performance-focused output with lightweight frontend assets and modern interaction patterns
@@ -52,9 +56,9 @@ Affiliate Box, Affiliate Disclosure, Affiliate Section, App Download, App Screen
 Showcase images, video, embeds, and immersive visuals that make every page more engaging.
 Audio Player, Background Video, Before & After, Before & After Grid, Content Flip Box, Device Mockup, Drawing Canvas, Embed, Embed Preview, Filter Gallery, Gallery Showcase, Google Map, Hotspot Image, Hovering Image Stack, Image Accordion, Image Collage, Image Filter, Image Gallery, Image Magnifier, Image Mask, Image Placeholder, Image Reveal, Image Slider, Lightbox Gallery, Lottie, Open Graph Preview, PDF Embed, Perspective Device, Rotating Image Tiles, Scroll Reveal, Scroll Sticky Content, Scrollytelling, Sticky Video, Thumbnail Gallery, Tilt Card, Vertical Scroll Image, Video Facade, Video Grid, Video Hero, Video Playlist, Video Popup, Video Section, Weather Widget, World Map
 
-= Navigation & Site Experience (43) =
+= Navigation & Site Experience (45) =
 Improve discovery, usability, and on-page flow with smarter navigation and interface tools.
-Alert, Breadcrumbs, Business Hours, Button Group, Calendar, Category Grid, Content Menu, Cookie Consent, Dark Mode Toggle, Error Page, FAQ Categories, Filterable Cards, Floating Tags, Icon, Mega Footer, Mega Menu, Minimal Footer, Modal, Notification Bar, Notification Feed, Notification Toast, Off Canvas, One Page Nav, Page List, Pagination, Post Navigation, Progress Bar, Progress Circle, Progress Tracker, QR Code, Reading Progress, Scroll to Top, Search Bar, Separator, Side Menu, Step Progress, Sticky Header, Sticky Note, Sticky Sidebar, Tabs, Taxonomy List, Toggle, Tooltip
+Alert, Breadcrumbs, Business Hours, Button Group, Calendar, Category Grid, Content Menu, Cookie Consent, Dark Mode Toggle, Error Page, FAQ Categories, Filterable Cards, Floating Tags, Icon, Mega Footer, Mega Menu, Minimal Footer, Modal, Notification Bar, Notification Feed, Notification Toast, Off Canvas, One Page Nav, Page List, Pagination, Post Navigation, Print / PDF Button, Progress Bar, Progress Circle, Progress Tracker, QR Code, Reading Progress, Scroll to Top, Search Bar, Separator, Side Menu, Step Progress, Sticky Header, Sticky Note, Sticky Sidebar, Tabs, Taxonomy List, Toggle, Tooltip, User Field
 
 = Data, Charts & Analytics (61) =
 Present metrics clearly with charts, dashboards, comparisons, and visual reporting blocks.
@@ -107,6 +111,26 @@ Absolutely. Each block offers extensive customization options in the block edito
 Yes. All blocks are built with accessibility in mind, including keyboard navigation and ARIA labels.
 
 == Changelog ==
+
+= 2.0.13 - Sep 12, 2026 =
+* [New] AI Agent in the block editor — describe a page and it builds or edits it with Blockenberg blocks. Connect through OpenRouter (free models included) or optionally pair Codex, Claude, or Cursor with the open editor.
+
+= 2.0.12 - Aug 23, 2026 =
+* [New] Print / PDF Button — opens the browser print dialog (Save as PDF). Shared icon picker, inline or floating layout, typography and colors.
+* [New] User Field block — display logged-in profile values (first name, last name, display name, email, and more) with guest fallback options.
+* [Security] Contact Form no longer accepts an unsigned recipient from the client (HMAC-signed allowlist; otherwise admin email only), closing an open mail-relay vector.
+* [Security] Contact Form Reply-To / subject headers now strip CR/LF to prevent email header injection.
+* [Fixed] Gallery Showcase main image no longer collapses on the frontend (aspect-ratio layout; editor preview was fine).
+* [Fixed] Gallery Showcase captions show in the editor; “Below” position no longer uses invisible white text on the frontend.
+* [Fixed] Gallery Showcase no longer picks up Gradient Section purple background in the editor (shared `.bkbg-gs-wrapper` class).
+* [Fixed] Uninstall now also deletes the blockenberg_disabled_blocks option.
+* [Improved] Masonry Grid enables “Lightbox on Click” by default for new blocks.
+* [Compatibility] Tested up to WordPress 7.1.
+
+= 2.0.11 - Jul 22, 2026 =
+* [Fixed] Invalid trailing commas in Lottie, QR Code, and Testimonials block.json files that caused wp_json_file_decode() notices on WordPress 7.0.
+* [Fixed] Flashcard, Course Lesson, and Course Curriculum blocks no longer break validation after plugin updates (stable data-opts whitelist; cards stored as array; deprecated migrations).
+* [Fixed] Flashcard Recover now preserves custom cards instead of resetting the deck.
 
 = 2.0.10 - May 26, 2026 =
 * [Fixed] Flashcard keyboard shortcuts are now scoped to the Flashcard block and no longer intercept typing in other plugins, such as LearnPress sticky note editors.
