@@ -1,0 +1,16 @@
+/* No-JS and reduced-motion visitors always receive visible content. */
+[data-bkbg-float]{animation:bkbg-floating var(--bkbg-float-duration,6s) ease-in-out var(--bkbg-float-delay,0s) infinite}
+@keyframes bkbg-floating{0%,100%{translate:0 0}50%{translate:var(--bkbg-float-x,0px) var(--bkbg-float-y,-20px)}}
+.bkbg-motion-ready[data-bkbg-entrance]{transition:opacity var(--bkbg-enter-duration,.8s) ease var(--bkbg-enter-delay,0s),translate var(--bkbg-enter-duration,.8s) ease var(--bkbg-enter-delay,0s),scale var(--bkbg-enter-duration,.8s) ease var(--bkbg-enter-delay,0s)}
+.bkbg-motion-ready.bkbg-motion-pending{opacity:0}
+.bkbg-motion-pending[data-bkbg-entrance="fadeInUp"]{translate:0 40px}
+.bkbg-motion-pending[data-bkbg-entrance="fadeInDown"]{translate:0 -40px}
+.bkbg-motion-pending[data-bkbg-entrance="fadeInLeft"]{translate:-40px 0}
+.bkbg-motion-pending[data-bkbg-entrance="fadeInRight"]{translate:40px 0}
+.bkbg-motion-pending[data-bkbg-entrance="zoomIn"]{scale:.85}
+@media(prefers-reduced-motion:reduce){[data-bkbg-float]{animation:none!important}.bkbg-motion-ready[data-bkbg-entrance]{opacity:1!important;translate:none!important;scale:none!important;transition:none!important}}
+
+[data-bkbg-rotate]{animation:bkbg-rotation var(--bkbg-rotate-duration,8s) linear var(--bkbg-rotate-delay,0s) infinite}
+[data-bkbg-rotate][data-bkbg-float]{animation:bkbg-rotation var(--bkbg-rotate-duration,8s) linear var(--bkbg-rotate-delay,0s) infinite,bkbg-floating var(--bkbg-float-duration,6s) ease-in-out var(--bkbg-float-delay,0s) infinite}
+@keyframes bkbg-rotation{to{rotate:360deg}}
+@media(prefers-reduced-motion:reduce){[data-bkbg-rotate]{animation:none!important}}

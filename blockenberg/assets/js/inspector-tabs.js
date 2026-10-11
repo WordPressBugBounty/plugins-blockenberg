@@ -1705,6 +1705,10 @@
                                             setAttributes: props.setAttributes
                                         })
                                     ),
+                                    window.bkbgMotionPanel ? el(window.bkbgMotionPanel, {
+                                        attributes: props.attributes,
+                                        setAttributes: props.setAttributes
+                                    }) : null,
                                     el(PanelBody, {
                                         title: __('Responsive', 'blockenberg'),
                                         initialOpen: false,

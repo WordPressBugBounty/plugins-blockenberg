@@ -120,8 +120,8 @@
 
     /* ── Category tabs ───────────────────────── */
     $tabs.on('click', '.bkbg-tab', function () {
-        $tabs.find('.bkbg-tab').removeClass('bkbg-tab--active');
-        $(this).addClass('bkbg-tab--active');
+        $tabs.find('.bkbg-tab').removeClass('bkbg-tab--active').attr('aria-pressed', 'false');
+        $(this).addClass('bkbg-tab--active').attr('aria-pressed', 'true');
         activeCategory = $(this).data('category');
         applyVisibility();
     });

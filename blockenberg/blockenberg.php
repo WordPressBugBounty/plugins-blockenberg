@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Blockenberg — 600+ Advanced Gutenberg Blocks & AI Agent for WordPress Block Editor
  * Description: Advanced Gutenberg Blocks and an AI Agent for the WordPress Block Editor
- * Version:     2.0.13
+ * Version:     2.0.14
  * Author:      Blockenberg
  * Text Domain: blockenberg
  * Domain Path: /languages
@@ -24,6 +24,13 @@ defined( 'ABSPATH' ) || exit;
  */
 require_once __DIR__ . '/assets/php/google-fonts.php';
 
+// Editable Gutenberg template pilot and shared opt-in motion settings.
+require_once __DIR__ . '/assets/php/motion.php';
+require_once __DIR__ . '/assets/php/template-catalog.php';
+require_once __DIR__ . '/assets/php/template-components.php';
+require_once __DIR__ . '/assets/php/template-dynamics.php';
+require_once __DIR__ . '/assets/php/template-preview.php';
+
 /**
  * User Field block — dynamic PHP render for logged-in profile values.
  */
@@ -40,6 +47,7 @@ require_once __DIR__ . '/assets/php/ai-external.php';
  */
 if ( is_admin() ) {
     require_once __DIR__ . '/assets/php/admin-dashboard.php';
+    require_once __DIR__ . '/assets/php/admin-notices.php';
 }
 
 /**

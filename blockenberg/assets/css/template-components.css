@@ -1,0 +1,67 @@
+/* Preserve source layout; only native editor affordances receive added styling. */
+.editor-styles-wrapper [data-bkbg-component] .block-editor-rich-text__editable { min-width: 1px; }
+.editor-styles-wrapper [data-bkbg-component] textarea.block-editor-plain-text { background: transparent; color: inherit; font: inherit; border: 0; padding: 0; resize: none; }
+.editor-styles-wrapper [data-bkbg-component] iframe { pointer-events: none; }
+.bkbg-template-inspector-richtext { margin-bottom: 16px; }
+.bkbg-template-inspector-richtext > label { display: block; margin-bottom: 8px; }
+.bkbg-template-inspector-richtext .block-editor-rich-text__editable { border: 1px solid #949494; border-radius: 2px; padding: 8px; min-height: 36px; }
+/* Accessible buttons have the same visual box as source pagination spans. */
+[data-bkbg-template] button.swiper-pagination-bullet{appearance:none;padding:0;border:0;min-width:0;min-height:0;box-shadow:none;font:inherit;line-height:normal;cursor:pointer}
+
+/* Responsive pagination must not expose hidden buttons through source display rules. */
+[data-bkbg-template] .swiper-pagination-bullet[hidden]{display:none!important}
+
+/* Keep the shared video close control clear of the player and source button styles. */
+dialog.bkbg-template-video-dialog > button.bkbg-template-video-close {
+    all: unset;
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    left: auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 50% !important;
+    background: transparent !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    transform: none !important;
+    cursor: pointer;
+    opacity: .8;
+    transition: background-color .15s ease, opacity .15s ease;
+}
+dialog.bkbg-template-video-dialog > button.bkbg-template-video-close:hover {
+    background: rgba(255,255,255,.12) !important;
+    opacity: 1;
+}
+dialog.bkbg-template-video-dialog > button.bkbg-template-video-close:focus-visible {
+    outline: 2px solid #fff !important;
+    outline-offset: 2px;
+    opacity: 1;
+}
+dialog.bkbg-template-video-dialog > button.bkbg-template-video-close::before,
+dialog.bkbg-template-video-dialog > button.bkbg-template-video-close::after { content: none !important; }
+dialog.bkbg-template-video-dialog > button.bkbg-template-video-close > svg {
+    display: block !important;
+    width: 24px !important;
+    height: 24px !important;
+    fill: none !important;
+    pointer-events: none;
+}
+
+
+/* Native source pagination retains the exact frontend box and animation. */
+.editor-styles-wrapper [data-bkbg-component] button.swiper-pagination-bullet { appearance:none; padding:0; border:0; min-width:0; min-height:0; box-shadow:none; font:inherit; line-height:normal; cursor:pointer; }
+.bkbg-template-item-actions { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px; }
+.bkbg-template-item-actions .components-button { height:32px; }
+.bkbg-template-item-image { display:grid; grid-template-columns:56px 1fr; align-items:center; gap:10px; margin-bottom:16px; }
+.bkbg-template-item-image > img { width:56px; height:56px; object-fit:cover; border-radius:4px; background:#f0f0f0; }
+.bkbg-template-item-image > .components-base-control { grid-column:1/-1; }

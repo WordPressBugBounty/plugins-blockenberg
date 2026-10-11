@@ -3,7 +3,7 @@ Contributors: blockenberg, alxrlov, olgadev
 Tags: gutenberg, blocks, editor, custom-blocks, page-builder
 Requires at least: 5.6
 Tested up to: 7.1
-Stable tag: 2.0.13
+Stable tag: 2.0.14
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -110,7 +110,24 @@ Absolutely. Each block offers extensive customization options in the block edito
 = Are the blocks accessible? =
 Yes. All blocks are built with accessibility in mind, including keyboard navigation and ARIA labels.
 
+== Template library service ==
+
+The Templates screen fetches catalog metadata from https://templates.blockenberg.com/template-library/v1/index.php. Selecting Import downloads only the chosen template and stylesheet. Template images may be loaded from Blockenberg and King Addons media hosts and are copied into the Media Library when supported. There are no scheduled catalog refresh jobs. The bundled metadata and the last successful catalog remain available when the service is offline.
+
+Premium downloads require the separate Blockenberg Pro companion and a valid paid license. Only that companion supplies the installation ID, license key and licensed site URL to the HTTPS library service for verification. Credentials are never placed in browser JavaScript or download URLs. Existing imported pages retain their native blocks and local stylesheet if Pro is disabled or the service is unavailable.
+
+Service provider: https://blockenberg.com/
+
 == Changelog ==
+
+= 2.0.14 - Oct 11, 2026 =
+* [New] Template Library with 683 editable Gutenberg page templates across 76 collections, search, filters and responsive previews.
+* [New] Native template blocks for layouts, cards, galleries, testimonials, forms, timelines and more.
+* [New] Shared Advanced motion settings with entrance effects, floating motion, rotation and reduced-motion support.
+* [New] Separate Blockenberg Pro companion for licensed premium template imports.
+* [Improved] Refreshed Block Manager, Template Library and AI Agent Settings; matching Pro account, pricing and support screens.
+* [Improved] On-demand template imports with progress indicators, verified downloads and local images and styles.
+* [Fixed] Template styling, typography, images and responsive layouts in the editor and frontend. Template carousels support adding, duplicating, reordering and removing items, with matching pagination and animations.
 
 = 2.0.13 - Sep 12, 2026 =
 * [New] AI Agent in the block editor — describe a page and it builds or edits it with Blockenberg blocks. Connect through OpenRouter (free models included) or optionally pair Codex, Claude, or Cursor with the open editor.

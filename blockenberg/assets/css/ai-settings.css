@@ -1,43 +1,46 @@
 .bkbg-ai-settings {
-    --bkbg-settings-ink: #202124;
-    --bkbg-settings-muted: #646970;
-    --bkbg-settings-border: #e0e2e5;
-    max-width: 1080px;
-    margin: 28px 24px 36px 2px;
+    --bkbg-settings-ink: #232420;
+    --bkbg-settings-muted: #70716a;
+    --bkbg-settings-border: #ddded6;
+    max-width: 1440px;
+    margin: 24px 24px 40px 4px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: var(--bkbg-settings-ink);
 }
 .bkbg-ai-settings *, .bkbg-ai-settings *::before, .bkbg-ai-settings *::after { box-sizing: border-box; }
 .bkbg-ai-settings [hidden] { display: none !important; }
-.bkbg-ai-settings-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; margin-bottom: 26px; }
-.bkbg-ai-settings-eyebrow { margin: 0 0 7px !important; color: var(--bkbg-settings-muted); font-size: 11px !important; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
-.bkbg-ai-settings-header h1 { padding: 0; font-size: 29px; font-weight: 600; line-height: 1.2; letter-spacing: -.65px; }
-.bkbg-ai-settings-header p { margin: 10px 0 0; color: var(--bkbg-settings-muted); font-size: 14px; }
-.bkbg-ai-status { display: inline-flex; flex-shrink: 0; align-items: center; gap: 7px; padding: 7px 11px; border: 1px solid var(--bkbg-settings-border); border-radius: 99px; background: #fff; color: #50575e; font-size: 12px; margin-top: 25px; }
-.bkbg-ai-status-dot { width: 6px; height: 6px; border-radius: 50%; background: #8c8f94; }
-.bkbg-ai-status.is-configured .bkbg-ai-status-dot { background: #32834d; }
-.bkbg-ai-settings-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; }
-.bkbg-ai-settings-card { min-width: 0; padding: 24px; border: 1px solid var(--bkbg-settings-border); border-radius: 11px; background: #fff; }
+.bkbg-ai-settings-header { position: relative; display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; margin-bottom: 24px; padding: 26px 30px 30px; border-radius: 14px; background: #242424; color: #fff; }
+.bkbg-ai-settings-header .bkbg-ai-settings-eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 24px; color: #c5c6c0; font-size: 12px; font-weight: 500; line-height: 1.6; }
+.bkbg-ai-settings-eyebrow svg { flex: none; width: 19px; height: 19px; fill: currentColor; }
+.bkbg-ai-settings-header h1 { margin: 0; padding: 0; color: #fff; font-size: 30px; font-weight: 600; line-height: 1.2; letter-spacing: -.65px; }
+.bkbg-ai-settings-header p { margin: 10px 0 0; color: #c5c6c0; font-size: 13px; line-height: 1.6; }
+.bkbg-ai-status { display: inline-flex; flex-shrink: 0; align-items: center; gap: 7px; padding: 7px 11px; border: 1px solid #55564f; border-radius: 99px; background: transparent; color: #d5d5ce; font-size: 11px; margin-top: 4px; }
+.bkbg-ai-status-dot { width: 6px; height: 6px; border-radius: 50%; background: #8b907f; }
+.bkbg-ai-status.is-configured { color: #e7f395; background: #353a2d; border-color: #586044; }
+.bkbg-ai-status.is-configured .bkbg-ai-status-dot { background: #e7f395; }
+.bkbg-ai-settings-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+.bkbg-ai-settings-card { min-width: 0; padding: 26px; border: 1px solid var(--bkbg-settings-border); border-radius: 12px; background: #fff; }
 .bkbg-ai-card-heading { display: flex; align-items: flex-start; gap: 11px; margin-bottom: 24px; }
-.bkbg-ai-card-heading > .dashicons { display: flex; align-items: center; justify-content: center; width: 33px; height: 33px; flex-shrink: 0; border-radius: 8px; background: #f4f4f5; color: #50575e; font-size: 18px; }
-.bkbg-ai-card-heading h2 { margin: 1px 0 5px; font-size: 15px; font-weight: 600; }
+.bkbg-ai-card-heading > .dashicons { display: flex; align-items: center; justify-content: center; width: 33px; height: 33px; flex-shrink: 0; border: 1px solid #e6e8de; border-radius: 8px; background: #f2f4ea; color: #687653; font-size: 18px; }
+.bkbg-ai-card-heading h2 { margin: 1px 0 5px; font-size: 17px; font-weight: 600; line-height: 1.4; }
 .bkbg-ai-card-heading p { margin: 0; color: var(--bkbg-settings-muted); font-size: 12px; line-height: 1.5; }
 .bkbg-ai-settings .bkbg-ai-field-label { display: block; margin: 0 0 7px; font-size: 12px; font-weight: 600; }
-.bkbg-ai-settings input[type="text"], .bkbg-ai-settings input[type="password"], .bkbg-ai-settings textarea, .bkbg-ai-settings select { width: 100%; max-width: 100%; min-height: 38px; margin: 0; padding: 7px 10px; border: 1px solid #c9cdd2; border-radius: 6px; background-color: #fff; color: var(--bkbg-settings-ink); font-size: 13px; line-height: 1.5; }
-.bkbg-ai-settings input:disabled { background: #f6f7f7; color: #8c8f94; border-color: #dcdcde; }
+.bkbg-ai-settings input[type="text"], .bkbg-ai-settings input[type="password"], .bkbg-ai-settings textarea, .bkbg-ai-settings select { width: 100%; max-width: 100%; min-height: 42px; margin: 0; padding: 10px 12px; border: 1px solid #d6d8cc; border-radius: 6px; background-color: #fff; color: var(--bkbg-settings-ink); font-size: 13px; line-height: 1.5; }
+.bkbg-ai-settings input:disabled { background: #f5f6f0; color: #8b907f; border-color: #e0e3d8; }
 .bkbg-ai-settings textarea { display: block; min-height: 184px; resize: vertical; }
 .bkbg-ai-settings select { padding-right: 28px; white-space: nowrap; text-overflow: ellipsis; }
-.bkbg-ai-settings input[type="number"] { width: 94px; min-height: 35px; border-color: #c9cdd2; border-radius: 6px; }
-.bkbg-ai-settings input:focus, .bkbg-ai-settings textarea:focus, .bkbg-ai-settings select:focus { border-color: #3c434a; box-shadow: 0 0 0 1px #3c434a; outline: 2px solid transparent; }
+.bkbg-ai-settings input[type="number"] { width: 94px; min-height: 42px; padding: 8px 10px; border-color: #d6d8cc; border-radius: 6px; }
+.bkbg-ai-settings input:focus, .bkbg-ai-settings textarea:focus, .bkbg-ai-settings select:focus { border-color: #879768; box-shadow: 0 0 0 1px #879768; outline: 2px solid transparent; }
 .bkbg-ai-settings input[type="checkbox"], .bkbg-ai-settings input[type="radio"] { flex-shrink: 0; margin: 1px 0 0; }
 .bkbg-ai-settings .bkbg-ai-help { margin: 8px 0 0; font-size: 12px; line-height: 1.6; color: var(--bkbg-settings-muted); }
-.bkbg-ai-field-note { margin-top: 16px; padding: 11px 12px; background: #f6f7f7; border-radius: 6px; color: #50575e; font-size: 12px; line-height: 1.55; }
+.bkbg-ai-field-note { margin-top: 16px; padding: 11px 12px; background: #f5f6f0; border-radius: 6px; color: #5f6753; font-size: 12px; line-height: 1.55; }
 .bkbg-ai-card-heading + .bkbg-ai-field-note { margin-top: 0; margin-bottom: 20px; }
 .bkbg-ai-check { display: flex; align-items: flex-start; gap: 8px; font-size: 12px; line-height: 1.5; }
-.bkbg-ai-remove-key { margin-top: 13px; color: #646970; }
+.bkbg-ai-remove-key { margin-top: 13px; color: #70716a; }
 .bkbg-ai-field-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 18px; }
-.bkbg-ai-settings .button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 35px; padding: 0 12px; line-height: 1.2; border-color: #c9cdd2; border-radius: 6px; background: #fff; color: #2c3338; box-shadow: none; }
-.bkbg-ai-settings .button:hover { border-color: #8c8f94; background: #f6f7f7; color: #202124; }
-.bkbg-ai-settings .button:focus-visible, .bkbg-ai-settings a:focus-visible, .bkbg-ai-settings summary:focus-visible { outline: 2px solid #2271b1; outline-offset: 3px; box-shadow: none; }
+.bkbg-ai-settings .button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 38px; padding: 9px 13px; line-height: 1.2; border-color: #d6d8cc; border-radius: 6px; background: #fff; color: #3e4435; box-shadow: none; }
+.bkbg-ai-settings .button:hover { border-color: #8b907f; background: #f5f6f0; color: #232420; }
+.bkbg-ai-settings .button:focus-visible, .bkbg-ai-settings a:focus-visible, .bkbg-ai-settings summary:focus-visible { outline: 2px solid #687653; outline-offset: 3px; box-shadow: none; }
 .bkbg-ai-settings .button:disabled { opacity: .6; }
 .bkbg-ai-settings .button .dashicons,
 .bkbg-ai-field-actions .dashicons {
@@ -47,17 +50,17 @@
     font-size: 16px;
     line-height: 1;
     vertical-align: middle;
-    transform: translateY(1px);
+    transform: none;
 }
 .bkbg-ai-settings .button .dashicons:before,
 .bkbg-ai-field-actions .dashicons:before { line-height: 1; }
-.bkbg-ai-field-actions a { display: inline-flex; align-items: center; gap: 4px; color: #50575e; font-size: 12px; text-decoration: none; }
-.bkbg-ai-field-actions a:hover { color: #1d2327; text-decoration: underline; }
+.bkbg-ai-field-actions a { display: inline-flex; align-items: center; gap: 4px; color: #5f6753; font-size: 12px; text-decoration: none; }
+.bkbg-ai-field-actions a:hover { color: #303b22; text-decoration: underline; }
 .bkbg-ai-inline-status { margin: 12px 0 0; font-size: 12px; line-height: 1.5; }
 .bkbg-ai-inline-status:empty { display: none; }
-.bkbg-ai-inline-status.is-success { color: #246c3b; }
-.bkbg-ai-inline-status.is-error { color: #b32d2e; }
-.bkbg-ai-model-price { margin: 9px 0 0; color: #50575e; font-size: 11px; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; line-height: 1.6; }
+.bkbg-ai-inline-status.is-success { color: #526238; }
+.bkbg-ai-inline-status.is-error { color: #983d26; }
+.bkbg-ai-model-price { margin: 9px 0 0; color: #5f6753; font-size: 11px; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; line-height: 1.6; }
 .bkbg-ai-model-price:empty { display: none; }
 .bkbg-ai-model-combobox { position: relative; }
 .bkbg-ai-settings .bkbg-ai-model-combobox__trigger {
@@ -66,10 +69,10 @@
     justify-content: space-between;
     gap: 8px;
     width: 100%;
-    min-height: 38px;
+    min-height: 42px;
     margin: 0;
-    padding: 7px 10px;
-    border: 1px solid #c9cdd2;
+    padding: 10px 12px;
+    border: 1px solid #d6d8cc;
     border-radius: 6px;
     background: #fff;
     color: var(--bkbg-settings-ink);
@@ -82,8 +85,8 @@
 }
 .bkbg-ai-settings .bkbg-ai-model-combobox.is-open .bkbg-ai-model-combobox__trigger,
 .bkbg-ai-settings .bkbg-ai-model-combobox__trigger:focus {
-    border-color: #3c434a;
-    box-shadow: 0 0 0 1px #3c434a;
+    border-color: #879768;
+    box-shadow: 0 0 0 1px #879768;
     outline: 2px solid transparent;
 }
 .bkbg-ai-model-combobox__value {
@@ -97,7 +100,7 @@
     width: 16px;
     height: 16px;
     font-size: 16px;
-    color: #646970;
+    color: #70716a;
 }
 .bkbg-ai-model-combobox__panel {
     position: absolute;
@@ -106,7 +109,7 @@
     left: 0;
     right: 0;
     padding: 8px;
-    border: 1px solid #c9cdd2;
+    border: 1px solid #d6d8cc;
     border-radius: 8px;
     background: #fff;
     box-shadow: 0 10px 30px rgba(16, 24, 32, .12);
@@ -132,7 +135,7 @@
     gap: 8px;
     padding: 8px 8px 4px;
     background: #fff;
-    color: #646970;
+    color: #70716a;
     font-size: 10px;
     font-weight: 600;
     letter-spacing: .06em;
@@ -165,11 +168,11 @@
 }
 .bkbg-ai-settings .bkbg-ai-model-combobox__option:hover,
 .bkbg-ai-settings .bkbg-ai-model-combobox__option.is-active {
-    background: #f0f0f1;
+    background: #f0f3e8;
     color: var(--bkbg-settings-ink);
 }
 .bkbg-ai-settings .bkbg-ai-model-combobox__option.is-selected {
-    background: #edf0f3;
+    background: #edf1e3;
 }
 .bkbg-ai-model-combobox__empty {
     margin: 8px;
@@ -178,36 +181,36 @@
 }
 #bkbg-ai-custom-model-wrap:not(:first-child) { margin-top: 12px; }
 .bkbg-ai-image-choices { display: grid; gap: 9px; }
-.bkbg-ai-radio-card { display: flex; gap: 9px; padding: 12px; border: 1px solid #dcdcde; border-radius: 7px; cursor: pointer; }
-.bkbg-ai-radio-card:has(input:checked) { border-color: #646970; background: #f6f7f7; }
+.bkbg-ai-radio-card { display: flex; gap: 9px; padding: 12px; border: 1px solid #e0e3d8; border-radius: 7px; cursor: pointer; }
+.bkbg-ai-radio-card:has(input:checked) { border-color: #879768; background: #f0f3e8; }
 .bkbg-ai-radio-card strong { display: block; margin-bottom: 4px; font-size: 12px; font-weight: 600; }
 .bkbg-ai-radio-card small { display: block; font-size: 12px; line-height: 1.5; color: var(--bkbg-settings-muted); }
 .bkbg-ai-image-model-field { margin-top: 19px; }
-.bkbg-ai-image-model-field.is-inactive .bkbg-ai-field-label { color: #646970; }
+.bkbg-ai-image-model-field.is-inactive .bkbg-ai-field-label { color: #70716a; }
 .bkbg-ai-image-model-field.is-inactive .bkbg-ai-model-combobox__trigger {
-    background: #f6f7f7;
-    color: #8c8f94;
-    border-color: #dcdcde;
+    background: #f5f6f0;
+    color: #8b907f;
+    border-color: #e0e3d8;
     cursor: default;
 }
 #bkbg-ai-image-custom-model-wrap:not(:first-child) { margin-top: 12px; }
 .bkbg-ai-settings-advanced { margin-top: 18px; border: 1px solid var(--bkbg-settings-border); border-radius: 10px; background: #fff; }
 .bkbg-ai-settings-advanced summary { display: flex; align-items: center; gap: 9px; padding: 17px 21px; cursor: pointer; list-style: none; font-weight: 600; font-size: 13px; }
 .bkbg-ai-settings-advanced summary::-webkit-details-marker { display: none; }
-.bkbg-ai-settings-advanced summary::after { content: '\203A'; margin-left: auto; color: #646970; font-size: 21px; font-weight: 400; transform: rotate(90deg); }
-.bkbg-ai-settings-advanced[open] summary::after { transform: rotate(-90deg); }
-.bkbg-ai-settings-advanced summary .dashicons { width: 17px; height: 17px; color: #646970; font-size: 17px; }
+.bkbg-ai-settings-advanced summary::after { content: ""; width: 9px; height: 9px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; margin-left: auto; color: #70716a; font-size: 21px; font-weight: 400; transform: rotate(45deg); }
+.bkbg-ai-settings-advanced[open] summary::after { transform: rotate(225deg); }
+.bkbg-ai-settings-advanced summary .dashicons { width: 17px; height: 17px; color: #70716a; font-size: 17px; }
 .bkbg-ai-settings-advanced summary small { margin-left: 10px; font-size: 12px; font-weight: 400; color: var(--bkbg-settings-muted); }
 .bkbg-ai-advanced-fields { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 30px; padding: 8px 24px 24px; }
 .bkbg-ai-advanced-fields > div:first-child { padding-top: 3px; }
 .bkbg-ai-advanced-fields .bkbg-ai-check { font-weight: 600; }
-.bkbg-ai-settings-footer { display: flex; align-items: center; gap: 16px; padding-top: 20px; }
-.bkbg-ai-settings .button-primary { min-height: 38px; padding: 4px 18px; border-color: #242628; background: #242628; color: #fff; font-weight: 500; }
-.bkbg-ai-settings .button-primary:hover { border-color: #101112; background: #101112; color: #fff; }
+.bkbg-ai-settings-footer { display: flex; align-items: center; gap: 16px; margin-top: 24px; padding: 20px 24px; border: 1px solid var(--bkbg-settings-border); border-radius: 12px; background: #fff; }
+.bkbg-ai-settings .button-primary { min-height: 38px; padding: 4px 18px; border-color: #242424; background: #242424; color: #fff; font-weight: 500; }
+.bkbg-ai-settings .button-primary:hover { border-color: #3c4036; background: #3c4036; color: #fff; }
 .bkbg-ai-settings-footer > span { font-size: 12px; color: var(--bkbg-settings-muted); }
 .bkbg-ai-settings .notice { margin: 0 0 20px; }
 @media (max-width: 1100px) {
-    .bkbg-ai-settings { max-width: 780px; }
+    .bkbg-ai-settings { max-width: 1440px; }
     .bkbg-ai-settings-card { padding: 20px; }
     .bkbg-ai-settings-grid { gap: 14px; }
 }
@@ -220,3 +223,25 @@
     .bkbg-ai-settings-advanced summary small { display: none; }
     .bkbg-ai-settings-footer { flex-wrap: wrap; }
 }
+
+/* Shared admin palette, with controls scoped to this route. */
+body.blockenberg_page_blockenberg-ai,body.blockenberg_page_blockenberg-ai #wpcontent { background: #f8f8f5; }
+.bkbg-ai-settings :is(input,textarea,select,button) { font-family: inherit; }
+.bkbg-ai-settings :is(input,textarea)::placeholder { color: #858a7b; opacity: 1; }
+.bkbg-ai-settings input[type=checkbox],.bkbg-ai-settings input[type=radio] { appearance: none; width: 17px; height: 17px; min-width: 17px; min-height: 17px; padding: 0; margin: 1px 0 0; border: 1px solid #b9beae; background: #fff; box-shadow: none; }
+.bkbg-ai-settings input[type=checkbox] { border-radius: 4px; }
+.bkbg-ai-settings input[type=radio] { border-radius: 50%; }
+.bkbg-ai-settings :is(input[type=checkbox],input[type=radio]):checked { background: #fff; border-color: #687653; }
+.bkbg-ai-settings input[type=radio]:checked::before { content: ""; display: block; float: none; width: 7px; height: 7px; margin: 4px; border-radius: 50%; background: #687653; }
+.bkbg-ai-settings input[type=checkbox]:checked::before { content: ""; display: block; float: none; width: 5px; height: 9px; margin: 1px 0 0 5px; border: 2px solid #687653; border-top: 0; border-left: 0; transform: rotate(45deg); }
+.bkbg-ai-settings :is(input[type=checkbox],input[type=radio]):focus-visible { outline: 2px solid #879768; outline-offset: 3px; }
+.bkbg-ai-settings-card[aria-labelledby=bkbg-ai-editor-heading] { grid-column: 1 / -1; }
+.bkbg-ai-settings-card[aria-labelledby=bkbg-ai-context-heading] textarea { min-height: 230px; }
+.bkbg-ai-settings .bkbg-ai-model-combobox__trigger .dashicons { display: grid; place-items: center; height: 16px; line-height: 16px; }
+.bkbg-ai-settings .bkbg-ai-model-combobox__panel { border-color: #d6d8cc; box-shadow: 0 12px 32px #23242015; }
+.bkbg-ai-settings .bkbg-ai-model-combobox__panel input[type=search] { border: 1px solid #d6d8cc; border-radius: 6px; padding: 8px 10px; min-height: 38px; background: #f8f8f5; }
+.bkbg-ai-inline-status:not(:empty) { padding: 11px 12px; border-radius: 7px; background: #f5f6f0; }
+.bkbg-ai-inline-status.is-success { background: #edf1e3; }
+.bkbg-ai-inline-status.is-error { background: #f7eae5; }
+@media(max-width:782px) { .bkbg-ai-settings { margin: 18px 16px 36px 0; } .bkbg-ai-settings-header { padding: 24px; } }
+@media(max-width:520px) { .bkbg-ai-settings-header { display: block; padding: 22px 20px; } .bkbg-ai-settings-header h1 { font-size: 27px; } .bkbg-ai-settings-header .bkbg-ai-settings-eyebrow { margin-bottom: 24px; padding-right: 110px; } .bkbg-ai-status { position: absolute; top: 22px; right: 20px; font-size: 10px; padding: 5px 8px; margin: 0; } .bkbg-ai-settings-grid { gap: 16px; } .bkbg-ai-settings-card { padding: 20px; } .bkbg-ai-settings .button { min-height: 42px; } .bkbg-ai-settings-footer { padding: 18px 20px; gap: 12px; } }

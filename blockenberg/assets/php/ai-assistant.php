@@ -155,14 +155,14 @@ function bkbg_ai_sanitize_settings( $posted, $current ) {
 }
 
 /* ──────────────────────────────────────────────
- * 2. Settings screen (Blockenberg → AI Agent)
+ * 2. Settings screen (Blockenberg → AI Agent Settings)
  * ────────────────────────────────────────────── */
 
 add_action( 'admin_menu', function () {
     add_submenu_page(
         'blockenberg',
-        __( 'AI Agent', 'blockenberg' ),
-        __( 'AI Agent', 'blockenberg' ),
+        __( 'AI Agent Settings', 'blockenberg' ),
+        __( 'AI Agent Settings', 'blockenberg' ),
         'manage_options',
         'blockenberg-ai',
         'bkbg_ai_render_settings_page'
@@ -250,8 +250,8 @@ function bkbg_ai_render_settings_page() {
     <div class="wrap bkbg-ai-settings">
         <header class="bkbg-ai-settings-header">
             <div>
-                <p class="bkbg-ai-settings-eyebrow">Blockenberg</p>
-                <h1><?php esc_html_e( 'AI Agent', 'blockenberg' ); ?></h1>
+                <p class="bkbg-ai-settings-eyebrow"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="8" height="8" rx="1.5"/><rect x="14" y="2" width="8" height="8" rx="1.5"/><rect x="2" y="14" width="8" height="8" rx="1.5"/><rect x="14" y="14" width="8" height="8" rx="1.5"/></svg><span>Blockenberg</span></p>
+                <h1><?php esc_html_e( 'AI Agent Settings', 'blockenberg' ); ?></h1>
                 <p><?php esc_html_e( 'Build and edit pages by chatting in the WordPress editor.', 'blockenberg' ); ?></p>
             </div>
             <span id="bkbg-ai-connection-status" class="bkbg-ai-status<?php echo $has_key ? ' is-configured' : ''; ?>">
@@ -285,7 +285,7 @@ function bkbg_ai_render_settings_page() {
                             aria-describedby="bkbg-ai-key-help" />
                         <p id="bkbg-ai-key-help" class="bkbg-ai-help"><?php esc_html_e( 'Your saved key stays on the server. Enter a new key to replace it.', 'blockenberg' ); ?></p>
                         <?php if ( ! empty( $s['api_key'] ) ) : ?>
-                            <label class="bkbg-ai-check bkbg-ai-remove-key"><input type="checkbox" id="bkbg-ai-remove-key" name="remove_api_key" value="1" /><?php esc_html_e( 'Remove the saved key when I save', 'blockenberg' ); ?></label>
+                            <label class="bkbg-ai-check bkbg-ai-remove-key"><input type="checkbox" id="bkbg-ai-remove-key" name="remove_api_key" value="1" /><?php esc_html_e( 'Hide the saved key: Once the key is successfully saved, clear the input field so the key is no longer visible.', 'blockenberg' ); ?></label>
                         <?php endif; ?>
                     <?php endif; ?>
                     <div class="bkbg-ai-field-actions">
@@ -560,7 +560,7 @@ function bkbg_ai_rest_save_preferences( WP_REST_Request $request ) {
 function bkbg_ai_rest_chat( WP_REST_Request $request ) {
     $key = bkbg_ai_get_api_key();
     if ( '' === $key ) {
-        return new WP_Error( 'bkbg_ai_no_key', __( 'No OpenRouter API key is configured. Add one under Blockenberg → AI Agent.', 'blockenberg' ), array( 'status' => 400 ) );
+        return new WP_Error( 'bkbg_ai_no_key', __( 'No OpenRouter API key is configured. Add one under Blockenberg → AI Agent Settings.', 'blockenberg' ), array( 'status' => 400 ) );
     }
 
     $settings = bkbg_ai_get_settings();
@@ -744,7 +744,7 @@ function bkbg_ai_stream_completion( $payload ) {
  */
 function bkbg_ai_openrouter_post( $path, $payload, $timeout = 120 ) {
     if ( '' === bkbg_ai_get_api_key() ) {
-        return new WP_Error( 'bkbg_ai_no_key', __( 'No OpenRouter API key is configured. Add one under Blockenberg → AI Agent.', 'blockenberg' ), array( 'status' => 400 ) );
+        return new WP_Error( 'bkbg_ai_no_key', __( 'No OpenRouter API key is configured. Add one under Blockenberg → AI Agent Settings.', 'blockenberg' ), array( 'status' => 400 ) );
     }
 
     $response = wp_remote_post( 'https://openrouter.ai/api/v1/' . ltrim( $path, '/' ), array(
@@ -1101,7 +1101,7 @@ function bkbg_ai_generate_image( $prompt, $model ) {
             'bkbg_ai_no_image',
             sprintf(
                 /* translators: %s: model id */
-                __( 'The model %s did not return an image. Pick an image-capable model under Blockenberg → AI Agent.', 'blockenberg' ),
+                __( 'The model %s did not return an image. Pick an image-capable model under Blockenberg → AI Agent Settings.', 'blockenberg' ),
                 $model
             ),
             array( 'status' => 502 )

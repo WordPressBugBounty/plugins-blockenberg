@@ -17,13 +17,21 @@ defined( 'ABSPATH' ) || exit;
  * ────────────────────────────────────────────── */
 add_action( 'admin_menu', function () {
     add_menu_page(
-        __( 'Blockenberg', 'blockenberg' ),
+        __( 'Blocks', 'blockenberg' ),
         __( 'Blockenberg', 'blockenberg' ),
         'manage_options',
         'blockenberg',
         'bkbg_render_dashboard',
         'dashicons-screenoptions',
         59
+    );
+    add_submenu_page(
+        'blockenberg',
+        __( 'Blocks', 'blockenberg' ),
+        __( 'Blocks', 'blockenberg' ),
+        'manage_options',
+        'blockenberg',
+        'bkbg_render_dashboard'
     );
 } );
 
@@ -222,11 +230,12 @@ function bkbg_render_dashboard() {
         <!-- ▸ Header -->
         <header class="bkbg-header">
             <div class="bkbg-header__left">
-                <div class="bkbg-header__logo">
-                    <span class="dashicons dashicons-screenoptions"></span>
+                <div class="bkbg-header__brand">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="8" height="8" rx="2"/><rect x="14" y="2" width="8" height="8" rx="2"/><rect x="2" y="14" width="8" height="8" rx="2"/><rect x="14" y="14" width="8" height="8" rx="2"/></svg>
+                    <span>blockenberg.</span>
                 </div>
                 <div class="bkbg-header__text">
-                    <h1><?php esc_html_e( 'Blockenberg', 'blockenberg' ); ?></h1>
+                    <h1><?php esc_html_e( 'Blocks', 'blockenberg' ); ?></h1>
                     <p class="bkbg-header__subtitle">
                         <?php
                         printf(
@@ -240,8 +249,16 @@ function bkbg_render_dashboard() {
                 </div>
             </div>
             <div class="bkbg-header__right">
+                <nav class="bkbg-header__links" aria-label="<?php esc_attr_e( 'Blockenberg resources', 'blockenberg' ); ?>">
+                    <a href="<?php echo esc_url( admin_url( 'admin.php?page=blockenberg-templates' ) ); ?>"><?php esc_html_e( 'Template Library', 'blockenberg' ); ?></a>
+                    <a href="<?php echo esc_url( admin_url( 'admin.php?page=blockenberg-ai' ) ); ?>"><?php esc_html_e( 'AI Agent Settings', 'blockenberg' ); ?></a>
+                    <a href="https://blockenberg.com/docs/" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Docs', 'blockenberg' ); ?> ↗</a>
+                </nav>
+                <div class="bkbg-header__controls">
                 <div class="bkbg-search-wrap">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 5 5"/></svg>
                     <input type="text" id="bkbg-search" class="bkbg-search"
+                           aria-label="<?php esc_attr_e( 'Search blocks', 'blockenberg' ); ?>"
                            placeholder="<?php esc_attr_e( 'Search blocks…', 'blockenberg' ); ?>"
                            autocomplete="off" />
                 </div>
@@ -249,13 +266,16 @@ function bkbg_render_dashboard() {
                     <span class="dashicons dashicons-cloud-saved"></span>
                     <?php esc_html_e( 'Save Changes', 'blockenberg' ); ?>
                 </button>
+                </div>
             </div>
         </header>
 
         <!-- ▸ Toolbar -->
-        <div class="bkbg-toolbar">
+        <div class="bkbg-workspace">
+        <aside class="bkbg-toolbar" aria-label="<?php esc_attr_e( 'Block categories', 'blockenberg' ); ?>">
+            <p class="bkbg-toolbar__label"><?php esc_html_e( 'Categories', 'blockenberg' ); ?></p>
             <div class="bkbg-toolbar__tabs" id="bkbg-category-tabs">
-                <button type="button" class="bkbg-tab bkbg-tab--active" data-category="all">
+                <button type="button" class="bkbg-tab bkbg-tab--active" data-category="all" aria-pressed="true">
                     <?php esc_html_e( 'All Blocks', 'blockenberg' ); ?>
                     <span class="bkbg-tab__count"><?php echo intval( $total_blocks ); ?></span>
                 </button>
@@ -263,7 +283,7 @@ function bkbg_render_dashboard() {
                     $label = isset( $category_labels[ $cat_slug ] ) ? $category_labels[ $cat_slug ] : $cat_slug;
                     $icon  = isset( $category_icons[ $cat_slug ] ) ? $category_icons[ $cat_slug ] : 'dashicons-block-default';
                     ?>
-                    <button type="button" class="bkbg-tab" data-category="<?php echo esc_attr( $cat_slug ); ?>">
+                    <button type="button" class="bkbg-tab" data-category="<?php echo esc_attr( $cat_slug ); ?>" aria-pressed="false">
                         <span class="dashicons <?php echo esc_attr( $icon ); ?>"></span>
                         <?php echo esc_html( $label ); ?>
                         <span class="bkbg-tab__count"><?php echo count( $cat_blocks ); ?></span>
@@ -278,11 +298,12 @@ function bkbg_render_dashboard() {
                     <?php esc_html_e( 'Disable All', 'blockenberg' ); ?>
                 </button>
             </div>
-        </div>
+        </aside>
 
         <!-- ▸ Toast notification -->
         <div id="bkbg-toast" class="bkbg-toast" aria-live="polite"></div>
 
+        <main class="bkbg-workspace__content" aria-label="<?php esc_attr_e( 'Available blocks', 'blockenberg' ); ?>">
         <!-- ▸ Block grid -->
         <div class="bkbg-grid" id="bkbg-grid">
             <?php foreach ( $ordered as $cat_slug => $cat_blocks ) :
@@ -338,6 +359,7 @@ function bkbg_render_dashboard() {
                                 <label class="bkbg-toggle">
                                     <input type="checkbox"
                                            class="bkbg-toggle__input"
+                                           aria-label="<?php echo esc_attr( sprintf( __( 'Enable %s', 'blockenberg' ), $block['title'] ) ); ?>"
                                            data-block="<?php echo esc_attr( $block['name'] ); ?>"
                                            <?php checked( ! $is_disabled ); ?> />
                                     <span class="bkbg-toggle__slider"></span>
@@ -353,6 +375,8 @@ function bkbg_render_dashboard() {
         <div id="bkbg-empty" class="bkbg-empty" style="display:none;">
             <span class="dashicons dashicons-search"></span>
             <p><?php esc_html_e( 'No blocks match your search.', 'blockenberg' ); ?></p>
+        </div>
+        </main>
         </div>
 
     </div>

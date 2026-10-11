@@ -1,0 +1,12 @@
+.bkbg-admin-notices {margin:20px 0 24px;color:#34362f;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.bkbg-admin-notices[hidden] {display:none!important}
+.bkbg-admin-notices :is(.notice,.updated,.error,.update-nag,.fs-notice) {position:relative;box-sizing:border-box;margin:0 0 12px!important;padding:12px 15px;border-radius:8px;box-shadow:none;font-size:12px;line-height:1.6}
+.bkbg-admin-notices :is(.notice,.updated,.error,.update-nag,.fs-notice):last-child {margin-bottom:0!important}
+.bkbg-admin-notices .fs-notice label.fs-plugin-title {display:block;position:static;margin:0 0 3px;padding:0;background:transparent;color:#70716a;border-radius:0;font-size:10px;line-height:1.6;font-weight:500}
+.bkbg-admin-notices .fs-notice .fs-notice-body {margin:0;padding:0 78px 0 0}
+.bkbg-admin-notices .fs-notice .fs-close {position:absolute;top:12px;right:15px;float:none}
+.bkbg-admin-notices .fs-notice .fs-close>* {margin-top:0}
+.bkbg-catalog-header:has(+.bkbg-admin-notices:not([hidden])),
+.bkbg-ai-settings-header:has(+.bkbg-admin-notices:not([hidden])) {margin-bottom:0}
+#bkbg-dashboard .bkbg-admin-notices:not([hidden])+.bkbg-workspace {margin-top:24px}
+@media(max-width:520px) {.bkbg-admin-notices {margin:16px 0 20px}.bkbg-admin-notices .fs-notice .fs-close {min-height:32px}}
