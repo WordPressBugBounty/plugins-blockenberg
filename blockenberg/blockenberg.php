@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Blockenberg — 600+ Advanced Gutenberg Blocks & AI Agent for WordPress Block Editor
- * Description: Advanced Gutenberg Blocks and an AI Agent for the WordPress Block Editor
- * Version:     2.0.14
+ * Description: Build websites with 618 advanced Gutenberg blocks, 683 page templates, 3,002 ready-made sections and an AI Agent for the WordPress Block Editor.
+ * Version:     2.0.15
  * Author:      Blockenberg
  * Text Domain: blockenberg
  * Domain Path: /languages
@@ -30,6 +30,7 @@ require_once __DIR__ . '/assets/php/template-catalog.php';
 require_once __DIR__ . '/assets/php/template-components.php';
 require_once __DIR__ . '/assets/php/template-dynamics.php';
 require_once __DIR__ . '/assets/php/template-preview.php';
+require_once __DIR__ . '/assets/php/section-library.php';
 
 /**
  * User Field block — dynamic PHP render for logged-in profile values.

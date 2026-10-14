@@ -165,6 +165,8 @@
 
     // Match King Addons: a new search/category/collection/tag replaces the previous filter.
     function resetOtherFilters(active) {
+        // Section searches combine purpose, tags, collection and access.
+        if (root.classList.contains('bkbg-section-view')) return;
         var form = root.querySelector('#bkbg-catalog-filters');
         form.querySelectorAll('input[name="s"],select[name="category"],select[name="collection"],input[name="tags[]"],input[name="plan"]').forEach(function (node) {
             if (node === active) return;

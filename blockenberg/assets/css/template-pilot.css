@@ -84,3 +84,6 @@ body.bkbg-template-canvas .bkbg-template-page{overflow:visible!important}
 /* Imported canvas pages have their own padding. Theme padding changes their
    column widths and breakpoints inside the Gutenberg iframe. */
 .editor-styles-wrapper .is-root-container:has(>.bkbg-template-page){padding-inline:0!important}
+
+/* Restored source decorations also respect reduced-motion preferences. */
+@media(prefers-reduced-motion:reduce){[data-bkbg-template] .bkbg-tpl-element{animation:none!important}}

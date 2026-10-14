@@ -1,16 +1,39 @@
-=== Blockenberg — 600+ Advanced Gutenberg Blocks & AI Agent for WordPress Block Editor ===
+=== Blockenberg — 618 Advanced Gutenberg Blocks, 683 Templates and AI Agent for WordPress Block Editor ===
 Contributors: blockenberg, alxrlov, olgadev
 Tags: gutenberg, blocks, editor, custom-blocks, page-builder
 Requires at least: 5.6
 Tested up to: 7.1
-Stable tag: 2.0.14
+Stable tag: 2.0.15
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-600+ Gutenberg blocks plus an AI Agent for layouts, content, media, marketing, charts, calculators, testimonials, tables, maps, videos and more.
+Build professional websites faster with ready-made pages and sections, plus flexible layout, typography, color, and spacing controls.
 
 == Description ==
-Blockenberg is an advanced Gutenberg block library with 600+ lightweight, professional blocks and an AI Agent for WordPress. Build landing pages, business sites, blogs, documentation, comparison pages, review content, interactive tools, and rich editorial layouts faster — all inside the native block editor.
+Blockenberg is an advanced Gutenberg block library with 618 lightweight Gutenberg blocks, 683 editable page templates across 76 collections, 3,002 ready-made sections and an AI Agent for WordPress. Build landing pages, business sites, blogs, documentation, comparison pages, review content, interactive tools, and rich editorial layouts faster — all inside the native block editor.
+
+[Visit the Blockenberg website](https://blockenberg.com/)
+
+**Template Library**
+
+Start with a complete page design instead of a blank canvas. Explore 683 editable page templates across 76 collections for business websites, landing pages, portfolios, and more.
+
+- Find designs with live search, categories, tags, and Free/Pro filters.
+- Preview layouts on desktop, tablet, and mobile before importing.
+- Import a template as a draft and customize its text, images, colors, and layout in Gutenberg.
+- Choose from free templates or unlock premium designs with Blockenberg Pro.
+
+**Section Library**
+
+Build a page section by section. Browse 3,002 ready-made sections extracted from our templates, including hero areas, features, pricing, testimonials, teams, FAQs, contact layouts, and more. Each section includes a description and searchable tags.
+
+- Search by purpose, content, industry, or style, and filter by section type, collection, and Free/Pro access.
+- Preview a section on desktop, tablet, or mobile.
+- In Gutenberg, add the **Blockenberg Sections** block with the + inserter, or click **Sections** in the editor toolbar to browse and insert at your chosen position. Use **Add section** below the last block to append a section to the end of the page.
+- Customize the inserted blocks, add or remove cards, and move or duplicate complete sections.
+- Sections from free templates are free; sections from Pro templates require an active Blockenberg Pro license to insert.
+
+[Explore Template Library](https://blockenberg.com/templates/)
 
 Instead of combining multiple block plugins, Blockenberg gives you one consistent toolkit with shared design controls, responsive settings, modern styling options, and performance-focused frontend output.
 
@@ -27,8 +50,11 @@ From simple content blocks to advanced interactive elements, Blockenberg is buil
 **AI Agent:**
 Open the AI Agent sidebar in the block editor and describe what to build. It inserts and edits Blockenberg blocks on the page. Powered by OpenRouter, including free models, so you can start without a paid plan. You can also connect a local Codex, Claude, or Cursor session to the same open editor.
 
+[Explore AI Agent](https://blockenberg.com/ai-agent/)
+
 **Key Features:**
-- 600+ blocks covering page building, content, marketing, media, business, charts, utilities, and more
+- 618 blocks covering page building, content, marketing, media, business, charts, utilities, and more
+- Template Library — 683 editable page templates across 76 collections and 3,002 ready-made sections
 - AI Agent in the editor — build and edit pages in chat via OpenRouter (free models included) or Codex, Claude, and Cursor
 - Consistent controls for colors, typography, spacing, borders, shadows, layout, and responsiveness
 - Accessibility-first design with keyboard support and thoughtful frontend behavior
@@ -110,17 +136,28 @@ Absolutely. Each block offers extensive customization options in the block edito
 = Are the blocks accessible? =
 Yes. All blocks are built with accessibility in mind, including keyboard navigation and ARIA labels.
 
-== Template library service ==
+= Which templates are free? =
+Templates marked Free in the Template Library can be imported without Blockenberg Pro. Use the Free filter to find them. Templates marked Pro require an active Blockenberg Pro license to import.
 
-The Templates screen fetches catalog metadata from https://templates.blockenberg.com/template-library/v1/index.php. Selecting Import downloads only the chosen template and stylesheet. Template images may be loaded from Blockenberg and King Addons media hosts and are copied into the Media Library when supported. There are no scheduled catalog refresh jobs. The bundled metadata and the last successful catalog remain available when the service is offline.
+= Do I need Blockenberg Pro to use the plugin? =
+No. The Gutenberg block library, free templates and AI Agent are available in the free plugin. Blockenberg Pro is a separate companion that unlocks premium template imports. The AI Agent uses your own OpenRouter connection; model availability and usage costs depend on the selected model and provider.
 
-Premium downloads require the separate Blockenberg Pro companion and a valid paid license. Only that companion supplies the installation ID, license key and licensed site URL to the HTTPS library service for verification. Credentials are never placed in browser JavaScript or download URLs. Existing imported pages retain their native blocks and local stylesheet if Pro is disabled or the service is unavailable.
+= Can I edit an imported template? =
+Yes. Templates are imported as draft pages with native Blockenberg blocks. Open the draft in the WordPress block editor to customize text, images, colors, typography and layouts before publishing.
 
-Service provider: https://blockenberg.com/
+= What happens to imported pages if I deactivate Blockenberg Pro? =
+Existing imported pages keep their content and saved styles. You can continue to edit them with the free Blockenberg plugin active. Importing additional premium templates requires Blockenberg Pro and an active license.
+
+= Can I insert individual sections instead of importing a complete page? =
+Yes. Open the Sections tab in the Template Library, use the Sections toolbar button, click Add section below the last block, or add the Blockenberg Sections block in Gutenberg. Search, preview, and insert a section into your current page, then edit its blocks. The section inherits the Free or Pro access of its source template. Already inserted sections remain editable and visible with the base Blockenberg plugin active, even if Pro is later deactivated.
 
 == Changelog ==
 
+= 2.0.15 - Oct 14, 2026 =
+* [New] Section Library with 3,002 editable sections, descriptions, tags, search, filters, and responsive previews.
+
 = 2.0.14 - Oct 11, 2026 =
+* [Fixed] Restored looping image and decorative animations across templates, including the Broadband astronaut. Existing imported pages receive the fix without reimporting.
 * [New] Template Library with 683 editable Gutenberg page templates across 76 collections, search, filters and responsive previews.
 * [New] Native template blocks for layouts, cards, galleries, testimonials, forms, timelines and more.
 * [New] Shared Advanced motion settings with entrance effects, floating motion, rotation and reduced-motion support.

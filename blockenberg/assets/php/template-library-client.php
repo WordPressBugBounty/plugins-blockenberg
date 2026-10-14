@@ -2,6 +2,22 @@
 /** Remote library transport. The free plugin contains no licensing SDK. */
 defined('ABSPATH') || exit;
 
+/** Alternate Free and Pro designs before pagination, keeping each group's original order. */
+function bkbg_library_mix_access_entries($entries) {
+    $free = $premium = $mixed = array();
+    foreach ($entries as $entry) {
+        if (($entry['plan'] ?? '') === 'free') $free[] = $entry;
+        else $premium[] = $entry;
+    }
+    $free_count = count($free); $premium_count = count($premium);
+    for ($index = 0; $index < max($free_count, $premium_count); $index++) {
+        if ($index < $free_count) $mixed[] = $free[$index];
+        if ($index < $premium_count) $mixed[] = $premium[$index];
+    }
+    return $mixed;
+}
+require_once __DIR__ . '/template-motion-css.php';
+
 function bkbg_library_endpoint() {
     return defined('BKBG_TEMPLATE_LIBRARY_ENDPOINT') ? BKBG_TEMPLATE_LIBRARY_ENDPOINT : 'https://templates.blockenberg.com/template-library/v1/index.php';
 }
@@ -16,7 +32,7 @@ function bkbg_library_credentials() {
 function bkbg_library_request($action, $body = null) {
     $url = add_query_arg('action', $action, bkbg_library_endpoint());
     if (wp_parse_url($url, PHP_URL_SCHEME) !== 'https') return new WP_Error('bkbg_library_https', __('The template library requires HTTPS.', 'blockenberg'));
-    $args = array('timeout' => $action === 'catalog' ? 10 : 60, 'redirection' => 0, 'limit_response_size' => 20 * MB_IN_BYTES, 'headers' => array('Accept' => 'application/json'));
+    $args = array('timeout' => in_array($action,array('catalog','sections'),true) ? 10 : 60, 'redirection' => 0, 'limit_response_size' => 20 * MB_IN_BYTES, 'headers' => array('Accept' => 'application/json'));
     if ($body !== null) {
         $args['headers']['Content-Type'] = 'application/json';
         $args['body'] = wp_json_encode($body);
@@ -146,7 +162,7 @@ function bkbg_library_template_bundle($key, $authoring_preview = false, $retried
     if (!is_array($data) || ($data['key'] ?? '') !== $key || empty($data['blocks']) || !is_array($data['blocks'])) return new WP_Error('bkbg_library_bundle', __('Invalid template data.', 'blockenberg'));
     $valid = bkbg_template_validate_nodes($data['blocks']); if (is_wp_error($valid)) return $valid;
     $assets = bkbg_library_assets_url();
-    $css = bkbg_library_resolve_css_assets($css);
+    $css = bkbg_template_repair_keyframes(bkbg_library_resolve_css_assets($css));
     $style_url = bkbg_library_store_css($key, $css, hash('sha256', $css));
     if (is_wp_error($style_url)) return $style_url;
     foreach ($data['blocks'] as &$node) if (($node['blockName'] ?? '') === 'blockenberg/template-page') $node['attrs']['templateStyleUrl'] = $style_url;
@@ -159,10 +175,11 @@ function bkbg_library_enqueue_template_style($key, $explicit = '') {
         // Compatibility for developer previews and older imports, using only local files.
         $css_file = bkbg_library_authoring_file($key, 'css');
         if (!$css_file) return;
-        $css = bkbg_library_resolve_css_assets(file_get_contents($css_file));
+        $css = bkbg_template_repair_keyframes(bkbg_library_resolve_css_assets(file_get_contents($css_file)));
         $url = bkbg_library_store_css($key, $css, hash('sha256', $css));
         if (is_wp_error($url)) return;
     }
+    $url = bkbg_library_repaired_style_url($key, $url);
     wp_enqueue_style('bkbg-template-' . $key . '-' . substr(hash('sha256', $url), 0, 10), $url, array('bkbg-template-pilot'), null);
 }
 
@@ -175,5 +192,7 @@ add_action('admin_post_bkbg_refresh_template_library', function(){
     if(is_wp_error($remote)||!bkbg_library_catalog_valid($remote))wp_die(esc_html(is_wp_error($remote)?$remote->get_error_message():'Invalid library catalog.'));
     set_transient('bkbg_remote_library_catalog_v2',$remote,DAY_IN_SECONDS);
     update_option('bkbg_remote_library_last_catalog_v2',$remote,false);
-    wp_safe_redirect(admin_url('admin.php?page=blockenberg-templates'));exit;
+    if(function_exists('bkbg_sections_catalog'))bkbg_sections_catalog(true);
+    $view=isset($_POST['view'])&&is_string($_POST['view'])?sanitize_key(wp_unslash($_POST['view'])):'templates';
+    wp_safe_redirect(add_query_arg('view',in_array($view,array('templates','sections','collections'),true)?$view:'templates',admin_url('admin.php?page=blockenberg-templates')));exit;
 });
