@@ -45,7 +45,7 @@
         return s;
       })();
 
-      return el('div', { className: 'bkte-wrap', style: wrapStyle },
+      return el('div', window.wp.blockEditor.useBlockProps({ className: 'bkte-wrap', style: wrapStyle }),
         el(InspectorControls, null,
           el(PanelBody, { title: __('Content'), initialOpen: true },
             el(TextControl, { label: __('Static Prefix Text'), value: a.prefix, onChange: v => set({prefix:v}) }),

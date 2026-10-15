@@ -29,7 +29,7 @@
             function updateChapter(idx, field, val) {
                 var updated = chapters.map(function (ch, i) {
                     if (i !== idx) return ch;
-                    var patch = {}; patch[field] = val;
+                    var patch = {}; Object.assign(patch, typeof field === 'object' ? field : { [field]: val });
                     return Object.assign({}, ch, patch);
                 });
                 set({ chapters: updated });
@@ -192,7 +192,7 @@
                             !ch.imageUrl && el('span', { style: { color: '#a5b4fc', fontSize: '12px', textAlign: 'center', padding: '8px' } }, __('No image', 'blockenberg')),
                             el(MediaUploadCheck, {},
                                 el(MediaUpload, {
-                                    onSelect: function (m) { updateChapter(idx, 'imageUrl', m.url); updateChapter(idx, 'imageId', m.id); updateChapter(idx, 'imageAlt', m.alt || ''); },
+                                    onSelect: function (m) { updateChapter(idx, { imageUrl: m.url, imageId: m.id, imageAlt: m.alt || '' }); },
                                     allowedTypes: ['image'],
                                     value: ch.imageId,
                                     render: function (ref) {

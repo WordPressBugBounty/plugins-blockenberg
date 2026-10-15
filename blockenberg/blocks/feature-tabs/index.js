@@ -159,7 +159,7 @@
             }
 
             function updateTab(id, key, val) {
-                setAttributes({ tabs: a.tabs.map(function (t) { if (t.id !== id) return t; var u = Object.assign({}, t); u[key] = val; return u; }) });
+                setAttributes({ tabs: a.tabs.map(function (t) { if (t.id !== id) return t; var u = Object.assign({}, t); Object.assign(u, typeof key === 'object' ? key : { [key]: val }); return u; }) });
             }
 
             var safeActive = Math.min(active, Math.max(0, a.tabs.length - 1));
@@ -234,7 +234,7 @@
                                 el(TextareaControl, { label: __('Description', 'blockenberg'), value: tab.description, onChange: function (v) { updateTab(tab.id, 'description', v); }, rows: 3 }),
                                 el(MediaUploadCheck, null,
                                     el(MediaUpload, {
-                                        onSelect: function (m) { updateTab(tab.id, 'imageUrl', m.url); updateTab(tab.id, 'imageId', m.id); },
+                                        onSelect: function (m) { updateTab(tab.id, { imageUrl: m.url, imageId: m.id }); },
                                         allowedTypes: ['image'], value: tab.imageId,
                                         render: function (p) { return el('div', null,
                                             tab.imageUrl && el('img', { src: tab.imageUrl, style: { width: '100%', borderRadius: '6px', marginBottom: '6px' } }),

@@ -54,7 +54,7 @@
         attrs.curlCorner ? 'bksn-curl' : ''
       ].filter(Boolean).join( ' ' );
 
-      return el( 'div', null,
+      return el( 'div', window.wp.blockEditor.useBlockProps({}),
         el( InspectorControls, null,
           el( PanelBody, { title: __( 'Note Style', 'blockenberg' ), initialOpen: true },
             el( SelectControl, {

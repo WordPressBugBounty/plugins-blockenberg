@@ -67,7 +67,7 @@
     edit: function ( props ) {
       var attrs = props.attributes;
       var setAttr = props.setAttributes;
-      return el( 'div', null,
+      return el( 'div', window.wp.blockEditor.useBlockProps({}),
         el( InspectorControls, null,
           el( PanelBody, { title: __('Labels','blockenberg'), initialOpen: true },
             el( TextControl, { label:__('Previous Label','blockenberg'), value:attrs.prevLabel, onChange:function(v){setAttr({prevLabel:v});} } ),

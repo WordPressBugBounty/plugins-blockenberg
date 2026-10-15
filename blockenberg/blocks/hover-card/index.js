@@ -42,7 +42,7 @@
 
       return el(
         'div',
-        { className: 'bkhc-wrap', style: { display: 'inline-flex' } },
+        window.wp.blockEditor.useBlockProps({ className: 'bkhc-wrap', style: { display: 'inline-flex' } }),
 
         el( InspectorControls, null,
 

@@ -78,7 +78,7 @@
             function updateItem(idx, field, val) {
                 var updated = items.map(function (it, i) {
                     if (i !== idx) return it;
-                    var patch = {}; patch[field] = val;
+                    var patch = {}; Object.assign(patch, typeof field === 'object' ? field : { [field]: val });
                     return Object.assign({}, it, patch);
                 });
                 set({ items: updated });
@@ -199,13 +199,13 @@
                             /* image area */
                             attr.showImages && el('div', { style: { position: 'relative', flexShrink: 0, width: attr.layout === 'list' ? '220px' : '100%' } },
                                 el('div', { style: { paddingBottom: attr.layout === 'list' ? '0' : ratioPad(attr.imageRatio), height: attr.layout === 'list' ? '160px' : undefined, position: 'relative', background: '#f3f4f6', overflow: 'hidden', borderRadius: attr.layout === 'list' ? attr.imageRadius + 'px 0 0 ' + attr.imageRadius + 'px' : '0' } },
-                                    item.imageUrl
-                                        ? el('img', { src: item.imageUrl, alt: item.imageAlt, style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' } })
-                                        : el(MediaUploadCheck, {},
+                                    item.imageUrl &&
+                                        el('img', { src: item.imageUrl, alt: item.imageAlt, style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' } }),
+                                        el(MediaUploadCheck, {},
                                             el(MediaUpload, {
-                                                onSelect: function (m) { updateItem(idx, 'imageUrl', m.url); updateItem(idx, 'imageId', m.id); updateItem(idx, 'imageAlt', m.alt || ''); },
+                                                onSelect: function (m) { updateItem(idx, { imageUrl: m.url, imageId: m.id, imageAlt: m.alt || '' }); },
                                                 allowedTypes: ['image'], value: item.imageId,
-                                                render: function (r) { return el(Button, { onClick: r.open, style: { position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', border: 'none', cursor: 'pointer', color: '#9ca3af', fontSize: '13px' } }, '+ Add Image'); }
+                                                render: function (r) { return el(Button, { onClick: r.open, variant: item.imageUrl ? 'secondary' : undefined, style: item.imageUrl ? { position: 'absolute', bottom: '8px', left: '8px' } : { position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', border: 'none', cursor: 'pointer', color: '#9ca3af', fontSize: '13px' } }, item.imageUrl ? __('Replace Image', 'blockenberg') : __('Add Image', 'blockenberg')); }
                                             })
                                         ),
                                     /* number badge overlay on image */

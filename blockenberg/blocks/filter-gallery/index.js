@@ -10,20 +10,18 @@
   function _tv() { return (_fgTV = _fgTV || window.bkbgTypoCssVars); }
 
   function ItemEditor({ item, index, onChange, onRemove }) {
-    function upd(k,v){ onChange(index, Object.assign({},item,{[k]:v})); }
+    function upd(k,v){ onChange(index, Object.assign({},item,(typeof k === 'object' ? k : { [k]: v }))); }
     return el('div',{style:{border:'1px solid #ddd',borderRadius:'8px',padding:'10px',marginBottom:'8px',background:'#fafafa'}},
-      item.imageUrl
-        ? el('div',{style:{marginBottom:'6px'}},
+      el(window.wp.element.Fragment, null, item.imageUrl && el('div',{style:{marginBottom:'6px'}},
             el('img',{src:item.imageUrl,style:{width:'100%',height:'80px',objectFit:'cover',borderRadius:'6px'}}),
-            el(Button,{isDestructive:true,isSmall:true,onClick:()=>{upd('imageUrl','');upd('imageId',0);}},__('Remove'))
-          )
-        : el(MediaUploadCheck,null,
+            el(Button,{isDestructive:true,isSmall:true,onClick:()=>{ upd({ imageUrl: '', imageId: 0, alt: '' }); }},__('Remove'))
+          ), el(MediaUploadCheck,null,
             el(MediaUpload,{
-              onSelect:m=>{upd('imageUrl',m.url);upd('imageId',m.id);upd('alt',m.alt||'');},
+              onSelect:m=>{ upd({ imageUrl: m.url, imageId: m.id, alt: m.alt||'' }); },
               allowedTypes:['image'],value:item.imageId,
-              render:({open})=>el(Button,{onClick:open,isSmall:true,variant:'secondary'},__('Upload Image'))
+              render:({open})=>el(Button,{onClick:open,isSmall:true,variant:'secondary'},item.imageUrl ? __('Replace Image', 'blockenberg') : __('Upload Image'))
             })
-          ),
+          )),
       el(TextControl,{label:__('Title'),value:item.title,onChange:v=>upd('title',v)}),
       el(TextControl,{label:__('Tags (comma separated)'),value:item.tags,onChange:v=>upd('tags',v)}),
       el(Button,{isDestructive:true,isSmall:true,onClick:()=>onRemove(index)},__('Remove'))
@@ -62,7 +60,7 @@
         _tv()(attr.typoFilter, '--bkfg-tf-')
       );
 
-      return el('div', {className:'bkfg-wrap', style:wrapStyle},
+      return el('div', window.wp.blockEditor.useBlockProps({className:'bkfg-wrap', style:wrapStyle}),
 
         el(InspectorControls, null,
           el(PanelBody,{title:__('Items'),initialOpen:true},

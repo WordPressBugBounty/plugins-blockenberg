@@ -133,7 +133,7 @@
             function updateItem(i, key, val) {
                 var next = items.map(function (it, j) {
                     if (j !== i) return it;
-                    var u = Object.assign({}, it); u[key] = val; return u;
+                    var u = Object.assign({}, it); Object.assign(u, typeof key === 'object' ? key : { [key]: val }); return u;
                 });
                 setAttr({ items: next });
             }
@@ -320,9 +320,7 @@
                                 el(MediaUploadCheck, null,
                                     el(MediaUpload, {
                                         onSelect: function (media) {
-                                            updateItem(i, 'imageUrl', media.url);
-                                            updateItem(i, 'imageId', media.id);
-                                            updateItem(i, 'imageAlt', media.alt || '');
+                                            updateItem(i, { imageUrl: media.url, imageId: media.id, imageAlt: media.alt || '' });
                                         },
                                         allowedTypes: ['image'],
                                         value: item.imageId,
@@ -334,7 +332,7 @@
                                                 ),
                                                 item.imageUrl && el(Button, {
                                                     variant: 'secondary', isDestructive: true, isSmall: true, style: { marginLeft: '6px' },
-                                                    onClick: function () { updateItem(i, 'imageUrl', ''); updateItem(i, 'imageId', 0); }
+                                                    onClick: function () { updateItem(i, { imageUrl: '', imageId: 0, imageAlt: '' }); }
                                                 }, __('Remove', 'blockenberg'))
                                             );
                                         }

@@ -170,7 +170,7 @@
             function updateVideo(id, key, val) {
                 setAttributes({ videos: a.videos.map(function (v) {
                     if (v.id !== id) return v;
-                    var u = Object.assign({}, v); u[key] = val; return u;
+                    var u = Object.assign({}, v); Object.assign(u, typeof key === 'object' ? key : { [key]: val }); return u;
                 }) });
             }
 
@@ -220,7 +220,7 @@
                                                 }
                                             })
                                         ),
-                                        video.thumbUrl && el(Button, { variant: 'tertiary', isDestructive: true, size: 'compact', onClick: function () { updateVideo(video.id, 'thumbUrl', ''); updateVideo(video.id, 'thumbId', 0); }, style: { marginLeft: '6px' } }, __('Remove thumb', 'blockenberg'))
+                                        video.thumbUrl && el(Button, { variant: 'tertiary', isDestructive: true, size: 'compact', onClick: function () { updateVideo(video.id, { thumbUrl: '', thumbId: 0 }); }, style: { marginLeft: '6px' } }, __('Remove thumb', 'blockenberg'))
                                     ),
                                     el(Button, { isDestructive: true, variant: 'tertiary', size: 'compact', onClick: function () { removeVideo(video.id); } }, __('Remove video', 'blockenberg'))
                                 )

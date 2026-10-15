@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Blockenberg — 600+ Advanced Gutenberg Blocks & AI Agent for WordPress Block Editor
- * Description: Build websites with 618 advanced Gutenberg blocks, 683 page templates, 3,002 ready-made sections and an AI Agent for the WordPress Block Editor.
- * Version:     2.0.15
+ * Plugin Name: Blockenberg — 645 Advanced Gutenberg Blocks & AI Agent for WordPress Block Editor
+ * Description: Build websites with 645 advanced Gutenberg blocks, 683 page templates, 3,002 ready-made sections and an AI Agent for the WordPress Block Editor.
+ * Version:     2.0.16
  * Author:      Blockenberg
  * Text Domain: blockenberg
  * Domain Path: /languages
@@ -13,7 +13,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Ensure enough PHP memory to register 600+ blocks with layout attributes.
+ * Ensure enough PHP memory to register 645 blocks with layout attributes.
  * The register_block_type_args filter adds ~400 extra attributes per block,
  * which requires significantly more memory than the WordPress default 128M.
  */

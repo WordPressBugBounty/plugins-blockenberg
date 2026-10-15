@@ -51,7 +51,7 @@
       })();
       const previewStyle={display:'flex',alignItems:'center',justifyContent:'center',height:attr.size+'px',width:attr.size+'px',margin:'0 auto',background:'#f5f5f5',borderRadius:'50%',color:'#888',fontSize:'13px',flexDirection:'column',gap:'8px'};
 
-      return el('div',{className:'bkrc-wrap',style:wrapStyle},
+      return el('div',window.wp.blockEditor.useBlockProps({className:'bkrc-wrap',style:wrapStyle}),
         el(InspectorControls,null,
           el(PanelBody,{title:__('Axes & Data'),initialOpen:true},
             el(TextControl,{label:__('Axis Labels (CSV)'),value:attr.labels,onChange:v=>setAttributes({labels:v}),help:'e.g. Speed,Power,Range'}),

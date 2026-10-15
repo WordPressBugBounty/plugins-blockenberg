@@ -64,7 +64,7 @@
             function updateItem(idx, field, val) {
                 var updated = items.map(function (it, i) {
                     if (i !== idx) return it;
-                    var p = {}; p[field] = val;
+                    var p = {}; Object.assign(p, typeof field === 'object' ? field : { [field]: val });
                     return Object.assign({}, it, p);
                 });
                 set({ items: updated });
@@ -154,7 +154,7 @@
                             el(BkbgColorSwatch, { label: __('Accent Color', 'blockenberg'), value: it.accentColor, onChange: function (v) { updateItem(idx, 'accentColor', v); } }),
                             attr.showImage && el(MediaUploadCheck, {},
                                 el(MediaUpload, {
-                                    onSelect: function (m) { updateItem(idx, 'imageUrl', m.url); updateItem(idx, 'imageId', m.id); updateItem(idx, 'imageAlt', m.alt || ''); },
+                                    onSelect: function (m) { updateItem(idx, { imageUrl: m.url, imageId: m.id, imageAlt: m.alt || '' }); },
                                     allowedTypes: ['image'], value: it.imageId,
                                     render: function (ref) { return el(Button, { onClick: ref.open, variant: 'secondary', isSmall: true }, it.imageUrl ? __('Replace Image', 'blockenberg') : __('Upload Image', 'blockenberg')); }
                                 })

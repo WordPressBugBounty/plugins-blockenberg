@@ -249,8 +249,11 @@
                             el(ToggleControl, {
                                 label: __('Included', 'blockenberg'), checked: feat.included,
                                 onChange: function (v) {
-                                    updateFeature(a.features, i, 'included', v, setAttributes);
-                                    updateFeature(a.features, i, 'icon', v ? 'dashicons-yes-alt' : 'dashicons-no-alt', setAttributes);
+                                    setAttributes({ features: a.features.map(function (feature, idx) {
+                                        return idx !== i ? feature : Object.assign({}, feature, {
+                                            included: v, icon: v ? 'dashicons-yes-alt' : 'dashicons-no-alt'
+                                        });
+                                    }) });
                                 }
                             })
                         );

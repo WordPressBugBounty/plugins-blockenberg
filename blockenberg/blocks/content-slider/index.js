@@ -18,7 +18,7 @@
   }
 
   function SlideEditor({ slide, index, onChange, onRemove }) {
-    function upd(k,v){ onChange(index,Object.assign({},slide,{[k]:v})); }
+    function upd(k,v){ onChange(index,Object.assign({},slide,(typeof k === 'object' ? k : { [k]: v }))); }
     return el('div',{style:{border:'1px solid #ddd',borderRadius:'8px',padding:'12px',marginBottom:'10px',background:'#fafafa'}},
       el('strong',{style:{display:'block',marginBottom:'8px'}},__('Slide ') + (index+1)),
       el(SelectControl,{label:__('Background Type'),value:slide.bgType,
@@ -33,15 +33,13 @@
         el(GradientPicker,{value:slide.bgGradient,onChange:v=>upd('bgGradient',v)})
       ),
       slide.bgType==='image' && (
-        slide.bgImageUrl
-          ? el('div',{style:{marginBottom:'6px'}},
+        el(window.wp.element.Fragment, null, slide.bgImageUrl && el('div',{style:{marginBottom:'6px'}},
               el('img',{src:slide.bgImageUrl,style:{width:'100%',height:'80px',objectFit:'cover',borderRadius:'6px'}}),
-              el(Button,{isDestructive:true,isSmall:true,onClick:()=>{upd('bgImageUrl','');upd('bgImageId',0);}},__('Remove'))
-            )
-          : el(MediaUploadCheck,null,
-              el(MediaUpload,{onSelect:m=>{upd('bgImageUrl',m.url);upd('bgImageId',m.id);},allowedTypes:['image'],value:slide.bgImageId,
-                render:({open})=>el(Button,{onClick:open,isSmall:true,variant:'secondary'},__('Upload BG Image'))})
-            )
+              el(Button,{isDestructive:true,isSmall:true,onClick:()=>{ upd({ bgImageUrl: '', bgImageId: 0 }); }},__('Remove'))
+            ), el(MediaUploadCheck,null,
+              el(MediaUpload,{onSelect:m=>{ upd({ bgImageUrl: m.url, bgImageId: m.id }); },allowedTypes:['image'],value:slide.bgImageId,
+                render:({open})=>el(Button,{onClick:open,isSmall:true,variant:'secondary'},slide.bgImageUrl ? __('Replace Image', 'blockenberg') : __('Upload BG Image'))})
+            ))
       ),
       slide.bgType==='image' && el(RangeControl,{label:__('Overlay Opacity'),value:slide.overlayOpacity,min:0,max:90,step:5,onChange:v=>upd('overlayOpacity',v)}),
       el(TextControl,{label:__('Heading'),value:slide.heading,onChange:v=>upd('heading',v)}),
@@ -85,7 +83,7 @@
 
       const alignMap={center:'center',right:'flex-end',left:'flex-start'};
 
-      return el('div',{className:'bkcs-wrap',style:wrapStyle},
+      return el('div',window.wp.blockEditor.useBlockProps({className:'bkcs-wrap',style:wrapStyle}),
 
         el(InspectorControls,null,
           el(PanelBody,{title:__('Slides'),initialOpen:true},

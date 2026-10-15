@@ -73,7 +73,7 @@
             isOpen && el('div', { style: { padding: '12px', display: 'flex', flexDirection: 'column', gap: '8px' } },
                 el(MediaUploadCheck, null,
                     el(MediaUpload, {
-                        onSelect: function (m) { onUpdate(idx, 'imageUrl', m.url); onUpdate(idx, 'imageId', m.id); onUpdate(idx, 'imageAlt', m.alt || ''); },
+                        onSelect: function (m) { onUpdate(idx, { imageUrl: m.url, imageId: m.id, imageAlt: m.alt || '' }); },
                         allowedTypes: ['image'],
                         value: panel.imageId,
                         render: function (ref) {
@@ -211,7 +211,7 @@
             function updatePanel(idx, key, val) {
                 var arr = a.panels.slice();
                 arr[idx] = Object.assign({}, arr[idx]);
-                arr[idx][key] = val;
+                Object.assign(arr[idx], typeof key === 'object' ? key : { [key]: val });
                 setAttributes({ panels: arr });
             }
             function addPanel() {
@@ -219,7 +219,12 @@
                 setAttributes({ panels: a.panels.concat([{ imageUrl: '', imageId: 0, imageAlt: '', title: 'Panel ' + n, subtitle: 'Subtitle here', label: String(n).padStart(2,'0') }]) });
             }
             function removePanel(idx) {
-                setAttributes({ panels: a.panels.filter(function (_, i) { return i !== idx; }) });
+                var panels = a.panels.filter(function (_, i) { return i !== idx; });
+                function remainingIndex(value) {
+                    return Math.max(0, Math.min(panels.length - 1, value > idx ? value - 1 : value));
+                }
+                setActive(remainingIndex(active));
+                setAttributes({ panels: panels, defaultOpen: remainingIndex(a.defaultOpen) });
             }
 
             var triggerOptions = [

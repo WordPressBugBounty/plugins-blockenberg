@@ -219,7 +219,7 @@
             Object.assign(editorStyle, _tvFn(a.excerptTypo, '--bkbg-poc-ex-'));
             Object.assign(editorStyle, _tvFn(a.metaTypo, '--bkbg-poc-mt-'));
 
-            return el('div', { className: 'bkbg-poc-editor', style: editorStyle },
+            return el('div', window.wp.blockEditor.useBlockProps({ className: 'bkbg-poc-editor', style: editorStyle }),
                 inspector,
                 el('div', { style: { background: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: 10, padding: 16 } },
                     el('p', { style: { margin: '0 0 12px', fontSize: 12, color: '#6b7280', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' } },

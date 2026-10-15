@@ -1,4 +1,15 @@
 ( function () {
+
+    // Move only the carousel. scrollIntoView also scrolls the page and editor canvas.
+    function scrollSlideIntoTrack(track, slide) {
+        var rect = slide.getBoundingClientRect();
+        var bounds = track.getBoundingClientRect();
+        var view = track.ownerDocument.defaultView;
+        var rtl = view.getComputedStyle(track).direction === 'rtl';
+        var delta = rtl ? rect.right - bounds.right : rect.left - bounds.left;
+        var reduced = view.matchMedia && view.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        track.scrollTo({ left: track.scrollLeft + delta, behavior: reduced ? 'auto' : 'smooth' });
+    }
     var el = wp.element.createElement;
     var Fragment = wp.element.Fragment;
     var __ = wp.i18n.__;
@@ -126,7 +137,7 @@
                 var slides = getSlides();
                 if (!slides.length) return;
                 var idx = Math.max(0, Math.min(slides.length - 1, i));
-                slides[idx].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+                scrollSlideIntoTrack(trackRef.current, slides[idx]);
             }
 
             function scrollByOne(dir) {

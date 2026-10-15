@@ -141,7 +141,7 @@
             }
 
             function updateLocField(id, field, val) {
-                setA({ locations: a.locations.map(function (l) { return l.id === id ? Object.assign({}, l, { [field]: val }) : l; }) });
+                setA({ locations: a.locations.map(function (l) { return l.id === id ? Object.assign({}, l, typeof field === 'object' ? field : { [field]: val }) : l; }) });
             }
             function removeLocation(id) {
                 setA({ locations: a.locations.filter(function (l) { return l.id !== id; }) });
@@ -222,7 +222,7 @@
                             el(TextControl, { label: __('Hours Snippet', 'blockenberg'), value: loc.hoursSnippet, onChange: function (v) { updateLocField(loc.id, 'hoursSnippet', v); } }),
                             el(MediaUploadCheck, null,
                                 el(MediaUpload, {
-                                    onSelect: function (m) { updateLocField(loc.id, 'imageUrl', m.url); updateLocField(loc.id, 'imageId', m.id); },
+                                    onSelect: function (m) { updateLocField(loc.id, { imageUrl: m.url, imageId: m.id }); },
                                     allowedTypes: ['image'],
                                     value: loc.imageId,
                                     render: function (ref) {
@@ -231,7 +231,7 @@
                                             el(Button, { onClick: ref.open, variant: loc.imageId ? 'secondary' : 'primary' },
                                                 loc.imageId ? __('Replace Image', 'blockenberg') : __('Set Location Image', 'blockenberg')
                                             ),
-                                            loc.imageId && el(Button, { onClick: function () { updateLocField(loc.id, 'imageUrl', ''); updateLocField(loc.id, 'imageId', 0); }, variant: 'link', isDestructive: true }, __('Remove', 'blockenberg'))
+                                            loc.imageId && el(Button, { onClick: function () { updateLocField(loc.id, { imageUrl: '', imageId: 0 }); }, variant: 'link', isDestructive: true }, __('Remove', 'blockenberg'))
                                         );
                                     }
                                 })

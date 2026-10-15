@@ -188,7 +188,7 @@
             function updateNode(id, key, val) {
                 setAttributes({ nodes: a.nodes.map(function (n) {
                     if (n.id !== id) return n;
-                    var u = Object.assign({}, n); u[key] = val; return u;
+                    var u = Object.assign({}, n); Object.assign(u, typeof key === 'object' ? key : { [key]: val }); return u;
                 }) });
             }
 
@@ -235,12 +235,12 @@
                                         el('input', { type: 'color', value: node.color || a.accentColor, onChange: function (e) { updateNode(node.id, 'color', e.target.value); }, style: { width: '32px', height: '28px', padding: 0, border: 'none', cursor: 'pointer', background: 'none' } })
                                     ),
                                     el(MediaUploadCheck, null,
-                                        el(MediaUpload, { onSelect: function (m) { updateNode(node.id, 'avatarUrl', m.url); updateNode(node.id, 'avatarId', m.id); }, allowedTypes: ['image'], value: node.avatarId,
+                                        el(MediaUpload, { onSelect: function (m) { updateNode(node.id, { avatarUrl: m.url, avatarId: m.id }); }, allowedTypes: ['image'], value: node.avatarId,
                                             render: function (mp) {
                                                 return el(Fragment, null,
                                                     node.avatarUrl && el('img', { src: node.avatarUrl, style: { width: '48px', height: '48px', borderRadius: '50%', objectFit: 'cover', display: 'block', marginBottom: '6px', border: '2px solid ' + (node.color || a.accentColor) } }),
                                                     el(Button, { variant: 'secondary', size: 'compact', onClick: mp.open }, node.avatarUrl ? __('Change photo', 'blockenberg') : __('Upload photo', 'blockenberg')),
-                                                    node.avatarUrl && el(Button, { variant: 'tertiary', size: 'compact', isDestructive: true, onClick: function () { updateNode(node.id, 'avatarUrl', ''); updateNode(node.id, 'avatarId', 0); }, style: { marginLeft: '6px' } }, __('Remove', 'blockenberg'))
+                                                    node.avatarUrl && el(Button, { variant: 'tertiary', size: 'compact', isDestructive: true, onClick: function () { updateNode(node.id, { avatarUrl: '', avatarId: 0 }); }, style: { marginLeft: '6px' } }, __('Remove', 'blockenberg'))
                                                 );
                                             }
                                         })

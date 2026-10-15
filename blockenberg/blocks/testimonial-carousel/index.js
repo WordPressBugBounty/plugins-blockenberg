@@ -19,7 +19,7 @@
 
   function ItemEditor( { item, index, onChange, onRemove, showStars, starColor } ) {
     function upd( key, val ) {
-      const next = Object.assign( {}, item, { [key]: val } );
+      const next = Object.assign( {}, item, (typeof key === 'object' ? key : { [key]: val }) );
       onChange( index, next );
     }
     return el( 'div', { className: 'bktc-item-editor', style: { border: '1px solid #e0e0e0', borderRadius: '8px', padding: '12px', marginBottom: '10px', background: '#fafafa' } },
@@ -46,19 +46,17 @@
         onChange: v => upd( 'stars', v )
       } ),
       el( 'label', { style: { fontSize: '11px', fontWeight: 600, display: 'block', marginBottom: '4px' } }, __( 'Avatar' ) ),
-      item.avatarUrl
-        ? el( 'div', { style: { display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' } },
+      el(window.wp.element.Fragment, null, item.avatarUrl && el( 'div', { style: { display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' } },
             el( 'img', { src: item.avatarUrl, style: { width: 48, height: 48, borderRadius: '50%', objectFit: 'cover' } } ),
-            el( Button, { isDestructive: true, isSmall: true, onClick: () => { upd( 'avatarUrl', '' ); upd( 'avatarId', 0 ); } }, __( 'Remove' ) )
-          )
-        : el( MediaUploadCheck, null,
+            el( Button, { isDestructive: true, isSmall: true, onClick: () => { upd({ avatarUrl: '', avatarId: 0 }); } }, __( 'Remove' ) )
+          ), el( MediaUploadCheck, null,
             el( MediaUpload, {
-              onSelect: m => { upd( 'avatarUrl', m.url ); upd( 'avatarId', m.id ); },
+              onSelect: m => { upd({ avatarUrl: m.url, avatarId: m.id }); },
               allowedTypes: ['image'],
               value: item.avatarId,
-              render: ( { open } ) => el( Button, { onClick: open, isSmall: true, variant: 'secondary' }, __( 'Upload Avatar' ) )
+              render: ( { open } ) => el( Button, { onClick: open, isSmall: true, variant: 'secondary' }, item.avatarUrl ? __('Replace Image', 'blockenberg') : __('Upload Avatar') )
             } )
-          ),
+          )),
       el( Button, { isDestructive: true, isSmall: true, onClick: () => onRemove( index ) }, __( 'Remove Item' ) )
     );
   }
@@ -128,7 +126,7 @@
 
       const current = attr.items[ activeIdx ] || attr.items[0];
 
-      return el( 'div', { className: 'bktc-wrap', style: wrapStyle },
+      return el( 'div', window.wp.blockEditor.useBlockProps({ className: 'bktc-wrap', style: wrapStyle }),
 
         el( InspectorControls, null,
 

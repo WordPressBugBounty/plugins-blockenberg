@@ -171,8 +171,11 @@
                                 label: __('Platform', 'blockenberg'), value: link.platform,
                                 options: platformKeys.map(function (k) { return { label: platforms[k].label, value: k }; }),
                                 onChange: function (v) {
-                                    updateLink(a.links, i, 'platform', v, setAttributes);
-                                    updateLink(a.links, i, 'label', platforms[v] ? platforms[v].label : v, setAttributes);
+                                    setAttributes({ links: a.links.map(function (item, idx) {
+                                        return idx !== i ? item : Object.assign({}, item, {
+                                            platform: v, label: platforms[v] ? platforms[v].label : v
+                                        });
+                                    }) });
                                 }
                             }),
                             el(TextControl, {

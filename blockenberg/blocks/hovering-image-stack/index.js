@@ -60,7 +60,7 @@
 
             function updateImage(idx, field, val) {
                 var imgs = attr.images.map(function (img, i) {
-                    return i === idx ? Object.assign({}, img, { [field]: val }) : img;
+                    return i === idx ? Object.assign({}, img, typeof field === 'object' ? field : { [field]: val }) : img;
                 });
                 setAttr({ images: imgs });
             }
@@ -81,8 +81,7 @@
                             el(MediaUploadCheck, {},
                                 el(MediaUpload, {
                                     onSelect: function (media) {
-                                        updateImage(idx, 'url', media.url);
-                                        updateImage(idx, 'alt', media.alt || '');
+                                        updateImage(idx, { url: media.url, alt: media.alt || '' });
                                     },
                                     allowedTypes: ['image'],
                                     value: img.url,

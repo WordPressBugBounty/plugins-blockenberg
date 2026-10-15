@@ -194,7 +194,7 @@
                     if (d.id !== dayId) return d;
                     return Object.assign({}, d, { sessions: d.sessions.map(function (s) {
                         if (s.id !== sessionId) return s;
-                        var u = Object.assign({}, s); u[key] = val; return u;
+                        var u = Object.assign({}, s); Object.assign(u, typeof key === 'object' ? key : { [key]: val }); return u;
                     }) });
                 }) });
             }
@@ -298,7 +298,7 @@
                                         el(TextControl, { label: __('Room',    'blockenberg'), value: s.room,    onChange: function (v) { updateSession(day.id, s.id, 'room',    v); } }),
                                         el(TextControl, { label: __('Tags (comma-separated)', 'blockenberg'), value: (s.tags || []).join(', '), onChange: function (v) { updateSession(day.id, s.id, 'tags', v.split(',').map(function (t) { return t.trim(); }).filter(Boolean)); } }),
                                         el(MediaUploadCheck, null,
-                                            el(MediaUpload, { onSelect: function (m) { updateSession(day.id, s.id, 'avatarUrl', m.url); updateSession(day.id, s.id, 'avatarId', m.id); }, allowedTypes: ['image'], value: s.avatarId, render: function (rp) {
+                                            el(MediaUpload, { onSelect: function (m) { updateSession(day.id, s.id, { avatarUrl: m.url, avatarId: m.id }); }, allowedTypes: ['image'], value: s.avatarId, render: function (rp) {
                                                 return el(Button, { variant: 'secondary', size: 'compact', onClick: rp.open, style: { marginTop: '4px' } }, s.avatarUrl ? __('Change avatar', 'blockenberg') : __('Upload avatar', 'blockenberg'));
                                             } })
                                         ),

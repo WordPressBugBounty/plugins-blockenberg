@@ -36,7 +36,7 @@
         borderRadius:attr.borderRadius+'px',overflow:'hidden',
       }, _tv(attr.typoHeader, '--bkct-th-'), _tv(attr.typoCell, '--bkct-td-'));
 
-      return el('div',{className:'bkct-wrap',style:tableStyle},
+      return el('div',window.wp.blockEditor.useBlockProps({className:'bkct-wrap',style:tableStyle}),
 
         el(InspectorControls,null,
           el(PanelBody,{title:__('Plans (Columns)'),initialOpen:true},

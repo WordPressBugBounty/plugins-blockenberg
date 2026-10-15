@@ -51,7 +51,7 @@
         Object.assign(wrapStyle, _tv(attr.contentTypo || {}, '--bkhi-ct-'));
       }
 
-      return el('div', {className:'bkhi-wrap', style: wrapStyle},
+      return el('div', window.wp.blockEditor.useBlockProps({className:'bkhi-wrap', style: wrapStyle}),
 
         el(InspectorControls, null,
           el(PanelBody, {title:__('Image'), initialOpen:true},

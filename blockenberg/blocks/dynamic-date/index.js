@@ -63,7 +63,7 @@
         '--bkdd-align':  attrs.align
       }, _tv(attrs.typoText || {}, '--bkbg-dd-txt-'));
 
-      return el( 'div', null,
+      return el( 'div', window.wp.blockEditor.useBlockProps({}),
         el( InspectorControls, null,
           el( PanelBody, { title: __( 'Date Settings', 'blockenberg' ), initialOpen: true },
             el( SelectControl, {

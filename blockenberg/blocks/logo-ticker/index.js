@@ -30,7 +30,7 @@
                 var updated = logos.map(function (l, idx) {
                     if (idx !== i) return l;
                     var copy = Object.assign({}, l);
-                    copy[key] = value;
+                    Object.assign(copy, typeof key === 'object' ? key : { [key]: value });
                     return copy;
                 });
                 setAttr({ logos: updated });
@@ -64,9 +64,7 @@
                     el(MediaUploadCheck, {},
                         el(MediaUpload, {
                             onSelect: function (media) {
-                                updateLogo(i, 'imageUrl', media.url);
-                                updateLogo(i, 'imageId', media.id);
-                                updateLogo(i, 'imageAlt', media.alt || '');
+                                updateLogo(i, { imageUrl: media.url, imageId: media.id, imageAlt: media.alt || '' });
                             },
                             allowedTypes: ['image'],
                             value: logo.imageId,

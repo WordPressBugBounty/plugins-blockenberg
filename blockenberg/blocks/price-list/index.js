@@ -94,7 +94,7 @@
                     if (i !== si) return s;
                     return Object.assign({}, s, {
                         items: s.items.map(function (it, j) {
-                            return j === ii ? Object.assign({}, it, { [field]: val }) : it;
+                            return j === ii ? Object.assign({}, it, typeof field === 'object' ? field : { [field]: val }) : it;
                         })
                     });
                 });
@@ -284,7 +284,7 @@
 
                                         /* image */
                                         a.showImage && el(MediaUpload, {
-                                            onSelect: function (m) { updateItem(si, ii, 'imageUrl', m.url); updateItem(si, ii, 'imageId', m.id); },
+                                            onSelect: function (m) { updateItem(si, ii, { imageUrl: m.url, imageId: m.id }); },
                                             type: 'image', value: item.imageId,
                                             render: function (p) {
                                                 return item.imageUrl

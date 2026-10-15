@@ -52,7 +52,7 @@
     edit: function(props) {
       var a = props.attributes;
       var set = props.setAttributes;
-      return el('div',null,
+      return el('div',window.wp.blockEditor.useBlockProps({}),
         el(InspectorControls,null,
           el(PanelBody,{title:__('Button'),initialOpen:true},
             el(SelectControl,{label:__('Icon'),value:a.icon,options:ICONS,onChange:v=>set({icon:v})}),

@@ -36,7 +36,7 @@
         '--bkcb-btnR':    attrs.btnRadius + 'px'
       }, _tv(attrs.typoHeadline, '--bkcb-hdl-'), _tv(attrs.typoSubtext, '--bkcb-sub-'));
 
-      return el( 'div', null,
+      return el( 'div', window.wp.blockEditor.useBlockProps({}),
         el( InspectorControls, null,
           el( PanelBody, { title: __( 'Content', 'blockenberg' ), initialOpen: true },
             el( TextControl, {

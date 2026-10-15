@@ -29,7 +29,7 @@
                 var next = attr.avatars.map(function (a, i) {
                     if (i !== idx) return a;
                     var obj = {}; Object.keys(a).forEach(function (k) { obj[k] = a[k]; });
-                    obj[key] = val; return obj;
+                    Object.assign(obj, typeof key === 'object' ? key : { [key]: val }); return obj;
                 });
                 setAttr({ avatars: next });
             }
@@ -66,13 +66,13 @@
                             el(TextControl, { label: __('Name', 'blockenberg'), value: av.name, onChange: function (v) { updateAvatar(idx, 'name', v); }, __nextHasNoMarginBottom: true }),
                             el(MediaUploadCheck, {},
                                 el(MediaUpload, {
-                                    onSelect: function (m) { updateAvatar(idx, 'imageUrl', m.url); updateAvatar(idx, 'imageId', m.id); },
+                                    onSelect: function (m) { updateAvatar(idx, { imageUrl: m.url, imageId: m.id }); },
                                     allowedTypes: ['image'], value: av.imageId,
                                     render: function (ref) {
                                         return el('div', { style: { display: 'flex', gap: '8px', alignItems: 'center', marginTop: '6px' } },
                                             av.imageUrl && el('img', { src: av.imageUrl, style: { width: '32px', height: '32px', borderRadius: '50%', objectFit: 'cover' } }),
                                             el(Button, { isSmall: true, isSecondary: true, onClick: ref.open }, av.imageUrl ? __('Change', 'blockenberg') : __('Add Photo', 'blockenberg')),
-                                            av.imageUrl && el(Button, { isSmall: true, isDestructive: true, onClick: function () { updateAvatar(idx, 'imageUrl', ''); updateAvatar(idx, 'imageId', 0); } }, '✕')
+                                            av.imageUrl && el(Button, { isSmall: true, isDestructive: true, onClick: function () { updateAvatar(idx, { imageUrl: '', imageId: 0 }); } }, '✕')
                                         );
                                     }
                                 })

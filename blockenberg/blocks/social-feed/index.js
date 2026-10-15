@@ -193,7 +193,7 @@
             function updatePost(id, key, val) {
                 setAttributes({ posts: a.posts.map(function (p) {
                     if (p.id !== id) return p;
-                    var u = Object.assign({}, p); u[key] = val; return u;
+                    var u = Object.assign({}, p); Object.assign(u, typeof key === 'object' ? key : { [key]: val }); return u;
                 }) });
             }
 
@@ -266,7 +266,7 @@
                                 el('p', { style: { fontSize: '12px', margin: '4px 0 4px', fontWeight: 600 } }, __('Post image', 'blockenberg')),
                                 el(MediaUploadCheck, null,
                                     el(MediaUpload, {
-                                        onSelect: function (m) { updatePost(post.id, 'imageUrl', m.url); updatePost(post.id, 'imageId', m.id); },
+                                        onSelect: function (m) { updatePost(post.id, { imageUrl: m.url, imageId: m.id }); },
                                         allowedTypes: ['image'], value: post.imageId,
                                         render: function (p) { return el('div', null,
                                             post.imageUrl && el('img', { src: post.imageUrl, style: { width: '100%', borderRadius: '6px', marginBottom: '4px' } }),
@@ -277,7 +277,7 @@
                                 el('p', { style: { fontSize: '12px', margin: '8px 0 4px', fontWeight: 600 } }, __('Avatar', 'blockenberg')),
                                 el(MediaUploadCheck, null,
                                     el(MediaUpload, {
-                                        onSelect: function (m) { updatePost(post.id, 'avatarUrl', m.url); updatePost(post.id, 'avatarId', m.id); },
+                                        onSelect: function (m) { updatePost(post.id, { avatarUrl: m.url, avatarId: m.id }); },
                                         allowedTypes: ['image'], value: post.avatarId,
                                         render: function (p) { return el(Button, { onClick: p.open, variant: post.avatarUrl ? 'secondary' : 'tertiary', size: 'compact' }, post.avatarUrl ? __('Replace avatar', 'blockenberg') : __('Set avatar', 'blockenberg')); }
                                     })

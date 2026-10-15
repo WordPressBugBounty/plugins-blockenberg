@@ -46,7 +46,7 @@
         };
       }
 
-      return el( 'div', { className: 'bkpsw-outer', style: wrapStyle },
+      return el( 'div', window.wp.blockEditor.useBlockProps({ className: 'bkpsw-outer', style: wrapStyle }),
         el( InspectorControls, null,
           el( PanelBody, { title: __('Labels & Default'), initialOpen: true },
             el( TextControl, { label: __('Monthly Label'), value: attr.labelMonthly, onChange: v => setAttributes({labelMonthly:v}) }),

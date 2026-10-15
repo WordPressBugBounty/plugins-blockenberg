@@ -1,16 +1,16 @@
-=== Blockenberg — 618 Advanced Gutenberg Blocks, 683 Templates and AI Agent for WordPress Block Editor ===
+=== Blockenberg — 645 Advanced Gutenberg Blocks, 683 Templates and AI Agent for WordPress Block Editor ===
 Contributors: blockenberg, alxrlov, olgadev
 Tags: gutenberg, blocks, editor, custom-blocks, page-builder
 Requires at least: 5.6
 Tested up to: 7.1
-Stable tag: 2.0.15
+Stable tag: 2.0.16
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Build professional websites faster with ready-made pages and sections, plus flexible layout, typography, color, and spacing controls.
 
 == Description ==
-Blockenberg is an advanced Gutenberg block library with 618 lightweight Gutenberg blocks, 683 editable page templates across 76 collections, 3,002 ready-made sections and an AI Agent for WordPress. Build landing pages, business sites, blogs, documentation, comparison pages, review content, interactive tools, and rich editorial layouts faster — all inside the native block editor.
+Blockenberg is an advanced Gutenberg block library with 645 lightweight Gutenberg blocks, 683 editable page templates across 76 collections, 3,002 ready-made sections and an AI Agent for WordPress. Build landing pages, business sites, blogs, documentation, comparison pages, review content, interactive tools, and rich editorial layouts faster — all inside the native block editor.
 
 [Visit the Blockenberg website](https://blockenberg.com/)
 
@@ -53,7 +53,7 @@ Open the AI Agent sidebar in the block editor and describe what to build. It ins
 [Explore AI Agent](https://blockenberg.com/ai-agent/)
 
 **Key Features:**
-- 618 blocks covering page building, content, marketing, media, business, charts, utilities, and more
+- 645 blocks covering page building, content, marketing, media, business, charts, utilities, and more
 - Template Library — 683 editable page templates across 76 collections and 3,002 ready-made sections
 - AI Agent in the editor — build and edit pages in chat via OpenRouter (free models included) or Codex, Claude, and Cursor
 - Consistent controls for colors, typography, spacing, borders, shadows, layout, and responsiveness
@@ -118,6 +118,10 @@ Certificate, Content Switcher, Course Curriculum, Course Lesson, FAQ Accordion, 
 Highlight teams, services, operations, careers, and event content in a professional way.
 Bio Section, Daily Schedule, Decision Matrix, Decision Tree, Email Signature, Event Agenda, Event Card, Event Debrief, Event Recap, Event Speaker, Job Listing, Job Openings, Kanban Board, Meeting Recap, Milestone, OKR Tracker, Onboarding Steps, Org Chart, Portfolio Grid, Project Brief, Resume, Roadmap, Salary Guide, Service Cards, Service Details, Service Process, Services Showcase, Skill Bar, Skill Rings, Skills, Sprint Retrospective, SWOT Analysis, Team Card, Team Members, Team Slider, Ticket Stub, Values Circle, Vision Mission, Week Schedule
 
+= Template Building Blocks (27) =
+Edit imported page templates and library sections with native Gutenberg blocks while preserving their original design. Shared Advanced settings provide typography, spacing, colors and responsive overrides.
+Template Accordion, Template Blog, Template Button, Template Card, Template Carousel, Template Comparison, Template Counter, Template Creative Button, Template Decoration, Template Flip, Template Contact Form, Template Grid, Template Heading, Template Hotspots, Template Icon, Template Image, Template Layout, Template List, Template Map, Template Marquee, Template Page, Template Rating, Template Stack, Template Styled Text, Template Text, Template Timeline, Template Video
+
 = Keywords =
 Gutenberg, blocks, editor, custom-blocks, page-builder, accordion, business hours, countdown, data table, team members, testimonials, logo carousel, before/after slider, youtube embed, vimeo embed, marquee, announcement bar, progress bar, stats counter, b, bl, blo, bloc, block, g, gu, gut, gute, guten, gutenb, gutenbe, gutenber, layout blocks, timeline, responsive, customizable, accessible, performance, lightweight, modern, professional, WordPress,
 
@@ -152,6 +156,16 @@ Existing imported pages keep their content and saved styles. You can continue to
 Yes. Open the Sections tab in the Template Library, use the Sections toolbar button, click Add section below the last block, or add the Blockenberg Sections block in Gutenberg. Search, preview, and insert a section into your current page, then edit its blocks. The section inherits the Free or Pro access of its source template. Already inserted sections remain editable and visible with the base Blockenberg plugin active, even if Pro is later deactivated.
 
 == Changelog ==
+
+= 2.0.16 - Oct 15, 2026 =
+* [Fixed] Image Accordion images not appearing after selection from the Media Library. Fixed the same issue in other image and avatar blocks by updating attachment URLs, IDs and alt text together.
+* [Fixed] File Download becoming impossible to select or edit after clicking away. Restored re-selection and access to settings in other affected blocks, including sliders, galleries and charts. File Download preview clicks no longer navigate away from the editor.
+* [Fixed] Logo Carousel, Testimonials, Team Members and Thumbnail Gallery scrolling the surrounding page or editor canvas while navigating their items.
+* [Fixed] Image selection and block re-selection issues when using Kadence Theme and Kadence Blocks. Verified media selection and access to block settings with both integrations after these fixes.
+* [Fixed] Image removal leaving the previous image visible. Restored accessible replacement controls in Image Text Rows, Listicle, Post Slider, Content Slider, Filter Gallery, Testimonial Carousel and Testimonial Grid.
+* [Fixed] Image Accordion retaining an invalid default panel after deleting a panel.
+* [Fixed] Pricing Table's Included setting and Social Links platform selection losing related field changes.
+* [Improved] Updated plugin details to reflect 645 blocks, including 27 native Template blocks, and added their full list to the block reference.
 
 = 2.0.15 - Oct 14, 2026 =
 * [New] Section Library with 3,002 editable sections, descriptions, tags, search, filters, and responsive previews.

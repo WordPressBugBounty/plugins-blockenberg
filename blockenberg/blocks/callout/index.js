@@ -69,7 +69,7 @@
         '--bkco-radius': attrs.borderRadius + 'px'
       }, _tv(attrs.typoTitle, '--bkco-tt-'), _tv(attrs.typoBody, '--bkco-tb-'));
 
-      return el( 'div', null,
+      return el( 'div', window.wp.blockEditor.useBlockProps({}),
         el( InspectorControls, null,
           el( PanelBody, { title: __( 'Type & Style', 'blockenberg' ), initialOpen: true },
             el( SelectControl, {

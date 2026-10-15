@@ -44,7 +44,7 @@
             function updateMember(idx, field, val) {
                 var updated = members.map(function (m, i) {
                     if (i !== idx) return m;
-                    var p = {}; p[field] = val;
+                    var p = {}; Object.assign(p, typeof field === 'object' ? field : { [field]: val });
                     return Object.assign({}, m, p);
                 });
                 set({ members: updated });
@@ -136,7 +136,7 @@
                         : el('div', { style: { width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', color: '#9ca3af' } }, '👤'),
                     el(MediaUploadCheck, {},
                         el(MediaUpload, {
-                            onSelect: function (m) { updateMember(idx, 'imageUrl', m.url); updateMember(idx, 'imageId', m.id); updateMember(idx, 'imageAlt', m.alt || ''); },
+                            onSelect: function (m) { updateMember(idx, { imageUrl: m.url, imageId: m.id, imageAlt: m.alt || '' }); },
                             allowedTypes: ['image'], value: member.imageId,
                             render: function (r) { return el(Button, { onClick: r.open, style: { position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.3)', border: 'none', cursor: 'pointer', color: '#fff', fontSize: '11px', display: 'none' }, className: 'bkbg-ts-edit-overlay' }, '✎'); }
                         })

@@ -1,7 +1,7 @@
 ( function () {
   var el = window.wp.element.createElement;
   var { registerBlockType } = window.wp.blocks;
-  var { InspectorControls, MediaUpload, MediaUploadCheck, PanelColorSettings } = window.wp.blockEditor;
+  var { InspectorControls, MediaUpload, MediaUploadCheck, PanelColorSettings, useBlockProps } = window.wp.blockEditor;
   var { PanelBody, RangeControl, SelectControl, TextControl, ToggleControl, Button } = window.wp.components;
   var { __ } = window.wp.i18n;
 
@@ -53,7 +53,7 @@
         a.description && el('p',{className:'bkfd-desc',style:{margin:0,color:a.descColor}},a.description),
       ),
 
-      a.fileUrl && el('a',{href:a.fileUrl,className:'bkfd-btn',
+      a.fileUrl && el('a',{href:a.fileUrl,className:'bkfd-btn',onClick:function(event){event.preventDefault();},
         download:true,target:a.openInNew?'_blank':undefined,
         style:{display:'inline-flex',alignItems:'center',gap:'6px',flexShrink:0,
           background:a.btnBg,color:a.btnColor,padding:'10px 20px',borderRadius:a.btnRadius+'px',
@@ -75,13 +75,13 @@
     edit: function(props) {
       var a = props.attributes;
       var set = props.setAttributes;
-      return el('div',null,
+      return el('div',useBlockProps(),
         el(InspectorControls,null,
           el(PanelBody,{title:__('File'),initialOpen:true},
             el(MediaUploadCheck,null,
               el(MediaUpload,{
                 onSelect: m => set({fileUrl:m.url,fileId:m.id,fileName:m.filename||m.title,fileSize:m.filesizeHumanReadable||'',fileType:(m.subtype||'').toUpperCase()}),
-                allowedTypes:['application/*','audio/*','video/*','image/*'], value:a.fileId,
+                value:a.fileId,
                 render:({open})=>el(Button,{onClick:open,variant:'secondary',style:{width:'100%',justifyContent:'center',marginBottom:'8px'}},
                   a.fileUrl ? __('Change File') : __('Select File From Media Library'))
               })

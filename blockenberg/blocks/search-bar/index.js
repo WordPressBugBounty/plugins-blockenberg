@@ -57,7 +57,7 @@
     edit: function ( props ) {
       var attrs = props.attributes;
       var setAttr = props.setAttributes;
-      return el( 'div', null,
+      return el( 'div', window.wp.blockEditor.useBlockProps({}),
         el( InspectorControls, null,
           el( PanelBody, { title: __('Search Settings','blockenberg'), initialOpen: true },
             el( TextControl, { label:__('Placeholder','blockenberg'), value:attrs.placeholder, onChange:function(v){setAttr({placeholder:v});} } ),

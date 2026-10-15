@@ -1,6 +1,17 @@
 (function () {
     'use strict';
 
+    function revealThumbnail(activeTh) {
+        if (!activeTh || !activeTh.parentElement) return;
+        var strip = activeTh.parentElement;
+        var bounds = strip.getBoundingClientRect();
+        var rect = activeTh.getBoundingClientRect();
+        var dx = rect.left < bounds.left ? rect.left - bounds.left : rect.right > bounds.right ? rect.right - bounds.right : 0;
+        var dy = rect.top < bounds.top ? rect.top - bounds.top : rect.bottom > bounds.bottom ? rect.bottom - bounds.bottom : 0;
+        strip.scrollTo({ left: strip.scrollLeft + dx, top: strip.scrollTop + dy });
+    }
+
+
     function buildGallery(appEl, o) {
         if (!o.images || !o.images.length) return;
 
@@ -181,11 +192,8 @@
                 th.style.border = (o.thumbActiveBorderWidth || 2) + 'px solid ' + (ti === idx ? (o.thumbActiveBorder || '#6366f1') : 'transparent');
             });
 
-            /* scroll active thumb into view */
-            var activeTh = thumbEls[idx];
-            if (activeTh && activeTh.scrollIntoView) {
-                activeTh.scrollIntoView({ block: 'nearest', inline: 'nearest' });
-            }
+            /* Reveal the thumb inside its strip without moving the page on autoplay. */
+            revealThumbnail(thumbEls[idx]);
 
             /* reset autoplay timer */
             if (o.autoPlay && autoTimer) {

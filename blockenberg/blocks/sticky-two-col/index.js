@@ -51,7 +51,7 @@
             function updateItem(idx, field, val) {
                 var updated = items.map(function (it, i) {
                     if (i !== idx) return it;
-                    var p = {}; p[field] = val;
+                    var p = {}; Object.assign(p, typeof field === 'object' ? field : { [field]: val });
                     return Object.assign({}, it, p);
                 });
                 set({ items: updated });
@@ -175,7 +175,7 @@
                 el('div', { style: { color: attr.textColor, fontSize: '13px', textAlign: 'center' } }, __('Sticky panel preview — click items below to switch', 'blockenberg')),
                 el(MediaUploadCheck, {},
                     el(MediaUpload, {
-                        onSelect: function (m) { updateItem(previewIdx, 'imageUrl', m.url); updateItem(previewIdx, 'imageId', m.id); updateItem(previewIdx, 'imageAlt', m.alt || ''); },
+                        onSelect: function (m) { updateItem(previewIdx, { imageUrl: m.url, imageId: m.id, imageAlt: m.alt || '' }); },
                         allowedTypes: ['image'], value: previewItem.imageId || 0,
                         render: function (ref) { return el(Button, { onClick: ref.open, variant: 'primary', isSmall: true }, previewItem.imageUrl ? __('Replace Image', 'blockenberg') : __('Choose Image', 'blockenberg')); }
                     })

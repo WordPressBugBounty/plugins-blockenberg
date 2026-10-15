@@ -61,7 +61,7 @@
             function updateRow(idx, field, val) {
                 var updated = rows.map(function (r, i) {
                     if (i !== idx) return r;
-                    var p = {}; p[field] = val;
+                    var p = {}; Object.assign(p, typeof field === 'object' ? field : { [field]: val });
                     return Object.assign({}, r, p);
                 });
                 set({ rows: updated });
@@ -143,17 +143,17 @@
 
                         var imgCol = el('div', { style: { flex: '0 0 ' + attr.imageWidth + '%', maxWidth: attr.imageWidth + '%' } },
                             el('div', { style: { position: 'relative', paddingBottom: RATIO_PAD[attr.imageRatio] || '75%', background: '#f3f4f6', borderRadius: attr.imageRadius + 'px', overflow: 'hidden', boxShadow: attr.imageShadow ? '0 8px 30px rgba(0,0,0,0.12)' : 'none' } },
-                                row.imageUrl
-                                    ? el('img', { src: row.imageUrl, alt: row.imageAlt, style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' } })
-                                    : el(MediaUploadCheck, {},
+                                row.imageUrl &&
+                                    el('img', { src: row.imageUrl, alt: row.imageAlt, style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' } }),
+                                    el(MediaUploadCheck, {},
                                         el(MediaUpload, {
-                                            onSelect: function (m) { updateRow(idx, 'imageUrl', m.url); updateRow(idx, 'imageId', m.id); updateRow(idx, 'imageAlt', m.alt || ''); },
+                                            onSelect: function (m) { updateRow(idx, { imageUrl: m.url, imageId: m.id, imageAlt: m.alt || '' }); },
                                             allowedTypes: ['image'], value: row.imageId,
-                                            render: function (r) { return el(Button, { onClick: r.open, style: { position: 'absolute', inset: 0, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', border: 'none', cursor: 'pointer', color: '#9ca3af', fontSize: '13px' } }, '+ Add Image'); }
+                                            render: function (r) { return el(Button, { onClick: r.open, variant: row.imageUrl ? 'secondary' : undefined, style: row.imageUrl ? { position: 'absolute', bottom: '8px', left: '8px' } : { position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', border: 'none', cursor: 'pointer', color: '#9ca3af', fontSize: '13px' } }, row.imageUrl ? __('Replace Image', 'blockenberg') : __('Add Image', 'blockenberg')); }
                                         })
                                     ),
                                 row.imageUrl && el('div', { style: { position: 'absolute', bottom: '8px', right: '8px' } },
-                                    el(Button, { isSmall: true, variant: 'secondary', onClick: function () { updateRow(idx, 'imageUrl', ''); updateRow(idx, 'imageId', 0); } }, '✕')
+                                    el(Button, { isSmall: true, variant: 'secondary', label: __('Remove Image', 'blockenberg'), onClick: function () { updateRow(idx, { imageUrl: '', imageId: 0, imageAlt: '' }); } }, '✕')
                                 )
                             )
                         );

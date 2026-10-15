@@ -372,7 +372,7 @@
             function updateResult(rId, key, val) {
                 setAttributes({ resultRanges: a.resultRanges.map(function (r) {
                     if (r.id !== rId) return r;
-                    var u = Object.assign({}, r); u[key] = val; return u;
+                    var u = Object.assign({}, r); Object.assign(u, typeof key === 'object' ? key : { [key]: val }); return u;
                 }) });
             }
 
@@ -504,7 +504,7 @@
                                 el(TextareaControl, { label: __('Description',  'blockenberg'), value: r.description, rows: 3, onChange: function (v) { updateResult(r.id, 'description', v); } }),
                                 el(RangeControl,    { label: __('Min score',    'blockenberg'), value: r.minScore, min: 0, max: 100, onChange: function (v) { updateResult(r.id, 'minScore', v); } }),
                                 el(RangeControl,    { label: __('Max score',    'blockenberg'), value: r.maxScore, min: 0, max: 100, onChange: function (v) { updateResult(r.id, 'maxScore', v); } }),
-                                el(MediaUploadCheck, null, el(MediaUpload, { onSelect: function (m) { updateResult(r.id, 'imageUrl', m.url); updateResult(r.id, 'imageId', m.id); }, allowedTypes: ['image'], value: r.imageId, render: function (rp) { return el(Button, { variant: 'secondary', size: 'compact', onClick: rp.open }, r.imageUrl ? __('Change image', 'blockenberg') : __('Upload image', 'blockenberg')); } })),
+                                el(MediaUploadCheck, null, el(MediaUpload, { onSelect: function (m) { updateResult(r.id, { imageUrl: m.url, imageId: m.id }); }, allowedTypes: ['image'], value: r.imageId, render: function (rp) { return el(Button, { variant: 'secondary', size: 'compact', onClick: rp.open }, r.imageUrl ? __('Change image', 'blockenberg') : __('Upload image', 'blockenberg')); } })),
                                 el(Button, { onClick: function () { setAttributes({ resultRanges: a.resultRanges.filter(function (x) { return x.id !== r.id; }) }); }, isDestructive: true, variant: 'tertiary', size: 'compact', style: { marginTop: '8px', display: 'block' } }, __('Remove range', 'blockenberg'))
                             );
                         }),

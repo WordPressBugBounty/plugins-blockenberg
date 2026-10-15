@@ -38,7 +38,7 @@
       var a = props.attributes;
       var set = props.setAttributes;
       var wrapStyle = Object.assign({}, _tv()(a.typoBtn, '--bkbg-fcta-btn-'));
-      return el('div',{ style: wrapStyle },
+      return el('div',window.wp.blockEditor.useBlockProps({ style: wrapStyle }),
         el(InspectorControls,null,
           el(PanelBody,{title:__('Button'),initialOpen:true},
             el(TextControl,{label:__('Label'),value:a.label,onChange:v=>set({label:v})}),

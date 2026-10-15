@@ -40,7 +40,7 @@
       const previewStyle={display:'flex',alignItems:'center',justifyContent:'center',height:attr.height+'px',background:'#f5f5f5',borderRadius:'8px',color:'#888',fontSize:'13px',flexDirection:'column',gap:'8px'};
       var TC = getTypographyControl();
 
-      return el('div',{className:'bkbc-wrap',style:wrapStyle},
+      return el('div',window.wp.blockEditor.useBlockProps({className:'bkbc-wrap',style:wrapStyle}),
         el(InspectorControls,null,
           el(PanelBody,{title:__('Chart Title'),initialOpen:true},
             el(TextControl,{label:__('Title (optional)'),value:attr.title,onChange:v=>setAttributes({title:v})})

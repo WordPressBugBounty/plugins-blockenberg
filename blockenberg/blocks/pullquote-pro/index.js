@@ -131,7 +131,7 @@
           return s;
       })();
 
-      return el( 'div', null,
+      return el( 'div', window.wp.blockEditor.useBlockProps({}),
         el( InspectorControls, null,
           el( PanelBody, { title: __( 'Quote Style', 'blockenberg' ), initialOpen: true },
             el( SelectControl, {

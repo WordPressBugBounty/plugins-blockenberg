@@ -39,7 +39,7 @@
         return s;
       })();
 
-      return el('div', {className:'bklg-wrap', style: gridStyle},
+      return el('div', window.wp.blockEditor.useBlockProps({className:'bklg-wrap', style: gridStyle}),
 
         el(InspectorControls, null,
           el(PanelBody, {title:__('Images'), initialOpen:true},

@@ -46,7 +46,7 @@
         color:'#888',fontSize:'13px',flexDirection:'column',gap:'8px'
       };
 
-      return el('div',{className:'bklc-wrap',style:wrapStyle},
+      return el('div',window.wp.blockEditor.useBlockProps({className:'bklc-wrap',style:wrapStyle}),
 
         el(InspectorControls,null,
           el(PanelBody,{title:__('Chart Title'),initialOpen:true},

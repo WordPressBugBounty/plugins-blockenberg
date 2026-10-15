@@ -163,7 +163,7 @@ el(PanelBody, { title: __('Colors'), initialOpen: false },
 
             var typoVars = Object.assign({}, _tv(a.typoCode, '--bkbg-cpc-cd'), _tv(a.typoDesc, '--bkbg-cpc-ds'));
 
-            return el('div', { className: 'bkbg-cpc-editor', style: typoVars },
+            return el('div', window.wp.blockEditor.useBlockProps({ className: 'bkbg-cpc-editor', style: typoVars }),
                 inspector,
                 a.description && el('p', { className: 'bkbg-cpc-desc', style: { margin: '0 0 10px', color: '#6b7280' } }, a.description),
                 el('div', { style: wrapStyle },

@@ -160,7 +160,7 @@
             function updateAward(id, key, val) {
                 setAttributes({ awards: a.awards.map(function (aw) {
                     if (aw.id !== id) return aw;
-                    var u = Object.assign({}, aw); u[key] = val; return u;
+                    var u = Object.assign({}, aw); Object.assign(u, typeof key === 'object' ? key : { [key]: val }); return u;
                 }) });
             }
 
@@ -214,12 +214,12 @@
                                     ),
                                     /* Image upload */
                                     el(MediaUploadCheck, null,
-                                        el(MediaUpload, { onSelect: function (m) { updateAward(aw.id, 'imageUrl', m.url); updateAward(aw.id, 'imageId', m.id); }, allowedTypes: ['image'], value: aw.imageId,
+                                        el(MediaUpload, { onSelect: function (m) { updateAward(aw.id, { imageUrl: m.url, imageId: m.id }); }, allowedTypes: ['image'], value: aw.imageId,
                                             render: function (mp) {
                                                 return el(Fragment, null,
                                                     aw.imageUrl && el('img', { src: aw.imageUrl, style: { width: '48px', height: '48px', borderRadius: aw.color ? a.iconBgRadius + 'px' : '50%', objectFit: 'cover', display: 'block', marginBottom: '6px' } }),
                                                     el(Button, { variant: 'secondary', size: 'compact', onClick: mp.open }, aw.imageUrl ? __('Change image', 'blockenberg') : __('Upload image', 'blockenberg')),
-                                                    aw.imageUrl && el(Button, { variant: 'tertiary', size: 'compact', isDestructive: true, onClick: function () { updateAward(aw.id, 'imageUrl', ''); updateAward(aw.id, 'imageId', 0); }, style: { marginLeft: '6px' } }, __('Remove', 'blockenberg'))
+                                                    aw.imageUrl && el(Button, { variant: 'tertiary', size: 'compact', isDestructive: true, onClick: function () { updateAward(aw.id, { imageUrl: '', imageId: 0 }); }, style: { marginLeft: '6px' } }, __('Remove', 'blockenberg'))
                                                 );
                                             }
                                         })

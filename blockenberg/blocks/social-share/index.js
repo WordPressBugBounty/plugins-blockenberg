@@ -163,7 +163,7 @@ el(PanelBody, { title: __('Colors'), initialOpen: false },
 
             var visible = NETWORKS.filter(function (n) { return attrs.networks.indexOf(n.id) > -1; });
 
-            return el('div', { className: 'bkbg-shs-wrap' },
+            return el('div', window.wp.blockEditor.useBlockProps({ className: 'bkbg-shs-wrap' }),
                 inspector,
                 attrs.showLabel && el('span', { className: 'bkbg-shs-heading', style: { marginRight: 8, fontSize: attrs.fontSize } }, attrs.label),
                 el('div', { style: wrapStyle },

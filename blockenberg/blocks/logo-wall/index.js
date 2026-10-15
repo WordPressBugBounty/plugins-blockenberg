@@ -84,7 +84,7 @@
             expanded && el('div', { style: { padding: '12px', display: 'flex', flexDirection: 'column', gap: '8px' } },
                 el(MediaUploadCheck, null,
                     el(MediaUpload, {
-                        onSelect: function (m) { onUpdate(idx, 'url', m.url); onUpdate(idx, 'id', m.id); onUpdate(idx, 'alt', m.alt || ''); },
+                        onSelect: function (m) { onUpdate(idx, { url: m.url, id: m.id, alt: m.alt || '' }); },
                         allowedTypes: ['image'],
                         value: logo.id,
                         render: function (ref) {
@@ -115,7 +115,7 @@
             function updateLogo(idx, key, val) {
                 var arr = a.logos.slice();
                 arr[idx] = Object.assign({}, arr[idx]);
-                arr[idx][key] = val;
+                Object.assign(arr[idx], typeof key === 'object' ? key : { [key]: val });
                 setAttributes({ logos: arr });
             }
             function addLogo() {

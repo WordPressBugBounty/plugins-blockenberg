@@ -1,4 +1,15 @@
 // Team Members carousel navigation (scroll-snap based).
+
+    // Move only the carousel. scrollIntoView also scrolls the page and editor canvas.
+    function scrollSlideIntoTrack(track, slide) {
+        var rect = slide.getBoundingClientRect();
+        var bounds = track.getBoundingClientRect();
+        var view = track.ownerDocument.defaultView;
+        var rtl = view.getComputedStyle(track).direction === 'rtl';
+        var delta = rtl ? rect.right - bounds.right : rect.left - bounds.left;
+        var reduced = view.matchMedia && view.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        track.scrollTo({ left: track.scrollLeft + delta, behavior: reduced ? 'auto' : 'smooth' });
+    }
 (function () {
 	function initCarousel(root) {
 		var track = root.querySelector('.bkbg-tm-track');
@@ -140,7 +151,7 @@
 			var slides = getSlides();
 			if (!slides.length) return;
 			var i = Math.max(0, Math.min(slides.length - 1, index));
-			slides[i].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+			scrollSlideIntoTrack(track, slides[i]);
 		}
 
 		function scrollToBaseIndex(index) {
@@ -155,7 +166,7 @@
 			var target = baseCount + idx;
 			if (target < 0) target = 0;
 			if (target > slides.length - 1) target = slides.length - 1;
-			slides[target].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+			scrollSlideIntoTrack(track, slides[target]);
 		}
 
 		function scrollByDir(dir) {

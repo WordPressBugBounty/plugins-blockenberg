@@ -10,22 +10,20 @@
   let _tv; const getTypoCssVars = () => _tv || (_tv = window.bkbgTypoCssVars);
 
   function SlideEditor( { slide, index, onChange, onRemove } ) {
-    function upd(k,v){ onChange(index, Object.assign({}, slide, {[k]:v})); }
+    function upd(k,v){ onChange(index, Object.assign({}, slide, (typeof k === 'object' ? k : { [k]: v }))); }
     return el('div', { style:{border:'1px solid #ddd',borderRadius:'8px',padding:'12px',marginBottom:'8px',background:'#fafafa'} },
       el('strong', { style:{display:'block',marginBottom:'8px'} }, __('Slide ') + (index+1)),
       el('label', {style:{fontSize:'11px',fontWeight:600,display:'block',marginBottom:'4px'}}  , __('Background Image')),
-      slide.imageUrl
-        ? el('div', {style:{marginBottom:'8px'}},
+      el(window.wp.element.Fragment, null, slide.imageUrl && el('div', {style:{marginBottom:'8px'}},
             el('img', {src:slide.imageUrl, style:{width:'100%',height:'80px',objectFit:'cover',borderRadius:'6px',display:'block',marginBottom:'4px'}}),
-            el(Button, {isDestructive:true, isSmall:true, onClick:()=>{upd('imageUrl','');upd('imageId',0);}}, __('Remove'))
-          )
-        : el(MediaUploadCheck, null,
+            el(Button, {isDestructive:true, isSmall:true, onClick:()=>{ upd({ imageUrl: '', imageId: 0 }); }}, __('Remove'))
+          ), el(MediaUploadCheck, null,
             el(MediaUpload, {
-              onSelect: m=>{upd('imageUrl',m.url);upd('imageId',m.id);},
+              onSelect: m=>{ upd({ imageUrl: m.url, imageId: m.id }); },
               allowedTypes:['image'], value:slide.imageId,
-              render:({open})=>el(Button,{onClick:open,isSmall:true,variant:'secondary'}, __('Upload Image'))
+              render:({open})=>el(Button,{onClick:open,isSmall:true,variant:'secondary'}, slide.imageUrl ? __('Replace Image', 'blockenberg') : __('Upload Image'))
             })
-          ),
+          )),
       el(TextControl, {label:__('Title'), value:slide.title, onChange:v=>upd('title',v)}),
       el(TextareaControl, {label:__('Excerpt'), value:slide.excerpt, onChange:v=>upd('excerpt',v), rows:2}),
       el(TextControl, {label:__('Button Label'), value:slide.btnLabel, onChange:v=>upd('btnLabel',v)}),
@@ -68,7 +66,7 @@
 
       const boxAlign = attr.captionAlign === 'center' ? 'center' : attr.captionAlign === 'right' ? 'flex-end' : 'flex-start';
 
-      return el('div', { className:'bkps-wrap', style: wrapStyle },
+      return el('div', window.wp.blockEditor.useBlockProps({ className:'bkps-wrap', style: wrapStyle }),
 
         el(InspectorControls, null,
           el(PanelBody, {title:__('Slides'), initialOpen:true},

@@ -15,25 +15,23 @@
   }
 
   function ItemEditor( { item, index, onChange, onRemove, showStars, starColor, showAvatar } ) {
-    function upd( key, val ) { onChange( index, Object.assign( {}, item, { [key]: val } ) ); }
+    function upd( key, val ) { onChange( index, Object.assign( {}, item, (typeof key === 'object' ? key : { [key]: val }) ) ); }
     return el( 'div', { style: { border: '1px solid #ddd', borderRadius: '8px', padding: '12px', marginBottom: '8px', background: '#fafafa' } },
       el( TextareaControl, { label: __('Quote ') + (index+1), value: item.quote, onChange: v => upd('quote',v), rows: 3 } ),
       el( TextControl,     { label: __('Author'), value: item.author, onChange: v => upd('author',v) } ),
       el( TextControl,     { label: __('Role'), value: item.role, onChange: v => upd('role',v) } ),
       showStars && el( RangeControl, { label: __('Stars'), value: item.stars, min: 1, max: 5, onChange: v => upd('stars',v) } ),
       showAvatar && el( 'div', null,
-        item.avatarUrl
-          ? el( 'div', { style: { display:'flex', alignItems:'center', gap:'8px', marginBottom:'6px' } },
+        el(window.wp.element.Fragment, null, item.avatarUrl && el( 'div', { style: { display:'flex', alignItems:'center', gap:'8px', marginBottom:'6px' } },
               el( 'img', { src: item.avatarUrl, style: { width:48, height:48, borderRadius:'50%', objectFit:'cover' } } ),
-              el( Button, { isDestructive:true, isSmall:true, onClick: () => { upd('avatarUrl',''); upd('avatarId',0); } }, __('Remove') )
-            )
-          : el( MediaUploadCheck, null,
+              el( Button, { isDestructive:true, isSmall:true, onClick: () => { upd({ avatarUrl: '', avatarId: 0 }); } }, __('Remove') )
+            ), el( MediaUploadCheck, null,
               el( MediaUpload, {
-                onSelect: m => { upd('avatarUrl', m.url); upd('avatarId', m.id); },
+                onSelect: m => { upd({ avatarUrl: m.url, avatarId: m.id }); },
                 allowedTypes: ['image'], value: item.avatarId,
-                render: ({ open }) => el( Button, { onClick: open, isSmall:true, variant:'secondary' }, __('Upload Avatar') )
+                render: ({ open }) => el( Button, { onClick: open, isSmall:true, variant:'secondary' }, item.avatarUrl ? __('Replace Image', 'blockenberg') : __('Upload Avatar') )
               } )
-            )
+            ))
       ),
       el( Button, { isDestructive: true, isSmall: true, onClick: () => onRemove(index) }, __('Remove') )
     );
@@ -91,7 +89,7 @@
         return s;
       })();
 
-      return el( 'div', { className: 'bktg-wrap', style: wrapStyle },
+      return el( 'div', window.wp.blockEditor.useBlockProps({ className: 'bktg-wrap', style: wrapStyle }),
 
         el( InspectorControls, null,
           el( PanelBody, { title: __('Testimonials'), initialOpen: true },

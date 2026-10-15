@@ -77,7 +77,7 @@
       var attrs = props.attributes;
       var setAttr = props.setAttributes;
 
-      return el( 'div', null,
+      return el( 'div', window.wp.blockEditor.useBlockProps({}),
         el( InspectorControls, null,
           el( PanelBody, { title: __( 'Steps', 'blockenberg' ), initialOpen: true },
             buildSteps( attrs, setAttr ),

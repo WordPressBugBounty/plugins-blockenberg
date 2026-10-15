@@ -160,7 +160,7 @@ el(PanelColorSettings, { title: label+' — Colors', initialOpen:false, colorSet
       var leftW = ratioToPct(a.splitRatio,'left');
       var rightW = ratioToPct(a.splitRatio,'right');
 
-      return el('div',{className:'bkss-wrap',style:buildWrapStyle(a)},
+      return el('div',window.wp.blockEditor.useBlockProps({className:'bkss-wrap',style:buildWrapStyle(a)}),
         el(InspectorControls,null,
           el(PanelBody,{title:__('Layout'),initialOpen:true},
             el(SelectControl,{label:__('Split Ratio'),value:a.splitRatio,options:RATIOS,onChange:v=>set({splitRatio:v})}),

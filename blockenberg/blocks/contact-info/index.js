@@ -244,7 +244,7 @@
                 })
             );
 
-            return el('div', null,
+            return el('div', window.wp.blockEditor.useBlockProps({}),
                 el(InspectorControls, null, itemPanels, inspector.props.children),
                 preview
             );

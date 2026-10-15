@@ -29,7 +29,7 @@
             function updateCard(idx, field, val) {
                 var updated = cards.map(function (c, i) {
                     if (i !== idx) return c;
-                    var patch = {}; patch[field] = val;
+                    var patch = {}; Object.assign(patch, typeof field === 'object' ? field : { [field]: val });
                     return Object.assign({}, c, patch);
                 });
                 set({ cards: updated });
@@ -225,7 +225,7 @@
                                 : el('div', { style: { position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#9ca3af', fontSize: '12px' } }, __('No image', 'blockenberg')),
                             el(MediaUploadCheck, {},
                                 el(MediaUpload, {
-                                    onSelect: function (m) { updateCard(idx, 'imageUrl', m.url); updateCard(idx, 'imageId', m.id); updateCard(idx, 'imageAlt', m.alt || ''); },
+                                    onSelect: function (m) { updateCard(idx, { imageUrl: m.url, imageId: m.id, imageAlt: m.alt || '' }); },
                                     allowedTypes: ['image'], value: card.imageId,
                                     render: function (ref) {
                                         return el(Button, { onClick: ref.open, variant: 'primary', isSmall: true, style: { position: 'absolute', bottom: '6px', right: '6px', zIndex: 1, fontSize: '11px' } }, card.imageUrl ? '↕' : '+');

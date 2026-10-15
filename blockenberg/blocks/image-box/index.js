@@ -227,7 +227,7 @@ el(PanelBody, { title: __('Colors'), initialOpen: false },
                 textOverlayStyle.transform = 'translateY(-50%)';
             }
 
-            return el('div', { className: 'bkbg-imgb-editor', style: (function(){
+            return el('div', window.wp.blockEditor.useBlockProps({ className: 'bkbg-imgb-editor', style: (function(){
                 var s = { maxWidth: '100%' };
                 if (a.titleSize) s['--bkbg-imgb-title-sz'] = a.titleSize + 'px';
                 if (a.titleWeight) s['--bkbg-imgb-title-w'] = String(a.titleWeight);
@@ -241,7 +241,7 @@ el(PanelBody, { title: __('Colors'), initialOpen: false },
                     Object.assign(s, _tv2(a.subtitleTypo, '--bkbg-imgb-st-'));
                 }
                 return s;
-            })() },
+            })() }),
                 inspector,
                 el('div', { style: innerStyle },
                     el('div', { style: ratioBox },
