@@ -3,7 +3,7 @@ Contributors: blockenberg, alxrlov, olgadev
 Tags: gutenberg, blocks, editor, custom-blocks, page-builder
 Requires at least: 5.6
 Tested up to: 7.1
-Stable tag: 2.0.16
+Stable tag: 2.0.17
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -156,6 +156,10 @@ Existing imported pages keep their content and saved styles. You can continue to
 Yes. Open the Sections tab in the Template Library, use the Sections toolbar button, click Add section below the last block, or add the Blockenberg Sections block in Gutenberg. Search, preview, and insert a section into your current page, then edit its blocks. The section inherits the Free or Pro access of its source template. Already inserted sections remain editable and visible with the base Blockenberg plugin active, even if Pro is later deactivated.
 
 == Changelog ==
+
+= 2.0.17 - Nov 2, 2026 =
+* [Fixed] Post Carousel not loading published posts or pages because it requested an incorrect REST API endpoint. The carousel now uses the shared post query, including Random and Menu Order sorting.
+* [Fixed] Post Carousel and Post Grid REST URLs on WordPress installations in a subdirectory or using plain permalinks.
 
 = 2.0.16 - Oct 15, 2026 =
 * [Fixed] Image Accordion images not appearing after selection from the Media Library. Fixed the same issue in other image and avatar blocks by updating attachment URLs, IDs and alt text together.

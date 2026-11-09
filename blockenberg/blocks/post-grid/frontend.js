@@ -77,7 +77,7 @@
             ? window.blockenbergData.restUrl + 'blockenberg/v1/post-grid'
             : '/wp-json/blockenberg/v1/post-grid';
 
-        var url = path + '?type=' + encodeURIComponent(cfg.postType)
+        var url = path + (path.indexOf('?') === -1 ? '?' : '&') + 'type=' + encodeURIComponent(cfg.postType)
             + '&orderby=' + encodeURIComponent(cfg.orderby)
             + '&order='   + encodeURIComponent(cfg.order)
             + '&per_page='+ cfg.perPage

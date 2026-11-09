@@ -82,15 +82,22 @@
             ? window.blockenbergData.restUrl
             : window.location.origin + '/wp-json/';
 
-        var endpoint = restBase + 'wp/v2/' + postType +
-            '?per_page=' + perPage +
-            '&orderby=' + orderby +
-            '&order=' + order +
-            '&_embed=1';
+        // Use the shared public query: post type names are not REST collection
+        // names, and core collections do not support every offered sort order.
+        var endpoint = restBase + 'blockenberg/v1/post-grid';
+        endpoint += (endpoint.indexOf('?') === -1 ? '?' : '&') +
+            'type=' + encodeURIComponent(postType) +
+            '&per_page=' + perPage +
+            '&orderby=' + encodeURIComponent(orderby) +
+            '&order=' + encodeURIComponent(order) +
+            '&excerpt_len=' + excerptLen;
 
-        fetch(endpoint)
+        fetch(endpoint, { credentials: 'same-origin' })
             .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-            .then(function (posts) { buildCarousel(posts); })
+            .then(function (res) {
+                if (!res || !Array.isArray(res.posts)) throw new Error('Invalid posts response');
+                buildCarousel(res.posts);
+            })
             .catch(function () {
                 wrap.innerHTML = '<div class="bkbg-poc-loading">Could not load posts.</div>';
             });
@@ -126,17 +133,14 @@
 
                 /* Image */
                 if (showImage) {
-                    var thumb = post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0];
-                    var imgUrl= thumb ? (thumb.media_details && thumb.media_details.sizes && thumb.media_details.sizes.medium_large
-                        ? thumb.media_details.sizes.medium_large.source_url
-                        : thumb.source_url) : '';
+                    var imgUrl = post.image || '';
                     var imgWrap = document.createElement('div');
                     imgWrap.className = 'bkbg-poc-img-wrap';
                     imgWrap.style.paddingBottom = ratio + '%';
                     if (imgUrl) {
                         var img = document.createElement('img');
                         img.src     = imgUrl;
-                        img.alt     = post.title && post.title.rendered ? post.title.rendered : '';
+                        img.alt     = post.title || '';
                         img.loading = 'lazy';
                         imgWrap.appendChild(img);
                     }
@@ -151,7 +155,9 @@
                     var meta = document.createElement('p');
                     meta.className = 'bkbg-poc-meta';
                     meta.style.color = metaC;
-                    meta.textContent = new Date(post.date).toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' });
+                    meta.textContent = post.date
+                        ? new Date(post.date).toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' })
+                        : (post.meta || '');
                     body.appendChild(meta);
                 }
 
@@ -159,14 +165,14 @@
                 titleLink.className = 'bkbg-poc-title';
                 titleLink.href      = post.link;
                 titleLink.style.color = titleC;
-                titleLink.innerHTML = post.title ? post.title.rendered : '';
+                titleLink.textContent = post.title || '';
                 body.appendChild(titleLink);
 
                 if (showExcerpt) {
                     var ex = document.createElement('p');
                     ex.className = 'bkbg-poc-excerpt';
                     ex.style.color = excerptC;
-                    var rawExcerpt = post.excerpt ? post.excerpt.rendered : '';
+                    var rawExcerpt = post.excerpt || '';
                     ex.textContent = trimWords(rawExcerpt, excerptLen);
                     body.appendChild(ex);
                 }

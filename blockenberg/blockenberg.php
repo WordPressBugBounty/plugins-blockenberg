@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Blockenberg — 645 Advanced Gutenberg Blocks & AI Agent for WordPress Block Editor
  * Description: Build websites with 645 advanced Gutenberg blocks, 683 page templates, 3,002 ready-made sections and an AI Agent for the WordPress Block Editor.
- * Version:     2.0.16
+ * Version:     2.0.17
  * Author:      Blockenberg
  * Text Domain: blockenberg
  * Domain Path: /languages
@@ -258,6 +258,12 @@ add_action( 'init', function () {
                 filemtime( $frontend_file ),
                 true
             );
+            if ( in_array( $block_name, array( 'post-carousel', 'post-grid' ), true ) ) {
+                // rest_url handles subdirectory installs and plain permalinks.
+                wp_localize_script( 'bkbg-' . $block_name . '-frontend', 'blockenbergData', array(
+                    'restUrl' => esc_url_raw( rest_url() ),
+                ) );
+            }
         }
     }
     
@@ -1021,6 +1027,7 @@ add_action( 'rest_api_init', function () {
                     'title'   => $title,
                     'link'    => $link,
                     'image'   => $image,
+                    'date'    => get_post_time( 'c', false, $post_id ),
                     'meta'    => $meta,
                     'excerpt' => $excerpt,
                 );
